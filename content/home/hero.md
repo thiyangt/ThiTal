@@ -4,7 +4,7 @@ widget = "hero"
 active = true
 date = 2017-10-15
 
-title = "Academic"
+title = ""
 
 # Order that this section will appear in.
 weight = 3
@@ -21,5 +21,5 @@ weight = 3
 #   Deactivate by commenting out parameters, prefixing lines with `#`.
 [cta]
   url = "./post/getting-started/"
-  label = '<i class="fa fa-download"></i> Install Now'
+
 +++
