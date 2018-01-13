@@ -23,28 +23,3 @@ weight = 3
   url = "./post/getting-started/"
   label = '<i class="fa fa-download"></i> Install Now'
 +++
-
-<br>
-<small><a id="academic-release" href="https://sourcethemes.com/academic/tags/updates">Latest release</a></small>
-<br><br>
-<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=gcushen&amp;repo=hugo-academic&amp;type=star&amp;count=true&amp;size=large" scrolling="0" width="160px" height="30px" frameborder="0"></iframe>
-<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=gcushen&amp;repo=hugo-academic&amp;type=fork&amp;count=true&amp;size=large" scrolling="0" width="158px" height="30px" frameborder="0"></iframe>
-
-<script type="text/javascript">
-  (function defer() {
-    if (window.jQuery) {
-      jQuery(document).ready(function(){
-        GetLatestReleaseInfo();
-      });
-    } else {
-      setTimeout(function() { defer() }, 50);
-    }
-  })();  
-  function GetLatestReleaseInfo() {
-    $.getJSON('https://api.github.com/repos/gcushen/hugo-academic/tags').done(function (json) {
-      let release = json[0];
-      // let downloadURL = release.zipball_url;
-      $('#academic-release').text('Latest release ' + release.name);  
-    });    
-}  
-</script>
