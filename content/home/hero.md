@@ -24,7 +24,6 @@ weight = 3
   label = '<i class="fa fa-download"></i> Install Now'
 +++
 
-The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes :rocket:
 <br>
 <small><a id="academic-release" href="https://sourcethemes.com/academic/tags/updates">Latest release</a></small>
 <br><br>
