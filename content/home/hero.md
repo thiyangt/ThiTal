@@ -4,7 +4,7 @@ widget = "hero"
 active = true
 date = 2017-10-15
 
-title = ""
+title = "Thi"
 
 # Order that this section will appear in.
 weight = 3
@@ -19,7 +19,6 @@ weight = 3
 # Call to action button (optional).
 #   Activate the button by specifying a URL and button label below.
 #   Deactivate by commenting out parameters, prefixing lines with `#`.
-[cta]
-  url = "./post/getting-started/"
+
 
 +++
