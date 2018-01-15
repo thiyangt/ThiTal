@@ -12,7 +12,7 @@ weight = 5
   interests = [
     "High-dimensional data analysis",
     "Time series analysis",
-    "Applied statistics"
+    "Applied statistics",
     "Statistical computing"
   ]
 
@@ -20,7 +20,7 @@ weight = 5
 [[education.courses]]
   course = "PhD in Statistics(Reading)"
   institution = "Monash University"
-  year = 2016
+  year=2016
 
 [[education.courses]]
   course = "MSc in Financial Mathematics"
