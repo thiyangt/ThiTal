@@ -10,26 +10,27 @@ weight = 5
 # List your academic interests.
 [interests]
   interests = [
-    "Artificial Intelligence",
-    "Computational Linguistics",
-    "Information Retrieval"
+    "High-dimensional data analysis",
+    "Time series analysis",
+    "Applied statistics"
+    "Statistical computing"
   ]
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "PhD in Artificial Intelligence"
-  institution = "Stanford University"
+  course = "PhD in Statistics(Reading)"
+  institution = "Monash University"
+  year = begun 2016
+
+[[education.courses]]
+  course = "MSc in Financial Mathematics"
+  institution = "University of Moratuwa, Sri Lanka"
+  year = 2015
+
+[[education.courses]]
+  course = "BSc(Hons) in Statistics"
+  institution = "University of Sri Jayewardenepura, Sri Lanka"
   year = 2012
-
-[[education.courses]]
-  course = "MEng in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2009
-
-[[education.courses]]
-  course = "BSc in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2008
  
 +++
 
