@@ -13,7 +13,7 @@ weight = 5
     "High-dimensional data analysis",
     "Time series analysis",
     "Applied statistics",
-    "Statistical computing"
+    "Statistical computing",
   ]
 
 # List your qualifications (such as academic degrees).
@@ -36,4 +36,5 @@ weight = 5
 
 # About me
 
-I am a PhD candidate in Statistics at 
+
+I am a PhD candidate in Statistics at Monash University, Australia. My recent research has cetered around the problem of forecasting large collections of time series. My PhD project involves developing computationally efficient forecasting methods for large-scale real-time applications.
