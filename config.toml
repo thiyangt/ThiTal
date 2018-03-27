@@ -217,12 +217,12 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fa"
-    link = "mailto:test@example.org"
+    link = "thiyanga.talagala@monash.edu"
 
   [[params.social]]
     icon = "twitter"
     icon_pack = "fa"
-    link = "//twitter.com/GeorgeCushen"
+    link = "//twitter.com/thiyangt"
 
   [[params.social]]
     icon = "google-scholar"
@@ -232,7 +232,7 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "github"
     icon_pack = "fa"
-    link = "//github.com/gcushen"
+    link = "//github.com/thiyangt"
 
 
 # Navigation Links
