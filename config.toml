@@ -249,8 +249,8 @@ defaultContentLanguageInSubdir = false
   weight = 1
 
 [[menu.main]]
-  name = "Publications"
-  url = "#publications_selected"
+  name = "Research"
+  url = "#Research"
   weight = 2
 
 [[menu.main]]
@@ -259,8 +259,8 @@ defaultContentLanguageInSubdir = false
   weight = 3
 
 [[menu.main]]
-  name = "Projects"
-  url = "#projects"
+  name = "Talks"
+  url = "#Talks"
   weight = 4
 
 [[menu.main]]
