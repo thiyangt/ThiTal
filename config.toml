@@ -252,26 +252,37 @@ defaultContentLanguageInSubdir = false
   name = "Research"
   url = "#research"
   weight = 2
+  
+[[menu.main]]
+  name = "Software"
+  url = "#software"
+  weight = 3
 
 [[menu.main]]
   name = "Posts"
   url = "#posts"
-  weight = 3
+  weight = 4
 
 [[menu.main]]
   name = "Talks"
   url = "#talks"
-  weight = 4
+  weight = 5
 
 [[menu.main]]
   name = "Teaching"
   url = "#teaching"
-  weight = 5
+  weight = 6
+
+[[menu.main]]
+  name = "Awards"
+  url = "#awards"
+  weight = 7
+  
 
 [[menu.main]]
   name = "Contact"
   url = "#contact"
-  weight = 6
+  weight = 8
 
 # Taxonomies.
 [taxonomies]
