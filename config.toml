@@ -260,7 +260,7 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = "Talks"
-  url = "#Talks"
+  url = "#talks"
   weight = 4
 
 [[menu.main]]
