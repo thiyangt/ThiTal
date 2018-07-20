@@ -1,17 +1,6 @@
-# Configuration of Academic
-# Documentation: https://sourcethemes.com/academic/
-
-# The URL of your website.
-# End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "/"
-
-# Title of your site
-title = ""
-
-# Your copyright notice - appears in site footer.
-# To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2018"
-
+baseurl = "/"  # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
+title = "Academic"
+copyright = "&copy; 2017 Your Name"
 theme = "hugo-academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
@@ -50,21 +39,21 @@ defaultContentLanguageInSubdir = false
   font = "default"
 
   # Your details.
-  name = "Thiyanga Talagala"
-  role = "PhD Candidate in Statistics"
+  name = "Lena Smith"
+  role = "Professor of Artificial Intelligence"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "Monash University, Australia", url = "" } ]
+  organizations = [ { name = "Stanford University", url = "" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "thiyanga.talagala@monash.edu"
-  #address = "Building 1 Room 1, Stanford University, California, 90210, USA"
-  #office_hours = "Monday 10:00 to 13:00 or email for appointment"
-  #phone = "888 888 88 88"
-  #skype = "echo123"
-  #telegram = ""
+  email = "test@example.org"
+  address = "Building 1 Room 1, Stanford University, California, 90210, USA"
+  office_hours = "Monday 10:00 to 13:00 or email for appointment"
+  phone = "888 888 88 88"
+  skype = "echo123"
+  telegram = ""
 
   # Enable Keybase in Contact widget by entering your keybase.io username.
   keybase = ""
@@ -110,7 +99,7 @@ defaultContentLanguageInSubdir = false
   # Display comment count? Requires commenting to be enabled.
   comment_count = true
 
-  # Display next/previous section pager?
+  # Display section pager for posts?
   section_pager = false
 
   # Enable global LaTeX math rendering?
@@ -161,16 +150,15 @@ defaultContentLanguageInSubdir = false
   #   The index of the publication type in the list is used as its unique numerical identifier.
   #   The numeric ID is used in a publication's frontmatter to categorize it.
   #   The language can be edited below.
-  #   For multilingual sites, `publication_types` can be copied to each language section at the end of this file and
-  #   translated.
+  #   For multi-lingual sites, copy this block to each language section at the end of this file.
   publication_types = [
     'Uncategorized',  # 0
-    'Conference paper',  # 1
-    'Journal article',  # 2
-    'Manuscript',  # 3
-    'Report',  # 4
+    'Conference proceedings',  # 1
+    'Journal',  # 2
+    'Work in progress',  # 3
+    'Technical report',  # 4
     'Book',  # 5
-    'Book section'  # 6
+    'Book chapter'  # 6
   ]
 
   # Configuration of talk pages.
@@ -217,22 +205,22 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fa"
-    link = "thiyanga.talagala@monash.edu"
+    link = "mailto:test@example.org"
 
   [[params.social]]
     icon = "twitter"
     icon_pack = "fa"
-    link = "//twitter.com/thiyangt"
+    link = "//twitter.com/GeorgeCushen"
 
   [[params.social]]
     icon = "google-scholar"
     icon_pack = "ai"
-    link = "https://scholar.google.com.au/citations?user=7cUtrWUAAAAJ&hl=en&oi=sra"
+    link = "https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ"
 
   [[params.social]]
     icon = "github"
     icon_pack = "fa"
-    link = "//github.com/thiyangt"
+    link = "//github.com/gcushen"
 
 
 # Navigation Links
@@ -249,10 +237,9 @@ defaultContentLanguageInSubdir = false
   weight = 1
 
 [[menu.main]]
-  name = "Research"
-  url = "#research"
+  name = "Publications"
+  url = "#publications_selected"
   weight = 2
-  
 
 [[menu.main]]
   name = "Posts"
@@ -260,8 +247,8 @@ defaultContentLanguageInSubdir = false
   weight = 3
 
 [[menu.main]]
-  name = "Talks"
-  url = "#talks"
+  name = "Projects"
+  url = "#projects"
   weight = 4
 
 [[menu.main]]
@@ -269,6 +256,10 @@ defaultContentLanguageInSubdir = false
   url = "#teaching"
   weight = 5
 
+[[menu.main]]
+  name = "Contact"
+  url = "#contact"
+  weight = 6
 
 # Taxonomies.
 [taxonomies]

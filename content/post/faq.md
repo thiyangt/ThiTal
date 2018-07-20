@@ -3,7 +3,7 @@ date = 2016-04-10
 # lastmod = 2017-09-03
 draft = false
 tags = ["academic", "hugo"]
-title = "Getting Started with Blogdown"
+title = "Frequently Asked Questions (FAQ)"
 summary = """Troubleshoot common issues."""
 +++
 

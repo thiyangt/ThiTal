@@ -10,17 +10,15 @@ weight = 5
 # List your academic interests.
 [interests]
   interests = [
-    "High-dimensional data analysis",
-    "Time series analysis",
-    "Applied statistics",
-    "Statistical computing",
+    "Time Series Analysis",
+    "Computational Statistics",
+    "Machine Learning"
   ]
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "PhD in Statistics(begun 2016)"
+  course = "PhD in Statistics (Begun 2016)"
   institution = "Monash University"
- 
 
 [[education.courses]]
   course = "MSc in Financial Mathematics"
@@ -28,14 +26,12 @@ weight = 5
   year = 2015
 
 [[education.courses]]
-  course = "BSc(Hons) special degree in Statistics"
+  course = "BSc(Hons) Special Degree in Statistics"
   institution = "University of Sri Jayewardenepura, Sri Lanka"
   year = 2012
  
 +++
 
-# About me
+# Biography
 
-
-I am a PhD candidate in Statistics at Monash University, Australia. My recent research has cetered around the problem of forecasting large collections of time series. My PhD project involves developing computationally efficient forecasting methods for large-scale real-time applications.
 

@@ -15,10 +15,14 @@ weight = 60
 
 +++
 
-I am Lecturer in the Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura-Sri Lanka (currently on study leave).
+This is an example of using the *custom* widget to create your own homepage section.
 
-I am a teaching associate for the following courses at Monash University Australia:
+I am a teaching instructor for the following courses at University X:
 
-- ETC1000: An intro to computer science
-- ETC2420: An intro to computer science
-
+- CS101: An intro to computer science
+- CS102: An intro to computer science
+- CS103: An intro to computer science
+- CS104: An intro to computer science
+- CS105: An intro to computer science
+- CS106: An intro to computer science
+- CS107: An intro to computer science
