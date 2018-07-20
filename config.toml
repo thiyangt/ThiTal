@@ -250,7 +250,7 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = "Research"
-  url = "#Research"
+  url = "#research"
   weight = 2
 
 [[menu.main]]
