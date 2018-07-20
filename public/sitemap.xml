@@ -14,6 +14,24 @@
     
     <url>
     
+      <loc>/talks/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/talks/example-talk/</loc>
+      <lastmod>2017-01-01T00:00:00+11:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/post/</loc>
       <lastmod>2017-01-01T00:00:00+11:00</lastmod>
     </url>
@@ -80,6 +98,14 @@
       <loc>/</loc>
       <lastmod>2017-10-15T00:00:00+11:00</lastmod>
       <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/talks/feature-based-model-selection-for-time-series-forecasting/</loc>
     </url>
     
   
