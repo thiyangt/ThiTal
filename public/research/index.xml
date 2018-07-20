@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Research on </title>
+    <title>Research on Academic</title>
     <link>/research/</link>
-    <description>Recent content in Research on </description>
+    <description>Recent content in Research on Academic</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; 2017 Your Name</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +1100</lastBuildDate>
     <atom:link href="/research/" rel="self" type="application/rss+xml" />
     
