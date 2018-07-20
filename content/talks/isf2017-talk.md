@@ -8,8 +8,6 @@ event_url = "https://forecasters.org/blog/2017/02/27/press-release-37th-internat
 location = "Cairns, Australia"
 
 selected = false
-math = false
-
-url_slides = ""
+math = true
 
 +++
