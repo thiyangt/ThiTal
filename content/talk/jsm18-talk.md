@@ -18,7 +18,7 @@ selected = false
 #projects = ["deep-learning"]
 
 # Links (optional).
-url_pdf = "https://github.com/thiyangt/ThiTal/blob/master/static/talks/jsm18.pdf"
+url_pdf = "static/talks/jsm18.pdf"
 url_slides = ""
 url_video = ""
 url_code = ""
