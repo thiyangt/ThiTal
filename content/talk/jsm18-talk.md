@@ -1,14 +1,14 @@
 +++
-date = 2017-01-01T00:00:00  # Schedule page publish date.
+date = 2018-08-01T00:00:00  # Schedule page publish date.
 
 title = "A Classification Framework for Forecast-Model Selection"
-time_start = 2030-06-01T13:00:00
-time_end = 2030-06-01T15:00:00
-abstract = ""
+#time_start = 2018-08-01T15:20:00
+#time_end = 2018-08-01T15:40:00
+abstract = "https://ww2.amstat.org/meetings/jsm/2018/onlineprogram/AbstractDetails.cfm?abstractid=330245"
 abstract_short = ""
 event = "Joint Statistical Meetings(JSM) 2018"
 event_url = "http://ww2.amstat.org/meetings/jsm/2018/"
-location = "Vancouver, British Columbia,Canada"
+location = "Vancouver, British Columbia, Canada"
 
 # Is this a selected talk? (true/false)
 selected = false
@@ -20,7 +20,7 @@ selected = false
 
 # Links (optional).
 url_pdf = ""
-url_slides = ""
+url_slides = "talks/jsm18.pdf"
 url_video = ""
 url_code = ""
 
