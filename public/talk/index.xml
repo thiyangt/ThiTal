@@ -10,5 +10,15 @@
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/talk/" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title>A Classification Framework for Forecast-Model Selection</title>
+      <link>/talk/jsm18-talk/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      
+      <guid>/talk/jsm18-talk/</guid>
+      <description>&lt;p&gt;Associated R package: &lt;a href=&#34;https://github.com/thiyangt/seer&#34; target=&#34;_blank&#34;&gt;seer&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
