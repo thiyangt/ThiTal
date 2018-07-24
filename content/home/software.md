@@ -1,11 +1,11 @@
 +++
 # Recent Publications widget.
-# This widget displays recent publications from `content/publication/`.
+# This widget displays data science software from `content/software/`.
 widget = "publications"
 active = true
 date = 2016-04-20
 
-title = "Recent Publications"
+title = "Data Science"
 subtitle = ""
 
 # Order that this section will appear in.
