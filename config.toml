@@ -233,7 +233,7 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = "Software"
-  url = "#data_science"
+  url = "#data_import"
   weight = 2
 
 [[menu.main]]
