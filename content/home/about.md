@@ -32,6 +32,13 @@ weight = 5
  
 +++
 
-# Biography
+# About me
 
-I am a PhD student in Statistics at Monash University, Australia. My main research interest is in time series analysis and machine learning for big data. 
+I am a PhD student in Statistics at Monash University, Australia. My recent research has cetered around the problem of forecasting large collections of time series. My dissertation work focuses specifically on developing computationally efficient forecasting methods for large-scale real-time applications. 
+
+I am also interested in statistical programming with R. I have written several  packages in R. 
+
+Prior to joining Monash, I received a B.Sc. special degree in Statistics from the University of Sri Jayewardenepura, Sri Lanka. I was ranked top in my batch and was awarded with [Professor R A Dayananda Gold Medal for statistics](http://science.sjp.ac.lk/scholarships/). My MSc. theis titled, "Mathematical modeling of dengue dynamics and climate variability in Sri Lanka" won Bronze Medal at the Best Postgraduate Research Project Award Competition organized by the Institute of Applied Statistics, Sri Lanka.  
+
+
+My main research interest is in time series analysis and machine learning for big data. 
