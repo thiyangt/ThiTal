@@ -260,7 +260,7 @@ defaultContentLanguageInSubdir = false
 [taxonomies]
   tag = "tags"
   category = "categories"
-  software_type = "software_types"
+  publication_type = "publication_types"
 
 # Languages
 #   Create a [languages.X] block for each language you want, where X is the language ID.
