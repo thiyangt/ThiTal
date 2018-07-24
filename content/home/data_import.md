@@ -31,3 +31,5 @@ list_format = 1
 publication_type = "-1"
 +++
 
+- [seer](https://github.com/thiyangt/seer): R package for feature-based time series forecasting.
+
