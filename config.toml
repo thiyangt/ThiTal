@@ -237,8 +237,8 @@ defaultContentLanguageInSubdir = false
   weight = 1
 
 [[menu.main]]
-  name = "Publications"
-  url = "#publications_selected"
+  name = "Software"
+  url = "#data_science"
   weight = 2
 
 [[menu.main]]
