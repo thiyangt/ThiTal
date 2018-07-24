@@ -3,7 +3,7 @@ date = 2017-01-01T00:00:00  # Schedule page publish date.
 
 title = "seer: R package for feature-based forecast model selection"
 time_start = 2018-07-13T11:30:00
-time_end = 2018-07-01T11:50:00
+time_end = 2018-07-13T11:50:00
 abstract = ""
 abstract_short = ""
 event = "useR 2018, Brisbane, QLD, Australia"
@@ -20,7 +20,7 @@ selected = false
 
 # Links (optional).
 url_pdf = ""
-url_slides = "talks/jsm18.pdf"
+url_slides = "talks/user18.pdf"
 url_video = "https://www.youtube.com/watch?v=_pKMIvdt5NU"
 url_code = ""
 
