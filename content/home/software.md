@@ -5,7 +5,7 @@ widget = "publications"
 active = true
 date = 2016-04-20
 
-title = "Data Science"
+title = "Data Import"
 subtitle = ""
 
 # Order that this section will appear in.
