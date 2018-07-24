@@ -2,8 +2,8 @@
 date = 2017-01-01T00:00:00  # Schedule page publish date.
 
 title = "Meta-learning how to forecast time series"
-time_start = 2018-07-19T14:20:00
-time_end = 2018-07-19T14:40:00
+time_start = 2018-06-19T14:20:00
+time_end = 2018-06-19T14:40:00
 abstract = ""
 abstract_short = ""
 event = "38th International Symposium on Forecasting, Boulder, Colorado, USA"
