@@ -20,7 +20,7 @@ selected = false
 
 # Links (optional).
 url_pdf = ""
-url_slides = "talks/ysc17.pdf"
+url_slides = "talks/ysc2017.pdf"
 url_video = ""
 url_code = ""
 
