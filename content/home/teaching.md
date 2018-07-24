@@ -18,5 +18,5 @@ weight = 60
 
 - Teaching Associate, Monash University, Australia
 
-- Lecturer(Probationary),Department of Statistics, Faculty of Applied Sciences, Univesity of Sri Jayewardenepura, Sri Lanka (currently on study leave)
+- Lecturer (Probationary), [Department of Statistics, Faculty of Applied Sciences, Univesity of Sri Jayewardenepura, Sri Lanka](http://science.sjp.ac.lk/) (currently on study leave)
 
