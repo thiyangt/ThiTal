@@ -41,4 +41,3 @@ I am also interested in statistical programming with R. I have written several  
 Prior to joining Monash, I received a B.Sc. special degree in Statistics from the University of Sri Jayewardenepura, Sri Lanka. I was ranked first in my class and was awarded with [Professor R A Dayananda Gold Medal for statistics](http://science.sjp.ac.lk/scholarships/). My MSc. theis titled, "Mathematical modeling of dengue dynamics and climate variability in Sri Lanka" won Bronze Medal at the Best Postgraduate Research Project Award Competition organized by the Institute of Applied Statistics, Sri Lanka and a Special recognition award from [University of Moratuwa, Sri Lanka](https://www.mrt.ac.lk/web/) for winning the Bronze Medal at the Best Postgraduate Research Project Award Competition.  
 
 
-My main research interest is in time series analysis and machine learning for big data. 
