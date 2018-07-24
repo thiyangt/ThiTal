@@ -38,4 +38,6 @@ caption = "My caption :smile:"
 
 +++
 
-Associated R package: [seer](https://github.com/thiyangt/seer)
+- The background pictures are of free copyright from https://pixabay.com/en/photos/presentation/.
+
+- Associated R package: [seer](https://github.com/thiyangt/seer)
