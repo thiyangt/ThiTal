@@ -16,11 +16,11 @@ selected = false
 # Projects (optional).
 #   Associate this talk with one or more of your projects.
 #   Simply enter the filename (excluding '.md') of your project file in `content/project/`.
-#projects = ["deep-learning"]
+#projects = ["time-series"]
 
 # Links (optional).
 url_pdf = ""
-url_slides = "talks/jsm18.pdf"
+url_slides = ""
 url_video = ""
 url_code = ""
 
