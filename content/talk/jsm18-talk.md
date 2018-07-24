@@ -6,7 +6,7 @@ time_start = 2018-08-01T15:20:00
 time_end = 2018-08-01T15:40:00
 abstract = "https://ww2.amstat.org/meetings/jsm/2018/onlineprogram/AbstractDetails.cfm?abstractid=330245"
 abstract_short = ""
-event = "Joint Statistical Meetings(JSM) 2018"
+event = "Joint Statistical Meetings(JSM) 2018, Vancouver, BC, Canada"
 event_url = "http://ww2.amstat.org/meetings/jsm/2018/"
 location = "Vancouver, British Columbia,Canada"
 
