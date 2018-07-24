@@ -1,9 +1,7 @@
 +++
-date = 2017-01-01T00:00:00  # Schedule page publish date.
+date = 2018-08-01T00:00:00  # Schedule page publish date.
 
 title = "A Classification Framework for Forecast-Model Selection"
-time_start = 2018-08-01
-abstract = ""
 abstract_short = ""
 event = "Joint Statistical Meetings(JSM) 2018"
 event_url = "http://ww2.amstat.org/meetings/jsm/2018/"
@@ -18,7 +16,7 @@ selected = false
 #projects = ["deep-learning"]
 
 # Links (optional).
-url_pdf = "static/talks/jsm18.pdf"
+url_pdf = "talks/jsm18.pdf"
 url_slides = ""
 url_video = ""
 url_code = ""
