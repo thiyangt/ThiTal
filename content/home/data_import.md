@@ -33,3 +33,4 @@ publication_type = "-1"
 
 - [seer](https://github.com/thiyangt/seer): R package for feature-based time series forecasting.
 
+- [tsfeatures](https://github.com/robjhyndman/tsfeatures): R package tsfeatures provides methods for extracting various features from time series data.(Package contributed.)
