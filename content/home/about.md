@@ -34,7 +34,7 @@ weight = 5
 
 # About me
 
-I am a PhD student in Statistics at Monash University, Australia. My recent research has cetered around the problem of forecasting large collections of time series. My dissertation work focuses specifically on developing computationally efficient forecasting methods for large-scale real-time applications. 
+I am a PhD student in Statistics at [Monash University, Australia](https://www.monash.edu/). My recent research has cetered around the problem of forecasting large collections of time series. My dissertation work focuses specifically on developing computationally efficient forecasting methods for large-scale real-time applications. 
 
 I am also interested in statistical programming with R. I have written several  packages in R. 
 
