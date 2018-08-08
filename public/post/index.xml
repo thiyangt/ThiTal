@@ -10,5 +10,14 @@
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +1100</lastBuildDate>
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title>Parallel Computing in R</title>
+      <link>/post/parallelcomputing/</link>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +1000</pubDate>
+      
+      <guid>/post/parallelcomputing/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

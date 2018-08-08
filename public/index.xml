@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Parallel Computing in R</title>
+      <link>/post/parallelcomputing/</link>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +1000</pubDate>
+      
+      <guid>/post/parallelcomputing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>A classification framework for forecast-model selection</title>
       <link>/talk/jsm18-talk/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
