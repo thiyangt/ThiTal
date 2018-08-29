@@ -1055,7 +1055,7 @@ footer a#back_to_top i {
 
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
-  background-color: transparent;
+  background-color: darkblue;
 }
 
 nav#navbar-main li {
@@ -1068,7 +1068,7 @@ nav#navbar-main li {
   white-space: nowrap;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  color: {{ .Get "menu_text" }};
+  color: white;
   font-weight: 600;
 }
 
