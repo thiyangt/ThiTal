@@ -12,7 +12,8 @@ weight = 5
   interests = [
     "Time Series Analysis",
     "Computational Statistics",
-    "Machine Learning"
+    "Machine Learning",
+    "Applied Statistics"
   ]
 
 # List your qualifications (such as academic degrees).
