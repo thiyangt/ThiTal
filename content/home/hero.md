@@ -23,6 +23,9 @@ url = "#about"
 label = '<i class="fa fa-octocat"></i> About me'
 +++
 <br>
+<small><a href="#about" class="fa fa-octocat">About me</a></small>
+<br><br>
+<br>
     <small><a id="academic-release" href="https://sourcethemes.com/academic/updates"> </a></small>
     <br><br>
     <iframe style="display: inline-block;" src="" scrolling="0" width="200px" height="550px" frameborder="0"></iframe>
