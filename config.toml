@@ -137,7 +137,7 @@ defaultContentLanguageInSubdir = false
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  custom_css = ["css/academic.css"]
+  custom_css = ["academiccustom.css"]
   custom_js  = []
 
   # Publication types.
@@ -248,7 +248,7 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = "Awards"
-  url = "#Awards"
+  url = "#awards"
   weight = 5
 
 [[menu.main]]
