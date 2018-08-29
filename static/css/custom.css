@@ -1045,7 +1045,7 @@ footer a#back_to_top i {
 }
 
 .navbar-default {
-  background: {{ .Get "menu_primary" }};
+  background: #fff;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.11)
 }
 
@@ -1068,12 +1068,12 @@ nav#navbar-main li {
   white-space: nowrap;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  color: white;
+  color: #34495e;
   font-weight: 600;
 }
 
 .navbar-default .navbar-nav>li>a:focus {
-  color: {{ .Get "menu_text" }};
+  color: #0095eb;
   background-color: transparent;
 }
 
@@ -1107,7 +1107,7 @@ nav#navbar-main li {
 }
 
 .dropdown-menu {
-  background-color: {{ .Get "menu_primary" }} !important;
+  background-color: #0095eb !important;
 }
 
 .dropdown-menu > li > a {
@@ -1116,15 +1116,15 @@ nav#navbar-main li {
   clear: both;
   font-weight: 400;
   line-height: 1.42857143;
-  color: {{ .Get "menu_text" }};
+  color: #34495e;
   white-space: nowrap;
 }
 
 .dropdown-menu>li>a:focus,
 .dropdown-menu>li>a:hover {
-  color: {{ .Get "menu_text_active" }};
+  color: #fff;
   text-decoration: none;
-  background-color: {{ .Get "menu_primary" }};
+  background-color: #0095eb;
 }
 
 .dropdown-menu > .active > a,
