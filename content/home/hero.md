@@ -22,7 +22,6 @@ overlay_img = "headers/bubbles-wide.jpg"  # Image path relative to your `static/
 url = "#about"
 label = '<i class="fa fa-octocat"></i> About me'
 +++
-    
 <br>
     <small><a id="academic-release" href="https://sourcethemes.com/academic/updates"> </a></small>
     <br><br>
