@@ -248,7 +248,7 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = "Awards"
-  url = "#awards"
+  url = "#projects"
   weight = 5
 
 [[menu.main]]
