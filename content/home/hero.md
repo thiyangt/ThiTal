@@ -7,7 +7,7 @@ date = 2017-10-15T00:00:00
 title = ""
   
 # Order that this section will appear in.
-weight = 1
+weight = 3
   
 # Overlay a color or image (optional).
 #   Deactivate an option by commenting out the line, prefixing it with `#`.
