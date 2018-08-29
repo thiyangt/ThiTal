@@ -15,7 +15,7 @@ weight = 5
     "Machine Learning",
     "Applied Statistics"
   ]
-
+  
 # List your qualifications (such as academic degrees).
 [[education.courses]]
   course = "PhD in Statistics (Begun 2016)"
