@@ -4,7 +4,7 @@ widget = "hero"
 active = true
 date = 2017-10-15T00:00:00
   
-title = ""
+title = "The words don't fit the pictures."
   
 # Order that this section will appear in.
 weight = 3
