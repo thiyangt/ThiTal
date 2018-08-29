@@ -1055,7 +1055,7 @@ footer a#back_to_top i {
 
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
-  background-color: darkblue;
+  background-color: transparent;
 }
 
 nav#navbar-main li {
