@@ -34,12 +34,6 @@ weight = 5
 
 # About me
 
-I am a PhD student in Statistics at [Monash University, Australia](https://www.monash.edu/). My recent research has cetered around the problem of forecasting large collections of time series. My dissertation work focuses specifically on developing computationally efficient forecasting methods for large-scale real-time applications. 
+I am a PhD candidate in Statistics at [Monash University, Australia](https://www.monash.edu/) working with [Professor Rob Hyndman](https://robjhyndman.com/hyndsight/) and [Associate Professor George Athanasopoulos](https://research.monash.edu/en/persons/george-athanasopoulos). My PhD research focuses on the problem of forecasting large collections of time series. I am also interested in R programming language and general data science problems. 
 
-I am also interested in statistical programming with R. I have written several  packages in R. 
-
-Prior to joining Monash, I received a B.Sc. special degree in Statistics from the [University of Sri Jayewardenepura, Sri Lanka](https://www.sjp.ac.lk/). I was ranked first in my class and was awarded with [Professor R A Dayananda Gold Medal for Statistics](http://science.sjp.ac.lk/scholarships/). My MSc. thesis titled, "Mathematical modeling of dengue dynamics and climate variability in Sri Lanka" won Bronze Medal at the Best Postgraduate Research Project Award Competition organized by the Institute of Applied Statistics, Sri Lanka and a special recognition award from [University of Moratuwa, Sri Lanka](https://www.mrt.ac.lk/web/) for winning the Bronze Medal at the Best Postgraduate Research Project Award Competition.  
-
-My sister [Priyanga Dilini Talagala](http://prital.netlify.com/) is also a PhD student at Monash University, Australia.  
-
-This site is built with R markdown and Hugo and deployed with Netlify.
+My sister [Priyanga Dilini Talagala](http://prital.netlify.com/) is also a PhD student at Monash University, Australia. This site is built with R markdown and Hugo and deployed with Netlify.
