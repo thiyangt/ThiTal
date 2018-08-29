@@ -19,8 +19,8 @@ overlay_img = "headers/bubbles-wide.jpg"  # Image path relative to your `static/
 #   Activate the button by specifying a URL and button label below.
 #   Deactivate by commenting out parameters, prefixing lines with `#`.
   [cta]
-#url = "https://github.com/thiyangt"
-#label = '<i class="fa fa-octocat"></i> '
+url = "#about"
+label = '<i class="fa fa-octocat"></i> About me'
 +++
     
 <br>
