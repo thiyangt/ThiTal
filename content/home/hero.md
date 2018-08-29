@@ -26,8 +26,8 @@ overlay_img = "headers/bubbles-wide.jpg"  # Image path relative to your `static/
 <br>
     <small><a id="academic-release" href="https://sourcethemes.com/academic/updates"> </a></small>
     <br><br>
-    <iframe style="display: inline-block;" src="" scrolling="0" width="200px" height="450px" frameborder="0"></iframe>
-    <iframe style="display: inline-block;" src="" scrolling="0" width="200px" height="450px" frameborder="0"></iframe>
+    <iframe style="display: inline-block;" src="" scrolling="0" width="200px" height="550px" frameborder="0"></iframe>
+    <iframe style="display: inline-block;" src="" scrolling="0" width="200px" height="550px" frameborder="0"></iframe>
     <script type="text/javascript">
     (function defer() {
       if (window.jQuery) {
