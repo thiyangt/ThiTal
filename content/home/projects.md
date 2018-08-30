@@ -38,13 +38,17 @@ filter_default = 0
 
 +++
 
-- 2016: Research awards, USJ
+ **2018:** Travel award, IIF
 
-- 2016: Monash University Tution Fee Scholarship
+**2017:** Travel award, SSA, Australia
 
-- 2016: Monash Graduate Scholarship
+ **2016:** Research awards, USJ
 
-- 2015: Bronze medal at the Best Post-Graduate Competition Held by IASSL
+ **2016:** Monash University Tution Fee Scholarship
 
-- 2012: Professor R. A. Dayanda Gold Medal for Statistics
+ **2016:** Monash Graduate Scholarship
+
+ **2015:** Bronze medal at the Best Post-Graduate Competition Held by IASSL
+
+ **2012:** Professor R. A. Dayanda Gold Medal for Statistics
  
