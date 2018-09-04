@@ -9,7 +9,7 @@ title = "Large-scale time series forecasting"
 summary = ""
   
 # Optional image to display on homepage (relative to `static/img/` folder).
-#image_preview = "headers/ts.jpg"
+image_preview = "headers/ts.jpg"
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
