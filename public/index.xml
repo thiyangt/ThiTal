@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Large-scale time series forecasting</title>
+      <link>/project/largescaleforecasting/</link>
+      <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/largescaleforecasting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Parallel Computing in R</title>
       <link>/post/parallelcomputing/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +1000</pubDate>
