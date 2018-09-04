@@ -5,7 +5,7 @@ widget = "projects"
 active = true
 date = "2016-04-20T00:00:00"
 
-title = "Awards"
+title = "Projects"
 subtitle = ""
 
 # Order that this section will appear in.
@@ -24,31 +24,17 @@ filter_default = 0
 # Add or remove as many filters (`[[filter]]` instances) as you like.
 # Use "*" tag to show all projects or an existing tag prefixed with "." to filter by specific tag.
 # To remove toolbar, delete/comment all instances of `[[filter]]` below.
-#[[filter]]
-#  name = "All"
-#  tag = "*"
+[[filter]]
+ name = "All"
+  tag = "*"
   
-#[[filter]]
-#  name = "Time Series"
-#  tag = ".time-series"
+[[filter]]
+name = "Time Series"
+tag = ".time-series"
 
-#[[filter]]
-#  name = "Other"
-#  tag = ".demo"
+[[filter]]
+name = "Other"
+tag = ".demo"
 
 +++
 
- **2018:** Travel award, IIF
-
-**2017:** Travel award, SSA, Australia
-
- **2016:** Research awards, USJ
-
- **2016:** Monash University Tution Fee Scholarship
-
- **2016:** Monash Graduate Scholarship
-
- **2015:** Bronze medal at the Best Post-Graduate Competition Held by IASSL
-
- **2012:** Professor R. A. Dayanda Gold Medal for Statistics
- 
