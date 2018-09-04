@@ -23,7 +23,7 @@ math = false
   
 # Optional featured image (relative to `static/img/` folder).
 [header]
-image = "largescale.jpeg"
+image = "ts.jpg"
 caption = "source: https://www.pexels.com/photo/beige-analog-gauge-697662/"
   
 +++
