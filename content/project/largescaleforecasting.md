@@ -9,14 +9,14 @@ title = "Large-scale time series forecasting"
 summary = ""
   
 # Optional image to display on homepage (relative to `static/img/` folder).
-image_preview = ""
+image_preview = "seer.png"
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
 tags = ["Time-Series"]
   
 # Optional external URL for project (replaces project detail page).
-external_link = ""
+external_link = "https://github.com/thiyangt/seer"
   
 # Does the project detail page use math formatting?
 math = false
