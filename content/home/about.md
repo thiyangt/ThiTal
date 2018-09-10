@@ -19,7 +19,7 @@ weight = 5
 # List your qualifications (such as academic degrees).
 [[education.courses]]
   course = "PhD in Statistics (Begun 2016)"
-  institution = "Monash University"
+  institution = "Monash University, Australia"
 
 [[education.courses]]
   course = "MSc in Financial Mathematics"
