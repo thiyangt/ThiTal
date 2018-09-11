@@ -36,9 +36,9 @@ publication_type = "-1"
 exclude_selected = false
 +++
 
-- [m4comp2018](https://github.com/carlanetto/M4comp2018): R package for [M4 Competition](https://www.m4.unic.ac.cy/) time series data 
+<i class="fa fa-cog fa-spin"></i> [m4comp2018](https://github.com/carlanetto/M4comp2018): R package for [M4 Competition](https://www.m4.unic.ac.cy/) time series data 
 
-- [mozzie](https://github.com/thiyangt/mozzie): R package for dengue cases in Sri Lanka
+<i class="fa fa-cog fa-spin"></i> [mozzie](https://github.com/thiyangt/mozzie): R package for dengue cases in Sri Lanka
 
-- [colmozzie](https://github.com/thiyangt/colmozzie): R package for dengue cases and climate variables in Colombo Sri Lanka
+<i class="fa fa-cog fa-spin"></i> [colmozzie](https://github.com/thiyangt/colmozzie): R package for dengue cases and climate variables in Colombo Sri Lanka
 
