@@ -31,6 +31,6 @@ list_format = 1
 publication_type = "-1"
 +++
 
-<i class="fa fa-cog fa-spin"></i> [seer](https://github.com/thiyangt/seer): R package for feature-based time series forecasting.
+<i class="fa fa-cog fa-spin" style="color:Maroon"></i> [seer](https://github.com/thiyangt/seer): R package for feature-based time series forecasting.
 
-<i class="fa fa-cog fa-spin"></i> [tsfeatures](https://github.com/robjhyndman/tsfeatures): R package tsfeatures provides methods for extracting various features from time series data.(Package contributed.)
+<i class="fa fa-cog fa-spin" style="color:Maroon"></i> [tsfeatures](https://github.com/robjhyndman/tsfeatures): R package tsfeatures provides methods for extracting various features from time series data.(Package contributed.)
