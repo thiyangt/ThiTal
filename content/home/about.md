@@ -35,6 +35,4 @@ weight = 5
 
 # About me
 
-I am a PhD candidate in Statistics at [Monash University, Australia](https://www.monash.edu/) working with [Professor Rob Hyndman](https://robjhyndman.com/hyndsight/) and [Associate Professor George Athanasopoulos](https://research.monash.edu/en/persons/george-athanasopoulos). My PhD research focuses on the problem of forecasting large collections of time series. I am also interested in R programming language and general data science problems. 
-
-My sister [Priyanga Dilini Talagala](http://prital.netlify.com/) is also a PhD candidate at Monash University, Australia. This site is built with R markdown and Hugo and deployed with Netlify.
+I am a PhD candidate in Statistics at [Monash University, Australia](https://www.monash.edu/). My PhD research focuses on the problem of forecasting large collections of time series. I enjoy solving general data science problems from three different angles: theoretical, computational, applied. In this website you will find some of my work and interests on statistics and data analysis. I am also interested in R programming language.
