@@ -35,4 +35,4 @@ weight = 5
 
 # About me
 
-I am a PhD candidate in Statistics at [Monash University, Australia](https://www.monash.edu/). My PhD research focuses on the problem of forecasting large collections of time series. I enjoy solving general data science problems from three different angles: theoretical, computational, applied. In this website you will find some of my work and interests on statistics and data analysis. I am also interested in R programming language.
+I am a PhD candidate in Statistics at [Monash University, Australia](https://www.monash.edu/). My PhD research focuses on the problem of forecasting large collections of time series. Further, I enjoy solving general data science problems from three different angles: theoretical, computational, applied. In this website you will find some of my work and interests on statistics and data analysis. I am also interested in R programming language.
