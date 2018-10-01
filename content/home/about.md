@@ -13,7 +13,8 @@ weight = 5
     "Time Series Analysis",
     "Computational Statistics",
     "Machine Learning",
-    "Applied Statistics"
+    "Applied Statistics",
+    "Algorithm Selection"
   ]
   
 # List your qualifications (such as academic degrees).
