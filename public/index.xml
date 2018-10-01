@@ -11,7 +11,44 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Parallel Computing in R</title>
+      <title>Customizing boxplot with ggplot</title>
+      <link>/post/boxplot/</link>
+      <pubDate>Mon, 01 Oct 2018 00:00:00 +1000</pubDate>
+      
+      <guid>/post/boxplot/</guid>
+      <description>&lt;p&gt;Boxplot is probably one of the most common type of graphics. This will show how to customize boxplot. You will learn,&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;how to change the order of labels&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;how to change the colours&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;First we create a simple data set.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;Gender &amp;lt;- rep(c(&amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;), times = 3, each = 4)
+Quality &amp;lt;- rep(c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;), times = 1, each = 8)
+Accepted &amp;lt;- seq(0, 100, by = 100/23)
+
+DF &amp;lt;- data.frame(Chemical, Quality, Accepted)
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(ggplot)
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;),
+                    labels = expression(&amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;)) +
+  xlab(&amp;quot;&amp;quot;) +
+  theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
+  guides(fill=guide_legend(reverse=TRUE)) +
+  scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Customizing boxplot with ggplot</title>
       <link>/post/parallelcomputing/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +1000</pubDate>
       
