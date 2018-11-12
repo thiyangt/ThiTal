@@ -48,7 +48,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
     </item>
     
     <item>
-      <title>Customizing boxplot with ggplot</title>
+      <title>parallel computing with R</title>
       <link>/post/parallelcomputing/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +1000</pubDate>
       
