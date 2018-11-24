@@ -11,11 +11,11 @@ Boxplot is probably one of the most common type of graphics. This will show how 
 
 You will learn,
 
-how to change the order of labels
+- how to change the order of labels
 
-how to change the colours
+- how to change the colours
 
-how to flip coordinates
+- how to flip coordinates
 
 
 

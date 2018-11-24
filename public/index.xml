@@ -36,9 +36,11 @@
       <guid>/post/blog/</guid>
       <description>&lt;p&gt;Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.&lt;/p&gt;
 &lt;p&gt;You will learn,&lt;/p&gt;
-&lt;p&gt;how to change the order of labels&lt;/p&gt;
-&lt;p&gt;how to change the colours&lt;/p&gt;
-&lt;p&gt;how to flip coordinates&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;how to change the order of labels&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;how to change the colours&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;how to flip coordinates&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Step 1: we create a simple data set.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Gender &amp;lt;- rep(c(&amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;), times = 3, each = 4)
 Quality &amp;lt;- rep(c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;), times = 1, each = 8)
