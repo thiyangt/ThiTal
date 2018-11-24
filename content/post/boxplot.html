@@ -31,3 +31,30 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   guides(fill=guide_legend(reverse=TRUE)) +
   scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
 <p><img src="/post/boxplot_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div id="change-the-legend-order-similar-to-plot-order-under-themes-fillguide_legendreversefalse" class="section level2">
+<h2>Change the legend order similar to plot order: under themes fill=guide_legend(reverse=FALSE)</h2>
+<pre class="r"><code>library(ggplot2)
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;),
+                    labels = expression(&quot;Male&quot;, &quot;Female&quot;)) +
+  xlab(&quot;&quot;) +
+  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
+  guides(fill=guide_legend(reverse=FALSE)) +
+  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
+<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="horizontal-bar-chart-coord_flip" class="section level2">
+<h2>Horizontal bar chart: coord_flip()</h2>
+<pre class="r"><code>library(ggplot2)
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;),
+                    labels = expression(&quot;Male&quot;, &quot;Female&quot;)) +
+  xlab(&quot;&quot;) +
+  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
+  guides(fill=guide_legend(reverse=TRUE)) +
+  coord_flip()+
+  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
+<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>

@@ -44,3 +44,31 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   scale_x_discrete(limits=c("Taste", "Color of package", "Capacity"))
 ```
 
+## Change the legend order similar to plot order: under themes fill=guide_legend(reverse=FALSE)
+
+```{r}
+library(ggplot2)
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("green", "orange"),
+                    labels = expression("Male", "Female")) +
+  xlab("") +
+  theme(legend.position = "top", legend.title = element_blank()) + 
+  guides(fill=guide_legend(reverse=FALSE)) +
+  scale_x_discrete(limits=c("Taste", "Color of package", "Capacity"))
+```
+
+## Horizontal bar chart: coord_flip()
+
+```{r}
+library(ggplot2)
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("green", "orange"),
+                    labels = expression("Male", "Female")) +
+  xlab("") +
+  theme(legend.position = "top", legend.title = element_blank()) + 
+  guides(fill=guide_legend(reverse=TRUE)) +
+  coord_flip()+
+  scale_x_discrete(limits=c("Taste", "Color of package", "Capacity"))
+```
