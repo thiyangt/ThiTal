@@ -30,10 +30,10 @@
     
     <item>
       <title>Customizing boxplot with ggplot</title>
-      <link>/post/using-r-to-analyse-the-german-federal-election/</link>
+      <link>/post/boxplot/</link>
       <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/using-r-to-analyse-the-german-federal-election/</guid>
+      <guid>/post/boxplot/</guid>
       <description>&lt;p&gt;Boxplot is probably one of the most common type of graphics. This will show how to customize boxplot. You will learn,&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;how to change the order of labels&lt;/p&gt;&lt;/li&gt;
