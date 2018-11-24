@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.31.1" />
+  <meta name="author" content="Thiyanga Talagala">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="Boxplot is probably one of the most common type of graphics. This will show how to customize boxplot. You will learn,
+how to change the order of labels
+how to change the colours
+First we create a simple data set.
+Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Quality &lt;- rep(c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;), times = 1, each = 8)Accepted &lt;- seq(0, 100, by = 100/23)DF &lt;- data.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/boxplot/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#0095eb">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/custom.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="THIYANGA TALAGALA">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="THIYANGA TALAGALA">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/boxplot/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@thiyangt">
+  <meta property="twitter:creator" content="@thiyangt">
+  
+  <meta property="og:site_name" content="THIYANGA TALAGALA">
+  <meta property="og:url" content="/post/boxplot/">
+  <meta property="og:title" content="Customizing boxplot with ggplot | THIYANGA TALAGALA">
+  <meta property="og:description" content="Boxplot is probably one of the most common type of graphics. This will show how to customize boxplot. You will learn,
+how to change the order of labels
+how to change the colours
+First we create a simple data set.
+Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Quality &lt;- rep(c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;), times = 1, each = 8)Accepted &lt;- seq(0, 100, by = 100/23)DF &lt;- data.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-07-05T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-07-05T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>Customizing boxplot with ggplot | THIYANGA TALAGALA</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">THIYANGA TALAGALA</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#hero">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#data_import">
+            
+            <span>Software</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#talks">
+            
+            <span>Talks</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Customizing boxplot with ggplot</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-07-05 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Jul 5, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Thiyanga Talagala">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/ggplot2">ggplot2</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Customizing%20boxplot%20with%20ggplot&amp;url=%2fpost%2fboxplot%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fboxplot%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fboxplot%2f&amp;title=Customizing%20boxplot%20with%20ggplot"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fboxplot%2f&amp;title=Customizing%20boxplot%20with%20ggplot"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Customizing%20boxplot%20with%20ggplot&amp;body=%2fpost%2fboxplot%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        <p>Boxplot is probably one of the most common type of graphics. This will show how to customize boxplot. You will learn,</p>
+<ol style="list-style-type: decimal">
+<li><p>how to change the order of labels</p></li>
+<li><p>how to change the colours</p></li>
+</ol>
+<p>First we create a simple data set.</p>
+<pre class="r"><code>Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)
+Quality &lt;- rep(c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;), times = 1, each = 8)
+Accepted &lt;- seq(0, 100, by = 100/23)
+
+DF &lt;- data.frame(Gender, Quality, Accepted)</code></pre>
+<pre class="r"><code>library(ggplot2)
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;),
+                    labels = expression(&quot;Male&quot;, &quot;Female&quot;)) +
+  xlab(&quot;&quot;) +
+  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
+  guides(fill=guide_legend(reverse=TRUE)) +
+  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
+<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div id="change-the-legend-order-similar-to-plot-order-under-themes-fillguide_legendreversefalse" class="section level2">
+<h2>Change the legend order similar to plot order: under themes fill=guide_legend(reverse=FALSE)</h2>
+<pre class="r"><code>library(ggplot2)
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;),
+                    labels = expression(&quot;Male&quot;, &quot;Female&quot;)) +
+  xlab(&quot;&quot;) +
+  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
+  guides(fill=guide_legend(reverse=FALSE)) +
+  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
+<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="horizontal-bar-chart-coord_flip" class="section level2">
+<h2>Horizontal bar chart: coord_flip()</h2>
+<pre class="r"><code>library(ggplot2)
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;),
+                    labels = expression(&quot;Male&quot;, &quot;Female&quot;)) +
+  xlab(&quot;&quot;) +
+  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
+  guides(fill=guide_legend(reverse=TRUE)) +
+  coord_flip()+
+  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
+<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/r">R</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/ggplot2">ggplot2</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+
+
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 Thiyanga S Talagala &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+
