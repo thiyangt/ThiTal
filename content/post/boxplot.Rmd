@@ -2,6 +2,7 @@
 title: "Customizing boxplot with ggplot"
 author: Thiyanga Talagala
 date: '2018-07-05'
+slug: blog
 categories: [ggplot2]
 tags: [R, ggplot2]
 ---
