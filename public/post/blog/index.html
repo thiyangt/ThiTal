@@ -17,10 +17,12 @@
       
     
   
-  <meta name="description" content="Boxplot is probably one of the most common type of graphics. This will show how to customize boxplot. You will learn,
+  <meta name="description" content="Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.
+You will learn,
 how to change the order of labels
-how to change the colours
-First we create a simple data set.
+how to change the colours
+how to flip coordinates
+Step 1: we create a simple data set.
 Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Quality &lt;- rep(c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;), times = 1, each = 8)Accepted &lt;- seq(0, 100, by = 100/23)DF &lt;- data.">
 
   
@@ -84,10 +86,12 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
   <meta property="og:site_name" content="THIYANGA TALAGALA">
   <meta property="og:url" content="/post/blog/">
   <meta property="og:title" content="Customizing boxplot with ggplot | THIYANGA TALAGALA">
-  <meta property="og:description" content="Boxplot is probably one of the most common type of graphics. This will show how to customize boxplot. You will learn,
+  <meta property="og:description" content="Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.
+You will learn,
 how to change the order of labels
-how to change the colours
-First we create a simple data set.
+how to change the colours
+how to flip coordinates
+Step 1: we create a simple data set.
 Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Quality &lt;- rep(c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;), times = 1, each = 8)Accepted &lt;- seq(0, 100, by = 100/23)DF &lt;- data.">
   <meta property="og:locale" content="en-us">
   
@@ -296,7 +300,7 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    2 min read
   </span>
   
 
@@ -365,17 +369,18 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
 
 
       <div class="article-style" itemprop="articleBody">
-        <p>Boxplot is probably one of the most common type of graphics. This will show how to customize boxplot. You will learn,</p>
-<ol style="list-style-type: decimal">
-<li><p>how to change the order of labels</p></li>
-<li><p>how to change the colours</p></li>
-</ol>
-<p>First we create a simple data set.</p>
+        <p>Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.</p>
+<p>You will learn,</p>
+<p>how to change the order of labels</p>
+<p>how to change the colours</p>
+<p>how to flip coordinates</p>
+<p>Step 1: we create a simple data set.</p>
 <pre class="r"><code>Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)
 Quality &lt;- rep(c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;), times = 1, each = 8)
 Accepted &lt;- seq(0, 100, by = 100/23)
 
 DF &lt;- data.frame(Gender, Quality, Accepted)</code></pre>
+<p>Step 2: Generate boxplot with ggplot</p>
 <pre class="r"><code>library(ggplot2)
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
@@ -386,8 +391,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   guides(fill=guide_legend(reverse=TRUE)) +
   scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
 <p><img src="/post/boxplot_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<div id="change-the-legend-order-similar-to-plot-order-under-themes-fillguide_legendreversefalse" class="section level2">
-<h2>Change the legend order similar to plot order: under themes fill=guide_legend(reverse=FALSE)</h2>
+<p>Step 3: Change the legend order similar to plot order: under themes <code>fill=guide_legend(reverse=FALSE)</code></p>
 <pre class="r"><code>library(ggplot2)
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
@@ -398,9 +402,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   guides(fill=guide_legend(reverse=FALSE)) +
   scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
 <p><img src="/post/boxplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-</div>
-<div id="horizontal-bar-chart-coord_flip" class="section level2">
-<h2>Horizontal bar chart: coord_flip()</h2>
+<p>step 4: Horizontal bar chart: <code>coord_flip()</code></p>
 <pre class="r"><code>library(ggplot2)
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
@@ -412,7 +414,6 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   coord_flip()+
   scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
 <p><img src="/post/boxplot_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-</div>
 
       </div>
 

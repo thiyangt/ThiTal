@@ -7,14 +7,19 @@ categories: [ggplot2]
 tags: [R, ggplot2]
 ---
 
-Boxplot is probably one of the most common type of graphics. This will show how to customize boxplot. You will learn,
+Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots. 
 
-1. how to change the order of labels
+You will learn,
 
-2. how to change the colours
+how to change the order of labels
+
+how to change the colours
+
+how to flip coordinates
 
 
-First we create a simple data set.
+
+Step 1: we create a simple data set.
 
 ```{r}
 Gender <- rep(c("Male", "Female"), times = 3, each = 4)
@@ -24,6 +29,8 @@ Accepted <- seq(0, 100, by = 100/23)
 DF <- data.frame(Gender, Quality, Accepted)
 
 ```
+
+Step 2: Generate boxplot with ggplot
 
 ```{r}
 library(ggplot2)
@@ -37,7 +44,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   scale_x_discrete(limits=c("Taste", "Color of package", "Capacity"))
 ```
 
-## Change the legend order similar to plot order: under themes fill=guide_legend(reverse=FALSE)
+Step 3: Change the legend order similar to plot order: under themes `fill=guide_legend(reverse=FALSE)`
 
 ```{r}
 library(ggplot2)
@@ -51,7 +58,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   scale_x_discrete(limits=c("Taste", "Color of package", "Capacity"))
 ```
 
-## Horizontal bar chart: coord_flip()
+step 4: Horizontal bar chart: `coord_flip()`
 
 ```{r}
 library(ggplot2)
