@@ -60,36 +60,42 @@ head(DF)&lt;/code&gt;&lt;/pre&gt;
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Step 3: Change the plotting order, colours, legend position and x-axis order&lt;/p&gt;
+&lt;p&gt;Step 3: Change the colours, legend position and x-axis order&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
-  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;),
-                    labels = expression(&amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;)) +
+  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;)) +
   xlab(&amp;quot;&amp;quot;) +
   theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
   scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Step 4: Horizontal bar chart: coord_flip()&lt;/p&gt;
+&lt;p&gt;Step 4: Change the plotting order: first you have to include facotor code to set the order of the levels.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;DF$Gender_factor &amp;lt;- factor(DF$Gender, levels=c(&amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;))
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;)) +
+  xlab(&amp;quot;&amp;quot;) +
+  theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
+  scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Step 5: Horizontal bar chart: coord_flip()&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
-  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;),
-                    labels = expression(&amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;)) +
+  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;)) +
   xlab(&amp;quot;&amp;quot;) +
   theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
   coord_flip()+
   scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;step 5: Change the legend order similar to plot order: under themes &lt;code&gt;fill=guide_legend(reverse=FALSE)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;step 6: Change the legend order similar to plot order: under themes &lt;code&gt;fill=guide_legend(reverse=FALSE)&lt;/code&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
-  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;),
-                    labels = expression(&amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;)) +
+  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;)) +
   xlab(&amp;quot;&amp;quot;) +
   theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
   guides(fill=guide_legend(reverse=TRUE)) +
   coord_flip()+
   scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

@@ -39,38 +39,49 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
 ```
 
 
-Step 3: Change the plotting order, colours, legend position and x-axis order
+Step 3: Change the colours, legend position and x-axis order
 
 ```{r}
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
-  scale_fill_manual(values = c("green", "orange"),
-                    labels = expression("Male", "Female")) +
+  scale_fill_manual(values = c("green", "orange")) +
   xlab("") +
   theme(legend.position = "top", legend.title = element_blank()) + 
   scale_x_discrete(limits=c("Taste", "Color of package", "Capacity"))
 ```
 
-Step 4: Horizontal bar chart: coord_flip()
+Step 4: Change the plotting order: first you have to include facotor code to set the order of the levels.
+
+```{r}
+DF$Gender_factor <- factor(DF$Gender, levels=c("Male", "Female"))
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("green", "orange")) +
+  xlab("") +
+  theme(legend.position = "top", legend.title = element_blank()) + 
+  scale_x_discrete(limits=c("Taste", "Color of package", "Capacity"))
+```
+
+
+
+Step 5: Horizontal bar chart: coord_flip()
 
 ```{r}
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
-  scale_fill_manual(values = c("green", "orange"),
-                    labels = expression("Male", "Female")) +
+  scale_fill_manual(values = c("green", "orange")) +
   xlab("") +
   theme(legend.position = "top", legend.title = element_blank()) + 
   coord_flip()+
   scale_x_discrete(limits=c("Taste", "Color of package", "Capacity"))
 ```
 
-step 5: Change the legend order similar to plot order: under themes `fill=guide_legend(reverse=FALSE)`
+step 6: Change the legend order similar to plot order: under themes `fill=guide_legend(reverse=FALSE)`
 
 ```{r}
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
-  scale_fill_manual(values = c("green", "orange"),
-                    labels = expression("Male", "Female")) +
+  scale_fill_manual(values = c("green", "orange")) +
   xlab("") +
   theme(legend.position = "top", legend.title = element_blank()) + 
   guides(fill=guide_legend(reverse=TRUE)) +
