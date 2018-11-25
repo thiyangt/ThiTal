@@ -267,6 +267,142 @@
   
   
   <h3 class="article-title" itemprop="headline">
+    <a href="/post/blog/" itemprop="url">What&#39;s in a package?</a>
+  </h3>
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-10-05 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Oct 5, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Thiyanga Talagala">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/r">R</a
+    >
+    
+  </span>
+  
+  
+
+  
+
+</div>
+
+  <div class="article-style" itemprop="articleBody">
+    
+    Sometimes we need to view all the functions that are built into an R package. This is done in the same way you would list variables in your workspace, using the ls function. Note that the package must be loaded before you run the ls command.
+Usage: Getting a list of functions inside dplyr package
+library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionls(&quot;package:dplyr&quot;)## [1] &quot;%&gt;%&quot; &quot;add_count&quot; &quot;add_count_&quot; ## [4] &quot;add_row&quot; &quot;add_rownames&quot; &quot;add_tally&quot; ## [7] &quot;add_tally_&quot; &quot;all_equal&quot; &quot;all_vars&quot; ## [10] &quot;anti_join&quot; &quot;any_vars&quot; &quot;arrange&quot; ## [13] &quot;arrange_&quot; &quot;arrange_all&quot; &quot;arrange_at&quot; ## [16] &quot;arrange_if&quot; &quot;as.
+    
+  </div>
+  <p class="read-more" itemprop="mainEntityOfPage">
+    <a href="/post/blog/" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+  
+    
+    
+
+<div class="article-list-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+  
+  
+  <h3 class="article-title" itemprop="headline">
+    <a href="/post/blog/" itemprop="url">Customizing boxplots with ggplot2</a>
+  </h3>
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-09-05 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Sep 5, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Thiyanga Talagala">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/ggplot2">ggplot2</a
+    >
+    
+  </span>
+  
+  
+
+  
+
+</div>
+
+  <div class="article-style" itemprop="articleBody">
+    
+    Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.
+You will learn,
+how to change the order of labels
+how to change the colours
+how to flip coordinates
+Step 1: we create a simple data set.
+Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Quality &lt;- rep(c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;), times = 1, each = 8)Accepted &lt;- seq(0, 100, by = 100/23)DF &lt;- data.
+    
+  </div>
+  <p class="read-more" itemprop="mainEntityOfPage">
+    <a href="/post/blog/" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+  
+    
+    
+
+<div class="article-list-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+  
+  
+  <h3 class="article-title" itemprop="headline">
     <a href="/post/parallelcomputing/" itemprop="url">parallel computing with R</a>
   </h3>
   
@@ -358,76 +494,6 @@
   </div>
   <p class="read-more" itemprop="mainEntityOfPage">
     <a href="/post/datatypes/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-  
-    
-    
-
-<div class="article-list-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/blog/" itemprop="url">Customizing boxplots with ggplot2</a>
-  </h3>
-  
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2018-07-05 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
-      Jul 5, 2018
-    </time>
-  </span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Thiyanga Talagala">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    2 min read
-  </span>
-  
-
-  
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fa fa-folder"></i>
-    
-    <a href="/categories/ggplot2">ggplot2</a
-    >
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-  <div class="article-style" itemprop="articleBody">
-    
-    Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.
-You will learn,
-how to change the order of labels
-how to change the colours
-how to flip coordinates
-Step 1: we create a simple data set.
-Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Quality &lt;- rep(c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;), times = 1, each = 8)Accepted &lt;- seq(0, 100, by = 100/23)DF &lt;- data.
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/blog/" class="btn btn-primary btn-outline">
       CONTINUE READING
     </a>
   </p>

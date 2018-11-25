@@ -54,12 +54,14 @@
   
   <link rel="stylesheet" href="/styles.css">
   
-
+  <link rel="stylesheet" href="/css/custom.css">
   
 
   
-  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="">
-  <link rel="feed" href="/index.xml" type="application/rss+xml" title="">
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="THIYANGA TALAGALA">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="THIYANGA TALAGALA">
   
 
   <link rel="manifest" href="/site.webmanifest">
@@ -73,18 +75,18 @@
   <meta property="twitter:site" content="@thiyangt">
   <meta property="twitter:creator" content="@thiyangt">
   
-  <meta property="og:site_name" content="">
+  <meta property="og:site_name" content="THIYANGA TALAGALA">
   <meta property="og:url" content="/categories/r/">
-  <meta property="og:title" content="R | ">
+  <meta property="og:title" content="R | THIYANGA TALAGALA">
   <meta property="og:description" content="PhD Candidate in Statistics">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2015-07-23T21:13:14-05:00">
+  <meta property="og:updated_time" content="2018-10-05T00:00:00&#43;00:00">
   
 
   
 
-  <title>R | </title>
+  <title>R | THIYANGA TALAGALA</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -103,7 +105,7 @@
         <span class="icon-bar"></span>
       </button>
       
-      <a class="navbar-brand" href="/"></a>
+      <a class="navbar-brand" href="/">THIYANGA TALAGALA</a>
     </div>
 
     
@@ -123,7 +125,7 @@
         
 
         <li class="nav-item">
-          <a href="/#about">
+          <a href="/#hero">
             
             <span>Home</span>
             
@@ -142,9 +144,28 @@
         
 
         <li class="nav-item">
-          <a href="/#Research">
+          <a href="/#data_import">
             
-            <span>Research</span>
+            <span>Software</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#talks">
+            
+            <span>Talks</span>
             
           </a>
         </li>
@@ -180,9 +201,9 @@
         
 
         <li class="nav-item">
-          <a href="/#Talks">
+          <a href="/#projects">
             
-            <span>Talks</span>
+            <span>Projects</span>
             
           </a>
         </li>
@@ -249,15 +270,26 @@
   
   
   <div>
-    <h2><a href="/post/2015-07-23-r-rmarkdown/">Hello R Markdown</a></h2>
+    <h2><a href="/post/blog/">What&#39;s in a package?</a></h2>
     <div class="article-style">
       
-      R Markdown
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" target="_blank">http://rmarkdown.rstudio.com</a>.
-You can embed an R code chunk like this:
-summary(cars)</p>
+      <p>Sometimes we need to view all the functions that are built into an R package. This is done in the same way you would list variables in your workspace, using the ls function. Note that the package must be loaded before you run the ls command.
+Usage: Getting a list of functions inside dplyr package
+library(dplyr)</p>
 
-<h2 id="speed-dist-min-4-0-min-2-00-1st-qu-12-0-1st-qu-26-00-median-15-0-median-36-00-mean-15-4-mean-42-98-3rd-qu">speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</h2>
+<h2 id="attaching-package-39-dplyr-39">## Attaching package: &#39;dplyr&#39;</h2>
+
+<h2 id="the-following-objects-are-masked-from-39-package-stats-39">The following objects are masked from &#39;package:stats&#39;:</h2>
+
+<h2 id="filter-lag">## filter, lag</h2>
+
+<h2 id="the-following-objects-are-masked-from-39-package-base-39">The following objects are masked from &#39;package:base&#39;:</h2>
+
+<h2 id="intersect-setdiff-setequal-union">## intersect, setdiff, setequal, union</h2>
+
+<p>ls(&quot;package:dplyr&quot;)</p>
+
+<h2 id="1-quot-gt-quot-quot-add-count-quot-quot-add-count-quot-4-quot-add-row-quot-quot-add-rownames-quot-quot-add-tally-quot-7-quot-add-tally-quot-quot-all-equal-quot-quot-all-vars-quot-10-quot-anti-join-quot-quot-any-vars-quot-quot-arrange-quot-13-quot-arrange-quot-quot-arrange-all-quot-quot-arrange-at-quot-16-quot-arrange-if-quot-quot-as">[1] &quot;%&gt;%&quot; &quot;add_count&quot; &quot;add<em>count</em>&quot; ## [4] &quot;add_row&quot; &quot;add_rownames&quot; &quot;add_tally&quot; ## [7] &quot;add<em>tally</em>&quot; &quot;all_equal&quot; &quot;all_vars&quot; ## [10] &quot;anti_join&quot; &quot;any<em>vars&quot; &quot;arrange&quot; ## [13] &quot;arrange</em>&quot; &quot;arrange_all&quot; &quot;arrange_at&quot; ## [16] &quot;arrange_if&quot; &quot;as.</h2>
 
       
     </div>
@@ -272,7 +304,7 @@ summary(cars)</p>
   <div class="container">
     <p class="powered-by">
 
-      &copy; 2018 &middot; 
+      &copy; 2018 Thiyanga S Talagala &middot; 
 
       Powered by the
       <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

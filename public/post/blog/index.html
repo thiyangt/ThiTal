@@ -17,13 +17,9 @@
       
     
   
-  <meta name="description" content="Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.
-You will learn,
-how to change the order of labels
-how to change the colours
-how to flip coordinates
-Step 1: we create a simple data set.
-Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Quality &lt;- rep(c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;), times = 1, each = 8)Accepted &lt;- seq(0, 100, by = 100/23)DF &lt;- data.">
+  <meta name="description" content="Sometimes we need to view all the functions that are built into an R package. This is done in the same way you would list variables in your workspace, using the ls function. Note that the package must be loaded before you run the ls command.
+Usage: Getting a list of functions inside dplyr package
+library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionls(&quot;package:dplyr&quot;)## [1] &quot;%&gt;%&quot; &quot;add_count&quot; &quot;add_count_&quot; ## [4] &quot;add_row&quot; &quot;add_rownames&quot; &quot;add_tally&quot; ## [7] &quot;add_tally_&quot; &quot;all_equal&quot; &quot;all_vars&quot; ## [10] &quot;anti_join&quot; &quot;any_vars&quot; &quot;arrange&quot; ## [13] &quot;arrange_&quot; &quot;arrange_all&quot; &quot;arrange_at&quot; ## [16] &quot;arrange_if&quot; &quot;as.">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/blog/">
@@ -85,24 +81,20 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
   
   <meta property="og:site_name" content="THIYANGA TALAGALA">
   <meta property="og:url" content="/post/blog/">
-  <meta property="og:title" content="Customizing boxplots with ggplot2 | THIYANGA TALAGALA">
-  <meta property="og:description" content="Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.
-You will learn,
-how to change the order of labels
-how to change the colours
-how to flip coordinates
-Step 1: we create a simple data set.
-Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Quality &lt;- rep(c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;), times = 1, each = 8)Accepted &lt;- seq(0, 100, by = 100/23)DF &lt;- data.">
+  <meta property="og:title" content="What&#39;s in a package? | THIYANGA TALAGALA">
+  <meta property="og:description" content="Sometimes we need to view all the functions that are built into an R package. This is done in the same way you would list variables in your workspace, using the ls function. Note that the package must be loaded before you run the ls command.
+Usage: Getting a list of functions inside dplyr package
+library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionls(&quot;package:dplyr&quot;)## [1] &quot;%&gt;%&quot; &quot;add_count&quot; &quot;add_count_&quot; ## [4] &quot;add_row&quot; &quot;add_rownames&quot; &quot;add_tally&quot; ## [7] &quot;add_tally_&quot; &quot;all_equal&quot; &quot;all_vars&quot; ## [10] &quot;anti_join&quot; &quot;any_vars&quot; &quot;arrange&quot; ## [13] &quot;arrange_&quot; &quot;arrange_all&quot; &quot;arrange_at&quot; ## [16] &quot;arrange_if&quot; &quot;as.">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2018-07-05T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2018-10-05T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2018-07-05T00:00:00&#43;00:00">
-  
-
+  <meta property="article:modified_time" content="2018-10-05T00:00:00&#43;00:00">
   
 
-  <title>Customizing boxplots with ggplot2 | THIYANGA TALAGALA</title>
+  
+
+  <title>What&#39;s in a package? | THIYANGA TALAGALA</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -281,7 +273,7 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
 
   <div class="article-container">
     <div class="article-inner">
-      <h1 itemprop="name">Customizing boxplots with ggplot2</h1>
+      <h1 itemprop="name">What&#39;s in a package?</h1>
 
       
 
@@ -289,8 +281,8 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
 
   <span class="article-date">
     
-    <time datetime="2018-07-05 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
-      Jul 5, 2018
+    <time datetime="2018-10-05 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Oct 5, 2018
     </time>
   </span>
   <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
@@ -300,7 +292,7 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    3 min read
   </span>
   
 
@@ -314,7 +306,7 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
   <span class="article-categories">
     <i class="fa fa-folder"></i>
     
-    <a href="/categories/ggplot2">ggplot2</a
+    <a href="/categories/r">R</a
     >
     
   </span>
@@ -327,7 +319,7 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Customizing%20boxplots%20with%20ggplot2&amp;url=%2fpost%2fblog%2f"
+         href="https://twitter.com/intent/tweet?text=What%27s%20in%20a%20package%3f&amp;url=%2fpost%2fblog%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
@@ -341,21 +333,21 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fblog%2f&amp;title=Customizing%20boxplots%20with%20ggplot2"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fblog%2f&amp;title=What%27s%20in%20a%20package%3f"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpost%2fblog%2f&amp;title=Customizing%20boxplots%20with%20ggplot2"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fblog%2f&amp;title=What%27s%20in%20a%20package%3f"
          target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Customizing%20boxplots%20with%20ggplot2&amp;body=%2fpost%2fblog%2f">
+         href="mailto:?subject=What%27s%20in%20a%20package%3f&amp;body=%2fpost%2fblog%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -369,68 +361,100 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
 
 
       <div class="article-style" itemprop="articleBody">
-        <p>Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.</p>
-<p>You will learn,</p>
-<ul>
-<li><p>how to change the order of labels</p></li>
-<li><p>how to change the colours</p></li>
-<li><p>how to flip coordinates</p></li>
-</ul>
-<p>Step 1: we create a simple data set.</p>
-<pre class="r"><code>Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)
-Quality &lt;- rep(c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;), times = 1, each = 8)
-Accepted &lt;- seq(0, 100, by = 100/23)
-
-DF &lt;- data.frame(Gender, Quality, Accepted)
-head(DF)</code></pre>
-<pre><code>##   Gender Quality  Accepted
-## 1   Male   Taste  0.000000
-## 2   Male   Taste  4.347826
-## 3   Male   Taste  8.695652
-## 4   Male   Taste 13.043478
-## 5 Female   Taste 17.391304
-## 6 Female   Taste 21.739130</code></pre>
-<p>Step 2: Generate a simple boxplot with ggplot</p>
-<pre class="r"><code>library(ggplot2)
-ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
-  geom_boxplot() </code></pre>
-<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p>Step 3: Change the colours, legend position and x-axis order</p>
-<pre class="r"><code>ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
-  geom_boxplot() +
-  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;)) +
-  xlab(&quot;&quot;) +
-  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
-  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
-<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p>Step 4: Change the plotting order: first you have to include <code>factor</code> code to set the order of the levels.</p>
-<pre class="r"><code>DF$Gender_factor &lt;- factor(DF$Gender, levels=c(&quot;Male&quot;, &quot;Female&quot;))
-ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
-  geom_boxplot() +
-  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;)) +
-  xlab(&quot;&quot;) +
-  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
-  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
-<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<p>Step 5: Horizontal bar chart: coord_flip()</p>
-<pre class="r"><code>ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
-  geom_boxplot() +
-  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;)) +
-  xlab(&quot;&quot;) +
-  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
-  coord_flip()+
-  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
-<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<p>step 6: Change the legend order similar to plot order: under themes <code>fill=guide_legend(reverse=FALSE)</code></p>
-<pre class="r"><code>ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
-  geom_boxplot() +
-  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;)) +
-  xlab(&quot;&quot;) +
-  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
-  guides(fill=guide_legend(reverse=TRUE)) +
-  coord_flip()+
-  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
-<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+        <p>Sometimes we need to view all the functions that are built into an R package. This is done in the same way you would list variables in your workspace, using the <code>ls</code> function. Note that the package must be loaded before you run the <code>ls</code> command.</p>
+<p><strong>Usage:</strong> Getting a list of functions inside dplyr package</p>
+<pre class="r"><code>library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>ls(&quot;package:dplyr&quot;)</code></pre>
+<pre><code>##   [1] &quot;%&gt;%&quot;                &quot;add_count&quot;          &quot;add_count_&quot;        
+##   [4] &quot;add_row&quot;            &quot;add_rownames&quot;       &quot;add_tally&quot;         
+##   [7] &quot;add_tally_&quot;         &quot;all_equal&quot;          &quot;all_vars&quot;          
+##  [10] &quot;anti_join&quot;          &quot;any_vars&quot;           &quot;arrange&quot;           
+##  [13] &quot;arrange_&quot;           &quot;arrange_all&quot;        &quot;arrange_at&quot;        
+##  [16] &quot;arrange_if&quot;         &quot;as.tbl&quot;             &quot;as.tbl_cube&quot;       
+##  [19] &quot;as_data_frame&quot;      &quot;as_tibble&quot;          &quot;auto_copy&quot;         
+##  [22] &quot;band_instruments&quot;   &quot;band_instruments2&quot;  &quot;band_members&quot;      
+##  [25] &quot;bench_tbls&quot;         &quot;between&quot;            &quot;bind_cols&quot;         
+##  [28] &quot;bind_rows&quot;          &quot;case_when&quot;          &quot;changes&quot;           
+##  [31] &quot;check_dbplyr&quot;       &quot;coalesce&quot;           &quot;collapse&quot;          
+##  [34] &quot;collect&quot;            &quot;combine&quot;            &quot;common_by&quot;         
+##  [37] &quot;compare_tbls&quot;       &quot;compare_tbls2&quot;      &quot;compute&quot;           
+##  [40] &quot;contains&quot;           &quot;copy_to&quot;            &quot;count&quot;             
+##  [43] &quot;count_&quot;             &quot;cumall&quot;             &quot;cumany&quot;            
+##  [46] &quot;cume_dist&quot;          &quot;cummean&quot;            &quot;current_vars&quot;      
+##  [49] &quot;data_frame&quot;         &quot;data_frame_&quot;        &quot;db_analyze&quot;        
+##  [52] &quot;db_begin&quot;           &quot;db_commit&quot;          &quot;db_create_index&quot;   
+##  [55] &quot;db_create_indexes&quot;  &quot;db_create_table&quot;    &quot;db_data_type&quot;      
+##  [58] &quot;db_desc&quot;            &quot;db_drop_table&quot;      &quot;db_explain&quot;        
+##  [61] &quot;db_has_table&quot;       &quot;db_insert_into&quot;     &quot;db_list_tables&quot;    
+##  [64] &quot;db_query_fields&quot;    &quot;db_query_rows&quot;      &quot;db_rollback&quot;       
+##  [67] &quot;db_save_query&quot;      &quot;db_write_table&quot;     &quot;dense_rank&quot;        
+##  [70] &quot;desc&quot;               &quot;dim_desc&quot;           &quot;distinct&quot;          
+##  [73] &quot;distinct_&quot;          &quot;do&quot;                 &quot;do_&quot;               
+##  [76] &quot;dr_dplyr&quot;           &quot;ends_with&quot;          &quot;enexpr&quot;            
+##  [79] &quot;enexprs&quot;            &quot;enquo&quot;              &quot;enquos&quot;            
+##  [82] &quot;ensym&quot;              &quot;ensyms&quot;             &quot;eval_tbls&quot;         
+##  [85] &quot;eval_tbls2&quot;         &quot;everything&quot;         &quot;explain&quot;           
+##  [88] &quot;expr&quot;               &quot;failwith&quot;           &quot;filter&quot;            
+##  [91] &quot;filter_&quot;            &quot;filter_all&quot;         &quot;filter_at&quot;         
+##  [94] &quot;filter_if&quot;          &quot;first&quot;              &quot;frame_data&quot;        
+##  [97] &quot;full_join&quot;          &quot;funs&quot;               &quot;funs_&quot;             
+## [100] &quot;glimpse&quot;            &quot;group_by&quot;           &quot;group_by_&quot;         
+## [103] &quot;group_by_all&quot;       &quot;group_by_at&quot;        &quot;group_by_if&quot;       
+## [106] &quot;group_by_prepare&quot;   &quot;group_indices&quot;      &quot;group_indices_&quot;    
+## [109] &quot;group_size&quot;         &quot;group_vars&quot;         &quot;grouped_df&quot;        
+## [112] &quot;groups&quot;             &quot;id&quot;                 &quot;ident&quot;             
+## [115] &quot;if_else&quot;            &quot;inner_join&quot;         &quot;intersect&quot;         
+## [118] &quot;is.grouped_df&quot;      &quot;is.src&quot;             &quot;is.tbl&quot;            
+## [121] &quot;is_grouped_df&quot;      &quot;lag&quot;                &quot;last&quot;              
+## [124] &quot;lead&quot;               &quot;left_join&quot;          &quot;location&quot;          
+## [127] &quot;lst&quot;                &quot;lst_&quot;               &quot;make_tbl&quot;          
+## [130] &quot;matches&quot;            &quot;min_rank&quot;           &quot;mutate&quot;            
+## [133] &quot;mutate_&quot;            &quot;mutate_all&quot;         &quot;mutate_at&quot;         
+## [136] &quot;mutate_each&quot;        &quot;mutate_each_&quot;       &quot;mutate_if&quot;         
+## [139] &quot;n&quot;                  &quot;n_distinct&quot;         &quot;n_groups&quot;          
+## [142] &quot;na_if&quot;              &quot;nasa&quot;               &quot;near&quot;              
+## [145] &quot;nth&quot;                &quot;ntile&quot;              &quot;num_range&quot;         
+## [148] &quot;one_of&quot;             &quot;order_by&quot;           &quot;percent_rank&quot;      
+## [151] &quot;progress_estimated&quot; &quot;pull&quot;               &quot;quo&quot;               
+## [154] &quot;quo_name&quot;           &quot;quos&quot;               &quot;rbind_all&quot;         
+## [157] &quot;rbind_list&quot;         &quot;recode&quot;             &quot;recode_factor&quot;     
+## [160] &quot;rename&quot;             &quot;rename_&quot;            &quot;rename_all&quot;        
+## [163] &quot;rename_at&quot;          &quot;rename_if&quot;          &quot;rename_vars&quot;       
+## [166] &quot;rename_vars_&quot;       &quot;right_join&quot;         &quot;row_number&quot;        
+## [169] &quot;rowwise&quot;            &quot;same_src&quot;           &quot;sample_frac&quot;       
+## [172] &quot;sample_n&quot;           &quot;select&quot;             &quot;select_&quot;           
+## [175] &quot;select_all&quot;         &quot;select_at&quot;          &quot;select_if&quot;         
+## [178] &quot;select_var&quot;         &quot;select_vars&quot;        &quot;select_vars_&quot;      
+## [181] &quot;semi_join&quot;          &quot;setdiff&quot;            &quot;setequal&quot;          
+## [184] &quot;show_query&quot;         &quot;slice&quot;              &quot;slice_&quot;            
+## [187] &quot;sql&quot;                &quot;sql_escape_ident&quot;   &quot;sql_escape_string&quot; 
+## [190] &quot;sql_join&quot;           &quot;sql_select&quot;         &quot;sql_semi_join&quot;     
+## [193] &quot;sql_set_op&quot;         &quot;sql_subquery&quot;       &quot;sql_translate_env&quot; 
+## [196] &quot;src&quot;                &quot;src_df&quot;             &quot;src_local&quot;         
+## [199] &quot;src_mysql&quot;          &quot;src_postgres&quot;       &quot;src_sqlite&quot;        
+## [202] &quot;src_tbls&quot;           &quot;starts_with&quot;        &quot;starwars&quot;          
+## [205] &quot;storms&quot;             &quot;summarise&quot;          &quot;summarise_&quot;        
+## [208] &quot;summarise_all&quot;      &quot;summarise_at&quot;       &quot;summarise_each&quot;    
+## [211] &quot;summarise_each_&quot;    &quot;summarise_if&quot;       &quot;summarize&quot;         
+## [214] &quot;summarize_&quot;         &quot;summarize_all&quot;      &quot;summarize_at&quot;      
+## [217] &quot;summarize_each&quot;     &quot;summarize_each_&quot;    &quot;summarize_if&quot;      
+## [220] &quot;sym&quot;                &quot;syms&quot;               &quot;tally&quot;             
+## [223] &quot;tally_&quot;             &quot;tbl&quot;                &quot;tbl_cube&quot;          
+## [226] &quot;tbl_df&quot;             &quot;tbl_nongroup_vars&quot;  &quot;tbl_sum&quot;           
+## [229] &quot;tbl_vars&quot;           &quot;tibble&quot;             &quot;top_n&quot;             
+## [232] &quot;transmute&quot;          &quot;transmute_&quot;         &quot;transmute_all&quot;     
+## [235] &quot;transmute_at&quot;       &quot;transmute_if&quot;       &quot;tribble&quot;           
+## [238] &quot;trunc_mat&quot;          &quot;type_sum&quot;           &quot;ungroup&quot;           
+## [241] &quot;union&quot;              &quot;union_all&quot;          &quot;vars&quot;              
+## [244] &quot;with_order&quot;         &quot;wrap_dbplyr_obj&quot;</code></pre>
 
       </div>
 
@@ -440,8 +464,6 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
 <div class="article-tags">
   
   <a class="btn btn-primary btn-outline" href="/tags/r">R</a>
-  
-  <a class="btn btn-primary btn-outline" href="/tags/ggplot2">ggplot2</a>
   
 </div>
 
@@ -453,6 +475,16 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
 </article>
 
 
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/post/blog/">Customizing boxplots with ggplot2</a></li>
+    
+  </ul>
+</div>
 
 
 
