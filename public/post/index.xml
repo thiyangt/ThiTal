@@ -12,10 +12,10 @@
     
     <item>
       <title>What&#39;s in a package?</title>
-      <link>/post/blog/</link>
+      <link>/post/packageinfo/</link>
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/blog/</guid>
+      <guid>/post/packageinfo/</guid>
       <description>&lt;p&gt;Sometimes we need to view all the functions that are built into an R package. This is done in the same way you would list variables in your workspace, using the &lt;code&gt;ls&lt;/code&gt; function. Note that the package must be loaded before you run the &lt;code&gt;ls&lt;/code&gt; command.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt; Getting a list of functions inside the &lt;code&gt;dplyr&lt;/code&gt; package&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)

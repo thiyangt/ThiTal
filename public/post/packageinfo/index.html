@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.31.1" />
+  <meta name="author" content="Thiyanga Talagala">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="Sometimes we need to view all the functions that are built into an R package. This is done in the same way you would list variables in your workspace, using the ls function. Note that the package must be loaded before you run the ls command.
+Usage: Getting a list of functions inside the dplyr package
+library(dplyr)ls(&quot;package:dplyr&quot;)## [1] &quot;%&gt;%&quot; &quot;add_count&quot; &quot;add_count_&quot; ## [4] &quot;add_row&quot; &quot;add_rownames&quot; &quot;add_tally&quot; ## [7] &quot;add_tally_&quot; &quot;all_equal&quot; &quot;all_vars&quot; ## [10] &quot;anti_join&quot; &quot;any_vars&quot; &quot;arrange&quot; ## [13] &quot;arrange_&quot; &quot;arrange_all&quot; &quot;arrange_at&quot; ## [16] &quot;arrange_if&quot; &quot;as.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/packageinfo/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#0095eb">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/custom.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="THIYANGA TALAGALA">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="THIYANGA TALAGALA">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/packageinfo/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@thiyangt">
+  <meta property="twitter:creator" content="@thiyangt">
+  
+  <meta property="og:site_name" content="THIYANGA TALAGALA">
+  <meta property="og:url" content="/post/packageinfo/">
+  <meta property="og:title" content="What&#39;s in a package? | THIYANGA TALAGALA">
+  <meta property="og:description" content="Sometimes we need to view all the functions that are built into an R package. This is done in the same way you would list variables in your workspace, using the ls function. Note that the package must be loaded before you run the ls command.
+Usage: Getting a list of functions inside the dplyr package
+library(dplyr)ls(&quot;package:dplyr&quot;)## [1] &quot;%&gt;%&quot; &quot;add_count&quot; &quot;add_count_&quot; ## [4] &quot;add_row&quot; &quot;add_rownames&quot; &quot;add_tally&quot; ## [7] &quot;add_tally_&quot; &quot;all_equal&quot; &quot;all_vars&quot; ## [10] &quot;anti_join&quot; &quot;any_vars&quot; &quot;arrange&quot; ## [13] &quot;arrange_&quot; &quot;arrange_all&quot; &quot;arrange_at&quot; ## [16] &quot;arrange_if&quot; &quot;as.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-10-05T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-10-05T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>What&#39;s in a package? | THIYANGA TALAGALA</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">THIYANGA TALAGALA</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#hero">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#data_import">
+            
+            <span>Software</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#talks">
+            
+            <span>Talks</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">What&#39;s in a package?</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-10-05 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Oct 5, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Thiyanga Talagala">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/r">R</a
+    >, 
+    
+    <a href="/categories/dplyr">dplyr</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=What%27s%20in%20a%20package%3f&amp;url=%2fpost%2fpackageinfo%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fpackageinfo%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fpackageinfo%2f&amp;title=What%27s%20in%20a%20package%3f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fpackageinfo%2f&amp;title=What%27s%20in%20a%20package%3f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=What%27s%20in%20a%20package%3f&amp;body=%2fpost%2fpackageinfo%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        <p>Sometimes we need to view all the functions that are built into an R package. This is done in the same way you would list variables in your workspace, using the <code>ls</code> function. Note that the package must be loaded before you run the <code>ls</code> command.</p>
+<p><strong>Usage:</strong> Getting a list of functions inside the <code>dplyr</code> package</p>
+<pre class="r"><code>library(dplyr)
+ls(&quot;package:dplyr&quot;)</code></pre>
+<pre><code>##   [1] &quot;%&gt;%&quot;                &quot;add_count&quot;          &quot;add_count_&quot;        
+##   [4] &quot;add_row&quot;            &quot;add_rownames&quot;       &quot;add_tally&quot;         
+##   [7] &quot;add_tally_&quot;         &quot;all_equal&quot;          &quot;all_vars&quot;          
+##  [10] &quot;anti_join&quot;          &quot;any_vars&quot;           &quot;arrange&quot;           
+##  [13] &quot;arrange_&quot;           &quot;arrange_all&quot;        &quot;arrange_at&quot;        
+##  [16] &quot;arrange_if&quot;         &quot;as.tbl&quot;             &quot;as.tbl_cube&quot;       
+##  [19] &quot;as_data_frame&quot;      &quot;as_tibble&quot;          &quot;auto_copy&quot;         
+##  [22] &quot;band_instruments&quot;   &quot;band_instruments2&quot;  &quot;band_members&quot;      
+##  [25] &quot;bench_tbls&quot;         &quot;between&quot;            &quot;bind_cols&quot;         
+##  [28] &quot;bind_rows&quot;          &quot;case_when&quot;          &quot;changes&quot;           
+##  [31] &quot;check_dbplyr&quot;       &quot;coalesce&quot;           &quot;collapse&quot;          
+##  [34] &quot;collect&quot;            &quot;combine&quot;            &quot;common_by&quot;         
+##  [37] &quot;compare_tbls&quot;       &quot;compare_tbls2&quot;      &quot;compute&quot;           
+##  [40] &quot;contains&quot;           &quot;copy_to&quot;            &quot;count&quot;             
+##  [43] &quot;count_&quot;             &quot;cumall&quot;             &quot;cumany&quot;            
+##  [46] &quot;cume_dist&quot;          &quot;cummean&quot;            &quot;current_vars&quot;      
+##  [49] &quot;data_frame&quot;         &quot;data_frame_&quot;        &quot;db_analyze&quot;        
+##  [52] &quot;db_begin&quot;           &quot;db_commit&quot;          &quot;db_create_index&quot;   
+##  [55] &quot;db_create_indexes&quot;  &quot;db_create_table&quot;    &quot;db_data_type&quot;      
+##  [58] &quot;db_desc&quot;            &quot;db_drop_table&quot;      &quot;db_explain&quot;        
+##  [61] &quot;db_has_table&quot;       &quot;db_insert_into&quot;     &quot;db_list_tables&quot;    
+##  [64] &quot;db_query_fields&quot;    &quot;db_query_rows&quot;      &quot;db_rollback&quot;       
+##  [67] &quot;db_save_query&quot;      &quot;db_write_table&quot;     &quot;dense_rank&quot;        
+##  [70] &quot;desc&quot;               &quot;dim_desc&quot;           &quot;distinct&quot;          
+##  [73] &quot;distinct_&quot;          &quot;do&quot;                 &quot;do_&quot;               
+##  [76] &quot;dr_dplyr&quot;           &quot;ends_with&quot;          &quot;enexpr&quot;            
+##  [79] &quot;enexprs&quot;            &quot;enquo&quot;              &quot;enquos&quot;            
+##  [82] &quot;ensym&quot;              &quot;ensyms&quot;             &quot;eval_tbls&quot;         
+##  [85] &quot;eval_tbls2&quot;         &quot;everything&quot;         &quot;explain&quot;           
+##  [88] &quot;expr&quot;               &quot;failwith&quot;           &quot;filter&quot;            
+##  [91] &quot;filter_&quot;            &quot;filter_all&quot;         &quot;filter_at&quot;         
+##  [94] &quot;filter_if&quot;          &quot;first&quot;              &quot;frame_data&quot;        
+##  [97] &quot;full_join&quot;          &quot;funs&quot;               &quot;funs_&quot;             
+## [100] &quot;glimpse&quot;            &quot;group_by&quot;           &quot;group_by_&quot;         
+## [103] &quot;group_by_all&quot;       &quot;group_by_at&quot;        &quot;group_by_if&quot;       
+## [106] &quot;group_by_prepare&quot;   &quot;group_indices&quot;      &quot;group_indices_&quot;    
+## [109] &quot;group_size&quot;         &quot;group_vars&quot;         &quot;grouped_df&quot;        
+## [112] &quot;groups&quot;             &quot;id&quot;                 &quot;ident&quot;             
+## [115] &quot;if_else&quot;            &quot;inner_join&quot;         &quot;intersect&quot;         
+## [118] &quot;is.grouped_df&quot;      &quot;is.src&quot;             &quot;is.tbl&quot;            
+## [121] &quot;is_grouped_df&quot;      &quot;lag&quot;                &quot;last&quot;              
+## [124] &quot;lead&quot;               &quot;left_join&quot;          &quot;location&quot;          
+## [127] &quot;lst&quot;                &quot;lst_&quot;               &quot;make_tbl&quot;          
+## [130] &quot;matches&quot;            &quot;min_rank&quot;           &quot;mutate&quot;            
+## [133] &quot;mutate_&quot;            &quot;mutate_all&quot;         &quot;mutate_at&quot;         
+## [136] &quot;mutate_each&quot;        &quot;mutate_each_&quot;       &quot;mutate_if&quot;         
+## [139] &quot;n&quot;                  &quot;n_distinct&quot;         &quot;n_groups&quot;          
+## [142] &quot;na_if&quot;              &quot;nasa&quot;               &quot;near&quot;              
+## [145] &quot;nth&quot;                &quot;ntile&quot;              &quot;num_range&quot;         
+## [148] &quot;one_of&quot;             &quot;order_by&quot;           &quot;percent_rank&quot;      
+## [151] &quot;progress_estimated&quot; &quot;pull&quot;               &quot;quo&quot;               
+## [154] &quot;quo_name&quot;           &quot;quos&quot;               &quot;rbind_all&quot;         
+## [157] &quot;rbind_list&quot;         &quot;recode&quot;             &quot;recode_factor&quot;     
+## [160] &quot;rename&quot;             &quot;rename_&quot;            &quot;rename_all&quot;        
+## [163] &quot;rename_at&quot;          &quot;rename_if&quot;          &quot;rename_vars&quot;       
+## [166] &quot;rename_vars_&quot;       &quot;right_join&quot;         &quot;row_number&quot;        
+## [169] &quot;rowwise&quot;            &quot;same_src&quot;           &quot;sample_frac&quot;       
+## [172] &quot;sample_n&quot;           &quot;select&quot;             &quot;select_&quot;           
+## [175] &quot;select_all&quot;         &quot;select_at&quot;          &quot;select_if&quot;         
+## [178] &quot;select_var&quot;         &quot;select_vars&quot;        &quot;select_vars_&quot;      
+## [181] &quot;semi_join&quot;          &quot;setdiff&quot;            &quot;setequal&quot;          
+## [184] &quot;show_query&quot;         &quot;slice&quot;              &quot;slice_&quot;            
+## [187] &quot;sql&quot;                &quot;sql_escape_ident&quot;   &quot;sql_escape_string&quot; 
+## [190] &quot;sql_join&quot;           &quot;sql_select&quot;         &quot;sql_semi_join&quot;     
+## [193] &quot;sql_set_op&quot;         &quot;sql_subquery&quot;       &quot;sql_translate_env&quot; 
+## [196] &quot;src&quot;                &quot;src_df&quot;             &quot;src_local&quot;         
+## [199] &quot;src_mysql&quot;          &quot;src_postgres&quot;       &quot;src_sqlite&quot;        
+## [202] &quot;src_tbls&quot;           &quot;starts_with&quot;        &quot;starwars&quot;          
+## [205] &quot;storms&quot;             &quot;summarise&quot;          &quot;summarise_&quot;        
+## [208] &quot;summarise_all&quot;      &quot;summarise_at&quot;       &quot;summarise_each&quot;    
+## [211] &quot;summarise_each_&quot;    &quot;summarise_if&quot;       &quot;summarize&quot;         
+## [214] &quot;summarize_&quot;         &quot;summarize_all&quot;      &quot;summarize_at&quot;      
+## [217] &quot;summarize_each&quot;     &quot;summarize_each_&quot;    &quot;summarize_if&quot;      
+## [220] &quot;sym&quot;                &quot;syms&quot;               &quot;tally&quot;             
+## [223] &quot;tally_&quot;             &quot;tbl&quot;                &quot;tbl_cube&quot;          
+## [226] &quot;tbl_df&quot;             &quot;tbl_nongroup_vars&quot;  &quot;tbl_sum&quot;           
+## [229] &quot;tbl_vars&quot;           &quot;tibble&quot;             &quot;top_n&quot;             
+## [232] &quot;transmute&quot;          &quot;transmute_&quot;         &quot;transmute_all&quot;     
+## [235] &quot;transmute_at&quot;       &quot;transmute_if&quot;       &quot;tribble&quot;           
+## [238] &quot;trunc_mat&quot;          &quot;type_sum&quot;           &quot;ungroup&quot;           
+## [241] &quot;union&quot;              &quot;union_all&quot;          &quot;vars&quot;              
+## [244] &quot;with_order&quot;         &quot;wrap_dbplyr_obj&quot;</code></pre>
+<p>```</p>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/r">R</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/dplyr">dplyr</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/post/blog/">Customizing boxplots with ggplot2</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 Thiyanga S Talagala &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+
