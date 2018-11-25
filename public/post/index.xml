@@ -17,7 +17,7 @@
       
       <guid>/post/blog/</guid>
       <description>&lt;p&gt;Sometimes we need to view all the functions that are built into an R package. This is done in the same way you would list variables in your workspace, using the &lt;code&gt;ls&lt;/code&gt; function. Note that the package must be loaded before you run the &lt;code&gt;ls&lt;/code&gt; command.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt; Getting a list of functions inside dplyr package&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt; Getting a list of functions inside the &lt;code&gt;dplyr&lt;/code&gt; package&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
 ls(&amp;quot;package:dplyr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   [1] &amp;quot;%&amp;gt;%&amp;quot;                &amp;quot;add_count&amp;quot;          &amp;quot;add_count_&amp;quot;        
@@ -102,6 +102,7 @@ ls(&amp;quot;package:dplyr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 ## [238] &amp;quot;trunc_mat&amp;quot;          &amp;quot;type_sum&amp;quot;           &amp;quot;ungroup&amp;quot;           
 ## [241] &amp;quot;union&amp;quot;              &amp;quot;union_all&amp;quot;          &amp;quot;vars&amp;quot;              
 ## [244] &amp;quot;with_order&amp;quot;         &amp;quot;wrap_dbplyr_obj&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;```&lt;/p&gt;
 </description>
     </item>
     
@@ -182,7 +183,8 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
       <pubDate>Wed, 08 Aug 2018 00:00:00 +1000</pubDate>
       
       <guid>/post/parallelcomputing/</guid>
-      <description></description>
+      <description>&lt;p&gt;Working on this..&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -191,7 +193,8 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
       <pubDate>Tue, 07 Aug 2018 00:00:00 +1000</pubDate>
       
       <guid>/post/datatypes/</guid>
-      <description></description>
+      <description>&lt;p&gt;coming up soon!&lt;/p&gt;
+</description>
     </item>
     
   </channel>

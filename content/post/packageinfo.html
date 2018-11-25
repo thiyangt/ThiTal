@@ -4,14 +4,14 @@ title: "What's in a package?"
 author: Thiyanga Talagala
 date: '2018-10-05'
 slug: blog
-categories: [R]
-tags: [R]
+categories: [R, dplyr]
+tags: [R, dplyr]
 ---
 
 
 
 <p>Sometimes we need to view all the functions that are built into an R package. This is done in the same way you would list variables in your workspace, using the <code>ls</code> function. Note that the package must be loaded before you run the <code>ls</code> command.</p>
-<p><strong>Usage:</strong> Getting a list of functions inside dplyr package</p>
+<p><strong>Usage:</strong> Getting a list of functions inside the <code>dplyr</code> package</p>
 <pre class="r"><code>library(dplyr)
 ls(&quot;package:dplyr&quot;)</code></pre>
 <pre><code>##   [1] &quot;%&gt;%&quot;                &quot;add_count&quot;          &quot;add_count_&quot;        
@@ -96,3 +96,4 @@ ls(&quot;package:dplyr&quot;)</code></pre>
 ## [238] &quot;trunc_mat&quot;          &quot;type_sum&quot;           &quot;ungroup&quot;           
 ## [241] &quot;union&quot;              &quot;union_all&quot;          &quot;vars&quot;              
 ## [244] &quot;with_order&quot;         &quot;wrap_dbplyr_obj&quot;</code></pre>
+<p>```</p>
