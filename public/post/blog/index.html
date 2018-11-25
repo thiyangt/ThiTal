@@ -85,7 +85,7 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
   
   <meta property="og:site_name" content="THIYANGA TALAGALA">
   <meta property="og:url" content="/post/blog/">
-  <meta property="og:title" content="Customizing boxplot with ggplot | THIYANGA TALAGALA">
+  <meta property="og:title" content="Customizing boxplots with ggplot2 | THIYANGA TALAGALA">
   <meta property="og:description" content="Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.
 You will learn,
 how to change the order of labels
@@ -102,7 +102,7 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
 
   
 
-  <title>Customizing boxplot with ggplot | THIYANGA TALAGALA</title>
+  <title>Customizing boxplots with ggplot2 | THIYANGA TALAGALA</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -281,7 +281,7 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
 
   <div class="article-container">
     <div class="article-inner">
-      <h1 itemprop="name">Customizing boxplot with ggplot</h1>
+      <h1 itemprop="name">Customizing boxplots with ggplot2</h1>
 
       
 
@@ -327,7 +327,7 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Customizing%20boxplot%20with%20ggplot&amp;url=%2fpost%2fblog%2f"
+         href="https://twitter.com/intent/tweet?text=Customizing%20boxplots%20with%20ggplot2&amp;url=%2fpost%2fblog%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
@@ -341,21 +341,21 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fblog%2f&amp;title=Customizing%20boxplot%20with%20ggplot"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fblog%2f&amp;title=Customizing%20boxplots%20with%20ggplot2"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpost%2fblog%2f&amp;title=Customizing%20boxplot%20with%20ggplot"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fblog%2f&amp;title=Customizing%20boxplots%20with%20ggplot2"
          target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Customizing%20boxplot%20with%20ggplot&amp;body=%2fpost%2fblog%2f">
+         href="mailto:?subject=Customizing%20boxplots%20with%20ggplot2&amp;body=%2fpost%2fblog%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -381,32 +381,41 @@ Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)Q
 Quality &lt;- rep(c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;), times = 1, each = 8)
 Accepted &lt;- seq(0, 100, by = 100/23)
 
-DF &lt;- data.frame(Gender, Quality, Accepted)</code></pre>
-<p>Step 2: Generate boxplot with ggplot</p>
+DF &lt;- data.frame(Gender, Quality, Accepted)
+head(DF)</code></pre>
+<pre><code>##   Gender Quality  Accepted
+## 1   Male   Taste  0.000000
+## 2   Male   Taste  4.347826
+## 3   Male   Taste  8.695652
+## 4   Male   Taste 13.043478
+## 5 Female   Taste 17.391304
+## 6 Female   Taste 21.739130</code></pre>
+<p>Step 2: Generate a simple boxplot with ggplot</p>
 <pre class="r"><code>library(ggplot2)
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
-  geom_boxplot() +
-  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;),
-                    labels = expression(&quot;Male&quot;, &quot;Female&quot;)) +
-  xlab(&quot;&quot;) +
-  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
-  guides(fill=guide_legend(reverse=TRUE)) +
-  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
+  geom_boxplot() </code></pre>
 <p><img src="/post/boxplot_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p>Step 3: Change the legend order similar to plot order: under themes <code>fill=guide_legend(reverse=FALSE)</code></p>
-<pre class="r"><code>library(ggplot2)
-ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+<p>Step 3: Change the plotting order, colours, legend position and x-axis order</p>
+<pre class="r"><code>ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
   scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;),
                     labels = expression(&quot;Male&quot;, &quot;Female&quot;)) +
   xlab(&quot;&quot;) +
   theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
-  guides(fill=guide_legend(reverse=FALSE)) +
   scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
 <p><img src="/post/boxplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p>step 4: Horizontal bar chart: <code>coord_flip()</code></p>
-<pre class="r"><code>library(ggplot2)
-ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+<p>Step 4: Horizontal bar chart: coord_flip()</p>
+<pre class="r"><code>ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;),
+                    labels = expression(&quot;Male&quot;, &quot;Female&quot;)) +
+  xlab(&quot;&quot;) +
+  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
+  coord_flip()+
+  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
+<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>step 5: Change the legend order similar to plot order: under themes <code>fill=guide_legend(reverse=FALSE)</code></p>
+<pre class="r"><code>ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
   scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;),
                     labels = expression(&quot;Male&quot;, &quot;Female&quot;)) +
@@ -415,7 +424,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   guides(fill=guide_legend(reverse=TRUE)) +
   coord_flip()+
   scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
-<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 
       </div>
 

@@ -1,6 +1,6 @@
 ---
 draft: yes
-title: "Customizing boxplot with ggplot"
+title: "Customizing boxplots with ggplot2"
 author: Thiyanga Talagala
 date: '2018-07-05'
 slug: blog
@@ -22,32 +22,41 @@ tags: [R, ggplot2]
 Quality &lt;- rep(c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;), times = 1, each = 8)
 Accepted &lt;- seq(0, 100, by = 100/23)
 
-DF &lt;- data.frame(Gender, Quality, Accepted)</code></pre>
-<p>Step 2: Generate boxplot with ggplot</p>
+DF &lt;- data.frame(Gender, Quality, Accepted)
+head(DF)</code></pre>
+<pre><code>##   Gender Quality  Accepted
+## 1   Male   Taste  0.000000
+## 2   Male   Taste  4.347826
+## 3   Male   Taste  8.695652
+## 4   Male   Taste 13.043478
+## 5 Female   Taste 17.391304
+## 6 Female   Taste 21.739130</code></pre>
+<p>Step 2: Generate a simple boxplot with ggplot</p>
 <pre class="r"><code>library(ggplot2)
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
-  geom_boxplot() +
-  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;),
-                    labels = expression(&quot;Male&quot;, &quot;Female&quot;)) +
-  xlab(&quot;&quot;) +
-  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
-  guides(fill=guide_legend(reverse=TRUE)) +
-  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
+  geom_boxplot() </code></pre>
 <p><img src="/post/boxplot_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p>Step 3: Change the legend order similar to plot order: under themes <code>fill=guide_legend(reverse=FALSE)</code></p>
-<pre class="r"><code>library(ggplot2)
-ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+<p>Step 3: Change the plotting order, colours, legend position and x-axis order</p>
+<pre class="r"><code>ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
   scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;),
                     labels = expression(&quot;Male&quot;, &quot;Female&quot;)) +
   xlab(&quot;&quot;) +
   theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
-  guides(fill=guide_legend(reverse=FALSE)) +
   scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
 <p><img src="/post/boxplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p>step 4: Horizontal bar chart: <code>coord_flip()</code></p>
-<pre class="r"><code>library(ggplot2)
-ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+<p>Step 4: Horizontal bar chart: coord_flip()</p>
+<pre class="r"><code>ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;),
+                    labels = expression(&quot;Male&quot;, &quot;Female&quot;)) +
+  xlab(&quot;&quot;) +
+  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
+  coord_flip()+
+  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
+<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>step 5: Change the legend order similar to plot order: under themes <code>fill=guide_legend(reverse=FALSE)</code></p>
+<pre class="r"><code>ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
   scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;),
                     labels = expression(&quot;Male&quot;, &quot;Female&quot;)) +
@@ -56,4 +65,4 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   guides(fill=guide_legend(reverse=TRUE)) +
   coord_flip()+
   scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
-<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>

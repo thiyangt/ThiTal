@@ -1,5 +1,5 @@
 ---
-title: "Customizing boxplot with ggplot"
+title: "Customizing boxplots with ggplot2"
 author: Thiyanga Talagala
 date: '2018-07-05'
 slug: blog
@@ -27,41 +27,46 @@ Quality <- rep(c("Taste", "Color of package", "Capacity"), times = 1, each = 8)
 Accepted <- seq(0, 100, by = 100/23)
 
 DF <- data.frame(Gender, Quality, Accepted)
-
+head(DF)
 ```
 
-Step 2: Generate boxplot with ggplot
+Step 2: Generate a simple boxplot with ggplot
 
 ```{r}
 library(ggplot2)
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() 
+```
+
+
+Step 3: Change the plotting order, colours, legend position and x-axis order
+
+```{r}
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
   scale_fill_manual(values = c("green", "orange"),
                     labels = expression("Male", "Female")) +
   xlab("") +
   theme(legend.position = "top", legend.title = element_blank()) + 
-  guides(fill=guide_legend(reverse=TRUE)) +
   scale_x_discrete(limits=c("Taste", "Color of package", "Capacity"))
 ```
 
-Step 3: Change the legend order similar to plot order: under themes `fill=guide_legend(reverse=FALSE)`
+Step 4: Horizontal bar chart: coord_flip()
 
 ```{r}
-library(ggplot2)
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
   scale_fill_manual(values = c("green", "orange"),
                     labels = expression("Male", "Female")) +
   xlab("") +
   theme(legend.position = "top", legend.title = element_blank()) + 
-  guides(fill=guide_legend(reverse=FALSE)) +
+  coord_flip()+
   scale_x_discrete(limits=c("Taste", "Color of package", "Capacity"))
 ```
 
-step 4: Horizontal bar chart: `coord_flip()`
+step 5: Change the legend order similar to plot order: under themes `fill=guide_legend(reverse=FALSE)`
 
 ```{r}
-library(ggplot2)
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
   scale_fill_manual(values = c("green", "orange"),
