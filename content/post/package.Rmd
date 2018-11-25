@@ -12,7 +12,7 @@ This is done in the same way you would list variables in your workspace, using t
 
 **Usage:** Getting a list of functions inside dplyr package
 
-```{r}
+```{r, warning=FALSE, message=FALSE}
 library(dplyr)
 ls("package:dplyr")
 

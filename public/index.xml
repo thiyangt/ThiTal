@@ -18,16 +18,8 @@
       <guid>/post/blog/</guid>
       <description>&lt;p&gt;Sometimes we need to view all the functions that are built into an R package. This is done in the same way you would list variables in your workspace, using the &lt;code&gt;ls&lt;/code&gt; function. Note that the package must be loaded before you run the &lt;code&gt;ls&lt;/code&gt; command.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt; Getting a list of functions inside dplyr package&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## 
-## Attaching package: &amp;#39;dplyr&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## The following objects are masked from &amp;#39;package:stats&amp;#39;:
-## 
-##     filter, lag&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## The following objects are masked from &amp;#39;package:base&amp;#39;:
-## 
-##     intersect, setdiff, setequal, union&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ls(&amp;quot;package:dplyr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+ls(&amp;quot;package:dplyr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   [1] &amp;quot;%&amp;gt;%&amp;quot;                &amp;quot;add_count&amp;quot;          &amp;quot;add_count_&amp;quot;        
 ##   [4] &amp;quot;add_row&amp;quot;            &amp;quot;add_rownames&amp;quot;       &amp;quot;add_tally&amp;quot;         
 ##   [7] &amp;quot;add_tally_&amp;quot;         &amp;quot;all_equal&amp;quot;          &amp;quot;all_vars&amp;quot;          
