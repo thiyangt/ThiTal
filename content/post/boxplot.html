@@ -44,7 +44,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
   scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
 <p><img src="/post/boxplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p>Step 4: Change the plotting order: first you have to include facotor code to set the order of the levels.</p>
+<p>Step 4: Change the plotting order: first you have to include <code>factor</code> code to set the order of the levels.</p>
 <pre class="r"><code>DF$Gender_factor &lt;- factor(DF$Gender, levels=c(&quot;Male&quot;, &quot;Female&quot;))
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
   geom_boxplot() +

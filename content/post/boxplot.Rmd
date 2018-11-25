@@ -50,7 +50,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   scale_x_discrete(limits=c("Taste", "Color of package", "Capacity"))
 ```
 
-Step 4: Change the plotting order: first you have to include facotor code to set the order of the levels.
+Step 4: Change the plotting order: first you have to include `factor` code to set the order of the levels.
 
 ```{r}
 DF$Gender_factor <- factor(DF$Gender, levels=c("Male", "Female"))
