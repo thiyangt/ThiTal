@@ -13,6 +13,7 @@ weight = 5
     "Time Series Analysis",
     "Computational Statistics",
     "Machine Learning",
+    "Machine Learning Interpretability",
     "Applied Statistics",
     "Algorithm Selection"
   ]
