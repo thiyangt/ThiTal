@@ -29,7 +29,7 @@ weight = 5
   year = 2015
 
 [[education.courses]]
-  course = "BSc(Hons) Special Degree in Statistics"
+  course = "BSc (Hons) Special Degree in Statistics"
   institution = "University of Sri Jayewardenepura, Sri Lanka"
   year = 2012
  
