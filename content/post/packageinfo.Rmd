@@ -4,6 +4,7 @@ author: Thiyanga Talagala
 date: '2018-10-05'
 categories: [R, dplyr]
 tags: [R, dplyr]
+summary: "Sometimes we need to view all the functions that are built into an R package."
 ---
 
 Sometimes we need to view all the functions that are built into an R package.

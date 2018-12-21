@@ -5,6 +5,7 @@ date: '2018-09-05'
 slug: blog
 categories: [ggplot2]
 tags: [R, ggplot2]
+summary: "Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots."
 ---
 
 Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots. 
