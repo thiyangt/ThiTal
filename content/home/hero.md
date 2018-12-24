@@ -48,4 +48,3 @@ label = '<i class="fa fa-octocat"></i> About me'
     });    
   }  
   </script>
-    
