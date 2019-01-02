@@ -20,7 +20,7 @@ selected = false
 
 # Links (optional).
 url_pdf = ""
-url_slides = "talks/isf2018.pdf"
+url_slides = "https://github.com/thiyangt/ISF-2017-Cairns-Australia"
 url_video = ""
 url_code = ""
 
@@ -33,7 +33,7 @@ highlight = true
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
-image = "headers/bubbles-wide.jpg"
+image = ""
 caption = "My caption :smile:"
 
 +++

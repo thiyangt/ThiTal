@@ -197,6 +197,19 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
     </item>
     
     <item>
+      <title>Feature-based Model Selection for Time Series Forecasting</title>
+      <link>/talk/isf17-talk/</link>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +1000</pubDate>
+      
+      <guid>/talk/isf17-talk/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Many applications require a large number of time series to be forecast. Providing better forecasts for these time series is important in decision and policy making. However, large scale time series data present numerous challenges in modelling and implementation due to
+the high dimensionality. It is unlikely that a single method will consistently provides better forecasts across all time series. On the other hand, selecting individual forecast models when the number of series is very large can be extremely challenging. In this paper we propose a classification framework which selects forecast models based on features calculated from the time series. A Random Forest approach is used to develop the classifier. The proposed framework is tested using the M3 data and is compared against several benchmarks and other commonly used approaches of forecasting.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>A classification framework for forecast-model selection</title>
       <link>/talk/jsm18-talk/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
