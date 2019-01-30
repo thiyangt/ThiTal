@@ -89,12 +89,6 @@ summary: "Commands to type Greek letters on Rmarkdown or Latex"
 
 `\Sigma:` $\Sigma$
 
-**tau**
-
-`\tau:` $\tau$
-
-`\Tau:` $\Tau$
-
 **upsilon**
 
 `\upsilon:` $\upsilon$
@@ -118,8 +112,6 @@ summary: "Commands to type Greek letters on Rmarkdown or Latex"
 **tau**
 
 `\tau:` $\tau$
-
-`\Tau:` $\Tau$
 
 **chi**
 
