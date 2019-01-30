@@ -41,8 +41,6 @@ summary: "Commands to type Greek letters on Rmarkdown or Latex"
 
 `\eta`: $\eta$
 
-`\Eta`: $\Eta$
-
 **theta**
 
 `\theta`: $\theta$
