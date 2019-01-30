@@ -1,0 +1,44 @@
+---
+title: "Some useful Greek letters you might use on Rmarkdown"
+author: Thiyanga Talagala
+date: '2019-01-29'
+categories: [R, Rmarkdown]
+tags: [R, Rmarkdown]
+summary: ""
+---
+
+**alpha**: 
+
+`\alpha` : $\alpha$ 
+
+**beta**:
+
+`\beta`: $\beta$
+
+**gamma**
+
+`\gamma`: $\gamma$
+
+`\Gamma`: $\Gamma$
+
+**delta**
+
+`\delta`: $\delta$
+
+`\Delta`: $\Delta$
+
+**epsilon**
+
+`\epsilon`: $\epsilon$ 
+
+`\varepsilon`: $\varepsilon$
+
+**Zeta**
+
+`\zeta`: $\zeta$
+
+**ets**
+
+`\ets`: $\eta$
+
+`\Eta`: $\Eta$

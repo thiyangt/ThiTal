@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>/post/greekletters/</loc>
+      <lastmod>2019-01-29T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/post/packageinfo/</loc>
       <lastmod>2018-10-05T00:00:00+00:00</lastmod>
     </url>
@@ -24,7 +33,7 @@
     <url>
     
       <loc>/post/parallelcomputing/</loc>
-      <lastmod>2018-08-08T00:00:00+10:00</lastmod>
+      <lastmod>2018-08-08T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -33,7 +42,7 @@
     <url>
     
       <loc>/post/datatypes/</loc>
-      <lastmod>2018-08-07T00:00:00+10:00</lastmod>
+      <lastmod>2018-08-07T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -42,7 +51,7 @@
     <url>
     
       <loc>/talk/isf17-talk/</loc>
-      <lastmod>2017-06-26T00:00:00+10:00</lastmod>
+      <lastmod>2017-06-26T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -78,7 +87,7 @@
     <url>
     
       <loc>/talk/jsm18-talk/</loc>
-      <lastmod>2017-01-01T00:00:00+11:00</lastmod>
+      <lastmod>2017-01-01T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -87,7 +96,7 @@
     <url>
     
       <loc>/talk/japan18-talk/</loc>
-      <lastmod>2017-01-01T00:00:00+11:00</lastmod>
+      <lastmod>2017-01-01T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -96,7 +105,7 @@
     <url>
     
       <loc>/talk/ssa17-talk/</loc>
-      <lastmod>2017-01-01T00:00:00+11:00</lastmod>
+      <lastmod>2017-01-01T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -105,7 +114,7 @@
     <url>
     
       <loc>/talk/ysc17-talk/</loc>
-      <lastmod>2017-01-01T00:00:00+11:00</lastmod>
+      <lastmod>2017-01-01T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -114,7 +123,7 @@
     <url>
     
       <loc>/talk/isf18-talk/</loc>
-      <lastmod>2017-01-01T00:00:00+11:00</lastmod>
+      <lastmod>2017-01-01T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -123,7 +132,7 @@
     <url>
     
       <loc>/post/</loc>
-      <lastmod>2017-01-01T00:00:00+11:00</lastmod>
+      <lastmod>2017-01-01T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -132,7 +141,7 @@
     <url>
     
       <loc>/research/</loc>
-      <lastmod>2017-01-01T00:00:00+11:00</lastmod>
+      <lastmod>2017-01-01T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -141,7 +150,7 @@
     <url>
     
       <loc>/talk/user18-talk/</loc>
-      <lastmod>2017-01-01T00:00:00+11:00</lastmod>
+      <lastmod>2017-01-01T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -266,7 +275,7 @@
     <url>
     
       <loc>/tags/r/</loc>
-      <lastmod>2018-10-05T00:00:00+00:00</lastmod>
+      <lastmod>2019-01-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -276,7 +285,27 @@
     <url>
     
       <loc>/categories/r/</loc>
-      <lastmod>2018-10-05T00:00:00+00:00</lastmod>
+      <lastmod>2019-01-29T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/rmarkdown/</loc>
+      <lastmod>2019-01-29T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/rmarkdown/</loc>
+      <lastmod>2019-01-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -286,7 +315,7 @@
     <url>
     
       <loc>/</loc>
-      <lastmod>2017-10-15T00:00:00+11:00</lastmod>
+      <lastmod>2017-10-15T00:00:00+08:00</lastmod>
       <priority>0</priority>
     </url>
     

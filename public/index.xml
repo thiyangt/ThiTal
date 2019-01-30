@@ -7,8 +7,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +1100</lastBuildDate>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0800</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Some useful Greek letters you might use on Rmarkdown</title>
+      <link>/post/greekletters/</link>
+      <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/greekletters/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;alpha&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\alpha&lt;/code&gt; : &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;beta&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\beta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;gamma&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\gamma&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\gamma\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\Gamma&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\Gamma\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;delta&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\delta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\delta\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\Delta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\Delta\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;epsilon&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\epsilon&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\varepsilon&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\varepsilon\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Zeta&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\zeta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\zeta\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ets&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\ets&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\eta\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\Eta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\Eta\)&lt;/span&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>What&#39;s in a package?</title>
@@ -179,7 +206,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
     <item>
       <title>parallel computing with R</title>
       <link>/post/parallelcomputing/</link>
-      <pubDate>Wed, 08 Aug 2018 00:00:00 +1000</pubDate>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +0800</pubDate>
       
       <guid>/post/parallelcomputing/</guid>
       <description>&lt;p&gt;Working on this..&lt;/p&gt;
@@ -189,7 +216,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
     <item>
       <title>Data Types in R</title>
       <link>/post/datatypes/</link>
-      <pubDate>Tue, 07 Aug 2018 00:00:00 +1000</pubDate>
+      <pubDate>Tue, 07 Aug 2018 00:00:00 +0800</pubDate>
       
       <guid>/post/datatypes/</guid>
       <description>&lt;p&gt;coming up soon!&lt;/p&gt;
@@ -199,7 +226,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
     <item>
       <title>Feature-based Model Selection for Time Series Forecasting</title>
       <link>/talk/isf17-talk/</link>
-      <pubDate>Mon, 26 Jun 2017 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0800</pubDate>
       
       <guid>/talk/isf17-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
@@ -212,7 +239,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>A classification framework for forecast-model selection</title>
       <link>/talk/jsm18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
       
       <guid>/talk/jsm18-talk/</guid>
       <description>&lt;p&gt;The background pictures are of free copyright from &lt;a href=&#34;https://pixabay.com/en/photos/presentation/&#34; target=&#34;_blank&#34;&gt;https://pixabay.com/en/photos/presentation/&lt;/a&gt;.&lt;/p&gt;
@@ -224,7 +251,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>Analysing large collections of time series</title>
       <link>/talk/japan18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
       
       <guid>/talk/japan18-talk/</guid>
       <description></description>
@@ -233,7 +260,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/ssa17-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
       
       <guid>/talk/ssa17-talk/</guid>
       <description></description>
@@ -242,7 +269,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/ysc17-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
       
       <guid>/talk/ysc17-talk/</guid>
       <description></description>
@@ -251,7 +278,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>Meta-learning how to forecast time series</title>
       <link>/talk/isf18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
       
       <guid>/talk/isf18-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
@@ -263,7 +290,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>seer: R package for feature-based forecast model selection</title>
       <link>/talk/user18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
       
       <guid>/talk/user18-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
