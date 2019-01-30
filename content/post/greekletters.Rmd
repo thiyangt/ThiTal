@@ -4,7 +4,7 @@ author: Thiyanga Talagala
 date: '2019-01-29'
 categories: [R, Rmarkdown]
 tags: [R, Rmarkdown]
-summary: ""
+summary: "Commands to type Greek letters on Rmarkdown or Latex"
 ---
 
 **alpha**: 
@@ -37,8 +37,104 @@ summary: ""
 
 `\zeta`: $\zeta$
 
-**ets**
+**eta**
 
-`\ets`: $\eta$
+`\eta`: $\eta$
 
 `\Eta`: $\Eta$
+
+**theta**
+
+`\theta`: $\theta$
+
+`\Theta`: $\Theta$
+
+**iota**
+
+`\iota`: $\iota$
+
+**kappa**
+
+`\kappa:` $\kappa$
+
+**lambda**
+
+`\lambda:` $\lambda$
+
+**mu**
+
+`\mu:` $\mu$
+
+**nu**
+
+`\nu:` $\nu$
+
+**xi**
+
+`\xi:` $\xi$
+
+`\Xi:` $\Xi$
+
+**pi**
+
+`\pi:` $\pi$
+
+`\Pi:` $\Pi$
+
+**rho**
+
+`\rho:` $\rho$
+
+**sigma**
+
+`\sigma:` $\sigma$
+
+`\Sigma:` $\Sigma$
+
+**tau**
+
+`\tau:` $\tau$
+
+`\Tau:` $\Tau$
+
+**upsilon**
+
+`\upsilon:` $\upsilon$
+
+**phi**
+
+`\phi:` $\phi$
+
+`\Phi:` $\Phi$
+
+**rho**
+
+`\rho:` $\rho$
+
+**sigma**
+
+`\sigma:` $\sigma$
+
+`\Sigma:` $\Sigma$
+
+**tau**
+
+`\tau:` $\tau$
+
+`\Tau:` $\Tau$
+
+**chi**
+
+`\chi:` $\chi$
+
+**psi**
+
+`\psi:` $\psi$
+
+`\Psi:` $\Psi$
+
+**Omega**
+
+`\omega:` $\omega$
+
+`\Omega:` $\Omega$

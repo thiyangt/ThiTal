@@ -94,6 +94,29 @@
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+  
+
+
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    
 
 <nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
   <div class="container">
@@ -329,25 +352,7 @@
 
   <div class="article-style" itemprop="articleBody">
     
-    <p><strong>alpha</strong>:</p>
-<p><code>\alpha</code> : <span class="math inline">\(\alpha\)</span></p>
-<p><strong>beta</strong>:</p>
-<p><code>\beta</code>: <span class="math inline">\(\beta\)</span></p>
-<p><strong>gamma</strong></p>
-<p><code>\gamma</code>: <span class="math inline">\(\gamma\)</span></p>
-<p><code>\Gamma</code>: <span class="math inline">\(\Gamma\)</span></p>
-<p><strong>delta</strong></p>
-<p><code>\delta</code>: <span class="math inline">\(\delta\)</span></p>
-<p><code>\Delta</code>: <span class="math inline">\(\Delta\)</span></p>
-<p><strong>epsilon</strong></p>
-<p><code>\epsilon</code>: <span class="math inline">\(\epsilon\)</span></p>
-<p><code>\varepsilon</code>: <span class="math inline">\(\varepsilon\)</span></p>
-<p><strong>Zeta</strong></p>
-<p><code>\zeta</code>: <span class="math inline">\(\zeta\)</span></p>
-<p><strong>ets</strong></p>
-<p><code>\ets</code>: <span class="math inline">\(\eta\)</span></p>
-<p><code>\Eta</code>: <span class="math inline">\(\Eta\)</span></p>
-
+    <p>Commands to type Greek letters on Rmarkdown or Latex</p>
     
   </div>
   <p class="read-more" itemprop="mainEntityOfPage">
