@@ -1,5 +1,5 @@
 ---
-title: "Some useful Greek letters you might use on Rmarkdown"
+title: "Some useful Greek letters you might use on your reports"
 author: Thiyanga Talagala
 date: '2019-01-29'
 categories: [R, Rmarkdown]
@@ -7,124 +7,24 @@ tags: [R, Rmarkdown]
 summary: "Commands to type Greek letters on Rmarkdown or Latex"
 ---
 
-**alpha**: 
+|   |   |   |   |   |
+|---|---|---|---|---|
+| **alpha**:   | **beta**:  | **gamma**  | **delta**    
+| `\alpha` : $\alpha$   | `\beta`: $\beta$  | `\gamma`: $\gamma$  | `\delta`: $\delta$
+|   |   |  `\Gamma`: $\Gamma$ | `\Delta`: $\Delta$    
+|**epsilon**   | **Zeta**  | **eta**  | **theta**     
+|`\epsilon`: $\epsilon$    | `\zeta`: $\zeta$  | `\eta`: $\eta$  | `\theta`: $\theta$  
+|`\varepsilon`: $\varepsilon$|||`\Theta`: $\Theta$
+|**iota**|**kappa**|**lambda**|**mu**
+|`\iota`: $\iota$|`\kappa:` $\kappa$|`\lambda:` $\lambda$|`\mu:` $\mu$
+|**nu**|**xi**|**pi**|**rho**
+|`\nu:` $\nu$|`\xi:` $\xi$|`\pi:` $\pi$|`\rho:` $\rho$
+||`\Xi:` $\Xi$|`\Pi:` $\Pi$|
+|**sigma**|**upsilon**|**phi**|**rho**
+|`\sigma:` $\sigma$|`\upsilon:` $\upsilon$|`\phi:` $\phi$|`\rho:` $\rho$
+|`\Sigma:` $\Sigma$||`\Phi:` $\Phi$||
+|**tau**|**chi**|**psi**|**Omega**
+|`\tau:` $\tau$|`\chi:` $\chi$|`\psi:` $\psi$|`\omega:` $\omega$
+|||`\Psi:` $\Psi$|`\Omega:` $\Omega$
 
-`\alpha` : $\alpha$ 
 
-**beta**:
-
-`\beta`: $\beta$
-
-**gamma**
-
-`\gamma`: $\gamma$
-
-`\Gamma`: $\Gamma$
-
-**delta**
-
-`\delta`: $\delta$
-
-`\Delta`: $\Delta$
-
-**epsilon**
-
-`\epsilon`: $\epsilon$ 
-
-`\varepsilon`: $\varepsilon$
-
-**Zeta**
-
-`\zeta`: $\zeta$
-
-**eta**
-
-`\eta`: $\eta$
-
-**theta**
-
-`\theta`: $\theta$
-
-`\Theta`: $\Theta$
-
-**iota**
-
-`\iota`: $\iota$
-
-**kappa**
-
-`\kappa:` $\kappa$
-
-**lambda**
-
-`\lambda:` $\lambda$
-
-**mu**
-
-`\mu:` $\mu$
-
-**nu**
-
-`\nu:` $\nu$
-
-**xi**
-
-`\xi:` $\xi$
-
-`\Xi:` $\Xi$
-
-**pi**
-
-`\pi:` $\pi$
-
-`\Pi:` $\Pi$
-
-**rho**
-
-`\rho:` $\rho$
-
-**sigma**
-
-`\sigma:` $\sigma$
-
-`\Sigma:` $\Sigma$
-
-**upsilon**
-
-`\upsilon:` $\upsilon$
-
-**phi**
-
-`\phi:` $\phi$
-
-`\Phi:` $\Phi$
-
-**rho**
-
-`\rho:` $\rho$
-
-**sigma**
-
-`\sigma:` $\sigma$
-
-`\Sigma:` $\Sigma$
-
-**tau**
-
-`\tau:` $\tau$
-
-**chi**
-
-`\chi:` $\chi$
-
-**psi**
-
-`\psi:` $\psi$
-
-`\Psi:` $\Psi$
-
-**Omega**
-
-`\omega:` $\omega$
-
-`\Omega:` $\Omega$
