@@ -32,7 +32,9 @@ weight = 5
   course = "BSc (Hons) Special Degree in Statistics"
   institution = "University of Sri Jayewardenepura, Sri Lanka"
   year = 2012
- 
+  
+[[education.courses]]
+  institution = "Professor R A Dayanada Gold Medalist, 2012"
 +++
 
 # About me
