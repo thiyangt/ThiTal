@@ -20,8 +20,8 @@ summary: "Commands to type Greek letters on Rmarkdown or Latex"
 |**nu**|**xi**|**pi**|**rho**
 |`\nu:` $\nu$|`\xi:` $\xi$|`\pi:` $\pi$|`\rho:` $\rho$
 ||`\Xi:` $\Xi$|`\Pi:` $\Pi$|
-|**sigma**|**upsilon**|**phi**|**rho**
-|`\sigma:` $\sigma$|`\upsilon:` $\upsilon$|`\phi:` $\phi$|`\rho:` $\rho$
+|**sigma**|**upsilon**|**phi**|**omicron**
+|`\sigma:` $\sigma$|`\upsilon:` $\upsilon$|`\phi:` $\phi$|`\omicron:` $\omicron$
 |`\Sigma:` $\Sigma$||`\Phi:` $\Phi$||
 |**tau**|**chi**|**psi**|**Omega**
 |`\tau:` $\tau$|`\chi:` $\chi$|`\psi:` $\psi$|`\omega:` $\omega$
