@@ -130,7 +130,7 @@ defaultContentLanguageInSubdir = false
   #   https://sourcethemes.com/academic/post/writing-markdown-latex/#highlighting-options
   highlight = true
   highlight_languages = []
-  # highlight_style = "github"
+  highlight_style = "github"
 
   # Enable native social sharing buttons?
   sharing = true
@@ -216,6 +216,11 @@ defaultContentLanguageInSubdir = false
     icon = "github"
     icon_pack = "fa"
     link = "//github.com/thiyangt"
+  
+  [[params.social]]
+    icon = "orcid"
+    icon_pack = "fa"
+    link = "https://orcid.org/0000-0002-0656-9789"
 
 
 # Navigation Links
