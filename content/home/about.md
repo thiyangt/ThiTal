@@ -34,7 +34,7 @@ weight = 5
   year = 2012
   
 [[education.courses]]
-  institution = "Professor R A Dayanada Gold Medalist, 2012"
+  institution = "Professor R A Dayanada Gold Medalist and Batch first, 2012"
 +++
 
 # About me
