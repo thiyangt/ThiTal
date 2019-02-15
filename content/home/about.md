@@ -39,6 +39,6 @@ weight = 5
 
 # About me
 
-I am a PhD candidate in Statistics at [Monash University, Australia](https://www.monash.edu/). My PhD research focuses on the problem of forecasting large collections of time series. I am working with Professor [Rob J Hyndman](https://robjhyndman.com/hyndsight/) and Professor [George Athanasopoulos](https://research.monash.edu/en/persons/george-athanasopoulos). 
+I am a PhD candidate in Statistics at [Monash University, Australia](https://www.monash.edu/). My PhD research focuses on the problem of forecasting large collections of time series. I am working with Professor [Rob J Hyndman](https://robjhyndman.com/hyndsight/) and Professor [George Athanasopoulos](https://research.monash.edu/en/persons/george-athanasopoulos). I am a member of [ACEMS - ARC Centre of Excellence for Mathematical & Statistical Frontiers](https://acems.org.au/our-people/thiyanga-talagala).
 
 I enjoy solving general data science problems from three different angles: theoretical, computational, applied. In this website you will find some of my work and interests on statistics and data analysis. I am also interested in R programming language.
