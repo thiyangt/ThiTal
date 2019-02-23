@@ -293,7 +293,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
     </item>
     
     <item>
-      <title>parallel computing with R</title>
+      <title>Parallel computing with R</title>
       <link>/post/parallelcomputing/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0800</pubDate>
       
