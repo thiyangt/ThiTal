@@ -24,7 +24,7 @@ weight = 5
   institution = "Monash University, Australia"
 
 [[education.courses]]
-  course = "Master of Science"
+  course = "MSc in Financial Mathematics"
   institution = "University of Moratuwa, Sri Lanka"
   year = 2015
 
