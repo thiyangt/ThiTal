@@ -6,7 +6,7 @@ time_start = 2019-03-13T14:40:00
 time_end = 2019-03-13T15:20:00
 abstract = ""
 abstract_short = ""
-event = "Central University of Finance and Economics"
+event = "Central University of Finance and Economics, Beijing, China"
 event_url = ""
 location = "Beijing, China "
 
@@ -20,7 +20,7 @@ selected = false
 
 # Links (optional).
 url_pdf = ""
-url_slides = "https://github.com/thiyangt/ISF-2017-Cairns-Australia"
+url_slides = "talks/beijingtalk2019.pdf"
 url_video = ""
 url_code = ""
 
