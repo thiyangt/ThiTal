@@ -11,6 +11,18 @@
     <atom:link href="/talk/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Feature-based Time Series Forecasting</title>
+      <link>/talk/beijingtalk19-talk/</link>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>/talk/beijingtalk19-talk/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This work presents three feature-based algorithms for large-scale time series forecasting.  The algorithms are developed based on meta-learning approach. In our first algorithm we use a random forest algorithm to identify the best forecasting model. We call this framework FFORMS (Feature-based FORecast Model Selection).  In the second algorithm, FFORMA (Feature-based FORecast Model Averaging), we use gradient boosting to obtain the weights for forecast combinations. The third algorithm use efficient Bayesian multivariate surface regression approach to estimate forecast error for each method, and then using the minimum predicted error to select a forecasting model or to choose individual models for forecast combinations. The proposed algorithms perform well compared to several benchmarks and other commonly used approaches in large-scale forecasting.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Feature-based Model Selection for Time Series Forecasting</title>
       <link>/talk/isf17-talk/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0800</pubDate>
