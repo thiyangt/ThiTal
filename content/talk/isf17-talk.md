@@ -1,7 +1,7 @@
 +++
 date = 2017-06-26T00:00:00  # Schedule page publish date.
 
-title = "Feature-based Model Selection for Time Series Forecasting"
+title = "Feature-based model selection for time series forecasting"
 time_start = 2017-06-26T14:20:00
 time_end = 2017-06-26T14:40:00
 abstract = ""

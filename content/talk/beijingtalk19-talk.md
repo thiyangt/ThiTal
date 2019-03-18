@@ -1,7 +1,7 @@
 +++
 date = 2019-03-13T00:00:00  # Schedule page publish date.
 
-title = "Feature-based Time Series Forecasting"
+title = "Feature-based time series forecasting"
 time_start = 2019-03-13T14:40:00
 time_end = 2019-03-13T15:20:00
 abstract = ""
