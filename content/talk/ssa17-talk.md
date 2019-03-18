@@ -20,7 +20,7 @@ selected = false
 
 # Links (optional).
 url_pdf = ""
-url_slides = ""
+url_slides = "talks/ysc2017.pdf"
 #url_video = "https://vimeo.com/238346934"
 url_code = ""
 
