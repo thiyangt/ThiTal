@@ -7,7 +7,7 @@ time_end = 2017-09-19T19:15:00
 abstract = ""
 abstract_short = ""
 event = "Statistical Society of Australia, Victoria Branch Young Stats Showcase"
-event_url = "http://www.statsoc.org.au/branches/victoria/recent-events/"
+event_url = "https://www.meetup.com/en-AU/Statistical-Society-of-Australia-Victorian-Branch/events/241236189/"
 location = "University of Melbourne, Australia"
 
 # Is this a selected talk? (true/false)
@@ -33,7 +33,7 @@ highlight = true
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
-image = "headers/bubbles-wide.jpg"
+image = ""
 caption = "My caption :smile:"
 
 +++

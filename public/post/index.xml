@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +1100</lastBuildDate>
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
@@ -295,7 +295,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
     <item>
       <title>Parallel computing with R</title>
       <link>/post/parallelcomputing/</link>
-      <pubDate>Wed, 08 Aug 2018 00:00:00 +0800</pubDate>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +1000</pubDate>
       
       <guid>/post/parallelcomputing/</guid>
       <description>&lt;p&gt;Working on this..&lt;/p&gt;
@@ -305,7 +305,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
     <item>
       <title>Data Types in R</title>
       <link>/post/datatypes/</link>
-      <pubDate>Tue, 07 Aug 2018 00:00:00 +0800</pubDate>
+      <pubDate>Tue, 07 Aug 2018 00:00:00 +1000</pubDate>
       
       <guid>/post/datatypes/</guid>
       <description>&lt;p&gt;coming up soon!&lt;/p&gt;
