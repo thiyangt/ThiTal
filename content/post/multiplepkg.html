@@ -1,0 +1,51 @@
+---
+title: "How to install and load multiple packages?"
+author: Thiyanga Talagala
+date: '2019-03-22'
+categories: [R, tidyverse, gganimate]
+tags: [R, tidyverse, gganimate]
+summary: "Install multiple R packages at once"
+---
+
+
+
+<div id="install-packages" class="section level2">
+<h2>install packages</h2>
+<pre class="r"><code>install.packages(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;))</code></pre>
+</div>
+<div id="load-packages" class="section level2">
+<h2>load packages</h2>
+<pre class="r"><code>lapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), require, character.only = TRUE)</code></pre>
+<pre><code>## [[1]]
+## [1] TRUE
+## 
+## [[2]]
+## [1] TRUE
+## 
+## [[3]]
+## [1] TRUE</code></pre>
+<p>For other alternatives see,</p>
+<ol style="list-style-type: decimal">
+<li><a href="http://dirk.eddelbuettel.com/code/littler.html">littler</a></li>
+</ol>
+<pre class="r"><code>library(littler)
+install.r EIAdata gdata ggmap ggplot2 </code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li><a href="https://gist.github.com/stevenworthington/3178163">ipak</a></li>
+</ol>
+<pre class="r"><code>ipak &lt;- function(pkg){
+    new.pkg &lt;- pkg[!(pkg %in% installed.packages()[, &quot;Package&quot;])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE)
+}
+
+# usage
+packages &lt;- c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;)
+ipak(packages)</code></pre>
+<pre><code>## gganimate tidyverse gapminder 
+##      TRUE      TRUE      TRUE</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li><a href="https://cran.r-project.org/web/packages/easypackages/README.html">easypackages</a></li>
+</ol>
+</div>

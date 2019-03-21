@@ -13,10 +13,15 @@
   
   
   
-  <meta name="description" content="PhD Candidate in Statistics">
+    
+      
+    
+  
+  <meta name="description" content="install packagesinstall.packages(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;))load packageslapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), require, character.only = TRUE)## [[1]]## [1] TRUE## ## [[2]]## [1] TRUE## ## [[3]]## [1] TRUEFor other alternatives see,
+littlerlibrary(littler)install.r EIAdata gdata ggmap ggplot2 ipakipak &lt;- function(pkg){new.pkg &lt;- pkg[!(pkg %in% installed.packages()[, &quot;Package&quot;])]if (length(new.pkg)) install.packages(new.pkg, dependencies = TRUE)sapply(pkg, require, character.only = TRUE)}# usagepackages &lt;- c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;)ipak(packages)## gganimate tidyverse gapminder ## TRUE TRUE TRUEeasypackages">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/">
+  <link rel="alternate" hreflang="en-us" href="/post/multiplepkg/">
 
   
 
@@ -32,6 +37,11 @@
   
     
   
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
@@ -64,15 +74,15 @@
   
 
   
-  <link rel="alternate" href="/post/index.xml" type="application/rss+xml" title="THIYANGA TALAGALA">
-  <link rel="feed" href="/post/index.xml" type="application/rss+xml" title="THIYANGA TALAGALA">
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="THIYANGA TALAGALA">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="THIYANGA TALAGALA">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/post/">
+  <link rel="canonical" href="/post/multiplepkg/">
 
   <meta property="twitter:card" content="summary_large_image">
   
@@ -80,17 +90,20 @@
   <meta property="twitter:creator" content="@thiyangt">
   
   <meta property="og:site_name" content="THIYANGA TALAGALA">
-  <meta property="og:url" content="/post/">
-  <meta property="og:title" content="Posts | THIYANGA TALAGALA">
-  <meta property="og:description" content="PhD Candidate in Statistics">
+  <meta property="og:url" content="/post/multiplepkg/">
+  <meta property="og:title" content="How to install and load multiple packages? | THIYANGA TALAGALA">
+  <meta property="og:description" content="install packagesinstall.packages(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;))load packageslapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), require, character.only = TRUE)## [[1]]## [1] TRUE## ## [[2]]## [1] TRUE## ## [[3]]## [1] TRUEFor other alternatives see,
+littlerlibrary(littler)install.r EIAdata gdata ggmap ggplot2 ipakipak &lt;- function(pkg){new.pkg &lt;- pkg[!(pkg %in% installed.packages()[, &quot;Package&quot;])]if (length(new.pkg)) install.packages(new.pkg, dependencies = TRUE)sapply(pkg, require, character.only = TRUE)}# usagepackages &lt;- c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;)ipak(packages)## gganimate tidyverse gapminder ## TRUE TRUE TRUEeasypackages">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2017-01-01T00:00:00&#43;11:00">
+  <meta property="article:published_time" content="2019-03-22T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-03-22T00:00:00&#43;00:00">
   
 
   
 
-  <title>Posts | THIYANGA TALAGALA</title>
+  <title>How to install and load multiple packages? | THIYANGA TALAGALA</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -285,27 +298,16 @@
 </nav>
 
 
-
-
-
-<div class="universal-wrapper">
-
-  <h1>Posts</h1>
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
-  
-  
-    
-    
 
-<div class="article-list-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/multiplepkg/" itemprop="url">How to install and load multiple packages?</a>
-  </h3>
-  
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">How to install and load multiple packages?</h1>
+
+      
 
 <div class="article-metadata">
 
@@ -350,331 +352,140 @@
   
 
   
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=How%20to%20install%20and%20load%20multiple%20packages%3f&amp;url=%2fpost%2fmultiplepkg%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fmultiplepkg%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fmultiplepkg%2f&amp;title=How%20to%20install%20and%20load%20multiple%20packages%3f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fmultiplepkg%2f&amp;title=How%20to%20install%20and%20load%20multiple%20packages%3f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=How%20to%20install%20and%20load%20multiple%20packages%3f&amp;body=%2fpost%2fmultiplepkg%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
 
 </div>
 
-  <div class="article-style" itemprop="articleBody">
-    
-    <p>Install multiple R packages at once</p>
-    
+
+      <div class="article-style" itemprop="articleBody">
+        <div id="install-packages" class="section level2">
+<h2>install packages</h2>
+<pre class="r"><code>install.packages(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;))</code></pre>
+</div>
+<div id="load-packages" class="section level2">
+<h2>load packages</h2>
+<pre class="r"><code>lapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), require, character.only = TRUE)</code></pre>
+<pre><code>## [[1]]
+## [1] TRUE
+## 
+## [[2]]
+## [1] TRUE
+## 
+## [[3]]
+## [1] TRUE</code></pre>
+<p>For other alternatives see,</p>
+<ol style="list-style-type: decimal">
+<li><a href="http://dirk.eddelbuettel.com/code/littler.html">littler</a></li>
+</ol>
+<pre class="r"><code>library(littler)
+install.r EIAdata gdata ggmap ggplot2 </code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li><a href="https://gist.github.com/stevenworthington/3178163">ipak</a></li>
+</ol>
+<pre class="r"><code>ipak &lt;- function(pkg){
+    new.pkg &lt;- pkg[!(pkg %in% installed.packages()[, &quot;Package&quot;])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE)
+}
+
+# usage
+packages &lt;- c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;)
+ipak(packages)</code></pre>
+<pre><code>## gganimate tidyverse gapminder 
+##      TRUE      TRUE      TRUE</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li><a href="https://cran.r-project.org/web/packages/easypackages/README.html">easypackages</a></li>
+</ol>
+</div>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/r">R</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/tidyverse">tidyverse</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/gganimate">gganimate</a>
+  
+</div>
+
+
+
+    </div>
   </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/multiplepkg/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/post/greekletters/">Some useful Greek letters you might use on your reports</a></li>
+    
+    <li><a href="/post/packageinfo/">What&#39;s in a package?</a></li>
+    
+    <li><a href="/post/blog/">Customizing boxplots with ggplot2</a></li>
+    
+  </ul>
 </div>
 
-  
-    
-    
 
-<div class="article-list-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/greekletters/" itemprop="url">Some useful Greek letters you might use on your reports</a>
-  </h3>
-  
 
-<div class="article-metadata">
 
-  <span class="article-date">
-    
-    <time datetime="2019-01-29 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
-      Jan 29, 2019
-    </time>
-  </span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Thiyanga Talagala">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fa fa-folder"></i>
-    
-    <a href="/categories/r">R</a
-    >, 
-    
-    <a href="/categories/rmarkdown">Rmarkdown</a
-    >
-    
-  </span>
-  
-  
-
+<div class="article-container">
   
 
 </div>
 
-  <div class="article-style" itemprop="articleBody">
-    
-    <p>Commands to type Greek letters on Rmarkdown or Latex</p>
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/greekletters/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-  
-    
-    
-
-<div class="article-list-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/packageinfo/" itemprop="url">What&#39;s in a package?</a>
-  </h3>
-  
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2018-10-05 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
-      Oct 5, 2018
-    </time>
-  </span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Thiyanga Talagala">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    3 min read
-  </span>
-  
-
-  
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fa fa-folder"></i>
-    
-    <a href="/categories/r">R</a
-    >, 
-    
-    <a href="/categories/dplyr">dplyr</a
-    >
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-  <div class="article-style" itemprop="articleBody">
-    
-    <p>Sometimes we need to view all the functions that are built into an R package.</p>
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/packageinfo/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-  
-    
-    
-
-<div class="article-list-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/blog/" itemprop="url">Customizing boxplots with ggplot2</a>
-  </h3>
-  
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2018-09-05 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
-      Sep 5, 2018
-    </time>
-  </span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Thiyanga Talagala">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    2 min read
-  </span>
-  
-
-  
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fa fa-folder"></i>
-    
-    <a href="/categories/ggplot2">ggplot2</a
-    >
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-  <div class="article-style" itemprop="articleBody">
-    
-    <p>Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.</p>
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/blog/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-  
-    
-    
-
-<div class="article-list-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/parallelcomputing/" itemprop="url">Parallel computing with R</a>
-  </h3>
-  
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2018-08-08 00:00:00 &#43;1000 AEST" itemprop="datePublished dateModified">
-      Aug 8, 2018
-    </time>
-  </span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Thiyanga Talagala">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-
-  
-
-  
-
-</div>
-
-  <div class="article-style" itemprop="articleBody">
-    
-    <p>Working on this..</p>
-
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/parallelcomputing/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-  
-    
-    
-
-<div class="article-list-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/datatypes/" itemprop="url">Data Types in R</a>
-  </h3>
-  
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2018-08-07 00:00:00 &#43;1000 AEST" itemprop="datePublished dateModified">
-      Aug 7, 2018
-    </time>
-  </span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Thiyanga Talagala">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-
-  
-
-  
-
-</div>
-
-  <div class="article-style" itemprop="articleBody">
-    
-    <p>coming up soon!</p>
-
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/datatypes/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-  
-
-  
-
-
-</div>
 <footer class="site-footer">
   <div class="container">
     <p class="powered-by">
@@ -739,6 +550,17 @@
     
 
     
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
     
 
     
