@@ -31,7 +31,13 @@
 ## 
 ## [[3]]
 ## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;For other alternatives see,&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;check-and-install-missing-packages-only&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;check and install missing packages only&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;list.of.packages &amp;lt;- c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;)
+new.packages &amp;lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&amp;quot;Package&amp;quot;])]
+if(length(new.packages)) install.packages(new.packages)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;For other alternatives see,&lt;/strong&gt;&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;a href=&#34;http://dirk.eddelbuettel.com/code/littler.html&#34;&gt;littler&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;

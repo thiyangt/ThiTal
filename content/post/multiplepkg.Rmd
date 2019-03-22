@@ -4,7 +4,7 @@ author: Thiyanga Talagala
 date: '2019-03-22'
 categories: [R, tidyverse, gganimate]
 tags: [R, tidyverse, gganimate]
-summary: "Install multiple R packages at once"
+summary: "Install multiple R packages at once and/ check and install missing packages."
 ---
 
 ## install packages
@@ -20,7 +20,17 @@ install.packages(c("gganimate", "tidyverse", "gapminder"))
 lapply(c("gganimate", "tidyverse", "gapminder"), require, character.only = TRUE)
 ```
 
-For other alternatives see,
+
+## check and install missing packages only
+
+```{r,warning=FALSE, message=FALSE, eval=FALSE}
+list.of.packages <- c("gganimate", "tidyverse", "gapminder")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+```
+
+
+**For other alternatives see,**
 
 1. [littler](http://dirk.eddelbuettel.com/code/littler.html)
 

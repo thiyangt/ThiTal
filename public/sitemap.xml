@@ -232,16 +232,6 @@
     
     <url>
     
-      <loc>/categories/dplyr/</loc>
-      <lastmod>2018-10-05T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/tags/dplyr/</loc>
       <lastmod>2018-10-05T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -252,8 +242,8 @@
     
     <url>
     
-      <loc>/categories/gganimate/</loc>
-      <lastmod>2019-03-22T00:00:00+00:00</lastmod>
+      <loc>/categories/dplyr/</loc>
+      <lastmod>2018-10-05T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -272,8 +262,8 @@
     
     <url>
     
-      <loc>/categories/ggplot2/</loc>
-      <lastmod>2018-09-05T00:00:00+00:00</lastmod>
+      <loc>/categories/gganimate/</loc>
+      <lastmod>2019-03-22T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -283,6 +273,16 @@
     <url>
     
       <loc>/tags/ggplot2/</loc>
+      <lastmod>2018-09-05T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/ggplot2/</loc>
       <lastmod>2018-09-05T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -312,16 +312,6 @@
     
     <url>
     
-      <loc>/categories/r/</loc>
-      <lastmod>2019-03-22T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/tags/r/</loc>
       <lastmod>2019-03-22T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -332,8 +322,8 @@
     
     <url>
     
-      <loc>/categories/rmarkdown/</loc>
-      <lastmod>2019-01-29T00:00:00+00:00</lastmod>
+      <loc>/categories/r/</loc>
+      <lastmod>2019-03-22T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -343,6 +333,16 @@
     <url>
     
       <loc>/tags/rmarkdown/</loc>
+      <lastmod>2019-01-29T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/rmarkdown/</loc>
       <lastmod>2019-01-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -372,7 +372,7 @@
     
     <url>
     
-      <loc>/categories/tidyverse/</loc>
+      <loc>/tags/tidyverse/</loc>
       <lastmod>2019-03-22T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -382,7 +382,7 @@
     
     <url>
     
-      <loc>/tags/tidyverse/</loc>
+      <loc>/categories/tidyverse/</loc>
       <lastmod>2019-03-22T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
