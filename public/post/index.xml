@@ -11,7 +11,7 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>How to install and load multiple packages?</title>
+      <title>How to install and load multiple packages at once?</title>
       <link>/post/multiplepkg/</link>
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
       

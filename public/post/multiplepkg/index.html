@@ -91,7 +91,7 @@ littlerlibrary(littler)install.r EIAdata gdata ggmap ggplot2 ipakipak &lt;
   
   <meta property="og:site_name" content="THIYANGA TALAGALA">
   <meta property="og:url" content="/post/multiplepkg/">
-  <meta property="og:title" content="How to install and load multiple packages? | THIYANGA TALAGALA">
+  <meta property="og:title" content="How to install and load multiple packages at once? | THIYANGA TALAGALA">
   <meta property="og:description" content="install packagesinstall.packages(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;))load packageslapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), require, character.only = TRUE)## [[1]]## [1] TRUE## ## [[2]]## [1] TRUE## ## [[3]]## [1] TRUEFor other alternatives see,
 littlerlibrary(littler)install.r EIAdata gdata ggmap ggplot2 ipakipak &lt;- function(pkg){new.pkg &lt;- pkg[!(pkg %in% installed.packages()[, &quot;Package&quot;])]if (length(new.pkg)) install.packages(new.pkg, dependencies = TRUE)sapply(pkg, require, character.only = TRUE)}# usagepackages &lt;- c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;)ipak(packages)## gganimate tidyverse gapminder ## TRUE TRUE TRUEeasypackages">
   <meta property="og:locale" content="en-us">
@@ -103,7 +103,7 @@ littlerlibrary(littler)install.r EIAdata gdata ggmap ggplot2 ipakipak &lt;
 
   
 
-  <title>How to install and load multiple packages? | THIYANGA TALAGALA</title>
+  <title>How to install and load multiple packages at once? | THIYANGA TALAGALA</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -305,7 +305,7 @@ littlerlibrary(littler)install.r EIAdata gdata ggmap ggplot2 ipakipak &lt;
 
   <div class="article-container">
     <div class="article-inner">
-      <h1 itemprop="name">How to install and load multiple packages?</h1>
+      <h1 itemprop="name">How to install and load multiple packages at once?</h1>
 
       
 
@@ -357,7 +357,7 @@ littlerlibrary(littler)install.r EIAdata gdata ggmap ggplot2 ipakipak &lt;
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=How%20to%20install%20and%20load%20multiple%20packages%3f&amp;url=%2fpost%2fmultiplepkg%2f"
+         href="https://twitter.com/intent/tweet?text=How%20to%20install%20and%20load%20multiple%20packages%20at%20once%3f&amp;url=%2fpost%2fmultiplepkg%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
@@ -371,21 +371,21 @@ littlerlibrary(littler)install.r EIAdata gdata ggmap ggplot2 ipakipak &lt;
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fmultiplepkg%2f&amp;title=How%20to%20install%20and%20load%20multiple%20packages%3f"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fmultiplepkg%2f&amp;title=How%20to%20install%20and%20load%20multiple%20packages%20at%20once%3f"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpost%2fmultiplepkg%2f&amp;title=How%20to%20install%20and%20load%20multiple%20packages%3f"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fmultiplepkg%2f&amp;title=How%20to%20install%20and%20load%20multiple%20packages%20at%20once%3f"
          target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=How%20to%20install%20and%20load%20multiple%20packages%3f&amp;body=%2fpost%2fmultiplepkg%2f">
+         href="mailto:?subject=How%20to%20install%20and%20load%20multiple%20packages%20at%20once%3f&amp;body=%2fpost%2fmultiplepkg%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
