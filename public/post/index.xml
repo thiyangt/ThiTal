@@ -16,7 +16,13 @@
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/multiplepkg/</guid>
-      <description>&lt;div id=&#34;install-packages&#34; class=&#34;section level2&#34;&gt;
+      <description>&lt;style type=&#34;text/css&#34;&gt;
+h2 { /* Header 2 */
+    font-size: 22px;
+  color: DarkBlue;
+}
+&lt;/style&gt;
+&lt;div id=&#34;install-packages&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;install packages&lt;/h2&gt;
 &lt;p&gt;To install multiple packages with a single call to &lt;code&gt;install.packages&lt;/code&gt;, pass the names of the packages as a character vector to the install.packages() function.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
@@ -39,7 +45,9 @@
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;list.of.packages &amp;lt;- c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;)
 new.packages &amp;lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&amp;quot;Package&amp;quot;])]
 if(length(new.packages)) install.packages(new.packages)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;For other alternatives see,&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;for-other-alternatives-see&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;For other alternatives see&lt;/h2&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;a href=&#34;http://dirk.eddelbuettel.com/code/littler.html&#34;&gt;littler&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;

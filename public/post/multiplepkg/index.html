@@ -17,7 +17,7 @@
       
     
   
-  <meta name="description" content="install packagesTo install multiple packages with a single call to install.packages, pass the names of the packages as a character vector to the install.packages() function.
+  <meta name="description" content="h2 { /* Header 2 */font-size: 22px;color: DarkBlue;}install packagesTo install multiple packages with a single call to install.packages, pass the names of the packages as a character vector to the install.packages() function.
 install.packages(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;))load packagesOnce you have the packages installed, you can make their contents available to use in your current R session by running,
 lapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), require, character.only = TRUE)## [[1]]## [1] TRUE## ## [[2]]## [1] TRUE## ## [[3]]## [1] TRUEcheck and install missing packageslist.">
 
@@ -93,7 +93,7 @@ lapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), r
   <meta property="og:site_name" content="THIYANGA TALAGALA">
   <meta property="og:url" content="/post/multiplepkg/">
   <meta property="og:title" content="How to install and load multiple packages at once? | THIYANGA TALAGALA">
-  <meta property="og:description" content="install packagesTo install multiple packages with a single call to install.packages, pass the names of the packages as a character vector to the install.packages() function.
+  <meta property="og:description" content="h2 { /* Header 2 */font-size: 22px;color: DarkBlue;}install packagesTo install multiple packages with a single call to install.packages, pass the names of the packages as a character vector to the install.packages() function.
 install.packages(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;))load packagesOnce you have the packages installed, you can make their contents available to use in your current R session by running,
 lapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), require, character.only = TRUE)## [[1]]## [1] TRUE## ## [[2]]## [1] TRUE## ## [[3]]## [1] TRUEcheck and install missing packageslist.">
   <meta property="og:locale" content="en-us">
@@ -401,7 +401,13 @@ lapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), r
 
 
       <div class="article-style" itemprop="articleBody">
-        <div id="install-packages" class="section level2">
+        <style type="text/css">
+h2 { /* Header 2 */
+    font-size: 22px;
+  color: DarkBlue;
+}
+</style>
+<div id="install-packages" class="section level2">
 <h2>install packages</h2>
 <p>To install multiple packages with a single call to <code>install.packages</code>, pass the names of the packages as a character vector to the install.packages() function.</p>
 <pre class="r"><code>install.packages(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;))</code></pre>
@@ -424,7 +430,9 @@ lapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), r
 <pre class="r"><code>list.of.packages &lt;- c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;)
 new.packages &lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&quot;Package&quot;])]
 if(length(new.packages)) install.packages(new.packages)</code></pre>
-<p><strong>For other alternatives see,</strong></p>
+</div>
+<div id="for-other-alternatives-see" class="section level2">
+<h2>For other alternatives see</h2>
 <ol style="list-style-type: decimal">
 <li><a href="http://dirk.eddelbuettel.com/code/littler.html">littler</a></li>
 </ol>

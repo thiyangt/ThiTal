@@ -9,6 +9,12 @@ summary: "Install multiple R packages at once/ check and install missing package
 
 
 
+<style type="text/css">
+h2 { /* Header 2 */
+    font-size: 22px;
+  color: DarkBlue;
+}
+</style>
 <div id="install-packages" class="section level2">
 <h2>install packages</h2>
 <p>To install multiple packages with a single call to <code>install.packages</code>, pass the names of the packages as a character vector to the install.packages() function.</p>
@@ -32,7 +38,9 @@ summary: "Install multiple R packages at once/ check and install missing package
 <pre class="r"><code>list.of.packages &lt;- c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;)
 new.packages &lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&quot;Package&quot;])]
 if(length(new.packages)) install.packages(new.packages)</code></pre>
-<p><strong>For other alternatives see,</strong></p>
+</div>
+<div id="for-other-alternatives-see" class="section level2">
+<h2>For other alternatives see</h2>
 <ol style="list-style-type: decimal">
 <li><a href="http://dirk.eddelbuettel.com/code/littler.html">littler</a></li>
 </ol>
