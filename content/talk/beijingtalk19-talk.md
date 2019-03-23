@@ -7,7 +7,7 @@ time_end = 2019-03-13T15:20:00
 abstract = ""
 abstract_short = ""
 event = "Central University of Finance and Economics, Beijing, China"
-event_url = ""
+event_url = "http://sam.cufe.edu.cn/info/1038/2398.htm"
 location = "Beijing, China "
 
 # Is this a selected talk? (true/false)
@@ -21,7 +21,7 @@ selected = false
 # Links (optional).
 url_pdf = ""
 url_slides = "talks/beijingtalk19.pdf"
-url_video = ""
+url_video = "http://sam.cufe.edu.cn/info/1038/2398.htm"
 url_code = "https://github.com/thiyangt/beijingTalk"
 
 # Does the content use math formatting?
