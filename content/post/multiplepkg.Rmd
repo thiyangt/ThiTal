@@ -9,6 +9,8 @@ summary: "Install multiple R packages at once/ check and install missing package
 
 ## install packages
 
+To install multiple packages with a single call to `install.packages`, pass the names of the packages as a character vector to the install.packages() function.
+
 ```{r, warning=FALSE, message=FALSE, eval=FALSE}
 install.packages(c("gganimate", "tidyverse", "gapminder"))
 ```
@@ -16,12 +18,14 @@ install.packages(c("gganimate", "tidyverse", "gapminder"))
 
 ## load packages
 
+Once you have the packages installed, you can make their contents available to use in your current R session by running,
+
 ```{r,warning=FALSE, message=FALSE}
 lapply(c("gganimate", "tidyverse", "gapminder"), require, character.only = TRUE)
 ```
 
 
-## check and install missing packages only
+## check and install missing packages
 
 ```{r,warning=FALSE, message=FALSE, eval=FALSE}
 list.of.packages <- c("gganimate", "tidyverse", "gapminder")

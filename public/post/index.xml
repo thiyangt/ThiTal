@@ -18,10 +18,12 @@
       <guid>/post/multiplepkg/</guid>
       <description>&lt;div id=&#34;install-packages&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;install packages&lt;/h2&gt;
+&lt;p&gt;To install multiple packages with a single call to &lt;code&gt;install.packages&lt;/code&gt;, pass the names of the packages as a character vector to the install.packages() function.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;load-packages&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;load packages&lt;/h2&gt;
+&lt;p&gt;Once you have the packages installed, you can make their contents available to use in your current R session by running,&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;lapply(c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;), require, character.only = TRUE)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [[1]]
 ## [1] TRUE
@@ -32,8 +34,8 @@
 ## [[3]]
 ## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;check-and-install-missing-packages-only&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;check and install missing packages only&lt;/h2&gt;
+&lt;div id=&#34;check-and-install-missing-packages&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;check and install missing packages&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;list.of.packages &amp;lt;- c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;)
 new.packages &amp;lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&amp;quot;Package&amp;quot;])]
 if(length(new.packages)) install.packages(new.packages)&lt;/code&gt;&lt;/pre&gt;

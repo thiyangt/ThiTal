@@ -11,10 +11,12 @@ summary: "Install multiple R packages at once/ check and install missing package
 
 <div id="install-packages" class="section level2">
 <h2>install packages</h2>
+<p>To install multiple packages with a single call to <code>install.packages</code>, pass the names of the packages as a character vector to the install.packages() function.</p>
 <pre class="r"><code>install.packages(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;))</code></pre>
 </div>
 <div id="load-packages" class="section level2">
 <h2>load packages</h2>
+<p>Once you have the packages installed, you can make their contents available to use in your current R session by running,</p>
 <pre class="r"><code>lapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), require, character.only = TRUE)</code></pre>
 <pre><code>## [[1]]
 ## [1] TRUE
@@ -25,8 +27,8 @@ summary: "Install multiple R packages at once/ check and install missing package
 ## [[3]]
 ## [1] TRUE</code></pre>
 </div>
-<div id="check-and-install-missing-packages-only" class="section level2">
-<h2>check and install missing packages only</h2>
+<div id="check-and-install-missing-packages" class="section level2">
+<h2>check and install missing packages</h2>
 <pre class="r"><code>list.of.packages &lt;- c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;)
 new.packages &lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&quot;Package&quot;])]
 if(length(new.packages)) install.packages(new.packages)</code></pre>

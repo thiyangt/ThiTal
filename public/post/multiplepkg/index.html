@@ -17,8 +17,9 @@
       
     
   
-  <meta name="description" content="install packagesinstall.packages(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;))load packageslapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), require, character.only = TRUE)## [[1]]## [1] TRUE## ## [[2]]## [1] TRUE## ## [[3]]## [1] TRUEcheck and install missing packages onlylist.of.packages &lt;- c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;)new.packages &lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&quot;Package&quot;])]if(length(new.packages)) install.packages(new.packages)For other alternatives see,
-littlerlibrary(littler)install.r EIAdata gdata ggmap ggplot2 ipakipak &lt;- function(pkg){new.pkg &lt;- pkg[!">
+  <meta name="description" content="install packagesTo install multiple packages with a single call to install.packages, pass the names of the packages as a character vector to the install.packages() function.
+install.packages(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;))load packagesOnce you have the packages installed, you can make their contents available to use in your current R session by running,
+lapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), require, character.only = TRUE)## [[1]]## [1] TRUE## ## [[2]]## [1] TRUE## ## [[3]]## [1] TRUEcheck and install missing packageslist.">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/multiplepkg/">
@@ -92,8 +93,9 @@ littlerlibrary(littler)install.r EIAdata gdata ggmap ggplot2 ipakipak &lt;
   <meta property="og:site_name" content="THIYANGA TALAGALA">
   <meta property="og:url" content="/post/multiplepkg/">
   <meta property="og:title" content="How to install and load multiple packages at once? | THIYANGA TALAGALA">
-  <meta property="og:description" content="install packagesinstall.packages(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;))load packageslapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), require, character.only = TRUE)## [[1]]## [1] TRUE## ## [[2]]## [1] TRUE## ## [[3]]## [1] TRUEcheck and install missing packages onlylist.of.packages &lt;- c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;)new.packages &lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&quot;Package&quot;])]if(length(new.packages)) install.packages(new.packages)For other alternatives see,
-littlerlibrary(littler)install.r EIAdata gdata ggmap ggplot2 ipakipak &lt;- function(pkg){new.pkg &lt;- pkg[!">
+  <meta property="og:description" content="install packagesTo install multiple packages with a single call to install.packages, pass the names of the packages as a character vector to the install.packages() function.
+install.packages(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;))load packagesOnce you have the packages installed, you can make their contents available to use in your current R session by running,
+lapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), require, character.only = TRUE)## [[1]]## [1] TRUE## ## [[2]]## [1] TRUE## ## [[3]]## [1] TRUEcheck and install missing packageslist.">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2019-03-22T00:00:00&#43;00:00">
@@ -401,10 +403,12 @@ littlerlibrary(littler)install.r EIAdata gdata ggmap ggplot2 ipakipak &lt;
       <div class="article-style" itemprop="articleBody">
         <div id="install-packages" class="section level2">
 <h2>install packages</h2>
+<p>To install multiple packages with a single call to <code>install.packages</code>, pass the names of the packages as a character vector to the install.packages() function.</p>
 <pre class="r"><code>install.packages(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;))</code></pre>
 </div>
 <div id="load-packages" class="section level2">
 <h2>load packages</h2>
+<p>Once you have the packages installed, you can make their contents available to use in your current R session by running,</p>
 <pre class="r"><code>lapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), require, character.only = TRUE)</code></pre>
 <pre><code>## [[1]]
 ## [1] TRUE
@@ -415,8 +419,8 @@ littlerlibrary(littler)install.r EIAdata gdata ggmap ggplot2 ipakipak &lt;
 ## [[3]]
 ## [1] TRUE</code></pre>
 </div>
-<div id="check-and-install-missing-packages-only" class="section level2">
-<h2>check and install missing packages only</h2>
+<div id="check-and-install-missing-packages" class="section level2">
+<h2>check and install missing packages</h2>
 <pre class="r"><code>list.of.packages &lt;- c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;)
 new.packages &lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&quot;Package&quot;])]
 if(length(new.packages)) install.packages(new.packages)</code></pre>
