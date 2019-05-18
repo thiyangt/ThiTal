@@ -11,6 +11,95 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Summarizing with dplyr</title>
+      <link>/post/dplyr/</link>
+      <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/dplyr/</guid>
+      <description>&lt;p&gt;Packages&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Load &lt;code&gt;iris&lt;/code&gt; data set&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data(&amp;quot;iris&amp;quot;)
+head(iris)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;summarise-to-summarize-only-a-single-column&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;code&gt;summarise&lt;/code&gt;: to summarize only a single column&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% summarise(mean(Sepal.Length))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 2
+##   Species    `mean(Sepal.Length)`
+##   &amp;lt;fct&amp;gt;                     &amp;lt;dbl&amp;gt;
+## 1 setosa                     5.01
+## 2 versicolor                 5.94
+## 3 virginica                  6.59&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summarise_all-to-summarize-all-columns&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;code&gt;summarise_all&lt;/code&gt;: to summarize all columns&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% summarise_all(.funs = c(mean=&amp;quot;mean&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
+##   Species Sepal.Length_me~ Sepal.Width_mean Petal.Length_me~
+##   &amp;lt;fct&amp;gt;              &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+## 1 setosa              5.01             3.43             1.46
+## 2 versic~             5.94             2.77             4.26
+## 3 virgin~             6.59             2.97             5.55
+## # ... with 1 more variable: Petal.Width_mean &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summarise_at-to-summarize-only-certain-columns&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;code&gt;summarise_at&lt;/code&gt;: to summarize only certain columns&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% summarise_at(
+  .vars = vars(Sepal.Length, Sepal.Width),
+  .funs = c(mean=&amp;quot;mean&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 3
+##   Species    Sepal.Length_mean Sepal.Width_mean
+##   &amp;lt;fct&amp;gt;                  &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+## 1 setosa                  5.01             3.43
+## 2 versicolor              5.94             2.77
+## 3 virginica               6.59             2.97&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summarise_if&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;code&gt;summarise_if&lt;/code&gt;&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% 
+  summarise_if(.predicate = function(x) is.numeric(x),
+               .funs = funs(mean=&amp;quot;mean&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: funs() is soft deprecated as of dplyr 0.8.0
+## please use list() instead
+## 
+##   # Before:
+##   funs(name = f(.))
+## 
+##   # After: 
+##   list(name = ~ f(.))
+## This warning is displayed once per session.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
+##   Species Sepal.Length_me~ Sepal.Width_mean Petal.Length_me~
+##   &amp;lt;fct&amp;gt;              &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+## 1 setosa              5.01             3.43             1.46
+## 2 versic~             5.94             2.77             4.26
+## 3 virgin~             6.59             2.97             5.55
+## # ... with 1 more variable: Petal.Width_mean &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;pass multiple functions&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% 
+  summarise_if(.predicate = function(x) is.numeric(x),
+               .funs = funs(mean=&amp;quot;mean&amp;quot;, Sd=&amp;quot;sd&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 9
+##   Species Sepal.Length_me~ Sepal.Width_mean Petal.Length_me~
+##   &amp;lt;fct&amp;gt;              &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+## 1 setosa              5.01             3.43             1.46
+## 2 versic~             5.94             2.77             4.26
+## 3 virgin~             6.59             2.97             5.55
+## # ... with 5 more variables: Petal.Width_mean &amp;lt;dbl&amp;gt;,
+## #   Sepal.Length_Sd &amp;lt;dbl&amp;gt;, Sepal.Width_Sd &amp;lt;dbl&amp;gt;, Petal.Length_Sd &amp;lt;dbl&amp;gt;,
+## #   Petal.Width_Sd &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How to install and load multiple packages at once?</title>
       <link>/post/multiplepkg/</link>
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>

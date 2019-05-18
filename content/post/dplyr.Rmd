@@ -1,0 +1,64 @@
+---
+title: "Summarizing with dplyr"
+author: Thiyanga Talagala
+date: '2019-05-18'
+categories: [dplyr]
+tags: [R, dplyr]
+summary: "Summarizing variables with dplyr"
+---
+
+Packages
+
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
+```
+
+Load `iris` data set
+
+```{r}
+data("iris")
+head(iris)
+
+```
+
+
+## `summarise`: to summarize only a single column
+
+```{r}
+iris %>% group_by(Species) %>% summarise(mean(Sepal.Length))
+```
+
+## `summarise_all`: to summarize all columns
+
+```{r}
+
+iris %>% group_by(Species) %>% summarise_all(.funs = c(mean="mean"))
+
+```
+
+
+## `summarise_at`: to summarize only certain columns
+
+```{r}
+iris %>% group_by(Species) %>% summarise_at(
+  .vars = vars(Sepal.Length, Sepal.Width),
+  .funs = c(mean="mean"))
+```
+
+## `summarise_if`
+
+```{r}
+iris %>% group_by(Species) %>% 
+  summarise_if(.predicate = function(x) is.numeric(x),
+               .funs = funs(mean="mean"))
+
+```
+
+**pass multiple functions**
+
+```{r}
+iris %>% group_by(Species) %>% 
+  summarise_if(.predicate = function(x) is.numeric(x),
+               .funs = funs(mean="mean", Sd="sd"))
+
+```
