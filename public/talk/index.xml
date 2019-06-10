@@ -11,6 +11,33 @@
     <atom:link href="/talk/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Peeking inside FFORMS: Feature-based FORecast Model Selection</title>
+      <link>/talk/isf19-talk/</link>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +1000</pubDate>
+      
+      <guid>/talk/isf19-talk/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;peeking-inside-fforms-feature-based-forecast-model-selection&#34;&gt;Peeking inside FFORMS: Feature-based FORecast Model Selection&lt;/h2&gt;
+
+&lt;p&gt;Thiyanga S. Talagala$^1$, Rob J. Hyndman$^1$, George Athanasopoulos$^1$&lt;/p&gt;
+
+&lt;p&gt;$^1$Department of Econometrics and Business Statistics, Monash University, Australia&lt;/p&gt;
+
+&lt;p&gt;Features of time series are useful in identifying suitable forecast models. Talagala, Hyndman &amp;amp; Athanasopoulos (2018) proposed a classification framework, called FFORMS (Feature-based FORecast Model Selection), which selects forecast models based on features calculated from the time series. The FFORMS framework builds a mapping that relates the features of a time series to the “best” forecast model using the random forest algorithm. In this paper we explore what is happening under the hood of the FFORMS framework and thereby gain an understanding of what features lead to the different choices of forecast models and how different features influence the predicted outcome. This is accomplished using model-agnostic machine learning interpretability approaches. Partial-dependency plots are used to visualize both main and interaction effects of features. The results of this study provide a valuable insight into how different features and their interactions affect the choice of forecast model selection. This gives a more refined picture of the relationship between features and the choice of forecast model which is particularly valuable for ongoing research in the field of feature-based time series analysis.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Keywords:&lt;/em&gt;
+forecasting, time series, machine learning interpretability, black-box models, LIME&lt;/p&gt;
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;Talagala, TS, RJ Hyndman &amp;amp; G Athanasopoulos (2018). Meta-learning how to forecast time series. Working paper &lt;sup&gt;6&lt;/sup&gt;&amp;frasl;&lt;sub&gt;18&lt;/sub&gt;. Monash University, Department of Econometrics and Business Statistics&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Feature-based time series forecasting</title>
       <link>/talk/beijingtalk19-talk/</link>
       <pubDate>Wed, 13 Mar 2019 00:00:00 +1100</pubDate>
