@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rmarkdown on THIYANGA TALAGALA</title>
+    <link>/tags/rmarkdown/</link>
+    <description>Recent content in Rmarkdown on THIYANGA TALAGALA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
+    <lastBuildDate>Tue, 29 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/rmarkdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Some useful Greek letters you might use on your reports</title>
+      <link>/post/greekletters/</link>
+      <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/greekletters/</guid>
+      <description>Commands to type Greek letters on Rmarkdown or Latex</description>
+    </item>
+    
+  </channel>
+</rss>

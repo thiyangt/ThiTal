@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dplyr on THIYANGA TALAGALA</title>
+    <link>/categories/dplyr/</link>
+    <description>Recent content in dplyr on THIYANGA TALAGALA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
+    <lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/dplyr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Summarizing with dplyr</title>
+      <link>/post/dplyr/</link>
+      <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/dplyr/</guid>
+      <description>Summarizing variables with dplyr</description>
+    </item>
+    
+    <item>
+      <title>What&#39;s in a package?</title>
+      <link>/post/packageinfo/</link>
+      <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/packageinfo/</guid>
+      <description>Sometimes we need to view all the functions that are built into an R package.</description>
+    </item>
+    
+  </channel>
+</rss>

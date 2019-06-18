@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gganimate on THIYANGA TALAGALA</title>
+    <link>/categories/gganimate/</link>
+    <description>Recent content in gganimate on THIYANGA TALAGALA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
+    <lastBuildDate>Fri, 22 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/gganimate/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to install and load multiple packages at once?</title>
+      <link>/post/multiplepkg/</link>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/multiplepkg/</guid>
+      <description>Install multiple R packages at once/ check and install missing packages.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>THIYANGA TALAGALA on THIYANGA TALAGALA</title>
@@ -7,13 +6,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +1100</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jun 2019 00:00:00 +0300</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Peeking inside FFORMS: Feature-based FORecast Model Selection</title>
       <link>/talk/isf19-talk/</link>
-      <pubDate>Tue, 11 Jun 2019 00:00:00 +1000</pubDate>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +0300</pubDate>
       
       <guid>/talk/isf19-talk/</guid>
       <description>
@@ -43,7 +42,10 @@ forecasting, time series, machine learning interpretability, black-box models, L
       <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/dplyr/</guid>
-      <description>&lt;p&gt;Packages&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;Packages&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Load &lt;code&gt;iris&lt;/code&gt; data set&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data(&amp;quot;iris&amp;quot;)
@@ -132,7 +134,10 @@ head(iris)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/multiplepkg/</guid>
-      <description>&lt;style type=&#34;text/css&#34;&gt;
+      <description>
+
+
+&lt;style type=&#34;text/css&#34;&gt;
 h2 { /* Header 2 */
     font-size: 22px;
   color: DarkBlue;
@@ -194,7 +199,7 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
     <item>
       <title>Feature-based time series forecasting</title>
       <link>/talk/beijingtalk19-talk/</link>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 +1100</pubDate>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +0200</pubDate>
       
       <guid>/talk/beijingtalk19-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
@@ -209,7 +214,10 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/greekletters/</guid>
-      <description>&lt;table&gt;
+      <description>
+
+
+&lt;table&gt;
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;strong&gt;alpha&lt;/strong&gt;:&lt;/td&gt;
@@ -325,7 +333,10 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/packageinfo/</guid>
-      <description>&lt;p&gt;Sometimes we need to view all the functions that are built into an R package. This is done in the same way you would list variables in your workspace, using the &lt;code&gt;ls&lt;/code&gt; function. Note that the package must be loaded before you run the &lt;code&gt;ls&lt;/code&gt; command.&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;Sometimes we need to view all the functions that are built into an R package. This is done in the same way you would list variables in your workspace, using the &lt;code&gt;ls&lt;/code&gt; function. Note that the package must be loaded before you run the &lt;code&gt;ls&lt;/code&gt; command.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt; Getting a list of functions inside the &lt;code&gt;dplyr&lt;/code&gt; package&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
 ls(&amp;quot;package:dplyr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
@@ -420,7 +431,10 @@ ls(&amp;quot;package:dplyr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/blog/</guid>
-      <description>&lt;p&gt;Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.&lt;/p&gt;
 &lt;p&gt;You will learn,&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;how to change the order of labels&lt;/p&gt;&lt;/li&gt;
@@ -488,7 +502,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
     <item>
       <title>Parallel computing with R</title>
       <link>/post/parallelcomputing/</link>
-      <pubDate>Wed, 08 Aug 2018 00:00:00 +1000</pubDate>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +0300</pubDate>
       
       <guid>/post/parallelcomputing/</guid>
       <description>&lt;p&gt;Working on this..&lt;/p&gt;
@@ -498,7 +512,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
     <item>
       <title>Data Types in R</title>
       <link>/post/datatypes/</link>
-      <pubDate>Tue, 07 Aug 2018 00:00:00 +1000</pubDate>
+      <pubDate>Tue, 07 Aug 2018 00:00:00 +0300</pubDate>
       
       <guid>/post/datatypes/</guid>
       <description>&lt;p&gt;coming up soon!&lt;/p&gt;
@@ -508,7 +522,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
     <item>
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/isf17-talk/</link>
-      <pubDate>Mon, 26 Jun 2017 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0300</pubDate>
       
       <guid>/talk/isf17-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
@@ -521,7 +535,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>A classification framework for forecast-model selection</title>
       <link>/talk/jsm18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
       
       <guid>/talk/jsm18-talk/</guid>
       <description>&lt;p&gt;The background pictures are of free copyright from &lt;a href=&#34;https://pixabay.com/en/photos/presentation/&#34; target=&#34;_blank&#34;&gt;https://pixabay.com/en/photos/presentation/&lt;/a&gt;.&lt;/p&gt;
@@ -533,7 +547,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>Analysing large collections of time series</title>
       <link>/talk/japan18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
       
       <guid>/talk/japan18-talk/</guid>
       <description></description>
@@ -542,7 +556,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/ssa17-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
       
       <guid>/talk/ssa17-talk/</guid>
       <description></description>
@@ -551,7 +565,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/ysc17-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
       
       <guid>/talk/ysc17-talk/</guid>
       <description></description>
@@ -560,7 +574,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>Meta-learning how to forecast time series</title>
       <link>/talk/isf18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
       
       <guid>/talk/isf18-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;

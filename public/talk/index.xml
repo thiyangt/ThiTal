@@ -8,76 +8,56 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/talk/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Peeking inside FFORMS: Feature-based FORecast Model Selection</title>
       <link>/talk/isf19-talk/</link>
-      <pubDate>Tue, 11 Jun 2019 00:00:00 +1000</pubDate>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +0300</pubDate>
       
       <guid>/talk/isf19-talk/</guid>
-      <description>
-
-&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;peeking-inside-fforms-feature-based-forecast-model-selection&#34;&gt;Peeking inside FFORMS: Feature-based FORecast Model Selection&lt;/h2&gt;
-
-&lt;p&gt;Thiyanga S. Talagala$^1$, Rob J. Hyndman$^1$, George Athanasopoulos$^1$&lt;/p&gt;
-
-&lt;p&gt;$^1$Department of Econometrics and Business Statistics, Monash University, Australia&lt;/p&gt;
-
-&lt;p&gt;Features of time series are useful in identifying suitable forecast models. Talagala, Hyndman &amp;amp; Athanasopoulos (2018) proposed a classification framework, called FFORMS (Feature-based FORecast Model Selection), which selects forecast models based on features calculated from the time series. The FFORMS framework builds a mapping that relates the features of a time series to the “best” forecast model using the random forest algorithm. In this paper we explore what is happening under the hood of the FFORMS framework and thereby gain an understanding of what features lead to the different choices of forecast models and how different features influence the predicted outcome. This is accomplished using model-agnostic machine learning interpretability approaches. Partial-dependency plots are used to visualize both main and interaction effects of features. The results of this study provide a valuable insight into how different features and their interactions affect the choice of forecast model selection. This gives a more refined picture of the relationship between features and the choice of forecast model which is particularly valuable for ongoing research in the field of feature-based time series analysis.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Keywords:&lt;/em&gt;
-forecasting, time series, machine learning interpretability, black-box models, LIME&lt;/p&gt;
-
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-
-&lt;p&gt;Talagala, TS, RJ Hyndman &amp;amp; G Athanasopoulos (2018). Meta-learning how to forecast time series. Working paper &lt;sup&gt;6&lt;/sup&gt;&amp;frasl;&lt;sub&gt;18&lt;/sub&gt;. Monash University, Department of Econometrics and Business Statistics&lt;/p&gt;
-</description>
+      <description>Abstract
+Peeking inside FFORMS: Feature-based FORecast Model Selection Thiyanga S. Talagala$^1$, Rob J. Hyndman$^1$, George Athanasopoulos$^1$
+$^1$Department of Econometrics and Business Statistics, Monash University, Australia
+Features of time series are useful in identifying suitable forecast models. Talagala, Hyndman &amp;amp; Athanasopoulos (2018) proposed a classification framework, called FFORMS (Feature-based FORecast Model Selection), which selects forecast models based on features calculated from the time series. The FFORMS framework builds a mapping that relates the features of a time series to the “best” forecast model using the random forest algorithm.</description>
     </item>
     
     <item>
       <title>Feature-based time series forecasting</title>
       <link>/talk/beijingtalk19-talk/</link>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 +1100</pubDate>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +0200</pubDate>
       
       <guid>/talk/beijingtalk19-talk/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This work presents three feature-based algorithms for large-scale time series forecasting.  The algorithms are developed based on meta-learning approach. In our first algorithm we use a random forest algorithm to identify the best forecasting model. We call this framework FFORMS (Feature-based FORecast Model Selection).  In the second algorithm, FFORMA (Feature-based FORecast Model Averaging), we use gradient boosting to obtain the weights for forecast combinations. The third algorithm use efficient Bayesian multivariate surface regression approach to estimate forecast error for each method, and then using the minimum predicted error to select a forecasting model or to choose individual models for forecast combinations. The proposed algorithms perform well compared to several benchmarks and other commonly used approaches in large-scale forecasting.&lt;/p&gt;
-</description>
+      <description>Abstract
+This work presents three feature-based algorithms for large-scale time series forecasting. The algorithms are developed based on meta-learning approach. In our first algorithm we use a random forest algorithm to identify the best forecasting model. We call this framework FFORMS (Feature-based FORecast Model Selection). In the second algorithm, FFORMA (Feature-based FORecast Model Averaging), we use gradient boosting to obtain the weights for forecast combinations. The third algorithm use efficient Bayesian multivariate surface regression approach to estimate forecast error for each method, and then using the minimum predicted error to select a forecasting model or to choose individual models for forecast combinations.</description>
     </item>
     
     <item>
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/isf17-talk/</link>
-      <pubDate>Mon, 26 Jun 2017 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0300</pubDate>
       
       <guid>/talk/isf17-talk/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Many applications require a large number of time series to be forecast. Providing better forecasts for these time series is important in decision and policy making. However, large scale time series data present numerous challenges in modelling and implementation due to
-the high dimensionality. It is unlikely that a single method will consistently provides better forecasts across all time series. On the other hand, selecting individual forecast models when the number of series is very large can be extremely challenging. In this paper we propose a classification framework which selects forecast models based on features calculated from the time series. A Random Forest approach is used to develop the classifier. The proposed framework is tested using the M3 data and is compared against several benchmarks and other commonly used approaches of forecasting.&lt;/p&gt;
-</description>
+      <description>Abstract
+Many applications require a large number of time series to be forecast. Providing better forecasts for these time series is important in decision and policy making. However, large scale time series data present numerous challenges in modelling and implementation due to the high dimensionality. It is unlikely that a single method will consistently provides better forecasts across all time series. On the other hand, selecting individual forecast models when the number of series is very large can be extremely challenging.</description>
     </item>
     
     <item>
       <title>A classification framework for forecast-model selection</title>
       <link>/talk/jsm18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
       
       <guid>/talk/jsm18-talk/</guid>
-      <description>&lt;p&gt;The background pictures are of free copyright from &lt;a href=&#34;https://pixabay.com/en/photos/presentation/&#34; target=&#34;_blank&#34;&gt;https://pixabay.com/en/photos/presentation/&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Associated R package: &lt;a href=&#34;https://github.com/thiyangt/seer&#34; target=&#34;_blank&#34;&gt;seer&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>The background pictures are of free copyright from https://pixabay.com/en/photos/presentation/.
+Associated R package: seer</description>
     </item>
     
     <item>
       <title>Analysing large collections of time series</title>
       <link>/talk/japan18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
       
       <guid>/talk/japan18-talk/</guid>
       <description></description>
@@ -86,7 +66,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/ssa17-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
       
       <guid>/talk/ssa17-talk/</guid>
       <description></description>
@@ -95,7 +75,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/ysc17-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
       
       <guid>/talk/ysc17-talk/</guid>
       <description></description>
@@ -104,27 +84,21 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>Meta-learning how to forecast time series</title>
       <link>/talk/isf18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
       
       <guid>/talk/isf18-talk/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;A crucial task in time series forecasting is the identification of the most suitable forecasting method. We present a general framework for forecast model selection using meta-learning. A Random Forest is used to predict the best forecasting method using only time series features. The proposed framework has been evaluated using time series from the M1 and M3 competitions, and is shown to yield accurate forecasts comparable to several benchmarks and other commonly used automated approaches of time series forecasting. A key advantage of our algorithm is that the time-consuming part of building the random forest can be handled in advance of the forecasting task.&lt;/p&gt;
-</description>
+      <description>Abstract
+A crucial task in time series forecasting is the identification of the most suitable forecasting method. We present a general framework for forecast model selection using meta-learning. A Random Forest is used to predict the best forecasting method using only time series features. The proposed framework has been evaluated using time series from the M1 and M3 competitions, and is shown to yield accurate forecasts comparable to several benchmarks and other commonly used automated approaches of time series forecasting.</description>
     </item>
     
     <item>
       <title>seer: R package for feature-based forecast model selection</title>
       <link>/talk/user18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
       
       <guid>/talk/user18-talk/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The seer package provides a novel framework for forecast model selection using time series features. We call this framework FFORMS (Feature-based FORecast Model Selection). The underlying approach involves computing a vector of features from the time series which are then used to select the forecasting model. The model selection process is carried out using a classification algorithm &amp;ndash; we use the time series features as inputs, and the best forecasting algorithm as the output. The classification algorithm can be built in advance of the forecasting exercise (so it is an “offline” procedure). Then, when we have a new time series to forecast, we can quickly compute its features, use the pre-trained classification algorithm to identify the best forecasting model, and produce the required forecasts. Thus, the “online” part of our algorithm requires only feature computation, and the application of a single forecasting model, with no need to estimate large numbers of models within a class, or to carry out a computationally-intensive cross-validation procedure. This framework is compared against several benchmarks and other commonly used forecasting methods.&lt;/p&gt;
-
-&lt;p&gt;Link to git repository: &lt;a href=&#34;https://github.com/thiyangt/seer&#34; target=&#34;_blank&#34;&gt;seer&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Abstract
+The seer package provides a novel framework for forecast model selection using time series features. We call this framework FFORMS (Feature-based FORecast Model Selection). The underlying approach involves computing a vector of features from the time series which are then used to select the forecasting model. The model selection process is carried out using a classification algorithm &amp;ndash; we use the time series features as inputs, and the best forecasting algorithm as the output.</description>
     </item>
     
   </channel>

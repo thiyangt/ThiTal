@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on THIYANGA TALAGALA</title>
+    <link>/tags/r/</link>
+    <description>Recent content in R on THIYANGA TALAGALA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
+    <lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Summarizing with dplyr</title>
+      <link>/post/dplyr/</link>
+      <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/dplyr/</guid>
+      <description>Summarizing variables with dplyr</description>
+    </item>
+    
+    <item>
+      <title>How to install and load multiple packages at once?</title>
+      <link>/post/multiplepkg/</link>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/multiplepkg/</guid>
+      <description>Install multiple R packages at once/ check and install missing packages.</description>
+    </item>
+    
+    <item>
+      <title>Some useful Greek letters you might use on your reports</title>
+      <link>/post/greekletters/</link>
+      <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/greekletters/</guid>
+      <description>Commands to type Greek letters on Rmarkdown or Latex</description>
+    </item>
+    
+    <item>
+      <title>What&#39;s in a package?</title>
+      <link>/post/packageinfo/</link>
+      <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/packageinfo/</guid>
+      <description>Sometimes we need to view all the functions that are built into an R package.</description>
+    </item>
+    
+    <item>
+      <title>Customizing boxplots with ggplot2</title>
+      <link>/post/blog/</link>
+      <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/blog/</guid>
+      <description>Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.</description>
+    </item>
+    
+  </channel>
+</rss>
