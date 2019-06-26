@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +1100</lastBuildDate>
     
 	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title></title>
       <link>/home/hero/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 +0300</pubDate>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +1100</pubDate>
       
       <guid>/home/hero/</guid>
       <description>About me    (function defer() { if (window.jQuery) { jQuery(document).ready(function(){ GetLatestReleaseInfo(); }); } else { setTimeout(function() { defer() }, 50); } })();
@@ -37,7 +37,7 @@ I enjoy solving general data science problems from three different angles: theor
     <item>
       <title>Data Science</title>
       <link>/home/data_import/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +1000</pubDate>
       
       <guid>/home/data_import/</guid>
       <description>seer: R package for feature-based time series forecasting.
@@ -48,7 +48,7 @@ I enjoy solving general data science problems from three different angles: theor
     <item>
       <title>Data Import</title>
       <link>/home/software/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +1000</pubDate>
       
       <guid>/home/software/</guid>
       <description>tea: R package for tea exporting countries
@@ -97,7 +97,7 @@ I enjoy solving general data science problems from three different angles: theor
     <item>
       <title>Tags</title>
       <link>/home/tags/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 +0300</pubDate>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +1000</pubDate>
       
       <guid>/home/tags/</guid>
       <description></description>

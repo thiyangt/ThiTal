@@ -6,7 +6,7 @@ time_start = 2019-06-18T14:20:00
 time_end = 2019-06-18T14:40:00
 abstract = ""
 abstract_short = ""
-event = "The 39th International Symposium on Forecasting, 2019"
+event = "The 39th International Symposium on Forecasting, 2019, Thessaloniki, Greece"
 event_url = "https://forecasters.org/events/symposium-on-forecasting/"
 location = "Thessaloniki, Greece "
 

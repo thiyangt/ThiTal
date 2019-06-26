@@ -15,7 +15,7 @@
     <item>
       <title>Peeking inside FFORMS: Feature-based FORecast Model Selection</title>
       <link>/talk/isf19-talk/</link>
-      <pubDate>Tue, 11 Jun 2019 00:00:00 +0300</pubDate>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +1000</pubDate>
       
       <guid>/talk/isf19-talk/</guid>
       <description>Abstract
@@ -27,7 +27,7 @@ Features of time series are useful in identifying suitable forecast models. Tala
     <item>
       <title>Feature-based time series forecasting</title>
       <link>/talk/beijingtalk19-talk/</link>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +1100</pubDate>
       
       <guid>/talk/beijingtalk19-talk/</guid>
       <description>Abstract
@@ -37,7 +37,7 @@ This work presents three feature-based algorithms for large-scale time series fo
     <item>
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/isf17-talk/</link>
-      <pubDate>Mon, 26 Jun 2017 00:00:00 +0300</pubDate>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +1000</pubDate>
       
       <guid>/talk/isf17-talk/</guid>
       <description>Abstract
@@ -47,7 +47,7 @@ Many applications require a large number of time series to be forecast. Providin
     <item>
       <title>A classification framework for forecast-model selection</title>
       <link>/talk/jsm18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>/talk/jsm18-talk/</guid>
       <description>The background pictures are of free copyright from https://pixabay.com/en/photos/presentation/.
@@ -57,7 +57,7 @@ Associated R package: seer</description>
     <item>
       <title>Analysing large collections of time series</title>
       <link>/talk/japan18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>/talk/japan18-talk/</guid>
       <description></description>
@@ -66,7 +66,7 @@ Associated R package: seer</description>
     <item>
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/ssa17-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>/talk/ssa17-talk/</guid>
       <description></description>
@@ -75,7 +75,7 @@ Associated R package: seer</description>
     <item>
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/ysc17-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>/talk/ysc17-talk/</guid>
       <description></description>
@@ -84,7 +84,7 @@ Associated R package: seer</description>
     <item>
       <title>Meta-learning how to forecast time series</title>
       <link>/talk/isf18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>/talk/isf18-talk/</guid>
       <description>Abstract
@@ -94,7 +94,7 @@ A crucial task in time series forecasting is the identification of the most suit
     <item>
       <title>seer: R package for feature-based forecast model selection</title>
       <link>/talk/user18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>/talk/user18-talk/</guid>
       <description>Abstract

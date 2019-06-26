@@ -6,13 +6,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
-    <lastBuildDate>Tue, 11 Jun 2019 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jun 2019 00:00:00 +1000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Peeking inside FFORMS: Feature-based FORecast Model Selection</title>
       <link>/talk/isf19-talk/</link>
-      <pubDate>Tue, 11 Jun 2019 00:00:00 +0300</pubDate>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +1000</pubDate>
       
       <guid>/talk/isf19-talk/</guid>
       <description>
@@ -199,7 +199,7 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
     <item>
       <title>Feature-based time series forecasting</title>
       <link>/talk/beijingtalk19-talk/</link>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +1100</pubDate>
       
       <guid>/talk/beijingtalk19-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
@@ -502,7 +502,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
     <item>
       <title>Parallel computing with R</title>
       <link>/post/parallelcomputing/</link>
-      <pubDate>Wed, 08 Aug 2018 00:00:00 +0300</pubDate>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +1000</pubDate>
       
       <guid>/post/parallelcomputing/</guid>
       <description>&lt;p&gt;Working on this..&lt;/p&gt;
@@ -512,7 +512,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
     <item>
       <title>Data Types in R</title>
       <link>/post/datatypes/</link>
-      <pubDate>Tue, 07 Aug 2018 00:00:00 +0300</pubDate>
+      <pubDate>Tue, 07 Aug 2018 00:00:00 +1000</pubDate>
       
       <guid>/post/datatypes/</guid>
       <description>&lt;p&gt;coming up soon!&lt;/p&gt;
@@ -522,7 +522,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
     <item>
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/isf17-talk/</link>
-      <pubDate>Mon, 26 Jun 2017 00:00:00 +0300</pubDate>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +1000</pubDate>
       
       <guid>/talk/isf17-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
@@ -535,7 +535,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>A classification framework for forecast-model selection</title>
       <link>/talk/jsm18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>/talk/jsm18-talk/</guid>
       <description>&lt;p&gt;The background pictures are of free copyright from &lt;a href=&#34;https://pixabay.com/en/photos/presentation/&#34; target=&#34;_blank&#34;&gt;https://pixabay.com/en/photos/presentation/&lt;/a&gt;.&lt;/p&gt;
@@ -547,7 +547,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>Analysing large collections of time series</title>
       <link>/talk/japan18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>/talk/japan18-talk/</guid>
       <description></description>
@@ -556,7 +556,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/ssa17-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>/talk/ssa17-talk/</guid>
       <description></description>
@@ -565,7 +565,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/ysc17-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>/talk/ysc17-talk/</guid>
       <description></description>
@@ -574,7 +574,7 @@ the high dimensionality. It is unlikely that a single method will consistently p
     <item>
       <title>Meta-learning how to forecast time series</title>
       <link>/talk/isf18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>/talk/isf18-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
