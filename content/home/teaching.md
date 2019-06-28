@@ -17,7 +17,7 @@ weight = 60
 
 <i class="fa fa-asterisk fa-spin" style="color:red"></i> Teaching Associate, Monash University, Australia
 
-<i class="fa fa-asterisk fa-spin" style="color:red"></i> Lecturer (Probationary), [Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura, Sri Lanka](http://science.sjp.ac.lk/) (currently on study leave)
+<i class="fa fa-asterisk fa-spin" style="color:red"></i> Lecturer, [Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura, Sri Lanka](http://science.sjp.ac.lk/) (currently on study leave)
 
 
 
