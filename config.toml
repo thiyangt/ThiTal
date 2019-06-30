@@ -217,6 +217,11 @@ defaultContentLanguageInSubdir = false
     icon_pack = "fa"
     link = "//github.com/thiyangt"
   
+    [[params.social]]
+    icon = "linkedin"
+    icon_pack = "fa"
+    link = "https://www.linkedin.com/in/thiyanga-talagala-24bb63134/"
+  
   [[params.social]]
     icon = "orcid"
     icon_pack = "ai"

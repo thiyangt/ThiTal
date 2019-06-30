@@ -62,7 +62,7 @@
     
     <url>
     
-      <loc>/categories/dplyr/</loc>
+      <loc>/tags/dplyr/</loc>
       <lastmod>2019-05-18T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -72,7 +72,7 @@
     
     <url>
     
-      <loc>/tags/dplyr/</loc>
+      <loc>/categories/dplyr/</loc>
       <lastmod>2019-05-18T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -101,16 +101,6 @@
     
     <url>
     
-      <loc>/categories/gganimate/</loc>
-      <lastmod>2019-03-22T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/tags/gganimate/</loc>
       <lastmod>2019-03-22T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -121,7 +111,7 @@
     
     <url>
     
-      <loc>/categories/tidyverse/</loc>
+      <loc>/categories/gganimate/</loc>
       <lastmod>2019-03-22T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -141,6 +131,16 @@
     
     <url>
     
+      <loc>/categories/tidyverse/</loc>
+      <lastmod>2019-03-22T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/talk/beijingtalk19-talk/</loc>
       <lastmod>2019-03-13T00:00:00+11:00</lastmod>
     </url>
@@ -150,7 +150,7 @@
     
     <url>
     
-      <loc>/categories/rmarkdown/</loc>
+      <loc>/tags/rmarkdown/</loc>
       <lastmod>2019-01-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -160,7 +160,7 @@
     
     <url>
     
-      <loc>/tags/rmarkdown/</loc>
+      <loc>/categories/rmarkdown/</loc>
       <lastmod>2019-01-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -197,7 +197,7 @@
     
     <url>
     
-      <loc>/categories/ggplot2/</loc>
+      <loc>/tags/ggplot2/</loc>
       <lastmod>2018-09-05T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -207,7 +207,7 @@
     
     <url>
     
-      <loc>/tags/ggplot2/</loc>
+      <loc>/categories/ggplot2/</loc>
       <lastmod>2018-09-05T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
