@@ -20,7 +20,7 @@ selected = false
 
 # Links (optional).
 url_pdf = ""
-url_slides = "talks/user18.pdf"
+url_slides = "talks/useR2018.pdf"
 #url_video = "https://www.youtube.com/watch?v=_pKMIvdt5NU"
 url_code = "https://github.com/thiyangt/useR-2018"
 
