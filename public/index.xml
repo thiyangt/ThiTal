@@ -6,8 +6,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
-    <lastBuildDate>Tue, 11 Jun 2019 00:00:00 +1000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jul 2019 00:00:00 +1000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Feature-based Time Series Forecasting</title>
+      <link>/talk/user19-talk/</link>
+      <pubDate>Fri, 05 Jul 2019 00:00:00 +1000</pubDate>
+      
+      <guid>/talk/user19-talk/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This work presents two feature-based forecasting algorithms for large-scale time series forecasting. The
+algorithms involve computing a range of features of the time series which are then used to select the forecasting model. The forecasting model selection process is carried out using a pre-trained classifier. In our first algorithm we use a random forest algorithm to train the classifier. We call this framework FFORMS (Feature-based FORecast Model Selection). The second algorithm use efficient Bayesian multivariate surface regression approach to estimate forecast error for each method, and then using the minimum predicted error to select a forecasting model. Both algorithms have been evaluated using time series from the M4 competition, and is shown to yield accurate forecasts comparable to several benchmarks and other commonly used automated approaches in the time series forecasting literature. The methods are made available in the seer and fformpp packages in R.&lt;/p&gt;
+
+&lt;p&gt;keywords: Meta-learning, classification, surface regression&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Peeking inside FFORMS: Feature-based FORecast Model Selection</title>
@@ -569,18 +584,6 @@ the high dimensionality. It is unlikely that a single method will consistently p
       
       <guid>/talk/ysc17-talk/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Meta-learning how to forecast time series</title>
-      <link>/talk/isf18-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
-      
-      <guid>/talk/isf18-talk/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;A crucial task in time series forecasting is the identification of the most suitable forecasting method. We present a general framework for forecast model selection using meta-learning. A Random Forest is used to predict the best forecasting method using only time series features. The proposed framework has been evaluated using time series from the M1 and M3 competitions, and is shown to yield accurate forecasts comparable to several benchmarks and other commonly used automated approaches of time series forecasting. A key advantage of our algorithm is that the time-consuming part of building the random forest can be handled in advance of the forecasting task.&lt;/p&gt;
-</description>
     </item>
     
   </channel>

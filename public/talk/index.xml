@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>Feature-based Time Series Forecasting</title>
+      <link>/talk/user19-talk/</link>
+      <pubDate>Fri, 05 Jul 2019 00:00:00 +1000</pubDate>
+      
+      <guid>/talk/user19-talk/</guid>
+      <description>Abstract
+This work presents two feature-based forecasting algorithms for large-scale time series forecasting. The algorithms involve computing a range of features of the time series which are then used to select the forecasting model. The forecasting model selection process is carried out using a pre-trained classifier. In our first algorithm we use a random forest algorithm to train the classifier. We call this framework FFORMS (Feature-based FORecast Model Selection). The second algorithm use efficient Bayesian multivariate surface regression approach to estimate forecast error for each method, and then using the minimum predicted error to select a forecasting model.</description>
+    </item>
+    
+    <item>
       <title>Peeking inside FFORMS: Feature-based FORecast Model Selection</title>
       <link>/talk/isf19-talk/</link>
       <pubDate>Tue, 11 Jun 2019 00:00:00 +1000</pubDate>
