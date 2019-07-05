@@ -19,8 +19,8 @@ selected = false
 #projects = ["deep-learning"]
 
 # Links (optional).
-url_pdf = ""
-url_slides = "talks/user2019.pdf"
+url_pdf = "https://www.monash.edu/business/econometrics-and-business-statistics/research/publications/ebs/wp06-2018.pdf"
+url_slides = "talks/useR2019.pdf"
 #url_video = "https://www.youtube.com/watch?v=_pKMIvdt5NU"
 url_code = "https://github.com/thiyangt/useR2019"
 
