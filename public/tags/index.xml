@@ -13,20 +13,20 @@
     
     
     <item>
-      <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>dplyr</title>
       <link>/tags/dplyr/</link>
       <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/dplyr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
       <description></description>
     </item>
     
