@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on THIYANGA TALAGALA</title>
+    <title>Categories | THIYANGA TALAGALA</title>
     <link>/categories/</link>
-    <description>Recent content in Categories on THIYANGA TALAGALA</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
-    <lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <description>Categories</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Categories</title>
+      <link>/categories/</link>
+    </image>
     
     <item>
       <title>dplyr</title>
       <link>/categories/dplyr/</link>
       <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>/categories/dplyr/</guid>
       <description></description>
     </item>
@@ -25,7 +24,6 @@
       <title>gganimate</title>
       <link>/categories/gganimate/</link>
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>/categories/gganimate/</guid>
       <description></description>
     </item>
@@ -34,7 +32,6 @@
       <title>R</title>
       <link>/categories/r/</link>
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>/categories/r/</guid>
       <description></description>
     </item>
@@ -43,7 +40,6 @@
       <title>tidyverse</title>
       <link>/categories/tidyverse/</link>
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>/categories/tidyverse/</guid>
       <description></description>
     </item>
@@ -52,7 +48,6 @@
       <title>Rmarkdown</title>
       <link>/categories/rmarkdown/</link>
       <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
-      
       <guid>/categories/rmarkdown/</guid>
       <description></description>
     </item>
@@ -61,7 +56,6 @@
       <title>ggplot2</title>
       <link>/categories/ggplot2/</link>
       <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>/categories/ggplot2/</guid>
       <description></description>
     </item>

@@ -1,24 +1,149 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rmarkdown on THIYANGA TALAGALA</title>
+    <title>Rmarkdown | THIYANGA TALAGALA</title>
     <link>/tags/rmarkdown/</link>
-    <description>Recent content in Rmarkdown on THIYANGA TALAGALA</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
-    <lastBuildDate>Tue, 29 Jan 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/rmarkdown/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="/tags/rmarkdown/index.xml" rel="self" type="application/rss+xml" />
+    <description>Rmarkdown</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 29 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Rmarkdown</title>
+      <link>/tags/rmarkdown/</link>
+    </image>
     
     <item>
       <title>Some useful Greek letters you might use on your reports</title>
       <link>/post/greekletters/</link>
       <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
-      
       <guid>/post/greekletters/</guid>
-      <description>Commands to type Greek letters on Rmarkdown or Latex</description>
+      <description>
+
+
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;strong&gt;alpha&lt;/strong&gt;:&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;beta&lt;/strong&gt;:&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;gamma&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;delta&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;\alpha&lt;/code&gt; : &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\beta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\gamma&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\gamma\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\delta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\delta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Gamma&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\Gamma\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Delta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\Delta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;strong&gt;epsilon&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Zeta&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;eta&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;theta&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;code&gt;\epsilon&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\zeta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\zeta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\eta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\eta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\theta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;\varepsilon&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\varepsilon\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Theta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\Theta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;strong&gt;iota&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;kappa&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;lambda&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mu&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;\iota&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\iota\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\kappa:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\kappa\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\lambda:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\mu:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;strong&gt;nu&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;xi&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;pi&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;rho&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;\nu:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\nu\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\xi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\xi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\pi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\rho:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\rho\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Xi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Xi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Pi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Pi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;strong&gt;sigma&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;upsilon&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;phi&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;omicron&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;code&gt;\sigma:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\upsilon:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\upsilon\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\phi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\omicron:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\omicron\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;\Sigma:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Sigma\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Phi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Phi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;strong&gt;tau&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;chi&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;psi&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Omega&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;\tau:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\tau\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\chi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\chi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\psi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\psi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\omega:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Psi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Psi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Omega:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
     </item>
     
   </channel>

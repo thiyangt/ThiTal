@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Time-Series on THIYANGA TALAGALA</title>
+    <title>Time-Series | THIYANGA TALAGALA</title>
     <link>/tags/time-series/</link>
-    <description>Recent content in Time-Series on THIYANGA TALAGALA</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
-    <lastBuildDate>Mon, 22 Feb 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/time-series/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="/tags/time-series/index.xml" rel="self" type="application/rss+xml" />
+    <description>Time-Series</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 22 Feb 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Time-Series</title>
+      <link>/tags/time-series/</link>
+    </image>
     
     <item>
       <title>Large-scale time series forecasting</title>
       <link>/project/largescaleforecasting/</link>
       <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
-      
       <guid>/project/largescaleforecasting/</guid>
       <description></description>
     </item>

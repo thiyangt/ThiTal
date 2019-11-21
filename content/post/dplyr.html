@@ -35,12 +35,12 @@ head(iris)</code></pre>
 <h2><code>summarise_all</code>: to summarize all columns</h2>
 <pre class="r"><code>iris %&gt;% group_by(Species) %&gt;% summarise_all(.funs = c(mean=&quot;mean&quot;))</code></pre>
 <pre><code>## # A tibble: 3 x 5
-##   Species Sepal.Length_me~ Sepal.Width_mean Petal.Length_me~
+##   Species Sepal.Length_me… Sepal.Width_mean Petal.Length_me…
 ##   &lt;fct&gt;              &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
 ## 1 setosa              5.01             3.43             1.46
-## 2 versic~             5.94             2.77             4.26
-## 3 virgin~             6.59             2.97             5.55
-## # ... with 1 more variable: Petal.Width_mean &lt;dbl&gt;</code></pre>
+## 2 versic…             5.94             2.77             4.26
+## 3 virgin…             6.59             2.97             5.55
+## # … with 1 more variable: Petal.Width_mean &lt;dbl&gt;</code></pre>
 </div>
 <div id="summarise_at-to-summarize-only-certain-columns" class="section level2">
 <h2><code>summarise_at</code>: to summarize only certain columns</h2>
@@ -60,32 +60,34 @@ head(iris)</code></pre>
   summarise_if(.predicate = function(x) is.numeric(x),
                .funs = funs(mean=&quot;mean&quot;))</code></pre>
 <pre><code>## Warning: funs() is soft deprecated as of dplyr 0.8.0
-## please use list() instead
+## Please use a list of either functions or lambdas: 
 ## 
-##   # Before:
-##   funs(name = f(.))
+##   # Simple named list: 
+##   list(mean = mean, median = median)
 ## 
-##   # After: 
-##   list(name = ~ f(.))
+##   # Auto named with `tibble::lst()`: 
+##   tibble::lst(mean, median)
+## 
+##   # Using lambdas
+##   list(~ mean(., trim = .2), ~ median(., na.rm = TRUE))
 ## This warning is displayed once per session.</code></pre>
 <pre><code>## # A tibble: 3 x 5
-##   Species Sepal.Length_me~ Sepal.Width_mean Petal.Length_me~
+##   Species Sepal.Length_me… Sepal.Width_mean Petal.Length_me…
 ##   &lt;fct&gt;              &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
 ## 1 setosa              5.01             3.43             1.46
-## 2 versic~             5.94             2.77             4.26
-## 3 virgin~             6.59             2.97             5.55
-## # ... with 1 more variable: Petal.Width_mean &lt;dbl&gt;</code></pre>
+## 2 versic…             5.94             2.77             4.26
+## 3 virgin…             6.59             2.97             5.55
+## # … with 1 more variable: Petal.Width_mean &lt;dbl&gt;</code></pre>
 <p><strong>pass multiple functions</strong></p>
 <pre class="r"><code>iris %&gt;% group_by(Species) %&gt;% 
   summarise_if(.predicate = function(x) is.numeric(x),
                .funs = funs(mean=&quot;mean&quot;, Sd=&quot;sd&quot;))</code></pre>
 <pre><code>## # A tibble: 3 x 9
-##   Species Sepal.Length_me~ Sepal.Width_mean Petal.Length_me~
+##   Species Sepal.Length_me… Sepal.Width_mean Petal.Length_me…
 ##   &lt;fct&gt;              &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
 ## 1 setosa              5.01             3.43             1.46
-## 2 versic~             5.94             2.77             4.26
-## 3 virgin~             6.59             2.97             5.55
-## # ... with 5 more variables: Petal.Width_mean &lt;dbl&gt;,
-## #   Sepal.Length_Sd &lt;dbl&gt;, Sepal.Width_Sd &lt;dbl&gt;, Petal.Length_Sd &lt;dbl&gt;,
-## #   Petal.Width_Sd &lt;dbl&gt;</code></pre>
+## 2 versic…             5.94             2.77             4.26
+## 3 virgin…             6.59             2.97             5.55
+## # … with 5 more variables: Petal.Width_mean &lt;dbl&gt;, Sepal.Length_Sd &lt;dbl&gt;,
+## #   Sepal.Width_Sd &lt;dbl&gt;, Petal.Length_Sd &lt;dbl&gt;, Petal.Width_Sd &lt;dbl&gt;</code></pre>
 </div>

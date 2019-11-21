@@ -1,78 +1,598 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on THIYANGA TALAGALA</title>
+    <title>Posts | THIYANGA TALAGALA</title>
     <link>/post/</link>
-    <description>Recent content in Posts on THIYANGA TALAGALA</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +1100</lastBuildDate>
-    
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Posts</title>
+      <link>/post/</link>
+    </image>
     
     <item>
       <title>Summarizing with dplyr</title>
       <link>/post/dplyr/</link>
       <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>/post/dplyr/</guid>
-      <description>Summarizing variables with dplyr</description>
+      <description>
+
+
+&lt;p&gt;Packages&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Load &lt;code&gt;iris&lt;/code&gt; data set&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data(&amp;quot;iris&amp;quot;)
+head(iris)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;summarise-to-summarize-only-a-single-column&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;code&gt;summarise&lt;/code&gt;: to summarize only a single column&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% summarise(mean(Sepal.Length))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 2
+##   Species    `mean(Sepal.Length)`
+##   &amp;lt;fct&amp;gt;                     &amp;lt;dbl&amp;gt;
+## 1 setosa                     5.01
+## 2 versicolor                 5.94
+## 3 virginica                  6.59&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summarise_all-to-summarize-all-columns&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;code&gt;summarise_all&lt;/code&gt;: to summarize all columns&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% summarise_all(.funs = c(mean=&amp;quot;mean&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
+##   Species Sepal.Length_me… Sepal.Width_mean Petal.Length_me…
+##   &amp;lt;fct&amp;gt;              &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+## 1 setosa              5.01             3.43             1.46
+## 2 versic…             5.94             2.77             4.26
+## 3 virgin…             6.59             2.97             5.55
+## # … with 1 more variable: Petal.Width_mean &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summarise_at-to-summarize-only-certain-columns&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;code&gt;summarise_at&lt;/code&gt;: to summarize only certain columns&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% summarise_at(
+  .vars = vars(Sepal.Length, Sepal.Width),
+  .funs = c(mean=&amp;quot;mean&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 3
+##   Species    Sepal.Length_mean Sepal.Width_mean
+##   &amp;lt;fct&amp;gt;                  &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+## 1 setosa                  5.01             3.43
+## 2 versicolor              5.94             2.77
+## 3 virginica               6.59             2.97&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summarise_if&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;code&gt;summarise_if&lt;/code&gt;&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% 
+  summarise_if(.predicate = function(x) is.numeric(x),
+               .funs = funs(mean=&amp;quot;mean&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: funs() is soft deprecated as of dplyr 0.8.0
+## Please use a list of either functions or lambdas: 
+## 
+##   # Simple named list: 
+##   list(mean = mean, median = median)
+## 
+##   # Auto named with `tibble::lst()`: 
+##   tibble::lst(mean, median)
+## 
+##   # Using lambdas
+##   list(~ mean(., trim = .2), ~ median(., na.rm = TRUE))
+## This warning is displayed once per session.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
+##   Species Sepal.Length_me… Sepal.Width_mean Petal.Length_me…
+##   &amp;lt;fct&amp;gt;              &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+## 1 setosa              5.01             3.43             1.46
+## 2 versic…             5.94             2.77             4.26
+## 3 virgin…             6.59             2.97             5.55
+## # … with 1 more variable: Petal.Width_mean &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;pass multiple functions&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% 
+  summarise_if(.predicate = function(x) is.numeric(x),
+               .funs = funs(mean=&amp;quot;mean&amp;quot;, Sd=&amp;quot;sd&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 9
+##   Species Sepal.Length_me… Sepal.Width_mean Petal.Length_me…
+##   &amp;lt;fct&amp;gt;              &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+## 1 setosa              5.01             3.43             1.46
+## 2 versic…             5.94             2.77             4.26
+## 3 virgin…             6.59             2.97             5.55
+## # … with 5 more variables: Petal.Width_mean &amp;lt;dbl&amp;gt;, Sepal.Length_Sd &amp;lt;dbl&amp;gt;,
+## #   Sepal.Width_Sd &amp;lt;dbl&amp;gt;, Petal.Length_Sd &amp;lt;dbl&amp;gt;, Petal.Width_Sd &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
       <title>How to install and load multiple packages at once?</title>
       <link>/post/multiplepkg/</link>
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>/post/multiplepkg/</guid>
-      <description>Install multiple R packages at once/ check and install missing packages.</description>
+      <description>
+
+
+&lt;style type=&#34;text/css&#34;&gt;
+h2 { /* Header 2 */
+    font-size: 22px;
+  color: DarkBlue;
+}
+&lt;/style&gt;
+&lt;p&gt;##install packages&lt;/p&gt;
+&lt;p&gt;To install multiple packages with a single call to &lt;code&gt;install.packages&lt;/code&gt;, pass the names of the packages as a character vector to the install.packages() function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;load-packages&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;load packages&lt;/h2&gt;
+&lt;p&gt;Once you have the packages installed, you can make their contents available to use in your current R session by running,&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;lapply(c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;), require, character.only = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [[1]]
+## [1] TRUE
+## 
+## [[2]]
+## [1] TRUE
+## 
+## [[3]]
+## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;check-and-install-missing-packages&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;check and install missing packages&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;list.of.packages &amp;lt;- c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;)
+new.packages &amp;lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&amp;quot;Package&amp;quot;])]
+if(length(new.packages)) install.packages(new.packages)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;for-other-alternatives-see&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;For other alternatives see&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;http://dirk.eddelbuettel.com/code/littler.html&#34;&gt;littler&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(littler)
+install.r EIAdata gdata ggmap ggplot2 &lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/stevenworthington/3178163&#34;&gt;ipak&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ipak &amp;lt;- function(pkg){
+    new.pkg &amp;lt;- pkg[!(pkg %in% installed.packages()[, &amp;quot;Package&amp;quot;])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE)
+}
+
+# usage
+packages &amp;lt;- c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;)
+ipak(packages)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## gganimate tidyverse gapminder 
+##      TRUE      TRUE      TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://cran.r-project.org/web/packages/easypackages/README.html&#34;&gt;easypackages&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
       <title>Some useful Greek letters you might use on your reports</title>
       <link>/post/greekletters/</link>
       <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
-      
       <guid>/post/greekletters/</guid>
-      <description>Commands to type Greek letters on Rmarkdown or Latex</description>
+      <description>
+
+
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;strong&gt;alpha&lt;/strong&gt;:&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;beta&lt;/strong&gt;:&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;gamma&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;delta&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;\alpha&lt;/code&gt; : &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\beta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\gamma&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\gamma\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\delta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\delta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Gamma&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\Gamma\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Delta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\Delta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;strong&gt;epsilon&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Zeta&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;eta&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;theta&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;code&gt;\epsilon&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\zeta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\zeta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\eta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\eta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\theta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;\varepsilon&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\varepsilon\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Theta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\Theta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;strong&gt;iota&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;kappa&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;lambda&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mu&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;\iota&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\iota\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\kappa:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\kappa\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\lambda:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\mu:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;strong&gt;nu&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;xi&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;pi&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;rho&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;\nu:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\nu\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\xi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\xi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\pi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\rho:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\rho\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Xi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Xi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Pi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Pi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;strong&gt;sigma&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;upsilon&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;phi&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;omicron&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;code&gt;\sigma:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\upsilon:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\upsilon\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\phi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\omicron:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\omicron\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;\Sigma:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Sigma\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Phi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Phi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;strong&gt;tau&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;chi&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;psi&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Omega&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;code&gt;\tau:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\tau\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\chi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\chi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\psi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\psi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\omega:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Psi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Psi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Omega:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
     </item>
     
     <item>
       <title>What&#39;s in a package?</title>
       <link>/post/packageinfo/</link>
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
-      
       <guid>/post/packageinfo/</guid>
-      <description>Sometimes we need to view all the functions that are built into an R package.</description>
+      <description>
+
+
+&lt;p&gt;Sometimes we need to view all the functions that are built into an R package.
+This is done in the same way you would list variables in your workspace, using the &lt;code&gt;ls&lt;/code&gt; function. Note that the package must be loaded before you run the &lt;code&gt;ls&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt; Getting a list of functions inside the &lt;code&gt;dplyr&lt;/code&gt; package&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+ls(&amp;quot;package:dplyr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   [1] &amp;quot;%&amp;gt;%&amp;quot;                   &amp;quot;add_count&amp;quot;            
+##   [3] &amp;quot;add_count_&amp;quot;            &amp;quot;add_row&amp;quot;              
+##   [5] &amp;quot;add_rownames&amp;quot;          &amp;quot;add_tally&amp;quot;            
+##   [7] &amp;quot;add_tally_&amp;quot;            &amp;quot;all_equal&amp;quot;            
+##   [9] &amp;quot;all_vars&amp;quot;              &amp;quot;anti_join&amp;quot;            
+##  [11] &amp;quot;any_vars&amp;quot;              &amp;quot;arrange&amp;quot;              
+##  [13] &amp;quot;arrange_&amp;quot;              &amp;quot;arrange_all&amp;quot;          
+##  [15] &amp;quot;arrange_at&amp;quot;            &amp;quot;arrange_if&amp;quot;           
+##  [17] &amp;quot;as_data_frame&amp;quot;         &amp;quot;as_label&amp;quot;             
+##  [19] &amp;quot;as_tibble&amp;quot;             &amp;quot;as.tbl&amp;quot;               
+##  [21] &amp;quot;as.tbl_cube&amp;quot;           &amp;quot;auto_copy&amp;quot;            
+##  [23] &amp;quot;band_instruments&amp;quot;      &amp;quot;band_instruments2&amp;quot;    
+##  [25] &amp;quot;band_members&amp;quot;          &amp;quot;bench_tbls&amp;quot;           
+##  [27] &amp;quot;between&amp;quot;               &amp;quot;bind_cols&amp;quot;            
+##  [29] &amp;quot;bind_rows&amp;quot;             &amp;quot;case_when&amp;quot;            
+##  [31] &amp;quot;changes&amp;quot;               &amp;quot;check_dbplyr&amp;quot;         
+##  [33] &amp;quot;coalesce&amp;quot;              &amp;quot;collapse&amp;quot;             
+##  [35] &amp;quot;collect&amp;quot;               &amp;quot;combine&amp;quot;              
+##  [37] &amp;quot;common_by&amp;quot;             &amp;quot;compare_tbls&amp;quot;         
+##  [39] &amp;quot;compare_tbls2&amp;quot;         &amp;quot;compute&amp;quot;              
+##  [41] &amp;quot;contains&amp;quot;              &amp;quot;copy_to&amp;quot;              
+##  [43] &amp;quot;count&amp;quot;                 &amp;quot;count_&amp;quot;               
+##  [45] &amp;quot;cumall&amp;quot;                &amp;quot;cumany&amp;quot;               
+##  [47] &amp;quot;cume_dist&amp;quot;             &amp;quot;cummean&amp;quot;              
+##  [49] &amp;quot;current_vars&amp;quot;          &amp;quot;data_frame&amp;quot;           
+##  [51] &amp;quot;data_frame_&amp;quot;           &amp;quot;db_analyze&amp;quot;           
+##  [53] &amp;quot;db_begin&amp;quot;              &amp;quot;db_commit&amp;quot;            
+##  [55] &amp;quot;db_create_index&amp;quot;       &amp;quot;db_create_indexes&amp;quot;    
+##  [57] &amp;quot;db_create_table&amp;quot;       &amp;quot;db_data_type&amp;quot;         
+##  [59] &amp;quot;db_desc&amp;quot;               &amp;quot;db_drop_table&amp;quot;        
+##  [61] &amp;quot;db_explain&amp;quot;            &amp;quot;db_has_table&amp;quot;         
+##  [63] &amp;quot;db_insert_into&amp;quot;        &amp;quot;db_list_tables&amp;quot;       
+##  [65] &amp;quot;db_query_fields&amp;quot;       &amp;quot;db_query_rows&amp;quot;        
+##  [67] &amp;quot;db_rollback&amp;quot;           &amp;quot;db_save_query&amp;quot;        
+##  [69] &amp;quot;db_write_table&amp;quot;        &amp;quot;dense_rank&amp;quot;           
+##  [71] &amp;quot;desc&amp;quot;                  &amp;quot;dim_desc&amp;quot;             
+##  [73] &amp;quot;distinct&amp;quot;              &amp;quot;distinct_&amp;quot;            
+##  [75] &amp;quot;distinct_all&amp;quot;          &amp;quot;distinct_at&amp;quot;          
+##  [77] &amp;quot;distinct_if&amp;quot;           &amp;quot;distinct_prepare&amp;quot;     
+##  [79] &amp;quot;do&amp;quot;                    &amp;quot;do_&amp;quot;                  
+##  [81] &amp;quot;dr_dplyr&amp;quot;              &amp;quot;ends_with&amp;quot;            
+##  [83] &amp;quot;enexpr&amp;quot;                &amp;quot;enexprs&amp;quot;              
+##  [85] &amp;quot;enquo&amp;quot;                 &amp;quot;enquos&amp;quot;               
+##  [87] &amp;quot;ensym&amp;quot;                 &amp;quot;ensyms&amp;quot;               
+##  [89] &amp;quot;eval_tbls&amp;quot;             &amp;quot;eval_tbls2&amp;quot;           
+##  [91] &amp;quot;everything&amp;quot;            &amp;quot;explain&amp;quot;              
+##  [93] &amp;quot;expr&amp;quot;                  &amp;quot;failwith&amp;quot;             
+##  [95] &amp;quot;filter&amp;quot;                &amp;quot;filter_&amp;quot;              
+##  [97] &amp;quot;filter_all&amp;quot;            &amp;quot;filter_at&amp;quot;            
+##  [99] &amp;quot;filter_if&amp;quot;             &amp;quot;first&amp;quot;                
+## [101] &amp;quot;frame_data&amp;quot;            &amp;quot;full_join&amp;quot;            
+## [103] &amp;quot;funs&amp;quot;                  &amp;quot;funs_&amp;quot;                
+## [105] &amp;quot;glimpse&amp;quot;               &amp;quot;group_by&amp;quot;             
+## [107] &amp;quot;group_by_&amp;quot;             &amp;quot;group_by_all&amp;quot;         
+## [109] &amp;quot;group_by_at&amp;quot;           &amp;quot;group_by_drop_default&amp;quot;
+## [111] &amp;quot;group_by_if&amp;quot;           &amp;quot;group_by_prepare&amp;quot;     
+## [113] &amp;quot;group_cols&amp;quot;            &amp;quot;group_data&amp;quot;           
+## [115] &amp;quot;group_indices&amp;quot;         &amp;quot;group_indices_&amp;quot;       
+## [117] &amp;quot;group_keys&amp;quot;            &amp;quot;group_map&amp;quot;            
+## [119] &amp;quot;group_modify&amp;quot;          &amp;quot;group_nest&amp;quot;           
+## [121] &amp;quot;group_rows&amp;quot;            &amp;quot;group_size&amp;quot;           
+## [123] &amp;quot;group_split&amp;quot;           &amp;quot;group_trim&amp;quot;           
+## [125] &amp;quot;group_vars&amp;quot;            &amp;quot;group_walk&amp;quot;           
+## [127] &amp;quot;grouped_df&amp;quot;            &amp;quot;groups&amp;quot;               
+## [129] &amp;quot;hybrid_call&amp;quot;           &amp;quot;id&amp;quot;                   
+## [131] &amp;quot;ident&amp;quot;                 &amp;quot;if_else&amp;quot;              
+## [133] &amp;quot;inner_join&amp;quot;            &amp;quot;intersect&amp;quot;            
+## [135] &amp;quot;is_grouped_df&amp;quot;         &amp;quot;is.grouped_df&amp;quot;        
+## [137] &amp;quot;is.src&amp;quot;                &amp;quot;is.tbl&amp;quot;               
+## [139] &amp;quot;lag&amp;quot;                   &amp;quot;last&amp;quot;                 
+## [141] &amp;quot;last_col&amp;quot;              &amp;quot;lead&amp;quot;                 
+## [143] &amp;quot;left_join&amp;quot;             &amp;quot;location&amp;quot;             
+## [145] &amp;quot;lst&amp;quot;                   &amp;quot;lst_&amp;quot;                 
+## [147] &amp;quot;make_tbl&amp;quot;              &amp;quot;matches&amp;quot;              
+## [149] &amp;quot;min_rank&amp;quot;              &amp;quot;mutate&amp;quot;               
+## [151] &amp;quot;mutate_&amp;quot;               &amp;quot;mutate_all&amp;quot;           
+## [153] &amp;quot;mutate_at&amp;quot;             &amp;quot;mutate_each&amp;quot;          
+## [155] &amp;quot;mutate_each_&amp;quot;          &amp;quot;mutate_if&amp;quot;            
+## [157] &amp;quot;n&amp;quot;                     &amp;quot;n_distinct&amp;quot;           
+## [159] &amp;quot;n_groups&amp;quot;              &amp;quot;na_if&amp;quot;                
+## [161] &amp;quot;nasa&amp;quot;                  &amp;quot;near&amp;quot;                 
+## [163] &amp;quot;nest_join&amp;quot;             &amp;quot;new_grouped_df&amp;quot;       
+## [165] &amp;quot;nth&amp;quot;                   &amp;quot;ntile&amp;quot;                
+## [167] &amp;quot;num_range&amp;quot;             &amp;quot;one_of&amp;quot;               
+## [169] &amp;quot;order_by&amp;quot;              &amp;quot;percent_rank&amp;quot;         
+## [171] &amp;quot;progress_estimated&amp;quot;    &amp;quot;pull&amp;quot;                 
+## [173] &amp;quot;quo&amp;quot;                   &amp;quot;quo_name&amp;quot;             
+## [175] &amp;quot;quos&amp;quot;                  &amp;quot;rbind_all&amp;quot;            
+## [177] &amp;quot;rbind_list&amp;quot;            &amp;quot;recode&amp;quot;               
+## [179] &amp;quot;recode_factor&amp;quot;         &amp;quot;rename&amp;quot;               
+## [181] &amp;quot;rename_&amp;quot;               &amp;quot;rename_all&amp;quot;           
+## [183] &amp;quot;rename_at&amp;quot;             &amp;quot;rename_if&amp;quot;            
+## [185] &amp;quot;rename_vars&amp;quot;           &amp;quot;rename_vars_&amp;quot;         
+## [187] &amp;quot;right_join&amp;quot;            &amp;quot;row_number&amp;quot;           
+## [189] &amp;quot;rowwise&amp;quot;               &amp;quot;same_src&amp;quot;             
+## [191] &amp;quot;sample_frac&amp;quot;           &amp;quot;sample_n&amp;quot;             
+## [193] &amp;quot;select&amp;quot;                &amp;quot;select_&amp;quot;              
+## [195] &amp;quot;select_all&amp;quot;            &amp;quot;select_at&amp;quot;            
+## [197] &amp;quot;select_if&amp;quot;             &amp;quot;select_var&amp;quot;           
+## [199] &amp;quot;select_vars&amp;quot;           &amp;quot;select_vars_&amp;quot;         
+## [201] &amp;quot;semi_join&amp;quot;             &amp;quot;setdiff&amp;quot;              
+## [203] &amp;quot;setequal&amp;quot;              &amp;quot;show_query&amp;quot;           
+## [205] &amp;quot;slice&amp;quot;                 &amp;quot;slice_&amp;quot;               
+## [207] &amp;quot;sql&amp;quot;                   &amp;quot;sql_escape_ident&amp;quot;     
+## [209] &amp;quot;sql_escape_string&amp;quot;     &amp;quot;sql_join&amp;quot;             
+## [211] &amp;quot;sql_select&amp;quot;            &amp;quot;sql_semi_join&amp;quot;        
+## [213] &amp;quot;sql_set_op&amp;quot;            &amp;quot;sql_subquery&amp;quot;         
+## [215] &amp;quot;sql_translate_env&amp;quot;     &amp;quot;src&amp;quot;                  
+## [217] &amp;quot;src_df&amp;quot;                &amp;quot;src_local&amp;quot;            
+## [219] &amp;quot;src_mysql&amp;quot;             &amp;quot;src_postgres&amp;quot;         
+## [221] &amp;quot;src_sqlite&amp;quot;            &amp;quot;src_tbls&amp;quot;             
+## [223] &amp;quot;starts_with&amp;quot;           &amp;quot;starwars&amp;quot;             
+## [225] &amp;quot;storms&amp;quot;                &amp;quot;summarise&amp;quot;            
+## [227] &amp;quot;summarise_&amp;quot;            &amp;quot;summarise_all&amp;quot;        
+## [229] &amp;quot;summarise_at&amp;quot;          &amp;quot;summarise_each&amp;quot;       
+## [231] &amp;quot;summarise_each_&amp;quot;       &amp;quot;summarise_if&amp;quot;         
+## [233] &amp;quot;summarize&amp;quot;             &amp;quot;summarize_&amp;quot;           
+## [235] &amp;quot;summarize_all&amp;quot;         &amp;quot;summarize_at&amp;quot;         
+## [237] &amp;quot;summarize_each&amp;quot;        &amp;quot;summarize_each_&amp;quot;      
+## [239] &amp;quot;summarize_if&amp;quot;          &amp;quot;sym&amp;quot;                  
+## [241] &amp;quot;syms&amp;quot;                  &amp;quot;tally&amp;quot;                
+## [243] &amp;quot;tally_&amp;quot;                &amp;quot;tbl&amp;quot;                  
+## [245] &amp;quot;tbl_cube&amp;quot;              &amp;quot;tbl_df&amp;quot;               
+## [247] &amp;quot;tbl_nongroup_vars&amp;quot;     &amp;quot;tbl_sum&amp;quot;              
+## [249] &amp;quot;tbl_vars&amp;quot;              &amp;quot;tibble&amp;quot;               
+## [251] &amp;quot;top_frac&amp;quot;              &amp;quot;top_n&amp;quot;                
+## [253] &amp;quot;transmute&amp;quot;             &amp;quot;transmute_&amp;quot;           
+## [255] &amp;quot;transmute_all&amp;quot;         &amp;quot;transmute_at&amp;quot;         
+## [257] &amp;quot;transmute_if&amp;quot;          &amp;quot;tribble&amp;quot;              
+## [259] &amp;quot;trunc_mat&amp;quot;             &amp;quot;type_sum&amp;quot;             
+## [261] &amp;quot;ungroup&amp;quot;               &amp;quot;union&amp;quot;                
+## [263] &amp;quot;union_all&amp;quot;             &amp;quot;validate_grouped_df&amp;quot;  
+## [265] &amp;quot;vars&amp;quot;                  &amp;quot;with_order&amp;quot;           
+## [267] &amp;quot;wrap_dbplyr_obj&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
     <item>
       <title>Customizing boxplots with ggplot2</title>
       <link>/post/blog/</link>
       <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>/post/blog/</guid>
-      <description>Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.</description>
+      <description>
+
+
+&lt;p&gt;Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.&lt;/p&gt;
+&lt;p&gt;You will learn,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;how to change the order of labels&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;how to change the colours&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;how to flip coordinates&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Step 1: we create a simple data set.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Gender &amp;lt;- rep(c(&amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;), times = 3, each = 4)
+Quality &amp;lt;- rep(c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;), times = 1, each = 8)
+Accepted &amp;lt;- seq(0, 100, by = 100/23)
+
+DF &amp;lt;- data.frame(Gender, Quality, Accepted)
+head(DF)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Gender Quality  Accepted
+## 1   Male   Taste  0.000000
+## 2   Male   Taste  4.347826
+## 3   Male   Taste  8.695652
+## 4   Male   Taste 13.043478
+## 5 Female   Taste 17.391304
+## 6 Female   Taste 21.739130&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Step 2: Generate a simple boxplot with ggplot&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Step 3: Change the colours, legend position and x-axis order&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;)) +
+  xlab(&amp;quot;&amp;quot;) +
+  theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
+  scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Step 4: Change the plotting order: first you have to include &lt;code&gt;factor&lt;/code&gt; code to set the order of the levels.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;DF$Gender_factor &amp;lt;- factor(DF$Gender, levels=c(&amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;))
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;)) +
+  xlab(&amp;quot;&amp;quot;) +
+  theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
+  scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Step 5: Horizontal bar chart: coord_flip()&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;)) +
+  xlab(&amp;quot;&amp;quot;) +
+  theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
+  coord_flip()+
+  scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;step 6: Change the legend order similar to plot order: under themes &lt;code&gt;fill=guide_legend(reverse=FALSE)&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;)) +
+  xlab(&amp;quot;&amp;quot;) +
+  theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
+  guides(fill=guide_legend(reverse=TRUE)) +
+  coord_flip()+
+  scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Parallel computing with R</title>
       <link>/post/parallelcomputing/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +1000</pubDate>
-      
       <guid>/post/parallelcomputing/</guid>
-      <description>Working on this..</description>
+      <description>&lt;p&gt;Working on this..&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Data Types in R</title>
       <link>/post/datatypes/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +1000</pubDate>
-      
       <guid>/post/datatypes/</guid>
-      <description>coming up soon!</description>
+      <description>&lt;p&gt;coming up soon!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <description>
+
+
+&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;R Markdown&lt;/h1&gt;
+&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+fit &amp;lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Including Plots&lt;/h1&gt;
+&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
+  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
+  init.angle = -50, border = NA
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: A fancy pie chart.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>

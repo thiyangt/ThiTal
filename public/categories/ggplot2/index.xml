@@ -1,24 +1,88 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ggplot2 on THIYANGA TALAGALA</title>
+    <title>ggplot2 | THIYANGA TALAGALA</title>
     <link>/categories/ggplot2/</link>
-    <description>Recent content in ggplot2 on THIYANGA TALAGALA</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
-    <lastBuildDate>Wed, 05 Sep 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/ggplot2/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="/categories/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+    <description>ggplot2</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 05 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>ggplot2</title>
+      <link>/categories/ggplot2/</link>
+    </image>
     
     <item>
       <title>Customizing boxplots with ggplot2</title>
       <link>/post/blog/</link>
       <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>/post/blog/</guid>
-      <description>Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.</description>
+      <description>
+
+
+&lt;p&gt;Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.&lt;/p&gt;
+&lt;p&gt;You will learn,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;how to change the order of labels&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;how to change the colours&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;how to flip coordinates&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Step 1: we create a simple data set.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Gender &amp;lt;- rep(c(&amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;), times = 3, each = 4)
+Quality &amp;lt;- rep(c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;), times = 1, each = 8)
+Accepted &amp;lt;- seq(0, 100, by = 100/23)
+
+DF &amp;lt;- data.frame(Gender, Quality, Accepted)
+head(DF)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Gender Quality  Accepted
+## 1   Male   Taste  0.000000
+## 2   Male   Taste  4.347826
+## 3   Male   Taste  8.695652
+## 4   Male   Taste 13.043478
+## 5 Female   Taste 17.391304
+## 6 Female   Taste 21.739130&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Step 2: Generate a simple boxplot with ggplot&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Step 3: Change the colours, legend position and x-axis order&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;)) +
+  xlab(&amp;quot;&amp;quot;) +
+  theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
+  scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Step 4: Change the plotting order: first you have to include &lt;code&gt;factor&lt;/code&gt; code to set the order of the levels.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;DF$Gender_factor &amp;lt;- factor(DF$Gender, levels=c(&amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;))
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;)) +
+  xlab(&amp;quot;&amp;quot;) +
+  theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
+  scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Step 5: Horizontal bar chart: coord_flip()&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;)) +
+  xlab(&amp;quot;&amp;quot;) +
+  theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
+  coord_flip()+
+  scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;step 6: Change the legend order similar to plot order: under themes &lt;code&gt;fill=guide_legend(reverse=FALSE)&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;)) +
+  xlab(&amp;quot;&amp;quot;) +
+  theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
+  guides(fill=guide_legend(reverse=TRUE)) +
+  coord_flip()+
+  scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

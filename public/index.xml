@@ -1,19 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>THIYANGA TALAGALA on THIYANGA TALAGALA</title>
+    <title>THIYANGA TALAGALA</title>
     <link>/</link>
-    <description>Recent content in THIYANGA TALAGALA on THIYANGA TALAGALA</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018 Thiyanga S Talagala</copyright>
-    <lastBuildDate>Fri, 05 Jul 2019 00:00:00 +1000</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
+      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <description>THIYANGA TALAGALA</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 05 Jul 2019 00:00:00 +1000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>THIYANGA TALAGALA</title>
+      <link>/</link>
+    </image>
+    
+    <item>
+      <title>Example Page 1</title>
+      <link>/courses/example/example1/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>/courses/example/example1/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Example Page 2</title>
+      <link>/courses/example/example2/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>/courses/example/example2/</guid>
+      <description>
+
+&lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-3&#34;&gt;Tip 3&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-4&#34;&gt;Tip 4&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Feature-based Time Series Forecasting</title>
       <link>/talk/user19-talk/</link>
       <pubDate>Fri, 05 Jul 2019 00:00:00 +1000</pubDate>
-      
       <guid>/talk/user19-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
 
@@ -28,7 +100,6 @@ algorithms involve computing a range of features of the time series which are th
       <title>Peeking inside FFORMS: Feature-based FORecast Model Selection</title>
       <link>/talk/isf19-talk/</link>
       <pubDate>Tue, 11 Jun 2019 00:00:00 +1000</pubDate>
-      
       <guid>/talk/isf19-talk/</guid>
       <description>
 
@@ -55,7 +126,6 @@ forecasting, time series, machine learning interpretability, black-box models, L
       <title>Summarizing with dplyr</title>
       <link>/post/dplyr/</link>
       <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>/post/dplyr/</guid>
       <description>
 
@@ -86,12 +156,12 @@ head(iris)&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;&lt;code&gt;summarise_all&lt;/code&gt;: to summarize all columns&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% summarise_all(.funs = c(mean=&amp;quot;mean&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
-##   Species Sepal.Length_me~ Sepal.Width_mean Petal.Length_me~
+##   Species Sepal.Length_me… Sepal.Width_mean Petal.Length_me…
 ##   &amp;lt;fct&amp;gt;              &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
 ## 1 setosa              5.01             3.43             1.46
-## 2 versic~             5.94             2.77             4.26
-## 3 virgin~             6.59             2.97             5.55
-## # ... with 1 more variable: Petal.Width_mean &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## 2 versic…             5.94             2.77             4.26
+## 3 virgin…             6.59             2.97             5.55
+## # … with 1 more variable: Petal.Width_mean &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;summarise_at-to-summarize-only-certain-columns&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;&lt;code&gt;summarise_at&lt;/code&gt;: to summarize only certain columns&lt;/h2&gt;
@@ -111,35 +181,52 @@ head(iris)&lt;/code&gt;&lt;/pre&gt;
   summarise_if(.predicate = function(x) is.numeric(x),
                .funs = funs(mean=&amp;quot;mean&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Warning: funs() is soft deprecated as of dplyr 0.8.0
-## please use list() instead
+## Please use a list of either functions or lambdas: 
 ## 
-##   # Before:
-##   funs(name = f(.))
+##   # Simple named list: 
+##   list(mean = mean, median = median)
 ## 
-##   # After: 
-##   list(name = ~ f(.))
+##   # Auto named with `tibble::lst()`: 
+##   tibble::lst(mean, median)
+## 
+##   # Using lambdas
+##   list(~ mean(., trim = .2), ~ median(., na.rm = TRUE))
 ## This warning is displayed once per session.&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
-##   Species Sepal.Length_me~ Sepal.Width_mean Petal.Length_me~
+##   Species Sepal.Length_me… Sepal.Width_mean Petal.Length_me…
 ##   &amp;lt;fct&amp;gt;              &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
 ## 1 setosa              5.01             3.43             1.46
-## 2 versic~             5.94             2.77             4.26
-## 3 virgin~             6.59             2.97             5.55
-## # ... with 1 more variable: Petal.Width_mean &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## 2 versic…             5.94             2.77             4.26
+## 3 virgin…             6.59             2.97             5.55
+## # … with 1 more variable: Petal.Width_mean &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;pass multiple functions&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% 
   summarise_if(.predicate = function(x) is.numeric(x),
                .funs = funs(mean=&amp;quot;mean&amp;quot;, Sd=&amp;quot;sd&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 9
-##   Species Sepal.Length_me~ Sepal.Width_mean Petal.Length_me~
+##   Species Sepal.Length_me… Sepal.Width_mean Petal.Length_me…
 ##   &amp;lt;fct&amp;gt;              &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
 ## 1 setosa              5.01             3.43             1.46
-## 2 versic~             5.94             2.77             4.26
-## 3 virgin~             6.59             2.97             5.55
-## # ... with 5 more variables: Petal.Width_mean &amp;lt;dbl&amp;gt;,
-## #   Sepal.Length_Sd &amp;lt;dbl&amp;gt;, Sepal.Width_Sd &amp;lt;dbl&amp;gt;, Petal.Length_Sd &amp;lt;dbl&amp;gt;,
-## #   Petal.Width_Sd &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+## 2 versic…             5.94             2.77             4.26
+## 3 virgin…             6.59             2.97             5.55
+## # … with 5 more variables: Petal.Width_mean &amp;lt;dbl&amp;gt;, Sepal.Length_Sd &amp;lt;dbl&amp;gt;,
+## #   Sepal.Width_Sd &amp;lt;dbl&amp;gt;, Petal.Length_Sd &amp;lt;dbl&amp;gt;, Petal.Width_Sd &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example preprint / working paper</title>
+      <link>/publication/preprint/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/preprint/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -147,7 +234,6 @@ head(iris)&lt;/code&gt;&lt;/pre&gt;
       <title>How to install and load multiple packages at once?</title>
       <link>/post/multiplepkg/</link>
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>/post/multiplepkg/</guid>
       <description>
 
@@ -158,11 +244,9 @@ h2 { /* Header 2 */
   color: DarkBlue;
 }
 &lt;/style&gt;
-&lt;div id=&#34;install-packages&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;install packages&lt;/h2&gt;
+&lt;p&gt;##install packages&lt;/p&gt;
 &lt;p&gt;To install multiple packages with a single call to &lt;code&gt;install.packages&lt;/code&gt;, pass the names of the packages as a character vector to the install.packages() function.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 &lt;div id=&#34;load-packages&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;load packages&lt;/h2&gt;
 &lt;p&gt;Once you have the packages installed, you can make their contents available to use in your current R session by running,&lt;/p&gt;
@@ -215,7 +299,6 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
       <title>Feature-based time series forecasting</title>
       <link>/talk/beijingtalk19-talk/</link>
       <pubDate>Wed, 13 Mar 2019 00:00:00 +1100</pubDate>
-      
       <guid>/talk/beijingtalk19-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
 
@@ -224,10 +307,190 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
+      <title>Slides</title>
+      <link>/slides/example/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/slides/example/</guid>
+      <description>
+
+&lt;h1 id=&#34;welcome-to-slides&#34;&gt;Welcome to Slides&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34;&gt;Academic&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
+&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
+&lt;li&gt;Supports speaker notes&lt;/li&gt;
+&lt;li&gt;Mobile friendly slides&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
+
+&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Code block:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;porridge = &amp;quot;blueberry&amp;quot;
+if porridge == &amp;quot;blueberry&amp;quot;:
+    print(&amp;quot;Eating...&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
+
+&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
+
+&lt;p&gt;Block math:&lt;/p&gt;
+
+&lt;p&gt;$$
+f\left( x \right) = \;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
+$$&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
+
+&lt;p&gt;Make content appear incrementally&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{% fragment %}} One {{% /fragment %}}
+{{% fragment %}} **Two** {{% /fragment %}}
+{{% fragment %}} Three {{% /fragment %}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
+   One
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+   &lt;strong&gt;Two&lt;/strong&gt;
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+   Three
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
+
+&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% speaker_note %}}
+- Only the speaker can read these notes
+- Press `S` key to view
+{{% /speaker_note %}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
+
+&lt;aside class=&#34;notes&#34;&gt;
+  &lt;ul&gt;
+&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/aside&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
+&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
+&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
+&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
+&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
+&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;/img/boards.jpg&#34;
+  &gt;
+
+
+&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
+
+&lt;p&gt;Customize the slide style and background&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;quot;/img/boards.jpg&amp;quot; &amp;gt;}}
+{{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
+{{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
+
+&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
+
+&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
+.reveal section h2,
+.reveal section h3 {
+  color: navy;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Some useful Greek letters you might use on your reports</title>
       <link>/post/greekletters/</link>
       <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
-      
       <guid>/post/greekletters/</guid>
       <description>
 
@@ -239,65 +502,76 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
 &lt;td&gt;&lt;strong&gt;beta&lt;/strong&gt;:&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;gamma&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;delta&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;&lt;code&gt;\alpha&lt;/code&gt; : &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\beta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\gamma&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\gamma\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\delta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\delta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\Gamma&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\Gamma\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\Delta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\Delta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;&lt;strong&gt;epsilon&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;Zeta&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;eta&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;theta&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;code&gt;\epsilon&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\zeta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\zeta\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\eta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\eta\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\theta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;&lt;code&gt;\varepsilon&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\varepsilon\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\Theta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\Theta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;strong&gt;iota&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;kappa&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;lambda&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;mu&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;&lt;code&gt;\iota&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\iota\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\kappa:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\kappa\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\lambda:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\mu:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;strong&gt;nu&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;xi&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;pi&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;rho&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;&lt;code&gt;\nu:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\nu\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\xi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\xi\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\pi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\rho:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\rho\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\Xi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Xi\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\Pi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Pi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
@@ -305,12 +579,14 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
 &lt;td&gt;&lt;strong&gt;upsilon&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;phi&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;omicron&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;code&gt;\sigma:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\upsilon:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\upsilon\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\phi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\omicron:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\omicron\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;&lt;code&gt;\Sigma:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Sigma\)&lt;/span&gt;&lt;/td&gt;
@@ -324,18 +600,21 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
 &lt;td&gt;&lt;strong&gt;chi&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;psi&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;Omega&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;&lt;code&gt;\tau:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\tau\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\chi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\chi\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\psi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\psi\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\omega:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\Psi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Psi\)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;\Omega:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -346,97 +625,149 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
       <title>What&#39;s in a package?</title>
       <link>/post/packageinfo/</link>
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
-      
       <guid>/post/packageinfo/</guid>
       <description>
 
 
-&lt;p&gt;Sometimes we need to view all the functions that are built into an R package. This is done in the same way you would list variables in your workspace, using the &lt;code&gt;ls&lt;/code&gt; function. Note that the package must be loaded before you run the &lt;code&gt;ls&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;Sometimes we need to view all the functions that are built into an R package.
+This is done in the same way you would list variables in your workspace, using the &lt;code&gt;ls&lt;/code&gt; function. Note that the package must be loaded before you run the &lt;code&gt;ls&lt;/code&gt; command.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt; Getting a list of functions inside the &lt;code&gt;dplyr&lt;/code&gt; package&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
 ls(&amp;quot;package:dplyr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   [1] &amp;quot;%&amp;gt;%&amp;quot;                &amp;quot;add_count&amp;quot;          &amp;quot;add_count_&amp;quot;        
-##   [4] &amp;quot;add_row&amp;quot;            &amp;quot;add_rownames&amp;quot;       &amp;quot;add_tally&amp;quot;         
-##   [7] &amp;quot;add_tally_&amp;quot;         &amp;quot;all_equal&amp;quot;          &amp;quot;all_vars&amp;quot;          
-##  [10] &amp;quot;anti_join&amp;quot;          &amp;quot;any_vars&amp;quot;           &amp;quot;arrange&amp;quot;           
-##  [13] &amp;quot;arrange_&amp;quot;           &amp;quot;arrange_all&amp;quot;        &amp;quot;arrange_at&amp;quot;        
-##  [16] &amp;quot;arrange_if&amp;quot;         &amp;quot;as.tbl&amp;quot;             &amp;quot;as.tbl_cube&amp;quot;       
-##  [19] &amp;quot;as_data_frame&amp;quot;      &amp;quot;as_tibble&amp;quot;          &amp;quot;auto_copy&amp;quot;         
-##  [22] &amp;quot;band_instruments&amp;quot;   &amp;quot;band_instruments2&amp;quot;  &amp;quot;band_members&amp;quot;      
-##  [25] &amp;quot;bench_tbls&amp;quot;         &amp;quot;between&amp;quot;            &amp;quot;bind_cols&amp;quot;         
-##  [28] &amp;quot;bind_rows&amp;quot;          &amp;quot;case_when&amp;quot;          &amp;quot;changes&amp;quot;           
-##  [31] &amp;quot;check_dbplyr&amp;quot;       &amp;quot;coalesce&amp;quot;           &amp;quot;collapse&amp;quot;          
-##  [34] &amp;quot;collect&amp;quot;            &amp;quot;combine&amp;quot;            &amp;quot;common_by&amp;quot;         
-##  [37] &amp;quot;compare_tbls&amp;quot;       &amp;quot;compare_tbls2&amp;quot;      &amp;quot;compute&amp;quot;           
-##  [40] &amp;quot;contains&amp;quot;           &amp;quot;copy_to&amp;quot;            &amp;quot;count&amp;quot;             
-##  [43] &amp;quot;count_&amp;quot;             &amp;quot;cumall&amp;quot;             &amp;quot;cumany&amp;quot;            
-##  [46] &amp;quot;cume_dist&amp;quot;          &amp;quot;cummean&amp;quot;            &amp;quot;current_vars&amp;quot;      
-##  [49] &amp;quot;data_frame&amp;quot;         &amp;quot;data_frame_&amp;quot;        &amp;quot;db_analyze&amp;quot;        
-##  [52] &amp;quot;db_begin&amp;quot;           &amp;quot;db_commit&amp;quot;          &amp;quot;db_create_index&amp;quot;   
-##  [55] &amp;quot;db_create_indexes&amp;quot;  &amp;quot;db_create_table&amp;quot;    &amp;quot;db_data_type&amp;quot;      
-##  [58] &amp;quot;db_desc&amp;quot;            &amp;quot;db_drop_table&amp;quot;      &amp;quot;db_explain&amp;quot;        
-##  [61] &amp;quot;db_has_table&amp;quot;       &amp;quot;db_insert_into&amp;quot;     &amp;quot;db_list_tables&amp;quot;    
-##  [64] &amp;quot;db_query_fields&amp;quot;    &amp;quot;db_query_rows&amp;quot;      &amp;quot;db_rollback&amp;quot;       
-##  [67] &amp;quot;db_save_query&amp;quot;      &amp;quot;db_write_table&amp;quot;     &amp;quot;dense_rank&amp;quot;        
-##  [70] &amp;quot;desc&amp;quot;               &amp;quot;dim_desc&amp;quot;           &amp;quot;distinct&amp;quot;          
-##  [73] &amp;quot;distinct_&amp;quot;          &amp;quot;do&amp;quot;                 &amp;quot;do_&amp;quot;               
-##  [76] &amp;quot;dr_dplyr&amp;quot;           &amp;quot;ends_with&amp;quot;          &amp;quot;enexpr&amp;quot;            
-##  [79] &amp;quot;enexprs&amp;quot;            &amp;quot;enquo&amp;quot;              &amp;quot;enquos&amp;quot;            
-##  [82] &amp;quot;ensym&amp;quot;              &amp;quot;ensyms&amp;quot;             &amp;quot;eval_tbls&amp;quot;         
-##  [85] &amp;quot;eval_tbls2&amp;quot;         &amp;quot;everything&amp;quot;         &amp;quot;explain&amp;quot;           
-##  [88] &amp;quot;expr&amp;quot;               &amp;quot;failwith&amp;quot;           &amp;quot;filter&amp;quot;            
-##  [91] &amp;quot;filter_&amp;quot;            &amp;quot;filter_all&amp;quot;         &amp;quot;filter_at&amp;quot;         
-##  [94] &amp;quot;filter_if&amp;quot;          &amp;quot;first&amp;quot;              &amp;quot;frame_data&amp;quot;        
-##  [97] &amp;quot;full_join&amp;quot;          &amp;quot;funs&amp;quot;               &amp;quot;funs_&amp;quot;             
-## [100] &amp;quot;glimpse&amp;quot;            &amp;quot;group_by&amp;quot;           &amp;quot;group_by_&amp;quot;         
-## [103] &amp;quot;group_by_all&amp;quot;       &amp;quot;group_by_at&amp;quot;        &amp;quot;group_by_if&amp;quot;       
-## [106] &amp;quot;group_by_prepare&amp;quot;   &amp;quot;group_indices&amp;quot;      &amp;quot;group_indices_&amp;quot;    
-## [109] &amp;quot;group_size&amp;quot;         &amp;quot;group_vars&amp;quot;         &amp;quot;grouped_df&amp;quot;        
-## [112] &amp;quot;groups&amp;quot;             &amp;quot;id&amp;quot;                 &amp;quot;ident&amp;quot;             
-## [115] &amp;quot;if_else&amp;quot;            &amp;quot;inner_join&amp;quot;         &amp;quot;intersect&amp;quot;         
-## [118] &amp;quot;is.grouped_df&amp;quot;      &amp;quot;is.src&amp;quot;             &amp;quot;is.tbl&amp;quot;            
-## [121] &amp;quot;is_grouped_df&amp;quot;      &amp;quot;lag&amp;quot;                &amp;quot;last&amp;quot;              
-## [124] &amp;quot;lead&amp;quot;               &amp;quot;left_join&amp;quot;          &amp;quot;location&amp;quot;          
-## [127] &amp;quot;lst&amp;quot;                &amp;quot;lst_&amp;quot;               &amp;quot;make_tbl&amp;quot;          
-## [130] &amp;quot;matches&amp;quot;            &amp;quot;min_rank&amp;quot;           &amp;quot;mutate&amp;quot;            
-## [133] &amp;quot;mutate_&amp;quot;            &amp;quot;mutate_all&amp;quot;         &amp;quot;mutate_at&amp;quot;         
-## [136] &amp;quot;mutate_each&amp;quot;        &amp;quot;mutate_each_&amp;quot;       &amp;quot;mutate_if&amp;quot;         
-## [139] &amp;quot;n&amp;quot;                  &amp;quot;n_distinct&amp;quot;         &amp;quot;n_groups&amp;quot;          
-## [142] &amp;quot;na_if&amp;quot;              &amp;quot;nasa&amp;quot;               &amp;quot;near&amp;quot;              
-## [145] &amp;quot;nth&amp;quot;                &amp;quot;ntile&amp;quot;              &amp;quot;num_range&amp;quot;         
-## [148] &amp;quot;one_of&amp;quot;             &amp;quot;order_by&amp;quot;           &amp;quot;percent_rank&amp;quot;      
-## [151] &amp;quot;progress_estimated&amp;quot; &amp;quot;pull&amp;quot;               &amp;quot;quo&amp;quot;               
-## [154] &amp;quot;quo_name&amp;quot;           &amp;quot;quos&amp;quot;               &amp;quot;rbind_all&amp;quot;         
-## [157] &amp;quot;rbind_list&amp;quot;         &amp;quot;recode&amp;quot;             &amp;quot;recode_factor&amp;quot;     
-## [160] &amp;quot;rename&amp;quot;             &amp;quot;rename_&amp;quot;            &amp;quot;rename_all&amp;quot;        
-## [163] &amp;quot;rename_at&amp;quot;          &amp;quot;rename_if&amp;quot;          &amp;quot;rename_vars&amp;quot;       
-## [166] &amp;quot;rename_vars_&amp;quot;       &amp;quot;right_join&amp;quot;         &amp;quot;row_number&amp;quot;        
-## [169] &amp;quot;rowwise&amp;quot;            &amp;quot;same_src&amp;quot;           &amp;quot;sample_frac&amp;quot;       
-## [172] &amp;quot;sample_n&amp;quot;           &amp;quot;select&amp;quot;             &amp;quot;select_&amp;quot;           
-## [175] &amp;quot;select_all&amp;quot;         &amp;quot;select_at&amp;quot;          &amp;quot;select_if&amp;quot;         
-## [178] &amp;quot;select_var&amp;quot;         &amp;quot;select_vars&amp;quot;        &amp;quot;select_vars_&amp;quot;      
-## [181] &amp;quot;semi_join&amp;quot;          &amp;quot;setdiff&amp;quot;            &amp;quot;setequal&amp;quot;          
-## [184] &amp;quot;show_query&amp;quot;         &amp;quot;slice&amp;quot;              &amp;quot;slice_&amp;quot;            
-## [187] &amp;quot;sql&amp;quot;                &amp;quot;sql_escape_ident&amp;quot;   &amp;quot;sql_escape_string&amp;quot; 
-## [190] &amp;quot;sql_join&amp;quot;           &amp;quot;sql_select&amp;quot;         &amp;quot;sql_semi_join&amp;quot;     
-## [193] &amp;quot;sql_set_op&amp;quot;         &amp;quot;sql_subquery&amp;quot;       &amp;quot;sql_translate_env&amp;quot; 
-## [196] &amp;quot;src&amp;quot;                &amp;quot;src_df&amp;quot;             &amp;quot;src_local&amp;quot;         
-## [199] &amp;quot;src_mysql&amp;quot;          &amp;quot;src_postgres&amp;quot;       &amp;quot;src_sqlite&amp;quot;        
-## [202] &amp;quot;src_tbls&amp;quot;           &amp;quot;starts_with&amp;quot;        &amp;quot;starwars&amp;quot;          
-## [205] &amp;quot;storms&amp;quot;             &amp;quot;summarise&amp;quot;          &amp;quot;summarise_&amp;quot;        
-## [208] &amp;quot;summarise_all&amp;quot;      &amp;quot;summarise_at&amp;quot;       &amp;quot;summarise_each&amp;quot;    
-## [211] &amp;quot;summarise_each_&amp;quot;    &amp;quot;summarise_if&amp;quot;       &amp;quot;summarize&amp;quot;         
-## [214] &amp;quot;summarize_&amp;quot;         &amp;quot;summarize_all&amp;quot;      &amp;quot;summarize_at&amp;quot;      
-## [217] &amp;quot;summarize_each&amp;quot;     &amp;quot;summarize_each_&amp;quot;    &amp;quot;summarize_if&amp;quot;      
-## [220] &amp;quot;sym&amp;quot;                &amp;quot;syms&amp;quot;               &amp;quot;tally&amp;quot;             
-## [223] &amp;quot;tally_&amp;quot;             &amp;quot;tbl&amp;quot;                &amp;quot;tbl_cube&amp;quot;          
-## [226] &amp;quot;tbl_df&amp;quot;             &amp;quot;tbl_nongroup_vars&amp;quot;  &amp;quot;tbl_sum&amp;quot;           
-## [229] &amp;quot;tbl_vars&amp;quot;           &amp;quot;tibble&amp;quot;             &amp;quot;top_n&amp;quot;             
-## [232] &amp;quot;transmute&amp;quot;          &amp;quot;transmute_&amp;quot;         &amp;quot;transmute_all&amp;quot;     
-## [235] &amp;quot;transmute_at&amp;quot;       &amp;quot;transmute_if&amp;quot;       &amp;quot;tribble&amp;quot;           
-## [238] &amp;quot;trunc_mat&amp;quot;          &amp;quot;type_sum&amp;quot;           &amp;quot;ungroup&amp;quot;           
-## [241] &amp;quot;union&amp;quot;              &amp;quot;union_all&amp;quot;          &amp;quot;vars&amp;quot;              
-## [244] &amp;quot;with_order&amp;quot;         &amp;quot;wrap_dbplyr_obj&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   [1] &amp;quot;%&amp;gt;%&amp;quot;                   &amp;quot;add_count&amp;quot;            
+##   [3] &amp;quot;add_count_&amp;quot;            &amp;quot;add_row&amp;quot;              
+##   [5] &amp;quot;add_rownames&amp;quot;          &amp;quot;add_tally&amp;quot;            
+##   [7] &amp;quot;add_tally_&amp;quot;            &amp;quot;all_equal&amp;quot;            
+##   [9] &amp;quot;all_vars&amp;quot;              &amp;quot;anti_join&amp;quot;            
+##  [11] &amp;quot;any_vars&amp;quot;              &amp;quot;arrange&amp;quot;              
+##  [13] &amp;quot;arrange_&amp;quot;              &amp;quot;arrange_all&amp;quot;          
+##  [15] &amp;quot;arrange_at&amp;quot;            &amp;quot;arrange_if&amp;quot;           
+##  [17] &amp;quot;as_data_frame&amp;quot;         &amp;quot;as_label&amp;quot;             
+##  [19] &amp;quot;as_tibble&amp;quot;             &amp;quot;as.tbl&amp;quot;               
+##  [21] &amp;quot;as.tbl_cube&amp;quot;           &amp;quot;auto_copy&amp;quot;            
+##  [23] &amp;quot;band_instruments&amp;quot;      &amp;quot;band_instruments2&amp;quot;    
+##  [25] &amp;quot;band_members&amp;quot;          &amp;quot;bench_tbls&amp;quot;           
+##  [27] &amp;quot;between&amp;quot;               &amp;quot;bind_cols&amp;quot;            
+##  [29] &amp;quot;bind_rows&amp;quot;             &amp;quot;case_when&amp;quot;            
+##  [31] &amp;quot;changes&amp;quot;               &amp;quot;check_dbplyr&amp;quot;         
+##  [33] &amp;quot;coalesce&amp;quot;              &amp;quot;collapse&amp;quot;             
+##  [35] &amp;quot;collect&amp;quot;               &amp;quot;combine&amp;quot;              
+##  [37] &amp;quot;common_by&amp;quot;             &amp;quot;compare_tbls&amp;quot;         
+##  [39] &amp;quot;compare_tbls2&amp;quot;         &amp;quot;compute&amp;quot;              
+##  [41] &amp;quot;contains&amp;quot;              &amp;quot;copy_to&amp;quot;              
+##  [43] &amp;quot;count&amp;quot;                 &amp;quot;count_&amp;quot;               
+##  [45] &amp;quot;cumall&amp;quot;                &amp;quot;cumany&amp;quot;               
+##  [47] &amp;quot;cume_dist&amp;quot;             &amp;quot;cummean&amp;quot;              
+##  [49] &amp;quot;current_vars&amp;quot;          &amp;quot;data_frame&amp;quot;           
+##  [51] &amp;quot;data_frame_&amp;quot;           &amp;quot;db_analyze&amp;quot;           
+##  [53] &amp;quot;db_begin&amp;quot;              &amp;quot;db_commit&amp;quot;            
+##  [55] &amp;quot;db_create_index&amp;quot;       &amp;quot;db_create_indexes&amp;quot;    
+##  [57] &amp;quot;db_create_table&amp;quot;       &amp;quot;db_data_type&amp;quot;         
+##  [59] &amp;quot;db_desc&amp;quot;               &amp;quot;db_drop_table&amp;quot;        
+##  [61] &amp;quot;db_explain&amp;quot;            &amp;quot;db_has_table&amp;quot;         
+##  [63] &amp;quot;db_insert_into&amp;quot;        &amp;quot;db_list_tables&amp;quot;       
+##  [65] &amp;quot;db_query_fields&amp;quot;       &amp;quot;db_query_rows&amp;quot;        
+##  [67] &amp;quot;db_rollback&amp;quot;           &amp;quot;db_save_query&amp;quot;        
+##  [69] &amp;quot;db_write_table&amp;quot;        &amp;quot;dense_rank&amp;quot;           
+##  [71] &amp;quot;desc&amp;quot;                  &amp;quot;dim_desc&amp;quot;             
+##  [73] &amp;quot;distinct&amp;quot;              &amp;quot;distinct_&amp;quot;            
+##  [75] &amp;quot;distinct_all&amp;quot;          &amp;quot;distinct_at&amp;quot;          
+##  [77] &amp;quot;distinct_if&amp;quot;           &amp;quot;distinct_prepare&amp;quot;     
+##  [79] &amp;quot;do&amp;quot;                    &amp;quot;do_&amp;quot;                  
+##  [81] &amp;quot;dr_dplyr&amp;quot;              &amp;quot;ends_with&amp;quot;            
+##  [83] &amp;quot;enexpr&amp;quot;                &amp;quot;enexprs&amp;quot;              
+##  [85] &amp;quot;enquo&amp;quot;                 &amp;quot;enquos&amp;quot;               
+##  [87] &amp;quot;ensym&amp;quot;                 &amp;quot;ensyms&amp;quot;               
+##  [89] &amp;quot;eval_tbls&amp;quot;             &amp;quot;eval_tbls2&amp;quot;           
+##  [91] &amp;quot;everything&amp;quot;            &amp;quot;explain&amp;quot;              
+##  [93] &amp;quot;expr&amp;quot;                  &amp;quot;failwith&amp;quot;             
+##  [95] &amp;quot;filter&amp;quot;                &amp;quot;filter_&amp;quot;              
+##  [97] &amp;quot;filter_all&amp;quot;            &amp;quot;filter_at&amp;quot;            
+##  [99] &amp;quot;filter_if&amp;quot;             &amp;quot;first&amp;quot;                
+## [101] &amp;quot;frame_data&amp;quot;            &amp;quot;full_join&amp;quot;            
+## [103] &amp;quot;funs&amp;quot;                  &amp;quot;funs_&amp;quot;                
+## [105] &amp;quot;glimpse&amp;quot;               &amp;quot;group_by&amp;quot;             
+## [107] &amp;quot;group_by_&amp;quot;             &amp;quot;group_by_all&amp;quot;         
+## [109] &amp;quot;group_by_at&amp;quot;           &amp;quot;group_by_drop_default&amp;quot;
+## [111] &amp;quot;group_by_if&amp;quot;           &amp;quot;group_by_prepare&amp;quot;     
+## [113] &amp;quot;group_cols&amp;quot;            &amp;quot;group_data&amp;quot;           
+## [115] &amp;quot;group_indices&amp;quot;         &amp;quot;group_indices_&amp;quot;       
+## [117] &amp;quot;group_keys&amp;quot;            &amp;quot;group_map&amp;quot;            
+## [119] &amp;quot;group_modify&amp;quot;          &amp;quot;group_nest&amp;quot;           
+## [121] &amp;quot;group_rows&amp;quot;            &amp;quot;group_size&amp;quot;           
+## [123] &amp;quot;group_split&amp;quot;           &amp;quot;group_trim&amp;quot;           
+## [125] &amp;quot;group_vars&amp;quot;            &amp;quot;group_walk&amp;quot;           
+## [127] &amp;quot;grouped_df&amp;quot;            &amp;quot;groups&amp;quot;               
+## [129] &amp;quot;hybrid_call&amp;quot;           &amp;quot;id&amp;quot;                   
+## [131] &amp;quot;ident&amp;quot;                 &amp;quot;if_else&amp;quot;              
+## [133] &amp;quot;inner_join&amp;quot;            &amp;quot;intersect&amp;quot;            
+## [135] &amp;quot;is_grouped_df&amp;quot;         &amp;quot;is.grouped_df&amp;quot;        
+## [137] &amp;quot;is.src&amp;quot;                &amp;quot;is.tbl&amp;quot;               
+## [139] &amp;quot;lag&amp;quot;                   &amp;quot;last&amp;quot;                 
+## [141] &amp;quot;last_col&amp;quot;              &amp;quot;lead&amp;quot;                 
+## [143] &amp;quot;left_join&amp;quot;             &amp;quot;location&amp;quot;             
+## [145] &amp;quot;lst&amp;quot;                   &amp;quot;lst_&amp;quot;                 
+## [147] &amp;quot;make_tbl&amp;quot;              &amp;quot;matches&amp;quot;              
+## [149] &amp;quot;min_rank&amp;quot;              &amp;quot;mutate&amp;quot;               
+## [151] &amp;quot;mutate_&amp;quot;               &amp;quot;mutate_all&amp;quot;           
+## [153] &amp;quot;mutate_at&amp;quot;             &amp;quot;mutate_each&amp;quot;          
+## [155] &amp;quot;mutate_each_&amp;quot;          &amp;quot;mutate_if&amp;quot;            
+## [157] &amp;quot;n&amp;quot;                     &amp;quot;n_distinct&amp;quot;           
+## [159] &amp;quot;n_groups&amp;quot;              &amp;quot;na_if&amp;quot;                
+## [161] &amp;quot;nasa&amp;quot;                  &amp;quot;near&amp;quot;                 
+## [163] &amp;quot;nest_join&amp;quot;             &amp;quot;new_grouped_df&amp;quot;       
+## [165] &amp;quot;nth&amp;quot;                   &amp;quot;ntile&amp;quot;                
+## [167] &amp;quot;num_range&amp;quot;             &amp;quot;one_of&amp;quot;               
+## [169] &amp;quot;order_by&amp;quot;              &amp;quot;percent_rank&amp;quot;         
+## [171] &amp;quot;progress_estimated&amp;quot;    &amp;quot;pull&amp;quot;                 
+## [173] &amp;quot;quo&amp;quot;                   &amp;quot;quo_name&amp;quot;             
+## [175] &amp;quot;quos&amp;quot;                  &amp;quot;rbind_all&amp;quot;            
+## [177] &amp;quot;rbind_list&amp;quot;            &amp;quot;recode&amp;quot;               
+## [179] &amp;quot;recode_factor&amp;quot;         &amp;quot;rename&amp;quot;               
+## [181] &amp;quot;rename_&amp;quot;               &amp;quot;rename_all&amp;quot;           
+## [183] &amp;quot;rename_at&amp;quot;             &amp;quot;rename_if&amp;quot;            
+## [185] &amp;quot;rename_vars&amp;quot;           &amp;quot;rename_vars_&amp;quot;         
+## [187] &amp;quot;right_join&amp;quot;            &amp;quot;row_number&amp;quot;           
+## [189] &amp;quot;rowwise&amp;quot;               &amp;quot;same_src&amp;quot;             
+## [191] &amp;quot;sample_frac&amp;quot;           &amp;quot;sample_n&amp;quot;             
+## [193] &amp;quot;select&amp;quot;                &amp;quot;select_&amp;quot;              
+## [195] &amp;quot;select_all&amp;quot;            &amp;quot;select_at&amp;quot;            
+## [197] &amp;quot;select_if&amp;quot;             &amp;quot;select_var&amp;quot;           
+## [199] &amp;quot;select_vars&amp;quot;           &amp;quot;select_vars_&amp;quot;         
+## [201] &amp;quot;semi_join&amp;quot;             &amp;quot;setdiff&amp;quot;              
+## [203] &amp;quot;setequal&amp;quot;              &amp;quot;show_query&amp;quot;           
+## [205] &amp;quot;slice&amp;quot;                 &amp;quot;slice_&amp;quot;               
+## [207] &amp;quot;sql&amp;quot;                   &amp;quot;sql_escape_ident&amp;quot;     
+## [209] &amp;quot;sql_escape_string&amp;quot;     &amp;quot;sql_join&amp;quot;             
+## [211] &amp;quot;sql_select&amp;quot;            &amp;quot;sql_semi_join&amp;quot;        
+## [213] &amp;quot;sql_set_op&amp;quot;            &amp;quot;sql_subquery&amp;quot;         
+## [215] &amp;quot;sql_translate_env&amp;quot;     &amp;quot;src&amp;quot;                  
+## [217] &amp;quot;src_df&amp;quot;                &amp;quot;src_local&amp;quot;            
+## [219] &amp;quot;src_mysql&amp;quot;             &amp;quot;src_postgres&amp;quot;         
+## [221] &amp;quot;src_sqlite&amp;quot;            &amp;quot;src_tbls&amp;quot;             
+## [223] &amp;quot;starts_with&amp;quot;           &amp;quot;starwars&amp;quot;             
+## [225] &amp;quot;storms&amp;quot;                &amp;quot;summarise&amp;quot;            
+## [227] &amp;quot;summarise_&amp;quot;            &amp;quot;summarise_all&amp;quot;        
+## [229] &amp;quot;summarise_at&amp;quot;          &amp;quot;summarise_each&amp;quot;       
+## [231] &amp;quot;summarise_each_&amp;quot;       &amp;quot;summarise_if&amp;quot;         
+## [233] &amp;quot;summarize&amp;quot;             &amp;quot;summarize_&amp;quot;           
+## [235] &amp;quot;summarize_all&amp;quot;         &amp;quot;summarize_at&amp;quot;         
+## [237] &amp;quot;summarize_each&amp;quot;        &amp;quot;summarize_each_&amp;quot;      
+## [239] &amp;quot;summarize_if&amp;quot;          &amp;quot;sym&amp;quot;                  
+## [241] &amp;quot;syms&amp;quot;                  &amp;quot;tally&amp;quot;                
+## [243] &amp;quot;tally_&amp;quot;                &amp;quot;tbl&amp;quot;                  
+## [245] &amp;quot;tbl_cube&amp;quot;              &amp;quot;tbl_df&amp;quot;               
+## [247] &amp;quot;tbl_nongroup_vars&amp;quot;     &amp;quot;tbl_sum&amp;quot;              
+## [249] &amp;quot;tbl_vars&amp;quot;              &amp;quot;tibble&amp;quot;               
+## [251] &amp;quot;top_frac&amp;quot;              &amp;quot;top_n&amp;quot;                
+## [253] &amp;quot;transmute&amp;quot;             &amp;quot;transmute_&amp;quot;           
+## [255] &amp;quot;transmute_all&amp;quot;         &amp;quot;transmute_at&amp;quot;         
+## [257] &amp;quot;transmute_if&amp;quot;          &amp;quot;tribble&amp;quot;              
+## [259] &amp;quot;trunc_mat&amp;quot;             &amp;quot;type_sum&amp;quot;             
+## [261] &amp;quot;ungroup&amp;quot;               &amp;quot;union&amp;quot;                
+## [263] &amp;quot;union_all&amp;quot;             &amp;quot;validate_grouped_df&amp;quot;  
+## [265] &amp;quot;vars&amp;quot;                  &amp;quot;with_order&amp;quot;           
+## [267] &amp;quot;wrap_dbplyr_obj&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -444,7 +775,6 @@ ls(&amp;quot;package:dplyr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
       <title>Customizing boxplots with ggplot2</title>
       <link>/post/blog/</link>
       <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>/post/blog/</guid>
       <description>
 
@@ -518,7 +848,6 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
       <title>Parallel computing with R</title>
       <link>/post/parallelcomputing/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +1000</pubDate>
-      
       <guid>/post/parallelcomputing/</guid>
       <description>&lt;p&gt;Working on this..&lt;/p&gt;
 </description>
@@ -528,9 +857,26 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
       <title>Data Types in R</title>
       <link>/post/datatypes/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +1000</pubDate>
-      
       <guid>/post/datatypes/</guid>
       <description>&lt;p&gt;coming up soon!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>/privacy/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Terms</title>
+      <link>/terms/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>/terms/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     
@@ -538,7 +884,6 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/isf17-talk/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +1000</pubDate>
-      
       <guid>/talk/isf17-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
 
@@ -551,7 +896,6 @@ the high dimensionality. It is unlikely that a single method will consistently p
       <title>A classification framework for forecast-model selection</title>
       <link>/talk/jsm18-talk/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
-      
       <guid>/talk/jsm18-talk/</guid>
       <description>&lt;p&gt;The background pictures are of free copyright from &lt;a href=&#34;https://pixabay.com/en/photos/presentation/&#34; target=&#34;_blank&#34;&gt;https://pixabay.com/en/photos/presentation/&lt;/a&gt;.&lt;/p&gt;
 
@@ -563,7 +907,6 @@ the high dimensionality. It is unlikely that a single method will consistently p
       <title>Analysing large collections of time series</title>
       <link>/talk/japan18-talk/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
-      
       <guid>/talk/japan18-talk/</guid>
       <description></description>
     </item>
@@ -572,7 +915,6 @@ the high dimensionality. It is unlikely that a single method will consistently p
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/ssa17-talk/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
-      
       <guid>/talk/ssa17-talk/</guid>
       <description></description>
     </item>
@@ -581,9 +923,148 @@ the high dimensionality. It is unlikely that a single method will consistently p
       <title>Feature-based model selection for time series forecasting</title>
       <link>/talk/ysc17-talk/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
-      
       <guid>/talk/ysc17-talk/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Meta-learning how to forecast time series</title>
+      <link>/talk/isf18-talk/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <guid>/talk/isf18-talk/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A crucial task in time series forecasting is the identification of the most suitable forecasting method. We present a general framework for forecast model selection using meta-learning. A Random Forest is used to predict the best forecasting method using only time series features. The proposed framework has been evaluated using time series from the M1 and M3 competitions, and is shown to yield accurate forecasts comparable to several benchmarks and other commonly used automated approaches of time series forecasting. A key advantage of our algorithm is that the time-consuming part of building the random forest can be handled in advance of the forecasting task.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>seer: R package for feature-based forecast model selection</title>
+      <link>/talk/user18-talk/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <guid>/talk/user18-talk/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The seer package provides a novel framework for forecast model selection using time series features. We call this framework FFORMS (Feature-based FORecast Model Selection). The underlying approach involves computing a vector of features from the time series which are then used to select the forecasting model. The model selection process is carried out using a classification algorithm &amp;ndash; we use the time series features as inputs, and the best forecasting algorithm as the output. The classification algorithm can be built in advance of the forecasting exercise (so it is an “offline” procedure). Then, when we have a new time series to forecast, we can quickly compute its features, use the pre-trained classification algorithm to identify the best forecasting model, and produce the required forecasts. Thus, the “online” part of our algorithm requires only feature computation, and the application of a single forecasting model, with no need to estimate large numbers of models within a class, or to carry out a computationally-intensive cross-validation procedure. This framework is compared against several benchmarks and other commonly used forecasting methods.&lt;/p&gt;
+
+&lt;p&gt;Link to git repository: &lt;a href=&#34;https://github.com/thiyangt/seer&#34; target=&#34;_blank&#34;&gt;seer&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>External Project</title>
+      <link>/project/external-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/external-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Internal Project</title>
+      <link>/project/internal-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/internal-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Large-scale time series forecasting</title>
+      <link>/project/largescaleforecasting/</link>
+      <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
+      <guid>/project/largescaleforecasting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An example journal article</title>
+      <link>/publication/journal-article/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>/publication/journal-article/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <description>
+
+
+&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;R Markdown&lt;/h1&gt;
+&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+fit &amp;lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Including Plots&lt;/h1&gt;
+&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
+  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
+  init.angle = -50, border = NA
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: A fancy pie chart.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example conference paper</title>
+      <link>/publication/conference-paper/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>/publication/conference-paper/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
