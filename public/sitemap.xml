@@ -43,12 +43,12 @@
   </url>
   
   <url>
-    <loc>/tags/dplyr/</loc>
+    <loc>/categories/dplyr/</loc>
     <lastmod>2019-05-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/dplyr/</loc>
+    <loc>/tags/dplyr/</loc>
     <lastmod>2019-05-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -108,12 +108,12 @@
   </url>
   
   <url>
-    <loc>/categories/gganimate/</loc>
+    <loc>/tags/gganimate/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/gganimate/</loc>
+    <loc>/categories/gganimate/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -128,12 +128,12 @@
   </url>
   
   <url>
-    <loc>/categories/tidyverse/</loc>
+    <loc>/tags/tidyverse/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/tidyverse/</loc>
+    <loc>/categories/tidyverse/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -243,32 +243,12 @@
   </url>
   
   <url>
-    <loc>/tags/deep-learning/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/demo/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/external-project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/internal-project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    <loc>/project/largescaleforecasting/</loc>
+    <lastmod>2016-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/largescaleforecasting/</loc>
     <lastmod>2016-02-22T00:00:00+00:00</lastmod>
   </url>
   

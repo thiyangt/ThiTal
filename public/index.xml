@@ -952,22 +952,6 @@ the high dimensionality. It is unlikely that a single method will consistently p
     </item>
     
     <item>
-      <title>External Project</title>
-      <link>/project/external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/external-project/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Internal Project</title>
-      <link>/project/internal-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/internal-project/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Large-scale time series forecasting</title>
       <link>/project/largescaleforecasting/</link>
       <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
