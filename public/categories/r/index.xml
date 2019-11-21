@@ -26,9 +26,11 @@ h2 { /* Header 2 */
   color: DarkBlue;
 }
 &lt;/style&gt;
-&lt;p&gt;##install packages&lt;/p&gt;
+&lt;div id=&#34;install-packages&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;install packages&lt;/h2&gt;
 &lt;p&gt;To install multiple packages with a single call to &lt;code&gt;install.packages&lt;/code&gt;, pass the names of the packages as a character vector to the install.packages() function.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;div id=&#34;load-packages&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;load packages&lt;/h2&gt;
 &lt;p&gt;Once you have the packages installed, you can make their contents available to use in your current R session by running,&lt;/p&gt;

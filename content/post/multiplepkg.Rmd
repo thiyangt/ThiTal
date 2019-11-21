@@ -14,7 +14,7 @@ h2 { /* Header 2 */
 }
 </style>
 
-##install packages
+## install packages
 
 To install multiple packages with a single call to `install.packages`, pass the names of the packages as a character vector to the install.packages() function.
 
