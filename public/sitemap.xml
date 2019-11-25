@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/courses/example/</loc>
-    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/talk/user19-talk/</loc>
     <lastmod>2019-07-05T00:00:00+10:00</lastmod>
   </url>
@@ -33,12 +28,12 @@
   </url>
   
   <url>
-    <loc>/tags/dplyr/</loc>
+    <loc>/categories/dplyr/</loc>
     <lastmod>2019-05-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/dplyr/</loc>
+    <loc>/tags/dplyr/</loc>
     <lastmod>2019-05-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -143,12 +138,12 @@
   </url>
   
   <url>
-    <loc>/tags/rmarkdown/</loc>
+    <loc>/categories/rmarkdown/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/rmarkdown/</loc>
+    <loc>/tags/rmarkdown/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
   </url>
   
@@ -168,12 +163,12 @@
   </url>
   
   <url>
-    <loc>/tags/ggplot2/</loc>
+    <loc>/categories/ggplot2/</loc>
     <lastmod>2018-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/ggplot2/</loc>
+    <loc>/tags/ggplot2/</loc>
     <lastmod>2018-09-05T00:00:00+00:00</lastmod>
   </url>
   
