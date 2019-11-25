@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | THIYANGA TALAGALA</title>
+    <link>/authors/</link>
+      <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Authors</title>
+      <link>/authors/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>/authors/admin/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/admin/</guid>
+      <description>&lt;p&gt;I am a PhD candidate in Statistics at &lt;a href=&#34;https://www.monash.edu/&#34; target=&#34;_blank&#34;&gt;Monash University, Australia&lt;/a&gt;. My PhD research focuses on the problem of forecasting large collections of time series. I am working with Professor &lt;a href=&#34;https://robjhyndman.com/hyndsight/&#34; target=&#34;_blank&#34;&gt;Rob J Hyndman&lt;/a&gt; and Professor &lt;a href=&#34;https://research.monash.edu/en/persons/george-athanasopoulos&#34; target=&#34;_blank&#34;&gt;George Athanasopoulos&lt;/a&gt;. I am a member of &lt;a href=&#34;https://acems.org.au/our-people/thiyanga-talagala&#34; target=&#34;_blank&#34;&gt;ACEMS - ARC Centre of Excellence for Mathematical &amp;amp; Statistical Frontiers&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I enjoy solving general data science problems from three different angles: theoretical, computational, applied. In this website you will find some of my work and interests on statistics and data analysis. I am also interested in R programming language.&lt;/p&gt;
+
+&lt;p&gt;My sister &lt;a href=&#34;https://prital.netlify.com/&#34; target=&#34;_blank&#34;&gt;Priyanga Dilini Talagala&lt;/a&gt; is also a PhD candidate at Monash University, Australia.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Robert Ford</title>
+      <link>/authors/robert-ford/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>/authors/robert-ford/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
