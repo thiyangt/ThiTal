@@ -13,10 +13,18 @@
     </image>
     
     <item>
-      <title>External Project</title>
-      <link>/project/external-project/</link>
+      <title>Large-Scale Time Series Forecasting</title>
+      <link>/project/timeseries/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/external-project/</guid>
+      <guid>/project/timeseries/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Small Bite Big threat</title>
+      <link>/project/dengue/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/dengue/</guid>
       <description></description>
     </item>
     

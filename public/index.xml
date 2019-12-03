@@ -884,10 +884,18 @@ the high dimensionality. It is unlikely that a single method will consistently p
     </item>
     
     <item>
-      <title>Large-scale time series forecasting</title>
-      <link>/project/largescaleforecasting/</link>
-      <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>/project/largescaleforecasting/</guid>
+      <title>Large-Scale Time Series Forecasting</title>
+      <link>/project/timeseries/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/timeseries/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Small Bite Big threat</title>
+      <link>/project/dengue/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/dengue/</guid>
       <description></description>
     </item>
     
