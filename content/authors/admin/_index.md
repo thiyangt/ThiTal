@@ -50,6 +50,6 @@ user_groups:
 
 I am a Lecturer in the Department of Statistics, Faculty of Applied Sciences at the [University of Sri Jayewardenepura](http://science.sjp.ac.lk/). I received my PhD in statistics from [Monash University, Australia](https://www.monash.edu/) in 2019. My thesis advisors were Professor [Rob J Hyndman](https://robjhyndman.com/hyndsight/) and Professor [George Athanasopoulos](https://research.monash.edu/en/persons/george-athanasopoulos). 
 
-I enjoy solving general data science problems from three different angles: theoretical, computational, applied. On this website you will find some of my work and interests on statistics and data analysis. My research focuses on developing new statistical machine learning tools to help both practitioners and theoreticians make more open, explainable and reproducible data-driven discoveries. I am also interested in R programming language.
+I enjoy solving general data science problems from three different angles: theoretical, computational, applied. On this website you will find some of my work and interests in statistics and data analysis. My research focuses on developing new statistical machine learning tools to help both practitioners and theoreticians make more open, explainable and reproducible data-driven discoveries. I am also interested in R programming language.
 
 [Priyanga Dilini Talagala](https://prital.netlify.com/)  PhD in Statistics, Monash University, Australia is my sister.
