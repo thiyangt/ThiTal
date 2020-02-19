@@ -7,5 +7,5 @@ image:
 summary: The course website for my teaching unit STA 326 2.0 Programming and Data Analysis with R
 tags:
 - Demo
-title: Teaching course website for Programming and Data Analysis with R
+title: Programming and Data Analysis with R
 ---
