@@ -10,6 +10,7 @@ subtitle = ""
 +++
 
 <i class="fa fa-cog fa-spin" style="color:Maroon"></i> [seer](https://github.com/thiyangt/seer): R package for feature-based time series forecasting.
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/mozzie)](https://cran.r-project.org/package=mozzie)   
 
 <i class="fa fa-cog fa-spin" style="color:Maroon"></i> [tsfeatures](https://github.com/robjhyndman/tsfeatures): R package tsfeatures provides methods for extracting various features from time series data.[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/tsfeatures)](https://cran.r-project.org/package=tsfeatures) 
 
