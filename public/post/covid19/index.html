@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="PhD in Statistics">
+  <meta name="description" content="Dashboard to monitor COVID-19 situation in Sri Lanka. This dashboard is built with R using the R Makrdown framework and was adapted from “coronavirus_dashboard” by Rami Krispin.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/categories/">
+  <link rel="alternate" hreflang="en-us" href="/post/covid19/">
 
   
 
@@ -103,14 +103,12 @@
 
 
   
-  <link rel="alternate" href="/categories/index.xml" type="application/rss+xml" title="THIYANGA TALAGALA">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/categories/">
+  <link rel="canonical" href="/post/covid19/">
 
   
   
@@ -123,18 +121,65 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="THIYANGA TALAGALA">
-  <meta property="og:url" content="/categories/">
-  <meta property="og:title" content="Categories | THIYANGA TALAGALA">
-  <meta property="og:description" content="PhD in Statistics"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/post/covid19/">
+  <meta property="og:title" content="Dashboard to monitor COVID-19 situation in Sri Lanka. | THIYANGA TALAGALA">
+  <meta property="og:description" content="Dashboard to monitor COVID-19 situation in Sri Lanka. This dashboard is built with R using the R Makrdown framework and was adapted from “coronavirus_dashboard” by Rami Krispin."><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2020-03-25T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2020-03-25T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-03-25T00:00:00&#43;00:00">
   
 
   
 
 
+    
 
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/covid19/"
+  },
+  "headline": "Dashboard to monitor COVID-19 situation in Sri Lanka.",
+  
+  "datePublished": "2020-03-25T00:00:00Z",
+  "dateModified": "2020-03-25T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Thiyanga S. Talagala"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "THIYANGA TALAGALA",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/img/icon-512.png"
+    }
+  },
+  "description": "Dashboard to monitor COVID-19 situation in Sri Lanka. This dashboard is built with R using the R Makrdown framework and was adapted from “coronavirus_dashboard” by Rami Krispin."
+}
+</script>
+
+  
 
   
 
@@ -142,10 +187,13 @@
   
 
 
+  
 
 
 
-  <title>Categories | THIYANGA TALAGALA</title>
+
+
+  <title>Dashboard to monitor COVID-19 situation in Sri Lanka. | THIYANGA TALAGALA</title>
 
 </head>
 
@@ -428,101 +476,363 @@
 </nav>
 
 
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Dashboard to monitor COVID-19 situation in Sri Lanka.</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Mar 25, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a>, <a href="/categories/shiny/">shiny</a>, <a href="/categories/plotly/">plotly</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+
+<p>Visit here: <a href="https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary" class="uri">https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary</a></p>
+<iframe width="1000" height="600" scrolling="no" frameborder="no" src="https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary">
+</iframe>
+<div id="code" class="section level2">
+<h2>Code</h2>
+<p>The code behind this dashboard is available on <a href="https://github.com/thiyangt/CoronaSriLanka">GitHub</a>.</p>
+</div>
+<div id="data" class="section level2">
+<h2>Data</h2>
+<p>The raw data is pulled from the Johns Hopkins University Center for Systems Science and Engineering (JHU CCSE) Coronavirus repository (through corona package in R) and Covid-19 Situation reports published by Epidemiology Unit, Ministry of Health and Indigenous Medical Services, Sri Lanka.</p>
+</div>
+<div id="update" class="section level2">
+<h2>Update</h2>
+<p>The map data is as of Sunday March 22, 2020 and the dashboard has been updated on Friday March 27, 2020.</p>
+</div>
+<div id="to-explore-global-trend-use-rami-krispins-dashboard" class="section level2">
+<h2>To explore Global trend use Rami Krispin’s dashboard</h2>
+<p>Visit: <a href="https://ramikrispin.github.io/coronavirus_dashboard/" class="uri">https://ramikrispin.github.io/coronavirus_dashboard/</a></p>
+<iframe width="1000" height="600" scrolling="no" frameborder="no" src="https://ramikrispin.github.io/coronavirus_dashboard/">
+</iframe>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/r/">R</a>
+  
+  <a class="badge badge-light" href="/tags/shiny/">shiny</a>
+  
+  <a class="badge badge-light" href="/tags/plotly/">plotly</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/covid19/&amp;text=Dashboard%20to%20monitor%20COVID-19%20situation%20in%20Sri%20Lanka." target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/covid19/&amp;t=Dashboard%20to%20monitor%20COVID-19%20situation%20in%20Sri%20Lanka." target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Dashboard%20to%20monitor%20COVID-19%20situation%20in%20Sri%20Lanka.&amp;body=/post/covid19/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/covid19/&amp;title=Dashboard%20to%20monitor%20COVID-19%20situation%20in%20Sri%20Lanka." target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Dashboard%20to%20monitor%20COVID-19%20situation%20in%20Sri%20Lanka.%20/post/covid19/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/covid19/&amp;title=Dashboard%20to%20monitor%20COVID-19%20situation%20in%20Sri%20Lanka." target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 
 
 
 
-
-
-
-
-
-
-
-  
 
   
   
   
     
   
-<div class="universal-wrapper pt-3">
-  <h1>Categories</h1>
-
   
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  
-
-  
-  
-  <div>
-    <h2><a href="/categories/plotly/">plotly</a></h2>
-    <div class="article-style">
+  <div class="media author-card content-widget-hr">
+    
       
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu359a1e8778b22ce5123ff1bde46aef51_2002805_250x250_fill_lanczos_center_2.png" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">Thiyanga S. Talagala</a></h5>
+      <h6 class="card-subtitle">PhD in Statistics</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/thiyangt" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=7cUtrWUAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/thiyangt" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
     </div>
   </div>
+
+
+
+
+
+
+
+
+
   
-  <div>
-    <h2><a href="/categories/r/">R</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
   
-  <div>
-    <h2><a href="/categories/shiny/">shiny</a></h2>
-    <div class="article-style">
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
       
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/categories/dplyr/">dplyr</a></h2>
-    <div class="article-style">
+      <li><a href="/post/dplyr/">Summarizing with dplyr</a></li>
       
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/categories/gganimate/">gganimate</a></h2>
-    <div class="article-style">
+      <li><a href="/post/multiplepkg/">How to install and load multiple packages at once?</a></li>
       
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/categories/tidyverse/">tidyverse</a></h2>
-    <div class="article-style">
+      <li><a href="/post/greekletters/">Some useful Greek letters you might use on your reports</a></li>
       
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/categories/rmarkdown/">Rmarkdown</a></h2>
-    <div class="article-style">
+      <li><a href="/post/packageinfo/">What&#39;s in a package?</a></li>
       
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/categories/ggplot2/">ggplot2</a></h2>
-    <div class="article-style">
+      <li><a href="/post/blog/">Customizing boxplots with ggplot2</a></li>
       
-    </div>
+    </ul>
   </div>
   
 
-  
 
-</div>
+
+  </div>
+</article>
 
       
 
