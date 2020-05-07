@@ -75,7 +75,7 @@ Department of Statistics and Computer Science, Faculty of Applied Sciences, USJ
 
 - [STA 211 2.0 Sampling Techniques](/CO/2014s1/STA21120_2014_s1.pdf)
 
-- STA 318 2.0 Advanced Probability and Distribution Theory
+- [STA 318 2.0 Advanced Probability and Distribution Theory](/CO/2014s1/STA_318_2.0.pdf)
 
 
 
@@ -106,11 +106,13 @@ B.Pharm Degree Programme, Faculty of Medical Sciences, USJ
 
 Department of Statistics and Computer Science, Faculty of Applied Sciences, USJ
 
-- STA 112 3.0 Probability and Distribution Theory 
+- [STA 112 3.0 Probability and Distribution Theory](/CO/2013s1/STA1123.0.pdf)
 
 Department of Food Science and Technology, Faculty of Applied Sciences, USJ
 
 - FST 284 1.0 Statistics for Food Sciences I
+
+- FST 252 1.0 Computer Applications for Food Sciences II
 
 Department of Botany, Faculty of Applied Sciences, USJ
 
@@ -129,6 +131,10 @@ Department of Statistics and Computer Science, Faculty of Applied Sciences, USJ
 - STA 308 1.0 Medical Statistics
 
 Department of Food Science and Technology, Faculty of Applied Sciences, USJ
+
+- FST 351 1.0 Statistics for Food Sciences II
+
+- FST 254 1.0 Computer Applications for Food Sciences III
 
 Nursing Unit, Faculty of Medical Sciences, USJ
 
