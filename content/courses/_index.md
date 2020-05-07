@@ -6,6 +6,8 @@ layout: docs
 title: Courses
 ---
 
+![](/CO/education.jpg)
+
 # 2020
 
 ## Semester 1
