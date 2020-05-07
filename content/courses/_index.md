@@ -27,11 +27,11 @@ Department of Mathematics, Faculty of Applied Sciences, USJ
 
 ## Monash University, Australia (Teaching)
 
-- [ETC 5242: Statistical Thinking](https://www3.monash.edu/pubs/2019handbooks/units/ETC5242.html)
+- [ETC 5242 Statistical Thinking](https://www3.monash.edu/pubs/2019handbooks/units/ETC5242.html)
 
-- [ETC 2420 - Statistical Thinking](https://www3.monash.edu/pubs/2018handbooks/units/ETC2420.html)
+- [ETC 2420 Statistical Thinking](https://www3.monash.edu/pubs/2018handbooks/units/ETC2420.html)
 
-- [ETC1000 - Business and Economic Statistics](https://www3.monash.edu/pubs/2019handbooks/units/ETC1000.html)
+- [ETC1000 Business and Economic Statistics](https://www3.monash.edu/pubs/2019handbooks/units/ETC1000.html)
 
 # 2015 
 
