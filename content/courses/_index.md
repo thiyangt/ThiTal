@@ -138,9 +138,14 @@ Department of Food Science and Technology, Faculty of Applied Sciences, USJ
 
 Nursing Unit, Faculty of Medical Sciences, USJ
 
+- [Biostatistics-Teaching Associate](/CO/2012s2/MLS.pdf)
 
 ## Semester 1
 
 Department of Statistics and Computer Science, Faculty of Applied Sciences, USJ
 
+- STA 112 3.0 Probability and Distribution Theory (Temporary Instructor equivalent to Teaching Associate)
+
 Department of Decision Science, Faculty of Management Studies and Commerce, USJ
+
+- DSC 2320 Statistical Data Analysis for Management (Temporary Instructor equivalent to Teaching Associate)
