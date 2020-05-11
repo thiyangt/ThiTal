@@ -5,12 +5,25 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>THIYANGA TALAGALA</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 25 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>THIYANGA TALAGALA</title>
       <link>/</link>
     </image>
+    
+    <item>
+      <title>Teaching Statistics</title>
+      <link>/project/datasets/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/project/datasets/</guid>
+      <description>&lt;h1 id=&#34;dataset-1&#34;&gt;Dataset 1&lt;/h1&gt;
+&lt;h2 id=&#34;consumers-use-of-food-labels&#34;&gt;Consumers&amp;rsquo; use of Food Labels&lt;/h2&gt;
+&lt;p&gt;Food industry is one of the fastest moving industrial sectors. The glamorous and glittering retail shops and supermarkets are expanding very fast all over the country. The majority of food is pre-packed and presented to the consumer in a labelled container. This study was conducted to evaluate the consumers&amp;rsquo; level of knowledge and use of information provided on food labels in making purchasing decisions. A structured questionnaire-based survey was used for the purpose of the study. This is a cross sectional study done over a period of five months from October, 2010 to March, 2011 with an average of seven interviews being conducted each week. The survey was conducted at supermarkets, retail shops of various sizes in five towns: Colombo 02, Kottawa, Maharagama, Nugegoda and Horana in Sri Lanka. A total of 586 respondents were considered for the study. The dataset and the questionnaire used in this studey can be downloaded from the following links. Please see the questionnaire for the column name description.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;foodlabel.csv&#34;&gt;Dataset: Consumers&amp;rsquo; awareness and use of food label information&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[Questionnaire: Consumers&amp;rsquo; awareness and use of food label information]&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Dashboard to monitor COVID-19 situation in Sri Lanka</title>
