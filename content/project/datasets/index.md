@@ -18,4 +18,4 @@ Food industry is one of the fastest moving industrial sectors. The glamorous and
 
 Dataset: [foodlabel.csv](foodlabel.csv)
 
-[Questionnaire: Consumers' awareness and use of food label information]
+[Questionnaire: Consumers' awareness and use of food label information](food2ques.pdf)
