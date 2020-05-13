@@ -16,7 +16,7 @@ Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewar
 
 - [STA 326 2.0 Programming and Data Analysis with R](https://hellor.netlify.com/) 
 
-- [STA 479 2.0 Special Topics in Statistics](https://tstdataviz.netlify.com/slides/2020dataviz.pdf)
+- [ASP 460 2.0/ STA 479 2.0 Special Topics in Statistics](https://tstdataviz.netlify.com/slides/2020dataviz.pdf)
 
 Department of Mathematics, Faculty of Applied Sciences, USJ
 
