@@ -50,9 +50,9 @@ Department of Statistics, Faculty of Applied Sciences, USJ
 
 Department of Statistics, Faculty of Applied Sciences, USJ
 
-- [STA 114 2.0 Probability and Distribution Theory I](/CO/2015s2/STA114tpdf.pdf)
+- [STA 114 2.0 Probability and Distribution Theory I](/CO/2015s1/STA114tpdf.pdf)
 
-- [STA 315 2.0 Programming and Data Analysis with R](/CO/2014s2/STA_315_2014_S2.pdf)
+- [STA 315 2.0 Programming and Data Analysis with R](/CO/2014s2/STA315_2014_S2.pdf)
 
 
 # 2014
