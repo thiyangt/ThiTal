@@ -61,9 +61,9 @@ Department of Statistics, Faculty of Applied Sciences, USJ
 
 Department of Statistics and Computer Science, Faculty of Applied Sciences, USJ
 
-- [STA 123 2.0 Probability and Distribution Theory I](/CO/2014s2/STA_123_2014_2.0.pdf)
+- [STA 123 2.0 Probability and Distribution Theory I](/CO/2014s2/STA123_2014_2.0.pdf)
 
-- [STA 315 2.0 Programming and Data Analysis with R](/CO/2014s2/STA_315_2014_S2.pdf)
+- [STA 315 2.0 Programming and Data Analysis with R](/CO/2014s2/STA315_2014_S2.pdf)
 
 Department of Botany, Faculty of Applied Sciences, USJ
 
