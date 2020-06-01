@@ -58,6 +58,7 @@
 
 
 &lt;p&gt;Visit here: &lt;a href=&#34;https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary&#34; class=&#34;uri&#34;&gt;https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;covid.png&#34; /&gt;&lt;/p&gt;
 &lt;iframe width=&#34;1000&#34; height=&#34;600&#34; scrolling=&#34;no&#34; frameborder=&#34;no&#34; src=&#34;https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary&#34;&gt;
 &lt;/iframe&gt;
 &lt;div id=&#34;code&#34; class=&#34;section level2&#34;&gt;

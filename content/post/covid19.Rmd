@@ -9,6 +9,11 @@ summary: "Dashboard to monitor COVID-19 situation in Sri Lanka. This dashboard i
 
 Visit here: https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary
 
+![](covid.png)
+
+
+
+
 <iframe width="1000" height="600" scrolling="no" frameborder="no"  src="https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary"> </iframe>
 
 ## Code
