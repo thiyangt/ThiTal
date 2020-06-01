@@ -9,7 +9,7 @@ summary: "Dashboard to monitor COVID-19 situation in Sri Lanka. This dashboard i
 
 Visit here: https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary
 
-![](covid.png)
+<img src="/post/covid.png" alt="final image" width="800"/>
 
 
 
