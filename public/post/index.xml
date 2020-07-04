@@ -96,7 +96,7 @@ tosscoin(1)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/height.PNG&#34; alt=&#34;final image&#34; width=&#34;300&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;The random variable &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; can be defined as follows:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\Omega = \{ \omega: \omega &amp;gt; 0\}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y(\omega) = \{ \omega, \text{ } \omega \in \Omega \}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y(\omega) =  \omega, \text{ } \omega \in \Omega. \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;or&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y = \text{Height in cm.}\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
