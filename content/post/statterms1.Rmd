@@ -1,6 +1,6 @@
 ---
 title: "Parameter, Statistic, Random Variable, Estimator and Estimate"
-date: '2020-07-10'
+date: '2020-07-5'
 ---
 
 ```{r setup, include=FALSE}
