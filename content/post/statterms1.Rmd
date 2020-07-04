@@ -217,7 +217,7 @@ If you are not given the observed values of $X_1, X_2, X_3, ..., X_{10}$, you ca
 
 $$\hat{\mu} = \frac{x_1 + x_2 + x_3 + ... + x_{10}}{10}.$$
 
-The value of the estimate varies from sample to sample.
+The observed value of the estimator varies from sample to sample.
 
 # Usage
 

@@ -144,7 +144,7 @@ variable and denote the sample by &lt;span class=&#34;math inline&#34;&gt;\(X_1,
 &lt;pre&gt;&lt;code&gt;[1] 152.6&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you are not given the observed values of &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, X_3, ..., X_{10}\)&lt;/span&gt;, you can write the estimate as&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\hat{\mu} = \frac{x_1 + x_2 + x_3 + ... + x_{10}}{10}.\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The value of the estimate varies from sample to sample.&lt;/p&gt;
+&lt;p&gt;The observed value of the estimator varies from sample to sample.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;usage&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Usage&lt;/h1&gt;
