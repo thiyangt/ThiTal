@@ -7,7 +7,7 @@ date: '2020-07-04'
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-The most common problem while learning Statistics is that students' lack of understanding of the basic  terminologies, notations, definitions and concepts. Think of Statistics as building blocks, and you need a solid foundation to move forward. Throughout this post, I explain five common terms in Statistics: i) Parameter, ii) Statistic, iii) Random Variable, iv) Estimator, v) Estimate and their notations. 
+The most common problem while learning Statistics is that students' lack of understanding of the basic  terminologies, notations, definitions and concepts. Think of Statistics as building blocks, and you need a solid foundation to move forward. Here, I explain five common terms in Statistics: i) Parameter, ii) Statistic, iii) Random Variable, iv) Estimator, v) Estimate and their notations. 
 
 I will start with the definition of Population and Sample.
 
