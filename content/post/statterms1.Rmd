@@ -111,8 +111,8 @@ Simply drop $\omega$ and define the random variable as follows:
 \[
     X= 
 \begin{cases}
-    0,& \text{if the test result is positive. } \\
-    1,              & \text{if the test result is negative.}
+    0,& \text{if the test result is negative. } \\
+    1,              & \text{if the test result is positive.}
 \end{cases}
 \]
 

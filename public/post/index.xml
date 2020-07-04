@@ -88,8 +88,8 @@ tosscoin(1)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
     X= 
 \begin{cases}
-    0,&amp;amp; \text{if the test result is positive. } \\
-    1,              &amp;amp; \text{if the test result is negative.}
+    0,&amp;amp; \text{if the test result is negative. } \\
+    1,              &amp;amp; \text{if the test result is positive.}
 \end{cases}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Let’s consider another experiment. The experiment consists in selecting a random undergraduate student in the University during a period of one week, and measuring their height.&lt;/p&gt;
