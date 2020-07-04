@@ -5,12 +5,165 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>THIYANGA TALAGALA</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 04 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>THIYANGA TALAGALA</title>
       <link>/</link>
     </image>
+    
+    <item>
+      <title>Parameter, Statistic, Random Variable, Estimator and Estimate</title>
+      <link>/post/statterms1/</link>
+      <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/post/statterms1/</guid>
+      <description>
+
+
+&lt;p&gt;I will start with the definition of Population and Sample.&lt;/p&gt;
+&lt;p&gt;A population is a complete collection of individuals/ objects that we are interested in. A sample is a subset of a population.&lt;/p&gt;
+&lt;div id=&#34;parameter&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Parameter&lt;/h1&gt;
+&lt;p&gt;A parameter is a descriptive measure(numerical value) of the population. Parameters are usually denoted by &lt;a href=&#34;https://thiyanga.netlify.app/post/greekletters/&#34;&gt;Greek&lt;/a&gt; letters.&lt;/p&gt;
+&lt;p&gt;Examples of parameters:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; - population mean&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; - population variance&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div id=&#34;statistic&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Statistic&lt;/h1&gt;
+&lt;p&gt;A statistic is a descriptive measure of a sample. For example, sample mean, sample standard deviation, etc. We will talk about the notations under estimator and estimate.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;random-variable&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Random Variable&lt;/h1&gt;
+&lt;p&gt;Before introducing random variable, let me very shortly recall what is a random experiment and what is a sample space.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;random experiment&lt;/strong&gt; is a physical situation whose outcome cannot be predicted with certainty until it is observed. A random experiment can be repeated as many times as we want under the same conditions (leading to different outcomes). Each one of them a trial. Thus, a trial is a particular performance of a random experiment.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;Sample space&lt;/strong&gt; is a set of all possible outcomes of a random experiment. In this blog post I use &lt;span class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt; to denote a sample space.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Example 1:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Random Experiment: Tossing of a coin&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Sample Space:&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Omega = \{H, T\}\)&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(prob) 
+tosscoin(1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;  toss1
+1     H
+2     T&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;Example 2:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Random Experiment: Toss a coin three times&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Sample Space:&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Omega = \{(H, H, H), (H, H, T), (H, T, H), (T, H, H), (H, T, T), (T, H, T), (T, T, H), (T, T, T)\}\)&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tosscoin(3)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;  toss1 toss2 toss3
+1     H     H     H
+2     T     H     H
+3     H     T     H
+4     T     T     H
+5     H     H     T
+6     T     H     T
+7     H     T     T
+8     T     T     T&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Definition: Random Variable&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Let &lt;span class=&#34;math inline&#34;&gt;\((\Omega, \mathscr{F}, \mathbb{P})\)&lt;/span&gt; be a probability space. Random variable is a function &lt;span class=&#34;math inline&#34;&gt;\(X: \Omega \rightarrow \mathbb{R}\)&lt;/span&gt; such that &lt;span class=&#34;math inline&#34;&gt;\(\forall B \in \mathcal{B}( \mathbb{R} ): X^{-1}(B) \in \mathscr{F}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;You need Measure Theory knowledge to understand the above definition.&lt;/p&gt;
+&lt;p&gt;Loosely speaking a &lt;strong&gt;Random variable&lt;/strong&gt; is a function from the sample space to the real numbers. There are two types of random variables: i) Discrete random variable and ii) Continuous random variable. We use Roman capital letters to denote random variables (&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(U\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;, etc.). However, as soon as a variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is observed, the observed values are represented by the corresponding simple Roman letter.&lt;/p&gt;
+&lt;p&gt;The notation &lt;span class=&#34;math inline&#34;&gt;\(X(\omega)\)&lt;/span&gt; denotes the numerical value of the random variable X, when the outcome of the experiment is some particular &lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;An example will help you to understand how this works. To start with, let’s consider a simple experiment with two possible outcomes: &lt;a href=&#34;(https://en.wikipedia.org/wiki/Polymerase_chain_reaction)&#34;&gt;PCR&lt;/a&gt; test result of a randomly selected individual.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/PCR.PNG&#34; alt=&#34;final image&#34; width=&#34;300&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;The random variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; can be defined as follows:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Solution 1.1&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Sample space&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\Omega = \{Positive, Negative\}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Random variable&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+    X(\omega)= 
+\begin{cases}
+    0,&amp;amp; \text{if } \omega =  Negative\\
+    1,              &amp;amp; \text{if } \omega =  Positive
+\end{cases}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/sample_space.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Solution 1.2&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Simply drop &lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt; and define the random variable as follows:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+    X= 
+\begin{cases}
+    0,&amp;amp; \text{if the test result is negative. } \\
+    1,              &amp;amp; \text{if the test result is positive.}
+\end{cases}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Let’s consider another experiment. The experiment consists in selecting a random undergraduate student in the University during a period of one week, and measuring their height.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/height.PNG&#34; alt=&#34;final image&#34; width=&#34;300&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;The random variable &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; can be defined as follows:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\Omega = \{ \omega: \omega &amp;gt; 0\}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y(\omega) = \{ \omega, \text{ } \omega \in \Omega \}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y = \text{Height in cm.}\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;notations-for-random-variables-and-observed-data-in-sampling&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Notations for Random Variables and Observed Data (in Sampling)&lt;/h1&gt;
+&lt;p&gt;Suppose you have a random variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;. Suppose we repeat the random experiment &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; times. Then the resulting random variables are denoted by &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, ..., X_n\)&lt;/span&gt;. All &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt;’s have the same distribution as &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;. The random variables &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, ..., X_n\)&lt;/span&gt; are collectively referred to as a &lt;strong&gt;random sample&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Let’s try to understand the concept with an example.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+    X_i= 
+\begin{cases}
+    0,&amp;amp; \text{if the test result of the } i^{th} \text { is negaive } \\
+    1,              &amp;amp; \text{if the test result of the } i^{th} \text { is positive, }
+\end{cases}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;where &lt;span class=&#34;math inline&#34;&gt;\(i = 1, 2, 3, 4, 5.\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;We performed the PCR test on randomly selected 5 individuals. We called this sample 1. The results are &lt;span class=&#34;math inline&#34;&gt;\(x_1=1, x_2=0, x_3=0, x_4=1, x_5=1\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Prior to obtaining &lt;span class=&#34;math inline&#34;&gt;\(x_1, x_2, x_3, x_4, x_5\)&lt;/span&gt;, there is uncertainty about the values of each &lt;span class=&#34;math inline&#34;&gt;\(x_i\)&lt;/span&gt;. Because of this
+uncertainty, before the results becomes available we view each observation as a random
+variable and denote the sample by &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, X_3, X_4, X_5\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;We again performed the PCR test on another randomly selected 5 individuals. We called this sample 2. Now results are &lt;span class=&#34;math inline&#34;&gt;\(x_1=0, x_2=0, x_3=0, x_4=1, x_5=0\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;You can see observable values for &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, X_3, X_4, X_5\)&lt;/span&gt; vary from sample to sample.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/pop_sam.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;estimator-and-estimate&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Estimator and Estimate&lt;/h1&gt;
+&lt;p&gt;Distinction between the terms &lt;strong&gt;Estimator&lt;/strong&gt; and &lt;strong&gt;Estimate&lt;/strong&gt; is important.&lt;/p&gt;
+&lt;p&gt;Let &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, ..., X_n\)&lt;/span&gt; be a random sample from a distribution function &lt;span class=&#34;math inline&#34;&gt;\(f_X(x)\)&lt;/span&gt; that depends on a unknown parameter &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;An estimator is a statistic, &lt;span class=&#34;math inline&#34;&gt;\(T = f(X_1, ..., X_n)\)&lt;/span&gt;, that is used to estimate the unknown unknown parameter, &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;, based on an observed sample of &lt;span class=&#34;math inline&#34;&gt;\(x_1, x_2, ..., x_n\)&lt;/span&gt;. The &lt;span class=&#34;math inline&#34;&gt;\(t=f(x_1, x_2, ..., x_n)\)&lt;/span&gt; is an estimate of &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Estimator: An estimator is always a random variable.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat{\theta} = T = f(X_1, ..., X_n)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Estimate: An estimate is a constant.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat{\theta} = t = f(x_1, ..., x_n)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Note that we use &lt;span class=&#34;math inline&#34;&gt;\(\hat{\theta}\)&lt;/span&gt; for both estimator and estimate.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Estimator is a function of observable random variables that is used to estimate an unknown parameter &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;. The corresponding estimate is obtained by substituting the observed values to the estimator.&lt;/strong&gt; You can also think of an estimator as the rule (equation) that is used to compute an estimate. For example, the sample mean, &lt;span class=&#34;math inline&#34;&gt;\(\bar{X}\)&lt;/span&gt;, is an estimator that is used to estimate the population mean, &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Below example is useful to understand the concepts.&lt;/p&gt;
+&lt;p&gt;Let’s say you wanted to know the mean height of undergraduates in a certain university with a population of 1000 undergraduates. You take a random sample of 10 students and measure their height. The observed values are (in cm) 150, 155, 160, 161, 162, 152, 140, 141, 150, 155. Suppose you want to use sample mean to estimate the population mean.&lt;/p&gt;
+&lt;p&gt;The parameter we want to estimate is, &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;, population mean (mean height of the students in the university.).&lt;/p&gt;
+&lt;p&gt;There are infinitely many possible estimators for &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;. For example, sample mean, sample median. In this example we use sample mean to estimate &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;. Now, let’s write the estimator using the notations.&lt;/p&gt;
+&lt;p&gt;To do this, we first define random variables &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, X_3, ..., X_{10}\)&lt;/span&gt; as follows: &lt;span class=&#34;math inline&#34;&gt;\(X_1\)&lt;/span&gt; is the height of the &lt;span class=&#34;math inline&#34;&gt;\(1^{st}\)&lt;/span&gt; chosen person, &lt;span class=&#34;math inline&#34;&gt;\(X_2\)&lt;/span&gt; be the height of the &lt;span class=&#34;math inline&#34;&gt;\(2^{nd}\)&lt;/span&gt; chosen person,…. In general, &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; is the height of the &lt;span class=&#34;math inline&#34;&gt;\(i^{th}\)&lt;/span&gt; student chosen from the population.&lt;/p&gt;
+&lt;p&gt;Now we can write the &lt;strong&gt;estimator&lt;/strong&gt; as&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\hat{\mu} = \bar{X}=\frac{X_1 + X_2 + X_3 + ... + X_{10}}{10}.\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;estimate&lt;/strong&gt; is&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\hat{\mu}=152.6\text{ cm}.\]&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(c(150, 155, 160, 161, 162, 152, 140, 141, 150, 155))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] 152.6&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you are not given the observed values of &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, X_3, ..., X_{10}\)&lt;/span&gt;, you can write the estimate as&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\hat{\mu} = \frac{x_1 + x_2 + x_3 + ... + x_{10}}{10}.\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The observed value of the estimator varies from sample to sample.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;usage&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Usage&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Writing distributions&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X \sim Bin(10, 0.6)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[f_X(x) = P(X=x) = {n\choose x} 0.6^x 0.4^{(10-x)}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[f_X(5) = P(X=5) = {10\choose 5} 0.6^5 0.4^{(10-5)} = 0.37\]&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pbinom(5, 10, 0.6)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] 0.3668967&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Calculation of expectations&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(\text{Estimator}) = \text{Parameter}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(\bar{X}) = \mu\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Happy Women in Maths Day - 12 May 2020</title>
@@ -924,159 +1077,6 @@ the high dimensionality. It is unlikely that a single method will consistently p
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Parameter, Statistic, Random Variable, Estimator and Estimate</title>
-      <link>/post/statterms1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/post/statterms1/</guid>
-      <description>
-
-
-&lt;p&gt;I will start with the definition of Population and Sample.&lt;/p&gt;
-&lt;p&gt;A population is a complete collection of individuals/ objects that we are interested in. A sample is a subset of a population.&lt;/p&gt;
-&lt;div id=&#34;parameter&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Parameter&lt;/h1&gt;
-&lt;p&gt;A parameter is a descriptive measure(numerical value) of the population. Parameters are usually denoted by &lt;a href=&#34;https://thiyanga.netlify.app/post/greekletters/&#34;&gt;Greek&lt;/a&gt; letters.&lt;/p&gt;
-&lt;p&gt;Examples of parameters:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; - population mean&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; - population variance&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/div&gt;
-&lt;div id=&#34;statistic&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Statistic&lt;/h1&gt;
-&lt;p&gt;A statistic is a descriptive measure of a sample. For example, sample mean, sample standard deviation, etc. We will talk about the notations under estimator and estimate.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;random-variable&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Random Variable&lt;/h1&gt;
-&lt;p&gt;Before introducing random variable, let me very shortly recall what is a random experiment and what is a sample space.&lt;/p&gt;
-&lt;p&gt;A &lt;strong&gt;random experiment&lt;/strong&gt; is a physical situation whose outcome cannot be predicted with certainty until it is observed. A random experiment can be repeated as many times as we want under the same conditions (leading to different outcomes). Each one of them a trial. Thus, a trial is a particular performance of a random experiment.&lt;/p&gt;
-&lt;p&gt;A &lt;strong&gt;Sample space&lt;/strong&gt; is a set of all possible outcomes of a random experiment. In this blog post I use &lt;span class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt; to denote a sample space.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Example 1:&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Random Experiment: Tossing of a coin&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Sample Space:&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Omega = \{H, T\}\)&lt;/span&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(prob) 
-tosscoin(1)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;  toss1
-1     H
-2     T&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;em&gt;Example 2:&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Random Experiment: Toss a coin three times&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Sample Space:&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Omega = \{(H, H, H), (H, H, T), (H, T, H), (T, H, H), (H, T, T), (T, H, T), (T, T, H), (T, T, T)\}\)&lt;/span&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tosscoin(3)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;  toss1 toss2 toss3
-1     H     H     H
-2     T     H     H
-3     H     T     H
-4     T     T     H
-5     H     H     T
-6     T     H     T
-7     H     T     T
-8     T     T     T&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Definition: Random Variable&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Let &lt;span class=&#34;math inline&#34;&gt;\((\Omega, \mathscr{F}, \mathbb{P})\)&lt;/span&gt; be a probability space. Random variable is a function &lt;span class=&#34;math inline&#34;&gt;\(X: \Omega \rightarrow \mathbb{R}\)&lt;/span&gt; such that &lt;span class=&#34;math inline&#34;&gt;\(\forall B \in \mathcal{B}( \mathbb{R} ): X^{-1}(B) \in \mathscr{F}\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;You need Measure Theory knowledge to understand the above definition.&lt;/p&gt;
-&lt;p&gt;Loosely speaking a &lt;strong&gt;Random variable&lt;/strong&gt; is a function from the sample space to the real numbers. There are two types of random variables: i) Discrete random variable and ii) Continuous random variable. We use Roman capital letters to denote random variables (&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(U\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;, etc.). However, as soon as a variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is observed, the observed values are represented by the corresponding simple Roman letter.&lt;/p&gt;
-&lt;p&gt;The notation &lt;span class=&#34;math inline&#34;&gt;\(X(\omega)\)&lt;/span&gt; denotes the numerical value of the random variable X, when the outcome of the experiment is some particular &lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;An example will help you to understand how this works. To start with, let’s consider a simple experiment with two possible outcomes: &lt;a href=&#34;(https://en.wikipedia.org/wiki/Polymerase_chain_reaction)&#34;&gt;PCR&lt;/a&gt; test result of a randomly selected individual.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/PCR.PNG&#34; alt=&#34;final image&#34; width=&#34;300&#34;/&gt;&lt;/p&gt;
-&lt;p&gt;The random variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; can be defined as follows:&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Solution 1.1&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Sample space&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\Omega = \{Positive, Negative\}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Random variable&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-    X(\omega)= 
-\begin{cases}
-    0,&amp;amp; \text{if } \omega =  Negative\\
-    1,              &amp;amp; \text{if } \omega =  Positive
-\end{cases}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/sample_space.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Solution 1.2&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Simply drop &lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt; and define the random variable as follows:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-    X= 
-\begin{cases}
-    0,&amp;amp; \text{if the test result is negative. } \\
-    1,              &amp;amp; \text{if the test result is positive.}
-\end{cases}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Let’s consider another experiment. The experiment consists in selecting a random undergraduate student in the University during a period of one week, and measuring their height.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/height.PNG&#34; alt=&#34;final image&#34; width=&#34;300&#34;/&gt;&lt;/p&gt;
-&lt;p&gt;The random variable &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; can be defined as follows:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\Omega = \{ \omega: \omega &amp;gt; 0\}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y(\omega) = \{ \omega, \text{ } \omega \in \Omega \}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;or&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y = \text{Height in cm.}\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;notations-for-random-variables-and-observed-data-in-sampling&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Notations for Random Variables and Observed Data (in Sampling)&lt;/h1&gt;
-&lt;p&gt;Suppose you have a random variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;. Suppose we repeat the random experiment &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; times. Then the resulting random variables are denoted by &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, ..., X_n\)&lt;/span&gt;. All &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt;’s have the same distribution as &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;. The random variables &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, ..., X_n\)&lt;/span&gt; are collectively referred to as a &lt;strong&gt;random sample&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Let’s try to understand the concept with an example.&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-    X_i= 
-\begin{cases}
-    0,&amp;amp; \text{if the test result of the } i^{th} \text { is negaive } \\
-    1,              &amp;amp; \text{if the test result of the } i^{th} \text { is positive, }
-\end{cases}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;where &lt;span class=&#34;math inline&#34;&gt;\(i = 1, 2, 3, 4, 5.\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;We performed the PCR test on randomly selected 5 individuals. We called this sample 1. The results are &lt;span class=&#34;math inline&#34;&gt;\(x_1=1, x_2=0, x_3=0, x_4=1, x_5=1\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Prior to obtaining &lt;span class=&#34;math inline&#34;&gt;\(x_1, x_2, x_3, x_4, x_5\)&lt;/span&gt;, there is uncertainty about the values of each &lt;span class=&#34;math inline&#34;&gt;\(x_i\)&lt;/span&gt;. Because of this
-uncertainty, before the results becomes available we view each observation as a random
-variable and denote the sample by &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, X_3, X_4, X_5\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;We again performed the PCR test on another randomly selected 5 individuals. We called this sample 2. Now results are &lt;span class=&#34;math inline&#34;&gt;\(x_1=0, x_2=0, x_3=0, x_4=1, x_5=0\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;You can see observable values for &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, X_3, X_4, X_5\)&lt;/span&gt; vary from sample to sample.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/pop_sam.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;estimator-and-estimate&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Estimator and Estimate&lt;/h1&gt;
-&lt;p&gt;Distinction between the terms &lt;strong&gt;Estimator&lt;/strong&gt; and &lt;strong&gt;Estimate&lt;/strong&gt; is important.&lt;/p&gt;
-&lt;p&gt;Let &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, ..., X_n\)&lt;/span&gt; be a random sample from a distribution function &lt;span class=&#34;math inline&#34;&gt;\(f_X(x)\)&lt;/span&gt; that depends on a unknown parameter &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;An estimator is a statistic, &lt;span class=&#34;math inline&#34;&gt;\(T = f(X_1, ..., X_n)\)&lt;/span&gt;, that is used to estimate the unknown unknown parameter, &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;, based on an observed sample of &lt;span class=&#34;math inline&#34;&gt;\(x_1, x_2, ..., x_n\)&lt;/span&gt;. The &lt;span class=&#34;math inline&#34;&gt;\(t=f(x_1, x_2, ..., x_n)\)&lt;/span&gt; is an estimate of &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Estimator: An estimator is always a random variable.&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat{\theta} = T = f(X_1, ..., X_n)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Estimate: An estimate is a constant.&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat{\theta} = t = f(x_1, ..., x_n)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Note that we use &lt;span class=&#34;math inline&#34;&gt;\(\hat{\theta}\)&lt;/span&gt; for both estimator and estimate.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Estimator is a function of observable random variables that is used to estimate an unknown parameter &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;. The corresponding estimate is obtained by substituting the observed values to the estimator.&lt;/strong&gt; You can also think of an estimator as the rule (equation) that is used to compute an estimate. For example, the sample mean, &lt;span class=&#34;math inline&#34;&gt;\(\bar{X}\)&lt;/span&gt;, is an estimator that is used to estimate the population mean, &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Below example is useful to understand the concepts.&lt;/p&gt;
-&lt;p&gt;Let’s say you wanted to know the mean height of undergraduates in a certain university with a population of 1000 undergraduates. You take a random sample of 10 students and measure their height. The observed values are (in cm) 150, 155, 160, 161, 162, 152, 140, 141, 150, 155. Suppose you want to use sample mean to estimate the population mean.&lt;/p&gt;
-&lt;p&gt;The parameter we want to estimate is, &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;, population mean (mean height of the students in the university.).&lt;/p&gt;
-&lt;p&gt;There are infinitely many possible estimators for &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;. For example, sample mean, sample median. In this example we use sample mean to estimate &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;. Now, let’s write the estimator using the notations.&lt;/p&gt;
-&lt;p&gt;To do this, we first define random variables &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, X_3, ..., X_{10}\)&lt;/span&gt; as follows: &lt;span class=&#34;math inline&#34;&gt;\(X_1\)&lt;/span&gt; is the height of the &lt;span class=&#34;math inline&#34;&gt;\(1^{st}\)&lt;/span&gt; chosen person, &lt;span class=&#34;math inline&#34;&gt;\(X_2\)&lt;/span&gt; be the height of the &lt;span class=&#34;math inline&#34;&gt;\(2^{nd}\)&lt;/span&gt; chosen person,…. In general, &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; is the height of the &lt;span class=&#34;math inline&#34;&gt;\(i^{th}\)&lt;/span&gt; student chosen from the population.&lt;/p&gt;
-&lt;p&gt;Now we can write the &lt;strong&gt;estimator&lt;/strong&gt; as&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\hat{\mu} = \bar{X}=\frac{X_1 + X_2 + X_3 + ... + X_{10}}{10}.\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The &lt;strong&gt;estimate&lt;/strong&gt; is&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\hat{\mu}=152.6\text{ cm}.\]&lt;/span&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(c(150, 155, 160, 161, 162, 152, 140, 141, 150, 155))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;[1] 152.6&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If you are not given the observed values of &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, X_3, ..., X_{10}\)&lt;/span&gt;, you can write the estimate as&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\hat{\mu} = \frac{x_1 + x_2 + x_3 + ... + x_{10}}{10}.\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The observed value of the estimator varies from sample to sample.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;usage&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Usage&lt;/h1&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Writing distributions&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X \sim Bin(10, 0.6)\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[f_X(x) = P(X=x) = {n\choose x} 0.6^x 0.4^{(10-x)}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[f_X(5) = P(X=5) = {10\choose 5} 0.6^5 0.4^{(10-5)} = 0.37\]&lt;/span&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pbinom(5, 10, 0.6)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;[1] 0.3668967&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Calculation of expectations&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(\text{Estimator}) = \text{Parameter}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(\bar{X}) = \mu\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
 </description>
     </item>
     
