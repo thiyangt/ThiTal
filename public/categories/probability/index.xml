@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>probability | THIYANGA TALAGALA</title>
+    <link>/categories/probability/</link>
+      <atom:link href="/categories/probability/index.xml" rel="self" type="application/rss+xml" />
+    <description>probability</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>probability</title>
+      <link>/categories/probability/</link>
+    </image>
+    
+    <item>
+      <title>Parameter, Statistics, Random Variable, Estimator and Estimate</title>
+      <link>/post/blog/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/post/blog/</guid>
+      <description>
+
+
+&lt;p&gt;Hi,&lt;/p&gt;
+&lt;div id=&#34;parameter&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Parameter&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;statistic&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Statistic&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;random-variable&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Random Variable&lt;/h1&gt;
+&lt;p&gt;Before discussing the definition of Random Variable. Let’s&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sample space&lt;/strong&gt; is a collection of all possible outcomes of a random experiment.&lt;/p&gt;
+&lt;p&gt;Loosely speaking, a &lt;em&gt;random variable&lt;/em&gt; is a mapping from the &lt;em&gt;sample space&lt;/em&gt; to the set of real numbers.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;estimator&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Estimator&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;estimate&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Estimate&lt;/h1&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

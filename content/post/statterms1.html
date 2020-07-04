@@ -1,0 +1,149 @@
+---
+title: "Parameter, Statistics, Random Variable, Estimator and Estimate"
+date: '2020-07-10'
+---
+
+
+
+<p>I will start with the definition of Population and Sample.</p>
+<p>A population is a complete collection of individuals/ objects that we are interested in. A sample is a subset of a population.</p>
+<div id="parameter" class="section level1">
+<h1>Parameter</h1>
+<p>A parameter is a descriptive measure (numerical value) of the population. Parameters are usually denoted by <a href="https://thiyanga.netlify.app/post/greekletters/">Greek</a> letters.</p>
+<p>Examples of parameters:</p>
+<blockquote>
+<p><span class="math inline">\(\mu\)</span> - population mean</p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\(\sigma^2\)</span> - population variance</p>
+</blockquote>
+</div>
+<div id="statistic" class="section level1">
+<h1>Statistic</h1>
+<p>A statistic is a descriptive measure of a sample. For example, sample mean, sample standard deviation, etc. We will talk about the notations under estimator and estimate.</p>
+</div>
+<div id="random-variable" class="section level1">
+<h1>Random Variable</h1>
+<p>Before introducing random variable, let me very shortly recall what is a random experiment and what is a sample space.</p>
+<p>A <strong>random experiment</strong> is a physical situation whose outcome cannot be predicted with certainty until it is observed. A random experiment can be repeated as many times as we want under the same conditions (leading to different outcomes). Each one of them a trial. Thus, a trial is a particular performance of a random experiment.</p>
+<p>A <strong>Sample space</strong> is a set of all possible outcomes of a random experiment. In this blog post I use <span class="math inline">\(\Omega\)</span> to denote a sample space.</p>
+<p><em>Example 1:</em></p>
+<p><em>Random Experiment: Tossing of a coin</em>.</p>
+<p><em>Sample Space:</em> <span class="math inline">\(\Omega = \{H, T\}\)</span></p>
+<pre class="r"><code>library(prob) 
+tosscoin(1)</code></pre>
+<pre><code>  toss1
+1     H
+2     T</code></pre>
+<p><em>Example 2:</em></p>
+<p><em>Random Experiment: Toss a coin three times</em>.</p>
+<p><em>Sample Space:</em> <span class="math inline">\(\Omega = \{(H, H, H), (H, H, T), (H, T, H), (T, H, H), (H, T, T), (T, H, T), (T, T, H), (T, T, T)\}\)</span></p>
+<pre class="r"><code>tosscoin(3)</code></pre>
+<pre><code>  toss1 toss2 toss3
+1     H     H     H
+2     T     H     H
+3     H     T     H
+4     T     T     H
+5     H     H     T
+6     T     H     T
+7     H     T     T
+8     T     T     T</code></pre>
+<p><strong>Definition: Random Variable</strong></p>
+<p>Let <span class="math inline">\((\Omega, \mathscr{F}, \mathbb{P})\)</span> be a probability space. Random variable is a function <span class="math inline">\(X: \Omega \rightarrow \mathbb{R}\)</span> such that <span class="math inline">\(\forall B \in \mathcal{B}( \mathbb{R} ): X^{-1}(B) \in \mathscr{F}\)</span>.</p>
+<p>You need Measure Theory knowledge to understand the above definition.</p>
+<p>Loosely speaking a <strong>Random variable</strong> is a function from the sample space to the real numbers. There are two types of random variables: i) Discrete random variable and ii) Continuous random variable. We use Roman capital letters to denote random variables (<span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, <span class="math inline">\(Z\)</span>, <span class="math inline">\(U\)</span>, <span class="math inline">\(T\)</span>, etc.). However, as soon as a variable <span class="math inline">\(X\)</span> is observed, the observed values are represented by the corresponding simple Roman letter.</p>
+<p>The notation <span class="math inline">\(X(\omega)\)</span> denotes the numerical value of the random variable X, when the outcome of the experiment is some particular <span class="math inline">\(\omega\)</span>.</p>
+<p>An example will help you to understand how this works. To start with, let’s consider a simple experiment with two possible outcomes: <a href="(https://en.wikipedia.org/wiki/Polymerase_chain_reaction)">PCR</a> test result of a randomly selected individual.</p>
+<p><img src="/post/PCR.PNG" alt="final image" width="300"/></p>
+<p>The random variable <span class="math inline">\(X\)</span> can be defined as follows:</p>
+<p><em>Solution 1.1</em></p>
+<p><em>Sample space</em></p>
+<p><span class="math display">\[\Omega = \{Positive, Negative\}\]</span></p>
+<p><em>Random variable</em></p>
+<p><span class="math display">\[
+    X(\omega)= 
+\begin{cases}
+    1,&amp; \text{if } \omega =  Negative\\
+    0,              &amp; \text{if } \omega =  Positive
+\end{cases}
+\]</span></p>
+<p><img src="/post/sample_space.PNG" alt="final image" width="800"/></p>
+<p><em>Solution 1.2</em></p>
+<p>Simply drop <span class="math inline">\(\omega\)</span> and define the random variable as follows:</p>
+<p><span class="math display">\[
+    X= 
+\begin{cases}
+    0,&amp; \text{if the test result is positive. } \\
+    1,              &amp; \text{if the test result is negative.}
+\end{cases}
+\]</span></p>
+<p>Let’s consider another experiment. The experiment consists in selecting a random undergraduate student in the University during a period of one week, and measuring their height.</p>
+<p><img src="/post/height.PNG" alt="final image" width="300"/></p>
+<p>The random variable <span class="math inline">\(Y\)</span> can be defined as follows:</p>
+<p><span class="math display">\[\Omega = \{ \omega: \omega &gt; 0\}\]</span></p>
+<p><span class="math display">\[Y(\omega) = \{ \omega, \text{ } \omega \in \Omega \}\]</span></p>
+<p>or</p>
+<p><span class="math display">\[Y = \text{Height in cm.}\]</span></p>
+</div>
+<div id="notations-for-random-variables-and-observed-data-in-sampling" class="section level1">
+<h1>Notations for Random Variables and Observed Data (in Sampling)</h1>
+<p>Suppose you have a random variable <span class="math inline">\(X\)</span>. Suppose we repeat the random experiment <span class="math inline">\(n\)</span> times. Then the resulting random variables are denoted by <span class="math inline">\(X_1, X_2, ..., X_n\)</span>. All <span class="math inline">\(X_i\)</span>’s have the same distribution as <span class="math inline">\(X\)</span>. The random variables <span class="math inline">\(X_1, X_2, ..., X_n\)</span> are collectively referred to as a <strong>random sample</strong>.</p>
+<p>Let’s try to understand the concept with an example.</p>
+<p><span class="math display">\[
+    X_i= 
+\begin{cases}
+    0,&amp; \text{if the test result of the } i^{th} \text { is negaive } \\
+    1,              &amp; \text{if the test result of the } i^{th} \text { is positive, }
+\end{cases}
+\]</span></p>
+<p>where <span class="math inline">\(i = 1, 2, 3, 4, 5.\)</span></p>
+<p>We performed the PCR test on randomly selected 5 individuals. We called this sample 1. The results are <span class="math inline">\(x_1=1, x_2=0, x_3=0, x_4=1, x_5=1\)</span>.</p>
+<p>Prior to obtaining <span class="math inline">\(x_1, x_2, x_3, x_4, x_5\)</span>, there is uncertainty about the values of each <span class="math inline">\(x_i\)</span>. Because of this
+uncertainty, before the results becomes available we view each observation as a random
+variable and denote the sample by <span class="math inline">\(X_1, X_2, X_3, X_4, X_5\)</span>.</p>
+<p>We again performed the PCR test on another randomly selected 5 individuals. We called this sample 2. Now results are <span class="math inline">\(x_1=0, x_2=0, x_3=0, x_4=1, x_5=0\)</span>.</p>
+<p>You can see observable values for <span class="math inline">\(X_1, X_2, X_3, X_4, X_5\)</span> vary from sample to sample.</p>
+<p><img src="/post/pop_sam.PNG" alt="final image" width="800"/></p>
+</div>
+<div id="estimator-and-estimate" class="section level1">
+<h1>Estimator and Estimate</h1>
+<p>Distinction between the terms <strong>Estimator</strong> and <strong>Estimate</strong> is important.</p>
+<p>Let <span class="math inline">\(X_1, X_2, ..., X_n\)</span> be a random sample from a distribution function <span class="math inline">\(f_X(x)\)</span> that depends on a unknown parameter <span class="math inline">\(\theta\)</span>.</p>
+<p>An estimator is a statistic, <span class="math inline">\(T = f(X_1, ..., X_n)\)</span>, that is used to estimate the unknown unknown parameter, <span class="math inline">\(\theta\)</span>, based on an observed sample of <span class="math inline">\(x_1, x_2, ..., x_n\)</span>. The <span class="math inline">\(t=f(x_1, x_2, ..., x_n)\)</span> is an estimate of <span class="math inline">\(\theta\)</span>.</p>
+<p>Estimator: An estimator is always a random variable.</p>
+<p><span class="math inline">\(\hat{\theta} = T = f(X_1, ..., X_n)\)</span></p>
+<p>Estimate: An estimate is a constant.</p>
+<p><span class="math inline">\(\hat{\theta} = t = f(x_1, ..., x_n)\)</span></p>
+<p>Note that we use <span class="math inline">\(\hat{\theta}\)</span> for both estimator and estimate.</p>
+<p><strong>Estimator is a function of observable random variables that is used to estimate an unknown parameter <span class="math inline">\(\theta\)</span>. The corresponding estimate is obtained by substituting the observed values to the estimator.</strong> You can also think of an estimator as the rule (equation) that is used to compute an estimate. For example, the sample mean, <span class="math inline">\(\bar{X}\)</span>, is an estimator that is used to estimate the population mean, <span class="math inline">\(\mu\)</span>.</p>
+<p>Below example is useful to understand the concepts.</p>
+<p>Let’s say you wanted to know the mean height of undergraduates in a certain university with a population of 1000 undergraduates. You take a random sample of 10 students and measure their height. The observed values are (in cm) 150, 155, 160, 161, 162, 152, 140, 141, 150, 155. Suppose you want to use sample mean to estimate the population mean.</p>
+<p>The parameter we want to estimate is, <span class="math inline">\(\mu\)</span>, population mean (mean height of the students in the university.).</p>
+<p>There are infinitely many possible estimators for <span class="math inline">\(\mu\)</span>. For example, sample mean, sample median. In this example we use sample mean to estimate <span class="math inline">\(\mu\)</span>. Now, let’s write the estimator using the notations.</p>
+<p>To do this, we first define random variables <span class="math inline">\(X_1, X_2, X_3, ..., X_{10}\)</span> as follows: <span class="math inline">\(X_1\)</span> is the height of the <span class="math inline">\(1^{st}\)</span> chosen person, <span class="math inline">\(X_2\)</span> be the height of the <span class="math inline">\(2^{nd}\)</span> chosen person,…. In general, <span class="math inline">\(X_i\)</span> is the height of the <span class="math inline">\(i^{th}\)</span> student chosen from the population.</p>
+<p>Now we can write the <strong>estimator</strong> as</p>
+<p><span class="math display">\[\hat{\mu} = \bar{X}=\frac{X_1 + X_2 + X_3 + ... + X_{10}}{10}.\]</span></p>
+<p>The <strong>estimate</strong> is</p>
+<p><span class="math display">\[\hat{\mu}=152.6\text{ cm}.\]</span></p>
+<pre class="r"><code>mean(c(150, 155, 160, 161, 162, 152, 140, 141, 150, 155))</code></pre>
+<pre><code>[1] 152.6</code></pre>
+<p>If you are not given the observed values of <span class="math inline">\(X_1, X_2, X_3, ..., X_{10}\)</span>, you can write the estimate as</p>
+<p><span class="math display">\[\hat{\mu} = \frac{x_1 + x_2 + x_3 + ... + x_{10}}{10}.\]</span></p>
+<p>The value of the estimate varies from sample to sample.</p>
+</div>
+<div id="usage" class="section level1">
+<h1>Usage</h1>
+<ol style="list-style-type: decimal">
+<li>Writing distributions</li>
+</ol>
+<p><span class="math display">\[X \sim Bin(10, 0.6)\]</span></p>
+<p><span class="math display">\[f_X(x) = P(X=x) = {n\choose x} 0.6^x 0.4^{(10-x)}\]</span></p>
+<p><span class="math display">\[f_X(5) = P(X=5) = {10\choose 5} 0.6^5 0.4^{(10-5)} = 0.37\]</span></p>
+<pre class="r"><code>pbinom(5, 10, 0.6)</code></pre>
+<pre><code>[1] 0.3668967</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Calculation of expectations</li>
+</ol>
+<p><span class="math display">\[E(\text{Estimator}) = \text{Parameter}\]</span></p>
+<p><span class="math display">\[E(\bar{X}) = \mu\]</span></p>
+</div>
