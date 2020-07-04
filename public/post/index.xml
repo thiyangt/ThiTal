@@ -24,7 +24,7 @@
 &lt;p&gt;A population is a complete collection of individuals/ objects that we are interested in. A sample is a subset of a population.&lt;/p&gt;
 &lt;div id=&#34;parameter&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Parameter&lt;/h1&gt;
-&lt;p&gt;A parameter is a descriptive measure (numerical value) of the population. Parameters are usually denoted by &lt;a href=&#34;https://thiyanga.netlify.app/post/greekletters/&#34;&gt;Greek&lt;/a&gt; letters.&lt;/p&gt;
+&lt;p&gt;A parameter is a descriptive measure(numerical value) of the population. Parameters are usually denoted by &lt;a href=&#34;https://thiyanga.netlify.app/post/greekletters/&#34;&gt;Greek&lt;/a&gt; letters.&lt;/p&gt;
 &lt;p&gt;Examples of parameters:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; - population mean&lt;/p&gt;
@@ -78,8 +78,8 @@ tosscoin(1)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
     X(\omega)= 
 \begin{cases}
-    1,&amp;amp; \text{if } \omega =  Negative\\
-    0,              &amp;amp; \text{if } \omega =  Positive
+    0,&amp;amp; \text{if } \omega =  Negative\\
+    1,              &amp;amp; \text{if } \omega =  Positive
 \end{cases}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/post/sample_space.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;

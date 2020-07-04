@@ -13,7 +13,7 @@ A population is a complete collection of individuals/ objects that we are intere
 
 # Parameter
 
-A parameter is a descriptive measure (numerical value) of the population. Parameters are usually denoted by [Greek](https://thiyanga.netlify.app/post/greekletters/) letters. 
+A parameter is a descriptive measure(numerical value) of the population. Parameters are usually denoted by [Greek](https://thiyanga.netlify.app/post/greekletters/) letters. 
 
 Examples of parameters:
 
@@ -96,8 +96,8 @@ $$\Omega = \{Positive, Negative\}$$
 \[
     X(\omega)= 
 \begin{cases}
-    1,& \text{if } \omega =  Negative\\
-    0,              & \text{if } \omega =  Positive
+    0,& \text{if } \omega =  Negative\\
+    1,              & \text{if } \omega =  Positive
 \end{cases}
 \]
 
