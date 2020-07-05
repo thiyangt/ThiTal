@@ -956,7 +956,8 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
       <link>/privacy/</link>
       <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
       <guid>/privacy/</guid>
-      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+      <description>&lt;p&gt;Available via license: CC BY 4.0&lt;/p&gt;
+&lt;p&gt;Content may be subject to copyright.&lt;/p&gt;
 </description>
     </item>
     
@@ -965,7 +966,8 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
       <link>/terms/</link>
       <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
       <guid>/terms/</guid>
-      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+      <description>&lt;p&gt;Available via license: CC BY 4.0&lt;/p&gt;
+&lt;p&gt;Content may be subject to copyright.&lt;/p&gt;
 </description>
     </item>
     

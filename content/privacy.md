@@ -10,4 +10,6 @@ share: false
 title: Privacy Policy
 ---
 
-...
+Available via license: CC BY 4.0
+
+Content may be subject to copyright.
