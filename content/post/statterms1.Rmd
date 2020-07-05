@@ -227,7 +227,7 @@ The observed value of the estimator varies from sample to sample.
 
 $$X \sim Bin(10, 0.6)$$
 
-$$f_X(x) = P(X=x) = {n\choose x} 0.6^x 0.4^{(10-x)}$$
+$$f_X(x) = P(X=x) = {10\choose x} 0.6^x 0.4^{(10-x)}$$
 
 $$f_X(5) = P(X=5) = {10\choose 5} 0.6^5 0.4^{(10-5)} = 0.37$$
 

@@ -153,7 +153,7 @@ variable and denote the sample by &lt;span class=&#34;math inline&#34;&gt;\(X_1,
 &lt;li&gt;Writing distributions&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X \sim Bin(10, 0.6)\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[f_X(x) = P(X=x) = {n\choose x} 0.6^x 0.4^{(10-x)}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[f_X(x) = P(X=x) = {10\choose x} 0.6^x 0.4^{(10-x)}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[f_X(5) = P(X=5) = {10\choose 5} 0.6^5 0.4^{(10-5)} = 0.37\]&lt;/span&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pbinom(5, 10, 0.6)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;[1] 0.3668967&lt;/code&gt;&lt;/pre&gt;

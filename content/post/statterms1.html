@@ -138,7 +138,7 @@ variable and denote the sample by <span class="math inline">\(X_1, X_2, X_3, X_4
 <li>Writing distributions</li>
 </ol>
 <p><span class="math display">\[X \sim Bin(10, 0.6)\]</span></p>
-<p><span class="math display">\[f_X(x) = P(X=x) = {n\choose x} 0.6^x 0.4^{(10-x)}\]</span></p>
+<p><span class="math display">\[f_X(x) = P(X=x) = {10\choose x} 0.6^x 0.4^{(10-x)}\]</span></p>
 <p><span class="math display">\[f_X(5) = P(X=5) = {10\choose 5} 0.6^5 0.4^{(10-5)} = 0.37\]</span></p>
 <pre class="r"><code>pbinom(5, 10, 0.6)</code></pre>
 <pre><code>[1] 0.3668967</code></pre>
