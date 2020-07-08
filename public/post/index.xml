@@ -5,12 +5,40 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 04 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 08 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>Small things matter!</title>
+      <link>/post/available/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/post/available/</guid>
+      <description>
+
+
+&lt;p&gt;Checks whether your package name is taken before building it !!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;available&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(available)
+available(&amp;quot;seer&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;── seer ────────────────────────────────────────────────────────────────
+Name valid: ✔
+Available on CRAN: ✖ 
+Available on Bioconductor: ✔
+Available on GitHub:  ✖ 
+Abbreviations: http://www.abbreviations.com/seer
+Wikipedia: https://en.wikipedia.org/wiki/seer
+Wiktionary: https://en.wiktionary.org/wiki/seer
+Urban Dictionary:
+  someone who is able to see [the past], present, and future. also  known as an [oracle] or a [prophet].
+  http://seer.urbanup.com/7101409
+Sentiment:???&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This means the name &lt;code&gt;seer&lt;/code&gt; is taken in both &lt;a href=&#34;https://cran.r-project.org/web/packages/seer/index.html&#34;&gt;CRAN&lt;/a&gt; and &lt;a href=&#34;https://thiyangt.github.io/seer/&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Parameter, Statistic, Random Variable, Estimator and Estimate</title>

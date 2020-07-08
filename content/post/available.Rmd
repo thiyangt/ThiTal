@@ -1,0 +1,21 @@
+---
+title: "Small things matter!"
+date: "2020-07-08"
+---
+
+Checks whether your package name is taken or available !!
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```r
+install.packages("available")
+```
+
+```{r, comment=NA}
+library(available)
+available("seer")
+```
+
+This means the name `seer` is taken in both [CRAN](https://cran.r-project.org/web/packages/seer/index.html) and [GitHub](https://thiyangt.github.io/seer/).  
