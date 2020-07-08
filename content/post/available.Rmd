@@ -18,4 +18,4 @@ library(available)
 available("seer")
 ```
 
-This means the name `seer` is taken in both [CRAN](https://cran.r-project.org/web/packages/seer/index.html) and [GitHub](https://thiyangt.github.io/seer/).  
+This means the name `seer` is taken in both [CRAN](https://cran.r-project.org/web/packages/seer/index.html) and [GitHub](https://thiyangt.github.io/seer/) and they are not available.
