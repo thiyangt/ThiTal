@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>THIYANGA TALAGALA</title>
+    <link>/courses/rprogramming.msc/</link>
+      <atom:link href="/courses/rprogramming.msc/index.xml" rel="self" type="application/rss+xml" />
+    <description>THIYANGA TALAGALA</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 11 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>THIYANGA TALAGALA</title>
+      <link>/courses/rprogramming.msc/</link>
+    </image>
+    
+    <item>
+      <title>Installation</title>
+      <link>/courses/rprogramming.msc/installation/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 +0100</pubDate>
+      <guid>/courses/rprogramming.msc/installation/</guid>
+      <description>&lt;h2 id=&#34;getting-staeted-with-r-and-rstudio&#34;&gt;Getting staeted with R and RStudio&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cran.r-project.org/&#34;&gt;Download R&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://rstudio.com/products/rstudio/download/&#34;&gt;Download RStudio&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The first thing you need to do to get started with R is to install it on your computer. R works on pretty much every platform available, including the widely available Windows, Mac OS X, and Linux systems. If you want to watch a step-by-step tutorial on how to install R for Mac or Windows, you can watch these videos:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Ohnk9hcxf9M&amp;amp;feature=youtu.be&#34;&gt;Installation R on Windows&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=uxuuWXU-7UQ&amp;amp;feature=youtu.be&#34;&gt;Installing R on the Mac&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Next you can install Rstudio. Remember, you must have R already installed before installing Rstudio.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Roadmap</title>
+      <link>/courses/rprogramming.msc/schedule/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 +0100</pubDate>
+      <guid>/courses/rprogramming.msc/schedule/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

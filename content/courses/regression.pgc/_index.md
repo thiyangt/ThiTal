@@ -24,6 +24,8 @@ Course outline: here
 
 Year and Semester: 2020 - Semester 1
 
+Commencement date: 29 August 2020
+
 Course meeting time: Saturday, 2.00pm - 4.00pm
 
 Location: Online/ LCS 2, Faculty of Applied Sciences, USJ

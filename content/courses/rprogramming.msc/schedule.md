@@ -6,7 +6,7 @@ menu:
   example:
     parent: 
     weight: 1
-title: Schedule
+title: Roadmap
 toc: true
 type: docs
 weight: 1
