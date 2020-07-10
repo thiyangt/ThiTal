@@ -14,7 +14,7 @@ title: Courses
 
 Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura (USJ)
 
-- [STA 517 3.0 Programming and Statistical Computing with R](https://hellor.netlify.com/courses/Rmsc2020) 
+- [STA 517 3.0 Programming and Statistical Computing with R](https://thiyanga.netlify.app/courses/rmsc2020/) 
 
 
 - [STA 506 2.0 Linear Regression Analysis](https://thiyanga.netlify.app/courses/regression2020/) 
