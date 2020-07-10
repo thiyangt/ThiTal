@@ -151,3 +151,6 @@ Department of Statistics and Computer Science, Faculty of Applied Sciences, USJ
 Department of Decision Science, Faculty of Management Studies and Commerce, USJ
 
 - DSC 2320 Statistical Data Analysis for Management (Temporary Instructor equivalent to Teaching Associate)
+
+
+------------
