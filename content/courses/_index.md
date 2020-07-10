@@ -17,7 +17,7 @@ Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewar
 - [STA 517 3.0 Programming and Statistical Computing with R](https://hellor.netlify.com/courses/Rmsc2020) 
 
 
-- [STA 506 2.0 Linear Regression Analysis](https://hellor.netlify.com/courses/regression2020) 
+- [STA 506 2.0 Linear Regression Analysis](https://thiyanga.netlify.app/courses/regression2020/) 
 
 
 
