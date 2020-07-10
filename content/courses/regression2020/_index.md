@@ -30,7 +30,7 @@ Course meeting time: Saturday, 2.00pm - 4.00pm
 
 Location: Online/ LCS 2, Faculty of Applied Sciences, USJ
 
-*Please enrole in LMS for up-to-date information and announcements.*
+*Please enrol in LMS for up-to-date information and announcements.*
 
 
 Software: R programming language
