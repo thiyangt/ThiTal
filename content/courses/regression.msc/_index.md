@@ -22,8 +22,6 @@ Postgraduate Certificate Program in Applied Statistics, Department of Statistics
 
 Course outline: here
 
-Course webpage: hellor.netlify.com
-
 Year and Semester: 2020 - Semester 1
 
 Course meeting time: Saturday, 2.00pm - 4.00pm

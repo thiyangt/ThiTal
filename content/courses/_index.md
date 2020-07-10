@@ -10,6 +10,13 @@ title: Courses
 
 # 2020
 
+## Semester 2 (To begin)
+
+Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura (USJ)
+
+[STA 506 2.0 Linear Regression Analysis](https://thiyanga.netlify.app/courses/regression.msc/)
+
+
 ## Semester 1
 
 Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura (USJ)
