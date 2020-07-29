@@ -10,11 +10,11 @@ title: Courses
 
 # 2020
 
-## Semester 2 (To begin)
+## Semester 2 
 
 Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura (USJ)
 
-- STA 474 2.0 Statistical Consultancy
+- [STA 474 2.0 Statistical Consultancy](https://scs-fas-sjp.netlify.app/)
 
 - STA 331 2.0 Stochastic Processes
 
