@@ -1,12 +1,12 @@
 ---
 date: "2020-07-27T00:00:00+01:00"
 draft: false
-linktitle: xx
+linktitle: 📚
 menu:
   331:
-    parent: xxx
+    parent: 
     weight: 1
-title: xxxx
+title: STA 331 2.0 Stochastic Processes
 toc: true
 type: docs
 weight: 1
@@ -45,7 +45,7 @@ Here is your road map for the course!
 | 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
-> Week 5-6: Discussion/practical (in class)
+
 
 ### Week 5
 

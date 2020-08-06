@@ -16,7 +16,7 @@ Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewar
 
 - [STA 474 2.0 Statistical Consultancy](https://scs-fas-sjp.netlify.app/)
 
-- STA 331 2.0 Stochastic Processes
+- [STA 331 2.0 Stochastic Processes](https://thiyanga.netlify.app/courses/sta33120_stochastic_processes_2020/)
 
 - [STA 506 2.0 Linear Regression Analysis](https://thiyanga.netlify.app/courses/regression2020/) 
 
