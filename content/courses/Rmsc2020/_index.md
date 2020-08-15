@@ -20,7 +20,7 @@ MSc in Applied Statistics, Department of Statistics, University of Sri Jayewarde
 
 ## Course information
 
-Course outline: [here](/STA_517_3_0_Programming_and_Data_Analysis_with_R_MSc_2020.pdf)
+Course outline: [here](/CO/2020s1/STA5173.0/STA_517_3_0_Programming_and_Data_Analysis_with_R_MSc_2020.pdf)
 
 Year and Semester: 2020 - Semester 1
 
