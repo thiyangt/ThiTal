@@ -1,0 +1,1782 @@
+---
+title: "STA 326 2.0 Programming and Data Analysis with R"
+subtitle: "The Grammar of Graphics"
+author: "Dr Thiyanga Talagala"
+date: "Online distance learning/teaching materials during the COVID-19 outbreak."
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+    css: 
+      - default
+      - default-fonts
+      - duke-blue
+      - hygge-duke
+      - libs/cc-fonts.css
+      - libs/figure-captions.css
+      - custom.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(emo)
+```
+
+
+
+
+![description of the image](SmallChange.gif)
+
+.tiny[.green[Acknowledgement: Justin Matejke and George Fitzmaurice, Autodesk Research, Canada]]
+
+---
+
+# Grammar of Graphics
+
+.pull-left[
+
+<img src="wilkinson.png" alt="knitrhex" height="500"/>
+
+]
+
+.pull-right[
+
+<img src="Leland.jpg" alt="knitrhex" width="350"/>
+]
+---
+# Packages
+
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+library(tidyverse) # To obtain ggplot2
+library(magrittr)
+```
+
+<img src="ggplot2.png" alt="knitrhex" width="350"/> <img src="magrittrlogo.png" alt="rmarkdown" width="250"/>
+
+---
+
+# Dataset
+
+```{r, comment=NA, message=FALSE}
+library(gapminder)
+glimpse(gapminder)
+```
+
+---
+
+# Plotting with R
+
+## Base R
+
+- using `plot()` function
+
+## Using ggplot2: grammar of graphics
+
+1.  ggplot2 package: `qplot()` function
+
+    - **q**plot: **quick** plot
+    
+    - very similar to how you graph with `plot()` function
+
+2. ggplot2 package: `ggplot()` function
+
+    - fully utilize the power of grammar
+
+---
+# Grammar 
+
+.pull-left[
+
+## English
+
+- Nouns
+
+- Article
+
+- Adjective
+
+- Verb
+
+- Adverb
+
+- Proposition
+
+
+]
+
+.pull-right[
+
+## Graphics
+
+<img src="ggplotaes/scales.PNG" alt="knitrhex" height="500"/>
+
+]
+
+---
+
+# Grammar 
+
+.pull-left[
+
+## English
+
+The little monkey hangs confidently by a branch.
+
+- Article: The
+
+- Adjective: little
+
+- Noun: monkey
+
+- Verb: hangs
+
+- Adverb: Confidently
+
+- Proposition: by
+
+- Noun: a branch
+
+
+]
+
+.pull-right[
+
+## Graphics
+
+```{r, message=FALSE, comment=FALSE}
+ggplot(iris)+
+  aes(x = Sepal.Length,
+      y = Sepal.Width)+
+  geom_point()
+
+```
+
+]
+
+---
+## Elements of ggplot2 object
+
+- Data
+
+- Aesthetics: `x`, `y`, `col`
+
+- Geometrics: `geom_point`, `geom_boxplot`
+
+---
+
+# Elements of ggplot2 object
+
+.pull-left[
+<img src="ggplotaes/scales.PNG" alt="knitrhex" height="500"/>
+]
+
+.pull-right[
+
+- Data: `data`
+
+- Aesthetics: `aes`
+
+- Geometrics: `geom_*`
+]
+
+---
+background-image: url('ggplot2_paint_thiyanga.PNG')
+background-position: center
+background-size: contain
+
+
+---
+
+
+class: duke-orange, center, middle
+
+# Making your first plot with ggplot
+
+---
+
+# Data: data to be plotted
+.pull-left[
+<img src="ggplotaes/data.PNG" alt="knitrhex" height="500"/>
+]
+
+.pull-right[
+
+```{r, comment=NA, echo=FALSE}
+str(iris)
+```
+
+]
+---
+## Data
+
+
+.left-code[
+```r
+ggplot(iris)
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=5.5, warning=FALSE, message=FALSE}
+ggplot(iris)
+```
+]
+
+---
+
+## Aesthetics: mapping variables
+
+
+.pull-left[
+<img src="ggplotaes/aes.PNG" alt="knitrhex" height="500"/>
+]
+
+.pull-left[
+- x
+
+- y
+
+- colour
+
+- shape
+
+]
+---
+## Data + Aesthetics
+
+
+.left-code[
+```r
+ggplot(iris,
+*aes(x =S epal.Length, 
+*    y = Sepal.Width))
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=5.5, warning=FALSE, message=FALSE}
+ggplot(iris,
+aes(x=Sepal.Length, 
+    y= Sepal.Width))
+```
+]
+
+---
+# Geometrics
+
+.pull-left[
+<img src="ggplotaes/geom.PNG" alt="knitrhex" height="500"/>
+]
+
+
+.pull-right[
+
+- geom_point
+
+- geom_boxplot
+]
+---
+
+## Data + Aesthetics + Geometrics
+
+
+.left-code[
+```r
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width))+
+*    geom_point()
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=5.5, warning=FALSE, message=FALSE}
+ggplot(iris,
+aes(x=Sepal.Length, 
+    y= Sepal.Width))+
+  geom_point()
+```
+]
+
+
+---
+
+## Data + Aesthetics + Geometrics
+
+.pull-left[
+```{r, comment=NA, fig.height=5.5, warning=FALSE, message=FALSE}
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width))+
+  geom_point()
+```
+]
+
+.pull-right[
+<img src="ggplotaes/d1.PNG" alt="knitrhex" width="500"/>
+
+]
+
+---
+
+## Data + Aesthetics + Geometrics
+
+.left-code[
+```r
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width))+
+*    geom_point(col = "forestgreen")
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=5.5, warning=FALSE, message=FALSE}
+ggplot(iris,
+aes(x=Sepal.Length, 
+    y= Sepal.Width))+
+    geom_point(col="forestgreen")
+```
+]
+
+
+---
+
+ 
+## Data + Aesthetics + Geometrics
+
+.left-code[
+```r
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width))+
+    geom_point(col = "forestgreen",
+*    shape = 8)
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=5.5, warning=FALSE, message=FALSE}
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width))+
+    geom_point(col =" forestgreen", shape = 8)
+```
+]
+
+---
+ 
+## Data + Aesthetics + Geometrics
+
+.left-code[
+```r
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width,
+*    col = Species))+
+    geom_point()
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=5.5, warning=FALSE, message=FALSE}
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width,
+    col = Species))+
+    geom_point()
+```
+]
+---
+ 
+## Data + Aesthetics + Geometrics
+
+.left-code[
+```r
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width,
+    col= Species))+
+    geom_point(
+*    shape = 3
+    )
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=5.5, warning=FALSE, message=FALSE}
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width,
+    col = Species))+
+    geom_point(shape = 3)
+```
+]
+
+
+---
+## Data + Aesthetics + Geometrics
+
+.pull-left[
+```{r, comment=NA, fig.height=5.5, warning=FALSE, message=FALSE}
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width,
+    col = Species))+
+    geom_point()
+```
+
+]
+
+.pull-right[
+
+<img src="ggplotaes/d2.PNG" alt="knitrhex" width="500"/>
+
+]
+---
+# Facets: small multiples
+
+<img src="ggplotaes/facets.PNG" alt="knitrhex" height="500"/>
+
+---
+
+## Data + Aesthetics + Geometrics + Facets
+
+.left-code[
+```r
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width,
+    col = Species))+
+    geom_point()+
+*    facet_grid(~Species)
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=5.5, warning=FALSE, message=FALSE}
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width,
+    col = Species))+
+    geom_point()+
+    facet_grid( ~ Species)
+```
+]
+---
+
+## Data + Aesthetics + Geometrics + Facets
+
+.left-code[
+```r
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width,
+    col = Species))+
+    geom_point()+
+*    facet_grid(Species ~.)
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=5.5, warning=FALSE, message=FALSE}
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width,
+    col = Species))+
+    geom_point()+
+    facet_grid(Species~.)
+```
+]
+---
+
+# Statistics
+
+<img src="ggplotaes/stat.PNG" alt="knitrhex" height="500"/>
+
+
+---
+
+## Data + Aesthetics + Geometrics + Facets + Statistics
+
+.left-code[
+```r
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width,
+    col = Species))+
+    geom_point()+
+    facet_wrap(~Species)+
+*    stat_smooth(method = "lm", se = F, col ="red")
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=5.5, warning=FALSE, message=FALSE}
+ggplot(iris,
+aes(x=Sepal.Length, 
+    y= Sepal.Width,
+    col=Species))+
+    geom_point()+
+    facet_wrap(~Species)+
+  stat_smooth(method = "lm", se=F, col="red")
+```
+]
+
+
+---
+
+## Data + Aesthetics + Geometrics + Facets + Statistics
+
+.left-code[
+```r
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width,
+    col = Species))+
+    geom_point()+
+    facet_wrap( ~ Species)+
+*    stat_smooth(method = "lm", se = T, col = "red")
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=5.5, warning=FALSE, message=FALSE}
+ggplot(iris,
+aes(x=Sepal.Length, 
+    y= Sepal.Width,
+    col=Species))+
+    geom_point()+
+    facet_wrap(~Species)+
+  stat_smooth(method = "lm", se=T, col="red")
+```
+]
+---
+# Coordinate
+
+<img src="ggplotaes/coord.PNG" alt="knitrhex" height="500"/>
+
+---
+
+## Data + Aesthetics + Geometrics + Facets + Statistics + Coordinate
+
+.left-code[
+```r
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width,
+    col = Species)) +
+    geom_point() +
+    facet_wrap( ~ Species) +
+    stat_smooth(method = "lm", se = T, col = "red") + 
+*    coord_equal()
+    
+```
+
+]
+
+.right-plot[
+
+
+```{r, comment=NA,  echo=FALSE,  warning=FALSE, message=FALSE}
+ggplot(iris,
+aes(x=Sepal.Length, 
+    y= Sepal.Width,
+    col=Species))+
+    geom_point()+
+    facet_wrap(~Species)+
+  stat_smooth(method = "lm", se=T, col="red")+
+  coord_equal()
+```
+]
+---
+# Theme
+
+<img src="ggplotaes/theme.PNG" alt="knitrhex" height="500"/>
+
+---
+
+## Data + Aesthetics + Geometrics + Facets + Statistics +  Coordinate+ Theme
+
+.left-code[
+```r
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width,
+    col = Species)) +
+    geom_point() +
+    facet_wrap( ~ Species) +
+    stat_smooth(method = "lm", se = T, col ="red") + 
+    coord_equal() + 
+*    theme(legend.position = "bottom")
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, out.width="100%", warning=FALSE, message=FALSE}
+ggplot(iris,
+aes(x=Sepal.Length, 
+    y= Sepal.Width,
+    col=Species))+
+    geom_point()+
+    facet_wrap(~Species)+
+  stat_smooth(method = "lm", se=T, col="red")+
+  coord_equal()+
+  theme(legend.position = "bottom")
+```
+]
+
+---
+
+# Scale
+
+<img src="ggplotaes/scales.PNG" alt="knitrhex" height="500"/>
+
+---
+
+## Data + Aesthetics + Geometrics + Facets + Statistics + Coordinate + Theme + Scale
+
+.left-code[
+```r
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width,
+    col = Species)) +
+    geom_point() +
+    facet_wrap( ~ Species) +
+    stat_smooth(method = "lm", se = T, col = "red") + 
+    coord_equal() + 
+    theme(legend.position = "bottom") +
+*    scale_color_manual(values = c("#1b9e77", "#d95f02", "#7570b3"))
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, out.width="100%", warning=FALSE, message=FALSE}
+ggplot(iris,
+aes(x=Sepal.Length, 
+    y= Sepal.Width,
+    col=Species))+
+    geom_point()+
+    facet_wrap(~Species)+
+  stat_smooth(method = "lm", se=T, col="red")+
+  coord_equal()+
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = 
+c("#1b9e77", "#d95f02", "#7570b3"))
+```
+]
+
+---
+
+
+## titles and axes labels
+
+.left-code[
+```r
+ggplot(iris,
+aes(x = Sepal.Length, 
+    y = Sepal.Width,
+    col = Species)) +
+    geom_point() +
+    facet_wrap( ~ Species) +
+    stat_smooth(method = "lm", se = T, col = "red") + 
+    coord_equal() + 
+    theme(legend.position = "bottom") +
+    scale_color_manual(values = c("#1b9e77", "#d95f02", "#7570b3"))+
+*labs(title="Scatter plot of Sepal Length  vs Sepal Width",
+        x ="Sepal Length (cm)", y = "Sepal Width (cm)")
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, out.width="100%", warning=FALSE, message=FALSE}
+ggplot(iris,
+aes(x=Sepal.Length, 
+    y= Sepal.Width,
+    col=Species))+
+    geom_point()+
+    facet_wrap(~Species)+
+  stat_smooth(method = "lm", se=T, col="red")+
+  coord_equal()+
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = 
+c("#1b9e77", "#d95f02", "#7570b3")) + 
+labs(title="Scatter plot of Sepal Length  vs Sepal Width",
+        x ="Sepal Length (cm)", y = "Sepal Width (cm)")
+```
+]
+
+---
+class: duke-green,  middle
+
+# Your turn
+
+Dataset: gapminder 
+
+ Visualize the relationship between life expectancy, GDP per capita and continent in 2007.
+
+---
+
+.left-code[
+```r
+gapminder2007 <- gapminder %>%
+  filter(year == 2007)
+  
+ggplot(gapminder2007,
+aes(x = lifeExp, y = gdpPercap, col=continent)) +
+    geom_point() + theme(legend.position = "bottom") + 
+labs(title = "Relationship between life expectancy and GPD per capita by continent - 2007",
+        x ="life expectancy at birth, in years",
+        y = "GDP per capita (US$, inflation-adjusted)")
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+gapminder2007 <- gapminder %>%
+  filter(year==2007)
+ggplot(gapminder2007,
+aes(x=lifeExp, y= gdpPercap,
+    col=continent))+ geom_point()+
+  theme(legend.position = "bottom") + 
+labs(title="Relationship between life expectancy and GPD per capita by continent - 2007",
+        x ="life expectancy at birth, in years",
+     y = "GDP per capita (US$, inflation-adjusted)")
+```
+]
+
+---
+
+# Add a vertical line
+
+
+.left-code[
+```r
+gapminder2007 <- gapminder %>%
+  filter(year == 2007)
+  
+ggplot(gapminder2007,
+aes(x = lifeExp, y = gdpPercap, col=continent)) +
+    geom_point() + 
+*    geom_vline(xintercept = 70)
+
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+gapminder2007 <- gapminder %>%
+  filter(year == 2007)
+  
+ggplot(gapminder2007,
+aes(x = lifeExp, y = gdpPercap, col=continent)) +
+    geom_point() + 
+    geom_vline(xintercept = 70)
+```
+]
+
+---
+
+# Add a horizontal line
+
+
+.left-code[
+```r
+gapminder2007 <- gapminder %>%
+  filter(year == 2007)
+  
+ggplot(gapminder2007,
+aes(x = lifeExp, y = gdpPercap, col=continent)) +
+    geom_point() + 
+*    geom_hline(yintercept = 20000)
+
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+gapminder2007 <- gapminder %>%
+  filter(year == 2007)
+  
+ggplot(gapminder2007,
+aes(x = lifeExp, y = gdpPercap, col=continent)) +
+    geom_point() + 
+    geom_hline(yintercept = 20000)
+```
+]
+
+---
+
+# Add a diagonal line
+
+
+.left-code[
+```r
+gapminder2007 <- gapminder %>%
+  filter(year == 2007)
+  
+ggplot(gapminder2007,
+aes(x = lifeExp, y = gdpPercap, col=continent)) +
+    geom_point() + 
+*    geom_abline(intercept = 20, slope=200)
+
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+gapminder2007 <- gapminder %>%
+  filter(year == 2007)
+  
+ggplot(gapminder2007,
+aes(x = lifeExp, y = gdpPercap, col=continent)) +
+    geom_point() + 
+    geom_abline(intercept = 20, slope=200)
+```
+]
+
+---
+# All Geoms
+
+```{r, echo=FALSE, message=FALSE, comment=NA}
+ls(pattern = '^geom_', env = as.environment('package:ggplot2'))
+
+```
+---
+
+# geom_boxplot
+
+
+.left-code[
+```r
+ggplot(gapminder2007, aes(x=lifeExp, y=continent)) +
+geom_boxplot()
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(x=lifeExp, y=continent))+
+geom_boxplot()
+```
+]
+
+---
+
+# geom_boxplot
+
+
+.left-code[
+```r
+ggplot(gapminder2007, aes(x=lifeExp, y=continent, color=continent)) +
+geom_boxplot()
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(x=lifeExp, y=continent, color=continent))+
+geom_boxplot()
+```
+]
+
+---
+
+# geom_boxplot
+
+
+.left-code[
+```r
+ggplot(gapminder2007, aes(x=lifeExp, y=continent, fill=continent)) +
+geom_boxplot()
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(x=lifeExp, y=continent, fill=continent))+
+geom_boxplot()
+```
+]
+
+---
+
+# geom_boxplot
+
+
+.left-code[
+```r
+ggplot(gapminder2007, aes(x=lifeExp, y=continent)) +
+geom_boxplot(fill="forestgreen")
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(x=lifeExp, y=continent))+
+geom_boxplot(fill="forestgreen")
+```
+]
+
+---
+
+# geom_boxplot
+
+
+.left-code[
+```r
+ggplot(gapminder2007, aes(x=lifeExp, y=continent)) +
+geom_boxplot(fill="forestgreen", alpha=0.5)
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(x=lifeExp, y=continent))+
+geom_boxplot(fill="forestgreen", alpha=0.5)
+```
+]
+---
+
+# geom_point
+
+
+.left-code[
+```r
+ggplot(gapminder2007, aes(x=lifeExp, y=continent)) +
+  geom_point()
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(x=lifeExp, y=continent))+
+  geom_point()
+```
+]
+
+
+---
+
+
+#  geom_jitter
+
+
+.left-code[
+```r
+ggplot(gapminder2007, aes(x=lifeExp, y=continent)) +
+  geom_jitter()
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(x=lifeExp, y=continent))+
+  geom_jitter()
+```
+]
+
+---
+
+#  geom_jitter + geom_boxplot
+
+
+.left-code[
+```r
+ggplot(gapminder2007, aes(x=lifeExp, y=continent)) +
+  geom_jitter() +
+  geom_boxplot()
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(x=lifeExp, y=continent))+
+  geom_jitter() +
+  geom_boxplot()
+```
+]
+
+---
+
+#  geom_jitter + geom_boxplot
+
+
+.left-code[
+```r
+ggplot(gapminder2007, aes(x=lifeExp, y=continent)) +
+  geom_jitter() +
+  geom_boxplot(alpha=0.5)
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(x=lifeExp, y=continent))+
+  geom_jitter() +
+  geom_boxplot(alpha=0.5)
+```
+]
+
+---
+
+# geom_jitter + geom_boxplot
+
+
+.left-code[
+```r
+ggplot(gapminder2007, aes(x=lifeExp, y=continent)) +
+  geom_boxplot() + 
+  geom_jitter() 
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(x=lifeExp, y=continent))+
+  geom_boxplot() + 
+  geom_jitter() 
+```
+]
+---
+
+#  geom_jitter + geom_boxplot
+
+
+.left-code[
+```r
+ggplot(gapminder2007, aes(x=lifeExp, y=continent, fill=continent)) +
+  geom_boxplot() + 
+  geom_jitter() 
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(x=lifeExp, y=continent, fill=continent))+
+  geom_boxplot() + 
+  geom_jitter() 
+```
+]
+
+---
+
+#  geom_jitter + geom_boxplot
+
+
+.left-code[
+```r
+ggplot(gapminder2007, aes(x=lifeExp, y=continent, fill=continent)) +
+  geom_boxplot() + 
+  geom_jitter(aes(col=continent)) 
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(x=lifeExp, y=continent, fill=continent))+
+  geom_boxplot() + 
+  geom_jitter(aes(col=continent)) 
+```
+]
+
+---
+
+#  geom_jitter + geom_boxplot (outlier.shape = NA)
+
+
+.left-code[
+```r
+ggplot(gapminder2007, aes(x = lifeExp, y = continent, fill = continent)) +
+*  geom_boxplot(outlier.shape = NA) + 
+  geom_jitter(aes(col = continent)) 
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(x=lifeExp, y=continent, fill=continent))+
+  geom_boxplot(outlier.shape = NA) + 
+  geom_jitter(aes(col=continent)) 
+```
+]
+---
+
+#  geom_jitter + geom_boxplot 
+
+
+.left-code[
+```r
+*ggplot(gapminder2007, aes(x=lifeExp, y=continent, fill=continent, col=continent))+
+  geom_boxplot(outlier.shape = NA) + 
+  geom_jitter(aes(col=continent)) 
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(x=lifeExp, y=continent, fill=continent, col=continent))+
+  geom_boxplot(outlier.shape = NA) + 
+  geom_jitter(aes(col=continent)) 
+```
+]
+
+---
+
+#  geom_jitter + geom_boxplot 
+
+
+.left-code[
+```r
+ggplot(gapminder2007, 
+aes(x=lifeExp, y=continent, fill=continent, col=continent))+
+*  geom_boxplot(outlier.shape = NA, alpha=0.2) + 
+  geom_jitter(aes(col=continent)) 
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(x=lifeExp, y=continent, fill=continent, col=continent))+
+  geom_boxplot(outlier.shape = NA, alpha=0.2) + 
+  geom_jitter(aes(col=continent)) 
+```
+]
+---
+
+#  geom_jitter + geom_boxplot + coord_flip
+
+
+.left-code[
+```r
+ggplot(gapminder2007, 
+aes(x=lifeExp, y=continent, fill=continent, col=continent))+
+  geom_boxplot(outlier.shape = NA, alpha=0.2) + 
+  geom_jitter(aes(col=continent)) +
+*  coord_flip()
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(x=lifeExp, y=continent, fill=continent, col=continent))+
+  geom_boxplot(outlier.shape = NA, alpha=0.2) + 
+  geom_jitter(aes(col=continent)) + 
+  coord_flip()
+```
+]
+
+---
+
+#  geom_boxplot 
+
+
+.left-code[
+```r
+ggplot(gapminder2007, aes(y=lifeExp))+
+  geom_boxplot() 
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, aes(y=lifeExp))+
+  geom_boxplot() 
+```
+]
+---
+
+#  geom_boxplot + facet_wrap
+
+
+.left-code[
+```r
+ggplot(gapminder2007, 
+aes(y = lifeExp))+
+  geom_boxplot() + facet_wrap(~continent, ncol = 5)
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, 
+aes(y=lifeExp))+
+  geom_boxplot() + facet_wrap(~continent, ncol=5)
+```
+]
+
+
+---
+
+#  geom_density
+
+
+.left-code[
+```r
+ggplot(gapminder2007, 
+aes(x=lifeExp))+
+*  geom_density() + 
+  facet_wrap(~continent, ncol=5)
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, 
+aes(x=lifeExp))+
+  geom_density() + facet_wrap(~continent, ncol=5)
+```
+]
+
+---
+class: duke-green,  middle
+
+# Your turn
+
+Modify the code below to obtain the following plot.
+
+
+.left-code[
+```r
+ggplot(gapminder2007, 
+aes(x=lifeExp))+
+ geom_density() 
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, 
+aes(x=lifeExp, col=continent, fill=continent))+
+  geom_density(alpha=0.5) 
+```
+]
+---
+#  geom_histogram
+
+
+.left-code[
+```r
+ggplot(gapminder2007, 
+aes(x=lifeExp))+
+*  geom_histogram() 
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, 
+aes(x=lifeExp))+
+  geom_histogram() 
+```
+]
+---
+# geom_bar
+
+.left-code[
+```r
+ggplot(gapminder2007, 
+aes(x=continent))+ 
+ geom_bar() 
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, 
+aes(x=continent))+
+ geom_bar() 
+```
+]
+
+---
+class: duke-green,  middle
+
+# Your turn
+
+Modify the code below to obtain the following plot.
+
+.left-code[
+```r
+ggplot(gapminder2007, 
+aes(x=continent))+ 
+ geom_bar() 
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder2007, 
+aes(x=continent, fill=continent))+ 
+ geom_bar() 
+```
+]
+---
+## geom_bar (stat="identity")
+
+Method 1
+
+```{r, comment=NA}
+cut.percent <- data.frame(cut=c("Fair", "Good", "Very Good", "Premium", 
+                                "Ideal"), percent=c(3, 9, 22.4, 25.6, 40))
+cut.percent
+    
+```
+
+
+
+```{r, comment=NA,  fig.height=3, warning=FALSE, message=FALSE}
+ggplot(data=cut.percent, aes(x=cut, y=percent)) +
+  geom_bar(stat="identity")
+```
+
+---
+
+## geom_col
+
+Method 2
+
+```{r, comment=NA}
+cut.percent <- data.frame(cut=c("Fair", "Good", "Very Good", "Premium", 
+                                "Ideal"), percent=c(3, 9, 22.4, 25.6, 40))
+cut.percent
+    
+```
+
+
+
+```{r, comment=NA,  fig.height=3, warning=FALSE, message=FALSE}
+ggplot(data=cut.percent, aes(x=cut, y=percent)) +
+  geom_col()
+```
+
+---
+## Change the order of levels
+
+Method 2
+
+```{r, comment=NA}
+cut.percent <- data.frame(cut=c("Fair", "Good", "Very Good", "Premium", 
+                                "Ideal"), percent=c(3, 9, 22.4, 25.6, 40))
+cut.percent$cut <- factor(cut.percent$cut, 
+                  levels = c("Fair", "Good", "Very Good", 
+                             "Premium", "Ideal"))    
+```
+
+
+
+```{r, comment=NA,  fig.height=3, warning=FALSE, message=FALSE}
+ggplot(data=cut.percent, aes(x=cut, y=percent)) +
+  geom_col()
+```
+
+---
+# geom_point
+
+
+.left-code[
+```r
+gapminder %>%
+filter(country == "India") %>%
+ggplot(aes(x = year, y = gdpPercap)) +
+geom_point()
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+gapminder %>%
+filter(country == "India") %>%
+ggplot(aes(x = year, y = gdpPercap)) +
+geom_point() 
+```
+]
+
+---
+# geom_line
+
+
+.left-code[
+```r
+gapminder %>%
+filter(country == "India") %>%
+ggplot(aes(x = year, y = gdpPercap)) +
+geom_line()
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+gapminder %>%
+filter(country == "India") %>%
+ggplot(aes(x = year, y = gdpPercap)) +
+geom_line() 
+```
+]
+
+---
+
+# geom_line + geom_point
+
+
+.left-code[
+```r
+gapminder %>%
+filter(country == "India") %>%
+ggplot(aes(x = year, y = gdpPercap)) +
+geom_line() + 
+geom_point()
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+gapminder %>%
+filter(country == "India") %>%
+ggplot(aes(x = year, y = gdpPercap)) +
+geom_line() + 
+  geom_point()
+```
+]
+---
+
+class: duke-green,  middle
+
+# Your turn
+
+Modify the code below to obtain the following plot.
+
+```r 
+gapminder %>% filter(country == "India") %>%
+ggplot(aes(x = year, y = gdpPercap)) + geom_line() + geom_point()
+```
+
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+gapminder %>%
+filter(country == "India") %>%
+ggplot(aes(x = year, y = gdpPercap)) +
+geom_line() + 
+  geom_point() + 
+  labs(title="Time series plot of GDP per capita",
+       x="Year", 
+       y="GDP per capita (USD, inflation-adjusted)")
+```
+
+---
+
+# Data Wrangling + Data Visualization
+
+```{r, comment=NA}
+avglifeExp <- gapminder %>%
+  group_by(continent, year) %>%
+  summarise(meanlifeExp=mean(lifeExp))
+avglifeExp
+```
+
+
+---
+class: duke-green,  middle
+
+# Your turn
+
+Write an R code to reproduce the plot below. 
+
+Hint: use `avglifeExp`
+
+```{r, comment=NA, message=FALSE, fig.height=5, echo=FALSE}
+ggplot(avglifeExp, aes(x=year, y=meanlifeExp, col=continent))+
+  geom_line() + geom_point()
+```
+---
+class: duke-green,  middle
+
+# Your turn
+
+Write an R code to reproduce the plot below. 
+
+
+```{r, comment=NA, message=FALSE, fig.height=5, echo=FALSE}
+gapminder %>%
+  filter(year %in% c(1952, 1957, 1962, 1967, 1972, 1977)) %>%
+  filter(continent %in% c("Asia", "Americas")) %>%
+  ggplot(aes(y=lifeExp, x=gdpPercap, color=continent)) + 
+  geom_point() + 
+  facet_wrap(~year, ncol=3)+
+  labs(title="Life Expectancy vs GDP - America and Asia",
+       y = "Life Expectancy",
+       x = "GDP per capita")
+```
+
+---
+class: duke-green,  middle
+
+# Your turn
+
+Write an R code to reproduce the plot below. 
+
+
+```{r, comment=NA, message=FALSE, fig.height=5, echo=FALSE}
+gapminder %>%
+  filter(year %in% c(1952, 1957, 1962, 1967, 1972, 1977)) %>%
+  filter(continent %in% c("Asia", "Americas")) %>%
+  ggplot(aes(y=log(lifeExp), x=log(gdpPercap), color=continent)) + 
+  geom_point() + 
+  facet_wrap(~year, ncol=3)+
+  labs(title="Life Expectancy vs GDP - America and Asia",
+       y = "log(Life Expectancy)",
+       x = "log(GDP per capita)")
+```
+
+Hint: Next slide
+---
+
+```{r, comment=NA, message=FALSE, fig.height=5}
+gapminder %>%
+  ggplot(aes(y=log(lifeExp), x=log(gdpPercap), color=continent)) + 
+  geom_point() + 
+  labs(y = "log(Life Expectancy)",
+       x = "log(GDP per capita)")
+```
+---
+class: duke-green,  middle
+
+# Your turn
+
+Write an R code to reproduce the plot below. 
+
+
+```{r, comment=NA, message=FALSE, fig.height=5, echo=FALSE}
+ggplot(gapminder_unfiltered, aes(gdpPercap, lifeExp, color = year)) + 
+geom_point() +
+facet_wrap(~ continent)
+```
+
+
+---
+# geom_point
+
+
+.left-code[
+```r
+ggplot(gapminder, aes(x=year, y=gdpPercap, colour=continent))+geom_point()
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder, aes(x=year, y=gdpPercap, colour=continent))+geom_point()
+```
+]
+
+---
+# geom_smooth
+
+
+.left-code[
+```r
+ggplot(gapminder, aes(x=year, y=gdpPercap, colour=continent))+
+*geom_smooth()
+    
+```
+
+]
+
+.right-plot[
+```{r, comment=NA,  echo=FALSE, fig.height=6, warning=FALSE, message=FALSE}
+ggplot(gapminder, aes(x=year, y=gdpPercap, colour=continent))+
+  geom_smooth()
+```
+]
+---
+class: duke-green,  middle
+
+# Your turn
+
+Write an R code to reproduce the plot below. 
+
+
+```{r, comment=NA, message=FALSE, fig.height=5, echo=FALSE}
+ggplot(gapminder, aes(y=lifeExp,  x=year)) + 
+geom_smooth() +
+facet_wrap(~ continent)
+```
+
+---
+class: duke-green,  middle
+
+# Your turn
+
+Write an R code to reproduce the plot below. 
+
+
+```{r, comment=NA, message=FALSE, fig.height=5, echo=FALSE}
+ggplot(gapminder, aes(y=lifeExp,  x=year)) + 
+geom_smooth() +
+  geom_point() + 
+facet_wrap(~ continent)
+```
+
+
+---
+class: duke-green,  middle
+
+# Your turn
+
+Write an R code to visualize the shape of standard normal distribution.
+
+Hint: `dnorm`
+
+```{r, echo=FALSE, message=FALSE, fig.height=5}
+xn <- seq(-5, 5, length=10000)
+yn <- dnorm(xn)
+df <- data.frame(x=xn, y=yn)
+ggplot(df, aes(x=xn, y=yn))+
+  geom_line(col="red")
+
+```
+
+---
+# Recap
+
+.pull-left[
+
+## aes
+
+- x
+- y
+- colour
+- size
+
+## geom
+
+- geom_point
+- geom_jitter
+- geom_line
+- geom_bar
+- geom_col
+- geom_histogram
+- geom_smooth
+- geom_density
+- geom_abline
+- geom_vline
+- geom_hline
+]
+
+.pull-right[
+
+
+## geom arguments
+
+- colour
+- fill
+- size
+- alpha
+- shape
+
+## other elements
+
+- labs
+- coord_equal
+- coord_flip
+- scale_colour_manual
+- labs
+- facet_wrap
+- theme
+
+]
+---
+class: center, middle
+
+
+Slides available at: hellor.netlify.app
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+
+
+

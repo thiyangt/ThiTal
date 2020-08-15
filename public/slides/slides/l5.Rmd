@@ -1,0 +1,146 @@
+---
+title: "STA 326 2.0 Programming and Data Analysis with R"
+subtitle: "Lesson 5.2: Simulations"
+author: "Dr Thiyanga Talagala"
+date: "2020-03-10"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+    css: 
+      - default
+      - default-fonts
+      - duke-blue
+      - hygge-duke
+      - libs/cc-fonts.css
+      - libs/figure-captions.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+
+
+
+background-image: url('montyhall.jpg')
+background-position: center
+background-size: contain
+
+# Monty Hall Problem
+
+.footer-note[.tiny[.green[Image Credit: ][Ben Bennetts ](https://hollamhouse.files.wordpress.com/2016/08/monty-hall-1.jpg)]]
+
+
+---
+
+background-image: url('mstep1.png')
+background-position: center
+background-size: contain
+---
+
+background-image: url('mstep2.png')
+background-position: center
+background-size: contain
+---
+
+# Monty Hall Problem: Rules
+
+- The host must always open a door that was not picked by the contestant.
+
+--
+
+- The host must always open a door to reveal a goat and never the car.
+
+--
+
+- The host must always offer the chance to switch between the originally chosen door and the remaining closed door.
+
+             Taken from https://en.wikipedia.org/wiki/Monty_Hall_problem
+
+---
+class: center, middle, duke-orange
+
+# Let's play the game!
+
+Click here to play: http://www.math.ucsd.edu/~crypto/Monty/monty.html
+
+# Does switching increases the chance of winning the car?
+
+
+---
+
+We use `sample` function to assign `car`, `goat`, `goat`, behind the doors.
+
+```{r, comment=NA}
+sample(c("car", "goat", "goat"))
+
+sample(c("car", "goat", "goat"))
+```
+
+--
+Here is a function that will take player's initial choice of door.
+
+```{r, comment=NA}
+select_first_door <- function(door){
+  door.allocation <- sample(c("car", "goat", "goat"))
+  door.allocation[door]
+}
+
+select_first_door(2) # My first choice is the 2nd door
+```
+
+--
+
+Modify your function so that it shows the player the door that the host selects. Hint: `sample` function act as a host.
+
+---
+
+Modify your function so that it includes the player strategy (switch or stay) as an input, and returns the appropriate result.
+
+- Run your function 1000 times, for each strategy and report the proportion of times that car is selected. (You could put this
+in a loop and compute the proportion of times car shows.) 
+- How many times would you expect car to be selected out of 1000 runs? 
+
+---
+
+# Approximating Pi = 3.14616
+
+$$\frac{A_{circle}}{A_{square}}=\frac{\pi r^2}{4r^2}$$
+Equation of a circle center around 0: $x^2+y^2=r^2$
+
+<img src="monte_carlo_pi.png" width="400">
+
+Write a function to approximate $\pi$ using Monte Carlo simulations.
+
+---
+
+
+# Random Variable Generation: Inverse-Transform Method
+
+Let $X$ be a random variable with CDF $F$. Since $F$ is a nondecreasing function, the inverse function $F^{-1}$ may be defined as
+$$F^{-1}(y)=inf\{x: F(x)\geq y\}, 0 \leq y \leq 1.$$
+
+It is easy to show that if $U \sim U(0, 1)$, then
+
+$$X=F^{-1}(U)$$
+
+has CDF $F$. Namely, since $F$ is invertible and $P(U \leq u)=u$, we have
+
+$$P(X \leq x)=P(F^{-1}(U)\leq x)=P(U\leq F(x))=F(x)$$
+
+
+---
+
+class: center, middle
+
+Slides available at: hellor.netlify.com
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+
+
+
+

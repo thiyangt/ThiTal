@@ -1,0 +1,10 @@
+---
+title: "STA 326 2.0 Programming and Data Analysis with R"
+author: "Week 6: Simulations"
+output: pdf_document
+---
+
+# Question 1
+
+Write an R function to model the [Monty Hall Problem](https://hellor.netlify.com/slides/l5.html#14) and show that **switching doors** is the best strategy. 
+

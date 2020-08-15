@@ -1,0 +1,770 @@
+---
+title: "STA 326 2.0 Programming and Data Analysis with R"
+subtitle: "Lesson 4: Writing Functions in R"
+author: "Dr Thiyanga Talagala"
+date: "2020-03-03"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+    css: 
+      - default
+      - default-fonts
+      - duke-blue
+      - hygge-duke
+      - libs/cc-fonts.css
+      - libs/figure-captions.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+background-image: url('dengue.jpg')
+background-position: center
+background-size: contain
+
+---
+
+# Load the mozzie dataset
+
+```{r, comment=NA}
+library(mozzie)
+data(mozzie)
+head(mozzie, 2)
+
+
+```
+
+--
+
+> Use Min-Max transformation to rescale all the districts variables onto 0-1 range.
+
+> Min-Max transformation is $\frac{x_i-min(x)}{max(x)-min(x)}$ where $x=(x_1, x_2, ...x_n)$.
+
+---
+
+## Min-Max transformation on `mozzie`
+
+```{r, comment=NA}
+# Colombo district
+minmax.colombo <- (mozzie$Colombo - min(mozzie$Colombo, na.rm = TRUE)) /
+  (max(mozzie$Colombo, na.rm=TRUE) - min(mozzie$Colombo, na.rm=TRUE))
+head(minmax.colombo)
+```
+
+--
+
+```{r, comment=NA}
+# Gampaha district
+minmax.gampaha <- (mozzie$Gampaha - min(mozzie$Gampaha, na.rm = TRUE)) /
+  (max(mozzie$Gampaha, na.rm = TRUE) - min(mozzie$Gampaha, na.rm = TRUE))
+head(minmax.gampaha)
+```
+
+
+--
+```{r, comment=NA}
+# Kalutara district
+minmax.kalutara <- (mozzie$Gampaha - min(mozzie$Kalutara, na.rm = TRUE)) /
+  (max(mozzie$Kalutara, na.rm = TRUE) - min(mozzie$Kalutara, na.rm = TRUE))
+head(minmax.kalutara)
+```
+
+--
+
+> Very easily  made errors when copying-and-pasting the codes.
+
+> A mistake copied becomes a mistake repeated.
+
+---
+
+## When should you write a function?
+
+- Whenever you need to copy and paste a block of codes many times.
+
+      - A function is a reusable block of programming code designed to do a specific task.
+
+- If you don't find a suitable built-in function to serve your purpose, you can write your own function.
+
+- To share your work with others.
+
+
+---
+
+# Writing a function
+
+## Step 1: Function name
+
+```r
+rescale_minmax
+
+```
+--
+
+## Step 2: Assign your function to the name
+
+```r
+rescale_minmax <- 
+```
+--
+
+## Step 3: Tell R that you are writing a function
+
+```r_
+rescale_minmax <- function() # Arguments/inputs should be defined inside ()
+
+```
+--
+## Step 4: Curly braces define the start and the end of your work
+
+```r
+rescale_minmax <- function(){
+
+# Task
+
+# output
+
+}
+
+```
+---
+## Step 5: Function inputs, task and outputs
+
+**Find all the inputs that correspond to a given function output?**
+
+```{r, comment=NA, eval=FALSE}
+# Colombo district
+(mozzie$Colombo - min(mozzie$Colombo, na.rm = TRUE)) /
+  (max(mozzie$Colombo, na.rm=TRUE) - min(mozzie$Colombo, na.rm=TRUE))
+
+```
+
+--
+**Re-write the code with general names**
+
+```{r, comment=NA, eval=FALSE}
+x <- mozzie$Colombo
+(x - min(x, na.rm = TRUE)) / (max(x, na.rm=TRUE) - min(x, na.rm=TRUE))
+
+```
+
+```{r, comment=NA, eval=T, echo=FALSE}
+x <- mozzie$Colombo
+
+```
+
+--
+**Remove duplication/ Make your code efficient and readable**
+
+```{r, comment=NA}
+rng <- range(x, na.rm = TRUE)
+rng
+```
+
+```{r, comment=NA, eval=FALSE}
+rng <- range(x, na.rm = TRUE)
+(x - rng[1]) / (rng[2] - rng[1])
+
+```
+
+---
+
+# Step 6: Complete your function
+
+## Type A
+
+```{r, comment=NA}
+rescale_minmax <- function(x){
+  rng <- range(x, na.rm = TRUE)
+  (x - rng[1]) / (rng[2] - rng[1])
+}
+
+```
+
+--
+
+## Type B
+
+```{r, comment=NA}
+rescale_minmax <- function(x){
+  rng <- range(x, na.rm = TRUE)
+  out.rescaled <- (x - rng[1]) / (rng[2] - rng[1])
+  out.rescaled
+}
+
+```
+
+--
+
+## Type C
+
+```{r, comment=NA}
+rescale_minmax <- function(x){
+  rng <- range(x, na.rm = TRUE)
+  out.rescaled <- (x - rng[1]) / (rng[2] - rng[1])
+  return(out.rescaled)
+}
+
+```
+
+> In this situation Type A is the best.
+
+---
+
+# Step 7: Check your function with a few different inputs
+
+```{r, comment=NA}
+rescale_minmax <- function(x){
+  rng <- range(x, na.rm = TRUE)
+  (x - rng[1]) / (rng[2] - rng[1])
+}
+
+```
+
+--
+
+```{r, comment=NA}
+rescale_minmax(c(1, 200, 250, 80, NA))
+
+```
+
+## Back to our original example
+
+```{r, comment=NA}
+minmax.colombo <- rescale_minmax(mozzie$Colombo)
+head(minmax.colombo)
+```
+
+--
+
+```r
+minmax.gampaha <- rescale_minmax(mozzie$Gampaha)
+minmax.kalutara <- rescale_minmax(mozzie$Kalutara)
+```
+
+---
+
+# Move forward: When the requirements changes
+
+```{r, comment=NA}
+new.data.col <- c(400, 500, 350, 250, 60, 70, Inf)
+rescale_minmax(new.data.col)
+
+```
+
+--
+
+## Fix the code
+
+```{r, comment=NA, eval=FALSE}
+rescale_minmax <- function(x){
+*  rng <- range(x, na.rm = TRUE, finite=TRUE)
+  (x - rng[1]) / (rng[2] - rng[1])
+}
+
+```
+
+```{r, comment=NA, eval=T, echo=F}
+rescale_minmax <- function(x){
+  rng <- range(x, na.rm = TRUE, finite=TRUE)
+  (x - rng[1]) / (rng[2] - rng[1])
+}
+
+```
+
+```{r, comment=NA}
+new.data.col <- c(400, 500, 350, 250, 60, 70, Inf)
+rescale_minmax(new.data.col)
+```
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+Rewrite `rescale_minmax` so that `-Inf` is set to 0, and `Inf` is mapped to 1.
+
+```{r, echo=FALSE}
+library(countdown)
+countdown(minutes = 4L, seconds = 00)
+```
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+R for Data Science - Exercise 19.2.1, Question 3
+
+```{r, echo=FALSE}
+knitr::include_url('https://r4ds.had.co.nz/functions.html')
+
+```
+
+```{r, echo=FALSE}
+library(countdown)
+countdown(minutes = 4L, seconds = 00)
+```
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+R for Data Science - Exercise 19.2.1, Question 4
+
+```{r, echo=FALSE}
+knitr::include_url('https://r4ds.had.co.nz/functions.html')
+
+```
+
+```{r, echo=FALSE}
+library(countdown)
+countdown(minutes = 10L, seconds = 00)
+```
+
+---
+
+background-image: url('laptop.jpg')
+background-position: center
+background-size: cover
+
+.content-box-yellow[
+# Functions are for humans and computers
+
+- Descriptive names for variables.
+
+- Comment your code.
+]
+
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+Write your own function to calculate parameter estimates of simple linear regression model.
+
+Help:
+$$\hat{\beta}=(X^TX)^{-1}X^TY$$
+
+
+![](slr2.png)
+
+```{r, echo=FALSE}
+library(countdown)
+countdown(minutes = 5L, seconds = 00)
+```
+
+---
+
+Write a function to calculate confidence intervals for mean.
+$$\bar{x} \pm t_{\alpha/2, (n-1)}\frac{s}{\sqrt(n)}$$
+
+```{r, echo=FALSE}
+library(countdown)
+countdown(minutes = 10L, seconds = 00)
+```
+
+---
+## Function arguments
+
+```{r, comment=NA}
+cal_mean_ci <- function(x, conf){
+  len.x <- length(x)
+  se <- sd(x) / sqrt(len.x)
+  alpha <- 1-conf
+  mean(x) + se * qt(c(alpha / 2, 1 - alpha / 2), df = len.x-1)
+  
+}
+
+data <- c(165, 170, 175, 180, 185)
+cal_mean_ci(data, 0.95)
+```
+
+--
+## Function with default values
+
+```{r, comment=NA}
+cal_mean_ci <- function(x, conf = 0.95){
+  len.x <- length(x)
+  se <- sd(x) / sqrt(len.x)
+  alpha <- 1-conf
+  mean(x) + se * qt(c(alpha / 2, 1 - alpha / 2), df = len.x-1)
+  
+}
+
+cal_mean_ci(data)
+cal_mean_ci(data, 0.99)
+```
+---
+
+# Conditional executions
+
+- Control the flow of the execution.
+
+- Common ones include:
+
+    - if, else
+    
+    - for
+    
+    - while
+    
+    - repeat
+    
+    - break
+    
+    - next
+    
+    - switch
+
+---
+
+# If
+
+
+```r
+if (condition) {
+    # do something
+} else {
+    # do something else
+}
+
+```
+
+Example
+
+```{r, comment=FALSE}
+test_even_odd <- function(x){
+  if (x %% 2 == 0){
+    print("even number")
+  } else {
+    print("odd number")
+  }
+}
+
+```
+
+
+```{r, comment=NA}
+test_even_odd(5)
+test_even_odd(6)
+```
+
+---
+
+# ifelse: vectorization with ifelse
+
+```r
+ifelse(condition, if TRUE the output, if FALSE the output)
+
+```
+
+Example
+
+```{r, comment=FALSE}
+test_even_odd_v2 <- function(x){
+  ifelse(x %% 2 == 0, "even number", "odd number")
+}
+
+test_even_odd_v2(5)
+test_even_odd_v2(c(1,6))
+
+```
+
+
+---
+
+# Difference between `if, else` and `ifelse`
+
+.pull-left[
+
+```{r, comment=FALSE}
+test_even_odd <- function(x){
+  if (x %% 2 == 0) {
+    print("even number")
+  } else {
+    print("odd number")
+  }
+}
+
+test_even_odd(5)
+test_even_odd(c(1,6))
+
+```
+
+]
+
+.pull-right[
+```{r, comment=FALSE}
+test_even_odd_v2 <- function(x){
+  ifelse (x %% 2 == 0, "even number", "odd number")
+}
+
+test_even_odd_v2(5)
+test_even_odd_v2(c(1,6))
+
+```
+
+]
+
+---
+
+# Nested if-else
+
+- Multiple conditions
+
+
+```{r, comment=NA}
+grade_marks <- function(marks){
+  
+  if (marks < 20) {
+    "D"
+  } else if (marks <= 50) {
+    "C"
+  } else if (marks <= 60) {
+    "B"
+  } else {
+    "A"
+  }
+}
+
+grade_marks(75)
+```
+---
+
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+R for Data Science-Exercises 9.4.4 - Q2
+
+```{r, echo=FALSE}
+knitr::include_url('https://r4ds.had.co.nz/functions.html')
+```
+
+Help:
+
+`lubridate::now()` and `lubridate::hour()`
+
+```{r, echo=FALSE}
+library(countdown)
+countdown(minutes = 10L, seconds = 00)
+```
+
+---
+
+# `for` loop
+
+- execute a block of code a specific number of times or until the end of a sequence.
+
+```{r, comment=NA}
+for (i in 1:5) {
+  print(i*100)
+}
+
+```
+
+
+---
+```{r, comment=NA, eval=FALSE}
+
+continents <- c("Asia", "EU", "AUS", "NA", "SA", "Africa")
+
+for (i in continents) {
+  print(continents[i])
+}
+
+for (i in 1:4) {
+  print(continents[i])
+}
+
+for (i in seq(continents)) {
+  print(continents[i])
+}
+
+for (i in 1:4)  print(continents[i])
+
+```
+
+```{r, echo=FALSE}
+continents <- c("Asia", "EU", "AUS", "NA", "SA", "Africa")
+for (i in seq(continents)) {
+  print(continents[i])
+}
+
+```
+
+---
+
+# Nested loops
+
+```{r, comment=NA}
+mat <- matrix(1:6, ncol=2)
+mat
+
+for (i in 1:3) {
+  for (j in 1:2) {
+    print(mat[i, j])
+  }
+}
+
+```
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+Write a function to count the number of even numbers in a vector.
+
+```{r, echo=FALSE}
+library(countdown)
+countdown(minutes = 8L, seconds = 00)
+```
+
+
+---
+
+# While
+
+```{r, comment=NA}
+i <- 1 # initial value
+while (i < 10) {
+  print(i)
+  i <- i + 1 # increment
+}
+
+
+```
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+
+---
+
+## Fibonacci Sequence
+
+Print the first `n` numbers of the  Fibonacci Sequence.
+
+0, 1, 1, 2, 3, 5, 8....
+
+![](gflowers.jpg) ![](goldenratio.jpg)
+
+---
+
+# Repeat and break
+
+- Iterate over a block of code multiple number of times. 
+
+-  No condition check in repeat loop to exit the loop. 
+
+- The only way to exit a repeat loop is to call break. 
+
+.pull-left[
+
+Example 1
+
+```{r, comment=NA}
+x <- 5
+
+repeat {
+  print(x)
+  x = x+1
+  if (x == 10){
+    break
+  }
+}
+
+```
+]
+
+--
+.pull-right[
+
+Example 2
+
+```{r, comment=NA}
+set.seed(1)
+
+repeat {
+ x<-runif(1, 5, 10)
+ print(x)
+ if(x < 6.1){
+   break
+ }
+}
+
+```
+]
+---
+# Next
+
+```{r, comment=NA}
+for(i in 1:10) {
+  if(i <= 5) {
+  next # Skip the first 5 iterations
+  }
+print(i)
+}
+
+```
+
+---
+
+# switch 
+
+When you want a function to do different things in different
+circumstances, then the switch function can be useful.
+
+```{r, comment=NA}
+feelings <- c("sad", "afraid")
+
+for (i in feelings){
+  print(
+  switch(i,
+  happy = "I am glad you are happy",
+  afraid = "There is nothing to fear",
+  sad = "Cheer up",
+  angry = "Calm down now"
+  ))
+}
+
+```
+
+
+---
+class: center, middle
+
+Slides available at: hellor.netlify.com
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+
+
+

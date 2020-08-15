@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>STA 326 2.0 Programming and Data Analysis with R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr Thiyanga Talagala" />
+    <meta name="date" content="2020-02-25" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/duke-blue.css" rel="stylesheet" />
+    <link href="libs/remark-css/hygge-duke.css" rel="stylesheet" />
+    <link rel="stylesheet" href="libs\cc-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="libs\figure-captions.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# STA 326 2.0 Programming and Data Analysis with R
+## Lesson 3: Functions in R
+### Dr Thiyanga Talagala
+### 2020-02-25
+
+---
+
+
+
+## Functions in R
+
+👉🏻 Perform a specific task according to a set of instructions.
+
+--
+👉🏻  Some functions we have discussed so far,
+
+&gt; `c`, `matrix`, `array`, `list`, `data.frame`, `str`, `dim`, `length`, `nrow`, `plot`
+
+--
+
+👉🏻 In R, functions are **objects** of **class** *function*.
+
+
+```r
+class(length)
+```
+
+```
+[1] "function"
+```
+
+--
+
+👉🏻 There are basically two types of functions:
+
+    
+ &gt; 💻 Built-in functions 
+  
+      Already created or defined in the programming framework to make our work easier.
+&gt; 👨 User-defined functions
+           
+      Sometimes we need to create our own functions for a specific purpose.
+
+---
+
+## Basic components of a function
+
+.pull-left[
+
+## Syntax
+
+```r
+
+name &lt;- function(arg1, aug2, ...){
+
+&lt;FUNCTION BODY&gt;
+
+return(value)
+
+}
+
+```
+
+
+]
+
+
+.pull-right[
+
+## Example
+
+
+```r
+cal_sqrt &lt;- function(x){
+
+a &lt;- x^2
+b &lt;- x^3
+out &lt;- c(a, b)
+names(out) &lt;- c("squared", "cubed")
+out # or return(out)
+
+}
+```
+
+## Evaluation
+
+
+```r
+cal_sqrt(2)
+```
+
+```
+squared   cubed 
+      4       8 
+```
+
+]
+--
+
+👉 Functions are created using the `function()`.
+---
+
+## Basic components of a function
+
+.pull-left[
+
+### Syntax
+
+```r
+
+name &lt;- function(arg1, aug2, ...){
+
+&lt;FUNCTION BODY&gt;
+
+return(value)
+
+}
+
+```
+
+
+]
+
+.pull-right[
+
+### Example
+
+
+```r
+*cal_sqrt &lt;- function(x){
+
+a &lt;- x^2
+b &lt;- x^3
+out &lt;- c(a, b)
+names(out) &lt;- c("squared", "cubed")
+out # or return(out)
+
+}
+```
+
+
+
+
+]
+
+
+.content-box-yellow[Function name: **`cal_sqrt`**]
+
+ - use verbs, where possible.
+ 
+ - should be meaningful.
+ 
+ - Use an underscore (_) to separate words.
+ 
+ - avoid names of built-in functions.
+ 
+ - start with lower case letters. Note that R is a case sensitive language.
+
+
+
+---
+
+
+## Basic components of a function
+
+.pull-left[
+
+### Syntax
+
+```r
+
+name &lt;- function(arg1, aug2, ...){
+
+&lt;FUNCTION BODY&gt;
+
+return(value)
+
+}
+
+```
+
+
+]
+
+.pull-right[
+
+### Example
+
+
+```r
+*cal_sqrt &lt;- function(x){
+
+ a &lt;- x^2
+ b &lt;- x^3
+ out &lt;- c(a, b)
+ names(out) &lt;- c("squared", "cubed")
+ out # or return(out)
+
+}
+```
+
+
+
+
+]
+
+
+.content-box-yellow[Function arguments: **`x`**]
+
+
+- value passed to the function to obtain the function's result.
+
+---
+
+## Basic components of a function
+
+.pull-left[
+
+### Syntax
+
+```r
+
+name &lt;- function(arg1, aug2, ...){
+
+&lt;FUNCTION BODY&gt;
+
+return(value)
+
+}
+
+```
+
+
+]
+
+.pull-right[
+
+### Example
+
+
+```r
+cal_sqrt &lt;- function(x){
+
+* a &lt;- x^2
+* b &lt;- x^3
+* out &lt;- c(a, b)
+* names(out) &lt;- c("squared", "cubed")
+* out # or return(out)
+
+}
+```
+
+
+
+
+]
+
+
+.content-box-yellow[Function body]
+
+---
+
+### Function body (Cont.)
+
+- Place spaces around all operators such as =, +, -, &lt;-, etc. 
+
+- Exception: Do not place spaces around the operators :, :: and ::: 
+
+```r
+1+2 # bad
+1 + 2 # good 
+```
+--
+
+- Place a space before left parentheses except evaluating the function (function call)
+
+```r
+if (a &gt; 2) # good
+if(a&gt;2) # bad
+
+# Function call ----
+rnorm(2) # good
+rnorm (2) # bad
+```
+
+- Use extra spacing to align multiple lines with &lt;- or =
+
+```r
+# Bad ------
+a = sum(c(1, 5, 8, 10))/2
+sd = sd(c(1, 5, 8, 10))
+
+# Good ------
+a  = sum(c(1, 5, 8, 10))/2
+sd = sd(c(1, 5, 8, 10))
+```
+
+---
+
+### Function body (Cont.)
+
+- Spacing inside parentheses or square brackets 
+
+```r
+# Good ---
+a[1, 2]
+a[1, ]
+if(x &lt; 2)
+
+# Bad ---
+a[1,2]
+a[1,]
+if(x&lt;2)
+if( x&lt;2 )
+
+```
+
+- {} do not go in one single line, always two lines
+
+```r
+# Good ---
+if(y == 2){
+print("even")
+}
+
+# Bad ---
+if(y == 2){ print("even")}
+```
+
+---
+
+## Built-in Functions
+
+### How to call a built-in function in R
+
+```r
+function_name(arg1 = 1, arg2 = 3)
+
+```
+
+### Argument matching
+
+
+
+The following calls to `mean` are all equivalent
+
+```r
+mydata &lt;- c(rnorm(20), 100000)
+mean(mydata) # matched by position
+mean(x = mydata) # matched by name
+mean(mydata, na.rm = FALSE)
+mean(x = mydata, na.rm = FALSE) 
+mean(na.rm = FALSE, x = mydata) 
+mean(na.rm = FALSE, mydata)
+```
+
+
+```
+[1] 4761.94
+```
+
+⚠️ Even though it works, do not change the order of the arguments too much.
+
+---
+
+## Argument matching (cont.)
+
+- some arguments have default values
+
+
+```r
+mean(mydata, trim=0)
+```
+
+```
+[1] 4761.94
+```
+
+```r
+mean(mydata) # Default value for trim is 0
+```
+
+```
+[1] 4761.94
+```
+
+
+```r
+mean(mydata, trim=0.1)
+```
+
+```
+[1] 0.1449313
+```
+
+
+```r
+mean(mydata, tr=0.1) # Partial Matching
+```
+
+```
+[1] 0.1449313
+```
+---
+
+background-image: url('helpmean.png')
+background-position: center
+background-size: contain
+
+## ?mean
+
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+1. Calculate the mean of 1, 2, 3, 8, 10, 20, 56, NA.
+
+
+---
+
+# Basic maths functions
+
+|  Operator | Description  |
+|---|---|
+|  abs(x) | absolute value of x   |
+| log(x, base = y)  |  logarithm of x with base y; if base is not specified, returns the natural logarithm |
+|exp(x)| exponential of x|
+|sqrt(x)|square root of x|
+|factorial(x)| factorial of x|
+
+---
+# Basic statistic functions
+
+|  Operator | Description  |
+|---|---|
+|  mean(x) | mean of x   |
+| median(x)  |  median of x |
+|mode(x)| mode of x|
+|var(x)|variance of x|
+|sd(x)|standard deviation of x|
+|scale(x)| z-score of x|
+|quantile(x)| quantiles of x|
+|summary(x)|summary of x: mean, minimum, maximum, etc.|
+
+---
+
+.pull-left[
+
+## Type conversion functions
+
+|  Test | Convert  |
+|---|---|
+|  is.numeric() | as.numeric()   |
+| is.character()  |  as.character() |
+|is.vector()| as.vector()|
+|is.matrix()|as.matrix()|
+|is.data.frame()| as.data.frame()|
+|is.factor()| as.factor()|
+|is.logical()|as.logical()|
+|is.na()||
+]
+
+--
+
+.pull-right[
+
+## Example
+
+
+```r
+a &lt;- c(1, 2, 3); a
+```
+
+```
+[1] 1 2 3
+```
+
+```r
+is.numeric(a)
+```
+
+```
+[1] TRUE
+```
+
+```r
+is.vector(a)
+```
+
+```
+[1] TRUE
+```
+
+```r
+b &lt;- as.character(a); b
+```
+
+```
+[1] "1" "2" "3"
+```
+
+```r
+is.vector(b)
+```
+
+```
+[1] TRUE
+```
+
+```r
+is.character(b)
+```
+
+```
+[1] TRUE
+```
+]
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+Remove missing values in the following vector 
+
+
+```
+ [1]  0.61940020 -0.93808729  0.95518590 -0.22663938  0.29591186          NA
+ [7]  0.36788089  0.71791098  0.71202022  0.22765782          NA          NA
+[13] -0.74024324  0.02081516 -0.14979979 -0.22351308  0.98729725          NA
+[19]          NA          NA          NA          NA          NA          NA
+[25]          NA          NA          NA -1.50016003  0.18682734  0.20808590
+[31]  0.70102264 -0.10633074 -1.18460046  0.06475501  0.11568817 -0.04333140
+[37] -0.22020064  0.02764713  0.10165760 -0.18234246  1.32914659 -1.29704248
+[43]  1.05317749 -0.70109051  0.09798707  0.10457263 -0.21449845
+```
+---
+
+# Probability distribution functions
+
+- Each probability distribution in R is associated with four functions.
+
+- Naming convention for the four functions:
+
+    For each function there is a root name. For example, the **root name** for the normal distribution is `norm`. This root is prefixed by one of the letters `d`, `p`, `q`, `r`.
+    
+  - **d** prefix for the **distribution** function
+
+  - **p** prefix for the **cumulative probability**
+
+  - **q** prefix for the **quantile**
+
+  - **r** prefix for the **random** number generator
+
+- Example: `dnorm`, `pnorm`, `qnorm`, `rnorm`
+---
+
+## Illustration with Standard normal distribution
+
+The general formula for the probability density function of the normal distribution with mean `\(\mu\)` and variance `\(\sigma\)` is given by
+
+
+$$
+f_X(x) = \frac{1}{\sigma\sqrt{(2\pi)}} e^{-(x-\mu)^2/2\sigma^2}
+$$
+
+If we let the mean `\(\mu=0\)` and the standard deviation `\(\sigma=1\)`, we get the probability density function for the standard normal distribution.
+
+$$
+f_X(x) = \frac{1}{\sqrt{(2\pi)}} e^{-(x)^2/2}
+$$
+
+---
+
+## Standard Normal Distribution
+
+
+$$
+f_X(x) = \frac{1}{\sqrt{(2\pi)}} e^{-(x)^2/2}
+$$
+
+
+
+![Standard normal probability density function: dnorm(0)](l3_files/figure-html/unnamed-chunk-17-1.png)
+
+
+```r
+dnorm(0)
+```
+
+```
+[1] 0.3989423
+```
+
+---
+
+## Standard Normal Distribution
+
+
+$$
+f_X(x) = \frac{1}{\sqrt{(2\pi)}} e^{-(x)^2/2}
+$$
+
+
+```r
+pnorm(0)
+```
+
+```
+[1] 0.5
+```
+
+![Standard normal probability density function: dnorm(0)](l3_files/figure-html/unnamed-chunk-20-1.png)
+
+---
+
+
+## Standard Normal Distribution
+
+
+$$
+f_X(x) = \frac{1}{\sqrt{(2\pi)}} e^{-(x)^2/2}
+$$
+
+
+```r
+pnorm(0)
+```
+
+```
+[1] 0.5
+```
+
+![Standard normal probability density function: dnorm(0)](l3_files/figure-html/unnamed-chunk-22-1.png)
+
+---
+
+## Standard Normal Distribution
+
+
+$$
+f_X(x) = \frac{1}{\sqrt{(2\pi)}} e^{-(x)^2/2}
+$$
+
+
+```r
+qnorm(0.5)
+```
+
+```
+[1] 0
+```
+
+![Standard normal probability density function: dnorm(0)](l3_files/figure-html/unnamed-chunk-24-1.png)
+
+---
+
+### Standard Normal Distribution: rnorm
+
+
+```r
+set.seed(262020)
+random_numbers &lt;- rnorm(10)
+random_numbers
+```
+
+```
+ [1]  0.20078181  0.95873346  1.18369056  1.49513750  1.18109222 -0.57789570
+ [7]  0.01790671  0.81185245  0.39488199 -0.44337927
+```
+
+```r
+sort(random_numbers) ## sort the numbers then it is easy to map with the graph
+```
+
+```
+ [1] -0.57789570 -0.44337927  0.01790671  0.20078181  0.39488199  0.81185245
+ [7]  0.95873346  1.18109222  1.18369056  1.49513750
+```
+
+
+![](l3_files/figure-html/unnamed-chunk-26-1.png)&lt;!-- --&gt;
+
+---
+
+## Other distributions in R
+
+.pull-left[
+
+- **`beta`**: beta distribution
+
+- **`binom`**: binomial distribution
+
+- **`cauchy`**: Cauchy distribution
+
+- **`chisq`**: chi-squared distribution
+
+- **`exp`**: exponential distribution
+
+- **`f`**: F distribution
+
+- **`gamma`**: gamma distribution
+
+- **`geom`**: geometric distribution
+
+- **`hyper`**: hyper-geometric distribution
+
+
+]
+
+
+.pull-right[
+
+
+
+- **`lnorm`**: log-normal distribution
+
+- **`multinom`**: multinomial distribution
+
+- **`nbinom`**: negative binomial distribution
+
+- **`norm`**: normal distribution
+
+- **`pois`**: Poisson distribution
+
+- **`t`**: Student's t distribution
+
+- **`unif`**: uniform distribution
+
+- **`weibull`**: Weibull distribution
+
+]
+
+--
+&gt;  🙋 Getting help with R:  **`?Distributions`**
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+1. Suppose `\(Z \sim  N(0,1)\)`. Calculate the following standard normal probabilities.
+
+    - `\(P(Z \le 1.25)\)`,
+
+    - `\(P(Z &gt; 1.25)\)`,
+
+    - `\(P(Z \leq -1.25)\)`,
+
+    - `\(P(-.38 \leq Z \leq 1.25)\)`.
+    
+1. Find the following percentiles for the standard normal distribution.
+
+     - 90th, 
+     
+     - 95th,
+     
+     - 97.5th,
+     
+1. Determine the `\(Z_\alpha\)` for the following
+
+      - `\(\alpha = 0.1\)`
+      
+      - `\(\alpha = 0.95\)`
+
+
+---
+
+1. Suppose `\(X \sim N(15, 9)\)`. Calculate the following probabilities
+
+  - `\(P(X \leq 15)\)`,
+  
+  - `\(P(X &lt; 15)\)`,
+  
+  - `\(P(X \geq 10)\)`.
+  
+1. A particular mobile phone number is used to receive both voice messages and text messages. Suppose 20% of the messages involve text messages, and consider a sample of 15 messages. What is the probability that 
+
+    - At most 8 of the messages involve a text message?
+    
+    - Exactly 8 of the messages involve a text message.
+    
+1. Generate 20 random values from a Poisson distribution with mean 10 and calculate the mean. Compare your answer with your friend's answer.
+
+---
+
+# Reproducibility of scientific results
+
+
+```r
+rnorm(10) # first attempt
+```
+
+```
+ [1]  1.4701904 -0.2375662  0.1765985 -0.5257483 -1.3674764 -1.4422500
+ [7]  0.7576607  0.6475122 -1.1543034  0.9066248
+```
+
+
+
+```r
+rnorm(10) # second attempt
+```
+
+```
+ [1] -1.7603264 -0.3402939 -1.0335807  1.0645014 -0.3874459  0.5975271
+ [7] -2.1535707  0.6602928  1.1581404  0.6133446
+```
+
+As you can see above you will get different results 
+
+
+```r
+set.seed(1)
+rnorm(10) # First attempt with set.seed
+```
+
+```
+ [1] -0.6264538  0.1836433 -0.8356286  1.5952808  0.3295078 -0.8204684
+ [7]  0.4874291  0.7383247  0.5757814 -0.3053884
+```
+
+
+```r
+set.seed(1)
+rnorm(10) # Second attempt with set.seed
+```
+
+```
+ [1] -0.6264538  0.1836433 -0.8356286  1.5952808  0.3295078 -0.8204684
+ [7]  0.4874291  0.7383247  0.5757814 -0.3053884
+```
+ 
+---
+# R Apply family and its variants
+
+- **`apply()`** function
+
+
+```r
+marks &lt;- data.frame(maths=c(10, 20, 30), chemistry=c(100, NA, 60))
+marks
+```
+
+```
+  maths chemistry
+1    10       100
+2    20        NA
+3    30        60
+```
+
+```r
+apply(marks, 1, mean)
+```
+
+```
+[1] 55 NA 45
+```
+
+```r
+apply(marks, 2, mean)
+```
+
+```
+    maths chemistry 
+       20        NA 
+```
+
+--
+
+
+```r
+apply(marks, 1, mean, na.rm=TRUE)
+```
+
+```
+[1] 55 20 45
+```
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+Calculate the row and column wise standard deviation of the following matrix
+
+
+```
+     [,1] [,2] [,3] [,4]
+[1,]    1    6   11   16
+[2,]    2    7   12   17
+[3,]    3    8   13   18
+[4,]    4    9   14   19
+[5,]    5   10   15   20
+```
+
+---
+
+class: duke-green, center, middle
+
+# Your turn
+
+---
+## Assignment 1: Individual
+
+Find about the following variants of apply family functions in R **`lapply()`**, **`sapply()`**, **`vapply()`**, **`mapply()`**, **`rapply()`**, and **`tapply()`** functions.
+
+Resourses: You can follow the DataCamp tutorial [here](https://www.datacamp.com/community/tutorials/r-tutorial-apply-family?utm_source=adwords_ppc&amp;utm_campaignid=1658343524&amp;utm_adgroupid=63833882055&amp;utm_device=c&amp;utm_keyword=%2Bapply%20%2Br&amp;utm_matchtype=b&amp;utm_network=g&amp;utm_adpostion=&amp;utm_creative=319558765408&amp;utm_targetid=aud-299261629574:kwd-309818754193&amp;utm_loc_interest_ms=&amp;utm_loc_physical_ms=1009919&amp;gclid=EAIaIQobChMImfeQkOTq5wIVVQwrCh1BngrmEAAYASAAEgLEa_D_BwE).
+
+- You should clearly explain,
+
+    - syntax for each function
+
+    - function inputs
+    
+    - how each function works?/ The task of the function.
+    
+    - output of the function.
+    
+    - differences between the functions (apply vs lapply, apply vs sapply, etc.)
+
+- Provide your own example for each function. 
+
+Use only 1 A4 sheet, you may use both sides.
+
+Assignment due date: 3 March 2020
+
+---
+
+## Data Visualization: qplot()
+
+?qplot
+--
+![](emoji.png)
+
+---
+# Installing R Packages
+
+## Method 1
+
+![](inst.png)
+
+## Method 2
+
+```r
+install.packages("ggplot2")
+```
+
+---
+
+## Load package 
+
+```r
+library(ggplot2)
+```
+
+Now search `?qplot`
+
+Note: You shouldn't have to re-install packages each time you open R. However, you do need to load the packages you want to use in that session via `library`.
+
+---
+
+## mozzie dataset
+
+
+```r
+library(mozzie)
+data(mozzie)
+```
+
+---
+## Data Visualization with `qplot`
+
+## plot vs qplot
+
+.pull-left[
+
+```r
+plot(mozzie$Colombo, mozzie$Gampaha)
+```
+
+![](l3_files/figure-html/unnamed-chunk-35-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+```r
+qplot(Colombo, Gampaha, data=mozzie)
+```
+
+![](l3_files/figure-html/unnamed-chunk-36-1.png)&lt;!-- --&gt;
+]
+---
+## Data Visualization with `qplot`
+
+.pull-left[
+
+```r
+qplot(Colombo, Gampaha, data=mozzie)
+```
+
+![](l3_files/figure-html/unnamed-chunk-37-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+```r
+qplot(Colombo, Gampaha, data=mozzie, colour=Year)
+```
+
+![](l3_files/figure-html/unnamed-chunk-38-1.png)&lt;!-- --&gt;
+]
+---
+## Data Visualization with `qplot`
+
+.pull-left[
+
+```r
+qplot(Colombo, Gampaha, data=mozzie)
+```
+
+![](l3_files/figure-html/unnamed-chunk-39-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+```r
+qplot(Colombo, Gampaha, data=mozzie, size=Year)
+```
+
+![](l3_files/figure-html/unnamed-chunk-40-1.png)&lt;!-- --&gt;
+]
+
+---
+
+## Data Visualization with `qplot`
+
+.pull-left[
+
+```r
+qplot(Colombo, Gampaha, data=mozzie)
+```
+
+![](l3_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+```r
+qplot(Colombo, Gampaha, data=mozzie, geom="point")
+```
+
+![](l3_files/figure-html/unnamed-chunk-42-1.png)&lt;!-- --&gt;
+]
+
+
+---
+## Data Visualization with `qplot`
+
+.pull-left[
+
+```r
+qplot(ID, Gampaha, data=mozzie)
+```
+
+![](l3_files/figure-html/unnamed-chunk-43-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+```r
+qplot(ID, Gampaha, data=mozzie, geom="line")
+```
+
+![](l3_files/figure-html/unnamed-chunk-44-1.png)&lt;!-- --&gt;
+]
+
+---
+## Data Visualization with `qplot`
+
+.pull-left[
+
+```r
+qplot(ID, Gampaha, data=mozzie)
+```
+
+![](l3_files/figure-html/unnamed-chunk-45-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+```r
+qplot(ID, Gampaha, data=mozzie, geom="path")
+```
+
+![](l3_files/figure-html/unnamed-chunk-46-1.png)&lt;!-- --&gt;
+]
+
+---
+
+## Data Visualization with `qplot`
+
+.pull-left[
+
+```r
+qplot(Colombo, Gampaha, data=mozzie, geom="line")
+```
+
+![](l3_files/figure-html/unnamed-chunk-47-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+```r
+qplot(Colombo, Gampaha, data=mozzie, geom="path")
+```
+
+![](l3_files/figure-html/unnamed-chunk-48-1.png)&lt;!-- --&gt;
+]
+
+---
+## Data Visualization with `qplot`
+
+.pull-left[
+
+```r
+qplot(Colombo, Gampaha, data=mozzie, geom=c("line", "point"))
+```
+
+![](l3_files/figure-html/unnamed-chunk-49-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+
+```r
+qplot(Colombo, Gampaha, data=mozzie, geom=c("path", "point"))
+```
+
+![](l3_files/figure-html/unnamed-chunk-50-1.png)&lt;!-- --&gt;
+]
+---
+
+## Data Visualization with `qplot`
+
+.pull-left[
+
+```r
+boxplot(Colombo~Year, data=mozzie)
+```
+
+![](l3_files/figure-html/unnamed-chunk-51-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+
+```r
+qplot(factor(Year), Colombo, data=mozzie, geom="boxplot")
+```
+
+![](l3_files/figure-html/unnamed-chunk-52-1.png)&lt;!-- --&gt;
+]
+
+---
+
+## Data Visualization with `qplot`
+
+.pull-left[
+
+
+```r
+qplot(factor(Year), Colombo, data=mozzie, geom="boxplot")
+```
+
+![](l3_files/figure-html/unnamed-chunk-53-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+
+```r
+qplot(factor(Year), Colombo, data=mozzie) # geom="point"-default
+```
+
+![](l3_files/figure-html/unnamed-chunk-54-1.png)&lt;!-- --&gt;
+]
+
+---
+## Data Visualization with `qplot`
+.pull-left[
+
+
+```r
+qplot(factor(Year), Colombo, data=mozzie, geom="point")
+```
+
+![](l3_files/figure-html/unnamed-chunk-55-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+
+```r
+qplot(factor(Year), Colombo, data=mozzie, geom=c("jitter", "point")) # geom="point"-default
+```
+
+![](l3_files/figure-html/unnamed-chunk-56-1.png)&lt;!-- --&gt;
+]
+
+---
+
+## Data Visualization with `qplot`
+.pull-left[
+
+
+```r
+qplot(factor(Year), Colombo, data=mozzie, geom=c("jitter", "point"))
+```
+
+![](l3_files/figure-html/unnamed-chunk-57-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+
+```r
+qplot(factor(Year), Colombo, data=mozzie, geom=c("jitter", "point", "boxplot")) # geom="point"-default
+```
+
+![](l3_files/figure-html/unnamed-chunk-58-1.png)&lt;!-- --&gt;
+]
+
+---
+
+
+## Data Visualization with `qplot`
+.pull-left[
+
+
+```r
+qplot(Colombo, data=mozzie)
+```
+
+```
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+```
+
+![](l3_files/figure-html/unnamed-chunk-59-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+
+```r
+qplot(Colombo, data=mozzie, geom="density") 
+```
+
+![](l3_files/figure-html/unnamed-chunk-60-1.png)&lt;!-- --&gt;
+]
+
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+Explore `iris` dataset with suitable graphics.
+
+
+```r
+head(iris)
+```
+
+```
+  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa
+```
+
+&lt;img src="iris_flower_dataset.png" width="800"&gt;
+
+---
+
+class: center, middle
+
+Slides available at: hellor.netlify.com
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

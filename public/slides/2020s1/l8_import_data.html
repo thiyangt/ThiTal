@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>STA 326 2.0 Programming and Data Analysis with R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr Thiyanga Talagala" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/duke-blue.css" rel="stylesheet" />
+    <link href="libs/remark-css/hygge-duke.css" rel="stylesheet" />
+    <link rel="stylesheet" href="libs/cc-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="libs/figure-captions.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# STA 326 2.0 Programming and Data Analysis with R
+## R Data Import and Export
+### Dr Thiyanga Talagala
+### Online distance learning/teaching materials during the COVID-19 outbreak.
+
+---
+
+
+
+# Data import with readr
+
+## R package
+
+`readr`: part of the core tidyverse.
+
+
+```r
+library(tidyverse)
+```
+
+```
+── Attaching packages ──────────────────────────────────────────────────────── tidyverse 1.3.0 ──
+```
+
+```
+✓ ggplot2 3.3.0     ✓ purrr   0.3.4
+✓ tibble  3.0.1     ✓ dplyr   0.8.5
+✓ tidyr   1.0.3     ✓ stringr 1.4.0
+✓ readr   1.3.1     ✓ forcats 0.5.0
+```
+
+```
+── Conflicts ─────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+```
+
+## `readr` data import functions
+
+- `read_csv`: reads comma-delimited files.
+
+- `read_csv2`: reads semicolon-separated files
+
+- `read_tsv`: reads tab-delimited files
+
+
+---
+
+# 🛠 Import data from a .csv file
+
+
+## Syntax
+
+
+```r
+datasetname &lt;- read_csv("include_file_path")
+```
+
+When you run `read_csv`, it prints out the names and type of each column.
+
+.full-width[.content-box-yellow[Switch to R]]
+
+  
+---
+
+# If the file is saved inside the project folder
+
+.full-width[.content-box-green[Demo: Go to google classroom and watch the video importdatacsv1.mov]]
+
+
+# If the file is saved outside the project folder
+
+.full-width[.content-box-green[Demo: Go to google classroom and watch the video importdatacsv2.mov]]
+
+---
+
+# 🛠 Importing csv file from a website
+
+## Syntax
+
+```r
+datasetname &lt;- read_csv("include url here")
+```
+
+## Example
+
+
+```r
+url &lt;- "https://thiyanga.netlify.app/project/datasets/foodlabel.csv"
+foodlabel &lt;- read_csv(url)
+```
+
+```
+Warning: Missing column names filled in: 'X43' [43]
+```
+
+```
+Parsed with column specification:
+cols(
+  .default = col_double()
+)
+```
+
+```
+See spec(...) for full column specifications.
+```
+
+
+```r
+head(foodlabel, 1)
+```
+
+```
+# A tibble: 1 x 80
+  Gender   Age Education Employment Income Housesize children marital fshopper
+   &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
+1      1    22         5          4      3         5        2       0        0
+# … with 71 more variables: mplanner &lt;dbl&gt;, place &lt;dbl&gt;, FA &lt;dbl&gt;,
+#   Diabetes &lt;dbl&gt;, `Metabolic cyndrents` &lt;dbl&gt;, Other &lt;dbl&gt;, specific &lt;dbl&gt;,
+#   job1 &lt;dbl&gt;, job2 &lt;dbl&gt;, Exercise &lt;dbl&gt;, Health &lt;dbl&gt;, taste &lt;dbl&gt;,
+#   easy &lt;dbl&gt;, familiarity &lt;dbl&gt;, friends &lt;dbl&gt;, Useful &lt;dbl&gt;, Easiness &lt;dbl&gt;,
+#   Sufficient &lt;dbl&gt;, Trusfulness &lt;dbl&gt;, Clear &lt;dbl&gt;, `attractive pack` &lt;dbl&gt;,
+#   `hc/nutriclaims` &lt;dbl&gt;, graphical &lt;dbl&gt;, `Free/prize` &lt;dbl&gt;, source &lt;dbl&gt;,
+#   netquan &lt;dbl&gt;, `low in fat` &lt;dbl&gt;, `low in cho` &lt;dbl&gt;, sodium &lt;dbl&gt;, `e
+#   labels` &lt;dbl&gt;, place2 &lt;dbl&gt;, fa2 &lt;dbl&gt;, Health_1 &lt;dbl&gt;, X43 &lt;dbl&gt;,
+#   f1 &lt;dbl&gt;, f2 &lt;dbl&gt;, f3 &lt;dbl&gt;, f4 &lt;dbl&gt;, f5 &lt;dbl&gt;, f6 &lt;dbl&gt;, f7 &lt;dbl&gt;,
+#   f8 &lt;dbl&gt;, f9 &lt;dbl&gt;, f10 &lt;dbl&gt;, f11 &lt;dbl&gt;, f12 &lt;dbl&gt;, f13 &lt;dbl&gt;, f14 &lt;dbl&gt;,
+#   f15 &lt;dbl&gt;, f16 &lt;dbl&gt;, f17 &lt;dbl&gt;, f18 &lt;dbl&gt;, i1 &lt;dbl&gt;, i2 &lt;dbl&gt;, i3 &lt;dbl&gt;,
+#   i4 &lt;dbl&gt;, i5 &lt;dbl&gt;, i6 &lt;dbl&gt;, i7 &lt;dbl&gt;, i8 &lt;dbl&gt;, i9 &lt;dbl&gt;, i10 &lt;dbl&gt;,
+#   i11 &lt;dbl&gt;, i12 &lt;dbl&gt;, i13 &lt;dbl&gt;, i14 &lt;dbl&gt;, i15 &lt;dbl&gt;, i16 &lt;dbl&gt;,
+#   i17 &lt;dbl&gt;, i18 &lt;dbl&gt;, cluster &lt;dbl&gt;
+```
+---
+
+# `read.csv` and `read_csv`
+
+*  `read.csv` is in base R.
+
+*  `read_csv` is in tidyverse.
+
+*  `read.csv()` performs a similar job to `read_csv()`.
+
+* `read_csv()` works well with other parts of the tidyverse.
+
+*  `read_csv()` is faster than `read.csv()`.
+
+*  `read_csv()` will always read variables containing text as character variable.  In contrast, the base R function `read.csv()` will, by default, convert any character variable to a factor.
+
+&lt;!--This is often not what you want, and can be overridden by passing the option stringsAsFactors = FALSE to read.csv().--&gt;
+
+
+---
+
+# 🛠 Writing to a File
+
+- We can save tibble (or dataframe) to a csv file, using `write_csv()`.
+
+- `write_csv()` is in the `readr` package.
+
+
+## Syntax
+
+```r
+write_csv(name_of_the_data_set_you_want_to_save, "path_to_write_to")
+```
+
+## Example
+
+```r
+data(iris)
+# This will save inside your project folder
+write_csv(iris, "iris.csv") 
+# This will save inside the data folder which is inside your project folder
+write_csv(iris, "data/iris.csv") 
+```
+
+.full-width[.content-box-yellow[Switch to R]]
+
+
+.full-width[.content-box-green[Demo: Go to google classroom and watch the video exportdatacsv.mov]]
+
+
+---
+
+# 🛠 Importing Excel .xlsx files
+
+## Syntax
+
+```r
+library(readxl)
+mydata &lt;- read_xlsx("file_path")
+```
+
+.full-width[.content-box-yellow[Switch to R]]
+
+
+.full-width[.content-box-green[Demo: Go to google classroom and watch the video readxlsx.mov]]
+
+---
+# Importing SAS, SPSS and STATA files
+
+## SAS
+
+```r
+read_sas("mtcars.sas7bdat")
+write_sas(mtcars, "mtcars.sas7bdat")
+```
+## SPSS
+
+```r
+read_sav("mtcars.sav")
+write_sav(mtcars, "mtcars.sav")
+
+```
+## Stata
+```r
+read_dta("mtcars.dta")
+write_dta(mtcars, "mtcars.dta")
+```
+
+---
+
+# Importing other types of data
+
+
+- `feather`: for sharing with Python and other languages
+
+- `httr`: for web apis
+
+- `jsonlite`: for JSON
+
+- `rvest`: for web scraping
+
+- `xml2`: for XML
+
+.full-width[.content-box-blue[Working with feather, httr, jsonlite, rvest and xml2 is beyond the scope of the course.]]
+
+---
+
+class: center, middle
+
+Slides available at: hellor.netlify.app
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

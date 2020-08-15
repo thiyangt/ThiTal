@@ -1,0 +1,283 @@
+---
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# STA 326 2.0 Programming and Data Analysis with R
+
+# Generating Random Numbers Using the Inverse Transform Method
+
+Prepared by Dr Thiyanga Talagala
+
+# 1.  Probability distribution functions in R to generate random numbers
+
+\begin{table}[!h]
+\begin{tabular}{ll|ll}
+\textbf{rbeta} & beta distribution & \textbf{rlnorm} & log-normal distribution \\
+\textbf{rbinom} & binomial distribution & \textbf{rmultinom} & multinomial distribution  \\
+\textbf{rcauchy} & Cauchy distribution & \textbf{rnbinom} & negative binomial distribution \\
+\textbf{rchisq} & chi-squared distribution & \textbf{rnorm}& normal distribution  \\
+\textbf{rexp} & exponential distribution &  \textbf{rpois} & Poisson distribution \\
+\textbf{rf} & F distribution &  \textbf{rt} & Student's t distribution\\
+\textbf{rgamma} & gamma distribution &  \textbf{runif} & uniform distribution\\
+\textbf{rgeom} & geometric distribution &  \textbf{rweibull} & Weibull distribution\\
+\textbf{rhyper} & hyper-geometric distribution & 
+\end{tabular}
+\end{table}
+
+There are other methods of generating random numbers from a particular distribution. In this lectorial we will discuss **Inverse Transform Method**.
+
+# 2. Inverse transform method
+
+
+## Theorem 1: Probability Integral Transformation
+
+> Let $X$ have continuous cdf $F_X(x)$ and define the random variable $Y$ as $Y =  F_X(X)$. Then $Y$ is uniformly distributed on (0, 1), that is, $P(Y \leq y) = y, \text{ 0 < y < 1}.$
+
+
+Let's try to understand the theorem using an example.
+
+```{r, out.width="100%", fig.asp=0.6, fig.align='center', fig.pos='h', echo=FALSE}
+library(ggplot2)
+ggplot() + 
+  theme_void() + 
+  theme(panel.border = element_rect(colour="white", fill=NA, size = 1))
+
+```
+
+\newpage
+
+### Useful results to prove the theorem.
+
+**Result 1:** 
+
+If $F_X$ is strictly increasing, then $F_X^{-1}$ is well defined by 
+
+$$F_X^{-1}(y) = x \Leftrightarrow F_X(x) = y.$$ 
+
+If $F_X$ is constant on some interval,  then $F_X^{-1}$ is not well defined by the above equation. To avoid this problem we define $F_X^{-1}(y)$ for $0 < y < 1$ by
+
+$$F_X^{-1}(y) = inf\{x: F_X(x) \geq y\}.$$
+
+
+\newpage
+
+**Result 2:** 
+
+If $F_X$ is **strictly** increasing, then it is true that
+
+$$F_X^{-1}(F_X(x)) = x.$$
+```{r, out.width="100%", fig.asp=0.4, fig.align='center', fig.pos='h', echo=FALSE}
+library(ggplot2)
+ggplot() + 
+  theme_void() + 
+  theme(panel.border = element_rect(colour="white", fill=NA, size = 1))
+
+```
+
+
+### Proof of Theorem 1:
+
+For $Y = F_X(X)$ we have, for $0 < y < 1,$
+
+\newpage
+We can use Theorem 1 to generate random numbers from a particular distribution.
+
+\newpage
+
+# 3. Steps in deriving random numbers using integral transformation method
+
+
+
+1. Derive the cumulative distribution function of $f_X(x)$
+
+2. Derive the inverse function $F_X^{-1}(u)$.
+
+3. Write a function to generate random numbers.
+
+    - Generate $u$ from $Uniform(0, 1)$.
+    
+    - compute $x = F_X^{-1}(u)$.
+
+
+## Example 1
+
+Write a function to generate $n$ random numbers from the distribution with density $f_X(x) = 3x^2, \text{ 0 < x < 1}.$
+
+**Step 1:** Find the cumulative distribution function of $f_X(x)$,
+
+$$F_X(x) = x^3 \text{ for } 0<x<1$$
+
+
+\newpage
+
+
+**Step 2:** Next we need to compute $F_X^{-1}(u)$,
+
+$$F_X^{-1}(u) = u^{\frac{1}{3}}.$$
+
+```{r, out.width="100%", fig.asp=0.9, fig.align='center', fig.pos='h', echo=FALSE}
+library(ggplot2)
+ggplot() + 
+  theme_void() + 
+  theme(panel.border = element_rect(colour="white", fill=NA, size = 1))
+
+```
+
+**Step 3:** R function
+
+
+```{r, comment=NA}
+generate_it <- function(n){ 
+  # Generate random numbers
+  u <- runif(n)
+  xgen <- u^(1/3)
+  xgen
+  
+}
+
+set.seed(2020)
+generate_it(10)
+  
+```
+
+
+**Visualisation of  theoretical distribution**
+
+```{r, comment=NA, fig.height=3, message=FALSE, warning=FALSE}
+library(tidyverse)
+# Theoretical distribution values
+theoretical.df <- tibble(x = seq(0, 1, 0.01), fx = 3*x^2)
+ggplot(theoretical.df, aes(x = x, y = fx)) + 
+  geom_line(col = "red")
+```
+
+
+**Visualize empirical distribution - counts**
+
+```{r, comment=NA, message=FALSE, fig.height=3}
+empirical.df <- data.frame(data.emp = generate_it(1000))  
+# Plot empirical distribution - counts
+ggplot(empirical.df, aes(x = data.emp))+
+  geom_histogram(col = "white", binwidth = 0.05)
+  
+```
+
+\newpage
+
+**Visualize empirical distribution - density**
+
+```{r, comment=NA, message=FALSE, fig.height=3}
+ggplot(empirical.df, aes(x = data.emp, y=..density..)) +
+  geom_histogram(col = "white", binwidth = 0.05)
+  
+```
+
+
+
+**Visualize theoretical distribution and empirical distribution together**
+
+```{r, comment=NA, message=FALSE, fig.height=3}
+ggplot(empirical.df, aes(x = data.emp, y=..density..)) + 
+  geom_histogram(col = "white", binwidth = 0.05) + 
+  geom_line(data = theoretical.df, aes(x = x, y = fx), color = 'red') 
+```
+
+\newpage
+
+**Function to generate random numbers and visualize theoretical and empirical distributions**
+
+```{r, comment=NA}
+generate_it_dist <- function(n){ 
+  # Generate random numbers
+  u <- runif(n)
+  xgen <- u^(1/3)
+  xgen
+  
+  # values for empirical distribution
+  empirical.df <- data.frame(xgen=xgen) 
+  
+  # values for the theoretical distribution
+  theoretical.df <- tibble(x = seq(0, 1, 0.01), 
+  fx = 3*x^2)
+  
+  # arrange values and plot into a list
+  list(
+    xgen,
+  ggplot2::ggplot(empirical.df, aes(x=xgen, y=..density..)) + 
+    geom_histogram(col="white", binwidth = 0.01) + 
+  geom_line(data = theoretical.df, aes(x = x, y = fx), color = 'red') )
+}
+
+
+```
+
+Run the following codes and check the outputs.
+
+```r
+# Sample size 10
+generate_it_dist(10)
+
+# Sample size 100
+n100 <- generate_it_dist(100)
+n100
+n100[[1]]
+n100[[2]]
+
+# Sample size 10000
+n10000 <- generate_it_dist(10000)
+n10000[[2]]
+```
+
+\newpage
+
+**Example 2 ** 
+
+
+i) Write a function to generate random numbers from the $Exponential(\lambda)$ distribution using the inverse transformation method.
+
+
+```{r,  comment=NA}
+exp_generator <- function(n, lambda){
+  u <- runif(n, 0, 1)
+  exp.values <- -log(1-u)/lambda
+    exp.values
+}
+
+```
+
+
+ii) Generate 1000 random numbers from the $Exponential(2)$ distribution.
+
+```{r, comment=NA, echo=TRUE}
+set.seed(111)
+exp2 <- exp_generator(1000, 2)
+
+```
+
+
+```{r, comment=NA}
+exp2
+```
+
+
+iii) Graph the density histogram of the sample with the $Exponential(2)$ density superimposed for comparison. 
+
+
+```{r, comment=NA}
+# values for empirical distribution
+empirical.df.exp <- data.frame(xgen=exp2) 
+# values for the theoretical distribution
+theoretical.df <- tibble(x = seq(0.1, 5, 0.01), 
+  fx = 2*exp(-2*x))
+
+ggplot(empirical.df.exp, aes(x = xgen, y=..density..)) + 
+  geom_histogram(col = "white", binwidth = 0.05) + 
+  geom_line(data = theoretical.df, aes(x = x, y = fx), color = "forestgreen") + 
+  labs(x="x", y="fx")
+```
+
+

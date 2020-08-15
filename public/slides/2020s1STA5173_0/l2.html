@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>STA 326 2.0 Programming and Data Analysis with R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr Thiyanga Talagala" />
+    <meta name="date" content="2020-02-18" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/duke-blue.css" rel="stylesheet" />
+    <link href="libs/remark-css/hygge-duke.css" rel="stylesheet" />
+    <link href="libs/countdown/countdown.css" rel="stylesheet" />
+    <script src="libs/countdown/countdown.js"></script>
+    <link rel="stylesheet" href="libs/cc-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="libs/figure-captions.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# STA 326 2.0 Programming and Data Analysis with R
+## Lesson 2: Data Structures
+### Dr Thiyanga Talagala
+### 2020-02-18
+
+---
+
+
+
+
+background-image: url('dataStructures.png')
+background-position: center
+background-size: contain
+
+# Recap
+
+.footer-note[.tiny[.green[Image Credit: ][venus.ifca.unican.es](http://venus.ifca.unican.es/Rintro/dataStruct.html)]]
+
+---
+
+background-image: url('vectors.jpg')
+background-position: center
+background-size: contain
+
+# Recap
+
+.footer-note[.tiny[.green[Image Credit: ][venus.ifca.unican.es](http://venus.ifca.unican.es/Rintro/dataStruct.html)]]
+
+---
+# Recap
+
+
+```
+ [1] 1 2 3 4 5 5 4 3 2 1
+```
+
+--
+
+- Method 1
+
+```r
+c(1, 2, 3, 4, 5, 5, 4, 3, 2, 1)
+
+```
+--
+
+- Method 2
+
+```r
+c(1:5, 5:1)
+```
+
+--
+
+- Name elements 
+
+
+```r
+a &lt;- c(1:5, 5:1)
+a
+```
+
+```
+##  [1] 1 2 3 4 5 5 4 3 2 1
+```
+
+```r
+names(a) &lt;- c("a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5")
+a
+```
+
+```
+## a1 a2 a3 a4 a5 b1 b2 b3 b4 b5 
+##  1  2  3  4  5  5  4  3  2  1
+```
+
+---
+
+## Operations between vectors 
+
+
+```r
+a 
+```
+
+```
+a1 a2 a3 a4 a5 b1 b2 b3 b4 b5 
+ 1  2  3  4  5  5  4  3  2  1 
+```
+
+```r
+a * c(10, 100)
+```
+
+```
+ a1  a2  a3  a4  a5  b1  b2  b3  b4  b5 
+ 10 200  30 400  50 500  40 300  20 100 
+```
+
+- Types of vectors
+
+
+---
+## Vectors: Subsetting
+
+
+```r
+myvec &lt;- 1:20; myvec
+```
+
+```
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+```
+
+--
+
+
+```r
+myvec[1]
+```
+
+```
+[1] 1
+```
+
+--
+
+```r
+myvec[5:10]
+```
+
+```
+[1]  5  6  7  8  9 10
+```
+
+--
+
+```r
+myvec[-1]
+```
+
+```
+ [1]  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+```
+--
+
+
+```r
+myvec[myvec &gt; 3]
+```
+
+```
+ [1]  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+```
+
+---
+
+## Vectors: Subsetting
+
+Extract elements present in vector `a`
+
+
+```r
+a
+```
+
+```
+a1 a2 a3 a4 a5 b1 b2 b3 b4 b5 
+ 1  2  3  4  5  5  4  3  2  1 
+```
+
+```r
+myvec
+```
+
+```
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+```
+
+```r
+myvec %in% a
+```
+
+```
+ [1]  TRUE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+[13] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+```
+
+```r
+myvec[myvec %in% a]
+```
+
+```
+[1] 1 2 3 4 5
+```
+--
+
+
+```r
+b &lt;- 100:105
+myvec[myvec %in% b]
+```
+
+```
+## integer(0)
+```
+
+---
+class: duke-orange, center, middle
+
+# Your turn
+---
+
+1. Generate a sequence using the code `seq(from=1, to=10, by=1)`.
+
+2. What other ways can you generate the same sequence? 
+
+3. Using the function `rep` , create the below sequence 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4
+
+
+<div class="countdown" id="timer_5eeca132" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">30</span></code>
+</div>
+
+
+---
+background-image: url('horse.png')
+background-position: center
+background-size: cover
+
+
+---
+
+class: duke-orange, center, middle
+
+# 2. Matrices
+---
+
+background-image: url('dataStructures.png')
+background-position: center
+background-size: contain
+
+---
+
+Matrix is a 2-dimentional and a homogeneous data structure
+
+**Syntax to create a matrix**
+
+```r
+matrix_name &lt;- matrix(vector_of_elements, 
+                      nrow=number_of_rows,
+                      ncol=number_of_columns,
+                      byrow=logical_value, # If byrow=TRUE, then the matrix is filled in by row.
+                      dimnames=list(rnames, cnames)) # To assign row names and columns
+```
+
+**Example**
+
+
+
+```r
+matrix(1:6, nrow=2, ncol=3)
+```
+
+```
+     [,1] [,2] [,3]
+[1,]    1    3    5
+[2,]    2    4    6
+```
+
+```r
+matrix(1:6, nrow=2)
+```
+
+```
+     [,1] [,2] [,3]
+[1,]    1    3    5
+[2,]    2    4    6
+```
+
+```r
+matrix(1:6, ncol=3)
+```
+
+```
+     [,1] [,2] [,3]
+[1,]    1    3    5
+[2,]    2    4    6
+```
+
+
+---
+
+# Matrix fill by rows/ columns
+
+
+```r
+values &lt;- c(10, 20, 30, 40)
+matrix1 &lt;- matrix(values, nrow=2) # Matrix filled by columns (default option)
+matrix1
+```
+
+```
+     [,1] [,2]
+[1,]   10   30
+[2,]   20   40
+```
+
+```r
+matrix2 &lt;- matrix(values, nrow=2, byrow=TRUE) # Matrix filled by rows
+matrix2
+```
+
+```
+     [,1] [,2]
+[1,]   10   20
+[2,]   30   40
+```
+
+- byrow=TRUE: matrix is filled in by row
+
+- byrow=FALSE: matrix is filled in by column
+
+- Default is by column
+
+---
+
+# Naming matrix rows and columns
+
+
+```r
+rnames &lt;- c("R1", "R2")
+cnames &lt;- c("C1", "C2")
+matrix_with_names &lt;- matrix(values, nrow=2, dimnames=list(rnames, cnames))
+matrix_with_names
+```
+
+```
+   C1 C2
+R1 10 30
+R2 20 40
+```
+
+---
+# Matrix subscript
+
+`matraix_name[i, ]` gives the ith row of a matrix
+
+
+```r
+matrix1[1, ]
+```
+
+```
+[1] 10 30
+```
+
+`matraix_name[, j]` gives the jth column of a matrix
+
+
+```r
+matrix1[, 2]
+```
+
+```
+[1] 30 40
+```
+
+`matraix_name[i, j]` gives the ith row and jth column element
+
+
+```r
+matrix1[1, 2]
+```
+
+```
+[1] 30
+```
+
+
+```r
+matrix1[1, c(1, 2)] 
+```
+
+```
+[1] 10 30
+```
+
+---
+
+# `cbind` and `rbind`
+
+Matrices can be created by column-binding and row-binding with `cbind()` and `rbind()`
+
+
+```r
+x &lt;- 1:3
+y &lt;- c(10, 100, 1000)
+cbind(x, y) # binds matrices horizontally
+```
+
+```
+     x    y
+[1,] 1   10
+[2,] 2  100
+[3,] 3 1000
+```
+
+```r
+rbind(x, y) #binds matrices vertically
+```
+
+```
+  [,1] [,2] [,3]
+x    1    2    3
+y   10  100 1000
+```
+
+---
+# Matrix operations
+
+Transpose
+
+
+```r
+t(x)
+```
+
+```
+     [,1] [,2] [,3]
+[1,]    1    2    3
+```
+
+Matrix multiplication
+
+
+```r
+y &lt;- matrix(seq(10, 60, by=10), nrow=3)
+z &lt;- x %*% y
+z
+```
+
+```
+     [,1] [,2]
+[1,]  140  320
+```
+
+Find x in: m*x=n
+
+```r
+solve(m, n)
+```
+---
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+background-image: url('china.png')
+background-position: center
+background-size: contain
+
+---
+
+background-image: url('china.png')
+background-position: center
+background-size: contain
+
+.content-box-yellow[Calculate distance between Hubei and surrounding cities on map  using the [distance calculator](https://www.distancecalculator.net/) and enter it to a vector. Name the vector as distance_to_hubei.
+
+We want to look at the relationship between the number of confirmed cases and distance to other cities/regions/province from Hubei.
+]
+
+Help:
+`$$\hat{\beta}=(X^TX)^{-1}X^TY$$`
+
+
+---
+
+background-image: url('slr.png')
+background-position: center
+background-size: contain
+
+<div class="countdown" id="timer_5eeca2db" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+
+```r
+count_corona &lt;- c(29631, 1151, 1104, 1073, 879, 830, 771,
+           492, 468, 459, 405, 337, 331, 295, 261, 218, 213, 210, 141, 136, 119, 109, 107, 91, 85, 80, 58, 49, 49, 36, 18, 18, 10, 1)
+
+
+distance_to_hubei &lt;- c(0, 929.05, 807, 7680, 426, 482, 564, 679, 571, 837, 896, 1044, 2338, 872, 827, 992, 609,
+                       923, 1215, 1354, 722, 725, 1424, 993, 1252, 1886, 1581, 896, 2709, 1005, 1560, 1132, 1005, 1133)
+#plot(distance_to_hubei, count_corona)
+
+count_corona &lt;- count_corona[c(-1, -4)]
+distance_to_hubei &lt;- distance_to_hubei[c(-1, -4)]
+#plot(distance_to_hubei, count_corona)
+```
+
+---
+
+```r
+count_corona &lt;- c(29631, 1151, 1104, 1073, 879, 830, 771, 492, 468, 459, 405, 337, 331, 295, 261, 218, 213, 210, 141, 136, 119, 109, 107, 91, 85, 80, 58, 49, 49, 36, 18, 18, 10, 1)
+
+distance_to_hubei &lt;- c(0, 929.05, 807, 7680, 426, 482, 564, 679, 571, 837, 896, 1044, 2338, 872, 827, 992, 609,
+923, 1215, 1354, 722, 725, 1424, 993, 1252, 1886, 1581, 896, 2709, 1005, 1560, 1132, 1005, 1133)
+plot(distance_to_hubei, count_corona)
+```
+
+![](l2_files/figure-html/unnamed-chunk-24-1.png)&lt;!-- --&gt;
+
+---
+
+
+```r
+count_corona &lt;- count_corona[c(-1, -4)]
+distance_to_hubei &lt;- distance_to_hubei[c(-1, -4)]
+plot(distance_to_hubei, count_corona)
+```
+
+![](l2_files/figure-html/unnamed-chunk-25-1.png)&lt;!-- --&gt;
+---
+
+class: duke-orange, center, middle
+
+# 3. Arrays
+
+---
+background-image: url('dataStructures.png')
+background-position: center
+background-size: contain
+
+
+---
+
+## Array
+
+- data structures for storing **higher** dimensional data.
+
+- a **homogeneous** data structure.
+
+- a special case of the array is the matrix.
+
+```r
+array(vector, dimensions, dimnames) #dimnames-as a list
+```
+
+
+```r
+a &lt;-  array(c(10, 20, 30, 40, 50, 60), c(1, 2, 3))
+a
+```
+
+```
+, , 1
+
+     [,1] [,2]
+[1,]   10   20
+
+, , 2
+
+     [,1] [,2]
+[1,]   30   40
+
+, , 3
+
+     [,1] [,2]
+[1,]   50   60
+```
+
+---
+
+background-image: url('array.png')
+background-position: center
+background-size: contain
+
+## Array
+---
+
+## Subsetting arrays
+
+
+```r
+a
+```
+
+```
+, , 1
+
+     [,1] [,2]
+[1,]   10   20
+
+, , 2
+
+     [,1] [,2]
+[1,]   30   40
+
+, , 3
+
+     [,1] [,2]
+[1,]   50   60
+```
+
+
+```r
+a[, , 1] # Extract first entry
+```
+
+```
+[1] 10 20
+```
+
+
+```r
+a[1, ,] # All rows in each entry
+```
+
+```
+     [,1] [,2] [,3]
+[1,]   10   30   50
+[2,]   20   40   60
+```
+
+---
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+1. Create the following matrix using the `array` function
+
+
+```r
+matrix(1:20, ncol=5)
+```
+
+```
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    5    9   13   17
+[2,]    2    6   10   14   18
+[3,]    3    7   11   15   19
+[4,]    4    8   12   16   20
+```
+
+<div class="countdown" id="timer_5eeca3e3" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+## Array with dimnames
+
+
+```r
+dim1 &lt;- c("A1", "A2"); dim2 &lt;- c("B1", "B2", "B3"); dim3 &lt;- c("c1", "c2", "c3", "c4")
+z &lt;- array(1:24, c(2, 3, 4), dimnames = list(dim1, dim2, dim3))
+z
+```
+
+```
+, , c1
+
+   B1 B2 B3
+A1  1  3  5
+A2  2  4  6
+
+, , c2
+
+   B1 B2 B3
+A1  7  9 11
+A2  8 10 12
+
+, , c3
+
+   B1 B2 B3
+A1 13 15 17
+A2 14 16 18
+
+, , c4
+
+   B1 B2 B3
+A1 19 21 23
+A2 20 22 24
+```
+
+---
+
+class: duke-orange, center, middle
+
+# 4. Data Frames
+
+---
+
+background-image: url('dataStructures.png')
+background-position: center
+background-size: contain
+
+---
+# Data frames
+
+- Rectangular arrangement of data with rows corresponding to observational units and columns corresponding to variables.
+
+- More general than a matrix in that different columns can contain different modes of data.
+
+- It’s similar to the datasets you’d typically see in SPSS and MINITAB.
+
+- Data frames are the most common data structure you’ll deal with in R.
+
+![Figure 1: Components of a dataframe.](tidy-1.png)
+
+.footer-note[.tiny[.green[Image Credit: ][Hadley Wickham and Garrett Grolemund](https://r4ds.had.co.nz/tidy-data.html)]]
+
+---
+# Create a data frame
+
+**Syntax**
+
+```r
+name_of_the_dataframe &lt;- data.frame(
+                          var1_name=vector of values of the first variable,
+                          var2_names=vector of values of the second variable)
+
+```
+
+**Example**
+
+
+```r
+corona &lt;- data.frame(ID=c("C001", "C002", "C003", "C004"),
+                     Location=c("Beijing", "Wuhan", "Shanghai", "Beijing"),
+                     Test_Results=c(FALSE, TRUE, FALSE, FALSE))
+corona
+```
+
+```
+    ID Location Test_Results
+1 C001  Beijing        FALSE
+2 C002    Wuhan         TRUE
+3 C003 Shanghai        FALSE
+4 C004  Beijing        FALSE
+```
+
+
+To check if it is a dataframe
+
+
+```r
+is.data.frame(corona)
+```
+
+```
+[1] TRUE
+```
+
+---
+
+# Some useful functions with dataframes
+
+
+```r
+colnames(corona)
+```
+
+```
+[1] "ID"           "Location"     "Test_Results"
+```
+
+
+```r
+length(corona)
+```
+
+```
+[1] 3
+```
+
+```r
+dim(corona)
+```
+
+```
+[1] 4 3
+```
+
+```r
+nrow(corona)
+```
+
+```
+[1] 4
+```
+
+```r
+ncol(corona)
+```
+
+```
+[1] 3
+```
+---
+
+# Some useful functions with dataframes (cont.)
+
+
+```r
+summary(corona)
+```
+
+```
+      ID              Location         Test_Results   
+ Length:4           Length:4           Mode :logical  
+ Class :character   Class :character   FALSE:3        
+ Mode  :character   Mode  :character   TRUE :1        
+```
+
+
+```r
+str(corona)
+```
+
+```
+'data.frame':	4 obs. of  3 variables:
+ $ ID          : chr  "C001" "C002" "C003" "C004"
+ $ Location    : chr  "Beijing" "Wuhan" "Shanghai" "Beijing"
+ $ Test_Results: logi  FALSE TRUE FALSE FALSE
+```
+
+
+---
+
+## Convert a matrix to a dataframe
+  
+
+```r
+mat &lt;- matrix(1:16, ncol=4)
+mat
+```
+
+```
+     [,1] [,2] [,3] [,4]
+[1,]    1    5    9   13
+[2,]    2    6   10   14
+[3,]    3    7   11   15
+[4,]    4    8   12   16
+```
+
+```r
+mat_df &lt;- as.data.frame(mat)
+mat_df
+```
+
+```
+  V1 V2 V3 V4
+1  1  5  9 13
+2  2  6 10 14
+3  3  7 11 15
+4  4  8 12 16
+```
+
+---
+
+## Subsetting data frames 
+
+**Select rows**
+
+
+```r
+head(mat_df) # default it shows 5 rows
+```
+
+```
+  V1 V2 V3 V4
+1  1  5  9 13
+2  2  6 10 14
+3  3  7 11 15
+4  4  8 12 16
+```
+
+```r
+head(mat_df, 3) # To extract only the first three rows 
+```
+
+```
+  V1 V2 V3 V4
+1  1  5  9 13
+2  2  6 10 14
+3  3  7 11 15
+```
+
+
+```r
+tail(mat_df)
+```
+
+```
+  V1 V2 V3 V4
+1  1  5  9 13
+2  2  6 10 14
+3  3  7 11 15
+4  4  8 12 16
+```
+
+---
+
+## Subsetting data frames 
+
+
+```r
+mat_df
+```
+
+```
+  V1 V2 V3 V4
+1  1  5  9 13
+2  2  6 10 14
+3  3  7 11 15
+4  4  8 12 16
+```
+
+**To select some specific rows**
+
+
+```r
+mat_df[4, ]
+```
+
+```
+  V1 V2 V3 V4
+4  4  8 12 16
+```
+
+```r
+index &lt;- c(1, 3)
+mat_df[index, ]
+```
+
+```
+  V1 V2 V3 V4
+1  1  5  9 13
+3  3  7 11 15
+```
+
+---
+## Subsetting data frames
+
+```r
+mat_df
+```
+
+```
+  V1 V2 V3 V4
+1  1  5  9 13
+2  2  6 10 14
+3  3  7 11 15
+4  4  8 12 16
+```
+
+**Select columns**
+
+1. Select column(s) by variable names
+
+
+```r
+mat_df$V1 # Method 1
+```
+
+```
+[1] 1 2 3 4
+```
+
+```r
+mat_df[, "V1"] # Method 2
+```
+
+```
+[1] 1 2 3 4
+```
+
+2. Select column(s) by index
+
+
+```r
+mat_df[, 2]
+```
+
+```
+[1] 5 6 7 8
+```
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+---
+background-image: url('datafr.png')
+background-position: center
+background-size: contain
+
+<div class="countdown" id="timer_5eeca188" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+background-image: url('iris.jpg')
+background-position: center
+background-size: cover
+
+.content-box-yellow[
+Built-in dataframes
+]
+
+---
+# Built-in dataframes
+
+
+```r
+data(iris)
+```
+
+
+.full-width[.content-box-blue[Use `help` function to find more about the iris dataset.]]
+
+---
+background-image: url('helpiris.png')
+background-position: center
+background-size: contain
+
+---
+# `iris` dataset
+
+
+```r
+head(iris)
+```
+
+```
+  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa
+```
+
+&lt;img src="iris_flower_dataset.png" width="800"&gt;
+---
+# `iris` dataset
+
+
+```r
+head(iris)
+```
+
+```
+  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa
+```
+
+&lt;img src="images.jpeg" width="400"&gt;&lt;img src="iris_petal_sepal.png" height="300"&gt;
+---
+# `iris` dataset
+
+
+```r
+head(iris)
+```
+
+```
+  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa
+```
+
+&lt;img src="images.jpeg" width="200"&gt;&lt;img src="iris_petal_sepal.png" height="300"&gt; &lt;img src="Fisher.jpeg" height="300"&gt;
+
+- Introduced by Sir Ronald A. Fisher, 1936
+
+---
+
+Use	the	R	dataset	“iris”	to	answer	the	following	questions:
+
+1. How many rows and columns does iris have?
+
+2. Select the first 4 rows.
+
+3. Select the last 6 rows.
+
+4. Select rows 10 to 20, with all columns in the iris dataset.
+
+5. Select rows 10 to 20 with only the Species, Petal.Width and Petal.Length.
+
+6. Create a single vector (a new object) called ‘width’ that is the Sepal.Width column of iris.
+
+7.  What are the column names and data types of the different columns in iris?
+
+8. How many rows in the iris dataset have `Petal.Length` larger than 5 and `Sepal.Width` smaller than 3?
+
+
+<div class="countdown" id="timer_5eeca24f" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+---
+
+class: duke-orange, center, middle
+
+# 5. List
+
+---
+
+background-image: url('dataStructures.png')
+background-position: center
+background-size: contain
+
+
+---
+
+# List
+
+- Lists are heterogeneous
+
+**Syntax**
+
+```r
+list_name &lt;- list(entry1, entry2, entry3, ...)
+
+```
+
+**Example**
+
+
+```r
+first_list &lt;-list(1:3, matrix(1:6, nrow=2), iris)
+first_list
+```
+
+```
+[[1]]
+[1] 1 2 3
+
+[[2]]
+     [,1] [,2] [,3]
+[1,]    1    3    5
+[2,]    2    4    6
+
+[[3]]
+    Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
+1            5.1         3.5          1.4         0.2     setosa
+2            4.9         3.0          1.4         0.2     setosa
+3            4.7         3.2          1.3         0.2     setosa
+4            4.6         3.1          1.5         0.2     setosa
+5            5.0         3.6          1.4         0.2     setosa
+6            5.4         3.9          1.7         0.4     setosa
+7            4.6         3.4          1.4         0.3     setosa
+8            5.0         3.4          1.5         0.2     setosa
+9            4.4         2.9          1.4         0.2     setosa
+10           4.9         3.1          1.5         0.1     setosa
+11           5.4         3.7          1.5         0.2     setosa
+12           4.8         3.4          1.6         0.2     setosa
+13           4.8         3.0          1.4         0.1     setosa
+14           4.3         3.0          1.1         0.1     setosa
+15           5.8         4.0          1.2         0.2     setosa
+16           5.7         4.4          1.5         0.4     setosa
+17           5.4         3.9          1.3         0.4     setosa
+18           5.1         3.5          1.4         0.3     setosa
+19           5.7         3.8          1.7         0.3     setosa
+20           5.1         3.8          1.5         0.3     setosa
+21           5.4         3.4          1.7         0.2     setosa
+22           5.1         3.7          1.5         0.4     setosa
+23           4.6         3.6          1.0         0.2     setosa
+24           5.1         3.3          1.7         0.5     setosa
+25           4.8         3.4          1.9         0.2     setosa
+26           5.0         3.0          1.6         0.2     setosa
+27           5.0         3.4          1.6         0.4     setosa
+28           5.2         3.5          1.5         0.2     setosa
+29           5.2         3.4          1.4         0.2     setosa
+30           4.7         3.2          1.6         0.2     setosa
+31           4.8         3.1          1.6         0.2     setosa
+32           5.4         3.4          1.5         0.4     setosa
+33           5.2         4.1          1.5         0.1     setosa
+34           5.5         4.2          1.4         0.2     setosa
+35           4.9         3.1          1.5         0.2     setosa
+36           5.0         3.2          1.2         0.2     setosa
+37           5.5         3.5          1.3         0.2     setosa
+38           4.9         3.6          1.4         0.1     setosa
+39           4.4         3.0          1.3         0.2     setosa
+40           5.1         3.4          1.5         0.2     setosa
+41           5.0         3.5          1.3         0.3     setosa
+42           4.5         2.3          1.3         0.3     setosa
+43           4.4         3.2          1.3         0.2     setosa
+44           5.0         3.5          1.6         0.6     setosa
+45           5.1         3.8          1.9         0.4     setosa
+46           4.8         3.0          1.4         0.3     setosa
+47           5.1         3.8          1.6         0.2     setosa
+48           4.6         3.2          1.4         0.2     setosa
+49           5.3         3.7          1.5         0.2     setosa
+50           5.0         3.3          1.4         0.2     setosa
+51           7.0         3.2          4.7         1.4 versicolor
+52           6.4         3.2          4.5         1.5 versicolor
+53           6.9         3.1          4.9         1.5 versicolor
+54           5.5         2.3          4.0         1.3 versicolor
+55           6.5         2.8          4.6         1.5 versicolor
+56           5.7         2.8          4.5         1.3 versicolor
+57           6.3         3.3          4.7         1.6 versicolor
+58           4.9         2.4          3.3         1.0 versicolor
+59           6.6         2.9          4.6         1.3 versicolor
+60           5.2         2.7          3.9         1.4 versicolor
+61           5.0         2.0          3.5         1.0 versicolor
+62           5.9         3.0          4.2         1.5 versicolor
+63           6.0         2.2          4.0         1.0 versicolor
+64           6.1         2.9          4.7         1.4 versicolor
+65           5.6         2.9          3.6         1.3 versicolor
+66           6.7         3.1          4.4         1.4 versicolor
+67           5.6         3.0          4.5         1.5 versicolor
+68           5.8         2.7          4.1         1.0 versicolor
+69           6.2         2.2          4.5         1.5 versicolor
+70           5.6         2.5          3.9         1.1 versicolor
+71           5.9         3.2          4.8         1.8 versicolor
+72           6.1         2.8          4.0         1.3 versicolor
+73           6.3         2.5          4.9         1.5 versicolor
+74           6.1         2.8          4.7         1.2 versicolor
+75           6.4         2.9          4.3         1.3 versicolor
+76           6.6         3.0          4.4         1.4 versicolor
+77           6.8         2.8          4.8         1.4 versicolor
+78           6.7         3.0          5.0         1.7 versicolor
+79           6.0         2.9          4.5         1.5 versicolor
+80           5.7         2.6          3.5         1.0 versicolor
+81           5.5         2.4          3.8         1.1 versicolor
+82           5.5         2.4          3.7         1.0 versicolor
+83           5.8         2.7          3.9         1.2 versicolor
+84           6.0         2.7          5.1         1.6 versicolor
+85           5.4         3.0          4.5         1.5 versicolor
+86           6.0         3.4          4.5         1.6 versicolor
+87           6.7         3.1          4.7         1.5 versicolor
+88           6.3         2.3          4.4         1.3 versicolor
+89           5.6         3.0          4.1         1.3 versicolor
+90           5.5         2.5          4.0         1.3 versicolor
+91           5.5         2.6          4.4         1.2 versicolor
+92           6.1         3.0          4.6         1.4 versicolor
+93           5.8         2.6          4.0         1.2 versicolor
+94           5.0         2.3          3.3         1.0 versicolor
+95           5.6         2.7          4.2         1.3 versicolor
+96           5.7         3.0          4.2         1.2 versicolor
+97           5.7         2.9          4.2         1.3 versicolor
+98           6.2         2.9          4.3         1.3 versicolor
+99           5.1         2.5          3.0         1.1 versicolor
+100          5.7         2.8          4.1         1.3 versicolor
+101          6.3         3.3          6.0         2.5  virginica
+102          5.8         2.7          5.1         1.9  virginica
+103          7.1         3.0          5.9         2.1  virginica
+104          6.3         2.9          5.6         1.8  virginica
+105          6.5         3.0          5.8         2.2  virginica
+106          7.6         3.0          6.6         2.1  virginica
+107          4.9         2.5          4.5         1.7  virginica
+108          7.3         2.9          6.3         1.8  virginica
+109          6.7         2.5          5.8         1.8  virginica
+110          7.2         3.6          6.1         2.5  virginica
+111          6.5         3.2          5.1         2.0  virginica
+112          6.4         2.7          5.3         1.9  virginica
+113          6.8         3.0          5.5         2.1  virginica
+114          5.7         2.5          5.0         2.0  virginica
+115          5.8         2.8          5.1         2.4  virginica
+116          6.4         3.2          5.3         2.3  virginica
+117          6.5         3.0          5.5         1.8  virginica
+118          7.7         3.8          6.7         2.2  virginica
+119          7.7         2.6          6.9         2.3  virginica
+120          6.0         2.2          5.0         1.5  virginica
+121          6.9         3.2          5.7         2.3  virginica
+122          5.6         2.8          4.9         2.0  virginica
+123          7.7         2.8          6.7         2.0  virginica
+124          6.3         2.7          4.9         1.8  virginica
+125          6.7         3.3          5.7         2.1  virginica
+126          7.2         3.2          6.0         1.8  virginica
+127          6.2         2.8          4.8         1.8  virginica
+128          6.1         3.0          4.9         1.8  virginica
+129          6.4         2.8          5.6         2.1  virginica
+130          7.2         3.0          5.8         1.6  virginica
+131          7.4         2.8          6.1         1.9  virginica
+132          7.9         3.8          6.4         2.0  virginica
+133          6.4         2.8          5.6         2.2  virginica
+134          6.3         2.8          5.1         1.5  virginica
+135          6.1         2.6          5.6         1.4  virginica
+136          7.7         3.0          6.1         2.3  virginica
+137          6.3         3.4          5.6         2.4  virginica
+138          6.4         3.1          5.5         1.8  virginica
+139          6.0         3.0          4.8         1.8  virginica
+140          6.9         3.1          5.4         2.1  virginica
+141          6.7         3.1          5.6         2.4  virginica
+142          6.9         3.1          5.1         2.3  virginica
+143          5.8         2.7          5.1         1.9  virginica
+144          6.8         3.2          5.9         2.3  virginica
+145          6.7         3.3          5.7         2.5  virginica
+146          6.7         3.0          5.2         2.3  virginica
+147          6.3         2.5          5.0         1.9  virginica
+148          6.5         3.0          5.2         2.0  virginica
+149          6.2         3.4          5.4         2.3  virginica
+150          5.9         3.0          5.1         1.8  virginica
+```
+
+
+---
+
+## Structure of a list
+
+
+```r
+str(first_list)
+```
+
+```
+List of 3
+ $ : int [1:3] 1 2 3
+ $ : int [1:2, 1:3] 1 2 3 4 5 6
+ $ :'data.frame':	150 obs. of  5 variables:
+  ..$ Sepal.Length: num [1:150] 5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+  ..$ Sepal.Width : num [1:150] 3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+  ..$ Petal.Length: num [1:150] 1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+  ..$ Petal.Width : num [1:150] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+  ..$ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
+```
+
+--
+## Extract elements
+
+
+```r
+first_list[[1]]
+```
+
+```
+[1] 1 2 3
+```
+
+```r
+first_list[[3]]$Species
+```
+
+```
+  [1] setosa     setosa     setosa     setosa     setosa     setosa    
+  [7] setosa     setosa     setosa     setosa     setosa     setosa    
+ [13] setosa     setosa     setosa     setosa     setosa     setosa    
+ [19] setosa     setosa     setosa     setosa     setosa     setosa    
+ [25] setosa     setosa     setosa     setosa     setosa     setosa    
+ [31] setosa     setosa     setosa     setosa     setosa     setosa    
+ [37] setosa     setosa     setosa     setosa     setosa     setosa    
+ [43] setosa     setosa     setosa     setosa     setosa     setosa    
+ [49] setosa     setosa     versicolor versicolor versicolor versicolor
+ [55] versicolor versicolor versicolor versicolor versicolor versicolor
+ [61] versicolor versicolor versicolor versicolor versicolor versicolor
+ [67] versicolor versicolor versicolor versicolor versicolor versicolor
+ [73] versicolor versicolor versicolor versicolor versicolor versicolor
+ [79] versicolor versicolor versicolor versicolor versicolor versicolor
+ [85] versicolor versicolor versicolor versicolor versicolor versicolor
+ [91] versicolor versicolor versicolor versicolor versicolor versicolor
+ [97] versicolor versicolor versicolor versicolor virginica  virginica 
+[103] virginica  virginica  virginica  virginica  virginica  virginica 
+[109] virginica  virginica  virginica  virginica  virginica  virginica 
+[115] virginica  virginica  virginica  virginica  virginica  virginica 
+[121] virginica  virginica  virginica  virginica  virginica  virginica 
+[127] virginica  virginica  virginica  virginica  virginica  virginica 
+[133] virginica  virginica  virginica  virginica  virginica  virginica 
+[139] virginica  virginica  virginica  virginica  virginica  virginica 
+[145] virginica  virginica  virginica  virginica  virginica  virginica 
+Levels: setosa versicolor virginica
+```
+
+---
+
+# Name entries in a list
+
+
+```r
+first_list_with_names &lt;-list(a=1:3, b=matrix(1:6, nrow=2), c=iris)
+first_list_with_names
+```
+
+```
+$a
+[1] 1 2 3
+
+$b
+     [,1] [,2] [,3]
+[1,]    1    3    5
+[2,]    2    4    6
+
+$c
+    Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
+1            5.1         3.5          1.4         0.2     setosa
+2            4.9         3.0          1.4         0.2     setosa
+3            4.7         3.2          1.3         0.2     setosa
+4            4.6         3.1          1.5         0.2     setosa
+5            5.0         3.6          1.4         0.2     setosa
+6            5.4         3.9          1.7         0.4     setosa
+7            4.6         3.4          1.4         0.3     setosa
+8            5.0         3.4          1.5         0.2     setosa
+9            4.4         2.9          1.4         0.2     setosa
+10           4.9         3.1          1.5         0.1     setosa
+11           5.4         3.7          1.5         0.2     setosa
+12           4.8         3.4          1.6         0.2     setosa
+13           4.8         3.0          1.4         0.1     setosa
+14           4.3         3.0          1.1         0.1     setosa
+15           5.8         4.0          1.2         0.2     setosa
+16           5.7         4.4          1.5         0.4     setosa
+17           5.4         3.9          1.3         0.4     setosa
+18           5.1         3.5          1.4         0.3     setosa
+19           5.7         3.8          1.7         0.3     setosa
+20           5.1         3.8          1.5         0.3     setosa
+21           5.4         3.4          1.7         0.2     setosa
+22           5.1         3.7          1.5         0.4     setosa
+23           4.6         3.6          1.0         0.2     setosa
+24           5.1         3.3          1.7         0.5     setosa
+25           4.8         3.4          1.9         0.2     setosa
+26           5.0         3.0          1.6         0.2     setosa
+27           5.0         3.4          1.6         0.4     setosa
+28           5.2         3.5          1.5         0.2     setosa
+29           5.2         3.4          1.4         0.2     setosa
+30           4.7         3.2          1.6         0.2     setosa
+31           4.8         3.1          1.6         0.2     setosa
+32           5.4         3.4          1.5         0.4     setosa
+33           5.2         4.1          1.5         0.1     setosa
+34           5.5         4.2          1.4         0.2     setosa
+35           4.9         3.1          1.5         0.2     setosa
+36           5.0         3.2          1.2         0.2     setosa
+37           5.5         3.5          1.3         0.2     setosa
+38           4.9         3.6          1.4         0.1     setosa
+39           4.4         3.0          1.3         0.2     setosa
+40           5.1         3.4          1.5         0.2     setosa
+41           5.0         3.5          1.3         0.3     setosa
+42           4.5         2.3          1.3         0.3     setosa
+43           4.4         3.2          1.3         0.2     setosa
+44           5.0         3.5          1.6         0.6     setosa
+45           5.1         3.8          1.9         0.4     setosa
+46           4.8         3.0          1.4         0.3     setosa
+47           5.1         3.8          1.6         0.2     setosa
+48           4.6         3.2          1.4         0.2     setosa
+49           5.3         3.7          1.5         0.2     setosa
+50           5.0         3.3          1.4         0.2     setosa
+51           7.0         3.2          4.7         1.4 versicolor
+52           6.4         3.2          4.5         1.5 versicolor
+53           6.9         3.1          4.9         1.5 versicolor
+54           5.5         2.3          4.0         1.3 versicolor
+55           6.5         2.8          4.6         1.5 versicolor
+56           5.7         2.8          4.5         1.3 versicolor
+57           6.3         3.3          4.7         1.6 versicolor
+58           4.9         2.4          3.3         1.0 versicolor
+59           6.6         2.9          4.6         1.3 versicolor
+60           5.2         2.7          3.9         1.4 versicolor
+61           5.0         2.0          3.5         1.0 versicolor
+62           5.9         3.0          4.2         1.5 versicolor
+63           6.0         2.2          4.0         1.0 versicolor
+64           6.1         2.9          4.7         1.4 versicolor
+65           5.6         2.9          3.6         1.3 versicolor
+66           6.7         3.1          4.4         1.4 versicolor
+67           5.6         3.0          4.5         1.5 versicolor
+68           5.8         2.7          4.1         1.0 versicolor
+69           6.2         2.2          4.5         1.5 versicolor
+70           5.6         2.5          3.9         1.1 versicolor
+71           5.9         3.2          4.8         1.8 versicolor
+72           6.1         2.8          4.0         1.3 versicolor
+73           6.3         2.5          4.9         1.5 versicolor
+74           6.1         2.8          4.7         1.2 versicolor
+75           6.4         2.9          4.3         1.3 versicolor
+76           6.6         3.0          4.4         1.4 versicolor
+77           6.8         2.8          4.8         1.4 versicolor
+78           6.7         3.0          5.0         1.7 versicolor
+79           6.0         2.9          4.5         1.5 versicolor
+80           5.7         2.6          3.5         1.0 versicolor
+81           5.5         2.4          3.8         1.1 versicolor
+82           5.5         2.4          3.7         1.0 versicolor
+83           5.8         2.7          3.9         1.2 versicolor
+84           6.0         2.7          5.1         1.6 versicolor
+85           5.4         3.0          4.5         1.5 versicolor
+86           6.0         3.4          4.5         1.6 versicolor
+87           6.7         3.1          4.7         1.5 versicolor
+88           6.3         2.3          4.4         1.3 versicolor
+89           5.6         3.0          4.1         1.3 versicolor
+90           5.5         2.5          4.0         1.3 versicolor
+91           5.5         2.6          4.4         1.2 versicolor
+92           6.1         3.0          4.6         1.4 versicolor
+93           5.8         2.6          4.0         1.2 versicolor
+94           5.0         2.3          3.3         1.0 versicolor
+95           5.6         2.7          4.2         1.3 versicolor
+96           5.7         3.0          4.2         1.2 versicolor
+97           5.7         2.9          4.2         1.3 versicolor
+98           6.2         2.9          4.3         1.3 versicolor
+99           5.1         2.5          3.0         1.1 versicolor
+100          5.7         2.8          4.1         1.3 versicolor
+101          6.3         3.3          6.0         2.5  virginica
+102          5.8         2.7          5.1         1.9  virginica
+103          7.1         3.0          5.9         2.1  virginica
+104          6.3         2.9          5.6         1.8  virginica
+105          6.5         3.0          5.8         2.2  virginica
+106          7.6         3.0          6.6         2.1  virginica
+107          4.9         2.5          4.5         1.7  virginica
+108          7.3         2.9          6.3         1.8  virginica
+109          6.7         2.5          5.8         1.8  virginica
+110          7.2         3.6          6.1         2.5  virginica
+111          6.5         3.2          5.1         2.0  virginica
+112          6.4         2.7          5.3         1.9  virginica
+113          6.8         3.0          5.5         2.1  virginica
+114          5.7         2.5          5.0         2.0  virginica
+115          5.8         2.8          5.1         2.4  virginica
+116          6.4         3.2          5.3         2.3  virginica
+117          6.5         3.0          5.5         1.8  virginica
+118          7.7         3.8          6.7         2.2  virginica
+119          7.7         2.6          6.9         2.3  virginica
+120          6.0         2.2          5.0         1.5  virginica
+121          6.9         3.2          5.7         2.3  virginica
+122          5.6         2.8          4.9         2.0  virginica
+123          7.7         2.8          6.7         2.0  virginica
+124          6.3         2.7          4.9         1.8  virginica
+125          6.7         3.3          5.7         2.1  virginica
+126          7.2         3.2          6.0         1.8  virginica
+127          6.2         2.8          4.8         1.8  virginica
+128          6.1         3.0          4.9         1.8  virginica
+129          6.4         2.8          5.6         2.1  virginica
+130          7.2         3.0          5.8         1.6  virginica
+131          7.4         2.8          6.1         1.9  virginica
+132          7.9         3.8          6.4         2.0  virginica
+133          6.4         2.8          5.6         2.2  virginica
+134          6.3         2.8          5.1         1.5  virginica
+135          6.1         2.6          5.6         1.4  virginica
+136          7.7         3.0          6.1         2.3  virginica
+137          6.3         3.4          5.6         2.4  virginica
+138          6.4         3.1          5.5         1.8  virginica
+139          6.0         3.0          4.8         1.8  virginica
+140          6.9         3.1          5.4         2.1  virginica
+141          6.7         3.1          5.6         2.4  virginica
+142          6.9         3.1          5.1         2.3  virginica
+143          5.8         2.7          5.1         1.9  virginica
+144          6.8         3.2          5.9         2.3  virginica
+145          6.7         3.3          5.7         2.5  virginica
+146          6.7         3.0          5.2         2.3  virginica
+147          6.3         2.5          5.0         1.9  virginica
+148          6.5         3.0          5.2         2.0  virginica
+149          6.2         3.4          5.4         2.3  virginica
+150          5.9         3.0          5.1         1.8  virginica
+```
+---
+
+## Extract elements using names
+
+
+```r
+str(first_list_with_names)
+```
+
+```
+List of 3
+ $ a: int [1:3] 1 2 3
+ $ b: int [1:2, 1:3] 1 2 3 4 5 6
+ $ c:'data.frame':	150 obs. of  5 variables:
+  ..$ Sepal.Length: num [1:150] 5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+  ..$ Sepal.Width : num [1:150] 3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+  ..$ Petal.Length: num [1:150] 1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+  ..$ Petal.Width : num [1:150] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+  ..$ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
+```
+
+
+
+```r
+first_list_with_names$a
+```
+
+```
+[1] 1 2 3
+```
+
+```r
+first_list_with_names$c$Species
+```
+
+```
+  [1] setosa     setosa     setosa     setosa     setosa     setosa    
+  [7] setosa     setosa     setosa     setosa     setosa     setosa    
+ [13] setosa     setosa     setosa     setosa     setosa     setosa    
+ [19] setosa     setosa     setosa     setosa     setosa     setosa    
+ [25] setosa     setosa     setosa     setosa     setosa     setosa    
+ [31] setosa     setosa     setosa     setosa     setosa     setosa    
+ [37] setosa     setosa     setosa     setosa     setosa     setosa    
+ [43] setosa     setosa     setosa     setosa     setosa     setosa    
+ [49] setosa     setosa     versicolor versicolor versicolor versicolor
+ [55] versicolor versicolor versicolor versicolor versicolor versicolor
+ [61] versicolor versicolor versicolor versicolor versicolor versicolor
+ [67] versicolor versicolor versicolor versicolor versicolor versicolor
+ [73] versicolor versicolor versicolor versicolor versicolor versicolor
+ [79] versicolor versicolor versicolor versicolor versicolor versicolor
+ [85] versicolor versicolor versicolor versicolor versicolor versicolor
+ [91] versicolor versicolor versicolor versicolor versicolor versicolor
+ [97] versicolor versicolor versicolor versicolor virginica  virginica 
+[103] virginica  virginica  virginica  virginica  virginica  virginica 
+[109] virginica  virginica  virginica  virginica  virginica  virginica 
+[115] virginica  virginica  virginica  virginica  virginica  virginica 
+[121] virginica  virginica  virginica  virginica  virginica  virginica 
+[127] virginica  virginica  virginica  virginica  virginica  virginica 
+[133] virginica  virginica  virginica  virginica  virginica  virginica 
+[139] virginica  virginica  virginica  virginica  virginica  virginica 
+[145] virginica  virginica  virginica  virginica  virginica  virginica 
+Levels: setosa versicolor virginica
+```
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+---
+
+
+```r
+c("Jan","Feb","Mar")
+```
+
+```
+[1] "Jan" "Feb" "Mar"
+```
+
+```r
+matrix(c(3,9,5,1,-2,8), nrow = 2)
+```
+
+```
+     [,1] [,2] [,3]
+[1,]    3    5   -2
+[2,]    9    1    8
+```
+
+```r
+list("green",12.3)
+```
+
+```
+[[1]]
+[1] "green"
+
+[[2]]
+[1] 12.3
+```
+
+1. Create a list containing the above vector, matrix and the list.
+
+2. Name the elements as `first`, `second` and `third`.
+
+---
+class: center, middle
+
+Slides available at: hellor.netlify.com
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

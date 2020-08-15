@@ -1,0 +1,424 @@
+---
+title: "STA 326 2.0 Programming and Data Analysis with R"
+subtitle: "Reproducible Reports with R-Markdown"
+author: "Dr Thiyanga Talagala"
+date: "Online distance learning/teaching materials during the COVID-19 outbreak."
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+    css: 
+      - default
+      - default-fonts
+      - duke-blue
+      - hygge-duke
+      - libs/cc-fonts.css
+      - libs/figure-captions.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(emo)
+```
+
+background-image: url(workflowds_communication.png)
+background-position: center
+background-size: contain
+
+# Data Science Workflow: Communicate
+
+---
+
+# Necessary packages
+
+## Installation
+
+```r
+install.packages(knitr)
+install.packages(rmarkdown)
+```
+
+
+<img src="knitrhex.png" alt="knitrhex" width="300"/> <img src="rmarkdown.png" alt="rmarkdown" width="250"/>
+
+
+---
+
+# Introduction to R Markdown
+
+- R Markdown is a file format for making dynamic documents with R.
+
+- R Markdown allows you to organize your code, outputs, content and commentary in one place.
+
+- These documents are self-contained and fully reproducible which makes it very easy to share.
+
+- R Markdown document is written in markdown.
+
+- Markdown is one of the world's most popular markup language.
+    - R Markdown (in R)
+    - Jupyter Notebooks (in Python)
+    
+
+---
+
+# Advantages
+
+1. For .bold[.green[communicating]] to .bold[.red[decision makers]], who want to focus on the results and conclusions, not the code behind the analysis.
+
+1. For .bold[.green[collaborating]] with other .bold[.red[data scientists]], who are interested in both your conclusions, and how you reached them (i.e. the codes that you used to take the outputs).
+
+1. As an environment in which to do data science, as a modern day lab notebook where you can capture not only .bold[.blue[what you did]], but also .bold[.blue[what you were thinking]].
+
+
+*From R for Data Science by Hadley Wickham and Grrett Grolemud.*
+---
+class: duke-orange, center, middle
+
+# Your first rmarkdown document.
+
+
+---
+background-image: url(rmarkdown_step1.png)
+background-position: center
+background-size: contain
+
+
+---
+background-image: url(rmarkdown_step2.png)
+background-position: center
+background-size: contain
+
+---
+
+background-image: url(rmarkdown_step2_1.png)
+background-position: center
+background-size: contain
+---
+
+background-image: url(rmarkdown_step3.png)
+background-position: center
+background-size: contain
+
+class: center, middle
+
+---
+
+background-image: url(componentsrmd.png)
+background-position: center
+background-size: contain
+
+class: center, middle
+
+---
+
+background-image: url(rmarkdown_step4.png)
+background-position: center
+background-size: contain
+
+class: center, middle
+
+
+
+
+---
+
+# Select a folder to save the document 
+
+![](rmarkdown_save1.png)
+---
+
+# Give a name to the document
+
+![](rmarkdown_save2.png)
+
+---
+
+background-image: url(rmarkdown_step5.png)
+background-position: center
+background-size: contain
+
+class: center, middle
+
+---
+
+background-image: url(rmarkdown_step6.png)
+background-position: center
+background-size: contain
+
+class: center, middle
+
+---
+
+background-image: url(rmarkdown_step7.png)
+background-position: center
+background-size: contain
+
+class: center, middle
+
+---
+
+class: duke-orange, center, middle
+
+# Edit .rmd file to include your content
+
+
+---
+
+# Change header
+
+.pull-left[
+
+**Code**
+
+```r
+
+# Header 1
+
+## Header 2
+
+### Header 3
+
+```
+
+]
+
+.pull-right[
+
+**Output**
+
+
+# Header 1
+
+## Header 2
+
+### Header 3
+
+
+
+]
+
+
+---
+
+# Add content
+
+.pull-left[
+
+**Code**
+
+```r
+
+# Header 1
+
+This is section 1.
+
+## Header 2
+
+This is section 1.2
+
+### Header 3
+
+This is section 1.2.1
+
+```
+
+]
+
+.pull-right[
+
+**Output**
+
+
+# Header 1
+
+This is section 1.
+
+## Header 2
+
+This is section 1.2
+
+### Header 3
+
+This is section 1.2.1
+
+
+
+
+]
+
+---
+
+# Add R codes
+
+.pull-left[
+
+**Code**
+
+```r
+
+# Header 1
+
+This is section 1.
+
+## Header 2
+
+This is section 1.2
+
+### Header 3
+
+This is section 1.2.1
+
+```
+
+<img src="codechunk_example.png" alt="codechunk_example" width="100"/>
+]
+
+.pull-right[
+
+**Output**
+
+
+# Header 1
+
+This is section 1.
+
+## Header 2
+
+This is section 1.2
+
+### Header 3
+
+This is section 1.2.1
+
+```{r}
+rnorm(2)
+```
+
+]
+
+
+---
+# Chunk options
+
+* `eval = FALSE` - prevents the code from being evaluated
+
+* `include = FALSE` - runs the code but doesn't show it in the final document
+
+* `echo = FALSE` - prevents the code but not the results from appearing
+
+* `message = FALSE` - prevents messages from appearing in the finished file
+
+* `results = "hide"` - hides the printed output
+
+* `error = TRUE` - causes the render to continue even if the code returns an error
+---
+
+# Text formatting
+
+.pull-left[
+
+## Code
+
+<img src="text.png" alt="text" width="300"/>
+
+
+]
+
+.pull-right[
+
+## Output
+
+*M1: This text is in italics.*
+
+_M2: This is also italics._
+
+**M3: This text is in bold.**
+
+__M4: This is also bold.__
+
+
+~~This text is strikethrough.~~
+
+]
+
+---
+
+# Mathematical Equations
+
+**The code:**
+
+![](equationsrmd.png)
+
+
+**Output:**
+
+The general formula for the probability density function of the normal distribution with mean $\mu$ and variance $\sigma$ is given by
+
+$$
+f_X(x) = \frac{1}{\sigma\sqrt{(2\pi)}} e^{-(x-\mu)^2/2\sigma^2}.
+$$
+
+
+## How to type Greek letters?
+
+Please read my blog post here: 
+
+https://thiyanga.netlify.app/post/greekletters/
+
+---
+
+### Generate PDF and WORD documents
+
+.pull-left[
+
+**Create a PDF document**
+
+![](pdfrmd.png)
+
+Requires (MiKTex on Windows, MacTex 2013+ on OS X, Tex Live 2013+ on Linux) OR
+
+Install tinytex in R. Type the following code on R Console.
+```r
+tinytex::install_tinytex()
+```
+]
+
+
+
+
+.pull-right[
+
+**Create a Word document**
+
+![](wordrmd.png)
+
+Requires an installation of MS Word.
+
+]
+
+---
+
+# R Markdown Demonstration
+
+> Download [Rmarkdown_practical_lesson1.Rmd](/rscripts/rmarkdown_labwork/Rmarkdown_practical_lesson1.Rmd)
+
+> Download [sampleimage.jpg](/rscripts/rmarkdown_labwork/sampleimage.jpg)
+
+> Before running the file `Rmarkdown_practical_lesson1.Rmd`, save `Rmarkdown_practical_lesson1.Rmd` and `sampleimage.jpg` into your current working directory. 
+
+> Follow the video lecture for instructions. 
+
+
+---
+class: center, middle
+
+
+Slides available at: hellor.netlify.app
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+
+
+

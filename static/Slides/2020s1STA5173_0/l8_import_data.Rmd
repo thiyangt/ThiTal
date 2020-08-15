@@ -1,0 +1,208 @@
+---
+title: "STA 326 2.0 Programming and Data Analysis with R"
+subtitle: "R Data Import and Export"
+author: "Dr Thiyanga Talagala"
+date: "Online distance learning/teaching materials during the COVID-19 outbreak."
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+    css: 
+      - default
+      - default-fonts
+      - duke-blue
+      - hygge-duke
+      - libs/cc-fonts.css
+      - libs/figure-captions.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(emo)
+```
+
+# Data import with readr
+
+## R package
+
+`readr`: part of the core tidyverse.
+
+```{r,comment=NA}
+library(tidyverse)
+```
+
+## `readr` data import functions
+
+- `read_csv`: reads comma-delimited files.
+
+- `read_csv2`: reads semicolon-separated files
+
+- `read_tsv`: reads tab-delimited files
+
+
+---
+
+# 🛠 Import data from a .csv file
+
+
+## Syntax
+
+
+```r
+datasetname <- read_csv("include_file_path")
+```
+
+When you run `read_csv`, it prints out the names and type of each column.
+
+.full-width[.content-box-yellow[Switch to R]]
+
+  
+---
+
+# If the file is saved inside the project folder
+
+.full-width[.content-box-green[Demo: Go to google classroom and watch the video importdatacsv1.mov]]
+
+
+# If the file is saved outside the project folder
+
+.full-width[.content-box-green[Demo: Go to google classroom and watch the video importdatacsv2.mov]]
+
+---
+
+# 🛠 Importing csv file from a website
+
+## Syntax
+
+```r
+datasetname <- read_csv("include url here")
+```
+
+## Example
+
+```{r, comment=NA, cache=TRUE}
+url <- "https://thiyanga.netlify.app/project/datasets/foodlabel.csv"
+foodlabel <- read_csv(url)
+```
+
+```{r,comment=NA}
+head(foodlabel, 1)
+```
+---
+
+# `read.csv` and `read_csv`
+
+*  `read.csv` is in base R.
+
+*  `read_csv` is in tidyverse.
+
+*  `read.csv()` performs a similar job to `read_csv()`.
+
+* `read_csv()` works well with other parts of the tidyverse.
+
+*  `read_csv()` is faster than `read.csv()`.
+
+*  `read_csv()` will always read variables containing text as character variable.  In contrast, the base R function `read.csv()` will, by default, convert any character variable to a factor.
+
+<!--This is often not what you want, and can be overridden by passing the option stringsAsFactors = FALSE to read.csv().-->
+
+
+---
+
+# 🛠 Writing to a File
+
+- We can save tibble (or dataframe) to a csv file, using `write_csv()`.
+
+- `write_csv()` is in the `readr` package.
+
+
+## Syntax
+
+```r
+write_csv(name_of_the_data_set_you_want_to_save, "path_to_write_to")
+```
+
+## Example
+
+```r
+data(iris)
+# This will save inside your project folder
+write_csv(iris, "iris.csv") 
+# This will save inside the data folder which is inside your project folder
+write_csv(iris, "data/iris.csv") 
+```
+
+.full-width[.content-box-yellow[Switch to R]]
+
+
+.full-width[.content-box-green[Demo: Go to google classroom and watch the video exportdatacsv.mov]]
+
+
+---
+
+# 🛠 Importing Excel .xlsx files
+
+## Syntax
+
+```r
+library(readxl)
+mydata <- read_xlsx("file_path")
+```
+
+.full-width[.content-box-yellow[Switch to R]]
+
+
+.full-width[.content-box-green[Demo: Go to google classroom and watch the video readxlsx.mov]]
+
+---
+# Importing SAS, SPSS and STATA files
+
+## SAS
+
+```r
+read_sas("mtcars.sas7bdat")
+write_sas(mtcars, "mtcars.sas7bdat")
+```
+## SPSS
+
+```r
+read_sav("mtcars.sav")
+write_sav(mtcars, "mtcars.sav")
+
+```
+## Stata
+```r
+read_dta("mtcars.dta")
+write_dta(mtcars, "mtcars.dta")
+```
+
+---
+
+# Importing other types of data
+
+
+- `feather`: for sharing with Python and other languages
+
+- `httr`: for web apis
+
+- `jsonlite`: for JSON
+
+- `rvest`: for web scraping
+
+- `xml2`: for XML
+
+.full-width[.content-box-blue[Working with feather, httr, jsonlite, rvest and xml2 is beyond the scope of the course.]]
+
+---
+
+class: center, middle
+
+Slides available at: hellor.netlify.app
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+
+
+

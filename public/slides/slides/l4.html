@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>STA 326 2.0 Programming and Data Analysis with R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr Thiyanga Talagala" />
+    <meta name="date" content="2020-03-03" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/duke-blue.css" rel="stylesheet" />
+    <link href="libs/remark-css/hygge-duke.css" rel="stylesheet" />
+    <link href="libs/countdown/countdown.css" rel="stylesheet" />
+    <script src="libs/countdown/countdown.js"></script>
+    <link rel="stylesheet" href="libs/cc-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="libs/figure-captions.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# STA 326 2.0 Programming and Data Analysis with R
+## Lesson 4: Writing Functions in R
+### Dr Thiyanga Talagala
+### 2020-03-03
+
+---
+
+
+
+background-image: url('dengue.jpg')
+background-position: center
+background-size: contain
+
+---
+
+# Load the mozzie dataset
+
+
+```r
+library(mozzie)
+data(mozzie)
+head(mozzie, 2)
+```
+
+```
+  ID Year Week Colombo Gampaha Kalutara Kandy Matale Nuwara Eliya Galle
+1  1 2008   52      15       7        1    11      4            0     0
+2  2 2009    1      44      23        5    16     21            2     0
+  Hambantota Matara Jaffna Kilinochchi Mannar Vavuniya Mulative Batticalo
+1          6     22      0           0      8        0        0         1
+2          5     18      1           0      0        0        0         0
+  Ampara Trincomalee Kurunagala Puttalam Anuradhapura Polonnaruwa Badulla
+1      0           0          2        1            2           0       1
+2      1           1         10        5            0           0       1
+  Monaragala Ratnapura Kegalle
+1          1         2      16
+2          0         1      25
+```
+
+--
+
+&gt; Use Min-Max transformation to rescale all the districts variables onto 0-1 range.
+
+&gt; Min-Max transformation is `\(\frac{x_i-min(x)}{max(x)-min(x)}\)` where `\(x=(x_1, x_2, ...x_n)\)`.
+
+---
+
+## Min-Max transformation on `mozzie`
+
+
+```r
+# Colombo district
+minmax.colombo &lt;- (mozzie$Colombo - min(mozzie$Colombo, na.rm = TRUE)) /
+  (max(mozzie$Colombo, na.rm=TRUE) - min(mozzie$Colombo, na.rm=TRUE))
+head(minmax.colombo)
+```
+
+```
+[1] 0.03157895 0.09263158 0.08210526 0.12000000 0.11157895 0.06105263
+```
+
+--
+
+
+```r
+# Gampaha district
+minmax.gampaha &lt;- (mozzie$Gampaha - min(mozzie$Gampaha, na.rm = TRUE)) /
+  (max(mozzie$Gampaha, na.rm = TRUE) - min(mozzie$Gampaha, na.rm = TRUE))
+head(minmax.gampaha)
+```
+
+```
+[1] 0.02734375 0.08984375 0.07421875 0.08984375 0.09375000 0.06640625
+```
+
+
+--
+
+```r
+# Kalutara district
+minmax.kalutara &lt;- (mozzie$Gampaha - min(mozzie$Kalutara, na.rm = TRUE)) /
+  (max(mozzie$Kalutara, na.rm = TRUE) - min(mozzie$Kalutara, na.rm = TRUE))
+head(minmax.kalutara)
+```
+
+```
+[1] 0.09333333 0.30666667 0.25333333 0.30666667 0.32000000 0.22666667
+```
+
+--
+
+&gt; Very easily  made errors when copying-and-pasting the codes.
+
+&gt; A mistake copied becomes a mistake repeated.
+
+---
+
+## When should you write a function?
+
+- Whenever you need to copy and paste a block of codes many times.
+
+      - A function is a reusable block of programming code designed to do a specific task.
+
+- If you don't find a suitable built-in function to serve your purpose, you can write your own function.
+
+- To share your work with others.
+
+
+---
+
+# Writing a function
+
+## Step 1: Function name
+
+```r
+rescale_minmax
+
+```
+--
+
+## Step 2: Assign your function to the name
+
+```r
+rescale_minmax &lt;- 
+```
+--
+
+## Step 3: Tell R that you are writing a function
+
+```r_
+rescale_minmax &lt;- function() # Arguments/inputs should be defined inside ()
+
+```
+--
+## Step 4: Curly braces define the start and the end of your work
+
+```r
+rescale_minmax &lt;- function(){
+
+# Task
+
+# output
+
+}
+
+```
+---
+## Step 5: Function inputs, task and outputs
+
+**Find all the inputs that correspond to a given function output?**
+
+
+```r
+# Colombo district
+(mozzie$Colombo - min(mozzie$Colombo, na.rm = TRUE)) /
+  (max(mozzie$Colombo, na.rm=TRUE) - min(mozzie$Colombo, na.rm=TRUE))
+```
+
+--
+**Re-write the code with general names**
+
+
+```r
+x &lt;- mozzie$Colombo
+(x - min(x, na.rm = TRUE)) / (max(x, na.rm=TRUE) - min(x, na.rm=TRUE))
+```
+
+
+
+--
+**Remove duplication/ Make your code efficient and readable**
+
+
+```r
+rng &lt;- range(x, na.rm = TRUE)
+rng
+```
+
+```
+[1]   0 475
+```
+
+
+```r
+rng &lt;- range(x, na.rm = TRUE)
+(x - rng[1]) / (rng[2] - rng[1])
+```
+
+---
+
+# Step 6: Complete your function
+
+## Type A
+
+
+```r
+rescale_minmax &lt;- function(x){
+  rng &lt;- range(x, na.rm = TRUE)
+  (x - rng[1]) / (rng[2] - rng[1])
+}
+```
+
+--
+
+## Type B
+
+
+```r
+rescale_minmax &lt;- function(x){
+  rng &lt;- range(x, na.rm = TRUE)
+  out.rescaled &lt;- (x - rng[1]) / (rng[2] - rng[1])
+  out.rescaled
+}
+```
+
+--
+
+## Type C
+
+
+```r
+rescale_minmax &lt;- function(x){
+  rng &lt;- range(x, na.rm = TRUE)
+  out.rescaled &lt;- (x - rng[1]) / (rng[2] - rng[1])
+  return(out.rescaled)
+}
+```
+
+&gt; In this situation Type A is the best.
+
+---
+
+# Step 7: Check your function with a few different inputs
+
+
+```r
+rescale_minmax &lt;- function(x){
+  rng &lt;- range(x, na.rm = TRUE)
+  (x - rng[1]) / (rng[2] - rng[1])
+}
+```
+
+--
+
+
+```r
+rescale_minmax(c(1, 200, 250, 80, NA))
+```
+
+```
+[1] 0.0000000 0.7991968 1.0000000 0.3172691        NA
+```
+
+## Back to our original example
+
+
+```r
+minmax.colombo &lt;- rescale_minmax(mozzie$Colombo)
+head(minmax.colombo)
+```
+
+```
+[1] 0.03157895 0.09263158 0.08210526 0.12000000 0.11157895 0.06105263
+```
+
+--
+
+```r
+minmax.gampaha &lt;- rescale_minmax(mozzie$Gampaha)
+minmax.kalutara &lt;- rescale_minmax(mozzie$Kalutara)
+```
+
+---
+
+# Move forward: When the requirements changes
+
+
+```r
+new.data.col &lt;- c(400, 500, 350, 250, 60, 70, Inf)
+rescale_minmax(new.data.col)
+```
+
+```
+[1]   0   0   0   0   0   0 NaN
+```
+
+--
+
+## Fix the code
+
+
+```r
+rescale_minmax &lt;- function(x){
+*  rng &lt;- range(x, na.rm = TRUE, finite=TRUE)
+  (x - rng[1]) / (rng[2] - rng[1])
+}
+```
+
+
+
+
+```r
+new.data.col &lt;- c(400, 500, 350, 250, 60, 70, Inf)
+rescale_minmax(new.data.col)
+```
+
+```
+[1] 0.77272727 1.00000000 0.65909091 0.43181818 0.00000000 0.02272727        Inf
+```
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+Rewrite `rescale_minmax` so that `-Inf` is set to 0, and `Inf` is mapped to 1.
+
+<div class="countdown" id="timer_5e7ec9d6" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">04</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+R for Data Science - Exercise 19.2.1, Question 3
+
+&lt;iframe src="https://r4ds.had.co.nz/functions.html" width="100%" height="400px"&gt;&lt;/iframe&gt;
+
+<div class="countdown" id="timer_5e7eca0d" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">04</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+R for Data Science - Exercise 19.2.1, Question 4
+
+&lt;iframe src="https://r4ds.had.co.nz/functions.html" width="100%" height="400px"&gt;&lt;/iframe&gt;
+
+<div class="countdown" id="timer_5e7ecc53" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+background-image: url('laptop.jpg')
+background-position: center
+background-size: cover
+
+.content-box-yellow[
+# Functions are for humans and computers
+
+- Descriptive names for variables.
+
+- Comment your code.
+]
+
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+Write your own function to calculate parameter estimates of simple linear regression model.
+
+Help:
+`$$\hat{\beta}=(X^TX)^{-1}X^TY$$`
+
+
+![](slr2.png)
+
+<div class="countdown" id="timer_5e7ecc59" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+Write a function to calculate confidence intervals for mean.
+`$$\bar{x} \pm t_{\alpha/2, (n-1)}\frac{s}{\sqrt(n)}$$`
+
+<div class="countdown" id="timer_5e7ec9c6" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+## Function arguments
+
+
+```r
+cal_mean_ci &lt;- function(x, conf){
+  len.x &lt;- length(x)
+  se &lt;- sd(x) / sqrt(len.x)
+  alpha &lt;- 1-conf
+  mean(x) + se * qt(c(alpha / 2, 1 - alpha / 2), df = len.x-1)
+  
+}
+
+data &lt;- c(165, 170, 175, 180, 185)
+cal_mean_ci(data, 0.95)
+```
+
+```
+[1] 165.1838 184.8162
+```
+
+--
+## Function with default values
+
+
+```r
+cal_mean_ci &lt;- function(x, conf = 0.95){
+  len.x &lt;- length(x)
+  se &lt;- sd(x) / sqrt(len.x)
+  alpha &lt;- 1-conf
+  mean(x) + se * qt(c(alpha / 2, 1 - alpha / 2), df = len.x-1)
+  
+}
+
+cal_mean_ci(data)
+```
+
+```
+[1] 165.1838 184.8162
+```
+
+```r
+cal_mean_ci(data, 0.99)
+```
+
+```
+[1] 158.7221 191.2779
+```
+---
+
+# Conditional executions
+
+- Control the flow of the execution.
+
+- Common ones include:
+
+    - if, else
+    
+    - for
+    
+    - while
+    
+    - repeat
+    
+    - break
+    
+    - next
+    
+    - switch
+
+---
+
+# If
+
+
+```r
+if (condition) {
+    # do something
+} else {
+    # do something else
+}
+
+```
+
+Example
+
+
+```r
+test_even_odd &lt;- function(x){
+  if (x %% 2 == 0){
+    print("even number")
+  } else {
+    print("odd number")
+  }
+}
+```
+
+
+
+```r
+test_even_odd(5)
+```
+
+```
+[1] "odd number"
+```
+
+```r
+test_even_odd(6)
+```
+
+```
+[1] "even number"
+```
+
+---
+
+# ifelse: vectorization with ifelse
+
+```r
+ifelse(condition, if TRUE the output, if FALSE the output)
+
+```
+
+Example
+
+
+```r
+test_even_odd_v2 &lt;- function(x){
+  ifelse(x %% 2 == 0, "even number", "odd number")
+}
+
+test_even_odd_v2(5)
+```
+
+```
+FALSE [1] "odd number"
+```
+
+```r
+test_even_odd_v2(c(1,6))
+```
+
+```
+FALSE [1] "odd number"  "even number"
+```
+
+
+---
+
+# Difference between `if, else` and `ifelse`
+
+.pull-left[
+
+
+```r
+test_even_odd &lt;- function(x){
+  if (x %% 2 == 0) {
+    print("even number")
+  } else {
+    print("odd number")
+  }
+}
+
+test_even_odd(5)
+```
+
+```
+FALSE [1] "odd number"
+```
+
+```r
+test_even_odd(c(1,6))
+```
+
+```
+FALSE Warning in if (x%%2 == 0) {: the condition has length &gt; 1 and only the first
+FALSE element will be used
+```
+
+```
+FALSE [1] "odd number"
+```
+
+]
+
+.pull-right[
+
+```r
+test_even_odd_v2 &lt;- function(x){
+  ifelse (x %% 2 == 0, "even number", "odd number")
+}
+
+test_even_odd_v2(5)
+```
+
+```
+FALSE [1] "odd number"
+```
+
+```r
+test_even_odd_v2(c(1,6))
+```
+
+```
+FALSE [1] "odd number"  "even number"
+```
+
+]
+
+---
+
+# Nested if-else
+
+- Multiple conditions
+
+
+
+```r
+grade_marks &lt;- function(marks){
+  
+  if (marks &lt; 20) {
+    "D"
+  } else if (marks &lt;= 50) {
+    "C"
+  } else if (marks &lt;= 60) {
+    "B"
+  } else {
+    "A"
+  }
+}
+
+grade_marks(75)
+```
+
+```
+[1] "A"
+```
+---
+
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+R for Data Science-Exercises 9.4.4 - Q2
+
+&lt;iframe src="https://r4ds.had.co.nz/functions.html" width="100%" height="400px"&gt;&lt;/iframe&gt;
+
+Help:
+
+`lubridate::now()` and `lubridate::hour()`
+
+<div class="countdown" id="timer_5e7ecbc4" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+# `for` loop
+
+- execute a block of code a specific number of times or until the end of a sequence.
+
+
+```r
+for (i in 1:5) {
+  print(i*100)
+}
+```
+
+```
+[1] 100
+[1] 200
+[1] 300
+[1] 400
+[1] 500
+```
+
+
+---
+
+```r
+continents &lt;- c("Asia", "EU", "AUS", "NA", "SA", "Africa")
+
+for (i in continents) {
+  print(continents[i])
+}
+
+for (i in 1:4) {
+  print(continents[i])
+}
+
+for (i in seq(continents)) {
+  print(continents[i])
+}
+
+for (i in 1:4)  print(continents[i])
+```
+
+
+```
+## [1] "Asia"
+## [1] "EU"
+## [1] "AUS"
+## [1] "NA"
+## [1] "SA"
+## [1] "Africa"
+```
+
+---
+
+# Nested loops
+
+
+```r
+mat &lt;- matrix(1:6, ncol=2)
+mat
+```
+
+```
+     [,1] [,2]
+[1,]    1    4
+[2,]    2    5
+[3,]    3    6
+```
+
+```r
+for (i in 1:3) {
+  for (j in 1:2) {
+    print(mat[i, j])
+  }
+}
+```
+
+```
+[1] 1
+[1] 4
+[1] 2
+[1] 5
+[1] 3
+[1] 6
+```
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+Write a function to count the number of even numbers in a vector.
+
+<div class="countdown" id="timer_5e7eccba" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">08</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+
+---
+
+# While
+
+
+```r
+i &lt;- 1 # initial value
+while (i &lt; 10) {
+  print(i)
+  i &lt;- i + 1 # increment
+}
+```
+
+```
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+```
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+
+
+---
+
+## Fibonacci Sequence
+
+Print the first `n` numbers of the  Fibonacci Sequence.
+
+0, 1, 1, 2, 3, 5, 8....
+
+![](gflowers.jpg) ![](goldenratio.jpg)
+
+---
+
+# Repeat and break
+
+- Iterate over a block of code multiple number of times. 
+
+-  No condition check in repeat loop to exit the loop. 
+
+- The only way to exit a repeat loop is to call break. 
+
+.pull-left[
+
+Example 1
+
+
+```r
+x &lt;- 5
+
+repeat {
+  print(x)
+  x = x+1
+  if (x == 10){
+    break
+  }
+}
+```
+
+```
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+```
+]
+
+--
+.pull-right[
+
+Example 2
+
+
+```r
+set.seed(1)
+
+repeat {
+ x&lt;-runif(1, 5, 10)
+ print(x)
+ if(x &lt; 6.1){
+   break
+ }
+}
+```
+
+```
+[1] 6.327543
+[1] 6.860619
+[1] 7.864267
+[1] 9.541039
+[1] 6.00841
+```
+]
+---
+# Next
+
+
+```r
+for(i in 1:10) {
+  if(i &lt;= 5) {
+  next # Skip the first 5 iterations
+  }
+print(i)
+}
+```
+
+```
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+[1] 10
+```
+
+---
+
+# switch 
+
+When you want a function to do different things in different
+circumstances, then the switch function can be useful.
+
+
+```r
+feelings &lt;- c("sad", "afraid")
+
+for (i in feelings){
+  print(
+  switch(i,
+  happy = "I am glad you are happy",
+  afraid = "There is nothing to fear",
+  sad = "Cheer up",
+  angry = "Calm down now"
+  ))
+}
+```
+
+```
+[1] "Cheer up"
+[1] "There is nothing to fear"
+```
+
+
+---
+class: center, middle
+
+Slides available at: hellor.netlify.com
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

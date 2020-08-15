@@ -1,0 +1,64 @@
+---
+title: "STA 326 2.0 Programming and Data Analysis with R"
+subtitle: "Introduction"
+author: "Dr Thiyanga Talagala"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: 
+      - default
+      - default-fonts
+      - duke-blue
+      - hygge-duke
+      - libs/cc-fonts.css
+      - libs/figure-captions.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+background-image: url('me.png')
+background-position: center
+background-size: cover
+---
+
+background-image: url('courseweb.png')
+background-position: center
+background-size: cover
+---
+
+background-image: url('book.png')
+background-position: center
+background-size: contain
+
+
+---
+background-image: url('RLadies.jpg')
+background-position: center
+background-size: cover
+
+---
+
+background-image: url('rl1.png')
+background-position: center
+background-size: cover
+
+## @RLadiesColombo
+---
+
+background-image: url('rl2.png')
+background-position: center
+background-size: cover
+
+## @RLadiesColombo
+---
+
+background-image: url('horse.png')
+background-position: center
+background-size: cover
+---

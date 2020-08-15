@@ -1,0 +1,814 @@
+---
+title: "STA 517 3.0 Programming and Statistical Computing with R"
+subtitle: "Lesson 1: Introduction to R"
+author: "Dr Thiyanga Talagala"
+date: "2020-08-15"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+    css: 
+      - default
+      - default-fonts
+      - duke-blue
+      - hygge-duke
+      - libs/cc-fonts.css
+      - libs/figure-captions.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+# What is R? 
+
+- R is a software environment for statistical computing and graphics
+
+- Language designers: **R**oss Ihaka and **R**obert Gentleman at the University of Auckland, New Zealand
+
+- Parent language: S
+
+- The latest R version 4.0.2 has been released on 2020-06-22
+
+
+![description of the image](RobertandRoss.jpg)
+
+---
+
+# Why R?
+
+- **Free**
+
+- **Powerful:** Over 14600 contributed packages on the main repository (CRAN), as of July 2019, provided by top international researchers and programmers
+
+- **Flexible:** It is a language, and thus allows you to create your own solutions
+
+- **Community:** Large global community friendly and helpful, lots of resources
+
+---
+background-image: url('rladiesclb.png')
+background-position: center
+background-size: cover
+
+# https://rladiescolombo.netlify.app/
+---
+
+background-image: url('renv.png')
+background-position: center
+background-size: contain
+
+## R environment
+---
+
+background-image: url('rstudio1.png')
+background-position: center
+background-size: contain
+
+## The RStudio IDE
+---
+
+background-image: url('rstudio2.png')
+background-position: center
+background-size: contain
+
+## The RStudio IDE
+
+.footer-note[.tiny[.green[Image Credit: ][Clastic Detritus ](https://clasticdetritus.com/2013/01/10/creating-data-plots-with-r/)]]
+---
+
+background-image: url('airport.jpg')
+background-position: center
+background-size: cover
+
+.content-box-yellow[
+## R and RStudio
+]
+
+.footer-note[.tiny[.green[Image Credit: ][Clastic Detritus ](https://clasticdetritus.com/2013/01/10/creating-data-plots-with-r/)]]
+---
+
+
+background-image: url('airport.jpg')
+background-position: center
+background-size: cover
+
+.content-box-yellow[
+## R and RStudio
+
+"If R were **an airplane**, RStudio would be **the airport**, providing many, many supporting services that make it easier for you, the pilot, to take off and go to awesome places. Sure, you can fly an airplane without an airport, but having those runways and supporting infrastructure is a game-changer." 
+
+-- Julie Lowndes]
+
+.footer-note[.tiny[.green[Image Credit: ][Clastic Detritus ](https://clasticdetritus.com/2013/01/10/creating-data-plots-with-r/)]]
+---
+
+class: inverse, center, middle
+
+# Create a new project
+
+---
+background-image: url('project1.png')
+background-position: center
+background-size: contain
+---
+
+background-image: url('project2.png')
+background-position: center
+background-size: contain
+---
+
+background-image: url('project3.png')
+background-position: center
+background-size: contain
+---
+
+background-image: url('project4.png')
+background-position: center
+background-size: contain
+---
+
+background-image: url('project5.png')
+background-position: center
+background-size: contain
+---
+background-image: url('project6.png')
+background-position: center
+background-size: contain
+---
+
+## R Console
+
+```{r, comment=NA}
+7+1
+
+```
+
+
+
+```{r, comment=NA}
+rnorm(10) 
+
+```
+
+--
+
+## Variable assignment
+
+```{r, comment=NA}
+a <- rnorm(10)
+a
+```
+
+--
+
+```{r, comment=NA}
+b <- a*100
+b
+```
+
+---
+
+
+
+# Data permanency
+
+- `ls()` can be used to display the names of the objects which are currently stored within R.
+
+- The collection of objects currently stored is called the **workspace**
+
+```{r, comment=NA}
+ls()
+
+```
+
+--
+- To remove objects the function `rm` is available
+
+    - remove all objects `rm(list=ls())`
+    
+    - remove specific objects `rm(x, y, z)`
+    
+    
+```{r, comment=NA}
+rm(a)
+ls()
+```
+
+```{r, comment=NA}
+rm(list=ls())
+ls()
+```
+
+---
+
+background-image: url('project7.png')
+background-position: center
+background-size: cover
+
+--
+.pull-left[.full-width[.content-box-yellow[At the end of an R session, if **save**: the objects are written to a file called .RData in the current directory, and the command lines used in the session are saved to a file called .Rhistory]]]
+
+---
+
+background-image: url('p81.png')
+background-position: center
+background-size: cover
+
+.pull-left[.full-width[.content-box-yellow[When R is started at later time **from the same directory** ]]]
+
+---
+background-image: url('p82.png')
+background-position: center
+background-size: cover
+
+.pull-left[.full-width[.content-box-yellow[When R is started at later time **from the same directory** it reloads the **associated workspace** and **commands history.**]]]
+
+---
+
+background-image: url('project9.png')
+background-position: center
+background-size: cover
+
+--
+.pull-left[.full-width[.content-box-yellow[When R is started at later time **from the same directory** it reloads the **associated workspace** and **commands history.**]]]
+
+---
+
+## Comment your code
+
+- Each line of a comment should begin with the comment symbol and a single space: # . 
+
+```{r, comment=NA}
+rnorm(10) # This is a comment 
+sum(1:10) # 1+2
+```
+
+---
+
+## Style Guide
+
+- Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread.  -- Hadley Wickham
+
+```{r, comment=NA}
+sum(1:10)#Bad commenting style
+sum(1:10) # Good commenting style
+
+```
+
+- Also, use commented lines of - and = to break up your file into easily readable sub-sections.
+
+```r
+# Read data ----------------
+
+# Plot data ----------------
+```
+
+To learn more read Hadley Wickham's [Style guide](http://adv-r.had.co.nz/Style.html).
+
+---
+
+## Objects in R
+
+- R is an [object-oriented language](https://en.wikipedia.org/wiki/Object-oriented_programming).
+
+--
+- An object in R is anything (data structures, functions, etc., that can be assigned to a variable).
+
+--
+
+Let's take a look of some common types of objects.
+
+--
+
+1. .red[Data structures] are the ways of arranging data.
+
+    - You can create objects, using the left pointing arrow <-
+--
+1. .red[Functions] tell R to do something.
+
+    - A function may be applied to an object.
+
+    - Result of applying a function is usually an object too.
+
+    - All function calls need to be followed by parentheses.
+
+```{r, comment=NA}
+a <- 1:20 # data structure
+sum(a) # sum is a function applied on a
+
+```
+
+```r
+help.start() # Some functions work on their own.
+```
+---
+
+# Getting help with functions and features
+
+- R has inbuilt help facility
+
+
+### Method 1
+
+```r
+help(rnorm)
+```
+
+- For a feature specified by special characters such as `for`, `if`, `[[`
+
+```r
+help("[[")
+```
+
+- Search the help files for a word or phrase.
+
+```r
+help.search(‘weighted mean’) 
+```
+
+### Method 2
+
+```r
+?rnorm
+```
+
+```r
+??rnorm
+```
+
+---
+background-image: url('dataStructures.png')
+background-position: center
+background-size: contain
+
+## Data structures
+
+.footer-note[.tiny[.green[Image Credit: ][venus.ifca.unican.es](http://venus.ifca.unican.es/Rintro/dataStruct.html)]]
+
+
+
+---
+
+background-image: url('dataStructures.png')
+background-position: center
+background-size: contain
+
+## Data structures
+
+.content-box-yellow[Data structures differ in terms of,
+
+- Type of data they can hold
+
+- How they are created
+
+- Structural complexity
+
+- Notation to identify and access individual elements
+]
+
+.footer-note[.tiny[.green[Image Credit: ][venus.ifca.unican.es](http://venus.ifca.unican.es/Rintro/dataStruct.html)]]
+
+
+
+---
+class: duke-green, center, middle
+
+# 1. Vectors
+
+---
+
+# Vectors
+
+- Vectors are one-dimensional arrays that can hold numeric data, character data, or logical data.
+
+- Combine function c() is used to form the vector.
+
+- Data in a vector must only be one type or mode (numeric, character, or logical). You can’t mix modes in the same vector.
+
+
+## Vector assignment
+
+**Syntax**
+
+```r
+vector_name <- c(element1, element2, element3)
+
+```
+
+```r
+x <- c(5, 6, 3, 1 , 100)
+```
+
+- assignment operator ('<-'), '=' can be used as an alternative.
+
+- `c()` function
+
+.red[What will be the output of the following code?]
+
+```r
+y <- c(x, 500, 600)
+```
+
+---
+
+# Types and tests with vectors
+
+
+```{r, eval=TRUE}
+first_vec <- c(10, 20, 50, 70)
+second_vec <- c("Jan", "Feb", "March", "April")
+third_vec <- c(TRUE, FALSE, TRUE, TRUE)
+fourth_vec <- c(10L, 20L, 50L, 70L)
+```
+
+
+To check if it is a 
+
+- vector: `is.vector()`
+
+```{r, comment=NA}
+is.vector(first_vec)
+```
+
+
+- character vector: `is.character()`
+
+```{r, comment=NA}
+is.character(first_vec)
+```
+---
+- double: `is.double()`
+
+```{r, comment=NA}
+is.double(first_vec)
+```
+
+
+- integer: `is.integer()`
+
+```{r, comment=NA}
+is.integer(first_vec)
+```
+
+- logical: `is.logical()`
+
+```{r, comment=NA}
+is.logical(first_vec)
+```
+
+- length
+
+```{r, comment=NA}
+length(first_vec)
+```
+---
+
+# Coercion
+
+Vectors must be homogeneous. When you attempt to combine different types they will be coerced to the most flexible type so that every element in the vector is of the same type.
+
+Order from least to most flexible
+
+`logical` --> `integer` --> `double` --> `character`
+
+```{r, comment=NA}
+a <- c(3.1, 2L, 3, 4, "GPA") 
+typeof(a) 
+```
+
+```{r, comment=NA}
+anew <- c(3.1, 2L, 3, 4)
+typeof(anew) 
+```
+
+---
+
+### Explicit coercion
+
+Vectors can be explicitly coerced from one class to another using the `as.*` functions, if available. For example, `as.character`, `as.numeric`, `as.integer`, and `as.logical`.
+
+```{r, comment=NA}
+vec1 <- c(TRUE, FALSE, TRUE, TRUE)
+typeof(vec1)
+
+vec2 <- as.integer(vec1)
+typeof(vec2)
+vec2
+```
+
+.red[Why does the below output NAs?]
+
+```{r, comment=NA}
+x <- c("a", "b", "c")
+as.numeric(x)
+```
+
+---
+
+
+```{r, comment=NA}
+x1 <- 1:3
+x2 <- c(10, 20, 30)
+combinedx1x2 <- c(x1, x2)
+combinedx1x2 
+```
+
+--
+
+```{r, comment=NA}
+class(x1)
+class(x2)
+class(combinedx1x2)
+
+```
+--
+- If you combine a numeric vector and a character vector 
+
+```{r, comment=NA}
+y1 <- c(1, 2, 3)
+y2 <- c("a", "b", "c")
+c(y1, y2)
+
+```
+---
+
+# Name elements in a vector
+
+You can name elements in a vector in different ways. We will learn two of them.
+
+1. When creating it
+
+```{r}
+x1 <- c(a=1991, b=1992, c=1993)
+x1
+```
+
+2. Modifying the names of an existing vector
+
+```{r}
+x2 <- c(1, 5, 10)
+names(x2) <- c("a", "b", "b")
+x2
+```
+
+Note that the names do not have to be unique. 
+---
+
+# To remove names of a vector
+
+Method 1
+
+```{r, comment=NA}
+unname(x1); x1
+```
+
+Method 2
+
+```{r, comment=NA}
+names(x2) <- NULL; x2
+```
+
+.red[What will be the output of the following code?]
+
+```r
+v <- c(1, 2, 3)
+names(v) <- c("a")
+v
+```
+---
+
+### Simplifying vector creation
+
+- colon `:` produce regular spaced ascending or descending sequences.
+
+```{r, comment=NA}
+ 10:16
+
+-0.5:8.5
+
+```
+--
+- sequence: `seq(initial_value, final_value, increment)`
+
+```{r, comment=NA}
+seq(1,11)
+
+seq(1, 11, length.out=5)
+
+seq(0, 11, by=2)
+```
+
+---
+
+- repeats `rep()` 
+
+```{r, comment=NA}
+rep(9, 5)
+
+rep(1:4, 2)
+
+rep(1:4, each=2) # each element is repeated twice
+
+rep(1:4, times=2) # whole sequence is repeated twice
+
+rep(1:4, each=2, times=3)
+
+rep(1:4, 1:4)
+
+rep(1:4, c(4, 1, 4, 2))
+
+```
+
+---
+
+## Logical operators
+
+```{r, comment=NA}
+c(1, 2, 3) == c(10, 20, 3)
+```
+
+```{r, comment=NA}
+c(1, 2, 3) != c(10, 20, 3)
+```
+
+```{r, comment=NA}
+1:5 > 3
+```
+
+```{r, comment=NA}
+1:5 < 3
+```
+
+- `<=` less than or equal to
+
+- `>=` greater than or equal to
+
+- `|` or
+
+- `&` and
+
+---
+
+# Operators: `%in%` - in the set
+
+```{r, comment=NA}
+a <- c(1, 2, 3)
+b <- c(1, 10, 3)
+a%in%b
+```
+
+```{r, comment=NA}
+x <- 1:10
+y <- 1:3
+x
+y
+x %in% y
+
+```
+
+```{r, comment=NA}
+y %in% x
+```
+---
+## Vector arithmetic
+
+
+- operations are performed element by element. 
+
+```{r, comment=NA}
+c(10, 100, 100) + 2 # two is added to every element in the vector
+```
+--
+- operations between two vectors
+
+```{r, comment=NA}
+v1 <- c(1, 2, 3); v2 <- c(10, 100, 1000)
+v1 + v2
+```
+--
+Add two vectors of unequal length
+
+```{r, comment=NA}
+longvec <- seq(10, 100, length=10); shortvec <- c(1, 2, 3, 4, 5)
+
+shortvec + longvec
+
+```
+
+
+.red[What will be the output of the following code?]
+
+```r
+first <- c(1, 2, 3, 4); second <- c(10, 100)
+first * second
+```
+---
+
+# Other vector operations
+
+- Please see the [cheatsheet](/pdf/baser.pdf) and course materials STA Data Analysis II
+
+---
+
+# Missing values
+
+Use `NA` or `NaN` to place a missing value in a vector.
+
+```{r, comment=NA}
+z <- c(10, 101, 2, 3, NA)
+is.na(z)
+```
+
+
+---
+class: inverse, center, middle
+
+# Question 1
+
+---
+
+
+background-image: url('corona.jpg')
+background-position: center
+background-size: cover
+
+---
+
+
+background-image: url('corona.jpg')
+background-position: center
+background-size: cover
+
+.content-box-yellow[
+We are in the midst of a medical crisis! The deadly coronavirus that originated in China has infected hundreds of people and is now spreading across the globe at an alarming rate. World Health Organization (WHO) alerted the world about the Novel Coronavirus(2019-nCoV) in January, 2020. After issuance of the global alert, a formal reporting of Corona cases was put in place, and WHO published daily reports on the number of cases on their website [here](https://www.who.int/docs/default-source/coronaviruse/situation-reports). Use [WHO: Situation Report-21](https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200210-sitrep-21-ncov.pdf?sfvrsn=947679ef_2) for this question.
+]
+
+---
+
+background-image: url('report1.png')
+background-position: center
+background-size: cover
+
+---
+
+background-image: url('report1.png')
+background-position: center
+background-size: cover
+.content-box-yellow[ 1.	Table 1 reports the confirmed cases of 2019-nCoV reported by provinces, regions and cities in China. 
+
+i)	Enter confirmed cases in table 1 to a vector.
+
+ii)	Name the elements by province/regions/cities in China.
+
+iii) Write R codes to answer the following questions.
+
+- Which province/region/city has the highest number of confirmed cases?
+
+- Number of confirmed cases reported in Hebei, China.
+
+- Total number of confirmed cases reported in China
+
+- Number of cases reported in the capital of China
+
+- Number of cases reported in Inner Mongolia
+
+
+]
+---
+
+background-image: url('report1.png')
+background-position: center
+background-size: cover
+.content-box-yellow[ 1.	Table 2 reports the confirmed 2019-nCoV cases and deaths in China, Singapore, Republic of Korea, Japan, Malaysia, Australia, Viet Nam, Philippines, Cambodia, Thailand, India, Nepal, Sri Lanka, United States of America, Canada, Germany, France, The United Kingdom, Italy, Russian Federation, Spain , Belgium, Finland, Sweden, UAE as
+
+a <- c(40235, 43, 27, 26, 18, 15, 14, 3, 1, 32, 3, 1, 1, 12, 7, 14, 11, 4, 3, 2, 2, 1, 1, 100, 7)
+
+1. rename the vector `a` as `confirmed_cases_countries`
+
+2. Name elements according to the associated country
+
+3. Mistakenly 100 cases were recorded to Sweden, correct it.
+
+4. Add the record for `other` category into your vector.
+
+5. Create a new vector to enter WHO regions
+
+6. China, Singapore, Malaysia, The United Kingdom, Spain have been reported new cases. Create a new vector to code these countries as TRUE and the rest as FALSE
+]
+
+---
+background-image: url('table2.png')
+background-position: center
+background-size: cover
+
+
+---
+class: center, middle
+
+Slides available at: hellor.netlify.com
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+

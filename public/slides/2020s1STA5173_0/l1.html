@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>STA 326 2.0 Programming and Data Analysis with R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr Thiyanga Talagala" />
+    <meta name="date" content="2020-02-11" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/duke-blue.css" rel="stylesheet" />
+    <link href="libs/remark-css/hygge-duke.css" rel="stylesheet" />
+    <link rel="stylesheet" href="libs/cc-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="libs/figure-captions.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# STA 326 2.0 Programming and Data Analysis with R
+## Lesson 1: Introduction to R
+### Dr Thiyanga Talagala
+### 2020-02-11
+
+---
+
+
+
+# What is R? 
+
+- R is a software environment for statistical computing and graphics
+
+- Language designers: **R**oss Ihaka and **R**obert Gentleman at the University of Auckland, New Zealand
+
+- Parent language: S
+
+- The latest R version 3.6.2 has been released on 2019-12-12
+
+![description of the image](RobertandRoss.jpg)
+
+---
+
+# Why R?
+
+- **Free**
+
+- **Powerful:** Over 14600 contributed packages on the main repository (CRAN), as of July 2019, provided by top international researchers and programmers
+
+- **Flexible:** It is a language, and thus allows you to create your own solutions
+
+- **Community:** Large global community friendly and helpful, lots of resources
+
+---
+
+background-image: url('renv.png')
+background-position: center
+background-size: contain
+
+## R environment
+---
+
+background-image: url('rstudio1.png')
+background-position: center
+background-size: contain
+
+## The RStudio IDE
+---
+
+background-image: url('rstudio2.png')
+background-position: center
+background-size: contain
+
+## The RStudio IDE
+
+.footer-note[.tiny[.green[Image Credit: ][Clastic Detritus ](https://clasticdetritus.com/2013/01/10/creating-data-plots-with-r/)]]
+---
+
+background-image: url('airport.jpg')
+background-position: center
+background-size: cover
+
+.content-box-yellow[
+## R and RStudio
+]
+
+.footer-note[.tiny[.green[Image Credit: ][Clastic Detritus ](https://clasticdetritus.com/2013/01/10/creating-data-plots-with-r/)]]
+---
+
+
+background-image: url('airport.jpg')
+background-position: center
+background-size: cover
+
+.content-box-yellow[
+## R and RStudio
+
+"If R were **an airplane**, RStudio would be **the airport**, providing many, many supporting services that make it easier for you, the pilot, to take off and go to awesome places. Sure, you can fly an airplane without an airport, but having those runways and supporting infrastructure is a game-changer." 
+
+-- Julie Lowndes]
+
+.footer-note[.tiny[.green[Image Credit: ][Clastic Detritus ](https://clasticdetritus.com/2013/01/10/creating-data-plots-with-r/)]]
+---
+
+class: inverse, center, middle
+
+# Create a new project
+
+---
+background-image: url('project1.png')
+background-position: center
+background-size: contain
+---
+
+background-image: url('project2.png')
+background-position: center
+background-size: contain
+---
+
+background-image: url('project3.png')
+background-position: center
+background-size: contain
+---
+
+background-image: url('project4.png')
+background-position: center
+background-size: contain
+---
+
+background-image: url('project5.png')
+background-position: center
+background-size: contain
+---
+background-image: url('project6.png')
+background-position: center
+background-size: contain
+---
+
+## R Console
+
+
+```r
+7+1
+```
+
+```
+[1] 8
+```
+
+
+
+
+```r
+rnorm(10) 
+```
+
+```
+ [1] -1.35964206 -1.47987331 -0.87844115 -0.09558811 -0.79170771  0.60716241
+ [7]  1.28956017  1.11240342  1.12086340  0.97118210
+```
+
+--
+
+## Variable assignment
+
+
+```r
+a &lt;- rnorm(10)
+a
+```
+
+```
+ [1] -1.0041032 -0.2125746  1.1666413  1.4861161  1.3020677 -1.7333631
+ [7]  1.1198432  1.6120494 -0.8737365 -0.2607107
+```
+
+--
+
+
+```r
+b &lt;- a*100
+b
+```
+
+```
+ [1] -100.41032  -21.25746  116.66413  148.61161  130.20677 -173.33631
+ [7]  111.98432  161.20494  -87.37365  -26.07107
+```
+
+---
+
+
+
+# Data permanency
+
+- `ls()` can be used to display the names of the objects which are currently stored within R.
+
+- The collection of objects currently stored is called the **workspace**
+
+
+```r
+ls()
+```
+
+```
+[1] "a" "b"
+```
+
+--
+- To remove objects the function `rm` is available
+
+    - remove all objects `rm(list=ls())`
+    
+    - remove specific objects `rm(x, y, z)`
+    
+    
+
+```r
+rm(a)
+ls()
+```
+
+```
+[1] "b"
+```
+
+
+```r
+rm(list=ls())
+ls()
+```
+
+```
+character(0)
+```
+
+---
+
+background-image: url('project7.png')
+background-position: center
+background-size: cover
+
+--
+.pull-left[.full-width[.content-box-yellow[At the end of an R session, if **save**: the objects are written to a file called .RData in the current directory, and the command lines used in the session are saved to a file called .Rhistory]]]
+
+---
+
+background-image: url('p81.png')
+background-position: center
+background-size: cover
+
+.pull-left[.full-width[.content-box-yellow[When R is started at later time **from the same directory** ]]]
+
+---
+background-image: url('p82.png')
+background-position: center
+background-size: cover
+
+.pull-left[.full-width[.content-box-yellow[When R is started at later time **from the same directory** it reloads the **associated workspace** and **commands history.**]]]
+
+---
+
+background-image: url('project9.png')
+background-position: center
+background-size: cover
+
+--
+.pull-left[.full-width[.content-box-yellow[When R is started at later time **from the same directory** it reloads the **associated workspace** and **commands history.**]]]
+
+---
+
+## Comment your code
+
+- Each line of a comment should begin with the comment symbol and a single space: # . 
+
+
+```r
+rnorm(10) # This is a comment 
+```
+
+```
+ [1] -1.02616444 -0.04841736  0.24375144  0.13722723 -1.28152719  0.58674356
+ [7]  0.55622426 -0.82593117 -0.60589038  0.57995837
+```
+
+```r
+sum(1:10) # 1+2
+```
+
+```
+[1] 55
+```
+
+---
+
+## Style Guide
+
+- Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread.  -- Hadley Wickham
+
+
+```r
+sum(1:10)#Bad commenting style
+```
+
+```
+[1] 55
+```
+
+```r
+sum(1:10) # Good commenting style
+```
+
+```
+[1] 55
+```
+
+- Also, use commented lines of - and = to break up your file into easily readable sub-sections.
+
+```r
+# Read data ----------------
+
+# Plot data ----------------
+```
+
+To learn more read Hadley Wickham's [Style guide](http://adv-r.had.co.nz/Style.html).
+
+---
+
+## Objects in R
+
+- R is an [object-oriented language](https://en.wikipedia.org/wiki/Object-oriented_programming).
+
+--
+- An object in R is anything (data structures, functions, etc., that can be assigned to a variable).
+
+--
+
+Let's take a look of some common types of objects.
+
+--
+
+1. .red[Data structures] are the ways of arranging data.
+
+    - You can create objects, using the left pointing arrow &lt;-
+--
+1. .red[Functions] tell R to do something.
+
+    - A function may be applied to an object.
+
+    - Result of applying a function is usually an object too.
+
+    - All function calls need to be followed by parentheses.
+
+
+```r
+a &lt;- 1:20 # data structure
+sum(a) # sum is a function applied on a
+```
+
+```
+[1] 210
+```
+
+```r
+help.start() # Some functions work on their own.
+```
+---
+
+# Getting help with functions and features
+
+- R has inbuilt help facility
+
+
+### Method 1
+
+```r
+help(rnorm)
+```
+
+- For a feature specified by special characters such as `for`, `if`, `[[`
+
+```r
+help("[[")
+```
+
+- Search the help files for a word or phrase.
+
+```r
+help.search(‘weighted mean’) 
+```
+
+### Method 2
+
+```r
+?rnorm
+```
+
+```r
+??rnorm
+```
+
+---
+background-image: url('dataStructures.png')
+background-position: center
+background-size: contain
+
+## Data structures
+
+.footer-note[.tiny[.green[Image Credit: ][venus.ifca.unican.es](http://venus.ifca.unican.es/Rintro/dataStruct.html)]]
+
+
+
+---
+
+background-image: url('dataStructures.png')
+background-position: center
+background-size: contain
+
+## Data structures
+
+.content-box-yellow[Data structures differ in terms of,
+
+- Type of data they can hold
+
+- How they are created
+
+- Structural complexity
+
+- Notation to identify and access individual elements
+]
+
+.footer-note[.tiny[.green[Image Credit: ][venus.ifca.unican.es](http://venus.ifca.unican.es/Rintro/dataStruct.html)]]
+
+
+
+---
+class: duke-green, center, middle
+
+# 1. Vectors
+
+---
+
+# Vectors
+
+- Vectors are one-dimensional arrays that can hold numeric data, character data, or logical data.
+
+- Combine function c() is used to form the vector.
+
+- Data in a vector must only be one type or mode (numeric, character, or logical). You can’t mix modes in the same vector.
+
+
+## Vector assignment
+
+**Syntax**
+
+```r
+vector_name &lt;- c(element1, element2, element3)
+
+```
+
+```r
+x &lt;- c(5, 6, 3, 1 , 100)
+```
+
+- assignment operator ('&lt;-'), '=' can be used as an alternative.
+
+- `c()` function
+
+.red[What will be the output of the following code?]
+
+```r
+y &lt;- c(x, 500, 600)
+```
+
+---
+
+# Types and tests with vectors
+
+
+
+```r
+first_vec &lt;- c(10, 20, 50, 70)
+second_vec &lt;- c("Jan", "Feb", "March", "April")
+third_vec &lt;- c(TRUE, FALSE, TRUE, TRUE)
+fourth_vec &lt;- c(10L, 20L, 50L, 70L)
+```
+
+
+To check if it is a 
+
+- vector: `is.vector()`
+
+
+```r
+is.vector(first_vec)
+```
+
+```
+[1] TRUE
+```
+
+
+- character vector: `is.character()`
+
+
+```r
+is.character(first_vec)
+```
+
+```
+[1] FALSE
+```
+---
+- double: `is.double()`
+
+
+```r
+is.double(first_vec)
+```
+
+```
+[1] TRUE
+```
+
+
+- integer: `is.integer()`
+
+
+```r
+is.integer(first_vec)
+```
+
+```
+[1] FALSE
+```
+
+- logical: `is.logical()`
+
+
+```r
+is.logical(first_vec)
+```
+
+```
+[1] FALSE
+```
+
+- length
+
+
+```r
+length(first_vec)
+```
+
+```
+[1] 4
+```
+---
+
+# Coercion
+
+Vectors must be homogeneous. When you attempt to combine different types they will be coerced to the most flexible type so that every element in the vector is of the same type.
+
+Order from least to most flexible
+
+`logical` --&gt; `integer` --&gt; `double` --&gt; `character`
+
+
+```r
+a &lt;- c(3.1, 2L, 3, 4, "GPA") 
+typeof(a) 
+```
+
+```
+[1] "character"
+```
+
+
+```r
+anew &lt;- c(3.1, 2L, 3, 4)
+typeof(anew) 
+```
+
+```
+[1] "double"
+```
+
+---
+
+### Explicit coercion
+
+Vectors can be explicitly coerced from one class to another using the `as.*` functions, if available. For example, `as.character`, `as.numeric`, `as.integer`, and `as.logical`.
+
+
+```r
+vec1 &lt;- c(TRUE, FALSE, TRUE, TRUE)
+typeof(vec1)
+```
+
+```
+[1] "logical"
+```
+
+```r
+vec2 &lt;- as.integer(vec1)
+typeof(vec2)
+```
+
+```
+[1] "integer"
+```
+
+```r
+vec2
+```
+
+```
+[1] 1 0 1 1
+```
+
+.red[Why does the below output NAs?]
+
+
+```r
+x &lt;- c("a", "b", "c")
+as.numeric(x)
+```
+
+```
+Warning: NAs introduced by coercion
+```
+
+```
+[1] NA NA NA
+```
+
+---
+
+
+
+```r
+x1 &lt;- 1:3
+x2 &lt;- c(10, 20, 30)
+combinedx1x2 &lt;- c(x1, x2)
+combinedx1x2 
+```
+
+```
+[1]  1  2  3 10 20 30
+```
+
+--
+
+
+```r
+class(x1)
+```
+
+```
+[1] "integer"
+```
+
+```r
+class(x2)
+```
+
+```
+[1] "numeric"
+```
+
+```r
+class(combinedx1x2)
+```
+
+```
+[1] "numeric"
+```
+--
+- If you combine a numeric vector and a character vector 
+
+
+```r
+y1 &lt;- c(1, 2, 3)
+y2 &lt;- c("a", "b", "c")
+c(y1, y2)
+```
+
+```
+[1] "1" "2" "3" "a" "b" "c"
+```
+---
+
+# Name elements in a vector
+
+You can name elements in a vector in different ways. We will learn two of them.
+
+1. When creating it
+
+
+```r
+x1 &lt;- c(a=1991, b=1992, c=1993)
+x1
+```
+
+```
+##    a    b    c 
+## 1991 1992 1993
+```
+
+2. Modifying the names of an existing vector
+
+
+```r
+x2 &lt;- c(1, 5, 10)
+names(x2) &lt;- c("a", "b", "b")
+x2
+```
+
+```
+##  a  b  b 
+##  1  5 10
+```
+
+Note that the names do not have to be unique. 
+---
+
+# To remove names of a vector
+
+Method 1
+
+
+```r
+unname(x1); x1
+```
+
+```
+[1] 1991 1992 1993
+```
+
+```
+   a    b    c 
+1991 1992 1993 
+```
+
+Method 2
+
+
+```r
+names(x2) &lt;- NULL; x2
+```
+
+```
+[1]  1  5 10
+```
+
+.red[What will be the output of the following code?]
+
+```r
+v &lt;- c(1, 2, 3)
+names(v) &lt;- c("a")
+v
+```
+---
+
+### Simplifying vector creation
+
+- colon `:` produce regular spaced ascending or descending sequences.
+
+
+```r
+ 10:16
+```
+
+```
+[1] 10 11 12 13 14 15 16
+```
+
+```r
+-0.5:8.5
+```
+
+```
+ [1] -0.5  0.5  1.5  2.5  3.5  4.5  5.5  6.5  7.5  8.5
+```
+--
+- sequence: `seq(initial_value, final_value, increment)`
+
+
+```r
+seq(1,11)
+```
+
+```
+ [1]  1  2  3  4  5  6  7  8  9 10 11
+```
+
+```r
+seq(1, 11, length.out=5)
+```
+
+```
+[1]  1.0  3.5  6.0  8.5 11.0
+```
+
+```r
+seq(0, 11, by=2)
+```
+
+```
+[1]  0  2  4  6  8 10
+```
+
+---
+
+- repeats `rep()` 
+
+
+```r
+rep(9, 5)
+```
+
+```
+[1] 9 9 9 9 9
+```
+
+```r
+rep(1:4, 2)
+```
+
+```
+[1] 1 2 3 4 1 2 3 4
+```
+
+```r
+rep(1:4, each=2) # each element is repeated twice
+```
+
+```
+[1] 1 1 2 2 3 3 4 4
+```
+
+```r
+rep(1:4, times=2) # whole sequence is repeated twice
+```
+
+```
+[1] 1 2 3 4 1 2 3 4
+```
+
+```r
+rep(1:4, each=2, times=3)
+```
+
+```
+ [1] 1 1 2 2 3 3 4 4 1 1 2 2 3 3 4 4 1 1 2 2 3 3 4 4
+```
+
+```r
+rep(1:4, 1:4)
+```
+
+```
+ [1] 1 2 2 3 3 3 4 4 4 4
+```
+
+```r
+rep(1:4, c(4, 1, 4, 2))
+```
+
+```
+ [1] 1 1 1 1 2 3 3 3 3 4 4
+```
+
+---
+
+## Logical operators
+
+
+```r
+c(1, 2, 3) == c(10, 20, 3)
+```
+
+```
+[1] FALSE FALSE  TRUE
+```
+
+
+```r
+c(1, 2, 3) != c(10, 20, 3)
+```
+
+```
+[1]  TRUE  TRUE FALSE
+```
+
+
+```r
+1:5 &gt; 3
+```
+
+```
+[1] FALSE FALSE FALSE  TRUE  TRUE
+```
+
+
+```r
+1:5 &lt; 3
+```
+
+```
+[1]  TRUE  TRUE FALSE FALSE FALSE
+```
+
+- `&lt;=` less than or equal to
+
+- `&gt;=` greater than or equal to
+
+- `|` or
+
+- `&amp;` and
+
+---
+
+# Operators: `%in%` - in the set
+
+
+```r
+a &lt;- c(1, 2, 3)
+b &lt;- c(1, 10, 3)
+a%in%b
+```
+
+```
+[1]  TRUE FALSE  TRUE
+```
+
+
+```r
+x &lt;- 1:10
+y &lt;- 1:3
+x
+```
+
+```
+ [1]  1  2  3  4  5  6  7  8  9 10
+```
+
+```r
+y
+```
+
+```
+[1] 1 2 3
+```
+
+```r
+x %in% y
+```
+
+```
+ [1]  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+```
+
+
+```r
+y %in% x
+```
+
+```
+[1] TRUE TRUE TRUE
+```
+---
+## Vector arithmetic
+
+
+- operations are performed element by element. 
+
+
+```r
+c(10, 100, 100) + 2 # two is added to every element in the vector
+```
+
+```
+[1]  12 102 102
+```
+--
+- operations between two vectors
+
+
+```r
+v1 &lt;- c(1, 2, 3); v2 &lt;- c(10, 100, 1000)
+v1 + v2
+```
+
+```
+[1]   11  102 1003
+```
+--
+Add two vectors of unequal length
+
+
+```r
+longvec &lt;- seq(10, 100, length=10); shortvec &lt;- c(1, 2, 3, 4, 5)
+
+shortvec + longvec
+```
+
+```
+ [1]  11  22  33  44  55  61  72  83  94 105
+```
+
+
+.red[What will be the output of the following code?]
+
+```r
+first &lt;- c(1, 2, 3, 4); second &lt;- c(10, 100)
+first * second
+```
+---
+
+# Other vector operations
+
+- Please see the [cheatsheet](/pdf/baser.pdf) and course materials STA Data Analysis II
+
+---
+
+# Missing values
+
+Use `NA` or `NaN` to place a missing value in a vector.
+
+
+```r
+z &lt;- c(10, 101, 2, 3, NA)
+is.na(z)
+```
+
+```
+[1] FALSE FALSE FALSE FALSE  TRUE
+```
+
+
+---
+class: inverse, center, middle
+
+# Question 1
+
+---
+
+
+background-image: url('corona.jpg')
+background-position: center
+background-size: cover
+
+---
+
+
+background-image: url('corona.jpg')
+background-position: center
+background-size: cover
+
+.content-box-yellow[
+We are in the midst of a medical crisis! The deadly coronavirus that originated in China has infected hundreds of people and is now spreading across the globe at an alarming rate. World Health Organization (WHO) alerted the world about the Novel Coronavirus(2019-nCoV) in January, 2020. After issuance of the global alert, a formal reporting of Corona cases was put in place, and WHO published daily reports on the number of cases on their website [here](https://www.who.int/docs/default-source/coronaviruse/situation-reports). Use [WHO: Situation Report-21](https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200210-sitrep-21-ncov.pdf?sfvrsn=947679ef_2) for this question.
+]
+
+---
+
+background-image: url('report1.png')
+background-position: center
+background-size: cover
+
+---
+
+background-image: url('report1.png')
+background-position: center
+background-size: cover
+.content-box-yellow[ 1.	Table 1 reports the confirmed cases of 2019-nCoV reported by provinces, regions and cities in China. 
+
+i)	Enter confirmed cases in table 1 to a vector.
+
+ii)	Name the elements by province/regions/cities in China.
+
+iii) Write R codes to answer the following questions.
+
+- Which province/region/city has the highest number of confirmed cases?
+
+- Number of confirmed cases reported in Hebei, China.
+
+- Total number of confirmed cases reported in China
+
+- Number of cases reported in the capital of China
+
+- Number of cases reported in Inner Mongolia
+
+
+]
+---
+
+background-image: url('report1.png')
+background-position: center
+background-size: cover
+.content-box-yellow[ 1.	Table 2 reports the confirmed 2019-nCoV cases and deaths in China, Singapore, Republic of Korea, Japan, Malaysia, Australia, Viet Nam, Philippines, Cambodia, Thailand, India, Nepal, Sri Lanka, United States of America, Canada, Germany, France, The United Kingdom, Italy, Russian Federation, Spain , Belgium, Finland, Sweden, UAE as
+
+a &lt;- c(40235, 43, 27, 26, 18, 15, 14, 3, 1, 32, 3, 1, 1, 12, 7, 14, 11, 4, 3, 2, 2, 1, 1, 100, 7)
+
+1. rename the vector `a` as `confirmed_cases_countries`
+
+2. Name elements according to the associated country
+
+3. Mistakenly 100 cases were recorded to Sweden, correct it.
+
+4. Add the record for `other` category into your vector.
+
+5. Create a new vector to enter WHO regions
+
+6. China, Singapore, Malaysia, The United Kingdom, Spain have been reported new cases. Create a new vector to code these countries as TRUE and the rest as FALSE
+]
+
+---
+background-image: url('table2.png')
+background-position: center
+background-size: cover
+
+
+---
+class: center, middle
+
+Slides available at: hellor.netlify.com
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

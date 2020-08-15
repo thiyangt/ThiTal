@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>STA 326 2.0 Programming and Data Analysis with R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr Thiyanga Talagala" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/duke-blue.css" rel="stylesheet" />
+    <link href="libs/remark-css/hygge-duke.css" rel="stylesheet" />
+    <link rel="stylesheet" href="libs/cc-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="libs/figure-captions.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# STA 326 2.0 Programming and Data Analysis with R
+## Regression Analysis
+### Dr Thiyanga Talagala
+### Online distance learning/teaching materials during the COVID-19 outbreak.
+
+---
+
+
+
+background-image: url('box.jpeg')
+background-position: center
+background-size: contain
+
+
+---
+# Problem
+
+![](facebook.jpg)
+---
+# Data
+
+
+```r
+facebookdata_marketing &lt;- readRDS("~/Lecturer/1_TEACHING/2020_s1/Rprogramming/static/slides/facebookdata_marketing.rds")
+head(facebookdata_marketing)
+```
+
+```
+  month category hour paid totalReach engagedUsers postConsumers
+1    12        2    3    0       2752          178           109
+2    12        2   10    0      10460         1457          1361
+3    12        3    3    0       2413          177           113
+4    12        3   10    1      50128         2211           790
+5    12        2    3    0       7244          671           410
+6    12        2    9    0      10472         1191          1073
+  postConsumptions sawbyLiked clickbyLiked totalInteractions
+1              159       1640          119               406
+2             1674       6112         1108               789
+3              154       1503          132               536
+4             1119      32048         1386              1700
+5              580       3200          396               678
+6             1389       7852         1016               794
+```
+
+```r
+dim(facebookdata_marketing)
+```
+
+```
+[1] 500  11
+```
+---
+## Variable description
+
+- **month:** Month the post was published (1, 2, 3, ..., 12)
+
+- **category:** Type of the post (1 - Link, 2 - Video, 3 - Picture)
+
+- **hour:** Hour the post was published (0, 1, ...24)
+
+- **paid:** If the company paid to Facebook for advertising (0 - No, 1 - Yes)
+
+- **totalReach:** Number of people who saw the page post
+(unique users).
+
+- **engagedUsers:** Number of people who clicked anywhere
+in the post (unique users).
+
+- **postConsumers:** Number of people who sent a direct message to the owner
+of the post.
+
+- **postConsumption:** Number of clicks anywhere in the post.
+
+- **sawbyLiked:** Number of people who saw the page post
+because they have liked that page.
+
+- **clickbyLiked:** Number of people who have liked the Page
+and clicked anywhere in the post.
+
+- **totalInteractions:** The sum of “likes,” “comments,” and “shares”
+of the post
+
+
+---
+# Packages
+
+
+```r
+library(tidyverse)
+library(magrittr)
+library(tidymodels)
+library(broom)
+library(GGally)
+```
+
+---
+
+
+
+```
+     month     category      hour         paid       totalReach    
+ 10     : 60   1:208    Min.   : 1.00   0   :360   Min.   :   238  
+ 7      : 52   2:123    1st Qu.: 3.00   1   :139   1st Qu.:  3315  
+ 4      : 50   3:169    Median : 9.00   NA's:  1   Median :  5281  
+ 12     : 50            Mean   : 7.84              Mean   : 13903  
+ 6      : 49            3rd Qu.:11.00              3rd Qu.: 13168  
+ 11     : 45            Max.   :23.00              Max.   :180480  
+ (Other):194                                                       
+  engagedUsers     postConsumers     postConsumptions    sawbyLiked   
+ Min.   :    9.0   Min.   :    9.0   Min.   :    9.0   Min.   :  236  
+ 1st Qu.:  393.8   1st Qu.:  332.5   1st Qu.:  509.2   1st Qu.: 2182  
+ Median :  625.5   Median :  551.5   Median :  851.0   Median : 3417  
+ Mean   :  920.3   Mean   :  798.8   Mean   : 1415.1   Mean   : 6585  
+ 3rd Qu.: 1062.0   3rd Qu.:  955.5   3rd Qu.: 1463.0   3rd Qu.: 7989  
+ Max.   :11452.0   Max.   :11328.0   Max.   :19779.0   Max.   :51456  
+                                                                      
+  clickbyLiked    totalInteractions
+ Min.   :   9.0   Min.   : 108.0   
+ 1st Qu.: 291.0   1st Qu.: 484.0   
+ Median : 412.0   Median : 607.5   
+ Mean   : 610.0   Mean   : 658.0   
+ 3rd Qu.: 656.2   3rd Qu.: 756.5   
+ Max.   :4376.0   Max.   :2660.0   
+                                   
+```
+
+---
+# Training test and Test set
+
+
+```r
+smp_size &lt;- 400
+
+## set the seed to make your partition reproducible
+set.seed(123)
+train_ind &lt;- sample(seq_len(nrow(facebookdata_marketing)), size = smp_size)
+train &lt;- facebookdata_marketing[train_ind, ]
+test &lt;- facebookdata_marketing[-train_ind, ]
+```
+
+---
+
+# Qualitative variables
+
+
+```r
+table(train$month)/500*100
+```
+
+```
+
+  1   2   3   4   5   6   7   8   9  10  11  12 
+3.6 4.0 5.0 8.2 5.8 8.8 8.4 6.2 5.8 9.4 7.0 7.8 
+```
+
+
+```r
+table(train$category)/500*100
+```
+
+```
+
+   1    2    3 
+33.4 20.0 26.6 
+```
+
+
+```r
+table(train$paid)/500*100
+```
+
+```
+
+ 0  1 
+58 22 
+```
+---
+# Distribution of total interactions
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+---
+# Distribution of total interactions by category
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+---
+# Distribution of total interactions by paid
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+---
+
+```r
+facebookdata_marketing_cont &lt;-  train %&gt;%
+  select(-c(month, category, paid))
+head(facebookdata_marketing_cont)
+```
+
+```
+# A tibble: 6 x 8
+   hour totalReach engagedUsers postConsumers postConsumptions sawbyLiked
+  &lt;dbl&gt;      &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt;            &lt;dbl&gt;      &lt;dbl&gt;
+1    14       6030          735           659             1448       4418
+2    13      10040         1429          1346             2022       6964
+3     2       4518          626           482              729       2254
+4     3       2549          249           134              168       1917
+5     3      34512         1666          1333             1977      22816
+6     3       6876          282           245              337       5752
+# … with 2 more variables: clickbyLiked &lt;dbl&gt;, totalInteractions &lt;dbl&gt;
+```
+
+---
+
+```r
+GGally::ggpairs(facebookdata_marketing_cont)
+```
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+---
+
+
+Relationship between total interactions and the number of people who saw the post
+because they have liked that page
+
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
+
+---
+
+# Simple linear regression 
+
+To fit 
+
+`$$y_i = \beta_0 + \beta_1x_i + \epsilon_i, \text{where } \epsilon_i \sim NID(0, \sigma^2)$$`
+
+
+
+```r
+model1 &lt;- lm(totalInteractions ~ sawbyLiked, data=train)
+tidy(model1)
+```
+
+```
+# A tibble: 2 x 5
+  term        estimate std.error statistic   p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+1 (Intercept) 449.      10.1          44.6 8.29e-157
+2 sawbyLiked    0.0322   0.00103      31.4 1.08e-109
+```
+
+
+```r
+model1 %&gt;% tidy() %&gt;% select(term, estimate)
+```
+
+```
+# A tibble: 2 x 2
+  term        estimate
+  &lt;chr&gt;          &lt;dbl&gt;
+1 (Intercept) 449.    
+2 sawbyLiked    0.0322
+```
+
+Fitted model is
+
+`$$y_i = 449 + 0.0322  x_i$$`
+
+---
+# Visualizing the linear model
+
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
+---
+# Visualizing the linear model (style the line)
+
+
+
+```r
+ggplot(data=train, aes(y=totalInteractions, x=sawbyLiked))+
+  geom_point(alpha=0.5)+
+  geom_smooth(method="lm", se=FALSE,
+              col="forestgreen", lty=2, lwd=2)
+```
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-17-1.png)&lt;!-- --&gt;
+---
+
+# Measuring the strength of the fit
+
+
+```r
+glance(model1)
+```
+
+```
+# A tibble: 1 x 11
+  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1     0.712         0.711  152.      985. 1.08e-109     2 -2576. 5159. 5171.
+# … with 2 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;
+```
+
+
+
+```r
+glance(model1)$r.squared # extract values
+```
+
+```
+[1] 0.7122038
+```
+
+Roughly 71% of the variability in total interactions can be explained by the number of people who saw the post
+because they have liked that page.
+---
+# Simple  linear regression
+
+
+```r
+summary(model1)
+```
+
+```
+
+Call:
+lm(formula = totalInteractions ~ sawbyLiked, data = train)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-599.84  -88.69    3.27   85.96  635.47 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 4.493e+02  1.008e+01   44.57   &lt;2e-16 ***
+sawbyLiked  3.218e-02  1.025e-03   31.38   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 152.1 on 398 degrees of freedom
+Multiple R-squared:  0.7122,	Adjusted R-squared:  0.7115 
+F-statistic: 984.9 on 1 and 398 DF,  p-value: &lt; 2.2e-16
+```
+---
+# Fitted values, Residuals, etc.
+
+
+```r
+model1_fitresid &lt;- augment(model1)
+model1_fitresid
+```
+
+```
+# A tibble: 400 x 9
+   totalInteractio… sawbyLiked .fitted .se.fit  .resid    .hat .sigma .cooksd
+              &lt;dbl&gt;      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+ 1              578       4418    591.    7.89  -13.4  0.00269   152. 1.05e-5
+ 2              727       6964    673.    7.62   53.7  0.00251   152. 1.57e-4
+ 3              659       2254    522.    8.74  137.   0.00330   152. 1.35e-3
+ 4              470       1917    511.    8.91  -40.9  0.00344   152. 1.25e-4
+ 5             1011      22816   1183.   18.4  -172.   0.0147    152. 9.71e-3
+ 6              644       5752    634.    7.64    9.66 0.00252   152. 5.12e-6
+ 7              647       3494    562.    8.19   85.3  0.00290   152. 4.59e-4
+ 8              412        650    470.    9.66  -58.2  0.00403   152. 2.97e-4
+ 9              420       2392    526.    8.67 -106.   0.00325   152. 7.98e-4
+10              805       8560    725.    7.91   80.3  0.00270   152. 3.79e-4
+# … with 390 more rows, and 1 more variable: .std.resid &lt;dbl&gt;
+```
+
+---
+# Residuals and Fitted Values
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-22-1.png)&lt;!-- --&gt;
+
+The residual is the difference between the observed and predicted response.
+
+The residual for the `\(i^{th}\)` observation is 
+
+`$$e_i = y_i - \hat{y}_i=y_i - (\hat{\beta_0}+\hat{\beta_1}x_i)$$`
+---
+# Sum of squares of Residuals
+
+`$$SSR=e_1^2+e_2^2+...+e_n^2$$`
+
+The least-squares regression approach chooses coefficients `\(\hat{\beta}_0\)` and `\(\hat{\beta}_12\)` to minimize `\(SSR\)`.
+
+**Intercept:** Mean response when the explanatory variable equals 0
+
+**Slope:** Increase in the mean response for every one unit increase in the explanatory variable.
+
+Fitted model is
+
+`$$y_i = 449 + 0.0322  x_i$$`
+
+Write the interpretation of the slope and intercept.
+---
+## Conditions for inference for regression
+
+1. **L**inearity of relationship between variables
+
+2. **I**ndependence of the residuals
+
+3. **N**ormality of the residuals
+
+4. **E**quality of variance: **Constant** variance
+---
+# Checking assumptions:  Linearity
+
+- The response variable and the explanatory
+variable must be Linear.
+
+    - Check this before fitting the regression line.
+
+
+---
+
+# Independence
+
+- Often, we can conclude that the independence assumption is sufficiently met
+based on a description of the data and how it was collected.
+
+- Two common violation of the independence
+
+    - Serial Effect
+    
+    - Cluster Effect
+
+---
+
+## Plot of residuals vs predictor variables (linearity and constant variance)
+
+.pull-left[
+
+Residuals vs X
+
+
+```r
+ggplot(model1_fitresid, aes(x=sawbyLiked, y=.resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+```
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-23-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+Residuals vs Fitted
+
+
+```r
+ggplot(model1_fitresid, aes(x=.fitted, y=.resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+```
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-24-1.png)&lt;!-- --&gt;
+]
+
+---
+
+# Normality of residuals
+
+.pull-left[
+
+```r
+ggplot(model1_fitresid, 
+       aes(x=.resid))+
+  geom_histogram(colour="white")+ggtitle("Distribution of Residuals")
+```
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-25-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+```r
+ggplot(model1_fitresid, 
+       aes(sample=.resid))+
+  stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")
+```
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-26-1.png)&lt;!-- --&gt;
+
+]
+
+
+```r
+shapiro.test(model1_fitresid$.resid)
+```
+
+```
+
+	Shapiro-Wilk normality test
+
+data:  model1_fitresid$.resid
+W = 0.97532, p-value = 2.571e-06
+```
+---
+## **L**inearity of relationship between variables? 
+
+Yes
+
+## **I**ndependence of residuals?
+
+Yes
+
+## **N**ormality of residuals?
+
+No
+
+## **E**quality of variance?
+
+Yes
+
+
+---
+## Influential outliers
+
+
+```r
+library(lindia)
+gg_cooksd(model1)
+```
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-28-1.png)&lt;!-- --&gt;
+
+---
+
+
+```r
+train_revised &lt;- train[-261,]
+model1_revised &lt;-  lm(totalInteractions ~ sawbyLiked, data=train_revised)
+summary(model1_revised)
+```
+
+```
+
+Call:
+lm(formula = totalInteractions ~ sawbyLiked, data = train_revised)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-600.01  -87.72    3.62   85.64  635.21 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 4.496e+02  1.010e+01   44.50   &lt;2e-16 ***
+sawbyLiked  3.216e-02  1.026e-03   31.33   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 152.2 on 397 degrees of freedom
+Multiple R-squared:  0.712,	Adjusted R-squared:  0.7113 
+F-statistic: 981.5 on 1 and 397 DF,  p-value: &lt; 2.2e-16
+```
+
+---
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-30-1.png)&lt;!-- --&gt;
+
+
+
+```
+
+	Shapiro-Wilk normality test
+
+data:  model1_revised_fitresid$.resid
+W = 0.97525, p-value = 2.559e-06
+```
+---
+
+
+```r
+cooksD &lt;- cooks.distance(model1)
+n &lt;- nrow(train)
+influential_obs &lt;- as.numeric(names(cooksD)[(cooksD &gt; (4/n))])
+train_revised2 &lt;- train[-influential_obs,]
+model1_revised2 &lt;-  lm(totalInteractions ~ sqrt(sawbyLiked), data=train_revised2)
+summary(model1_revised2)
+```
+
+```
+
+Call:
+lm(formula = totalInteractions ~ sqrt(sawbyLiked), data = train_revised2)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-379.43  -70.40    5.77   70.96  296.09 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)      242.8810    15.2617   15.91   &lt;2e-16 ***
+sqrt(sawbyLiked)   5.7356     0.2105   27.24   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 120.5 on 371 degrees of freedom
+Multiple R-squared:  0.6667,	Adjusted R-squared:  0.6658 
+F-statistic: 742.2 on 1 and 371 DF,  p-value: &lt; 2.2e-16
+```
+
+---
+
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-33-1.png)&lt;!-- --&gt;
+
+
+
+```
+
+	Shapiro-Wilk normality test
+
+data:  model1_revised_fitresid2$.resid
+W = 0.99115, p-value = 0.02481
+```
+
+---
+
+
+```r
+ggplot(data=train, aes(y=totalInteractions, x=engagedUsers))+
+  geom_point(alpha=0.5)
+```
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-35-1.png)&lt;!-- --&gt;
+---
+.pull-left[
+
+
+```r
+ggplot(data=train, aes(
+  y=totalInteractions, 
+  x=engagedUsers))+
+  geom_point(alpha=0.5)
+```
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-36-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+
+```r
+ggplot(data=train, aes(
+  y=totalInteractions, 
+  x=sqrt(engagedUsers))) +
+  geom_point(alpha=0.5)
+```
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-37-1.png)&lt;!-- --&gt;
+]
+---
+# Multiple linear regression model
+
+
+```r
+model2 &lt;- lm(totalInteractions ~ sawbyLiked + sqrt(engagedUsers), data=train)
+summary(model2)
+```
+
+```
+
+Call:
+lm(formula = totalInteractions ~ sawbyLiked + sqrt(engagedUsers), 
+    data = train)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1046.25   -74.55     1.59    70.74   549.81 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)        3.261e+02  1.886e+01  17.293  &lt; 2e-16 ***
+sawbyLiked         2.540e-02  1.315e-03  19.316  &lt; 2e-16 ***
+sqrt(engagedUsers) 5.976e+00  7.927e-01   7.539 3.24e-13 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 142.4 on 397 degrees of freedom
+Multiple R-squared:  0.7482,	Adjusted R-squared:  0.747 
+F-statistic:   590 on 2 and 397 DF,  p-value: &lt; 2.2e-16
+```
+---
+
+
+```r
+model2_fitresid &lt;- augment(model2)
+model2_fitresid
+```
+
+```
+# A tibble: 400 x 10
+   totalInteractio… sawbyLiked sqrt.engagedUse… .fitted .se.fit   .resid    .hat
+              &lt;dbl&gt;      &lt;dbl&gt;            &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;
+ 1              578       4418             27.1    600.    7.48  -22.4   0.00276
+ 2              727       6964             37.8    729.   10.3    -1.97  0.00520
+ 3              659       2254             25.0    533.    8.32  126.    0.00341
+ 4              470       1917             15.8    469.   10.0     0.852 0.00495
+ 5             1011      22816             40.8   1150.   17.8  -139.    0.0157 
+ 6              644       5752             16.8    573.   10.9    71.4   0.00583
+ 7              647       3494             29.0    588.    8.44   58.7   0.00351
+ 8              412        650             17.4    447.    9.56  -34.7   0.00451
+ 9              420       2392             24.9    536.    8.22 -116.    0.00333
+10              805       8560             29.5    720.    7.43   85.3   0.00272
+# … with 390 more rows, and 3 more variables: .sigma &lt;dbl&gt;, .cooksd &lt;dbl&gt;,
+#   .std.resid &lt;dbl&gt;
+```
+
+```r
+colnames(model2_fitresid)
+```
+
+```
+ [1] "totalInteractions"  "sawbyLiked"         "sqrt.engagedUsers."
+ [4] ".fitted"            ".se.fit"            ".resid"            
+ [7] ".hat"               ".sigma"             ".cooksd"           
+[10] ".std.resid"        
+```
+
+---
+# Model 2: Check assumptions
+
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-40-1.png)&lt;!-- --&gt;
+
+
+---
+## Model 3: Multiple linear regression with categorical variables
+.pull-left[
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
+
+]
+
+.pull-right[
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-42-1.png)&lt;!-- --&gt;
+
+]
+
+---
+## Model 3: Multiple linear regression with categorical
+
+
+```r
+model3 &lt;- lm(totalInteractions ~ sawbyLiked + sqrt(engagedUsers)+category, data=train)
+summary(model3)
+```
+
+```
+
+Call:
+lm(formula = totalInteractions ~ sawbyLiked + sqrt(engagedUsers) + 
+    category, data = train)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-864.34  -66.89   -0.58   67.00  454.00 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)        2.693e+02  1.570e+01  17.153  &lt; 2e-16 ***
+sawbyLiked         2.653e-02  1.088e-03  24.395  &lt; 2e-16 ***
+sqrt(engagedUsers) 4.698e+00  6.569e-01   7.152 4.19e-12 ***
+category2          7.603e+01  1.498e+01   5.075 5.98e-07 ***
+category3          1.991e+02  1.344e+01  14.815  &lt; 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 114.3 on 395 degrees of freedom
+Multiple R-squared:  0.8386,	Adjusted R-squared:  0.837 
+F-statistic: 513.2 on 4 and 395 DF,  p-value: &lt; 2.2e-16
+```
+---
+
+
+```r
+model3_fitresid &lt;- augment(model3)
+model3_fitresid
+```
+
+```
+# A tibble: 400 x 11
+   totalInteractio… sawbyLiked sqrt.engagedUse… category .fitted .se.fit
+              &lt;dbl&gt;      &lt;dbl&gt;            &lt;dbl&gt; &lt;fct&gt;      &lt;dbl&gt;   &lt;dbl&gt;
+ 1              578       4418             27.1 1           514.    9.41
+ 2              727       6964             37.8 3           831.   11.4 
+ 3              659       2254             25.0 2           523.   11.6 
+ 4              470       1917             15.8 2           470.   13.4 
+ 5             1011      22816             40.8 1          1066.   15.4 
+ 6              644       5752             16.8 3           700.   12.3 
+ 7              647       3494             29.0 3           697.   10.6 
+ 8              412        650             17.4 1           368.   10.1 
+ 9              420       2392             24.9 2           526.   11.6 
+10              805       8560             29.5 2           711.   12.1 
+# … with 390 more rows, and 5 more variables: .resid &lt;dbl&gt;, .hat &lt;dbl&gt;,
+#   .sigma &lt;dbl&gt;, .cooksd &lt;dbl&gt;, .std.resid &lt;dbl&gt;
+```
+
+```r
+colnames(model3_fitresid)
+```
+
+```
+ [1] "totalInteractions"  "sawbyLiked"         "sqrt.engagedUsers."
+ [4] "category"           ".fitted"            ".se.fit"           
+ [7] ".resid"             ".hat"               ".sigma"            
+[10] ".cooksd"            ".std.resid"        
+```
+
+---
+
+# Model 3: Check assumptions
+
+
+![](l13_regression_analysis_facebook_data_files/figure-html/unnamed-chunk-45-1.png)&lt;!-- --&gt;
+
+
+---
+
+
+---
+
+# Other models
+
+- Decision trees
+
+- Random forests
+
+- XGBoost
+
+&gt; Data Mining course!
+
+
+
+---
+class: center, middle
+
+
+Slides available at: hellor.netlify.app
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

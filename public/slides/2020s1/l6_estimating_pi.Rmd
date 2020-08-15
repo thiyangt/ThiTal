@@ -1,0 +1,89 @@
+---
+title: "STA 326 2.0 Programming and Data Analysis with R"
+subtitle: "Introduction to Simulations Using R"
+author: "Dr Thiyanga Talagala"
+date: "2020-03-30"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+    css: 
+      - default
+      - default-fonts
+      - duke-blue
+      - hygge-duke
+      - libs/cc-fonts.css
+      - libs/figure-captions.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+class: center, middle
+## What is Simulation?
+
+
+
+
+---
+
+## Monte Carlo estimation
+
+- 
+
+---
+
+## Estimating the value of Pi using Monte Carlo Estimation
+
+---
+exclude: true
+## Monte Carlo estimation
+
+Monte Carlo methods are a broad class of computational algorithms that rely on repeated random sampling to obtain numerical results. One of the basic examples of getting started with the Monte Carlo algorithm is the estimation of Pi.
+
+---
+
+## Estimation of Pi 
+
+
+---
+
+exclude: true
+
+The idea is to simulate random (x, y) points in a 2-D plane with domain as a square of side 1 unit. Imagine a circle inside the same domain with same diameter and inscribed into the square. We then calculate the ratio of number points that lied inside the circle and total number of generated points. Refer to the image below:
+
+The beauty of this algorithm is that we don’t need any graphics or simulation to display the generated points. We simply generate random (x, y) pairs and then check if  x^{2} + y^{2} \leqslant 1 . If yes, we increment the number of points that appears inside the circle. In randomized and simulation algorithms like Monte Carlo, the more the number of iterations, the more accurate the result is. Thus, the title is “Estimating the value of Pi” and not “Calculating the value of Pi”. Below is the algorithm for the method:
+
+---
+
+# The Algorithm
+
+1. Initialize circle_points, square_points and interval to 0.
+
+1. Generate random point x.
+
+1. Generate random point y.
+
+1. Calculate d = x*x + y*y.
+
+1. If d <= 1, increment circle_points.
+
+1. Increment square_points.
+
+1. Increment interval
+
+1. If increment < NO_OF_ITERATIONS, repeat from 2
+
+1. Calculate pi = 4*(circle_points/square_points)
+
+1. Terminate
+
+---
+
+---
+
+

@@ -1,0 +1,774 @@
+---
+title: "STA 326 2.0 Programming and Data Analysis with R"
+subtitle: "Lesson 2: Data Structures"
+author: "Dr Thiyanga Talagala"
+date: "2020-02-18"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+    css: 
+      - default
+      - default-fonts
+      - duke-blue
+      - hygge-duke
+      - libs/cc-fonts.css
+      - libs/figure-captions.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+
+background-image: url('dataStructures.png')
+background-position: center
+background-size: contain
+
+# Recap
+
+.footer-note[.tiny[.green[Image Credit: ][venus.ifca.unican.es](http://venus.ifca.unican.es/Rintro/dataStruct.html)]]
+
+---
+
+background-image: url('vectors.jpg')
+background-position: center
+background-size: contain
+
+# Recap
+
+.footer-note[.tiny[.green[Image Credit: ][venus.ifca.unican.es](http://venus.ifca.unican.es/Rintro/dataStruct.html)]]
+
+---
+# Recap
+
+```{r, echo=FALSE, comment=NA}
+c(1:5, 5:1)
+```
+
+--
+
+- Method 1
+
+```r
+c(1, 2, 3, 4, 5, 5, 4, 3, 2, 1)
+
+```
+--
+
+- Method 2
+
+```r
+c(1:5, 5:1)
+```
+
+--
+
+- Name elements 
+
+```{r}
+a <- c(1:5, 5:1)
+a
+names(a) <- c("a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5")
+a
+```
+
+---
+
+## Operations between vectors 
+
+```{r, comment=NA}
+a 
+a * c(10, 100)
+```
+
+- Types of vectors
+
+
+---
+## Vectors: Subsetting
+
+```{r, comment=NA}
+myvec <- 1:20; myvec
+```
+
+--
+
+```{r, comment=NA}
+myvec[1]
+```
+
+--
+```{r, comment=NA}
+myvec[5:10]
+```
+
+--
+```{r, comment=NA}
+myvec[-1]
+```
+--
+
+```{r, comment=NA}
+myvec[myvec > 3]
+```
+
+---
+
+## Vectors: Subsetting
+
+Extract elements present in vector `a`
+
+```{r, comment=NA}
+a
+myvec
+myvec %in% a
+myvec[myvec %in% a]
+```
+--
+
+```{r}
+b <- 100:105
+myvec[myvec %in% b]
+```
+
+---
+class: duke-orange, center, middle
+
+# Your turn
+---
+
+1. Generate a sequence using the code `seq(from=1, to=10, by=1)`.
+
+2. What other ways can you generate the same sequence? 
+
+3. Using the function `rep` , create the below sequence 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4
+
+
+```{r, echo=FALSE}
+library(countdown)
+countdown(minutes = 2L, seconds = 30)
+```
+
+
+---
+background-image: url('horse.png')
+background-position: center
+background-size: cover
+
+
+---
+
+class: duke-orange, center, middle
+
+# 2. Matrices
+---
+
+background-image: url('dataStructures.png')
+background-position: center
+background-size: contain
+
+---
+
+Matrix is a 2-dimentional and a homogeneous data structure
+
+**Syntax to create a matrix**
+
+```r
+matrix_name <- matrix(vector_of_elements, 
+                      nrow=number_of_rows,
+                      ncol=number_of_columns,
+                      byrow=logical_value, # If byrow=TRUE, then the matrix is filled in by row.
+                      dimnames=list(rnames, cnames)) # To assign row names and columns
+```
+
+**Example**
+
+
+```{r, comment=NA}
+matrix(1:6, nrow=2, ncol=3)
+matrix(1:6, nrow=2)
+matrix(1:6, ncol=3)
+
+```
+
+
+---
+
+# Matrix fill by rows/ columns
+
+```{r, comment=NA}
+values <- c(10, 20, 30, 40)
+matrix1 <- matrix(values, nrow=2) # Matrix filled by columns (default option)
+matrix1
+matrix2 <- matrix(values, nrow=2, byrow=TRUE) # Matrix filled by rows
+matrix2
+```
+
+- byrow=TRUE: matrix is filled in by row
+
+- byrow=FALSE: matrix is filled in by column
+
+- Default is by column
+
+---
+
+# Naming matrix rows and columns
+
+```{r, comment=NA}
+rnames <- c("R1", "R2")
+cnames <- c("C1", "C2")
+matrix_with_names <- matrix(values, nrow=2, dimnames=list(rnames, cnames))
+matrix_with_names
+```
+
+---
+# Matrix subscript
+
+`matraix_name[i, ]` gives the ith row of a matrix
+
+```{r, comment=NA}
+matrix1[1, ]
+```
+
+`matraix_name[, j]` gives the jth column of a matrix
+
+```{r, comment=NA}
+matrix1[, 2]
+```
+
+`matraix_name[i, j]` gives the ith row and jth column element
+
+```{r, comment=NA}
+matrix1[1, 2]
+```
+
+```{r, comment=NA}
+matrix1[1, c(1, 2)] 
+```
+
+---
+
+# `cbind` and `rbind`
+
+Matrices can be created by column-binding and row-binding with `cbind()` and `rbind()`
+
+```{r, comment=NA}
+x <- 1:3
+y <- c(10, 100, 1000)
+cbind(x, y) # binds matrices horizontally
+rbind(x, y) #binds matrices vertically
+```
+
+---
+# Matrix operations
+
+Transpose
+
+```{r, comment=NA}
+t(x)
+```
+
+Matrix multiplication
+
+```{r, comment=NA}
+y <- matrix(seq(10, 60, by=10), nrow=3)
+z <- x %*% y
+z
+```
+
+Find x in: m*x=n
+
+```r
+solve(m, n)
+```
+---
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+background-image: url('china.png')
+background-position: center
+background-size: contain
+
+---
+
+background-image: url('china.png')
+background-position: center
+background-size: contain
+
+.content-box-yellow[Calculate distance between Hubei and surrounding cities on map  using the [distance calculator](https://www.distancecalculator.net/) and enter it to a vector. Name the vector as distance_to_hubei.
+
+We want to look at the relationship between the number of confirmed cases and distance to other cities/regions/province from Hubei.
+]
+
+Help:
+$$\hat{\beta}=(X^TX)^{-1}X^TY$$
+
+
+---
+
+background-image: url('slr.png')
+background-position: center
+background-size: contain
+
+```{r, echo=FALSE}
+library(countdown)
+countdown(minutes = 5L, seconds = 00)
+```
+
+---
+
+```{r}
+count_corona <- c(29631, 1151, 1104, 1073, 879, 830, 771,
+           492, 468, 459, 405, 337, 331, 295, 261, 218, 213, 210, 141, 136, 119, 109, 107, 91, 85, 80, 58, 49, 49, 36, 18, 18, 10, 1)
+
+
+distance_to_hubei <- c(0, 929.05, 807, 7680, 426, 482, 564, 679, 571, 837, 896, 1044, 2338, 872, 827, 992, 609,
+                       923, 1215, 1354, 722, 725, 1424, 993, 1252, 1886, 1581, 896, 2709, 1005, 1560, 1132, 1005, 1133)
+#plot(distance_to_hubei, count_corona)
+
+count_corona <- count_corona[c(-1, -4)]
+distance_to_hubei <- distance_to_hubei[c(-1, -4)]
+#plot(distance_to_hubei, count_corona)
+```
+
+---
+```{r, comment=NA, echo=TRUE}
+count_corona <- c(29631, 1151, 1104, 1073, 879, 830, 771, 492, 468, 459, 405, 337, 331, 295, 261, 218, 213, 210, 141, 136, 119, 109, 107, 91, 85, 80, 58, 49, 49, 36, 18, 18, 10, 1)
+
+distance_to_hubei <- c(0, 929.05, 807, 7680, 426, 482, 564, 679, 571, 837, 896, 1044, 2338, 872, 827, 992, 609,
+923, 1215, 1354, 722, 725, 1424, 993, 1252, 1886, 1581, 896, 2709, 1005, 1560, 1132, 1005, 1133)
+plot(distance_to_hubei, count_corona)
+```
+
+---
+
+```{r}
+count_corona <- count_corona[c(-1, -4)]
+distance_to_hubei <- distance_to_hubei[c(-1, -4)]
+plot(distance_to_hubei, count_corona)
+```
+---
+
+class: duke-orange, center, middle
+
+# 3. Arrays
+
+---
+background-image: url('dataStructures.png')
+background-position: center
+background-size: contain
+
+
+---
+
+## Array
+
+- data structures for storing **higher** dimensional data.
+
+- a **homogeneous** data structure.
+
+- a special case of the array is the matrix.
+
+```r
+array(vector, dimensions, dimnames) #dimnames-as a list
+```
+
+```{r, comment=NA}
+a <-  array(c(10, 20, 30, 40, 50, 60), c(1, 2, 3))
+a
+```
+
+---
+
+background-image: url('array.png')
+background-position: center
+background-size: contain
+
+## Array
+---
+
+## Subsetting arrays
+
+```{r, comment=NA}
+a
+```
+
+```{r, comment=NA}
+a[, , 1] # Extract first entry
+```
+
+```{r, comment=NA}
+a[1, ,] # All rows in each entry
+```
+
+---
+class: duke-orange, center, middle
+
+# Your turn
+
+---
+
+1. Create the following matrix using the `array` function
+
+```{r, comment=NA}
+
+matrix(1:20, ncol=5)
+```
+
+```{r, echo=FALSE}
+library(countdown)
+countdown(minutes = 2L, seconds = 00)
+```
+
+---
+
+## Array with dimnames
+
+```{r, comment=NA}
+dim1 <- c("A1", "A2"); dim2 <- c("B1", "B2", "B3"); dim3 <- c("c1", "c2", "c3", "c4")
+z <- array(1:24, c(2, 3, 4), dimnames = list(dim1, dim2, dim3))
+z
+```
+
+---
+
+class: duke-orange, center, middle
+
+# 4. Data Frames
+
+---
+
+background-image: url('dataStructures.png')
+background-position: center
+background-size: contain
+
+---
+# Data frames
+
+- Rectangular arrangement of data with rows corresponding to observational units and columns corresponding to variables.
+
+- More general than a matrix in that different columns can contain different modes of data.
+
+- It’s similar to the datasets you’d typically see in SPSS and MINITAB.
+
+- Data frames are the most common data structure you’ll deal with in R.
+
+![Figure 1: Components of a dataframe.](tidy-1.png)
+
+.footer-note[.tiny[.green[Image Credit: ][Hadley Wickham and Garrett Grolemund](https://r4ds.had.co.nz/tidy-data.html)]]
+
+---
+# Create a data frame
+
+**Syntax**
+
+```r
+name_of_the_dataframe <- data.frame(
+                          var1_name=vector of values of the first variable,
+                          var2_names=vector of values of the second variable)
+
+```
+
+**Example**
+
+```{r, comment=NA}
+corona <- data.frame(ID=c("C001", "C002", "C003", "C004"),
+                     Location=c("Beijing", "Wuhan", "Shanghai", "Beijing"),
+                     Test_Results=c(FALSE, TRUE, FALSE, FALSE))
+corona
+```
+
+
+To check if it is a dataframe
+
+```{r, comment=NA}
+is.data.frame(corona)
+
+```
+
+---
+
+# Some useful functions with dataframes
+
+```{r, comment=NA}
+colnames(corona)
+```
+
+```{r, comment=NA}
+length(corona)
+dim(corona)
+nrow(corona)
+ncol(corona)
+```
+---
+
+# Some useful functions with dataframes (cont.)
+
+```{r, comment=NA}
+summary(corona)
+```
+
+```{r, comment=NA}
+str(corona)
+```
+
+
+---
+
+## Convert a matrix to a dataframe
+  
+```{r, comment=NA}
+mat <- matrix(1:16, ncol=4)
+mat
+mat_df <- as.data.frame(mat)
+mat_df
+```
+
+---
+
+## Subsetting data frames 
+
+**Select rows**
+
+```{r, comment=NA}
+head(mat_df) # default it shows 5 rows
+
+head(mat_df, 3) # To extract only the first three rows 
+```
+
+```{r, comment=NA}
+tail(mat_df)
+```
+
+---
+
+## Subsetting data frames 
+
+```{r, comment=NA}
+mat_df
+```
+
+**To select some specific rows**
+
+```{r, comment=NA}
+mat_df[4, ]
+index <- c(1, 3)
+mat_df[index, ]
+
+```
+
+---
+## Subsetting data frames
+```{r, comment=NA}
+mat_df
+```
+
+**Select columns**
+
+1. Select column(s) by variable names
+
+```{r, comment=NA}
+mat_df$V1 # Method 1
+
+mat_df[, "V1"] # Method 2
+```
+
+2. Select column(s) by index
+
+```{r, comment=NA}
+mat_df[, 2]
+```
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+---
+background-image: url('datafr.png')
+background-position: center
+background-size: contain
+
+```{r, echo=FALSE}
+library(countdown)
+countdown(minutes = 3L, seconds = 00)
+```
+
+---
+background-image: url('iris.jpg')
+background-position: center
+background-size: cover
+
+.content-box-yellow[
+Built-in dataframes
+]
+
+---
+# Built-in dataframes
+
+```{r}
+data(iris)
+```
+
+
+.full-width[.content-box-blue[Use `help` function to find more about the iris dataset.]]
+
+---
+background-image: url('helpiris.png')
+background-position: center
+background-size: contain
+
+---
+# `iris` dataset
+
+```{r, comment=NA}
+head(iris)
+```
+
+<img src="iris_flower_dataset.png" width="800">
+---
+# `iris` dataset
+
+```{r, comment=NA}
+head(iris)
+```
+
+<img src="images.jpeg" width="400"><img src="iris_petal_sepal.png" height="300">
+---
+# `iris` dataset
+
+```{r, comment=NA}
+head(iris)
+```
+
+<img src="images.jpeg" width="200"><img src="iris_petal_sepal.png" height="300"> <img src="Fisher.jpeg" height="300">
+
+- Introduced by Sir Ronald A. Fisher, 1936
+
+---
+
+Use	the	R	dataset	“iris”	to	answer	the	following	questions:
+
+1. How many rows and columns does iris have?
+
+2. Select the first 4 rows.
+
+3. Select the last 6 rows.
+
+4. Select rows 10 to 20, with all columns in the iris dataset.
+
+5. Select rows 10 to 20 with only the Species, Petal.Width and Petal.Length.
+
+6. Create a single vector (a new object) called ‘width’ that is the Sepal.Width column of iris.
+
+7.  What are the column names and data types of the different columns in iris?
+
+8. How many rows in the iris dataset have `Petal.Length` larger than 5 and `Sepal.Width` smaller than 3?
+
+
+```{r, echo=FALSE}
+library(countdown)
+countdown(minutes = 5L, seconds = 00)
+```
+---
+
+class: duke-orange, center, middle
+
+# 5. List
+
+---
+
+background-image: url('dataStructures.png')
+background-position: center
+background-size: contain
+
+
+---
+
+# List
+
+- Lists are heterogeneous
+
+**Syntax**
+
+```r
+list_name <- list(entry1, entry2, entry3, ...)
+
+```
+
+**Example**
+
+```{r, comment=NA}
+first_list <-list(1:3, matrix(1:6, nrow=2), iris)
+first_list
+```
+
+
+---
+
+## Structure of a list
+
+```{r, comment=NA}
+str(first_list)
+```
+
+--
+## Extract elements
+
+```{r, comment=NA}
+first_list[[1]]
+first_list[[3]]$Species
+```
+
+---
+
+# Name entries in a list
+
+```{r, comment=NA}
+first_list_with_names <-list(a=1:3, b=matrix(1:6, nrow=2), c=iris)
+first_list_with_names
+```
+---
+
+## Extract elements using names
+
+```{r, comment=NA}
+str(first_list_with_names)
+```
+
+
+```{r, comment=NA}
+first_list_with_names$a
+first_list_with_names$c$Species
+```
+
+---
+
+class: duke-orange, center, middle
+
+# Your turn
+---
+
+```{r, comment=NA}
+c("Jan","Feb","Mar")
+matrix(c(3,9,5,1,-2,8), nrow = 2)
+list("green",12.3)
+```
+
+1. Create a list containing the above vector, matrix and the list.
+
+2. Name the elements as `first`, `second` and `third`.
+
+---
+class: center, middle
+
+Slides available at: hellor.netlify.com
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)

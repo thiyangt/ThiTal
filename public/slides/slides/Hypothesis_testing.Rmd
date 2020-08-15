@@ -1,0 +1,474 @@
+---
+title: "Hypothesis Testing: Comparing Means"
+author: "Dr Thiyanga Talagala"
+output: pdf_document
+toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newpage
+
+# 1. One Sample - mean
+
+![](mean_hypothesis.PNG)
+
+\newpage
+
+## 1.2 Parametric
+
+### 1.2.1 Z-test ($\sigma$ known)
+
+As reported by the US National Centre for Health Statistics, the mean serum high density (HDL) cholesterol of female 20 - 29 years old is 53. Dr Jack Hall claims that the HDL Cholesterol level of female 20 - 29 years old is greater than 53. He uses the following data, randomly gathered from 22 individuals.
+
+```{r, comment=NA, message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse)
+```
+
+```{r, comment=NA, message=FALSE}
+HDL <- c(65, 47, 51, 54, 70, 55, 44, 48, 36, 53, 45, 34, 59, 45, 54, 50, 40, 60, 53, 53, 54, 55)
+```
+
+It is known from past research that the distribution of the HDL cholesterol is normally distributed and the corresponding population variance is 81. Test the claim that the HDL level is greater than 53 at $\alpha=0.01$ level of significance.
+
+```{r, comment=NA, fig.width=2, fig.height=3, , fig.cap="Distribution of HDL level", fig.pos="h"}
+HDL.df <- data.frame(HDL=HDL)
+ggplot(HDL.df, aes(y=HDL, x="")) + 
+  geom_boxplot(outlier.shape = NA, fill="forestgreen", alpha=0.5) +
+  geom_jitter(alpha=0.5) + labs(x = "")
+```
+
+Hypothesis
+
+H0:
+
+H1:
+
+$\mu$ - 
+
+\newpage
+
+```{r, comment=NA}
+z.test <- function(data, mu, var, alternative){
+   z = (mean(data) - mu) / (sqrt(var / length(data)))
+   if(alternative =="greater"){
+     1-pnorm(z)
+     
+   } else if (alternative =="less"){
+     
+     pnorm(z)
+     
+   } else {
+     
+     pnorm(-1*abs(z)) * 2
+     
+   }
+   
+} 
+z.test(HDL.df$HDL, 53, 81,"greater")
+
+```
+
+Decision:
+
+Conclusion: 
+
+### 1.2.2 t-test ($\sigma$ unknown)
+
+A chemist wants to measure the bias in a pH meter. She uses the meter to measure the pH in 14 neutral substances (pH=7) and obtains the data below.
+
+```{r, comment=NA}
+ph <- c( 7.01, 7.04, 6.97, 7.00, 6.99, 6.97, 7.04, 7.04, 7.01, 7.00, 6.99, 7.04, 7.07, 6.97)
+```
+
+Is there sufficient evidence to support the claim that the pH meter is not correctly calibrated at the $\alpha=0.05$ level of significance?
+
+Answer: 
+
+
+
+```{r, fig.width=3, fig.cap="Distribution of pH values", fig.pos="h", fig.height=4}
+ph.df <- data.frame(pH=ph)
+ggplot(ph.df, aes(y=pH, x="")) + 
+  geom_boxplot(outlier.shape = NA) + 
+  geom_jitter(alpha=0.5) + 
+  labs(x = "")
+```
+
+\newpage
+
+In this case, we have only sixteen observations, meaning that the Central Limit Theorem does not apply. With a small sample, we should only use the t-test if we can reasonably assume that the population is normally distributed. Hence, we must first verify that pH is normally distributed.
+
+```{r, comment=NA, fig.cap="Normal probability plot of pH values", fig.height=4}
+ggplot(ph.df, 
+       aes(sample=pH))+
+  stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")
+shapiro.test(ph.df$pH)
+```
+
+
+
+
+
+Hypothesis to be tested:
+
+H0: Data are normally distributed.
+
+H1: Data are not normally distributed.
+
+
+
+According to the Shapiro-Wilk normality test p-value, 0.19 > 0.05. Hence, we do not reject H0 at the 0.05 level of significance. We can conclude data are normally distributed.
+
+Now we can proceed with the t.test.
+
+Hypothesis to be tested.
+
+H0: $\mu=7$
+
+H1: $\mu \neq 7$
+
+$\mu$ - Population mean pH value (in neutral substances).
+
+`t.test` syntax
+
+```r
+t.test(x, y = NULL,
+       alternative = c("two.sided", "less", "greater"),
+       mu = 0, paired = FALSE, var.equal = FALSE,
+       conf.level = 0.95, ...)
+```
+
+```{r, comment=NA}
+t.test(ph.df$pH, alternative = "two.sided", mu=7)
+
+```
+
+Decision: p-value (0.258) > $\alpha = 0.05$. Hence, we do not reject Ho.
+
+Conclusion: We do not have enough evidence to conclude that the population mean pH level is different from 7 at the 0.05 level of significance.
+
+
+
+# 2. Two sample - mean
+
+## 2.1 Dependent (paired)
+
+### Approach 1
+
+A dietician hopes to reduce a person's cholesterol level by using a special diet supplemented with a combination of vitamin pills. Twenty (20) subjects were pre-tested and then placed on diet for two weeks. Their cholesterol levels were checked after the two week period. The results are shown below. Cholesterol levels are measured in milligrams per decilitre.
+
+i) Test the claim that the Cholesterol level before the special diet is greater than the Cholesterol level after the special diet at $\alpha=0.01$ level of significance.
+
+ii) Construct 99% confidence interval for the difference in mean cholesterol levels. Assume that the cholesterol levels are normally distributed both before and after.
+
+```{r, comment=NA}
+id <- 1:20
+before <- c(210, 235, 208, 190, 172, 244, 211, 235, 210, 
+            190, 175, 250, 200, 270, 222, 203, 209, 220, 250, 280)
+after <- c(190, 170, 210, 188, 173, 195, 228, 200, 210, 184,
+           196, 208, 211, 212, 205, 221, 240, 250, 230, 220)
+cholesterol_1 <- data.frame(id=id, before=before, after=after)
+head(cholesterol_1)
+
+```
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+cholesterol_2 <- pivot_longer(cholesterol_1, before:after, "type", "value")
+head(cholesterol_2)
+```
+
+```{r, comment=NA, message=FALSE, warning=FALSE, fig.cap="Distribution of cholesterol levels after and before the special diet"}
+ggplot(data= cholesterol_2, aes(x=type, y=value)) + 
+  geom_boxplot(outlier.shape = NA, aes(fill=type), alpha=0.5) + 
+  geom_jitter(aes(fill=type)) 
+```
+
+```{r, comment=NA, message=FALSE}
+cholesterol_2 %>%
+  group_by(type) %>%
+  summarize(mean = round(mean(value), 2),
+            sd = round(sd(value), 2))
+
+```
+
+### 2.1.1 Testing for Normality
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+ ggplot(data = cholesterol_2, aes(sample = value)) +
+  stat_qq() + 
+  stat_qq_line() +
+  facet_grid(. ~ type) 
+
+```
+
+
+### 2.1.2 Paired t-test
+
+
+Hypothesis:
+
+H0: $\mu_{before} \leq \mu_{after}$
+
+H1: $\mu_{before} > \mu_{after}$
+
+
+$\mu_{before}$ - population mean cholesterol level before the special diet 
+
+$\mu_{after}$ - population mean cholesterol level after the special diet 
+
+```{r, comment=NA, message=FALSE}
+t.test(before, after, data=cholesterol_1, "greater", paired=TRUE)
+```
+
+Decision: ____________________
+
+Conclusion: ___________________
+
+### Approach 2
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+approach2_tbl <- tibble(diff = cholesterol_1$before - cholesterol_1$after)
+```
+
+
+### 2.1.3 Testing for Normality
+
+```{r, comment=NA,  message=FALSE, warning=FALSE}
+ggplot(approach2_tbl, 
+       aes(sample=diff))+
+  stat_qq() + stat_qq_line()+
+  labs(x="Theoretical Quantiles", y="Sample Quantiles")
+shapiro.test(approach2_tbl$diff)
+
+```
+
+
+
+H0: $\mu_{d} \leq 0$
+
+H0: $\mu_{d} > 0$,
+
+where: $\mu_d = \mu_{before} - \mu_{after}$
+
+```{r, comment=NA, message=FALSE}
+
+t.test(x = approach2_tbl$diff,  alternative = c("greater"), mu=0)
+```
+
+Decision: _________
+
+Conclusion: ____________
+
+### 2.1.4 Confidence intervals
+
+To obtain confidence intervals 
+
+```{r, comment=NA, message=FALSE}
+t.test(before, after, data=cholesterol_1, "two.sided", paired=TRUE)
+```
+
+95% CI for $\mu_{before} - \mu_{after}$: ___________________________
+
+
+```{r, comment=NA, message=FALSE}
+t.test(before, after, data=cholesterol_1, "two.sided", paired=TRUE, conf.level = 0.99)
+```
+
+99% CI for $\mu_{before} - \mu_{after}$: ___________________________
+
+
+## 2.2 Independent
+
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+birthwt <- as_tibble(MASS::birthwt)
+head(birthwt)
+```
+
+```r
+?birthwt
+```
+
+smoke: smoking status during pregnancy.
+
+(0 - No, 1 - Yes)
+
+
+Is there a significant difference in birth weights between mothers who smoked during pregnancy and those who did not?
+
+
+**Data Wrangling**
+
+```{r, comment=NA}
+birthwt <- as_tibble(MASS::birthwt)
+
+# Rename variables
+birthwt <- birthwt %>%
+  rename(smoking.status = smoke,
+         birthwt.grams = bwt)
+
+# Change factor level names
+birthwt <- birthwt %>%
+  mutate_at(c("smoking.status"),
+            ~ recode_factor(.x, `0` = "no", `1` = "yes"))
+head(birthwt)
+```
+
+```{r, comment=NA, message=FALSE, fig.cap="Distribution of infants birth weight by mothers' smoking status"}
+ggplot(birthwt, aes(x=smoking.status, y=birthwt.grams))+
+  geom_boxplot(outlier.shape=NA, aes(fill=smoking.status), alpha=0.05) +
+  geom_jitter(aes(colour=smoking.status)) + 
+  scale_colour_manual(values = c("#d95f02", "#7570b3"))
+```
+
+```{r, comment=NA, message=FALSE}
+birthwt %>%
+  group_by(smoking.status) %>%
+  summarize(mean = round(mean(birthwt.grams), 1),
+            sd = round(sd(birthwt.grams), 1),
+            max. = round(max(birthwt.grams), 1),
+            min = round(min(birthwt.grams), 1),
+            missing= sum(is.na(birthwt.grams)),
+            count= sum(is.na(birthwt.grams)==FALSE))
+
+```
+
+
+```{r, comment=NA}
+se <- function(data){
+  sd(data)/sqrt(length(data))
+}
+
+```
+
+```{r, comment=NA, message=FALSE}
+birthwt %>%
+  group_by(smoking.status) %>%
+  summarize(mean = round(mean(birthwt.grams), 1),
+            sd = round(sd(birthwt.grams), 1),
+            max. = round(max(birthwt.grams), 1),
+            min = round(min(birthwt.grams), 1),
+            missing= sum(is.na(birthwt.grams)),
+            count= sum(is.na(birthwt.grams)==FALSE),
+            se = se(birthwt.grams))
+
+```
+
+```{r, comment=NA}
+birthwt %>%
+  group_by(smoking.status) %>%
+  summarize(num.obs = n(),
+            mean.birthwt = round(mean(birthwt.grams), 0),
+            sd.birthwt = round(sd(birthwt.grams), 0),
+            se.birthwt = round(sd(birthwt.grams) / sqrt(num.obs), 0))
+
+```
+
+
+### 2.2.1 Testing for Normality
+
+```{r, comment=NA, message=FALSE, fig.height=4}
+ ggplot(data = birthwt, aes(sample = birthwt.grams)) +
+  stat_qq() + 
+  stat_qq_line() +
+  facet_grid(. ~ smoking.status)
+```
+
+
+```{r, comment=NA, message=FALSE}
+mother_yes_birthwt <- birthwt %>% filter(smoking.status=="yes")
+dim(mother_yes_birthwt)
+shapiro.test(mother_yes_birthwt$birthwt.grams)
+```
+
+Hypothesis:
+
+H0: 
+
+H1: 
+
+Decision: ____________
+
+Conclusion: _____________
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+mother_no_birthwt <- birthwt %>% filter(smoking.status=="no")
+dim(mother_no_birthwt)
+shapiro.test(mother_no_birthwt$birthwt.grams)
+```
+
+Hypothesis:
+
+H0: 
+
+H1: 
+
+Decision: ____________
+
+Conclusion: _____________
+
+### 2.2.2 Equality of variance
+
+The equality of variances between two samples can be tested using the F test.
+
+Hypothesis:
+
+H0: ___________
+
+H1: ___________
+
+$\sigma_1^2$ - 
+
+$\sigma_2^2$ - 
+
+```{r, comment=NA, message=FALSE}
+var.test(birthwt.grams ~ smoking.status, data = birthwt, 
+         alternative = "two.sided")
+```
+
+
+### 2.2.3 How can we assess whether the mean difference is statistically significant?
+
+Hypothesis
+
+H0: _________
+
+H1: _________
+
+where,
+
+$\mu_1$ - 
+
+$\mu_2$ - 
+
+```{r, comment=NA, message=FALSE}
+t.test(birthwt.grams ~ smoking.status, data = birthwt, 
+       alternative = c("two.sided"),
+       var.equal = TRUE)
+```
+
+# 3. Other test functions
+
+- `fisher.test` Fisher's exact test for counts
+
+- `t.test(data)` 1 sample t test
+
+- `t.test(data1,data2)` 2 sample t test
+
+- `t.test(pre,post,paired=TRU
+E)` paired sample t test
+
+- `wilcox.test(data)` Wilcox test
+
+- `cor.test(data1,data2)` correlation test
+
+- `chisq.test(data)` Chi square test
+
+- `shapiro.test(data)` Shapiro test
+
+- `aov()` ANOVA
+
+- etc.

@@ -1,0 +1,671 @@
+---
+title: "STA 326 2.0 Programming and Data Analysis with R"
+subtitle: "Data Manipulation with dplyr"
+author: "Dr Thiyanga Talagala"
+date: "Online distance learning/teaching materials during the COVID-19 outbreak."
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+    css: 
+      - default
+      - default-fonts
+      - duke-blue
+      - hygge-duke
+      - libs/cc-fonts.css
+      - libs/figure-captions.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(emo)
+```
+
+
+# packages
+
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+library(tidyverse) # TO obtain dplyr
+library(magrittr)
+```
+
+<img src="dplyr.png" alt="knitrhex" width="250"/> <img src="magrittrlogo.png" alt="rmarkdown" width="250"/>
+
+---
+
+# Dataset
+
+```{r, comment=NA, message=FALSE}
+library(gapminder)
+str(gapminder)
+head(gapminder)
+```
+
+---
+# Dataset (cont.)
+
+```{r, comment=NA, message=FALSE}
+glimpse(gapminder)
+```
+
+---
+# Dataset (cont.)
+
+```{r, comment=NA, message=FALSE}
+tbl_df(gapminder)
+```
+
+---
+
+# Dataset (cont.)
+
+```{r, comment=NA, out.height="50%", eval=FALSE}
+library(skimr)
+skim(gapminder)
+```
+
+<img src="skim.png" alt="skim" width="600"/>
+
+---
+background-image: url(dplyr.png)
+background-size: 100px
+background-position: 98% 6%
+
+
+# `dplyr` verbs
+
+- `filter`
+
+- `select`
+
+- `mutate`
+
+- `summarise`
+
+- `arrange`
+
+- `group_by`
+
+- `rename`
+
+---
+background-image: url(dplyr.png)
+background-size: 70px
+background-position: 98% 6%
+
+
+# `filter`
+
+- Picks observations by their values.
+
+- Takes logical expressions and returns the rows for which all are `TRUE`.
+
+```{r, comment=NA, message=FALSE}
+filter(gapminder, lifeExp < 50)
+```
+
+---
+background-image: url(dplyr.png)
+background-size: 70px
+background-position: 98% 6%
+
+# `filter` (cont)
+
+
+```{r, comment=NA, message=FALSE}
+filter(gapminder, country == "Sri Lanka")
+# gapminder %>% filter(country == "Sri Lanka")
+```
+
+---
+background-image: url(dplyr.png)
+background-size: 70px
+background-position: 98% 6%
+
+# `filter` (cont)
+
+
+```{r, comment=NA, message=FALSE}
+filter(gapminder, country %in% c("Sri Lanka", "Australia"))
+```
+
+---
+background-image: url(dplyr.png)
+background-size: 70px
+background-position: 98% 6%
+
+# `filter` (cont)
+
+```r
+filter(gapminder, country %in% c("Sri Lanka", "Australia")) %>%
+* head()
+```
+
+```{r, comment=NA, message=FALSE, echo=FALSE}
+filter(gapminder, country %in% c("Sri Lanka", "Australia")) %>%
+ head()
+```
+
+```r
+filter(gapminder, country %in% c("Sri Lanka", "Australia")) %>%
+* tail()
+```
+
+```{r, comment=NA, message=FALSE, echo=FALSE}
+filter(gapminder, country %in% c("Sri Lanka", "Australia")) %>%
+ tail()
+```
+---
+background-image: url(dplyr.png)
+background-size: 70px
+background-position: 98% 6%
+
+# `select`
+
+- Picks variables by their names.
+
+
+```{r, comment=NA, message=FALSE}
+head(gapminder, 3)
+```
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+select(gapminder, year:gdpPercap)
+```
+
+---
+background-image: url(dplyr.png)
+background-size: 70px
+background-position: 98% 6%
+
+# `select` (cont.)
+
+
+```{r, comment=NA, message=FALSE}
+head(gapminder, 3)
+```
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+select(gapminder, year, gdpPercap)
+```
+
+---
+background-image: url(dplyr.png)
+background-size: 70px
+background-position: 98% 6%
+
+# `select` (cont.)
+
+
+```{r, comment=NA, message=FALSE}
+head(gapminder, 3)
+```
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+select(gapminder, -c(year, gdpPercap))
+```
+
+---
+
+background-image: url(dplyr.png)
+background-size: 70px
+background-position: 98% 6%
+
+# `select` (cont.)
+
+
+```{r, comment=NA, message=FALSE}
+head(gapminder, 3)
+```
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+select(gapminder, -(year:gdpPercap))
+```
+
+
+---
+background-image: url(dplyr.png)
+background-size: 70px
+background-position: 98% 6%
+
+# `mutate`
+
+- Creates new variables with functions of existing variables
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+gapminder %>%
+mutate(gdp = pop * gdpPercap)
+```
+
+---
+background-image: url(dplyr.png)
+background-size: 70px
+background-position: 98% 6%
+
+# `summarise`(British) or `summarize` (US)
+
+- Collapse many values down to a single summary
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+gapminder %>%
+  summarise(
+    lifeExp_mean=mean(lifeExp),
+    pop_mean=mean(pop),
+    gdpPercap_mean=mean(gdpPercap))
+```
+
+
+---
+
+background-image: url(dplyr.png)
+background-size: 70px
+background-position: 98% 6%
+
+# `arrange`
+
+- Reorder the rows
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+arrange(gapminder, desc(lifeExp))
+```
+
+
+---
+
+background-image: url(dplyr.png)
+background-size: 70px
+background-position: 98% 6%
+
+# `group_by`
+
+- Takes an existing tibble and converts it into a grouped tibble where operations are performed "by group". ungroup() removes grouping.
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+Japan_SL <- filter(gapminder, country %in% c("Japan", "Sri Lanka"))
+Japan_SL %>% head()
+```
+
+
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+Japan_SL_grouped <- Japan_SL %>% group_by(country)
+Japan_SL_grouped
+```
+
+---
+background-image: url(dplyr.png)
+background-size: 70px
+background-position: 98% 6%
+
+# `group_by` (cont.)
+
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+Japan_SL %>% summarise(mean_lifeExp=mean(lifeExp))
+```
+
+
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+Japan_SL_grouped %>% summarise(mean_lifeExp=mean(lifeExp))
+```
+
+
+---
+background-image: url(dplyr.png)
+background-size: 70px
+background-position: 98% 6%
+
+# `rename`
+
+- Rename variables
+
+```{r, comment=NA, message=FALSE}
+head(gapminder, 3)
+```
+
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+rename(gapminder,
+       `life expectancy`=lifeExp,
+       population=pop) # new_name = old_name
+```
+
+---
+background-image: url(dplyr.png)
+background-size: 70px
+background-position: 98% 6%
+
+# Combine multiple operations
+
+
+```{r, comment=NA, message=FALSE}
+gapminder %>%
+filter(country == 'China') %>% head(2)
+```
+
+
+```{r, comment=NA, message=FALSE}
+gapminder %>%
+filter(country == 'China') %>% summarise(lifemax=max(lifeExp))
+```
+
+```r
+gapminder %>%
+filter(country == 'China') %>%
+*filter(lifeExp == max(lifeExp))
+```
+
+```{r, comment=NA, message=FALSE, echo=FALSE}
+gapminder %>%
+filter(country == 'China') %>%
+filter(lifeExp == max(lifeExp))
+```
+
+---
+background-image: url(dplyr.png)
+background-size: 70px
+background-position: 98% 6%
+
+# Combine multiple operations
+
+```{r, comment=NA}
+gapminder %>%
+filter(continent == 'Asia') %>%
+group_by(country) %>%
+filter(lifeExp == max(lifeExp)) %>%
+arrange(desc(year))
+```
+
+---
+
+class: duke-orange, center, middle
+
+# Combine Data Sets
+
+
+---
+
+# Combine Data Sets
+
+.pull-left[
+## Mutating joins
+
+- `left_join`
+
+- `right_join`
+
+- `inner_join`
+
+- `full_join`
+
+## Set operations
+
+- `intersect`
+
+- `union`
+
+]
+
+.pull-right[
+
+## Binding
+
+- `bind_rows`
+
+- `bind_cols`
+
+]
+
+---
+# `left_join`
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+first <- tibble(x1=c("A", "B", "C"), x2=c(1, 2, 3))
+second <- tibble(x1=c("A", "B", "D"), x3=c("red", "yellow" , "green"))
+```
+
+.pull-left[
+
+```{r, comment=NA, message=FALSE}
+first
+second
+
+```
+
+]
+
+.pull-right[
+
+```{r, comment=NA, message=FALSE}
+left_join(first, second, by="x1")
+```
+]
+
+---
+# `right_join`
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+first <- tibble(x1=c("A", "B", "C"), x2=c(1, 2, 3))
+second <- tibble(x1=c("A", "B", "D"), x3=c("red", "yellow" , "green"))
+```
+
+.pull-left[
+
+```{r, comment=NA, message=FALSE}
+first
+second
+
+```
+
+]
+
+.pull-right[
+
+```{r, comment=NA, message=FALSE}
+right_join(first, second, by="x1")
+```
+]
+---
+# `inner_join`
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+first <- tibble(x1=c("A", "B", "C"), x2=c(1, 2, 3))
+second <- tibble(x1=c("A", "B", "D"), x3=c("red", "yellow" , "green"))
+```
+
+.pull-left[
+
+```{r, comment=NA, message=FALSE}
+first
+second
+
+```
+
+]
+
+.pull-right[
+
+```{r, comment=NA, message=FALSE}
+inner_join(first, second, by="x1")
+```
+]
+---
+
+# `full_join`
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+first <- tibble(x1=c("A", "B", "C"), x2=c(1, 2, 3))
+second <- tibble(x1=c("A", "B", "D"), x3=c("red", "yellow" , "green"))
+```
+
+.pull-left[
+
+```{r, comment=NA, message=FALSE}
+first
+second
+
+```
+
+]
+
+.pull-right[
+
+```{r, comment=NA, message=FALSE}
+full_join(first, second, by="x1")
+```
+]
+---
+# Set operations
+
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+first <- tibble(x1=c("A", "B", "C"), x2=c(1, 2, 3))
+second <- tibble(x1=c("D", "B", "C"), x2=c(10, 2, 3))
+```
+
+.pull-left[
+
+Two compatible data sets. Column names are the same.
+
+```{r, comment=NA, message=FALSE}
+first
+second
+
+```
+
+]
+
+.pull-right[
+**intersect**
+```{r, comment=NA, message=FALSE}
+intersect(first, second)
+```
+
+**union**
+```{r, comment=NA, message=FALSE}
+union(first, second)
+```
+]
+
+---
+
+# Set operations (cont.)
+
+```r
+first <- tibble(x1=c("A", "B", "C"), x2=c(1, 2, 3))
+*second <- tibble(x1=c("D", "B", "C"), x2=c(10, 20, 30))
+```
+
+```{r, comment=NA, message=FALSE, warning=FALSE, echo=FALSE}
+first <- tibble(x1=c("A", "B", "C"), x2=c(1, 2, 3))
+second <- tibble(x1=c("D", "B", "C"), x2=c(10, 20, 30))
+```
+
+.pull-left[
+
+Two compatible data sets. Column names are the same.
+
+```{r, comment=NA, message=FALSE}
+first
+second
+
+```
+
+]
+
+.pull-right[
+**intersect**
+```{r, comment=NA, message=FALSE}
+intersect(first, second)
+```
+
+**union**
+```{r, comment=NA, message=FALSE}
+union(first, second)
+```
+]
+
+---
+
+# Binding
+
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+first <- tibble(x1=c("A", "B", "C"), x2=c(1, 2, 3))
+second <- tibble(x1=c("D", "B", "C"), x2=c(10, 20, 30))
+```
+
+.pull-left[
+
+
+```{r, comment=NA, message=FALSE}
+first
+second
+
+```
+
+]
+
+.pull-right[
+**bind_rows**
+```{r, comment=NA, message=FALSE}
+bind_rows(first, second)
+```
+
+
+]
+
+---
+# Binding (cont.)
+
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+first <- tibble(x1=c("A", "B", "C"), x2=c(1, 2, 3))
+second <- tibble(x1=c("D", "B", "C"), x2=c(10, 20, 30))
+```
+
+.pull-left[
+
+
+```{r, comment=NA, message=FALSE}
+first
+second
+
+```
+
+]
+
+.pull-right[
+**bind_cols**
+```{r, comment=NA, message=FALSE}
+bind_cols(first, second)
+```
+]
+
+---
+
+background-image: url('dplyrcs1.png')
+background-position: center
+background-size: contain
+
+---
+
+background-image: url('dplyrcs2.png')
+background-position: center
+background-size: contain
+---
+
+class: center, middle
+
+
+Slides available at: hellor.netlify.app
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+
+Acknowledgement: R Studio Education Team
+

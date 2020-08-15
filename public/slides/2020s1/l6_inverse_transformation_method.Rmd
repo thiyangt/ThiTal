@@ -1,0 +1,26 @@
+---
+title: "STA 326 2.0 Programming and Data Analysis with R"
+subtitle: "Inverse Transformation Method"
+author: "Dr Thiyanga Talagala"
+date: "2020-03-30"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+    css: 
+      - default
+      - default-fonts
+      - duke-blue
+      - hygge-duke
+      - libs/cc-fonts.css
+      - libs/figure-captions.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+c

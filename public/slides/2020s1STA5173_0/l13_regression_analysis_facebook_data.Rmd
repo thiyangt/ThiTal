@@ -1,0 +1,611 @@
+---
+title: "STA 326 2.0 Programming and Data Analysis with R"
+subtitle: "Regression Analysis"
+author: "Dr Thiyanga Talagala"
+date: "Online distance learning/teaching materials during the COVID-19 outbreak."
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+    css: 
+      - default
+      - default-fonts
+      - duke-blue
+      - hygge-duke
+      - libs/cc-fonts.css
+      - libs/figure-captions.css
+      - custom.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE, message=FALSE, comment=NA, warnings=FALSE)
+library(emo)
+```
+
+background-image: url('box.jpeg')
+background-position: center
+background-size: contain
+
+
+---
+# Problem
+
+![](facebook.jpg)
+---
+# Data
+
+```{r, comment=NA}
+facebookdata_marketing <- readRDS("~/Lecturer/1_TEACHING/2020_s1/Rprogramming/static/slides/facebookdata_marketing.rds")
+head(facebookdata_marketing)
+dim(facebookdata_marketing)
+```
+---
+## Variable description
+
+- **month:** Month the post was published (1, 2, 3, ..., 12)
+
+- **category:** Type of the post (1 - Link, 2 - Video, 3 - Picture)
+
+- **hour:** Hour the post was published (0, 1, ...24)
+
+- **paid:** If the company paid to Facebook for advertising (0 - No, 1 - Yes)
+
+- **totalReach:** Number of people who saw the page post
+(unique users).
+
+- **engagedUsers:** Number of people who clicked anywhere
+in the post (unique users).
+
+- **postConsumers:** Number of people who sent a direct message to the owner
+of the post.
+
+- **postConsumption:** Number of clicks anywhere in the post.
+
+- **sawbyLiked:** Number of people who saw the page post
+because they have liked that page.
+
+- **clickbyLiked:** Number of people who have liked the Page
+and clicked anywhere in the post.
+
+- **totalInteractions:** The sum of “likes,” “comments,” and “shares”
+of the post
+
+
+---
+# Packages
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(magrittr)
+library(tidymodels)
+library(broom)
+library(GGally)
+```
+
+---
+
+
+```{r, echo=FALSE, comment=NA, warning=FALSE, message=FALSE}
+summary(facebookdata_marketing)
+
+```
+
+---
+# Training test and Test set
+
+```{r, comment=NA}
+smp_size <- 400
+
+## set the seed to make your partition reproducible
+set.seed(123)
+train_ind <- sample(seq_len(nrow(facebookdata_marketing)), size = smp_size)
+train <- facebookdata_marketing[train_ind, ]
+test <- facebookdata_marketing[-train_ind, ]
+```
+
+---
+
+# Qualitative variables
+
+```{r, comment=NA}
+table(train$month)/500*100
+```
+
+```{r, comment=NA}
+table(train$category)/500*100
+```
+
+```{r, comment=NA}
+table(train$paid)/500*100
+```
+---
+# Distribution of total interactions
+
+```{r, echo=FALSE, fig.height=7}
+ggplot(train, aes(x="", y=totalInteractions))+
+  geom_boxplot(outlier.shape = NA)+
+  geom_jitter(alpha=0.5)
+
+```
+
+---
+# Distribution of total interactions by category
+
+```{r, comment=NA, message=FALSE, warning=FALSE, echo=FALSE}
+ggplot(train, aes(x=category, y=totalInteractions, fill=category))+
+  geom_boxplot()
+```
+---
+# Distribution of total interactions by paid
+
+```{r, comment=NA, message=FALSE, warning=FALSE, echo=FALSE}
+ggplot(train, aes(x=paid, y=totalInteractions, fill=paid))+
+  geom_boxplot()
+```
+---
+```{r, comment=NA}
+facebookdata_marketing_cont <-  train %>%
+  select(-c(month, category, paid))
+head(facebookdata_marketing_cont)
+```
+
+---
+```{r, comment=NA, message=FALSE, warning=FALSE, fig.height=8}
+GGally::ggpairs(facebookdata_marketing_cont)
+```
+---
+
+
+Relationship between total interactions and the number of people who saw the post
+because they have liked that page
+
+
+```{r, comment=NA, message=FALSE, message=FALSE, echo=FALSE}
+ggplot(data=train, aes(y=totalInteractions, x=sawbyLiked))+
+  geom_point(alpha=0.5)
+```
+
+---
+
+# Simple linear regression 
+
+To fit 
+
+$$y_i = \beta_0 + \beta_1x_i + \epsilon_i, \text{where } \epsilon_i \sim NID(0, \sigma^2)$$
+
+
+```{r, comment=NA, message=FALSE}
+model1 <- lm(totalInteractions ~ sawbyLiked, data=train)
+tidy(model1)
+```
+
+```{r, comment=NA, message=FALSE}
+model1 %>% tidy() %>% select(term, estimate)
+```
+
+Fitted model is
+
+$$y_i = 449 + 0.0322  x_i$$
+
+---
+# Visualizing the linear model
+
+
+```{r, comment=NA, message=FALSE, message=FALSE, echo=FALSE}
+ggplot(data=train, aes(y=totalInteractions, x=sawbyLiked))+
+  geom_point(alpha=0.5)+
+  geom_smooth(method="lm", se=FALSE)
+```
+---
+# Visualizing the linear model (style the line)
+
+
+```{r, comment=NA, message=FALSE, message=FALSE, fig.height=5}
+ggplot(data=train, aes(y=totalInteractions, x=sawbyLiked))+
+  geom_point(alpha=0.5)+
+  geom_smooth(method="lm", se=FALSE,
+              col="forestgreen", lty=2, lwd=2)
+```
+---
+
+# Measuring the strength of the fit
+
+```{r, comment=NA, message=FALSE}
+glance(model1)
+```
+
+
+```{r, comment=NA, message=FALSE}
+glance(model1)$r.squared # extract values
+```
+
+Roughly 71% of the variability in total interactions can be explained by the number of people who saw the post
+because they have liked that page.
+---
+# Simple  linear regression
+
+```{r, comment=NA, message=FALSE}
+summary(model1)
+```
+---
+# Fitted values, Residuals, etc.
+
+```{r, comment=NA, message=FALSE}
+model1_fitresid <- augment(model1)
+model1_fitresid
+```
+
+---
+# Residuals and Fitted Values
+
+```{r, comment=NA, echo=FALSE, fig.height=5, warning=FALSE, message=FALSE}
+ggplot(model1_fitresid, aes(x = sawbyLiked, y = totalInteractions)) +
+geom_smooth(method = "lm", se = FALSE, color = "blue") +
+geom_segment(aes(xend = sawbyLiked, yend = .fitted), col="red", lwd=2) +
+geom_point() +
+geom_point(aes(y = .fitted), shape = 1)
+```
+
+The residual is the difference between the observed and predicted response.
+
+The residual for the $i^{th}$ observation is 
+
+$$e_i = y_i - \hat{y}_i=y_i - (\hat{\beta_0}+\hat{\beta_1}x_i)$$
+---
+# Sum of squares of Residuals
+
+$$SSR=e_1^2+e_2^2+...+e_n^2$$
+
+The least-squares regression approach chooses coefficients $\hat{\beta}_0$ and $\hat{\beta}_12$ to minimize $SSR$.
+
+**Intercept:** Mean response when the explanatory variable equals 0
+
+**Slope:** Increase in the mean response for every one unit increase in the explanatory variable.
+
+Fitted model is
+
+$$y_i = 449 + 0.0322  x_i$$
+
+Write the interpretation of the slope and intercept.
+---
+## Conditions for inference for regression
+
+1. **L**inearity of relationship between variables
+
+2. **I**ndependence of the residuals
+
+3. **N**ormality of the residuals
+
+4. **E**quality of variance: **Constant** variance
+---
+# Checking assumptions:  Linearity
+
+- The response variable and the explanatory
+variable must be Linear.
+
+    - Check this before fitting the regression line.
+
+
+---
+
+# Independence
+
+- Often, we can conclude that the independence assumption is sufficiently met
+based on a description of the data and how it was collected.
+
+- Two common violation of the independence
+
+    - Serial Effect
+    
+    - Cluster Effect
+
+---
+
+## Plot of residuals vs predictor variables (linearity and constant variance)
+
+.pull-left[
+
+Residuals vs X
+
+```{r comment=NA}
+ggplot(model1_fitresid, aes(x=sawbyLiked, y=.resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+```
+]
+
+.pull-right[
+
+Residuals vs Fitted
+
+```{r, comment=NA}
+ggplot(model1_fitresid, aes(x=.fitted, y=.resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+```
+]
+
+---
+
+# Normality of residuals
+
+.pull-left[
+```{r, comment=NA, message=FALSE, fig.height=5}
+ggplot(model1_fitresid, 
+       aes(x=.resid))+
+  geom_histogram(colour="white")+ggtitle("Distribution of Residuals")
+```
+]
+
+.pull-right[
+```{r, comment=NA, message=FALSE, fig.height=5}
+ggplot(model1_fitresid, 
+       aes(sample=.resid))+
+  stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")
+```
+
+]
+
+```{r, comment=NA, message=FALSE, fig.height=4}
+shapiro.test(model1_fitresid$.resid)
+```
+---
+## **L**inearity of relationship between variables? 
+
+Yes
+
+## **I**ndependence of residuals?
+
+Yes
+
+## **N**ormality of residuals?
+
+No
+
+## **E**quality of variance?
+
+Yes
+
+
+---
+## Influential outliers
+
+```{r, comment=NA, message=FALSE}
+library(lindia)
+gg_cooksd(model1)
+```
+
+---
+
+```{r, comment=NA}
+train_revised <- train[-261,]
+model1_revised <-  lm(totalInteractions ~ sawbyLiked, data=train_revised)
+summary(model1_revised)
+```
+
+---
+
+```{r, comment=NA, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=6}
+model1_revised_fitresid <- augment(model1_revised)
+p1 <- ggplot(model1_revised_fitresid, aes(x=sawbyLiked, y=.resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+p3 <- ggplot(model1_revised_fitresid, 
+       aes(x=.resid))+
+  geom_histogram(colour="white")+ggtitle("Distribution of Residuals")
+
+p4 <- ggplot(model1_revised_fitresid, 
+       aes(sample=.resid))+
+  stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")
+
+library(patchwork)
+(p1|p3|p4)
+```
+
+
+```{r, comment=NA, message=FALSE, fig.height=4, echo=FALSE}
+shapiro.test(model1_revised_fitresid$.resid)
+```
+---
+
+```{r, comment=NA}
+cooksD <- cooks.distance(model1)
+n <- nrow(train)
+influential_obs <- as.numeric(names(cooksD)[(cooksD > (4/n))])
+train_revised2 <- train[-influential_obs,]
+model1_revised2 <-  lm(totalInteractions ~ sqrt(sawbyLiked), data=train_revised2)
+summary(model1_revised2)
+```
+
+---
+
+
+```{r, comment=NA, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=4}
+model1_revised_fitresid2 <- augment(model1_revised2)
+p0 <- ggplot(data=train_revised2, aes(y=totalInteractions, x=sqrt(sawbyLiked)))+
+  geom_point(alpha=0.5)+
+  geom_smooth(method="lm", se=FALSE,
+              col="red")+ggtitle("A")
+p1 <- ggplot(model1_revised_fitresid2, aes(x=sqrt.sawbyLiked., y=.resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)+ggtitle("B")
+
+p3 <- ggplot(model1_revised_fitresid2, 
+       aes(x=.resid))+
+  geom_histogram(colour="white")+ggtitle("C")
+
+p4 <- ggplot(model1_revised_fitresid2, 
+       aes(sample=.resid))+
+  stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")+ggtitle("D")
+
+library(patchwork)
+(p0|p1|p3|p4)
+```
+
+
+```{r, comment=NA, message=FALSE, fig.height=4, echo=FALSE}
+shapiro.test(model1_revised_fitresid2$.resid)
+```
+
+---
+
+```{r, comment=NA}
+ggplot(data=train, aes(y=totalInteractions, x=engagedUsers))+
+  geom_point(alpha=0.5)
+```
+---
+.pull-left[
+
+```{r, comment=NA}
+ggplot(data=train, aes(
+  y=totalInteractions, 
+  x=engagedUsers))+
+  geom_point(alpha=0.5)
+```
+]
+
+.pull-right[
+
+```{r, comment=NA}
+ggplot(data=train, aes(
+  y=totalInteractions, 
+  x=sqrt(engagedUsers))) +
+  geom_point(alpha=0.5)
+```
+]
+---
+# Multiple linear regression model
+
+```{r, comment=NA, message=FALSE}
+model2 <- lm(totalInteractions ~ sawbyLiked + sqrt(engagedUsers), data=train)
+summary(model2)
+```
+---
+
+```{r, comment=NA, message=FALSE}
+model2_fitresid <- augment(model2)
+model2_fitresid
+colnames(model2_fitresid)
+```
+
+---
+# Model 2: Check assumptions
+
+
+```{r, comment=NA, echo=FALSE, message=FALSE, warning=FALSE}
+model2_fitresid <- augment(model2)
+p1 <- ggplot(model2_fitresid, aes(x=sawbyLiked, y=.resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+p2 <- ggplot(model2_fitresid, aes(x=sqrt.engagedUsers., y=.resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+p3 <- ggplot(model2_fitresid, 
+       aes(x=.resid))+
+  geom_histogram(colour="white")+ggtitle("Distribution of Residuals")
+
+p4 <- ggplot(model2_fitresid, 
+       aes(sample=.resid))+
+  stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")
+
+library(patchwork)
+(p1|p2)/(p3|p4)
+```
+
+
+---
+## Model 3: Multiple linear regression with categorical variables
+.pull-left[
+```{r, comment=NA, echo=FALSE}
+ggplot(data=train, aes(y=totalInteractions, x=sawbyLiked, col=category))+
+  geom_point()
+```
+
+]
+
+.pull-right[
+```{r, comment=NA, echo=FALSE}
+ggplot(data=train, aes(y=totalInteractions, x=sqrt(engagedUsers), col=category))+
+  geom_point()
+```
+
+]
+
+---
+## Model 3: Multiple linear regression with categorical
+
+```{r, comment=NA, message=FALSE}
+model3 <- lm(totalInteractions ~ sawbyLiked + sqrt(engagedUsers)+category, data=train)
+summary(model3)
+```
+---
+
+```{r, comment=NA, message=FALSE}
+model3_fitresid <- augment(model3)
+model3_fitresid
+colnames(model3_fitresid)
+```
+
+---
+
+# Model 3: Check assumptions
+
+
+```{r, comment=NA, echo=FALSE, message=FALSE, warning=FALSE}
+model3_fitresid <- augment(model3)
+p1 <- ggplot(model3_fitresid, aes(x=sawbyLiked, y=.resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+p2 <- ggplot(model3_fitresid, aes(x=sqrt.engagedUsers., y=.resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+p3 <- ggplot(model3_fitresid, 
+       aes(x=.resid))+
+  geom_histogram(colour="white")+ggtitle("Distribution of Residuals")
+
+p4 <- ggplot(model3_fitresid, 
+       aes(sample=.resid))+
+  stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")
+
+library(patchwork)
+(p1|p2)/(p3|p4)
+```
+
+
+---
+
+
+---
+
+# Other models
+
+- Decision trees
+
+- Random forests
+
+- XGBoost
+
+> Data Mining course!
+
+
+
+---
+class: center, middle
+
+
+Slides available at: hellor.netlify.app
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+
+
+

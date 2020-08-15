@@ -1,0 +1,50 @@
+---
+title: "Regression Analysis"
+author: "Thiyanga Talagala"
+date: "15/06/2020"
+output: html_document
+---
+
+# Packages
+
+```{r, comment=NA, message=FALSE}
+library(tidyverse)
+library(magrittr)
+
+```
+
+# Data
+
+```{r, comment=NA, message=FALSE}
+facebookdata_marketing <- readRDS("~/Lecturer/1_TEACHING/2020_s1/Rprogramming/static/slides/facebookdata_marketing.rds")
+
+```
+
+```{r}
+mod1 <- lm(totalInteractions ~ month+category+ hour+
+            totalReach + sqrt(engagedUsers) + postConsumers + clickbyLiked + sawbyLiked, data=facebookdata_marketing)
+summary(mod1)
+hist(mod1$residuals)
+shapiro.test(mod1$residuals)
+plot(facebookdata_marketing$totalInteractions, facebookdata_marketing$sawbyLiked)
+plot(x=mod1$residuals, y=mod1$fitted.values)
+
+```
+
+```{r}
+smp_size <- 400
+
+## set the seed to make your partition reproducible
+set.seed(123)
+train_ind <- sample(seq_len(nrow(facebookdata_marketing)), size = smp_size)
+train <- facebookdata_marketing[train_ind, ]
+test <- facebookdata_marketing[-train_ind, ]
+
+mod2 <- lm(totalInteractions ~ month+category+ hour+
+            totalReach + sqrt(engagedUsers) + postConsumers + clickbyLiked + sawbyLiked, data=train)
+summary(mod2)
+hist(mod2$residuals)
+shapiro.test(mod2$residuals)
+plot(facebookdata_marketing$totalInteractions, facebookdata_marketing$sawbyLiked)
+plot(x=mod2$residuals, y=mod2$fitted.values)
+```
