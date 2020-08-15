@@ -20,17 +20,17 @@ MSc in Applied Statistics, Department of Statistics, University of Sri Jayewarde
 
 ## Course information
 
-Course outline: here
+Course outline: [here](/STA_517_3_0_Programming_and_Data_Analysis_with_R_MSc_2020.pdf)
 
 Year and Semester: 2020 - Semester 1
 
 Commencement date: 15 August 2020
 
-Course meeting time: Saturday, 2.00pm - 4.00pm
+Course meeting time: Sunday, 10.15am - 1.15pm
 
-Location: Online/ Stat Lab 2, Faculty of Applied Sciences, USJ
+Location: Online/ Stat Lab 1, Faculty of Applied Sciences, USJ
 
-*Please enrol in LMS for up-to-date information and announcements.*
+*Please enrol in Google classroom and LMS for up-to-date information and announcements.*
 
 ## Contact Information
 
@@ -38,6 +38,6 @@ Location: Online/ Stat Lab 2, Faculty of Applied Sciences, USJ
 
 Email: ttalagala@sjp.ac.lk
 
-Office hours: Saturday 4:00pm – 5:00pm. Email me for other times.
+Office hours: Sunday 1.15pm – 2:15pm. Email me for other times.
 
 E-mail is the best way to get in contact with me—I will respond to all course-related e-mails within 24 hours.
