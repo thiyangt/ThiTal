@@ -1,8 +1,8 @@
 ---
-title: "STA 326 2.0 Programming and Data Analysis with R"
+title: "STA 517 3.0 Programming and Statistical Computing with R"
 subtitle: "Lesson 1: Introduction to R"
 author: "Dr Thiyanga Talagala"
-date: "2020-02-11"
+date: "2020-08-15"
 output:
   xaringan::moon_reader:
     chakra: libs/remark-latest.min.js
@@ -31,7 +31,8 @@ options(htmltools.dir.version = FALSE)
 
 - Parent language: S
 
-- The latest R version 3.6.2 has been released on 2019-12-12
+- The latest R version 4.0.2 has been released on 2020-06-22
+
 
 ![description of the image](RobertandRoss.jpg)
 
@@ -47,6 +48,12 @@ options(htmltools.dir.version = FALSE)
 
 - **Community:** Large global community friendly and helpful, lots of resources
 
+---
+background-image: url('rladiesclb.png')
+background-position: center
+background-size: cover
+
+# https://rladiescolombo.netlify.app/
 ---
 
 background-image: url('renv.png')

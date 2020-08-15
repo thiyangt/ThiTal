@@ -14,6 +14,10 @@ weight: 1
 
 Here is your road map for the course!
 
+> Week 0
+
+[Help - R and R Studio Download and Install](https://edify-thiyanga.netlify.app/installation/)
+
 > Week 1-4: lectures (online)
 
 ### Week 1
@@ -22,7 +26,7 @@ Here is your road map for the course!
 
    
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚[Slides](/Slides/2020s1STA5173_0/l1.html)  	| 📒 [Reading-2.1, 2.2, 5.1](https://rstudio-education.github.io/hopr/basics.html)  	| 📊 [Data Sets](https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200210-sitrep-21-ncov.pdf?sfvrsn=947679ef_2) 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
