@@ -709,7 +709,7 @@ first * second
 
 # Other vector operations
 
-- Please see the [cheatsheet](/pdf/baser.pdf) and course materials STA Data Analysis II
+- Please see the [cheatsheet](https://hellor.netlify.app/cheatsheets/baser.pdf).
 
 ---
 
@@ -808,7 +808,7 @@ background-size: cover
 ---
 class: center, middle
 
-Slides available at: hellor.netlify.com
+Slides available at: https://thiyanga.netlify.app/courses/rmsc2020/contentr/
 
 All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
 
