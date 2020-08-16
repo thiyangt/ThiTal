@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
   <head>
     <title>STA 326 2.0 Programming and Data Analysis with R</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr Thiyanga Talagala" />
-    <meta name="date" content="2020-02-11" />
+    <meta name="date" content="2020-08-16" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <link href="libs/remark-css/duke-blue.css" rel="stylesheet" />
     <link href="libs/remark-css/hygge-duke.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/plotly-binding/plotly.js"></script>
+    <script src="libs/typedarray/typedarray.min.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <link href="libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+    <script src="libs/crosstalk/js/crosstalk.min.js"></script>
+    <link href="libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+    <script src="libs/plotly-main/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="libs/cc-fonts.css" type="text/css" />
     <link rel="stylesheet" href="libs/figure-captions.css" type="text/css" />
   </head>
@@ -19,7 +27,7 @@ class: center, middle, inverse, title-slide
 # STA 326 2.0 Programming and Data Analysis with R
 ## Introduction
 ### Dr Thiyanga Talagala
-### 2020-02-11
+### 2020-08-16
 
 ---
 
@@ -29,7 +37,10 @@ background-image: url('me.png')
 background-position: center
 background-size: cover
 ---
-
+background-image: url('courseweb_msc.png')
+background-position: center
+background-size: cover
+---
 background-image: url('courseweb.png')
 background-position: center
 background-size: cover
@@ -45,6 +56,7 @@ background-image: url('RLadies.jpg')
 background-position: center
 background-size: cover
 
+# Toulouse, France, June-2019
 ---
 
 background-image: url('rl1.png')
@@ -61,10 +73,99 @@ background-size: cover
 ## @RLadiesColombo
 ---
 
+background-image: url('classoverview.png')
+background-position: center
+background-size: cover
+
+# Class overview - precourse survey
+---
+
+# Class overview - precourse survey
+
+
+```r
+software &lt;- c("R", "Python", "MINITAB", "SPSS", "C++", "STATA", "SAS")
+count &lt;- c(4, 0, 10, 12, 1, 1, 1)
+df &lt;- data.frame(software, count)
+df
+```
+
+```
+  software count
+1        R     4
+2   Python     0
+3  MINITAB    10
+4     SPSS    12
+5      C++     1
+6    STATA     1
+7      SAS     1
+```
+
+---
+# Class overview - precourse survey
+
+
+```r
+library(ggplot2)
+p1 &lt;- ggplot(data=df, aes(x=software, y=count)) +  geom_bar(stat="identity")
+p1
+```
+
+![](l0_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+---
+
+# Class overview - precourse survey
+
+
+```r
+df$software &lt;- factor(df$software, levels=c("SPSS", "MINITAB", "R", "SAS", "STATA", "C++", ""))
+p1 &lt;- ggplot(data=df, aes(x=software, y=count)) +  geom_bar(stat="identity")
+p1
+```
+
+![](l0_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+
+---
+# Class overview - precourse survey
+
+
+```r
+df$software &lt;- factor(df$software, levels=c("SPSS", "MINITAB", 
+                                            "R", "SAS", "STATA", "C++", ""))
+p1 &lt;- ggplot(data=df, aes(x=software, y=count)) +  geom_bar(stat="identity", fill="forestgreen")
+p1
+```
+
+![](l0_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+
+---
+# Class overview - precourse survey
+
+
+```r
+df$software &lt;- factor(df$software, levels=c("SPSS", "MINITAB", "R", "SAS", "STATA", "C++", ""))
+p1 &lt;- p1 + coord_flip()
+p1
+```
+
+![](l0_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+
+---
+# Class overview - precourse survey
+
+
+```r
+library(plotly)
+ggplotly(p1)
+```
+
+<div id="htmlwidget-c2bfa28262779c9c4fb8" style="width:504px;height:360px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c2bfa28262779c9c4fb8">{"x":{"data":[{"orientation":"h","width":[0.9,0.9,0.9,0.9,0.9,0.9,0.9],"base":[0,0,0,0,0,0,0],"x":[4,0,10,12,1,1,1],"y":[3,7,2,1,6,5,4],"text":["software: R<br />count:  4","software: NA<br />count:  0","software: MINITAB<br />count: 10","software: SPSS<br />count: 12","software: C++<br />count:  1","software: STATA<br />count:  1","software: SAS<br />count:  1"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(34,139,34,1)","line":{"width":1.88976377952756,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":40.1826484018265,"l":66.4840182648402},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.6,12.6],"tickmode":"array","ticktext":["0.0","2.5","5.0","7.5","10.0","12.5"],"tickvals":[0,2.5,5,7.5,10,12.5],"categoryorder":"array","categoryarray":["0.0","2.5","5.0","7.5","10.0","12.5"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"count","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,7.6],"tickmode":"array","ticktext":["SPSS","MINITAB","R","SAS","STATA","C++"],"tickvals":[1,2,3,4,5,6],"categoryorder":"array","categoryarray":["SPSS","MINITAB","R","SAS","STATA","C++"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"software","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"1671561ae750":{"x":{},"y":{},"type":"bar"}},"cur_data":"1671561ae750","visdat":{"1671561ae750":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+
+---
 background-image: url('horse.png')
 background-position: center
 background-size: cover
----
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -112,6 +213,32 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -129,17 +256,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
 
 <script>
 slideshow._releaseMath = function(el) {

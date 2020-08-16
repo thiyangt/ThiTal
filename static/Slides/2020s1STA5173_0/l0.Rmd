@@ -26,7 +26,10 @@ background-image: url('me.png')
 background-position: center
 background-size: cover
 ---
-
+background-image: url('courseweb_msc.png')
+background-position: center
+background-size: cover
+---
 background-image: url('courseweb.png')
 background-position: center
 background-size: cover
@@ -42,6 +45,7 @@ background-image: url('RLadies.jpg')
 background-position: center
 background-size: cover
 
+# Toulouse, France, June-2019
 ---
 
 background-image: url('rl1.png')
@@ -58,7 +62,73 @@ background-size: cover
 ## @RLadiesColombo
 ---
 
+background-image: url('classoverview.png')
+background-position: center
+background-size: cover
+
+# Class overview - precourse survey
+---
+
+# Class overview - precourse survey
+
+```{r, comment=NA, message=FALSE}
+software <- c("R", "Python", "MINITAB", "SPSS", "C++", "STATA", "SAS")
+count <- c(4, 0, 10, 12, 1, 1, 1)
+df <- data.frame(software, count)
+df
+
+```
+
+---
+# Class overview - precourse survey
+
+```{r, comment=NA, fig.height=5}
+library(ggplot2)
+p1 <- ggplot(data=df, aes(x=software, y=count)) +  geom_bar(stat="identity")
+p1
+
+```
+---
+
+# Class overview - precourse survey
+
+```{r, comment=NA, fig.height=5}
+df$software <- factor(df$software, levels=c("SPSS", "MINITAB", "R", "SAS", "STATA", "C++", ""))
+p1 <- ggplot(data=df, aes(x=software, y=count)) +  geom_bar(stat="identity")
+p1
+
+```
+
+---
+# Class overview - precourse survey
+
+```{r, comment=NA, fig.height=5}
+df$software <- factor(df$software, levels=c("SPSS", "MINITAB", 
+                                            "R", "SAS", "STATA", "C++", ""))
+p1 <- ggplot(data=df, aes(x=software, y=count)) +  geom_bar(stat="identity", fill="forestgreen")
+p1
+
+
+```
+
+---
+# Class overview - precourse survey
+
+```{r, comment=NA, fig.height=5}
+df$software <- factor(df$software, levels=c("SPSS", "MINITAB", "R", "SAS", "STATA", "C++", ""))
+p1 <- p1 + coord_flip()
+p1
+```
+
+---
+# Class overview - precourse survey
+
+```{r, fig.height=5, comment=NA, warning=FALSE, message=FALSE}
+library(plotly)
+ggplotly(p1)
+```
+
+---
 background-image: url('horse.png')
 background-position: center
 background-size: cover
----

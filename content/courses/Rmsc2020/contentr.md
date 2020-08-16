@@ -16,6 +16,8 @@ Here is your road map for the course!
 
 **Week 0**  [Help - R and R Studio Download and Install](https://edify-thiyanga.netlify.app/installation/)
 
+[📗](/Slides/2020s1STA5173_0/l0.html)
+
 > Week 1-4: lectures (online)
 
 ### Week 1
