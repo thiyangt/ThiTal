@@ -100,7 +100,7 @@ p1
 # Class overview - precourse survey
 
 ```{r, comment=NA, fig.height=5}
-df$software <- factor(df$software, levels=c("SPSS", "MINITAB", "R", "SAS", "STATA", "C++", ""))
+df$software <- factor(df$software, levels=c("SPSS", "MINITAB", "R", "SAS", "STATA", "C++", "Python"))
 p1 <- ggplot(data=df, aes(x=software, y=count)) +  geom_bar(stat="identity")
 p1
 
