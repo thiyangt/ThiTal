@@ -1,6 +1,6 @@
 ---
-title: "STA 326 2.0 Programming and Data Analysis with R"
-subtitle: "Introduction"
+title: "STA 517 3.0 Programming and Statistical Computing with R"
+subtitle: "Welcome!"
 author: "Dr Thiyanga Talagala"
 date: "`r Sys.Date()`"
 output:
@@ -60,6 +60,13 @@ background-position: center
 background-size: cover
 
 ## @RLadiesColombo
+
+---
+background-image: url('scs.png')
+background-position: center
+background-size: cover
+
+# https://scs-fas-sjp.netlify.app/
 ---
 
 background-image: url('classoverview.png')
