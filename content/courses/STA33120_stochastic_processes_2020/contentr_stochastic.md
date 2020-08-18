@@ -23,7 +23,7 @@ Here is your road map for the course!
 
 - [Markov Chains](/Slides/2020s2StochasticProcesses/2_stochastic_processes_2020.pdf)
 
- 📚 [Individual Assignment - week 3]
+ 📚 [Individual Assignment - week 3](https://github.com/thiyangt/STA33120_assignments/blob/master/2020/sta331_20_Assignment_1.md)
 
 ### Week 4
 
