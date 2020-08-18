@@ -20,7 +20,7 @@ BSc (Hons) Statistics, Department of Statistics, University of Sri Jayewardenepu
 
 ## Course information
 
-Course outline: here
+Course outline: [here](/Slides/2020s2StochasticProcesses/sta_331_20_stochastic_processes.pdf)
 
 Year and Semester: 2020 - Semester 2
 
