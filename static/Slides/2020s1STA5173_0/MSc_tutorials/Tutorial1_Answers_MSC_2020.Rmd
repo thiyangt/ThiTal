@@ -1,0 +1,252 @@
+---
+title: "STA 326 2.0 Programming and Data Analysis with R \\newline Tutorial 1"
+toc: TRUE
+output: 
+  pdf_document:
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Creating vectors
+
+1. Create the following vectors:
+
+    (a) 1, 2, 3, ..., 100
+
+    (b) 2, 4, 6, 8, ..., 100
+
+    (c) 
+
+```{r, comment=NA, echo=FALSE}
+seq(1, 100, length=200)
+
+```
+
+2. Generate a sequence using the code `seq(from=1, to=10, by=1)`. What other ways can you generate the same sequence?
+
+
+3. Using the function  `rep()` , create the below sequence `1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4`
+
+4. Create a vector that shows the square root the integers from 1 to 100.
+
+5. Observe the differences in running the following codes.
+
+```{r, comment=NA}
+vec1 <- 1.8:20.8
+vec1
+```
+
+```{r, comment=NA}
+vec2 <- 1.8:30
+vec2
+
+```
+
+
+# Object classes and type of objects
+
+6. Use `typeof` to identify the storage mode of the following objects and `class` to identify object classes.
+
+```{r, comment=NA}
+a <- c("MON", "TUES", "WED", "THUR", "FRI")
+typeof(a)
+class(a)
+```
+
+```{r, comment=NA}
+b <- c(1, 2, 3, 4, 5)
+typeof(b)
+class(b)
+```
+
+```{r, comment=NA}
+c <- c(1L, 2L, 3L, 4L, 5L)
+typeof(c)
+class(c)
+```
+
+```{r, comment=NA}
+d <- c(TRUE, FALSE, TRUE, TRUE)
+typeof(d)
+class(d)
+```
+
+```{r, comment=NA}
+e <- c(2+3i, 1+2i, 5+3i)
+typeof(e)
+class(e)
+```
+
+```{r, comment=NA}
+f <- c("MON", TRUE, 1, 1L)
+typeof(f)
+class(f)
+```
+
+7. Explore comment on the output of follwong vector functions. 
+
+```{r, comment=NA}
+a1 <- vector("numeric", 8)
+a2 <- vector("complex", 8)
+a3 <- vector("logical", 8)
+a4 <- vector("character", 8)
+
+b1 <- numeric(8)
+b2 <- complex(8)
+b3 <- logical(8)
+b4 <- character(8)
+
+```
+
+Ans: Each of the values in the result is zero, FALSE, or an empty string, or whatever the equivalent of "empty".
+
+
+# Subsetting vectors
+
+8. Consider the vector 
+
+```{r, comment=NA}
+set.seed(32020)
+st_normal <- rnorm(100)
+st_normal
+```
+
+Drop the elements corresponds to the positions multiply of 10 (10, 20, 30, ...)
+
+```{r, comment=NA}
+st_normal[-seq(1, 100, by=10)]
+```
+
+9. The following vector `exponential_dis` generated 100 random numbers from exponential distribution with mean 10.
+
+```{r}
+set.seed(32020)
+exponential_dis <- rexp(100, 10)
+```
+
+Select subset of `exponential_dis` to identify the following.
+
+
+
+11. Create a vector with elements from 1 to 100 incrementing by 0.4
+
+```{r, comment=NA}
+seq(1, 100, by=0.4)
+```
+
+
+
+12. Consider the vector `x`. 
+
+```{r}
+x <- 1:10
+
+```
+
+What does each of the following codes do?
+
+```{r, comment=NA, eval=FALSE}
+x[3]
+
+x[c(2, 4)]
+
+x[-1]
+
+x[c(2, -4)]
+
+x[c(2.4, 3.54)]
+
+```
+
+```{r, comment=NA, eval=FALSE}
+x[3] # print the 3rd element
+
+x[c(2, 4)] # print the 2nd and 4th elemen
+
+x[-1] # print all except 1st
+
+x[c(2, -4)] # Cannot mix positive and negative
+
+x[c(2.4, 3.54)] # real numbers are truncated to integers
+
+```
+
+
+# Filtering vectors based on conditions
+
+13. Consider the vector 
+
+```{r, comment=NA}
+x <- c(80, 39, NA, 51, 51, 11, NA, NA, NA, 100, 80, 70)
+```
+
+Write an R code to extract non-missing values in `x`
+
+```{r, comment=NA}
+# Answer 4
+x[!is.na(x)]
+
+```
+
+Write an R code to extract missing values and odd-numbers in `x`
+
+```{r, comment=NA}
+x[x %% 2 == 1]
+```
+
+Write an R code to extract odd numbers on `x`
+
+```{r, comment=NA}
+y <- x[x %% 2 == 1]
+y[!is.na(y)]
+```
+
+Which values of `x` are NOT in the set `1:50`
+
+```{r, comment=NA}
+x %in% 1:50
+```
+
+# Modify a vector
+
+14. Consider the following vector `age` which includes the age of 10 individuals
+
+```{r}
+age <- c(20, 30, 40, 41, 32, 32, 25,  NA, NA, -4, -6, 9999, 10000)
+
+```
+
+    i. Convert all negative values to `NA`.
+     
+    ii. Convert all values of `age` that are NOT from 10 to 100 and calculate the mean of valid responses.
+    
+15. Consider the following vector of 100 random numbers generated from the standard normal distribution.
+
+    i. Change the first five values in the vector to 1.
+    
+    ii. Change the last five values in the vector to 0.
+    
+    iii. Assign all values grater than 0.5 to 1 and all values less than 0.5 to 0.
+    
+    iv. Recode the 0 values to "MALE" and others to "FEMALE"
+    
+    
+
+# Vector operations
+
+
+
+
+
+
+# Combination of all concepts
+
+15. Create new data vectors for each column and write R codes to answer the following questions.
+
+    i. What is the name of the 10th movie in the list?
+    
+    ii. 
