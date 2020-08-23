@@ -34,7 +34,7 @@ Here is your road map for the course!
 
 - Data structures (Matrices, Arrays, List, Data frames, Factors)
 
-| 📚[Slides]((/Slides/2020s1STA5173_0/l1.html) )  	| 📒 [Reading-5.3, 5.8](https://rstudio-education.github.io/hopr/r-objects.html#matrices)  	| 📊 [Cheat sheet](https://hellor.netlify.app/cheatsheets/baser.pdf) 	| 📎 [Problems](/Slides/2020s1STA5173_0/MSc_tutorials/Tutorial1_Questions_MSC_2020.pdf) 	| 🔖Answers |
+| 📚[Slides](/Slides/2020s1STA5173_0/l2.html) 	| 📒 [Reading-5.3, 5.8](https://rstudio-education.github.io/hopr/r-objects.html#matrices)  	| 📊 [Cheat sheet](https://hellor.netlify.app/cheatsheets/baser.pdf) 	| 📎 [Problems](/Slides/2020s1STA5173_0/MSc_tutorials/Tutorial1_Questions_MSC_2020.pdf) 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 ### Week 3
