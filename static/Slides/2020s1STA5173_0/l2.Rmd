@@ -2,7 +2,7 @@
 title: "STA 517 3.0 Programming and Statistical Computing with R"
 subtitle: "Lesson 2: Data Structures"
 author: "Dr Thiyanga Talagala"
-date: "2020-08-22"
+date: "2020-08-23"
 output:
   xaringan::moon_reader:
     chakra: libs/remark-latest.min.js
