@@ -32,7 +32,7 @@ Here is your road map for the course!
 - Basics of R programming 
     
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression1.html#1)  	| 📒 [Reading-Ch1 Introduction to Linear Regression Analysis]  	| 📊 Data Sets - `anscombe`	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 

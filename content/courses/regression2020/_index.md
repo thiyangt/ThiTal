@@ -20,7 +20,7 @@ Postgraduate Certificate Program in Applied Statistics, Department of Statistics
 
 ## Course information
 
-Course outline: here
+Course outline: [here](/CO/2020s1/STA5062.0/STA_506_2.0_LinearRegressionAnalysis_2020S1.pdf)
 
 Year and Semester: 2020 - Semester 1
 
