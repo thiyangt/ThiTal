@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>STA 326 2.0 Programming and Data Analysis with R</title>
+    <title>STA 517 3.0 Programming and Statistical Computing with R</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr Thiyanga Talagala" />
-    <meta name="date" content="2020-02-25" />
+    <meta name="date" content="2020-08-30" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <link href="libs/remark-css/duke-blue.css" rel="stylesheet" />
     <link href="libs/remark-css/hygge-duke.css" rel="stylesheet" />
-    <link rel="stylesheet" href="libs\cc-fonts.css" type="text/css" />
-    <link rel="stylesheet" href="libs\figure-captions.css" type="text/css" />
+    <link rel="stylesheet" href="libs/cc-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="libs/figure-captions.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# STA 326 2.0 Programming and Data Analysis with R
+# STA 517 3.0 Programming and Statistical Computing with R
 ## Lesson 3: Functions in R
 ### Dr Thiyanga Talagala
-### 2020-02-25
+### 2020-08-30
 
 ---
 
@@ -374,7 +374,7 @@ mean(na.rm = FALSE, mydata)
 
 
 ```
-[1] 4761.94
+[1] 4761.843
 ```
 
 ⚠️ Even though it works, do not change the order of the arguments too much.
@@ -391,7 +391,7 @@ mean(mydata, trim=0)
 ```
 
 ```
-[1] 4761.94
+[1] 4761.843
 ```
 
 ```r
@@ -399,7 +399,7 @@ mean(mydata) # Default value for trim is 0
 ```
 
 ```
-[1] 4761.94
+[1] 4761.843
 ```
 
 
@@ -408,7 +408,7 @@ mean(mydata, trim=0.1)
 ```
 
 ```
-[1] 0.1449313
+[1] -0.03532758
 ```
 
 
@@ -417,7 +417,7 @@ mean(mydata, tr=0.1) # Partial Matching
 ```
 
 ```
-[1] 0.1449313
+[1] -0.03532758
 ```
 ---
 
@@ -955,7 +955,47 @@ Resourses: You can follow the DataCamp tutorial [here](https://www.datacamp.com/
 
 Use only 1 A4 sheet, you may use both sides.
 
-Assignment due date: 3 March 2020
+Assignment due date: 6 March 2020
+
+---
+
+## Example: lapply()
+
+`lapply(x, FUN)`
+
+input: vector or list
+
+output: list of the same length as input
+
+task: apply FUN function to all elements in the input
+
+
+```r
+lapply(list(c(1, 2, 3), c(10, 20, 30)), mean)
+```
+
+```
+[[1]]
+[1] 2
+
+[[2]]
+[1] 20
+```
+
+```r
+lapply(c(10, 20, 30), mean)
+```
+
+```
+[[1]]
+[1] 10
+
+[[2]]
+[1] 20
+
+[[3]]
+[1] 30
+```
 
 ---
 
@@ -1011,7 +1051,7 @@ data(mozzie)
 plot(mozzie$Colombo, mozzie$Gampaha)
 ```
 
-![](l3_files/figure-html/unnamed-chunk-35-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-36-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
@@ -1020,7 +1060,7 @@ plot(mozzie$Colombo, mozzie$Gampaha)
 qplot(Colombo, Gampaha, data=mozzie)
 ```
 
-![](l3_files/figure-html/unnamed-chunk-36-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-37-1.png)&lt;!-- --&gt;
 ]
 ---
 ## Data Visualization with `qplot`
@@ -1031,7 +1071,7 @@ qplot(Colombo, Gampaha, data=mozzie)
 qplot(Colombo, Gampaha, data=mozzie)
 ```
 
-![](l3_files/figure-html/unnamed-chunk-37-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-38-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
@@ -1040,7 +1080,7 @@ qplot(Colombo, Gampaha, data=mozzie)
 qplot(Colombo, Gampaha, data=mozzie, colour=Year)
 ```
 
-![](l3_files/figure-html/unnamed-chunk-38-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-39-1.png)&lt;!-- --&gt;
 ]
 ---
 ## Data Visualization with `qplot`
@@ -1051,7 +1091,7 @@ qplot(Colombo, Gampaha, data=mozzie, colour=Year)
 qplot(Colombo, Gampaha, data=mozzie)
 ```
 
-![](l3_files/figure-html/unnamed-chunk-39-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-40-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
@@ -1060,7 +1100,7 @@ qplot(Colombo, Gampaha, data=mozzie)
 qplot(Colombo, Gampaha, data=mozzie, size=Year)
 ```
 
-![](l3_files/figure-html/unnamed-chunk-40-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
 ]
 
 ---
@@ -1073,7 +1113,7 @@ qplot(Colombo, Gampaha, data=mozzie, size=Year)
 qplot(Colombo, Gampaha, data=mozzie)
 ```
 
-![](l3_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-42-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
@@ -1082,7 +1122,7 @@ qplot(Colombo, Gampaha, data=mozzie)
 qplot(Colombo, Gampaha, data=mozzie, geom="point")
 ```
 
-![](l3_files/figure-html/unnamed-chunk-42-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-43-1.png)&lt;!-- --&gt;
 ]
 
 
@@ -1095,7 +1135,7 @@ qplot(Colombo, Gampaha, data=mozzie, geom="point")
 qplot(ID, Gampaha, data=mozzie)
 ```
 
-![](l3_files/figure-html/unnamed-chunk-43-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-44-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
@@ -1104,7 +1144,7 @@ qplot(ID, Gampaha, data=mozzie)
 qplot(ID, Gampaha, data=mozzie, geom="line")
 ```
 
-![](l3_files/figure-html/unnamed-chunk-44-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-45-1.png)&lt;!-- --&gt;
 ]
 
 ---
@@ -1116,7 +1156,7 @@ qplot(ID, Gampaha, data=mozzie, geom="line")
 qplot(ID, Gampaha, data=mozzie)
 ```
 
-![](l3_files/figure-html/unnamed-chunk-45-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-46-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
@@ -1125,7 +1165,7 @@ qplot(ID, Gampaha, data=mozzie)
 qplot(ID, Gampaha, data=mozzie, geom="path")
 ```
 
-![](l3_files/figure-html/unnamed-chunk-46-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-47-1.png)&lt;!-- --&gt;
 ]
 
 ---
@@ -1138,7 +1178,7 @@ qplot(ID, Gampaha, data=mozzie, geom="path")
 qplot(Colombo, Gampaha, data=mozzie, geom="line")
 ```
 
-![](l3_files/figure-html/unnamed-chunk-47-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-48-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
@@ -1147,7 +1187,7 @@ qplot(Colombo, Gampaha, data=mozzie, geom="line")
 qplot(Colombo, Gampaha, data=mozzie, geom="path")
 ```
 
-![](l3_files/figure-html/unnamed-chunk-48-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-49-1.png)&lt;!-- --&gt;
 ]
 
 ---
@@ -1159,7 +1199,7 @@ qplot(Colombo, Gampaha, data=mozzie, geom="path")
 qplot(Colombo, Gampaha, data=mozzie, geom=c("line", "point"))
 ```
 
-![](l3_files/figure-html/unnamed-chunk-49-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-50-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
@@ -1169,7 +1209,7 @@ qplot(Colombo, Gampaha, data=mozzie, geom=c("line", "point"))
 qplot(Colombo, Gampaha, data=mozzie, geom=c("path", "point"))
 ```
 
-![](l3_files/figure-html/unnamed-chunk-50-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-51-1.png)&lt;!-- --&gt;
 ]
 ---
 
@@ -1181,7 +1221,7 @@ qplot(Colombo, Gampaha, data=mozzie, geom=c("path", "point"))
 boxplot(Colombo~Year, data=mozzie)
 ```
 
-![](l3_files/figure-html/unnamed-chunk-51-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-52-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
@@ -1191,7 +1231,7 @@ boxplot(Colombo~Year, data=mozzie)
 qplot(factor(Year), Colombo, data=mozzie, geom="boxplot")
 ```
 
-![](l3_files/figure-html/unnamed-chunk-52-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-53-1.png)&lt;!-- --&gt;
 ]
 
 ---
@@ -1205,7 +1245,7 @@ qplot(factor(Year), Colombo, data=mozzie, geom="boxplot")
 qplot(factor(Year), Colombo, data=mozzie, geom="boxplot")
 ```
 
-![](l3_files/figure-html/unnamed-chunk-53-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-54-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
@@ -1215,7 +1255,7 @@ qplot(factor(Year), Colombo, data=mozzie, geom="boxplot")
 qplot(factor(Year), Colombo, data=mozzie) # geom="point"-default
 ```
 
-![](l3_files/figure-html/unnamed-chunk-54-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-55-1.png)&lt;!-- --&gt;
 ]
 
 ---
@@ -1227,7 +1267,7 @@ qplot(factor(Year), Colombo, data=mozzie) # geom="point"-default
 qplot(factor(Year), Colombo, data=mozzie, geom="point")
 ```
 
-![](l3_files/figure-html/unnamed-chunk-55-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-56-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
@@ -1237,7 +1277,7 @@ qplot(factor(Year), Colombo, data=mozzie, geom="point")
 qplot(factor(Year), Colombo, data=mozzie, geom=c("jitter", "point")) # geom="point"-default
 ```
 
-![](l3_files/figure-html/unnamed-chunk-56-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-57-1.png)&lt;!-- --&gt;
 ]
 
 ---
@@ -1250,7 +1290,7 @@ qplot(factor(Year), Colombo, data=mozzie, geom=c("jitter", "point")) # geom="poi
 qplot(factor(Year), Colombo, data=mozzie, geom=c("jitter", "point"))
 ```
 
-![](l3_files/figure-html/unnamed-chunk-57-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-58-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
@@ -1260,7 +1300,7 @@ qplot(factor(Year), Colombo, data=mozzie, geom=c("jitter", "point"))
 qplot(factor(Year), Colombo, data=mozzie, geom=c("jitter", "point", "boxplot")) # geom="point"-default
 ```
 
-![](l3_files/figure-html/unnamed-chunk-58-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-59-1.png)&lt;!-- --&gt;
 ]
 
 ---
@@ -1278,7 +1318,7 @@ qplot(Colombo, data=mozzie)
 `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-![](l3_files/figure-html/unnamed-chunk-59-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-60-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
@@ -1288,7 +1328,7 @@ qplot(Colombo, data=mozzie)
 qplot(Colombo, data=mozzie, geom="density") 
 ```
 
-![](l3_files/figure-html/unnamed-chunk-60-1.png)&lt;!-- --&gt;
+![](l3_files/figure-html/unnamed-chunk-61-1.png)&lt;!-- --&gt;
 ]
 
 
@@ -1373,6 +1413,32 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -1390,17 +1456,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
 
 <script>
 slideshow._releaseMath = function(el) {

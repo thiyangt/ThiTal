@@ -34,14 +34,14 @@ Here is your road map for the course!
 
 - Data structures (Matrices, Arrays, List, Data frames, Factors)
 
-| 📚[Slides](/Slides/2020s1STA5173_0/l2.html) 	| 📒 [Reading-5.3, 5.8](https://rstudio-education.github.io/hopr/r-objects.html#matrices)  	| 📊 [Cheat sheet](https://hellor.netlify.app/cheatsheets/baser.pdf) 	| 📎 [Problems](/Slides/2020s1STA5173_0/MSc_tutorials/Tutorial1_Questions_MSC_2020.pdf) 	| 🔖Answers |
+| 📚[Slides](/Slides/2020s1STA5173_0/l2.html) 	| 📒 [Reading-5.3, 5.8](https://rstudio-education.github.io/hopr/r-objects.html#matrices)  	| 📊 [Cheat sheet](https://hellor.netlify.app/cheatsheets/baser.pdf) 	| 📎 [Problems](/Slides/2020s1STA5173_0/MSc_tutorials/Tutorial1_Questions_MSC_2020.pdf) 	| 🔖 Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 ### Week 3
 
 - Built-in functions in R
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚[Slides](/Slides/2020s1STA5173_0/l2.html)   	| 📒 [Reading-Section 2.3](https://rstudio-education.github.io/hopr/basics.html#functions)  	| 📊 Data Sets - `iris`	| 📎 Problems - EDA on `iris` 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 ### Week 4
