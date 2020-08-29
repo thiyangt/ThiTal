@@ -41,7 +41,7 @@ Here is your road map for the course!
 
 - Built-in functions in R
 
-| 📚[Slides](/Slides/2020s1STA5173_0/l2.html)   	| 📒 [Reading-Section 2.3](https://rstudio-education.github.io/hopr/basics.html#functions)  	| 📊 Data Sets - `iris`	| 📎 Problems - EDA on `iris` 	| 🔖Answers |
+| 📚[Slides](/Slides/2020s1STA5173_0/l3.html)   	| 📒 [Reading-Section 2.3](https://rstudio-education.github.io/hopr/basics.html#functions)  	| 📊 Data Sets - `iris`	| 📎 Problems - EDA on `iris` 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 ### Week 4
