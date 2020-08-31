@@ -1,0 +1,51 @@
+---
+title: "Working with built-in data sets in R"
+author: Thiyanga S. Talagala
+date: '2020-08-31'
+categories: [R]
+tags: [R, ggplot, fable]
+summary: "How to view datasets in a particular package, or or list the available data sets? "
+---
+
+### To view list of data sets available in a particular package or a group of packages.
+
+
+```{r, warning=FALSE, message=FALSE, comment=NA}
+vcdExtra::datasets(c("ggplot2", "forecast"))
+```
+
+
+### To view data sets in package `datasets`. 
+
+```{r, warning=FALSE, message=FALSE, comment=NA}
+data() 
+```
+
+This opens a file called "R data sets" in the Code-Editor window as below.
+
+![](datafiles.png)
+
+### To list the data sets in all *available* packages
+
+`data(package = .packages(all.available = TRUE))`.
+
+
+This opens a file called "R data sets" in the Code- Editor widow, listing datasets as
+
+```r
+Data sets in package ‘alr4’:
+
+...
+
+
+Data sets in package ‘asbio’:
+
+...
+
+.
+
+.
+
+.
+
+```

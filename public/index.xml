@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>THIYANGA TALAGALA</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 27 Jul 2020 00:00:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>THIYANGA TALAGALA</title>
@@ -757,6 +757,83 @@
 &lt;blockquote&gt;
 &lt;p&gt;END&lt;/p&gt;
 &lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Working with built-in data sets in R</title>
+      <link>/post/datasets/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/post/datasets/</guid>
+      <description>
+
+
+&lt;div id=&#34;to-view-list-of-data-sets-available-in-a-particular-package-or-a-group-of-packages.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;To view list of data sets available in a particular package or a group of packages.&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vcdExtra::datasets(c(&amp;quot;ggplot2&amp;quot;, &amp;quot;forecast&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Loading package: ggplot2 
+Loading package: forecast &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;    Package           Item      class      dim
+1   ggplot2       diamonds data.frame 53940x10
+2   ggplot2      economics data.frame    574x6
+3   ggplot2 economics_long data.frame   2870x4
+4   ggplot2      faithfuld data.frame   5625x3
+5   ggplot2    luv_colours data.frame    657x4
+6   ggplot2        midwest data.frame   437x28
+7   ggplot2            mpg data.frame   234x11
+8   ggplot2         msleep data.frame    83x11
+9   ggplot2   presidential data.frame     11x4
+10  ggplot2          seals data.frame   1155x4
+11  ggplot2      txhousing data.frame   8602x9
+12 forecast            gas         ts      476
+13 forecast           gold         ts     1108
+14 forecast         taylor         ts     4032
+15 forecast        wineind         ts      176
+16 forecast       woolyrnq         ts      119
+                                                               Title
+1                           Prices of over 50,000 round cut diamonds
+2                                            US economic time series
+3                                            US economic time series
+4                           2d density estimate of Old Faithful data
+5                                            &amp;#39;colors()&amp;#39; in Luv space
+6                                               Midwest demographics
+7  Fuel economy data from 1999 to 2008 for 38 popular models of cars
+8       An updated and expanded version of the mammals sleep dataset
+9                    Terms of 11 presidents from Eisenhower to Obama
+10                                    Vector field of seal movements
+11                                               Housing sales in TX
+12                                 Australian monthly gas production
+13                                         Daily morning gold prices
+14                                    Half-hourly electricity demand
+15                                       Australian total wine sales
+16                 Quarterly production of woollen yarn in Australia&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;to-view-data-sets-in-package-datasets.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;To view data sets in package &lt;code&gt;datasets&lt;/code&gt;.&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data() &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This opens a file called “R data sets” in the Code-Editor window as below.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;datafiles.png&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;to-list-the-data-sets-in-all-available-packages&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;To list the data sets in all &lt;em&gt;available&lt;/em&gt; packages&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;data(package = .packages(all.available = TRUE))&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This opens a file called “R data sets” in the Code- Editor widow, listing datasets as&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Data sets in package ‘alr4’:
+
+...
+
+
+Data sets in package ‘asbio’:
+
+...
+
+.
+
+.
+
+.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 </description>
     </item>
     
