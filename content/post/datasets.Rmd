@@ -23,7 +23,8 @@ data()
 
 This opens a file called "R data sets" in the Code-Editor window as below.
 
-![](datafiles.png)
+<img src="/post/datafiles.PNG" alt="final image" width="800"/>
+
 
 ### To list the data sets in all *available* packages
 

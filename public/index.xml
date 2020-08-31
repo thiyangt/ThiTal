@@ -812,7 +812,7 @@ Loading package: forecast &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;To view data sets in package &lt;code&gt;datasets&lt;/code&gt;.&lt;/h3&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data() &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This opens a file called “R data sets” in the Code-Editor window as below.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;datafiles.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/datafiles.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;to-list-the-data-sets-in-all-available-packages&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;To list the data sets in all &lt;em&gt;available&lt;/em&gt; packages&lt;/h3&gt;
