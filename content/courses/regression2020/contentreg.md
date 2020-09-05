@@ -26,13 +26,9 @@ Here is your road map for the course!
     
     - Correlation
     
-    - Least-squares estimation of the parameters
-    
-    
-- Basics of R programming 
-    
+  
 
-| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression1.html#1)  	| 📒 [Reading-Ch1 Introduction to Linear Regression Analysis]  	| 📊 Data Sets - `anscombe`	| 📎 Problems 	| 🔖Answers |
+| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression1.html#1)  	| 📒 [Reading-Ch1 Introduction to Linear Regression Analysis]  	| 📊 Data Sets - `anscombe`	| 📎 Problems - Install R and R studio	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
@@ -40,18 +36,22 @@ Here is your road map for the course!
 
 - Simple linear regression (cont.)
     
-    - Model adequacy checking
+    - Least-squares estimation of the parameters
     
-    - Hypothesis testing on the slope and intercept
-    
-    - Interval estimation in simple linear regression   
+- Basics of R programming     
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression2.html#1)  	| 📒 [Reading-Ch2/2.2.2 Introduction to Linear Regression Analysis]  	| 📊 Data Sets - `alr3::heights`	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 ### Week 3
 
 - Simple linear regression (cont.)
+
+    - Model adequacy checking
+    
+    - Hypothesis testing on the slope and intercept
+    
+    - Interval estimation in simple linear regression  
     
     - Prediction of new observations: point estimates and prediction intervals
     
