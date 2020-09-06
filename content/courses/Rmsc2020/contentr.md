@@ -48,7 +48,7 @@ Here is your road map for the course!
 
 - Writing functions in R and control structures
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚[Slides](/Slides/2020s1STA5173_0/l4.html)   	| 📒 [Reading-Section 2.3](https://rstudio-education.github.io/hopr/basics.html#functions) 	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 > Week 5-6: Discussion/practical (in class)

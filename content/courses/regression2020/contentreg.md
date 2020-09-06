@@ -35,7 +35,7 @@ Here is your road map for the course!
 ### Week 2
 
 - Simple linear regression (cont.)
-    
+
     - Least-squares estimation of the parameters
     
 - Basics of R programming     
