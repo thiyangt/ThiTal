@@ -1,0 +1,130 @@
+---
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(lubridate)
+library(tidyverse)
+```
+
+1. Rewrite rescale_minmax so that -Inf is set to 0, and Inf is mapped to 1.
+
+```{r}
+rescale_minmax <- function(x) {
+  rng <- range(x, na.rm = TRUE, finite = TRUE)
+  (x - rng[1]) / (rng[2] - rng[1])
+  x[x == Inf] <- 1
+  x[x == -Inf] <- 0
+  x
+}
+rescale_minmax(c(Inf, -Inf, 0:5, NA))
+
+```
+
+2. 
+Practice turning the following code snippets into functions. Think about what each function does. What would you call it? How many arguments does it need? Can you rewrite it to be more expressive or less duplicative?
+
+```{r}
+x <- 1:10
+mean(is.na(x))
+x / sum(x, na.rm = TRUE)
+sd(x, na.rm = TRUE) / mean(x, na.rm = TRUE)
+```
+
+Implementation
+```{r}
+prop_miss <- function(x) {
+  mean(is.na(x))
+}
+my_mean <- function(x) {
+  x / sum(x, na.rm = TRUE)
+}
+my_var <- function(x) {
+  sd(x, na.rm = TRUE) / mean(x, na.rm = TRUE)
+}
+```
+
+3. Exercise 19.2.1, Question 4
+
+```{r}
+variance <- function(x) {
+    n <- length(x)
+    m <- mean(x)
+    (1/(n - 1)) * sum((x - m)^2)
+}
+
+variance(c(1,2,3))
+var(c(1,2,3))
+```
+
+```{r}
+skewness <- function(x) {
+    n <- length(x)
+    v <- var(x)
+    m <- mean(x)
+    third.moment <- (1/(n - 2)) * sum((x - m)^3)
+    third.moment/(var(x)^(3/2))
+}
+
+skewness(c(1, 2, 3, 4, 5)) 
+
+```
+
+## Regression problem
+
+```{r}
+cal_reg <- function(x, y){
+  nx <- length(x)
+  ny <- length(y)
+  
+  x.intercept <- rep(1, nx)
+  cbindx <- cbind(x.intercept, x)
+  ymat<- matrix(y, ncol=1)
+  beta <- solve(t(cbindx) %*% cbindx) %*% t(cbindx) %*% y
+  beta
+  
+ 
+}
+
+data(trees)
+cal_reg(trees$Height, trees$Volume)
+lm(trees$Volume~ trees$Height)
+
+```
+
+## R for Data Science-Exercises 9.4.4 - Q2
+
+```{r}
+greeter <- function(now = now()) {
+  if (between(hour(now), 8, 13)) {
+    print("Good morning")
+  } else if (between(hour(now), 13, 18)) {
+    print("Good afternoon")
+  } else {
+    print("Good evening")
+  }
+}
+greeter(now())
+```
+
+Write a function to count the number of even numbers in a vector.
+
+```{r}
+count_even <- function(x){
+  cnt <- 0
+  len.x <- length(x)
+  for(j in 1:len.x){
+    if (x[j] %% 2 ==0){
+      cnt = cnt + 1
+    }
+  }
+  cnt
+}
+
+count_even(1:10)
+```

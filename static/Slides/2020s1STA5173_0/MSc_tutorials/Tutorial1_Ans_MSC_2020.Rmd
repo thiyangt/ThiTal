@@ -188,12 +188,23 @@ x[!is.na(x)]
 
 Write an R code to extract missing values and odd-numbers in `x`
 
+```{r, comment=NA}
+ y <- x%%2
+y
+x[y==1]
+```
 
 Write an R code to extract odd numbers on `x`
-
+```{r, comment=NA}
+z <- x[y==1]
+z[!is.na(z)]
+```
 
 Which values of `x` are NOT in the set `1:50`
 
+```{r, comment=NA}
+which(x %in% 1:50)
+```
 
 # Modify a vector
 
@@ -205,7 +216,8 @@ age <- c(20, 30, 40, 41, 32, 32, 25,  NA, NA, -4, -6, 9999, 10000)
 ```
 
     i. Convert all negative values to `NA`.
-     
+
+
     ii. Convert all values of `age` that are NOT from 10 to 100 and calculate the mean of valid responses.
     
 15. Consider the following vector of 100 random numbers generated from the standard normal distribution.
