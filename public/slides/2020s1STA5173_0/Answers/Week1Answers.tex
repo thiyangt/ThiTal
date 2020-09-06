@@ -1,0 +1,558 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\hypertarget{week-1-answers}{%
+\section{Week 1: Answers}\label{week-1-answers}}
+
+\hypertarget{question-1}{%
+\subsection{Question 1}\label{question-1}}
+
+We are in the midst of a medical crisis! The deadly corona virus that
+originated in China has infected hundreds of people and is now spreading
+across the globe at an alarming rate. World Health Organization (WHO)
+alerted the world about the Novel Corona virus(2019-nCoV) in January,
+2020. After issuance of the global alert, a formal reporting of Corona
+cases was put in place, and WHO published daily reports on the number of
+cases on their website here. Use WHO: Situation Report-21 for this
+question.
+
+Table 1 reports the confirmed cases of 2019-nCoV reported by provinces,
+regions and cities in China (see slide 47).
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\tightlist
+\item
+  Enter confirmed cases in table 1 to a vector.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{confirmed_cases <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{29631}\NormalTok{, }\DecValTok{1151}\NormalTok{, }\DecValTok{1104}\NormalTok{, }\DecValTok{1073}\NormalTok{, }\DecValTok{879}\NormalTok{, }\DecValTok{830}\NormalTok{, }\DecValTok{771}\NormalTok{, }\DecValTok{492}\NormalTok{, }\DecValTok{468}\NormalTok{, }\DecValTok{459}\NormalTok{, }\DecValTok{405}\NormalTok{,}
+                     \DecValTok{337}\NormalTok{, }\DecValTok{331}\NormalTok{, }\DecValTok{295}\NormalTok{, }\DecValTok{261}\NormalTok{, }\DecValTok{218}\NormalTok{, }\DecValTok{213}\NormalTok{, }\DecValTok{210}\NormalTok{, }\DecValTok{141}\NormalTok{, }\DecValTok{136}\NormalTok{, }\DecValTok{119}\NormalTok{, }\DecValTok{109}\NormalTok{, }\DecValTok{107}\NormalTok{,}
+                     \DecValTok{91}\NormalTok{, }\DecValTok{85}\NormalTok{, }\DecValTok{80}\NormalTok{, }\DecValTok{58}\NormalTok{, }\DecValTok{49}\NormalTok{, }\DecValTok{49}\NormalTok{, }\DecValTok{36}\NormalTok{, }\DecValTok{18}\NormalTok{, }\DecValTok{18}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{1}\NormalTok{)}
+\KeywordTok{sum}\NormalTok{(confirmed_cases) }\CommentTok{# This is to check if the Total match with the Total given in Table 1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 40235
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{confirmed_cases}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+ [1] 29631  1151  1104  1073   879   830   771   492   468   459   405   337
+[13]   331   295   261   218   213   210   141   136   119   109   107    91
+[25]    85    80    58    49    49    36    18    18    10     1
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Name the elements by province/regions/cities in China.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{names}\NormalTok{(confirmed_cases) <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"Hubei"}\NormalTok{, }\StringTok{"Guangdong"}\NormalTok{, }\StringTok{"Zhejiang"}\NormalTok{, }\StringTok{"Henan"}\NormalTok{, }\StringTok{"Hunan"}\NormalTok{, }\StringTok{"Anhui"}\NormalTok{,}
+                            \StringTok{"Jiangxi"}\NormalTok{, }\StringTok{"Jiangsu"}\NormalTok{, }\StringTok{"Chongqing"}\NormalTok{, }\StringTok{"Shandong"}\NormalTok{, }\StringTok{"Sichuan"}\NormalTok{,}
+                            \StringTok{"Beijing"}\NormalTok{, }\StringTok{"Heilongjiang"}\NormalTok{, }\StringTok{"Shanghai"}\NormalTok{, }\StringTok{"Fujian"}\NormalTok{, }\StringTok{"Hebei"}\NormalTok{, }
+                            \StringTok{"Shaanxi"}\NormalTok{, }\StringTok{"Guangxi"}\NormalTok{, }\StringTok{"Yunnan"}\NormalTok{, }\StringTok{"Hainan"}\NormalTok{, }\StringTok{"Shanxi"}\NormalTok{, }
+                            \StringTok{"Guizhou"}\NormalTok{, }\StringTok{"Liaoning"}\NormalTok{, }\StringTok{"Tianjin"}\NormalTok{, }\StringTok{"Gansu"}\NormalTok{, }\StringTok{"Jilin"}\NormalTok{, }
+                            \StringTok{"Inner Mongolia"}\NormalTok{, }\StringTok{"Ningxia"}\NormalTok{,}
+                            \StringTok{"Xinjiang"}\NormalTok{, }\StringTok{"Hong Kong SAR"}\NormalTok{, }\StringTok{"Qinghai"}\NormalTok{, }
+                            \StringTok{"Taipei and environs"}\NormalTok{, }
+                            \StringTok{"Macao SAR"}\NormalTok{, }\StringTok{"Xizang"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Write R codes to answer the following questions.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Which province/region/city has the highest number of confirmed cases?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Method 1}
+\KeywordTok{which.max}\NormalTok{(confirmed_cases) }\CommentTok{# Returns the name of the district and index in the confirmed cases}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Hubei 
+    1 
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Method 2}
+\NormalTok{confirmed_cases[confirmed_cases }\OperatorTok{==}\StringTok{ }\KeywordTok{max}\NormalTok{(confirmed_cases)] }\CommentTok{# Returns the name of the district}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Hubei 
+29631 
+\end{verbatim}
+
+\emph{If it is difficult to understand how the method 2 work, here is
+the step by step illustration of Method 2.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{max}\NormalTok{(confirmed_cases)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 29631
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{confirmed_cases }\OperatorTok{==}\StringTok{ }\KeywordTok{max}\NormalTok{(confirmed_cases)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+              Hubei           Guangdong            Zhejiang               Henan 
+               TRUE               FALSE               FALSE               FALSE 
+              Hunan               Anhui             Jiangxi             Jiangsu 
+              FALSE               FALSE               FALSE               FALSE 
+          Chongqing            Shandong             Sichuan             Beijing 
+              FALSE               FALSE               FALSE               FALSE 
+       Heilongjiang            Shanghai              Fujian               Hebei 
+              FALSE               FALSE               FALSE               FALSE 
+            Shaanxi             Guangxi              Yunnan              Hainan 
+              FALSE               FALSE               FALSE               FALSE 
+             Shanxi             Guizhou            Liaoning             Tianjin 
+              FALSE               FALSE               FALSE               FALSE 
+              Gansu               Jilin      Inner Mongolia             Ningxia 
+              FALSE               FALSE               FALSE               FALSE 
+           Xinjiang       Hong Kong SAR             Qinghai Taipei and environs 
+              FALSE               FALSE               FALSE               FALSE 
+          Macao SAR              Xizang 
+              FALSE               FALSE 
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{confirmed_cases[confirmed_cases }\OperatorTok{==}\StringTok{ }\KeywordTok{max}\NormalTok{(confirmed_cases)]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Hubei 
+29631 
+\end{verbatim}
+
+\emph{If you do not understand a big line of code, it is always a good
+idea to break it down to small pieces and check the output.}
+
+\begin{itemize}
+\tightlist
+\item
+  Number of confirmed cases reported in Hebei, China.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{confirmed_cases[}\StringTok{"Hebei"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Hebei 
+  218 
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  Total number of confirmed cases reported in China
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sum}\NormalTok{(confirmed_cases)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 40235
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  Number of cases reported in the capital of China
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{confirmed_cases[}\StringTok{"Beijing"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Beijing 
+    337 
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  Number of cases reported in Inner Mongolia
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{confirmed_cases[}\StringTok{"Inner Mongolia"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Inner Mongolia 
+            58 
+\end{verbatim}
+
+\hypertarget{question-2}{%
+\subsection{Question 2}\label{question-2}}
+
+Table 2 reports the confirmed 2019-nCoV cases and deaths in China,
+Singapore, Republic of Korea, Japan, Malaysia, Australia, Viet Nam,
+Philippines, Cambodia, Thailand, India, Nepal, Sri Lanka, United States
+of America, Canada, Germany, France, The United Kingdom, Italy, Russian
+Federation, Spain , Belgium, Finland, Sweden, UAE as
+\texttt{a\ \textless{}-\ c(40235,\ 43,\ 27,\ 26,\ 18,\ 15,\ 14,\ 3,\ 1,\ 32,\ 3,\ 1,\ 1,\ 12,\ 7,\ 14,\ 11,\ 4,\ 3,\ 2,\ 2,\ 1,\ 1,\ 100,\ 7)}.
+
+Table 2-please see slide 50.
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\tightlist
+\item
+  Rename the vector a as confirmed\_cases\_countries
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{40235}\NormalTok{, }\DecValTok{43}\NormalTok{, }\DecValTok{27}\NormalTok{, }\DecValTok{26}\NormalTok{, }\DecValTok{18}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{32}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{11}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{100}\NormalTok{, }\DecValTok{7}\NormalTok{)}
+\NormalTok{confirmed_cases_countries <-}\StringTok{ }\NormalTok{a}
+\NormalTok{confirmed_cases_countries}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+ [1] 40235    43    27    26    18    15    14     3     1    32     3     1
+[13]     1    12     7    14    11     4     3     2     2     1     1   100
+[25]     7
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Name elements according to the associated country
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{names}\NormalTok{(confirmed_cases_countries) <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"China"}\NormalTok{, }\StringTok{"Singapore"}\NormalTok{, }\StringTok{"Republic of Korea"}\NormalTok{, }\StringTok{"Japan"}\NormalTok{, }
+                                      \StringTok{"Malaysia"}\NormalTok{, }\StringTok{"Australia"}\NormalTok{, }\StringTok{"Viet Nam"}\NormalTok{, }\StringTok{"Philippines"}\NormalTok{, }
+                                      \StringTok{"Cambodia"}\NormalTok{, }\StringTok{"Thailand"}\NormalTok{, }\StringTok{"India"}\NormalTok{, }\StringTok{"Nepal"}\NormalTok{, }\StringTok{"Sri Lanka"}\NormalTok{, }
+                                      \StringTok{"United States of America"}\NormalTok{, }\StringTok{"Canada"}\NormalTok{, }\StringTok{"Germany"}\NormalTok{, }\StringTok{"France"}\NormalTok{,}
+                                      \StringTok{"The United Kingdom"}\NormalTok{, }\StringTok{"Italy"}\NormalTok{, }\StringTok{"Russian Federation"}\NormalTok{, }\StringTok{"Spain"}\NormalTok{, }
+                                      \StringTok{"Belgium"}\NormalTok{, }\StringTok{"Finland"}\NormalTok{, }\StringTok{"Sweden"}\NormalTok{, }\StringTok{"UAE"}\NormalTok{)}
+\NormalTok{confirmed_cases_countries}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+                   China                Singapore        Republic of Korea 
+                   40235                       43                       27 
+                   Japan                 Malaysia                Australia 
+                      26                       18                       15 
+                Viet Nam              Philippines                 Cambodia 
+                      14                        3                        1 
+                Thailand                    India                    Nepal 
+                      32                        3                        1 
+               Sri Lanka United States of America                   Canada 
+                       1                       12                        7 
+                 Germany                   France       The United Kingdom 
+                      14                       11                        4 
+                   Italy       Russian Federation                    Spain 
+                       3                        2                        2 
+                 Belgium                  Finland                   Sweden 
+                       1                        1                      100 
+                     UAE 
+                       7 
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Mistakenly 100 cases were recorded to Sweden, correct it.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{confirmed_cases_countries[}\StringTok{"Sweden"}\NormalTok{] <-}\StringTok{ }\DecValTok{1}
+\CommentTok{# Let's check the vector again. Now Sweden reads as 1.}
+\NormalTok{confirmed_cases_countries}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+                   China                Singapore        Republic of Korea 
+                   40235                       43                       27 
+                   Japan                 Malaysia                Australia 
+                      26                       18                       15 
+                Viet Nam              Philippines                 Cambodia 
+                      14                        3                        1 
+                Thailand                    India                    Nepal 
+                      32                        3                        1 
+               Sri Lanka United States of America                   Canada 
+                       1                       12                        7 
+                 Germany                   France       The United Kingdom 
+                      14                       11                        4 
+                   Italy       Russian Federation                    Spain 
+                       3                        2                        2 
+                 Belgium                  Finland                   Sweden 
+                       1                        1                        1 
+                     UAE 
+                       7 
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Add the record of ``other'' category into your vector.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{confirmed_cases_countries <-}\StringTok{ }\KeywordTok{c}\NormalTok{(confirmed_cases_countries, }\DecValTok{70}\NormalTok{)}
+\KeywordTok{names}\NormalTok{(confirmed_cases_countries)[}\KeywordTok{length}\NormalTok{(confirmed_cases_countries)] <-}
+\StringTok{  "International conveyance (Japan)"}
+\NormalTok{confirmed_cases_countries}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+                           China                        Singapore 
+                           40235                               43 
+               Republic of Korea                            Japan 
+                              27                               26 
+                        Malaysia                        Australia 
+                              18                               15 
+                        Viet Nam                      Philippines 
+                              14                                3 
+                        Cambodia                         Thailand 
+                               1                               32 
+                           India                            Nepal 
+                               3                                1 
+                       Sri Lanka         United States of America 
+                               1                               12 
+                          Canada                          Germany 
+                               7                               14 
+                          France               The United Kingdom 
+                              11                                4 
+                           Italy               Russian Federation 
+                               3                                2 
+                           Spain                          Belgium 
+                               2                                1 
+                         Finland                           Sweden 
+                               1                                1 
+                             UAE International conveyance (Japan) 
+                               7                               70 
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\setcounter{enumi}{21}
+\tightlist
+\item
+  Create a new vector to enter WHO regions
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{WHO_Region <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\StringTok{"Western Pacific Region"}\NormalTok{, }\DecValTok{9}\NormalTok{),}
+                \KeywordTok{rep}\NormalTok{(}\StringTok{"South-East Asia Region"}\NormalTok{, }\DecValTok{4}\NormalTok{), }
+                \KeywordTok{rep}\NormalTok{(}\StringTok{"Region of Americas"}\NormalTok{, }\DecValTok{2}\NormalTok{),}
+                \KeywordTok{rep}\NormalTok{(}\StringTok{"Europe Region"}\NormalTok{, }\DecValTok{9}\NormalTok{),}
+                \KeywordTok{rep}\NormalTok{(}\StringTok{"Eastern Mediterranean Region"}\NormalTok{, }\DecValTok{1}\NormalTok{),}
+                \KeywordTok{rep}\NormalTok{(}\StringTok{"Other"}\NormalTok{, }\DecValTok{1}\NormalTok{))}
+\NormalTok{WHO_Region}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+ [1] "Western Pacific Region"       "Western Pacific Region"      
+ [3] "Western Pacific Region"       "Western Pacific Region"      
+ [5] "Western Pacific Region"       "Western Pacific Region"      
+ [7] "Western Pacific Region"       "Western Pacific Region"      
+ [9] "Western Pacific Region"       "South-East Asia Region"      
+[11] "South-East Asia Region"       "South-East Asia Region"      
+[13] "South-East Asia Region"       "Region of Americas"          
+[15] "Region of Americas"           "Europe Region"               
+[17] "Europe Region"                "Europe Region"               
+[19] "Europe Region"                "Europe Region"               
+[21] "Europe Region"                "Europe Region"               
+[23] "Europe Region"                "Europe Region"               
+[25] "Eastern Mediterranean Region" "Other"                       
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  New cases have been reported in China, Singapore, Malaysia, The United
+  Kingdom, Spain. Create a new vector to code these countries as TRUE
+  and the rest as FALSE
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{country_names_new_cases <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"China"}\NormalTok{, }\StringTok{"Singapore"}\NormalTok{, }\StringTok{"Malaysia"}\NormalTok{, }\StringTok{"The United Kingdom"}\NormalTok{, }\StringTok{"Spain"}\NormalTok{)}
+\NormalTok{new_cases <-}\StringTok{ }\KeywordTok{names}\NormalTok{(confirmed_cases_countries) }\OperatorTok{%in%}\StringTok{ }\NormalTok{country_names_new_cases}
+\NormalTok{new_cases}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+ [1]  TRUE  TRUE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+[13] FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE FALSE
+[25] FALSE FALSE
+\end{verbatim}
+
+\end{document}

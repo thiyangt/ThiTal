@@ -1,0 +1,157 @@
+---
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
+```
+
+# Week 1: Answers
+
+## Question 1
+
+We are in the midst of a medical crisis! The deadly corona virus that originated in China has infected hundreds of people and is now spreading across the globe at an alarming rate. World Health Organization (WHO) alerted the world about the Novel Corona virus(2019-nCoV) in January, 2020. After issuance of the global alert, a formal reporting of Corona cases was put in place, and WHO published daily reports on the number of cases on their website here. Use WHO: Situation Report-21 for this question.
+
+Table 1 reports the confirmed cases of 2019-nCoV reported by provinces, regions and cities in China (see slide 47).
+
+i) Enter confirmed cases in table 1 to a vector.
+
+```{r, comment=NA}
+confirmed_cases <- c(29631, 1151, 1104, 1073, 879, 830, 771, 492, 468, 459, 405,
+                     337, 331, 295, 261, 218, 213, 210, 141, 136, 119, 109, 107,
+                     91, 85, 80, 58, 49, 49, 36, 18, 18, 10, 1)
+sum(confirmed_cases) # This is to check if the Total match with the Total given in Table 1
+confirmed_cases
+```
+
+ii) Name the elements by province/regions/cities in China.
+
+```{r, comment=NA}
+
+names(confirmed_cases) <- c("Hubei", "Guangdong", "Zhejiang", "Henan", "Hunan", "Anhui",
+                            "Jiangxi", "Jiangsu", "Chongqing", "Shandong", "Sichuan",
+                            "Beijing", "Heilongjiang", "Shanghai", "Fujian", "Hebei", 
+                            "Shaanxi", "Guangxi", "Yunnan", "Hainan", "Shanxi", 
+                            "Guizhou", "Liaoning", "Tianjin", "Gansu", "Jilin", 
+                            "Inner Mongolia", "Ningxia",
+                            "Xinjiang", "Hong Kong SAR", "Qinghai", 
+                            "Taipei and environs", 
+                            "Macao SAR", "Xizang")
+```
+
+iii) Write R codes to answer the following questions.
+
+- Which province/region/city has the highest number of confirmed cases?
+
+```{r, comment=NA}
+# Method 1
+which.max(confirmed_cases) # Returns the name of the district and index in the confirmed cases
+```
+
+```{r, comment=NA}
+# Method 2
+confirmed_cases[confirmed_cases == max(confirmed_cases)] # Returns the name of the district
+```
+
+*If it is difficult to understand how the method 2 work, here is the step by step illustration of Method 2.*
+
+```{r, comment=NA}
+max(confirmed_cases)
+confirmed_cases == max(confirmed_cases)
+confirmed_cases[confirmed_cases == max(confirmed_cases)]
+```
+
+
+*If you do not understand a big line of code, it is always a good idea to break it down to small pieces and check the output.*
+
+- Number of confirmed cases reported in Hebei, China.
+
+```{r, comment=NA}
+confirmed_cases["Hebei"]
+```
+
+- Total number of confirmed cases reported in China
+
+```{r, comment=NA}
+sum(confirmed_cases)
+```
+
+- Number of cases reported in the capital of China
+
+```{r, comment=NA}
+confirmed_cases["Beijing"]
+```
+
+- Number of cases reported in Inner Mongolia
+
+```{r, comment=NA}
+confirmed_cases["Inner Mongolia"]
+```
+
+## Question 2
+
+Table 2 reports the confirmed 2019-nCoV cases and deaths in China, Singapore, Republic of Korea, Japan, Malaysia, Australia, Viet Nam, Philippines, Cambodia, Thailand, India, Nepal, Sri Lanka, United States of America, Canada, Germany, France, The United Kingdom, Italy, Russian Federation, Spain , Belgium, Finland, Sweden, UAE as
+`a <- c(40235, 43, 27, 26, 18, 15, 14, 3, 1, 32, 3, 1, 1, 12, 7, 14, 11, 4, 3, 2, 2, 1, 1, 100, 7)`.
+
+Table 2-please see slide 50.
+
+i) Rename the vector a as confirmed_cases_countries
+
+```{r, comment=NA}
+a <- c(40235, 43, 27, 26, 18, 15, 14, 3, 1, 32, 3, 1, 1, 12, 7, 14, 11, 4, 3, 2, 2, 1, 1, 100, 7)
+confirmed_cases_countries <- a
+confirmed_cases_countries
+```
+
+ii) Name elements according to the associated country
+
+```{r, comment=NA}
+names(confirmed_cases_countries) <- c("China", "Singapore", "Republic of Korea", "Japan", 
+                                      "Malaysia", "Australia", "Viet Nam", "Philippines", 
+                                      "Cambodia", "Thailand", "India", "Nepal", "Sri Lanka", 
+                                      "United States of America", "Canada", "Germany", "France",
+                                      "The United Kingdom", "Italy", "Russian Federation", "Spain", 
+                                      "Belgium", "Finland", "Sweden", "UAE")
+confirmed_cases_countries
+```
+
+iii) Mistakenly 100 cases were recorded to Sweden, correct it.
+
+```{r, comment=NA}
+confirmed_cases_countries["Sweden"] <- 1
+# Let's check the vector again. Now Sweden reads as 1.
+confirmed_cases_countries
+```
+
+iv) Add the record of "other" category into your vector.
+
+```{r, comment=NA, tidy.opts = list(width.cutoff = 50)}
+confirmed_cases_countries <- c(confirmed_cases_countries, 70)
+names(confirmed_cases_countries)[length(confirmed_cases_countries)] <-
+  "International conveyance (Japan)"
+confirmed_cases_countries
+```
+
+v) Create a new vector to enter WHO regions
+
+```{r, comment=NA}
+WHO_Region <- c(rep("Western Pacific Region", 9),
+                rep("South-East Asia Region", 4), 
+                rep("Region of Americas", 2),
+                rep("Europe Region", 9),
+                rep("Eastern Mediterranean Region", 1),
+                rep("Other", 1))
+WHO_Region
+```
+
+
+vi) New cases have been reported in China, Singapore, Malaysia, The United Kingdom, Spain. Create a new vector to code these countries as TRUE and the rest as FALSE
+
+```{r, comment=NA}
+country_names_new_cases <- c("China", "Singapore", "Malaysia", "The United Kingdom", "Spain")
+new_cases <- names(confirmed_cases_countries) %in% country_names_new_cases
+new_cases
+
+```

@@ -26,7 +26,7 @@ Here is your road map for the course!
 
    
 
-| 📚[Slides](/Slides/2020s1STA5173_0/l1.html)  	| 📒 [Reading-2.1, 2.2, 5.1](https://rstudio-education.github.io/hopr/basics.html)  	| 📊 [Data Sets](https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200210-sitrep-21-ncov.pdf?sfvrsn=947679ef_2) 	| 📎 [Problems](https://thiyanga.netlify.app/slides/2020s1sta5173_0/l1#61) 	| 🔖Answers |
+| 📚[Slides](/Slides/2020s1STA5173_0/l1.html)  	| 📒 [Reading-2.1, 2.2, 5.1](https://rstudio-education.github.io/hopr/basics.html)  	| 📊 [Data Sets](https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200210-sitrep-21-ncov.pdf?sfvrsn=947679ef_2) 	| 📎 [Problems](https://thiyanga.netlify.app/slides/2020s1sta5173_0/l1#61) 	| 🔖[Answers](/Slides/2020s1STA5173_0/Answers/Week1Answers.pdf) |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
@@ -41,7 +41,7 @@ Here is your road map for the course!
 
 - Built-in functions in R
 
-| 📚[Slides](/Slides/2020s1STA5173_0/l3.html)   	| 📒 [Reading-Section 2.3](https://rstudio-education.github.io/hopr/basics.html#functions)  	| 📊 Data Sets - `iris`	| 📎 Problems - EDA on `iris` 	| 🔖Answers |
+| 📚[Slides](/Slides/2020s1STA5173_0/l3.html)   	| 📒 [Reading-Section 2.3](https://rstudio-education.github.io/hopr/basics.html#functions)  	| 📊 Data Sets - `iris`	| 📎 Problems - EDA on `iris` 	| 🔖Answers - In class discussion (06 Sep 2020)|
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 ### Week 4
