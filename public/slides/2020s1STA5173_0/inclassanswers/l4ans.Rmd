@@ -128,3 +128,18 @@ count_even <- function(x){
 
 count_even(1:10)
 ```
+
+## Problem 1
+
+```{r}
+set.seed(3)
+
+while (TRUE) {
+  x <- rnorm(1)
+  print(x)
+  if (x > 1) {
+    break
+  }
+}
+
+```
