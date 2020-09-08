@@ -8,6 +8,12 @@ title: Courses
 
 ![](/CO/education.jpg)
 
+# Teaching Apps
+
+[Simple Linear Regression](https://statisticsmart.shinyapps.io/SimpleLinearRegression/)
+
+-----
+
 # 2020
 
 ## Semester 2 
