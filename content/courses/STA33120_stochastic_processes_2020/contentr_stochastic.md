@@ -33,6 +33,13 @@ Here is your road map for the course!
 
 - [Limiting Probabilities](/Slides/2020s2StochasticProcesses/4_stochastic_processes_2020.pdf)
 
+### Week (1 September 2020)
+
+Holiday
+
+### Week 6
+
+- [Continuous Parameter Markov Chains](/Slides/2020s2StochasticProcesses/5_stochastic_processes_2020.pdf)
 
 
 > END
