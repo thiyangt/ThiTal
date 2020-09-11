@@ -40,7 +40,7 @@ Here is your road map for the course!
     
 - Basics of R programming     
 
-| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression2.html#1)  	| 📒 [Reading-Ch2/2.2.2 Introduction to Linear Regression Analysis]  	| 📊 Data Sets - `alr3::heights`	| 📎 Problems 	| 🔖Answers |
+| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression2.html#1)  	| 📒 [Reading-Ch2/2.2.2 Introduction to Linear Regression Analysis]  	| 📊 Data Sets - `alr3::heights`	| 📎 [Problems](https://edify-thiyanga.netlify.app/regression/tutorial_1.pdf) 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 ### Week 3
