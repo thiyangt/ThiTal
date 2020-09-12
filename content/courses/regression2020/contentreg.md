@@ -36,9 +36,11 @@ Here is your road map for the course!
 
 - Simple linear regression (cont.)
 
+    - Simple linear regression model 
+
     - Least-squares estimation of the parameters
     
-- Basics of R programming     
+   
 
 | 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression2.html#1)  	| 📒 [Reading-Ch2/2.2.2 Introduction to Linear Regression Analysis]  	| 📊 Data Sets - `alr3::heights`	| 📎 [Problems](https://edify-thiyanga.netlify.app/regression/tutorial_1.pdf) 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
@@ -48,7 +50,16 @@ Here is your road map for the course!
 - Simple linear regression (cont.)
 
     - Model adequacy checking
+  
+    - Coefficient of determination
     
+- Basics of R programming  
+
+| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression3.html#1)  	| 📒 Reading - Ch1 (2.6) and Ch4 (4.2.3)  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+|:-:	|:-:	|:-:	|:-:	|:-:	|
+
+### Week 4
+
     - Hypothesis testing on the slope and intercept
     
     - Interval estimation in simple linear regression  
@@ -70,14 +81,6 @@ Here is your road map for the course!
     - Test of significance of regression
     
     - Tests on individual regression coefficients
-
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
-|:-:	|:-:	|:-:	|:-:	|:-:	|
-
-### Week 4
-
-
-- Multiple linear regression (cont.)
 
     - Extra-sum-of-squares method
     
