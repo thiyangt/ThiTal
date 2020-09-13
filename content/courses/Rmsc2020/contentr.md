@@ -41,7 +41,7 @@ Here is your road map for the course!
 
 - Built-in functions in R
 
-| 📚[Slides](/Slides/2020s1STA5173_0/l3.html)   	| 📒 [Reading-Section 2.3](https://rstudio-education.github.io/hopr/basics.html#functions)  	| 📊 Data Sets - `iris`	| 📎 Problems - EDA on `iris` 	| 🔖Answers - In class discussion (06 Sep 2020)|
+| 📚[Slides](/Slides/2020s1STA5173_0/l3.html)   	| 📒 [Reading-Section 2.3](https://rstudio-education.github.io/hopr/basics.html#functions)  	| 📊 Data Sets - `iris`	| 📎 Problems - EDA on `iris` 	| 🔖Answers - In class discussion (13 Sep 2020)|
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 ### Week 4
@@ -53,13 +53,12 @@ Here is your road map for the course!
 
 [💻](/Slides/2020s1STA5173_0/inclassanswers/l4ans.pdf)
 
-> Week 5-6: Discussion/practical (in class)
 
 ### Week 5
 
 - Introduction to the tidyverse, pipe operator and data import and export
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚 [Slides](/Slides/2020s1STA5173_0/l4.html)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 

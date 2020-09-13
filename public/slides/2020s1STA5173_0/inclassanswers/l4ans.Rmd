@@ -17,10 +17,10 @@ library(tidyverse)
 ```{r}
 rescale_minmax <- function(x) {
   rng <- range(x, na.rm = TRUE, finite = TRUE)
-  (x - rng[1]) / (rng[2] - rng[1])
-  x[x == Inf] <- 1
-  x[x == -Inf] <- 0
-  x
+  x1 <- (x - rng[1]) / (rng[2] - rng[1])
+  x1[x1 == Inf] <- 1
+  x1[x1 == -Inf] <- 0
+  x1
 }
 rescale_minmax(c(Inf, -Inf, 0:5, NA))
 

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>STA 326 2.0 Programming and Data Analysis with R</title>
+    <title>STA 517 3.0 Programming and Statistical Computing with R</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr Thiyanga Talagala" />
-    <meta name="date" content="2020-03-10" />
+    <meta name="date" content="2020-09-13" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <link href="libs/remark-css/duke-blue.css" rel="stylesheet" />
@@ -16,146 +16,1681 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# STA 326 2.0 Programming and Data Analysis with R
-## Lesson 5.2: Simulations
+# STA 517 3.0 Programming and Statistical Computing with R
+## Lecture 5: Introduction to the tidyverse
 ### Dr Thiyanga Talagala
-### 2020-03-10
+### 2020-09-13
 
 ---
 
 
 
 
+background-image: url(tidyverse.jpeg)
+background-size: 100px
+background-position: 98% 6%
+ 
+ # What is the tidyverse?
+
+- Collection of essential R packages for data science.
+
+- All packages share a common design philosophy, grammar, and data structures.
+
+### Setup
+
+```r
+install.packages("tidyverse") # install tidyverse packages
+library(tidyverse) # load tidyverse packages
+
+```
+![](tidyverseload.png)
+
+![](tidyversecollection.png)
 
 
-background-image: url('montyhall.jpg')
+---
+
+background-image: url(workflowds.png)
 background-position: center
 background-size: contain
 
-# Monty Hall Problem
+# Workflow
 
-.footer-note[.tiny[.green[Image Credit: ][Ben Bennetts ](https://hollamhouse.files.wordpress.com/2016/08/monty-hall-1.jpg)]]
+.footer-note[.tiny[.green[Image Credit: ][Wickham](https://clasticdetritus.com/2013/01/10/creating-data-plots-with-r/)]]
 
+---
+background-image: url(readr.png)
+background-size: 100px
+background-position: 98% 6%
+
+# Workflow: import
+
+
+![700px](workflowds.png)
+
+![](datacollection.png)
 
 ---
 
-background-image: url('mstep1.png')
-background-position: center
+background-image: url(tidyr.jpeg)
+background-size: 100px
+background-position: 98% 6%
+
+
+# Workflow: tidy
+
+![700px](workflowds.png)
+
+![](longWideformat.png)
+
+---
+background-image: url(dplyr.png)
+background-size: 100px
+background-position: 98% 6%
+
+# Workflow: transform
+
+![700px](workflowds.png)
+
+![](dplyrillustration.png)
+
+---
+background-image: url(ggplot2.png)
+background-size: 100px
+background-position: 98% 6%
+
+
+# Workflow: visualise
+
+![700px](workflowds.png)
+### Illustration
+
+.pull-left[
+
+```r
+library(ggplot2)
+ggplot(iris, 
+aes(Sepal.Width, Sepal.Length, 
+color=Species)) + 
+geom_point() +
+theme(aspect.ratio  = 1) +
+scale_color_manual(values = 
+c("#1b9e77", "#d95f02", "#7570b3"))
+```
+]
+
+.pull-right[
+![](l5_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
+]
+---
+background-image: url(purrr.png)
+background-size: 100px
+background-position: 98% 6%
+
+# Workflow: model
+
+![700px](workflowds.png)
+
+
+## Illustration: Apply a linear model to each group
+
+```r
+nested_iris &lt;- group_by(iris, Species) %&gt;% nest()
+fit_model &lt;- function(df) lm(Sepal.Length ~ Sepal.Width, data = df)
+nested_iris &lt;- nested_iris %&gt;%
+ mutate(model = map(data, fit_model))
+
+nested_iris$model[[1]] # To print other two models nested_iris$model[[2]] nested_iris$model[[3]]
+```
+
+```
+
+Call:
+lm(formula = Sepal.Length ~ Sepal.Width, data = df)
+
+Coefficients:
+(Intercept)  Sepal.Width  
+     2.6390       0.6905  
+```
+
+---
+
+# Workflow: communicate
+
+![700px](workflowds.png)
+
+![](communicate.png)
+
+---
+
+background-image: url(tidyvflowpkg.png)
 background-size: contain
----
-
-background-image: url('mstep2.png')
 background-position: center
-background-size: contain
----
 
-# Monty Hall Problem: Rules
-
-- The host must always open a door that was not picked by the contestant.
-
---
-
-- The host must always open a door to reveal a goat and never the car.
-
---
-
-- The host must always offer the chance to switch between the originally chosen door and the remaining closed door.
-
-             Taken from https://en.wikipedia.org/wiki/Monty_Hall_problem
-
----
-class: center, middle, duke-orange
-
-# Let's play the game!
-
-Click here to play: http://www.math.ucsd.edu/~crypto/Monty/monty.html
-
-# Does switching increases the chance of winning the car?
-
+# Workflow: R packages
 
 ---
 
-We use `sample` function to assign `car`, `goat`, `goat`, behind the doors.
+class: duke-softblue,  middle, center
+
+# 1. Tibble
+
+# 2. Factor
+
+# 3. Pipe
+---
+
+class: duke-orange, middle, center
+
+# Tibble
+
+![](tibbleintro.jpeg)
+---
+background-image: url(tibble.png)
+background-size: 100px
+background-position: 98% 6%
+
+
+
+# Tibble
+
+- Tibbles are data frames.
+
+- A modern re-imagining of data frames.
+
+
+# Create a tibble
 
 
 ```r
-sample(c("car", "goat", "goat"))
+library(tidyverse) # library(tibble)
+first.tbl &lt;- tibble(height = c(150, 200, 160), weight = c(45, 60, 51))
+first.tbl
 ```
 
 ```
-[1] "goat" "goat" "car" 
+# A tibble: 3 x 2
+  height weight
+   &lt;dbl&gt;  &lt;dbl&gt;
+1    150     45
+2    200     60
+3    160     51
 ```
-
-```r
-sample(c("car", "goat", "goat"))
-```
-
-```
-[1] "goat" "car"  "goat"
-```
-
---
-Here is a function that will take player's initial choice of door.
 
 
 ```r
-select_first_door &lt;- function(door){
-  door.allocation &lt;- sample(c("car", "goat", "goat"))
-  door.allocation[door]
-}
-
-select_first_door(2) # My first choice is the 2nd door
+class(first.tbl)
 ```
 
 ```
-[1] "goat"
+[1] "tbl_df"     "tbl"        "data.frame"
+```
+
+---
+
+# Convert an existing dataframe to a tibble
+
+
+```r
+as_tibble(iris)
+```
+
+```
+# A tibble: 150 x 5
+   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  
+ 1          5.1         3.5          1.4         0.2 setosa 
+ 2          4.9         3            1.4         0.2 setosa 
+ 3          4.7         3.2          1.3         0.2 setosa 
+ 4          4.6         3.1          1.5         0.2 setosa 
+ 5          5           3.6          1.4         0.2 setosa 
+ 6          5.4         3.9          1.7         0.4 setosa 
+ 7          4.6         3.4          1.4         0.3 setosa 
+ 8          5           3.4          1.5         0.2 setosa 
+ 9          4.4         2.9          1.4         0.2 setosa 
+10          4.9         3.1          1.5         0.1 setosa 
+# … with 140 more rows
+```
+
+---
+
+# Convert a tibble to a dataframe
+
+
+```r
+first.tbl &lt;- tibble(height = c(150, 200, 160), weight = c(45, 60, 51))
+class(first.tbl)
+```
+
+```
+[1] "tbl_df"     "tbl"        "data.frame"
+```
+
+```r
+first.tbl.df &lt;- as.data.frame(first.tbl)
+class(first.tbl.df)
+```
+
+```
+[1] "data.frame"
+```
+
+---
+
+# tibble vs. data.frame
+
+- Output
+
+**tibble**
+
+
+```r
+first.tbl &lt;- tibble(height = c(150, 200, 160), weight = c(45, 60, 51))
+first.tbl
+```
+
+```
+# A tibble: 3 x 2
+  height weight
+   &lt;dbl&gt;  &lt;dbl&gt;
+1    150     45
+2    200     60
+3    160     51
+```
+
+**data.frame**
+
+```r
+dataframe &lt;- data.frame(height = c(150, 200, 160), weight = c(45, 60, 51))
+dataframe
+```
+
+```
+  height weight
+1    150     45
+2    200     60
+3    160     51
+```
+
+---
+
+# tibble vs data.frame (cont.)
+
+- You can create new variables that are functions of existing variables.
+
+**tibble**
+
+
+```r
+first.tbl &lt;- tibble(height = c(150, 200, 160), weight = c(45, 60, 51), 
+                    bmi = (weight)/height^2)
+first.tbl
+```
+
+```
+# A tibble: 3 x 3
+  height weight     bmi
+   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+1    150     45 0.002  
+2    200     60 0.0015 
+3    160     51 0.00199
+```
+
+**data.frame**
+
+
+```r
+df &lt;- data.frame(height = c(150, 200, 160), weight = c(45, 60, 51), 
+                    bmi = (weight)/height^2) # Not working
+```
+
+You will get an error message 
+
+&lt;span style="color:red"&gt;`Error in data.frame(height = c(150, 200, 160), weight = c(45, 60, 51),  : 
+  object 'height' not found.`&lt;/span&gt;
+
+
+---
+
+# tibble vs data.frame (cont.)
+
+With `data.frame` this is how we should create a new variable from the existing columns.
+
+
+```r
+df &lt;- data.frame(height = c(150, 200, 160), weight = c(45, 60, 51)) 
+df$bmi &lt;- (df$weight)/(df$height^2)
+df
+```
+
+```
+  height weight         bmi
+1    150     45 0.002000000
+2    200     60 0.001500000
+3    160     51 0.001992188
+```
+
+---
+
+# tibble vs data.frame (cont.)
+
+- In contrast to data frames, the variable names in tibbles can contain spaces.
+
+**Example 1**
+
+
+```r
+tbl &lt;- tibble(`patient id` = c(1, 2, 3))
+tbl
+```
+
+```
+# A tibble: 3 x 1
+  `patient id`
+         &lt;dbl&gt;
+1            1
+2            2
+3            3
+```
+
+
+```r
+df &lt;- data.frame(`patient id` = c(1, 2, 3))
+df
+```
+
+```
+  patient.id
+1          1
+2          2
+3          3
+```
+
+---
+# tibble vs data.frame (cont.)
+
+- In contrast to data frames, the variable names in tibbles can start with a number.
+
+
+```r
+tbl &lt;- tibble(`1var` = c(1, 2, 3))
+tbl
+```
+
+```
+# A tibble: 3 x 1
+  `1var`
+   &lt;dbl&gt;
+1      1
+2      2
+3      3
+```
+
+
+```r
+df &lt;- data.frame(`1var` = c(1, 2, 3))
+df
+```
+
+```
+  X1var
+1     1
+2     2
+3     3
+```
+
+In general, tibbles do not change the names of input variables and do not use row names.
+
+---
+
+# tibble vs data.frame (cont.)
+
+A tibble can have columns that are lists.
+
+
+```r
+tbl &lt;- tibble (x = 1:3, y = list(1:3, 1:4, 1:10))
+tbl
+```
+
+```
+# A tibble: 3 x 2
+      x y         
+  &lt;int&gt; &lt;list&gt;    
+1     1 &lt;int [3]&gt; 
+2     2 &lt;int [4]&gt; 
+3     3 &lt;int [10]&gt;
+```
+
+This feature is not available in `data.frame`.
+
+If we try to do this with a traditional data frame we get an error.
+
+
+```r
+df &lt;- data.frame(x = 1:3, y = list(1:3, 1:4, 1:10)) ## Not working, error
+```
+
+&lt;span style="color:red"&gt;`Error in (function (..., row.names = NULL, check.rows = FALSE, check.names = TRUE,  : arguments imply differing number of rows: 3, 4, 10`&lt;/span&gt;
+
+---
+
+# Subsetting: tibble vs data.frame
+
+**Subsetting single columns:**
+
+.pull-left[
+
+## data frame
+
+
+```r
+df &lt;- data.frame(x = 1:3, 
+                 yz = c(10, 20, 30))
+df
+```
+
+```
+  x yz
+1 1 10
+2 2 20
+3 3 30
+```
+
+```r
+df[, "x"]
+```
+
+```
+[1] 1 2 3
+```
+
+```r
+df[, "x", drop=FALSE]
+```
+
+```
+  x
+1 1
+2 2
+3 3
+```
+
+]
+
+
+.pull-right[
+
+## tibble
+
+
+```r
+tbl &lt;- tibble(x = 1:3, 
+              yz = c(10, 20, 30))
+tbl
+```
+
+```
+# A tibble: 3 x 2
+      x    yz
+  &lt;int&gt; &lt;dbl&gt;
+1     1    10
+2     2    20
+3     3    30
+```
+
+```r
+tbl[, "x"]
+```
+
+```
+# A tibble: 3 x 1
+      x
+  &lt;int&gt;
+1     1
+2     2
+3     3
+```
+
+
+]
+
+---
+
+**Subsetting single columns (cont):**
+
+.pull-left[
+
+## tibble
+
+
+```r
+tbl &lt;- tibble(x = 1:3, 
+              yz = c(10, 20, 30))
+tbl
+```
+
+```
+# A tibble: 3 x 2
+      x    yz
+  &lt;int&gt; &lt;dbl&gt;
+1     1    10
+2     2    20
+3     3    30
+```
+
+```r
+tbl[, "x"]
+```
+
+```
+# A tibble: 3 x 1
+      x
+  &lt;int&gt;
+1     1
+2     2
+3     3
+```
+
+
+]
+
+.pull-right[
+
+
+
+```r
+# Method 1
+tbl[, "x", drop = TRUE]
+```
+
+```
+[1] 1 2 3
+```
+
+```r
+# Method 2
+as.data.frame(tbl)[, "x"]
+```
+
+```
+[1] 1 2 3
+```
+
+
+]
+
+---
+# Subsetting single rows with the drop argument
+
+.pull-left[
+
+## dataframe
+
+
+```r
+df[1, , drop = TRUE]
+```
+
+```
+$x
+[1] 1
+
+$yz
+[1] 10
+```
+
+]
+
+
+.pull-right[
+
+## tibble
+
+
+```r
+tbl[1, , drop = TRUE]
+```
+
+```
+# A tibble: 1 x 2
+      x    yz
+  &lt;int&gt; &lt;dbl&gt;
+1     1    10
+```
+
+```r
+as.list(tbl[1, ])
+```
+
+```
+$x
+[1] 1
+
+$yz
+[1] 10
+```
+
+]
+
+---
+
+# Accessing non-existent columns
+
+.pull-left[
+
+## dataframe
+
+
+```r
+df$y
+```
+
+```
+[1] 10 20 30
+```
+
+```r
+df[["y", exact = FALSE]]
+```
+
+```
+[1] 10 20 30
+```
+
+]
+
+.pull-right[
+
+## tibble
+
+
+```r
+tbl$y
+```
+
+```
+Warning: Unknown or uninitialised column: `y`.
+```
+
+```
+NULL
+```
+
+```r
+tbl[["y", exact = FALSE]]
+```
+
+```
+Warning: `exact` ignored.
+```
+
+```
+NULL
+```
+
+]
+
+---
+
+## Functions work with both tibbles and dataframes
+
+```r
+names(), colnames(), rownames(), ncol(), nrow(),
+length() # length of the underlying list
+```
+.pull-left[
+
+```r
+tb &lt;- tibble(a = 1:3)
+names(tb)
+```
+
+```
+[1] "a"
+```
+
+```r
+colnames(tb)
+```
+
+```
+[1] "a"
+```
+
+```r
+rownames(tb)
+```
+
+```
+[1] "1" "2" "3"
+```
+
+```r
+nrow(tb); ncol(tb); length(tb)
+```
+
+```
+[1] 3
+```
+
+```
+[1] 1
+```
+
+```
+[1] 1
+```
+]
+
+.pull-right[
+
+```r
+df &lt;- data.frame(a = 1:3)
+names(df)
+```
+
+```
+[1] "a"
+```
+
+```r
+colnames(df)
+```
+
+```
+[1] "a"
+```
+
+```r
+rownames(df)
+```
+
+```
+[1] "1" "2" "3"
+```
+
+```r
+nrow(df); ncol(df); length(df)
+```
+
+```
+[1] 3
+```
+
+```
+[1] 1
+```
+
+```
+[1] 1
+```
+]
+---
+
+However, when using tibble, we can use some additional commands
+
+
+```r
+is.tibble(tb)
+```
+
+```
+Warning: `is.tibble()` is deprecated as of tibble 2.0.0.
+Please use `is_tibble()` instead.
+This warning is displayed once every 8 hours.
+Call `lifecycle::last_warnings()` to see where this warning was generated.
+```
+
+```
+[1] TRUE
+```
+
+```r
+is_tibble(tb) # is.tibble()` is deprecated as of tibble 2.0.0, Please use `is_tibble()` instead of is.tibble
+```
+
+```
+[1] TRUE
+```
+
+```r
+glimpse(tb)
+```
+
+```
+Rows: 3
+Columns: 1
+$ a &lt;int&gt; 1, 2, 3
+```
+
+---
+
+class: duke-orange, middle, center
+
+# Factors
+
+
+---
+# Factors
+
+- A vector that is used to store categorical variables.
+
+- It can only contain predefined values. Hence, factors are useful when you know the possible values a variable may take. 
+
+## Creating a factor vector
+
+
+```r
+grades &lt;- factor(c("A", "A", "A", "C", "B"))
+grades
+```
+
+```
+[1] A A A C B
+Levels: A B C
+```
+--
+Now let's check the class type
+
+
+```r
+class(grades) # It's a factor
+```
+
+```
+[1] "factor"
+```
+--
+To obtain all levels
+
+
+```r
+levels(grades)
+```
+
+```
+[1] "A" "B" "C"
+```
+
+---
+## Creating a factor vector (cont)
+
+- With factors all possible values of the variables can be defined under levels.
+
+
+```r
+grade_factor_vctr &lt;- 
+  factor(c("A", "D", "A", "C", "B"), 
+         levels = c("A", "B", "C", "D", "E"))
+grade_factor_vctr
+```
+
+```
+[1] A D A C B
+Levels: A B C D E
+```
+
+```r
+levels(grade_factor_vctr)
+```
+
+```
+[1] "A" "B" "C" "D" "E"
+```
+
+```r
+class(levels(grade_factor_vctr))
+```
+
+```
+[1] "character"
+```
+
+---
+
+# Character vector vs Factor
+
+- Observe the differences in outputs. Factor prints all possible levels of the variable.
+
+**Character vector**
+
+
+```r
+grade_character_vctr &lt;- 
+  c("A", "D", "A", "C", "B")
+grade_character_vctr
+```
+
+```
+[1] "A" "D" "A" "C" "B"
+```
+
+**Factor vector**
+
+
+```r
+grade_factor_vctr &lt;- 
+  factor(c("A", "D", "A", "C", "B"), 
+         levels = c("A", "B", "C", "D", "E"))
+grade_factor_vctr
+```
+
+```
+[1] A D A C B
+Levels: A B C D E
+```
+
+---
+# Character vector vs Factor (cont.)
+
+- Factors behave like character vectors but they are
+actually integers.
+
+**Character vector**
+
+
+```r
+typeof(grade_character_vctr)
+```
+
+```
+[1] "character"
+```
+
+**Factor vector**
+
+
+```r
+typeof(grade_factor_vctr)
+```
+
+```
+[1] "integer"
+```
+
+
+
+---
+
+
+# Character vector vs Factor (cont.)
+
+
+- Let's create a contingency table with `table` function.
+
+**Character vector output with table function**
+
+
+```r
+grade_character_vctr &lt;- c("A", "D", "A", "C", "B")
+table(grade_character_vctr)
+```
+
+```
+grade_character_vctr
+A B C D 
+2 1 1 1 
+```
+
+**Factor vector (with levels) output with table function**
+
+
+```r
+grade_factor_vctr &lt;- 
+  factor(c("A", "D", "A", "C", "B"), 
+         levels = c("A", "B", "C", "D", "E"))
+table(grade_factor_vctr)
+```
+
+```
+grade_factor_vctr
+A B C D E 
+2 1 1 1 0 
+```
+
+- Output corresponds to factor prints counts for all possible levels of the variable. Hence, with factors it is obvious when some levels contain no observations. 
+
+---
+# Character vector vs Factor (cont.)
+
+- With factors you can't use values that are not listed in the levels, but with character vectors there is no such restrictions.
+
+**Character vector**
+
+
+```r
+grade_character_vctr[2] &lt;- "A+"
+grade_character_vctr
+```
+
+```
+[1] "A"  "A+" "A"  "C"  "B" 
+```
+
+**Factor vector**
+
+
+```r
+grade_factor_vctr[2] &lt;- "A+"
+```
+
+```
+Warning in `[&lt;-.factor`(`*tmp*`, 2, value = "A+"): invalid factor level, NA
+generated
+```
+
+```r
+grade_factor_vctr
+```
+
+```
+[1] A    &lt;NA&gt; A    C    B   
+Levels: A B C D E
+```
+---
+# Modify factor levels
+
+This our factor
+
+
+```r
+grade_factor_vctr
+```
+
+```
+[1] A    &lt;NA&gt; A    C    B   
+Levels: A B C D E
+```
+
+## Change labels
+
+
+```r
+levels(grade_factor_vctr) &lt;- 
+  c("Excellent", "Good", "Average", "Poor", "Fail")
+grade_factor_vctr
+```
+
+```
+[1] Excellent &lt;NA&gt;      Excellent Average   Good     
+Levels: Excellent Good Average Poor Fail
+```
+## Reverse the level arrangement
+
+
+```r
+levels(grade_factor_vctr) &lt;- rev(levels(grade_factor_vctr))
+grade_factor_vctr
+```
+
+```
+[1] Fail    &lt;NA&gt;    Fail    Average Poor   
+Levels: Fail Poor Average Good Excellent
+```
+
+---
+
+# Order of factor levels
+
+**Default order of levels**
+
+
+```r
+fv1 &lt;- factor(c("D","E","E","A", "B", "C"))
+fv1
+```
+
+```
+[1] D E E A B C
+Levels: A B C D E
+```
+
+
+```r
+fv2 &lt;- factor(c("1T","2T","3A","4A", "5A", "6B", "3A"))
+fv2
+```
+
+```
+[1] 1T 2T 3A 4A 5A 6B 3A
+Levels: 1T 2T 3A 4A 5A 6B
 ```
 
 --
 
-Modify your function so that it shows the player the door that the host selects. Hint: `sample` function act as a host.
+
+```r
+qplot(fv2, geom = "bar")
+```
+
+![](l5_files/figure-html/unnamed-chunk-47-1.png)&lt;!-- --&gt;
+
+
+---
+# Order of factor levels (cont.)
+
+You can change the order of levels
+
+
+```r
+fv2 &lt;- factor(c("1T","2T","3A","4A", "5A", "6B", "3A"), 
+              levels = c("3A", "4A", "5A", "6B", "1T", "2T"))
+fv2
+```
+
+```
+[1] 1T 2T 3A 4A 5A 6B 3A
+Levels: 3A 4A 5A 6B 1T 2T
+```
+
+```r
+qplot(fv2, geom = "bar")
+```
+
+![](l5_files/figure-html/unnamed-chunk-48-1.png)&lt;!-- --&gt;
 
 ---
 
-Modify your function so that it includes the player strategy (switch or stay) as an input, and returns the appropriate result.
+Note that tibbles do not change the types of input variables (e.g., strings are not converted to factors by default).
 
-- Run your function 1000 times, for each strategy and report the proportion of times that car is selected. (You could put this
-in a loop and compute the proportion of times car shows.) 
-- How many times would you expect car to be selected out of 1000 runs? 
+
+```r
+tbl &lt;- tibble(x1 = c("setosa", "versicolor", "virginica", "setosa"))
+tbl
+```
+
+```
+# A tibble: 4 x 1
+  x1        
+  &lt;chr&gt;     
+1 setosa    
+2 versicolor
+3 virginica 
+4 setosa    
+```
+
+
+```r
+df &lt;- data.frame(x1 = c("setosa", "versicolor", "virginica", "setosa"))
+df
+```
+
+```
+          x1
+1     setosa
+2 versicolor
+3  virginica
+4     setosa
+```
+
+```r
+class(df$x1)
+```
+
+```
+[1] "character"
+```
 
 ---
 
-# Approximating Pi = 3.14616
+class: duke-orange, middle, center
 
-`$$\frac{A_{circle}}{A_{square}}=\frac{\pi r^2}{4r^2}$$`
-Equation of a circle center around 0: `\(x^2+y^2=r^2\)`
+# Pipe operator: %&gt;%
+![](magrittrpic.jpeg)
 
-&lt;img src="monte_carlo_pi.png" width="400"&gt;
+---
+background-image: url(magrittrlogo.png)
+background-size: 100px
+background-position: 98% 6%
 
-Write a function to approximate `\(\pi\)` using Monte Carlo simulations.
+# Pipe operator: %&gt;%
+
+## Required package: `magrittr` 
+
+
+```r
+install.packages("magrittr")
+library(magrittr)
+```
+
+
+
+## What does it do? 
+
+It takes whatever is on the left-hand-side of the pipe and makes it the first argument of whatever function is on the right-hand-side of the pipe.
+
+
+For instance,
+
+
+```r
+mean(1:10)
+```
+
+```
+[1] 5.5
+```
+
+can be written as
+
+
+```r
+1:10 %&gt;% mean()
+```
+
+```
+[1] 5.5
+```
 
 ---
 
+# Pipe operator: %&gt;%
 
-# Random Variable Generation: Inverse-Transform Method
+![](pipeillustration.png)
 
-Let `\(X\)` be a random variable with CDF `\(F\)`. Since `\(F\)` is a nondecreasing function, the inverse function `\(F^{-1}\)` may be defined as
-`$$F^{-1}(y)=inf\{x: F(x)\geq y\}, 0 \leq y \leq 1.$$`
+## Illustrations
 
-It is easy to show that if `\(U \sim U(0, 1)\)`, then
+1. `x %&gt;% f(y)` turns into `f(x, y)`
 
-`$$X=F^{-1}(U)$$`
+1. `x %&gt;% f(y) %&gt;% g(z)` turns into `g(f(x, y), z)`
 
-has CDF `\(F\)`. Namely, since `\(F\)` is invertible and `\(P(U \leq u)=u\)`, we have
+---
+# Why %&gt;%
 
-`$$P(X \leq x)=P(F^{-1}(U)\leq x)=P(U\leq F(x))=F(x)$$`
+- This helps to make your code more readable.
 
+**Method 1: Without using pipe (hard to read)**
+
+
+```r
+colSums(matrix(c(1, 2, 3, 4, 8, 9, 10, 12), nrow=2))
+```
+
+```
+[1]  3  7 17 22
+```
+
+**Method 2: Using pipe (easy to read)**
+
+
+```r
+c(1, 2, 3, 4, 8, 9, 10, 12) %&gt;%
+  matrix( , nrow = 2) %&gt;%
+  colSums()
+```
+
+```
+[1]  3  7 17 22
+```
+
+or
+
+
+```r
+c(1, 2, 3, 4, 8, 9, 10, 12) %&gt;%
+  matrix(nrow = 2) %&gt;% # remove comma
+  colSums()
+```
+
+```
+[1]  3  7 17 22
+```
+
+---
+
+# Rules
+
+
+```r
+library(tidyverse) # to use as_tibble
+library(magrittr) # to use %&gt;%
+df &lt;- data.frame(x1 = 1:3, x2 = 4:6)
+```
+
+.pull-left[
+
+**Rule 1**
+
+```r
+head(df) 
+df %&gt;% head()
+
+```
+
+
+```
+  x1 x2
+1  1  4
+2  2  5
+3  3  6
+```
+
+**Rule 2**
+
+```r
+head(df, n = 2)  
+df %&gt;% head(n = 2)
+
+```
+
+
+```
+  x1 x2
+1  1  4
+2  2  5
+```
+
+]
+
+.pull-right[
+
+**Rule 3**
+
+```r
+head(df, n = 2)
+2 %&gt;% head(df, n = .)
+
+```
+
+
+```
+  x1 x2
+1  1  4
+2  2  5
+```
+
+
+**Rule 4**
+```r
+head(as_tibble(df), n = 2)
+df %&gt;% as_tibble() %&gt;%
+head(n = 2)
+
+```
+
+
+
+```
+# A tibble: 2 x 2
+     x1    x2
+  &lt;int&gt; &lt;int&gt;
+1     1     4
+2     2     5
+```
+
+]
+
+---
+
+# Rules (cont.)
+
+**Rule 5: subsetting**
+
+```r
+df$x1
+df %&gt;% .$x1
+```
+
+
+```
+[1] 1 2 3
+```
+
+or 
+
+```r
+df[["x1"]]
+df %&gt;% .[["x1"]]
+```
+
+
+
+```
+[1] 1 2 3
+```
+
+or 
+
+```r
+df[[1]]
+df %&gt;% .[[1]]
+```
+
+
+```
+[1] 1 2 3
+```
+
+---
+
+# Offline reading materials
+
+Type the following codes to see more examples:
+
+
+```r
+vignette("magrittr")
+vignette("tibble")
+```
+
+---
+# Data import with readr
+
+## R package
+
+`readr`: part of the core tidyverse.
+
+
+```r
+library(tidyverse)
+```
+
+## `readr` data import functions
+
+- `read_csv`: reads comma-delimited files.
+
+- `read_csv2`: reads semicolon-separated files
+
+- `read_tsv`: reads tab-delimited files
+
+
+---
+
+# 🛠 Import data from a .csv file
+
+
+## Syntax
+
+
+```r
+datasetname &lt;- read_csv("include_file_path")
+```
+
+When you run `read_csv`, it prints out the names and type of each column.
+
+.full-width[.content-box-yellow[Switch to R]]
+
+  
+---
+
+# If the file is saved inside the project folder
+
+.full-width[.content-box-green[Demo: In class]]
+
+
+# If the file is saved outside the project folder
+
+.full-width[.content-box-green[Demo: In class]]
+
+---
+
+# 🛠 Importing csv file from a website
+
+## Syntax
+
+```r
+datasetname &lt;- read_csv("include url here")
+```
+
+## Example
+
+
+```r
+url &lt;- "https://thiyanga.netlify.app/project/datasets/foodlabel.csv"
+foodlabel &lt;- read_csv(url)
+```
+
+```
+Warning: Missing column names filled in: 'X43' [43]
+```
+
+```
+Parsed with column specification:
+cols(
+  .default = col_double()
+)
+```
+
+```
+See spec(...) for full column specifications.
+```
+
+
+```r
+head(foodlabel, 1)
+```
+
+```
+# A tibble: 1 x 80
+  Gender   Age Education Employment Income Housesize children marital fshopper
+   &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
+1      1    22         5          4      3         5        2       0        0
+# … with 71 more variables: mplanner &lt;dbl&gt;, place &lt;dbl&gt;, FA &lt;dbl&gt;,
+#   Diabetes &lt;dbl&gt;, `Metabolic cyndrents` &lt;dbl&gt;, Other &lt;dbl&gt;, specific &lt;dbl&gt;,
+#   job1 &lt;dbl&gt;, job2 &lt;dbl&gt;, Exercise &lt;dbl&gt;, Health &lt;dbl&gt;, taste &lt;dbl&gt;,
+#   easy &lt;dbl&gt;, familiarity &lt;dbl&gt;, friends &lt;dbl&gt;, Useful &lt;dbl&gt;, Easiness &lt;dbl&gt;,
+#   Sufficient &lt;dbl&gt;, Trusfulness &lt;dbl&gt;, Clear &lt;dbl&gt;, `attractive pack` &lt;dbl&gt;,
+#   `hc/nutriclaims` &lt;dbl&gt;, graphical &lt;dbl&gt;, `Free/prize` &lt;dbl&gt;, source &lt;dbl&gt;,
+#   netquan &lt;dbl&gt;, `low in fat` &lt;dbl&gt;, `low in cho` &lt;dbl&gt;, sodium &lt;dbl&gt;, `e
+#   labels` &lt;dbl&gt;, place2 &lt;dbl&gt;, fa2 &lt;dbl&gt;, Health_1 &lt;dbl&gt;, X43 &lt;dbl&gt;,
+#   f1 &lt;dbl&gt;, f2 &lt;dbl&gt;, f3 &lt;dbl&gt;, f4 &lt;dbl&gt;, f5 &lt;dbl&gt;, f6 &lt;dbl&gt;, f7 &lt;dbl&gt;,
+#   f8 &lt;dbl&gt;, f9 &lt;dbl&gt;, f10 &lt;dbl&gt;, f11 &lt;dbl&gt;, f12 &lt;dbl&gt;, f13 &lt;dbl&gt;, f14 &lt;dbl&gt;,
+#   f15 &lt;dbl&gt;, f16 &lt;dbl&gt;, f17 &lt;dbl&gt;, f18 &lt;dbl&gt;, i1 &lt;dbl&gt;, i2 &lt;dbl&gt;, i3 &lt;dbl&gt;,
+#   i4 &lt;dbl&gt;, i5 &lt;dbl&gt;, i6 &lt;dbl&gt;, i7 &lt;dbl&gt;, i8 &lt;dbl&gt;, i9 &lt;dbl&gt;, i10 &lt;dbl&gt;,
+#   i11 &lt;dbl&gt;, i12 &lt;dbl&gt;, i13 &lt;dbl&gt;, i14 &lt;dbl&gt;, i15 &lt;dbl&gt;, i16 &lt;dbl&gt;,
+#   i17 &lt;dbl&gt;, i18 &lt;dbl&gt;, cluster &lt;dbl&gt;
+```
+---
+
+# `read.csv` and `read_csv`
+
+*  `read.csv` is in base R.
+
+*  `read_csv` is in tidyverse.
+
+*  `read.csv()` performs a similar job to `read_csv()`.
+
+* `read_csv()` works well with other parts of the tidyverse.
+
+*  `read_csv()` is faster than `read.csv()`.
+
+*  `read_csv()` will always read variables containing text as character variable.  In contrast, the base R function `read.csv()` will, by default, convert any character variable to a factor.
+
+&lt;!--This is often not what you want, and can be overridden by passing the option stringsAsFactors = FALSE to read.csv().--&gt;
+
+
+---
+
+# 🛠 Writing to a File
+
+- We can save tibble (or dataframe) to a csv file, using `write_csv()`.
+
+- `write_csv()` is in the `readr` package.
+
+
+## Syntax
+
+```r
+write_csv(name_of_the_data_set_you_want_to_save, "path_to_write_to")
+```
+
+## Example
+
+```r
+data(iris)
+# This will save inside your project folder
+write_csv(iris, "iris.csv") 
+# This will save inside the data folder which is inside your project folder
+write_csv(iris, "data/iris.csv") 
+```
+
+.full-width[.content-box-yellow[Switch to R]]
+
+
+.full-width[.content-box-green[Demo: In-class]]
+
+
+---
+
+# 🛠 Importing Excel .xlsx files
+
+## Syntax
+
+```r
+library(readxl)
+mydata &lt;- read_xlsx("file_path")
+```
+
+.full-width[.content-box-yellow[Switch to R]]
+
+
+.full-width[.content-box-green[Demo: In class]]
+
+---
+# Importing SAS, SPSS and STATA files
+
+## SAS
+
+```r
+read_sas("mtcars.sas7bdat")
+write_sas(mtcars, "mtcars.sas7bdat")
+```
+## SPSS
+
+```r
+read_sav("mtcars.sav")
+write_sav(mtcars, "mtcars.sav")
+
+```
+## Stata
+```r
+read_dta("mtcars.dta")
+write_dta(mtcars, "mtcars.dta")
+```
+
+---
+
+# Importing other types of data
+
+
+- `feather`: for sharing with Python and other languages
+
+- `httr`: for web apis
+
+- `jsonlite`: for JSON
+
+- `rvest`: for web scraping
+
+- `xml2`: for XML
+
+.full-width[.content-box-blue[Working with feather, httr, jsonlite, rvest and xml2 is beyond the scope of the course.]]
 
 ---
 
 class: center, middle
 
-Slides available at: hellor.netlify.com
+Slides available at: https://thiyanga.netlify.app/courses/rmsc2020/contentr/
 
 All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
     </textarea>
