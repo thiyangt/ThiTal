@@ -58,7 +58,7 @@ Here is your road map for the course!
 
 - Introduction to the tidyverse, pipe operator and data import and export
 
-| 📚 [Slides](/Slides/2020s1STA5173_0/l4.html)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚 [Slides](/Slides/2020s1STA5173_0/l5.html)  	| 📒 [Reading](https://r4ds.had.co.nz/introduction.html)  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
