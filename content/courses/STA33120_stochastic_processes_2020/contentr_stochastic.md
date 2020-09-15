@@ -41,7 +41,7 @@ Holiday
 
 - [Continuous Parameter Markov Chains](/Slides/2020s2StochasticProcesses/5_stochastic_processes_2020.pdf)
 
-### Week 6
+### Week 7
 
  📚 In-class assignment 
 
