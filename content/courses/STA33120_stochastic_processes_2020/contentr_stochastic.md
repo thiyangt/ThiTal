@@ -41,5 +41,11 @@ Holiday
 
 - [Continuous Parameter Markov Chains](/Slides/2020s2StochasticProcesses/5_stochastic_processes_2020.pdf)
 
+### Week 6
+
+ 📚 In-class assignment 
+
+- [Poisson Process (cont.), Interarrival and Waiting Time Distributions](/Slides/2020s2StochasticProcesses/6_stochastic_processes_2020.pdf)
+
 
 > END
