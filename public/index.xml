@@ -89,7 +89,7 @@
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;week-2&#34;&gt;Week 2&lt;/h3&gt;
+&lt;h3 id=&#34;week-2---3&#34;&gt;Week 2 - 3&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Simple linear regression (cont.)&lt;/p&gt;
@@ -114,7 +114,7 @@
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;week-3&#34;&gt;Week 3&lt;/h3&gt;
+&lt;h3 id=&#34;week-4&#34;&gt;Week 4&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Simple linear regression (cont.)&lt;/p&gt;
@@ -126,9 +126,6 @@
 &lt;p&gt;Coefficient of determination&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Basics of R programming&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;table&gt;
@@ -142,14 +139,15 @@
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;week-4&#34;&gt;Week 4&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Week 5-6: Discussion/practical (in class)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;week-5&#34;&gt;Week 5&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;- Hypothesis testing on the slope and intercept
 
 - Interval estimation in simple linear regression  
 
 - Prediction of new observations: point estimates and prediction intervals
-
-- Coefficient of determination
 
 - Regression through the origin
 &lt;/code&gt;&lt;/pre&gt;
@@ -186,23 +184,6 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚Slides&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 Problems&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;/table&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Week 5-6: Discussion/practical (in class)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;week-5&#34;&gt;Week 5&lt;/h3&gt;
-&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Model adequacy checking&lt;/p&gt;
 &lt;ul&gt;

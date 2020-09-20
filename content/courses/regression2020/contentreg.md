@@ -32,7 +32,7 @@ Here is your road map for the course!
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
-### Week 2
+### Week 2 - 3
 
 - Simple linear regression (cont.)
 
@@ -45,7 +45,7 @@ Here is your road map for the course!
 | 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression2.html#1)  	| 📒 [Reading-Ch2/2.2.2 Introduction to Linear Regression Analysis]  	| 📊 Data Sets - `alr3::heights`	| 📎 [Problems](https://edify-thiyanga.netlify.app/regression/tutorial_1.pdf) 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
-### Week 3
+### Week 4
 
 - Simple linear regression (cont.)
 
@@ -53,12 +53,14 @@ Here is your road map for the course!
   
     - Coefficient of determination
     
-- Basics of R programming  
 
 | 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression3.html#1)  	| 📒 Reading - Ch1 (2.6) and Ch4 (4.2.3)  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
-### Week 4
+
+> Week 5-6: Discussion/practical (in class)
+
+### Week 5
 
     - Hypothesis testing on the slope and intercept
     
@@ -66,10 +68,9 @@ Here is your road map for the course!
     
     - Prediction of new observations: point estimates and prediction intervals
     
-    - Coefficient of determination
-    
     - Regression through the origin
 
+ 
 - Multiple linear regression  
 
     - Introduction
@@ -89,13 +90,6 @@ Here is your road map for the course!
     - Prediction of new observations
     
     - Standardized regression coefficients
-
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
-|:-:	|:-:	|:-:	|:-:	|:-:	|
-
-> Week 5-6: Discussion/practical (in class)
-
-### Week 5
 
 - Model adequacy checking
 
