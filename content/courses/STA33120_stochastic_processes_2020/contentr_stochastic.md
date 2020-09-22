@@ -33,7 +33,7 @@ Here is your road map for the course!
 
 - [Limiting Probabilities](/Slides/2020s2StochasticProcesses/4_stochastic_processes_2020.pdf)
 
-### Week (1 September 2020)
+### Week ( 1 September 2020 )
 
 Holiday
 
@@ -41,9 +41,13 @@ Holiday
 
 - [Continuous Parameter Markov Chains](/Slides/2020s2StochasticProcesses/5_stochastic_processes_2020.pdf)
 
-### Week 7
+### Week 7 - 8
+
+##### Week 7
 
  📚 In-class assignment 
+ 
+##### Week 7 - 8 
 
 - [Poisson Process (cont.), Interarrival and Waiting Time Distributions](/Slides/2020s2StochasticProcesses/6_stochastic_processes_2020.pdf)
 
