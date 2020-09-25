@@ -48,10 +48,12 @@ Here is your road map for the course!
 ### Week 4
 
 - Simple linear regression (cont.)
-
+    
     - Model adequacy checking
-  
-    - Coefficient of determination
+
+    - Introduction
+    
+    - Residual Analysis
     
 
 | 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression3.html#1)  	| 📒 Reading - Ch1 (2.6) and Ch4 (4.2.3)  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
@@ -62,13 +64,24 @@ Here is your road map for the course!
 
 ### Week 5
 
-    - Hypothesis testing on the slope and intercept
+  - Coefficient of determination
+
+  - Hypothesis testing on the slope and intercept
     
-    - Interval estimation in simple linear regression  
+  - Interval estimation in simple linear regression  
     
-    - Prediction of new observations: point estimates and prediction intervals
+  - Prediction of new observations: point estimates and prediction intervals
     
-    - Regression through the origin
+  - Regression through the origin
+
+  - Regression analysis with R
+
+| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+|:-:	|:-:	|:-:	|:-:	|:-:	|
+
+
+
+### Week 6
 
  
 - Multiple linear regression  
@@ -91,11 +104,7 @@ Here is your road map for the course!
     
     - Standardized regression coefficients
 
-- Model adequacy checking
 
-    - Introduction
-    
-    - Residual Analysis
     
 - Transformations 
 
@@ -105,20 +114,6 @@ Here is your road map for the course!
 
     - Analytical methods for selecting a transformation
     
-- Introduction to tidyverse
-
-- Introduction to exploratory data analysis with R
-
-- Regression analysis with R
-
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
-|:-:	|:-:	|:-:	|:-:	|:-:	|
-
-
-
-### Week 6
-
-- Detection and treatment of outliers
 
 - Problem discussion and Regression Analysis with R
 
@@ -134,6 +129,10 @@ Here is your road map for the course!
 > Week 8-12:  lectures (online)
 
 ### Week 8
+
+
+- Detection and treatment of outliers
+
 
 - Lack of fit of regression model
 
