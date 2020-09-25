@@ -76,7 +76,7 @@ Here is your road map for the course!
 
   - Regression analysis with R
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚 [Basics of R Programming](https://edify-thiyanga.netlify.app/regression/regression5.html)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
