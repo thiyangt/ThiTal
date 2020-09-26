@@ -42,7 +42,7 @@ Here is your road map for the course!
     
    
 
-| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression2.html#1)  	| 📒 [Reading-Ch2/2.2.2 Introduction to Linear Regression Analysis]  	| 📊 Data Sets - `alr3::heights`	| 📎 [Problems](https://edify-thiyanga.netlify.app/regression/tutorial_1.pdf) 	| 🔖Answers |
+| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression2.html#1)  	| 📒 [Reading-Ch2/2.2.2 Introduction to Linear Regression Analysis]  	| 📊 Data Sets - `alr3::heights`	| 📎 [Problems](https://edify-thiyanga.netlify.app/regression/tutorial_1.pdf) 	| 🔖Answers - Discussions |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 ### Week 4
@@ -76,7 +76,7 @@ Here is your road map for the course!
 
   - Regression analysis with R
 
-| 📚 [Slides](https://edify-thiyanga.netlify.app/regression/regression4.html#1) [Basics of R Programming](https://edify-thiyanga.netlify.app/regression/regression5.html)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚 [Slides](https://edify-thiyanga.netlify.app/regression/regression4.html#1) [Basics of R Programming](https://edify-thiyanga.netlify.app/regression/regression5.html)  	| 📒 Reading - Ch1 and Ch2 (2.3, 2.4) 	| 📊 Data Set - [house.csv](/data/house.csv)	| 📎 [Problems ](https://edify-thiyanga.netlify.app/regression/simplelinearregression2)	| 🔖Answers - Inclass discussion|
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
