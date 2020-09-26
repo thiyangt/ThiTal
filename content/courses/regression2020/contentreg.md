@@ -76,7 +76,7 @@ Here is your road map for the course!
 
   - Regression analysis with R
 
-| 📚 [1. Slides](https://edify-thiyanga.netlify.app/regression/regression4.html#1) [2. Basics of R Programming](https://edify-thiyanga.netlify.app/regression/regression5.html)  	| 📒 Reading - Ch1 and Ch2 (2.3, 2.4) 	| 📊 Data Set - [house.csv](/data/house.csv)	| 📎 [Problems ](https://edify-thiyanga.netlify.app/regression/simplelinearregression2) Ch2 Problems: 2.1 - 2.17	| 🔖Answers - Inclass discussion|
+| 📚 [1. Slides](https://edify-thiyanga.netlify.app/regression/regression4.html#1) [2. Basics of R Programming](https://edify-thiyanga.netlify.app/regression/regression5.html)  	| 📒 Reading - Ch1 and Ch2 (2.3, 2.4) 	| 📊 Data Set - [house.csv](/data/house.csv)	| 📎 [Problems ](https://edify-thiyanga.netlify.app/regression/simplelinearregression2) 	| 🔖 Additional problems - Ch2 Problems: 2.1 - 2.17|
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
