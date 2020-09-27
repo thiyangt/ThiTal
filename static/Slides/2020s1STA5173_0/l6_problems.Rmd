@@ -1,0 +1,219 @@
+---
+title: "Introduction to R Markdown"
+author: "Prepared by Dr Thiyanga Talagala"
+date: "27/09/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 1. Headings
+
+
+Headings are proceed by #. The number of # at the beginning of a line indicates the level of heading (main section, sub section, sub-sub section, etc.)
+
+Here is an illustration.
+
+# H1 level
+
+This is header level 1
+
+## H2 level
+
+This is header level 2
+
+### H3 level 
+
+This is header level 3 and so on.
+
+
+# 2. Text Formatting
+
+*This text is in italics.*
+_And so is this text._
+
+**This text is in bold.**
+__And so is this text.__
+
+~~This text is rendered with strikethrough.~~
+
+# 3. Bullet Points
+
+* Item 1
+
+* Item 2
+    * 2a
+    * 2b
+
+or
+
++ Item
++ Another item
+
+or
+
+- Item
+- Another item
+
+# 4. Numbered List
+
+1. Item one
+2. Item two
+3. Item three
+
+# 5. Code Chunks
+
+Example 1
+
+```{r}
+set.seed(20205)
+x <- rnorm(10)
+summary(x)
+```
+
+Example 2: Remove hashtag in the output
+
+```{r, comment=NA}
+set.seed(20205)
+x <- rnorm(10)
+summary(x)
+```
+
+Example 3: Display only the output
+
+```{r, comment=NA, echo=FALSE}
+set.seed(20205)
+x <- rnorm(10)
+summary(x)
+```
+
+Example 4: Display only the code
+
+```{r, comment=NA, eval=FALSE}
+set.seed(20205)
+x <- rnorm(10)
+summary(x)
+```
+
+Example 5: Code chunk with figures
+
+```{r}
+library(tidyverse)
+qplot(data=iris, x=Sepal.Length, y=Sepal.Width, geom="point")
+```
+
+Example 6: Hide warnings and messages
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+qplot(data=iris, x=Sepal.Length, y=Sepal.Width, geom="point")
+```
+
+Example 7: Include a figure caption
+
+```{r, message=FALSE, warning=FALSE, fig.cap="Scatterplot of Sepal Width vs Sepal Length"}
+
+qplot(data=iris, x=Sepal.Length, y=Sepal.Width, geom="point")
+```
+
+Example 8: Control figure size
+
+```{r, message=FALSE, warning=FALSE, fig.cap="Scatterplot of Sepal Width vs Sepal Length", out.width="50%", out.height="50%"}
+
+qplot(data=iris, x=Sepal.Length, y=Sepal.Width, geom="point")
+```
+
+# 6. Mathematical Formulae
+
+The general formula for the probability density function of the normal distribution with mean $\mu$ and variance $\sigma$ is given by
+
+$$
+f_X(x) = \frac{1}{\sigma\sqrt{(2\pi)}} e^{-(x-\mu)^2/2\sigma^2}.
+$$
+
+## More examples
+
+Example 1: Fraction (\frac{}{})
+
+$$\frac{a}{b}=\frac{c}{b}$$
+
+Example 2: Bold math symbols
+
+$$\mathbf{(X'X)^{-1}X'Y}$$
+
+Example 3: Summation, Superscript (^) and Subscript (_)
+
+$$\sum_{i=1}^{n}{x_i^2}$$
+
+Example 4: Equation with multiple lines
+
+Example 4.1:
+
+\[
+\begin{eqnarray}
+P(|X-\mu| > k) & = & P(|X-\mu|^2 > k^2)\\
+& \leq & \frac{\mathbb{E}\left[|X-\mu|^2\right]}{k^2}\\
+& \leq & \frac{\mathrm{Var}[X]}{k^2}
+\end{eqnarray}
+\]
+
+
+Example 4.2:
+
+\[
+\begin{eqnarray}
+X & \sim & \mathrm{N}(0,1)\\
+Y & \sim & \chi^2_{n-p}\\
+R & \equiv & X/Y \sim t_{n-p}
+\end{eqnarray}
+\]
+
+
+# Example 5: Parenthesis (\left(...\right))
+
+$$\left(\sum_{i=1}^{n}{i}\right)^2$$
+
+# 7. Tables
+
+**Method 1**
+
+```{r}
+library(knitr)
+kable(iris[1:5,], caption="A knitr kable 1")
+
+```
+
+```{r}
+kable(summary(iris), caption="A knitr kable 2")
+
+```
+
+**Method 2**
+
+Colons can be used to align columns.
+
+| Column 1        | Column 2          | Column 3  |
+| ------------- |:-------------:| -----:|
+| Tim      | Positive | USA |
+| Jane     | Negative      |   UK |
+| Cathy | Negative      |    AUS |
+
+
+There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the 
+raw Markdown line up prettily. You can also use inline Markdown.
+
+Index No | Assignment 1 | Assignment 2
+--- | --- | ---
+*ASXXX* | `apply` | **Factors**
+1 | 2 | 3
+
+# 8. Include an External Image
+
+
+
+![](sampleimage.png)
+
+

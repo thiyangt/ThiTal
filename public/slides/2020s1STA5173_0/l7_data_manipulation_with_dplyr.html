@@ -4,6 +4,7 @@
     <title>STA 326 2.0 Programming and Data Analysis with R</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr Thiyanga Talagala" />
+    <meta name="date" content="2020-09-27" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <link href="libs/remark-css/duke-blue.css" rel="stylesheet" />
@@ -18,7 +19,7 @@ class: center, middle, inverse, title-slide
 # STA 326 2.0 Programming and Data Analysis with R
 ## Data Manipulation with dplyr
 ### Dr Thiyanga Talagala
-### Online distance learning/teaching materials during the COVID-19 outbreak.
+### 27 September 2020
 
 ---
 
@@ -97,6 +98,13 @@ $ gdpPercap &lt;dbl&gt; 779.4453, 820.8530, 853.1007, 836.1971, 739.9811, 786.11
 
 ```r
 tbl_df(gapminder)
+```
+
+```
+Warning: `tbl_df()` is deprecated as of dplyr 1.0.0.
+Please use `tibble::as_tibble()` instead.
+This warning is displayed once every 8 hours.
+Call `lifecycle::last_warnings()` to see where this warning was generated.
 ```
 
 ```
@@ -1316,11 +1324,11 @@ bind_cols(first, second)
 
 ```
 # A tibble: 3 x 4
-  x1       x2 x11     x21
-  &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;
-1 A         1 D        10
-2 B         2 B        20
-3 C         3 C        30
+  x1...1 x2...2 x1...3 x2...4
+  &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;
+1 A           1 D          10
+2 B           2 B          20
+3 C           3 C          30
 ```
 ]
 
@@ -1340,7 +1348,7 @@ background-size: contain
 class: center, middle
 
 
-Slides available at: hellor.netlify.app
+Slides available at: https://thiyanga.netlify.app/courses/rmsc2020/contentr/
 
 All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
 

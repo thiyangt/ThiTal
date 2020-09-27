@@ -2,7 +2,7 @@
 title: "STA 326 2.0 Programming and Data Analysis with R"
 subtitle: "Data Manipulation with dplyr"
 author: "Dr Thiyanga Talagala"
-date: "Online distance learning/teaching materials during the COVID-19 outbreak."
+date: "27 September 2020"
 output:
   xaringan::moon_reader:
     chakra: libs/remark-latest.min.js
@@ -663,7 +663,7 @@ background-size: contain
 class: center, middle
 
 
-Slides available at: hellor.netlify.app
+Slides available at: https://thiyanga.netlify.app/courses/rmsc2020/contentr/
 
 All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
 
