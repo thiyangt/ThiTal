@@ -51,5 +51,11 @@ Holiday
 
 - [Poisson Process (cont.), Interarrival and Waiting Time Distributions](/Slides/2020s2StochasticProcesses/6_stochastic_processes_2020.pdf)
 
+- Assignment discussion.
+
+##### Week  9
+
+- [Poisson Process (cont.), Splitting of a Poisson process, Compound Poisson processes, Nonhomogeneous Poisson Processes](/Slides/2020s2StochasticProcesses/7_stochastic_processes_2020.pdf)
+
 
 > END
