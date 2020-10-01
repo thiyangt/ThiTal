@@ -48,7 +48,7 @@ user_groups:
 ---
 
 
-I am a Lecturer in the Department of Statistics, Faculty of Applied Sciences at the [University of Sri Jayewardenepura](http://science.sjp.ac.lk/). I received my PhD in statistics from [Monash University, Australia](https://www.monash.edu/) in 2019. My thesis advisors were Professor [Rob J Hyndman](https://robjhyndman.com/hyndsight/) and Professor [George Athanasopoulos](https://research.monash.edu/en/persons/george-athanasopoulos). 
+I am a Senior Lecturer in the Department of Statistics, Faculty of Applied Sciences at the [University of Sri Jayewardenepura](http://science.sjp.ac.lk/). I received my PhD in statistics from [Monash University, Australia](https://www.monash.edu/) in 2019. My thesis advisors were Professor [Rob J Hyndman](https://robjhyndman.com/hyndsight/) and Professor [George Athanasopoulos](https://research.monash.edu/en/persons/george-athanasopoulos). 
 
 I am also an Associate Investigator of the [Australian Research Council (ARC) Centre of Excellence for Mathematical and Statistical Frontiers (ACEMS).](https://acems.org.au/home)
 
