@@ -62,7 +62,7 @@ Here is your road map for the course!
 
 > Week 5-6: Discussion/practical (in class)
 
-### Week 5
+### Week 5 - 6
 
   - Coefficient of determination
 
@@ -75,18 +75,22 @@ Here is your road map for the course!
   - Regression through the origin
 
   - Regression analysis with R
+  
+  - Problem discussion and Regression Analysis with R
+
+  - Regression analysis with other software (Python, Minitab, SPSS, Excel) [📚](https://edify-thiyanga.netlify.app/regression/othersoftware.html)
 
 | 📚 [1. Slides](https://edify-thiyanga.netlify.app/regression/regression4.html#1) [2. Basics of R Programming](https://edify-thiyanga.netlify.app/regression/regression5.html)  	| 📒 Reading - Ch1 and Ch2 (2.3, 2.4) 	| 📊 Data Set - [house.csv](/data/house.csv)	| 📎 [Problems ](https://edify-thiyanga.netlify.app/regression/simplelinearregression2) 	[Tutorial 2](https://edify-thiyanga.netlify.app/regression/tutorial2.pdf) | 🔖 Additional problems - Ch2 Problems: 2.1 - 2.17|
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
 
-### Week 6
+> Week 7: mid exam  (in class)
 
-- Problem discussion and Regression Analysis with R
+### Week 7: Mid Exam
 
-- Regression analysis with other software (Python, Minitab, SPSS, Excel) [📚](https://edify-thiyanga.netlify.app/regression/othersoftware.html)
 
+### Week 7: Cont. with lectures after the Mid Exam
 
 - Multiple linear regression  
 
@@ -99,14 +103,7 @@ Here is your road map for the course!
     - Test of significance of regression
     
     - Tests on individual regression coefficients
-
-
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
-|:-:	|:-:	|:-:	|:-:	|:-:	|
-
-> Week 7: mid exam  (in class)
-
-### Week 7: Mid Exam
+    
 
 > Week 8-12:  lectures (online)
 
