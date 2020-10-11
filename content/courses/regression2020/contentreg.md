@@ -85,16 +85,14 @@ Here is your road map for the course!
 
 [*](/Slides/Presentation1.pdf)
 
-> Week 7: lectures  (online)
+> Week 7 - 8: lectures  (online)
 
-Week 7: R for Reproducible Scientific Analysis - Visit Google Classroom
+### Week 7: R for Reproducible Scientific Analysis - Visit Google Classroom
 
 Assignment due: 19 Oct 2020
 
 Mid Exam: Cancelled due to Covid-19 Outbreak
 
-
-> Week 8-12:  lectures (online)
 
 ### Week 8
 

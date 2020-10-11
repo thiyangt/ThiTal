@@ -196,14 +196,11 @@
 &lt;/table&gt;
 &lt;p&gt;&lt;a href=&#34;/Slides/Presentation1.pdf&#34;&gt;*&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Week 7: lectures  (online)&lt;/p&gt;
+&lt;p&gt;Week 7 - 8: lectures  (online)&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Week 7: R for Reproducible Scientific Analysis - Visit Google Classroom&lt;/p&gt;
+&lt;h3 id=&#34;week-7-r-for-reproducible-scientific-analysis---visit-google-classroom&#34;&gt;Week 7: R for Reproducible Scientific Analysis - Visit Google Classroom&lt;/h3&gt;
 &lt;p&gt;Assignment due: 19 Oct 2020&lt;/p&gt;
 &lt;p&gt;Mid Exam: Cancelled due to Covid-19 Outbreak&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Week 8-12:  lectures (online)&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;h3 id=&#34;week-8&#34;&gt;Week 8&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -595,9 +592,7 @@
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Week 7: mid exam  (in class)&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&#34;week-7-mid-exam--in-class&#34;&gt;Week 7: mid exam  (in class)&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Week 8-12:  lectures (online): Covid-19 outbreak&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -608,7 +603,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;/Slides/l7_reshape_data.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l7_reshape_data.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th align=&#34;center&#34;&gt;📒 &lt;a href=&#34;https://r4ds.had.co.nz/tidy-data.html&#34;&gt;Reading -R4DS Ch12&lt;/a&gt;&lt;/th&gt;
 &lt;th align=&#34;center&#34;&gt;📊 &lt;a href=&#34;https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf&#34;&gt;Cheat sheet&lt;/a&gt;&lt;/th&gt;
 &lt;th align=&#34;center&#34;&gt;📎 Problems&lt;/th&gt;
@@ -619,7 +614,7 @@
 &lt;ul&gt;
 &lt;li&gt;Data wrangling with dplyr - 1&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;| 📚 &lt;a href=&#34;/Slides/l7_data_manipulation_with_dplyr.html&#34;&gt;Slides&lt;/a&gt;  	| 📒 &lt;a href=&#34;https://r4ds.had.co.nz/tidy-data.html&#34;&gt;Reading -R4DS Ch12&lt;/a&gt; 	| 📊 &lt;a href=&#34;https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf&#34;&gt;Cheat sheet&lt;/a&gt;	| 📎 &lt;a href=&#34;https://hellor.netlify.app/problems/DataWrangling_Tutorial.pdf&#34;&gt;Problems&lt;/a&gt; 	| 🔖Answers |&lt;/p&gt;
+&lt;p&gt;| 📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l7_data_manipulation_with_dplyr.html&#34;&gt;Slides&lt;/a&gt;  	| 📒 &lt;a href=&#34;https://r4ds.had.co.nz/tidy-data.html&#34;&gt;Reading -R4DS Ch12&lt;/a&gt; 	| 📊 &lt;a href=&#34;https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf&#34;&gt;Cheat sheet&lt;/a&gt;	| 📎 &lt;a href=&#34;https://hellor.netlify.app/problems/DataWrangling_Tutorial.pdf&#34;&gt;Problems&lt;/a&gt; 	| 🔖Answers |&lt;/p&gt;
 &lt;h3 id=&#34;week-9&#34;&gt;Week 9&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;The grammar of graphics&lt;/li&gt;

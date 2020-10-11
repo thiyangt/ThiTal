@@ -72,7 +72,7 @@ Here is your road map for the course!
 
 
 
-> Week 7: mid exam  (in class)
+### Week 7: mid exam  (in class)
 
 
 > Week 8-12:  lectures (online): Covid-19 outbreak
@@ -81,12 +81,12 @@ Here is your road map for the course!
 
 - Data wrangling with tidyr 
 
-| 📚 [Slides](/Slides/l7_reshape_data.html)  	| 📒 [Reading -R4DS Ch12](https://r4ds.had.co.nz/tidy-data.html) 	| 📊 [Cheat sheet](https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf)	| 📎 Problems 	| 🔖Answers |
+| 📚 [Slides](/Slides/2020s1STA5173_0/l7_reshape_data.html)  	| 📒 [Reading -R4DS Ch12](https://r4ds.had.co.nz/tidy-data.html) 	| 📊 [Cheat sheet](https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf)	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 - Data wrangling with dplyr - 1
 
-| 📚 [Slides](/Slides/l7_data_manipulation_with_dplyr.html)  	| 📒 [Reading -R4DS Ch12](https://r4ds.had.co.nz/tidy-data.html) 	| 📊 [Cheat sheet](https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf)	| 📎 [Problems](https://hellor.netlify.app/problems/DataWrangling_Tutorial.pdf) 	| 🔖Answers |
+| 📚 [Slides](/Slides/2020s1STA5173_0/l7_data_manipulation_with_dplyr.html)  	| 📒 [Reading -R4DS Ch12](https://r4ds.had.co.nz/tidy-data.html) 	| 📊 [Cheat sheet](https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf)	| 📎 [Problems](https://hellor.netlify.app/problems/DataWrangling_Tutorial.pdf) 	| 🔖Answers |
 
 
 ### Week 9
