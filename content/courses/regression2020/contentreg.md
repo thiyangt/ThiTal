@@ -87,7 +87,9 @@ Here is your road map for the course!
 
 > Week 7 - 8: lectures  (online)
 
-### Week 7: R for Reproducible Scientific Analysis - Visit Google Classroom
+### Week 7 
+
+[R for Reproducible Scientific Analysis - Visit Google Classroom](https://edify-thiyanga.netlify.app/regression/simplelinearregression2)
 
 Assignment due: 19 Oct 2020
 
