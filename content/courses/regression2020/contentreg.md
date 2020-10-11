@@ -85,12 +85,18 @@ Here is your road map for the course!
 
 [*](/Slides/Presentation1.pdf)
 
-> Week 7: mid exam  (in class)
+> Week 7: lectures  (online)
 
-### Week 7: Mid Exam
+Week 7: R for Reproducible Scientific Analysis - Visit Google Classroom
+
+Assignment due: 19 Oct 2020
+
+Mid Exam: Cancelled due to Covid-19 Outbreak
 
 
-### Week 7: Cont. with lectures after the Mid Exam
+> Week 8-12:  lectures (online)
+
+### Week 8
 
 - Multiple linear regression  
 
@@ -103,13 +109,6 @@ Here is your road map for the course!
     - Test of significance of regression
     
     - Tests on individual regression coefficients
-    
-
-> Week 8-12:  lectures (online)
-
-### Week 8
-
-Multiple linear regression (cont)
 
     - Extra-sum-of-squares method
     
@@ -118,7 +117,6 @@ Multiple linear regression (cont)
     - Prediction of new observations
     
     - Standardized regression coefficients
-
 
     
 - Transformations 
@@ -129,6 +127,14 @@ Multiple linear regression (cont)
 
     - Analytical methods for selecting a transformation
     
+
+
+| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+|:-:	|:-:	|:-:	|:-:	|:-:	|
+
+
+### Week 9
+
 
 
 - Detection and treatment of outliers
@@ -142,12 +148,6 @@ Multiple linear regression (cont)
     
     - Lack-of-fit test
     
-
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
-|:-:	|:-:	|:-:	|:-:	|:-:	|
-
-
-### Week 9
 
 - Generalized least squares
     

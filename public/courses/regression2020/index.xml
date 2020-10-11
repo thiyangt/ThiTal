@@ -145,10 +145,15 @@
 &lt;/table&gt;
 &lt;p&gt;&lt;a href=&#34;/Slides/Presentation1.pdf&#34;&gt;*&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Week 7: mid exam  (in class)&lt;/p&gt;
+&lt;p&gt;Week 7: lectures  (online)&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;week-7-mid-exam&#34;&gt;Week 7: Mid Exam&lt;/h3&gt;
-&lt;h3 id=&#34;week-7-cont-with-lectures-after-the-mid-exam&#34;&gt;Week 7: Cont. with lectures after the Mid Exam&lt;/h3&gt;
+&lt;p&gt;Week 7: R for Reproducible Scientific Analysis - Visit Google Classroom&lt;/p&gt;
+&lt;p&gt;Assignment due: 19 Oct 2020&lt;/p&gt;
+&lt;p&gt;Mid Exam: Cancelled due to Covid-19 Outbreak&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Week 8-12:  lectures (online)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;week-8&#34;&gt;Week 8&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Multiple linear regression&lt;/p&gt;
@@ -168,23 +173,20 @@
 &lt;li&gt;
 &lt;p&gt;Tests on individual regression coefficients&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;
+&lt;p&gt;Extra-sum-of-squares method&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Confidence intervals in multiple regression&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Prediction of new observations&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Standardized regression coefficients&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Week 8-12:  lectures (online)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;week-8&#34;&gt;Week 8&lt;/h3&gt;
-&lt;p&gt;Multiple linear regression (cont)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;- Extra-sum-of-squares method
-
-- Confidence intervals in multiple regression
-
-- Prediction of new observations
-
-- Standardized regression coefficients
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Transformations&lt;/p&gt;
 &lt;ul&gt;
@@ -196,23 +198,6 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Analytical methods for selecting a transformation&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Detection and treatment of outliers&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Lack of fit of regression model&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Pure error&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Model-independent measures of pure error&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Lack-of-fit test&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -230,6 +215,23 @@
 &lt;/table&gt;
 &lt;h3 id=&#34;week-9&#34;&gt;Week 9&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Detection and treatment of outliers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lack of fit of regression model&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Pure error&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Model-independent measures of pure error&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lack-of-fit test&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Generalized least squares&lt;/p&gt;
 &lt;/li&gt;

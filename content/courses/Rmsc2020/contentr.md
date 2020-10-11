@@ -74,7 +74,10 @@ Here is your road map for the course!
 
 > Week 7: mid exam  (in class)
 
-### Week 7: Mid Exam
+
+> Week 8-12:  lectures (online): Covid-19 outbreak
+
+### Week 8
 
 - Data wrangling with tidyr 
 
@@ -84,16 +87,6 @@ Here is your road map for the course!
 - Data wrangling with dplyr - 1
 
 | 📚 [Slides](/Slides/l7_data_manipulation_with_dplyr.html)  	| 📒 [Reading -R4DS Ch12](https://r4ds.had.co.nz/tidy-data.html) 	| 📊 [Cheat sheet](https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf)	| 📎 [Problems](https://hellor.netlify.app/problems/DataWrangling_Tutorial.pdf) 	| 🔖Answers |
-|:-:	|:-:	|:-:	|:-:	|:-:	|
-
-> Week 8-12:  lectures (online)
-
-### Week 8
-
-- Data wrangling - 2
-
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
-|:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
 ### Week 9
