@@ -1,8 +1,8 @@
 ---
-title: "STA 326 2.0 Programming and Data Analysis with R"
+title: "STA 517 3.0 Programming and Statistical Computing with R"
 subtitle: "Data Manipulation with dplyr"
 author: "Dr Thiyanga Talagala"
-date: "27 September 2020"
+date: "11 October 2020"
 output:
   xaringan::moon_reader:
     chakra: libs/remark-latest.min.js
