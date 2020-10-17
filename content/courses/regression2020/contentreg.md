@@ -107,7 +107,7 @@ Mid Exam: Cancelled due to Covid-19 Outbreak
     - Residual analysis
     
 
-| 📚 [Slides]((https://edify-thiyanga.netlify.app/regression/regression4.html#1))  	| 📒 Reading - Ch3 	| 📊 Data Sets - [heart.data.csv](/data/heart.data.csv) 	| 📎 Problems 	| 🔖Answers |
+| 📚 [Slides](https://edify-thiyanga.netlify.app/regression/regression6.html#1)  	| 📒 Reading - Ch3 	| 📊 Data Sets - [heart.data.csv](/data/heart.data.csv) 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
