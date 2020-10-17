@@ -1,0 +1,49 @@
+---
+title: "Import data into R"
+author: Thiyanga Talagala
+date: '2020-10-14'
+categories: [R]
+tags: [R]
+summary: "Read data files"
+---
+
+First, I create a small dataset for the demonstration. The following dataset represents the Happiness index for five countries.
+
+```{r, comment=NA}
+happy <- data.frame(
+  country = c("Finland", "Norway", "Denmark", "Iceland", "Netherlands"),
+  score = c(7.76, 7.60, 7.55, 7.49, 7.48))
+
+happy
+```
+
+Now, I want to save the file in my current working directory.
+
+```r
+save(happy, file="happyindex.rda")
+
+```
+
+Reload the file with 
+
+```r
+ load("happyindex.rda")
+```
+
+When you type 
+
+```r
+happyindex
+```
+
+you will get the following Error message.
+
+> Error: object 'happyindex' not found
+
+In order to load the files correctly you can follow the steps below.
+
+```r
+loadHappy <- load("happyindex.rda")
+happyDataloaded <- get(loadHappy)
+happyDataloaded
+```

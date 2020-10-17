@@ -106,7 +106,14 @@ Mid Exam: Cancelled due to Covid-19 Outbreak
     
     - Residual analysis
     
-    - Test of significance of regression
+
+| 📚 [Slides]((https://edify-thiyanga.netlify.app/regression/regression4.html#1))  	| 📒 Reading - Ch3 	| 📊 Data Sets - [heart.data.csv](/data/heart.data.csv) 	| 📎 Problems 	| 🔖Answers |
+|:-:	|:-:	|:-:	|:-:	|:-:	|
+
+
+### Week 9
+
+   - Test of significance of regression
     
     - Tests on individual regression coefficients
 
@@ -126,16 +133,6 @@ Mid Exam: Cancelled due to Covid-19 Outbreak
     - Transformations to linearize the model
 
     - Analytical methods for selecting a transformation
-    
-
-
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
-|:-:	|:-:	|:-:	|:-:	|:-:	|
-
-
-### Week 9
-
-
 
 - Detection and treatment of outliers
 
