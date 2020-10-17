@@ -1,11 +1,13 @@
 ---
-title: "Import data into R"
+title: "Import data into R: Overwritten object names"
 author: Thiyanga Talagala
 date: '2020-10-14'
 categories: [R]
 tags: [R]
 summary: "Read data files"
 ---
+
+## Spotting the problem
 
 First, I create a small dataset for the demonstration. The following dataset represents the Happiness index for five countries.
 
@@ -17,30 +19,28 @@ happy <- data.frame(
 happy
 ```
 
-Now, I want to save the file in my current working directory.
+Name save the dataset as shown below.
 
 ```r
 save(happy, file="happyindex.rda")
 
 ```
 
-Reload the file with 
+Let's load the dataset with,
 
 ```r
- load("happyindex.rda")
+load("happyindex.rda")
 ```
-
-When you type 
 
 ```r
 happyindex
 ```
 
-you will get the following Error message.
+The following error message pops up,
 
 > Error: object 'happyindex' not found
 
-In order to load the files correctly you can follow the steps below.
+## Tackling the problem
 
 ```r
 loadHappy <- load("happyindex.rda")

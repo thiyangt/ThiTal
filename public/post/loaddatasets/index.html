@@ -122,7 +122,7 @@
   
   <meta property="og:site_name" content="THIYANGA TALAGALA">
   <meta property="og:url" content="/post/loaddatasets/">
-  <meta property="og:title" content="Import data into R | THIYANGA TALAGALA">
+  <meta property="og:title" content="Import data into R: Overwritten object names | THIYANGA TALAGALA">
   <meta property="og:description" content="Read data files"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
@@ -157,7 +157,7 @@
     "@type": "WebPage",
     "@id": "/post/loaddatasets/"
   },
-  "headline": "Import data into R",
+  "headline": "Import data into R: Overwritten object names",
   
   "datePublished": "2020-10-14T00:00:00Z",
   "dateModified": "2020-10-14T00:00:00Z",
@@ -193,7 +193,7 @@
 
 
 
-  <title>Import data into R | THIYANGA TALAGALA</title>
+  <title>Import data into R: Overwritten object names | THIYANGA TALAGALA</title>
 
 </head>
 
@@ -497,7 +497,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Import data into R</h1>
+  <h1>Import data into R: Overwritten object names</h1>
 
   
 
@@ -568,6 +568,8 @@
       
 
 
+<div id="spotting-the-problem" class="section level2">
+<h2>Spotting the problem</h2>
 <p>First, I create a small dataset for the demonstration. The following dataset represents the Happiness index for five countries.</p>
 <pre class="r"><code>happy &lt;- data.frame(
   country = c(&quot;Finland&quot;, &quot;Norway&quot;, &quot;Denmark&quot;, &quot;Iceland&quot;, &quot;Netherlands&quot;),
@@ -580,21 +582,23 @@ happy</code></pre>
 3     Denmark  7.55
 4     Iceland  7.49
 5 Netherlands  7.48</code></pre>
-<p>Now, I want to save the file in my current working directory.</p>
+<p>Name save the dataset as shown below.</p>
 <pre class="r"><code>save(happy, file=&quot;happyindex.rda&quot;)
 </code></pre>
-<p>Reload the file with</p>
-<pre class="r"><code> load(&quot;happyindex.rda&quot;)</code></pre>
-<p>When you type</p>
+<p>Let’s load the dataset with,</p>
+<pre class="r"><code>load(&quot;happyindex.rda&quot;)</code></pre>
 <pre class="r"><code>happyindex</code></pre>
-<p>you will get the following Error message.</p>
+<p>The following error message pops up,</p>
 <blockquote>
 <p>Error: object ‘happyindex’ not found</p>
 </blockquote>
-<p>In order to load the files correctly you can follow the steps below.</p>
+</div>
+<div id="tackling-the-problem" class="section level2">
+<h2>Tackling the problem</h2>
 <pre class="r"><code>loadHappy &lt;- load(&quot;happyindex.rda&quot;)
 happyDataloaded &lt;- get(loadHappy)
 happyDataloaded</code></pre>
+</div>
 
     </div>
 
@@ -623,7 +627,7 @@ happyDataloaded</code></pre>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/loaddatasets/&amp;text=Import%20data%20into%20R" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/loaddatasets/&amp;text=Import%20data%20into%20R:%20Overwritten%20object%20names" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -636,7 +640,7 @@ happyDataloaded</code></pre>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/loaddatasets/&amp;t=Import%20data%20into%20R" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/loaddatasets/&amp;t=Import%20data%20into%20R:%20Overwritten%20object%20names" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -649,7 +653,7 @@ happyDataloaded</code></pre>
       
       
       <li>
-        <a href="mailto:?subject=Import%20data%20into%20R&amp;body=/post/loaddatasets/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Import%20data%20into%20R:%20Overwritten%20object%20names&amp;body=/post/loaddatasets/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -662,7 +666,7 @@ happyDataloaded</code></pre>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/loaddatasets/&amp;title=Import%20data%20into%20R" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/loaddatasets/&amp;title=Import%20data%20into%20R:%20Overwritten%20object%20names" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -675,7 +679,7 @@ happyDataloaded</code></pre>
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Import%20data%20into%20R%20/post/loaddatasets/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Import%20data%20into%20R:%20Overwritten%20object%20names%20/post/loaddatasets/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -688,7 +692,7 @@ happyDataloaded</code></pre>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/loaddatasets/&amp;title=Import%20data%20into%20R" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/loaddatasets/&amp;title=Import%20data%20into%20R:%20Overwritten%20object%20names" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>

@@ -734,13 +734,15 @@
     </item>
     
     <item>
-      <title>Import data into R</title>
+      <title>Import data into R: Overwritten object names</title>
       <link>/post/loaddatasets/</link>
       <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate>
       <guid>/post/loaddatasets/</guid>
       <description>
 
 
+&lt;div id=&#34;spotting-the-problem&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Spotting the problem&lt;/h2&gt;
 &lt;p&gt;First, I create a small dataset for the demonstration. The following dataset represents the Happiness index for five countries.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;happy &amp;lt;- data.frame(
   country = c(&amp;quot;Finland&amp;quot;, &amp;quot;Norway&amp;quot;, &amp;quot;Denmark&amp;quot;, &amp;quot;Iceland&amp;quot;, &amp;quot;Netherlands&amp;quot;),
@@ -753,21 +755,23 @@ happy&lt;/code&gt;&lt;/pre&gt;
 3     Denmark  7.55
 4     Iceland  7.49
 5 Netherlands  7.48&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now, I want to save the file in my current working directory.&lt;/p&gt;
+&lt;p&gt;Name save the dataset as shown below.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;save(happy, file=&amp;quot;happyindex.rda&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Reload the file with&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt; load(&amp;quot;happyindex.rda&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;When you type&lt;/p&gt;
+&lt;p&gt;Let’s load the dataset with,&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;load(&amp;quot;happyindex.rda&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;happyindex&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;you will get the following Error message.&lt;/p&gt;
+&lt;p&gt;The following error message pops up,&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Error: object ‘happyindex’ not found&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;In order to load the files correctly you can follow the steps below.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tackling-the-problem&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tackling the problem&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;loadHappy &amp;lt;- load(&amp;quot;happyindex.rda&amp;quot;)
 happyDataloaded &amp;lt;- get(loadHappy)
 happyDataloaded&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 </description>
     </item>
     

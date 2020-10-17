@@ -1,5 +1,5 @@
 ---
-title: "Import data into R"
+title: "Import data into R: Overwritten object names"
 author: Thiyanga Talagala
 date: '2020-10-14'
 categories: [R]
@@ -9,6 +9,8 @@ summary: "Read data files"
 
 
 
+<div id="spotting-the-problem" class="section level2">
+<h2>Spotting the problem</h2>
 <p>First, I create a small dataset for the demonstration. The following dataset represents the Happiness index for five countries.</p>
 <pre class="r"><code>happy &lt;- data.frame(
   country = c(&quot;Finland&quot;, &quot;Norway&quot;, &quot;Denmark&quot;, &quot;Iceland&quot;, &quot;Netherlands&quot;),
@@ -21,18 +23,20 @@ happy</code></pre>
 3     Denmark  7.55
 4     Iceland  7.49
 5 Netherlands  7.48</code></pre>
-<p>Now, I want to save the file in my current working directory.</p>
+<p>Name save the dataset as shown below.</p>
 <pre class="r"><code>save(happy, file=&quot;happyindex.rda&quot;)
 </code></pre>
-<p>Reload the file with</p>
-<pre class="r"><code> load(&quot;happyindex.rda&quot;)</code></pre>
-<p>When you type</p>
+<p>Let’s load the dataset with,</p>
+<pre class="r"><code>load(&quot;happyindex.rda&quot;)</code></pre>
 <pre class="r"><code>happyindex</code></pre>
-<p>you will get the following Error message.</p>
+<p>The following error message pops up,</p>
 <blockquote>
 <p>Error: object ‘happyindex’ not found</p>
 </blockquote>
-<p>In order to load the files correctly you can follow the steps below.</p>
+</div>
+<div id="tackling-the-problem" class="section level2">
+<h2>Tackling the problem</h2>
 <pre class="r"><code>loadHappy &lt;- load(&quot;happyindex.rda&quot;)
 happyDataloaded &lt;- get(loadHappy)
 happyDataloaded</code></pre>
+</div>
