@@ -1,0 +1,201 @@
+---
+title: "Data Wrangling"
+author: "Thiyanga Talagala"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval=TRUE, comment = NA)
+```
+
+
+Load the `gapminder` dataset and the `tidyverse` and `magrittr` packages.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(gapminder)
+library(tidyverse)
+library(magrittr)
+```
+
+
+# Exercises
+
+1. Filter all rows for "Sweden".
+
+```{r}
+filter(gapminder, country=="Sweden")
+
+```
+
+2. Filter all rows where `lifeExp` is less than or equal to 30.
+
+```{r}
+gapminder %>% filter(lifeExp <= 50)
+```
+
+3. Filter all rows that have a missing value for `year`.
+
+```{r}
+filter(gapminder, is.na(year))
+```
+
+4. Filter all countries that had population over 100000 in 1960 or earlier.
+
+```{r}
+filter(gapminder, pop>100000 & year <=1960)
+
+```
+
+5. Count the number of countries with life expectancy greater than 30 in 1952.
+
+```{r}
+df <- gapminder %>%
+  filter(year==1952 & lifeExp < 30) 
+df
+dim(df)
+```
+
+6. Calculate the mean life expectancy for each year and continent.
+
+```{r}
+gapminder %>%
+  group_by(continent, year) %>%
+  summarise(mean.lifeExp = mean(lifeExp))
+
+```
+
+7. Get the maximum and minimum of GDP per capita for all continents in a "wide" format.
+
+```{r}
+gapminder %>%
+  group_by(continent) %>%
+  summarize(maxGdpPercap=max(gdpPercap),
+           minGdpPercap=min(gdpPercap))
+```
+
+8. Get the maximum and minimum of GDP per capita for all continents in a "long" format.
+
+```{r}
+gapminder %>%
+  group_by(continent) %>%
+  summarize(maxGdpPercap=max(gdpPercap),
+           minGdpPercap=min(gdpPercap)) %>%
+  pivot_longer(2:3, "summary", "value")
+```
+
+9. What was the population of the United States in 1952 and 2007.
+
+```{r}
+gapminder %>%
+  filter(country=="United States", year %in% c(1952, 2007)) 
+
+```
+
+10. Subset the gapminder data to extract rows where `lifeExp` is greater than or equal 80. Retain only the columns `country`, `year`, and `lifeExp`. Sort the results from largest to smallest based on `lifeExp`.
+
+```{r}
+gapminder %>%
+filter(lifeExp >= 80) %>%
+select(country, year, lifeExp) %>%
+arrange(desc(lifeExp))
+```
+
+11. Calculate the total GDP in billions of dollars, extract the results for the year 2002, and sort the rows so that the total GDP is in decreasing order.
+
+Help: `gpd = gdpPercap * pop`
+
+```{r}
+gapminder %>%
+mutate(gdp = gdpPercap * pop) %>%
+  filter(year==2002) %>%
+  arrange(desc(gdp))
+```
+
+12. Calculate the average life expectancy by continent in 2002.
+
+```{r}
+gapminder %>%
+  filter(year==2002) %>%
+group_by(continent) %>%
+summarize(mean_lifeExp=mean(lifeExp))
+```
+
+13. Which countries and which years had the worst five GDP per capita measurements?
+
+```{r}
+gapminder %>%
+  arrange(desc(gdpPercap)) %>%
+  tail(5)
+
+```
+
+14. What was the mean life expectancy across all countries for each year in the dataset?
+
+```{r}
+gapminder %>%
+  group_by(year) %>%
+  summarize(mean(lifeExp))
+```
+
+15. Which five Asian countries had the highest life expectancy in 2007?
+
+```{r}
+gapminder %>%
+  filter(continent=="Asia") %>%
+  arrange(desc(lifeExp)) %>%
+  head(5)
+```
+
+16. Calculate the total number of observations for each country in Europe. Help: use `n()` function.
+
+```{r}
+gapminder %>%
+filter(continent == "Europe") %>%
+group_by(country) %>%
+summarize(n = n())
+```
+
+17. How many observations do we have per continent?
+
+```{r}
+gapminder %>%
+group_by(continent) %>%
+summarize(n = n())
+```
+
+18. Compute the average life expectancy by
+continent.
+
+```{r}
+gapminder %>%
+group_by(continent) %>%
+summarize(avg_lifeExp = mean(lifeExp))
+
+```
+
+19. Rank countries according to their life expectancy and store it in a new column called rank. Rearrange the rows according to the ascending order of ranks (1, 2, 3...).
+
+
+```{r}
+gapminder %>% 
+  filter(year == 2007) %>% 
+  select(country, lifeExp) %>% 
+  mutate(rank = min_rank(desc(lifeExp))) %>%
+  arrange(rank)
+```
+
+20. Calculate the mean and the standard error of the life expectancy for Belgium, Netherlands and France.
+
+```{r}
+gapminder %>% 
+  filter(country %in% c("Belgium", "Netherlands", "France")) %>%
+  group_by(country) %>%
+  summarize(mean = mean(lifeExp), se = sd(lifeExp)/sqrt(n()))
+```
+
+21. Categorize countries as "low" (`lifeExp` < 50) and "high" (`lifeExp` > 50) and store the values in a new column named "category".
+ 
+```{r}
+ gapminder %>%
+    mutate(category = ifelse(lifeExp > 50, "high", "low")) 
+```
