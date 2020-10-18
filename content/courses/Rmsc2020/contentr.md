@@ -93,8 +93,16 @@ Here is your road map for the course!
 
 - The grammar of graphics
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚 [Slides](/Slides/2020s1STA5173_0/week9MSC_ggplot.html)  	| 📒 [Reading](https://ggplot2-book.org/)  	| 📊 Data Sets - [Details](https://github.com/allisonhorst/palmerpenguins) 	| 📎 Problems	- Perform EDA on palmerpenguins using ggplot2| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
+
+Load `palmerpenguins` using,
+
+```r
+library(palmerpenguins)
+
+data(package = 'palmerpenguins')`
+```
 
 
 ### Week 10
