@@ -1,7 +1,7 @@
 +++
 date = 2020-10-27T00:00:00  # Schedule page publish date.
 
-title = "Peeking inside FFORMS: Feature-based FORecast Model Selection"
+title = "A Tool To Detect Potential Data Leaks in Forecasting Competitions"
 time_start = 2020-10-18T14:20:00
 time_end = 2020-10-18T14:40:00
 abstract = ""
@@ -20,9 +20,9 @@ selected = false
 
 # Links (optional).
 url_pdf = ""
-url_slides = "talks/isf2019.pdf"
+url_slides = ""
 url_video = ""
-url_code = "https://github.com/thiyangt/isf2019"
+url_code = "https://github.com/thiyangt/isf2020"
 
 # Does the content use math formatting?
 math = true
