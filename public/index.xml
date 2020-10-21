@@ -738,12 +738,12 @@
     </item>
     
     <item>
-      <title>A Tool To Detect Potential Data Leaks in Forecasting Competitions</title>
+      <title>A Tool to Detect Potential Data Leaks in Forecasting Competitions</title>
       <link>/talk/isf20-talk/</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 +0530</pubDate>
       <guid>/talk/isf20-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;a-tool-to-detect-potential-data-leaks-in-forecasting-competitions&#34;&gt;A Tool To Detect Potential Data Leaks in Forecasting Competitions&lt;/h2&gt;
+&lt;h2 id=&#34;a-tool-to-detect-potential-data-leaks-in-forecasting-competitions&#34;&gt;A Tool to Detect Potential Data Leaks in Forecasting Competitions&lt;/h2&gt;
 &lt;p&gt;Forecasting competitions are of increasing importance as a mean to learn best practices and gain knowledge. Data leakage is one of the most common issues that can often be found in competitions. Data leaks can happen when the training data contains information about the test data. There are a variety of different ways that data leaks can occur with time series data. For example: i) randomly chosen blocks of time series are concatenated to form a new time series, ii) scale-shifts, iii) repeating patterns in time series,  iv) white noise is added in the original time series to form a new time series, etc.  This work introduces a novel tool to detect these data leaks. The tsdataleaks package provides simple and computationally efficient algorithm to exploit data leaks in time series data. I will demonstrate the package design and its power to detect data leakages using recent forecasting competitions data.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Key words:&lt;/strong&gt; Time series, R software, Tools, Visualization&lt;/p&gt;
 </description>
