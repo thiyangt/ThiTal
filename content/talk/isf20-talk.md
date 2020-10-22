@@ -20,7 +20,7 @@ selected = false
 
 # Links (optional).
 url_pdf = ""
-url_slides = "/static/talk/ISF2020/ISF_2020_Thiyanga_S_Talagala.html"
+url_slides = "/static/Slides/ISF2020/ISF_2020_Thiyanga_S_Talagala.html"
 url_video = ""
 url_code = "https://github.com/thiyangt/isf2020"
 
