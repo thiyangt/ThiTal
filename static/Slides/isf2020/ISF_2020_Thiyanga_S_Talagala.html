@@ -265,7 +265,7 @@ lst &lt;- list(
   d = rnorm(18),
   e = c(rnorm(12), x[1:7]+ rep(5, 7)),
   f = rnorm(20),
-  g = c(y, rnorm(1), y),
+  g = c(y, rnorm(1), y[1:7]),
   h = c(rnorm(19)), 
   i = c(x[1:10], rnorm(4), x))
 ```
@@ -312,7 +312,7 @@ $e
 
 $g
   .id start end
-7   g     8  13
+7   g     2   7
 
 $i
   .id start end
@@ -359,7 +359,7 @@ $e
 
 $g
   .id start end
-7   g     8  13
+7   g     2   7
 
 $i
   .id start end
@@ -415,7 +415,7 @@ $e
 
 $g
   .id start end
-7   g     8  13
+7   g     2   7
 
 $i
   .id start end
@@ -463,7 +463,7 @@ reason_dataleaks(lst, f1, h=6)
 5       e   c     2   7         5       0         useful add constant
 6       e   i     2   7         5       0         useful add constant
 7       e   i    16  21         5       0         useful add constant
-8       g   g     8  13         0       0         useful  exact match
+8       g   g     2   7         0       0         useful  exact match
 9       i   c     7  12         0       0         useful  exact match
 ```
 
