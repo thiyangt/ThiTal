@@ -122,7 +122,7 @@ Mid Exam: Cancelled due to Covid-19 Outbreak
     - Extra-sum-of-squares method
     
 
-| 📚Slides  	| 📒 Reading - [here](https://bookdown.org/egarpor/SSS2-UC3M/multlin-aovfit.html) 	| 📊 Data Sets - [heart.data.csv](/data/heart.data.csv) and `alr3::heights` 	| 📎 Problems - Quiz Google Classroom	| 🔖Answers |
+| 📚 [Slides](https://edify-thiyanga.netlify.app/regression/regression7.html#1)  	| 📒 Reading - [here](https://bookdown.org/egarpor/SSS2-UC3M/multlin-aovfit.html) 	| 📊 Data Sets - [heart.data.csv](/data/heart.data.csv) and `alr3::heights` 	| 📎 Problems - Quiz Google Classroom	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
