@@ -113,13 +113,22 @@ Mid Exam: Cancelled due to Covid-19 Outbreak
 
 ### Week 9
 
-   - Test of significance of regression
+- ANOVA
+
+    - Test of significance of regression
     
     - Tests on individual regression coefficients
 
     - Extra-sum-of-squares method
     
-    - Confidence intervals in multiple regression
+
+| 📚Slides  	| 📒 Reading - [here](https://bookdown.org/egarpor/SSS2-UC3M/multlin-aovfit.html) 	| 📊 Data Sets - [heart.data.csv](/data/heart.data.csv) and `alr3::heights` 	| 📎 Problems - Quiz Google Classroom	| 🔖Answers |
+|:-:	|:-:	|:-:	|:-:	|:-:	|
+
+
+### Week 10
+
+ - Confidence intervals in multiple regression
     
     - Prediction of new observations
     
@@ -149,12 +158,6 @@ Mid Exam: Cancelled due to Covid-19 Outbreak
 - Generalized least squares
     
 - Weighted least squares
-
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
-|:-:	|:-:	|:-:	|:-:	|:-:	|
-
-
-### Week 10
 
 - Diagnostics for leverage and influence
 

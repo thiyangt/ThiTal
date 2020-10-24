@@ -232,19 +232,45 @@
 &lt;/table&gt;
 &lt;h3 id=&#34;week-9&#34;&gt;Week 9&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Test of significance of regression&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;- Tests on individual regression coefficients
-
-- Extra-sum-of-squares method
-
-- Confidence intervals in multiple regression
-
-- Prediction of new observations
-
-- Standardized regression coefficients
-&lt;/code&gt;&lt;/pre&gt;
+&lt;li&gt;
+&lt;p&gt;ANOVA&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Test of significance of regression&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tests on individual regression coefficients&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Extra-sum-of-squares method&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;📚Slides&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;📒 Reading - &lt;a href=&#34;https://bookdown.org/egarpor/SSS2-UC3M/multlin-aovfit.html&#34;&gt;here&lt;/a&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;📊 Data Sets - &lt;a href=&#34;/data/heart.data.csv&#34;&gt;heart.data.csv&lt;/a&gt; and &lt;code&gt;alr3::heights&lt;/code&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;📎 Problems - Quiz Google Classroom&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;week-10&#34;&gt;Week 10&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Confidence intervals in multiple regression&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Prediction of new observations&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Standardized regression coefficients&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Transformations&lt;/p&gt;
 &lt;ul&gt;
@@ -282,20 +308,6 @@
 &lt;li&gt;
 &lt;p&gt;Weighted least squares&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚Slides&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 Problems&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;week-10&#34;&gt;Week 10&lt;/h3&gt;
-&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Diagnostics for leverage and influence&lt;/p&gt;
 &lt;ul&gt;
