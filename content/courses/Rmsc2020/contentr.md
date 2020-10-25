@@ -107,15 +107,15 @@ data(package = 'palmerpenguins')`
 
 ### Week 10
 
-- Functional programming with R
+- Statistical modelling - Regression Analysis
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚 [Slides](/Slides/2020s1STA5173_0/l10.html)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
 ### Week 11
 
-- Statistical modelling
+- Functional programming with R
 
 | 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|

@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>STA 517 3.0 Programming and Statistical Computing with R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr Thiyanga Talagala" />
+    <meta name="date" content="2020-10-25" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/duke-blue.css" rel="stylesheet" />
+    <link href="libs/remark-css/hygge-duke.css" rel="stylesheet" />
+    <link rel="stylesheet" href="libs/cc-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="libs/figure-captions.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# STA 517 3.0 Programming and Statistical Computing with R
+## Regression Analysis
+### Dr Thiyanga Talagala
+### 25 October 2020
+
+---
+
+
+
+background-image: url('box.jpeg')
+background-position: center
+background-size: contain
+
+
+---
+# Packages
+
+
+```r
+library(broom)
+library(modelr)
+library(GGally)
+library(carData)
+library(tidyverse)
+library(magrittr)
+library(car) # to calculate VIF
+```
+
+---
+# Data: Prestige of Canadian Occupations
+
+
+```r
+head(Prestige, 5)
+```
+
+```
+                    education income women prestige census type
+gov.administrators      13.11  12351 11.16     68.8   1113 prof
+general.managers        12.26  25879  4.02     69.1   1130 prof
+accountants             12.77   9271 15.70     63.4   1171 prof
+purchasing.officers     11.42   8865  9.11     56.8   1175 prof
+chemists                14.62   8403 11.68     73.5   2111 prof
+```
+
+```r
+summary(Prestige)
+```
+
+```
+   education          income          women           prestige    
+ Min.   : 6.380   Min.   :  611   Min.   : 0.000   Min.   :14.80  
+ 1st Qu.: 8.445   1st Qu.: 4106   1st Qu.: 3.592   1st Qu.:35.23  
+ Median :10.540   Median : 5930   Median :13.600   Median :43.60  
+ Mean   :10.738   Mean   : 6798   Mean   :28.979   Mean   :46.83  
+ 3rd Qu.:12.648   3rd Qu.: 8187   3rd Qu.:52.203   3rd Qu.:59.27  
+ Max.   :15.970   Max.   :25879   Max.   :97.510   Max.   :87.20  
+     census       type   
+ Min.   :1113   bc  :44  
+ 1st Qu.:3120   prof:31  
+ Median :5135   wc  :23  
+ Mean   :5402   NA's: 4  
+ 3rd Qu.:8312            
+ Max.   :9517            
+```
+
+
+---
+# Data description
+
+
+**`prestige`**:  prestige of Canadian occupations, measured by the Pineo-Porter prestige score for occupation taken from a social survey conducted in the mid-1960s.
+
+**`education`**: Average education of occupational incumbents, years, in 1971.
+
+**`income`**: Average income of incumbents, dollars, in 1971.
+
+**`women`**: Percentage of incumbents who are women.
+
+**`census`**: Canadian Census occupational code.
+
+**`type`**: Type of occupation. 
+
+    - prof: professional and technical
+    
+    - wc: white collar
+    
+    - bc: blue collar
+    
+    - NA: missing
+
+The dataset consists of 102 observations, each corresponding to a particular occupation.
+
+---
+# Training test and Test set
+
+
+```r
+smp_size &lt;- 80
+
+## set the seed to make your partition reproducible
+set.seed(123)
+train_ind &lt;- sample(seq_len(nrow(Prestige)), size = smp_size)
+train &lt;- Prestige[train_ind, ]
+dim(train)
+```
+
+```
+[1] 80  6
+```
+
+```r
+test &lt;- Prestige[-train_ind, ]
+dim(test)
+```
+
+```
+[1] 22  6
+```
+
+
+---
+# Exploratory Data Analysis
+
+
+```r
+Prestige_1 &lt;- train %&gt;%
+  pivot_longer(c(1, 2, 3, 4), names_to="variable", values_to="value")
+Prestige_1
+```
+
+.pull-left[
+
+```
+# A tibble: 320 x 4
+   census type  variable    value
+    &lt;int&gt; &lt;fct&gt; &lt;chr&gt;       &lt;dbl&gt;
+ 1   3156 wc    education   12.8 
+ 2   3156 wc    income    5180   
+ 3   3156 wc    women       76.0 
+ 4   3156 wc    prestige    67.5 
+ 5   8335 bc    education    7.92
+ 6   8335 bc    income    6477   
+ 7   8335 bc    women        5.17
+ 8   8335 bc    prestige    41.8 
+ 9   5133 wc    education   11.1 
+10   5133 wc    income    8780   
+# … with 310 more rows
+```
+
+]
+
+--
+.pull-right[
+
+```r
+head(train)
+```
+
+```
+                      education income women prestige census type
+medical.technicians       12.79   5180 76.04     67.5   3156   wc
+welders                    7.92   6477  5.17     41.8   8335   bc
+commercial.travellers     11.13   8780  3.16     40.2   5133   wc
+economists                14.44   8049 57.31     62.2   2311 prof
+farmers                    6.84   3643  3.60     44.1   7112 &lt;NA&gt;
+receptionsts              11.04   2901 92.86     38.7   4171   wc
+```
+
+]
+
+---
+# Exploratory Data Analysis
+
+
+```r
+ggplot(Prestige_1, aes(x=value)) + geom_histogram() + 
+  facet_wrap(variable ~., ncol=1)
+```
+
+![](l10_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+
+---
+# Exploratory Data Analysis
+
+
+```r
+ggplot(Prestige_1, aes(x=value)) + geom_histogram() + 
+  facet_wrap(variable ~., ncol=1, scales = "free")
+```
+
+![](l10_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+---
+# Exploratory Data Analysis
+
+
+```r
+ggplot(Prestige_1, aes(x=value)) + geom_histogram(colour="white") + 
+  facet_wrap(variable ~., ncol=1, scales = "free")
+```
+
+![](l10_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+---
+
+# Exploratory Data Analysis
+
+
+```r
+ggplot(Prestige_1, aes(x=value, fill=variable)) + geom_density() + 
+  facet_wrap(variable ~., ncol=1, scales = "free")
+```
+
+![](l10_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+---
+# Exploratory Data Analysis
+
+
+```r
+ggplot(Prestige_1, aes(y = value, x = type, fill = type)) + geom_boxplot() + 
+  facet_wrap(variable ~., ncol=1, scales = "free")
+```
+
+![](l10_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
+
+
+---
+# Exploratory Data Analysis
+
+```r
+*Prestige_1 %&gt;%
+*  filter(is.na(type) == FALSE) %&gt;%
+ggplot(aes(y=value, x=type, fill=type)) + geom_boxplot() + 
+  facet_wrap(variable ~., ncol=1, scales = "free")
+```
+
+![](l10_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+---
+# Exploratory Data Analysis
+
+
+```r
+Prestige_1 %&gt;%
+  filter(is.na(type) == FALSE) %&gt;%
+ggplot(aes(x = value, y = type, fill = type)) + geom_boxplot() + 
+  facet_wrap(variable ~., ncol=1, scales = "free")
+```
+
+![](l10_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
+---
+# Exploratory Data Analysis
+
+
+```r
+train %&gt;%
+  select(education, income, prestige, women) %&gt;%
+  ggpairs()
+```
+
+![](l10_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
+---
+# Exploratory Data Analysis
+
+
+```r
+train %&gt;%
+  filter(is.na(type) == FALSE) %&gt;%
+  ggpairs(columns= c("education", "income", "prestige", "women"),
+          mapping=aes(color=type))
+```
+
+![](l10_files/figure-html/unnamed-chunk-15-1.png)&lt;!-- --&gt;
+
+
+
+
+---
+class: duke-orange, center, middle
+# Regression analysis
+
+---
+# Steps
+
+1. Fit a model.
+
+2. Visualize the fitted model.
+
+3. Measuring the strength of the fit.
+
+4. Residual analysis. 
+
+5. Interpret the coefficients. 
+
+6. Make predictions using the fitted model.
+
+---
+
+class: duke-orange, middle
+
+# Model 1: prestige ~ education
+
+---
+## Recap 
+
+**True relationship between X and Y in the population**
+
+`$$Y = f(X) + \epsilon$$`
+
+**If `\(f\)` is approximated by a linear function**
+
+`$$Y = \beta_0 + \beta_1X + \epsilon$$`
+
+The error terms are normally distributed with mean `\(0\)` and variance `\(\sigma^2\)`. Then the mean response, `\(Y\)`, at any value of the `\(X\)` is 
+
+`$$E(Y|X=x_i) = E(\beta_0 + \beta_1x_i + \epsilon)=\beta_0+\beta_1x_i$$`
+
+For a single unit `\((y_i, x_i)\)`
+
+`$$y_i = \beta_0 + \beta_1x_i+\epsilon_i \text{  where  } \epsilon_i \sim N(0, \sigma^2)$$`
+
+We use sample values `\((y_i, x_i)\)` where `\(i=1, 2, ...n\)` to estimate `\(\beta_0\)` and `\(\beta_1\)`.
+
+The fitted regression model is 
+
+`$$\hat{Y_i} = \hat{\beta}_0 + \hat{\beta}_1x_i$$`
+---
+
+# How to estimate `\(\beta_0\)` and `\(\beta_1\)`?
+
+Sum of squares of Residuals
+
+`$$SSR=e_1^2+e_2^2+...+e_n^2$$`
+
+The least-squares regression approach chooses coefficients `\(\hat{\beta}_0\)` and `\(\hat{\beta}_1\)` to minimize `\(SSR\)`.
+
+---
+background-image: url('reg/reg1.PNG')
+background-position: center
+background-size: contain
+---
+background-image: url('reg/reg2.PNG')
+background-position: center
+background-size: contain
+---
+background-image: url('reg/reg3.PNG')
+background-position: center
+background-size: contain
+---
+background-image: url('reg/reg4.PNG')
+background-position: center
+background-size: contain
+---
+background-image: url('reg/reg5.PNG')
+background-position: center
+background-size: contain
+---
+background-image: url('reg/reg6.PNG')
+background-position: center
+background-size: contain
+---
+background-image: url('reg/reg7.PNG')
+background-position: center
+background-size: contain
+
+---
+background-image: url('reg/errors.PNG')
+background-position: center
+background-size: contain
+
+---
+class: duke-orange, middle
+
+# Model 1: prestige ~ education
+
+### 1. Fit a model
+
+---
+# Model 1: Fit a model
+
+`$$y_i = \beta_0 + \beta_1x_i + \epsilon_i, \text{where } \epsilon_i \sim NID(0, \sigma^2)$$`
+
+To estimate `\(\beta_0\)` and `\(\beta_1\)`
+
+
+```r
+model1 &lt;- lm(prestige ~ education, data=train)
+
+summary(model1)
+```
+
+```
+
+Call:
+lm(formula = prestige ~ education, data = train)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-26.4715  -5.8396   0.9778   6.2464  17.4767 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   -9.418      3.918  -2.404   0.0186 *  
+education      5.269      0.353  14.928   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 8.754 on 78 degrees of freedom
+Multiple R-squared:  0.7407,	Adjusted R-squared:  0.7374 
+F-statistic: 222.8 on 1 and 78 DF,  p-value: &lt; 2.2e-16
+```
+
+---
+# What's messy about the output?
+
+
+```
+
+Call:
+lm(formula = prestige ~ education, data = train)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-26.4715  -5.8396   0.9778   6.2464  17.4767 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   -9.418      3.918  -2.404   0.0186 *  
+education      5.269      0.353  14.928   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 8.754 on 78 degrees of freedom
+Multiple R-squared:  0.7407,	Adjusted R-squared:  0.7374 
+F-statistic: 222.8 on 1 and 78 DF,  p-value: &lt; 2.2e-16
+```
+
+
+- Extract coefficients takes multiple steps.
+
+  ```r
+  data.frame(coef(summary(model1)))
+  ```
+
+- Column names are inconvenient to use. 
+    
+- Information are stored in row names. 
+
+
+
+
+
+---
+# `broom` functions
+
+- broom takes model objects and
+turns them into tidy data frames
+that can be used with other tidy tools. 
+
+- Three main functions
+
+    `tidy()`: component-level statistics
+
+    `augment()`: observation-level statistics
+
+    `glance()`: model-level statistics
+
+---
+# Component-level statistics: `tidy()`
+
+
+```r
+model1 %&gt;% tidy()
+```
+
+```
+# A tibble: 2 x 5
+  term        estimate std.error statistic  p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)    -9.42     3.92      -2.40 1.86e- 2
+2 education       5.27     0.353     14.9  1.43e-24
+```
+
+```r
+model1 %&gt;% tidy(conf.int=TRUE)
+```
+
+```
+# A tibble: 2 x 7
+  term        estimate std.error statistic  p.value conf.low conf.high
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1 (Intercept)    -9.42     3.92      -2.40 1.86e- 2   -17.2      -1.62
+2 education       5.27     0.353     14.9  1.43e-24     4.57      5.97
+```
+
+
+
+```r
+model1 %&gt;% tidy() %&gt;% select(term, estimate)
+```
+
+```
+# A tibble: 2 x 2
+  term        estimate
+  &lt;chr&gt;          &lt;dbl&gt;
+1 (Intercept)    -9.42
+2 education       5.27
+```
+
+
+---
+# Component-level statistics: `tidy()` (cont.)
+
+
+```r
+model1 %&gt;% tidy()
+```
+
+```
+# A tibble: 2 x 5
+  term        estimate std.error statistic  p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)    -9.42     3.92      -2.40 1.86e- 2
+2 education       5.27     0.353     14.9  1.43e-24
+```
+
+Fitted model is
+
+`$$\hat{Y}_i = -9.42 + 5.27  x_i$$`
+---
+# Why are tidy model outputs useful?
+
+
+```r
+tidy_model1 &lt;- model1 %&gt;% tidy(conf.int=TRUE)
+ggplot(tidy_model1, aes(x=estimate, y=term, color=term)) + 
+  geom_point() + geom_errorbarh(aes(xmin = conf.low, xmax=conf.high))+ggtitle("Coefficient plot")
+```
+
+![](l10_files/figure-html/unnamed-chunk-21-1.png)&lt;!-- --&gt;
+
+---
+class: duke-orange, middle
+
+# Model 1: prestige ~ education
+
+### 1. Fit a model
+
+### 2. Visualise the fitted model
+
+---
+
+# Model 1: Visualise the fitted model
+
+![](l10_files/figure-html/unnamed-chunk-22-1.png)&lt;!-- --&gt;
+
+---
+## Model 1: Visualise the fitted model (style the line)
+
+
+```r
+ggplot(data=train, aes(y=prestige, x=education)) + 
+  geom_point(alpha=0.5) +
+  geom_smooth(method="lm", se=FALSE,
+*              col="forestgreen", lwd=2)
+```
+
+![](l10_files/figure-html/unnamed-chunk-23-1.png)&lt;!-- --&gt;
+
+---
+class: duke-orange, middle
+
+# Model 1: prestige ~ education
+
+### 1. Fit a model
+
+### 2. Visualise the fitted model
+
+### 3. Measure the strength of the fit
+
+---
+# Model-level statistics: `glance()`
+
+ Measuring the strength of the fit
+
+
+```r
+glance(model1)
+```
+
+```
+# A tibble: 1 x 12
+  r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1     0.741         0.737  8.75      223. 1.43e-24     1  -286.  578.  585.
+# … with 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;
+```
+
+
+
+```r
+glance(model1)$adj.r.squared # extract values
+```
+
+```
+[1] 0.7374038
+```
+
+Roughly 73% of the variability in prestige can be explained by the variable education.
+
+---
+class: duke-orange, middle
+
+# Model 1: prestige ~ education
+
+### 1. Fit a model
+
+### 2. Visualise the fitted model
+
+### 3. Measure the strength of the fit
+
+### 4. Residual analysis
+
+---
+# Observation-level statistics: `augment()`
+
+
+```r
+model1_fitresid &lt;- augment(model1)
+model1_fitresid
+```
+
+```
+# A tibble: 80 x 9
+   .rownames prestige education .fitted  .resid .std.resid   .hat .sigma .cooksd
+   &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+ 1 medical.…     67.5     12.8     58.0   9.53       1.10  0.0193   8.74 1.19e-2
+ 2 welders       41.8      7.92    32.3   9.49       1.10  0.0255   8.74 1.58e-2
+ 3 commerci…     40.2     11.1     49.2  -9.03      -1.04  0.0127   8.75 6.95e-3
+ 4 economis…     62.2     14.4     66.7  -4.47      -0.520 0.0347   8.80 4.85e-3
+ 5 farmers       44.1      6.84    26.6  17.5        2.03  0.0373   8.57 8.03e-2
+ 6 receptio…     38.7     11.0     48.8 -10.1       -1.16  0.0126   8.74 8.55e-3
+ 7 sales.su…     41.5      9.84    42.4  -0.931     -0.107 0.0138   8.81 8.04e-5
+ 8 mail.car…     36.1      9.22    39.2  -3.06      -0.353 0.0163   8.80 1.03e-3
+ 9 taxi.dri…     25.1      7.93    32.4  -7.27      -0.841 0.0254   8.77 9.22e-3
+10 veterina…     66.7     15.9     74.6  -7.87      -0.926 0.0563   8.76 2.56e-2
+# … with 70 more rows
+```
+
+---
+
+# Residuals and Fitted Values
+
+![](l10_files/figure-html/unnamed-chunk-27-1.png)&lt;!-- --&gt;
+
+---
+# Residuals and Fitted Values
+
+![](l10_files/figure-html/unnamed-chunk-28-1.png)&lt;!-- --&gt;
+
+The residual is the difference between the observed and predicted response.
+
+The residual for the `\(i^{th}\)` observation is 
+
+`$$e_i = y_i - \hat{Y}_i=y_i - (\hat{\beta_0}+\hat{\beta_1}x_i)$$`
+
+
+---
+## Conditions for inference for regression
+
+- The relationship between the response and the predictors is linear.
+
+- The error terms are assumed to have zero mean and unknown constant variance `\(\sigma^2\)`.
+
+- The errors are normally distributed.
+
+- The errors are uncorrelated.
+
+
+
+---
+
+# Plot of residuals in time sequence.
+
+- The errors are uncorrelated.
+
+- Often, we can conclude that the this assumption is sufficiently met
+based on a description of the data and how it was collected.
+
+
+
+---
+background-image: url('reg/errors.PNG')
+background-position: right
+background-size: contain
+
+### Plot of residuals vs fitted values
+
+.pull-left[
+This is useful for detecting several common types of model inadequacies.
+]
+
+---
+
+## Plot of residuals vs fitted values and Plot of residuals vs predictor 
+
+### linearity and constant variance
+
+.pull-left[
+
+Residuals vs Fitted
+
+```r
+ggplot(model1_fitresid, 
+  aes(x = .fitted, y = .resid))+
+  ------ +
+  ------
+
+```
+
+![](l10_files/figure-html/unnamed-chunk-29-1.png)&lt;!-- --&gt;
+]
+
+
+.pull-right[
+
+Residuals vs X
+
+```r
+ggplot(model1_fitresid, 
+  aes(x = education, y = .resid))+
+  ------ +
+  ------
+
+```
+
+![](l10_files/figure-html/unnamed-chunk-30-1.png)&lt;!-- --&gt;
+]
+
+
+---
+# Normality of residuals
+
+.pull-left[
+
+```r
+ggplot(model1_fitresid, 
+       aes(x=.resid))+
+  geom_histogram(colour="white")+ggtitle("Distribution of Residuals")
+```
+
+![](l10_files/figure-html/unnamed-chunk-31-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+```r
+ggplot(model1_fitresid, 
+       aes(sample=.resid))+
+  stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")
+```
+
+![](l10_files/figure-html/unnamed-chunk-32-1.png)&lt;!-- --&gt;
+
+]
+
+
+```r
+shapiro.test(model1_fitresid$.resid)
+```
+
+```
+
+	Shapiro-Wilk normality test
+
+data:  model1_fitresid$.resid
+W = 0.97192, p-value = 0.07527
+```
+
+---
+
+class: duke-orange, middle
+
+# Model 2: prestige ~ education +  `income`
+
+### 1. Fit a model
+
+### 2. Visualise the fitted model
+
+### 3. Measure the strength of the fit
+
+### 4. Residual analysis
+
+---
+# Model 2: prestige ~ education +  `income`
+
+
+```r
+model2 &lt;- lm(prestige ~ income + education, data=train)
+summary(model2)
+```
+
+```
+
+Call:
+lm(formula = prestige ~ income + education, data = train)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-18.9407  -4.1745   0.2026   4.9471  17.7176 
+
+Coefficients:
+              Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) -7.5400414  3.4980062  -2.156   0.0342 *  
+income       0.0015286  0.0003249   4.705  1.1e-05 ***
+education    4.1452613  0.3937971  10.526  &lt; 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 7.765 on 77 degrees of freedom
+Multiple R-squared:  0.7986,	Adjusted R-squared:  0.7934 
+F-statistic: 152.7 on 2 and 77 DF,  p-value: &lt; 2.2e-16
+```
+---
+# Model 2: prestige ~ education +  `income` (cont.)
+
+```r
+model2_fitresid &lt;- augment(model2)
+model2_fitresid
+```
+
+```
+# A tibble: 80 x 10
+   .rownames prestige income education .fitted .resid .std.resid   .hat .sigma
+   &lt;chr&gt;        &lt;dbl&gt;  &lt;int&gt;     &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+ 1 medical.…     67.5   5180     12.8     53.4  14.1       1.85  0.0350   7.64
+ 2 welders       41.8   6477      7.92    35.2   6.61      0.865 0.0317   7.78
+ 3 commerci…     40.2   8780     11.1     52.0 -11.8      -1.54  0.0186   7.70
+ 4 economis…     62.2   8049     14.4     64.6  -2.42     -0.318 0.0378   7.81
+ 5 farmers       44.1   3643      6.84    26.4  17.7       2.33  0.0374   7.54
+ 6 receptio…     38.7   2901     11.0     42.7  -3.96     -0.520 0.0405   7.80
+ 7 sales.su…     41.5   7482      9.84    44.7  -3.19     -0.414 0.0177   7.81
+ 8 mail.car…     36.1   5511      9.22    39.1  -3.00     -0.390 0.0163   7.81
+ 9 taxi.dri…     25.1   4224      7.93    31.8  -6.69     -0.873 0.0257   7.78
+10 veterina…     66.7  14558     15.9     80.8 -14.1      -1.90  0.0853   7.63
+# … with 70 more rows, and 1 more variable: .cooksd &lt;dbl&gt;
+```
+
+---
+
+
+## Plot of residuals vs fitted values
+
+
+
+.pull-left[
+![](l10_files/figure-html/unnamed-chunk-36-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+linearity and constant variance?
+]
+
+---
+
+# Normality of residuals
+
+.pull-left[
+
+```r
+ggplot(model2_fitresid, 
+       aes(x=.resid))+
+  geom_histogram(colour="white")+ggtitle("Distribution of Residuals")
+```
+
+![](l10_files/figure-html/unnamed-chunk-37-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+```r
+ggplot(model2_fitresid, 
+       aes(sample=.resid))+
+  stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")
+```
+
+![](l10_files/figure-html/unnamed-chunk-38-1.png)&lt;!-- --&gt;
+
+]
+
+
+```r
+shapiro.test(model2_fitresid$.resid)
+```
+
+```
+
+	Shapiro-Wilk normality test
+
+data:  model2_fitresid$.resid
+W = 0.99183, p-value = 0.8977
+```
+
+
+---
+## Plot of residuals vs predictor variables 
+
+
+.pull-left[
+![](l10_files/figure-html/unnamed-chunk-40-1.png)&lt;!-- --&gt;
+]
+
+.pull-left[
+![](l10_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
+]
+
+---
+
+class: duke-orange, middle
+
+## Model 3: prestige ~ education +  `log(income)`
+
+### 1. Fit a model
+
+### 2. Visualise the fitted model
+
+### 3. Measure the strength of the fit
+
+### 4. Residual analysis
+
+---
+## Model 3: prestige ~ education +  `log(income)`
+
+
+```r
+model3 &lt;- lm(prestige ~ log(income) + education, data=train)
+summary(model3)
+```
+
+```
+
+Call:
+lm(formula = prestige ~ log(income) + education, data = train)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-17.5828  -4.1534   0.7978   4.3347  18.1881 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) -86.5942    13.4064  -6.459 8.62e-09 ***
+log(income)  10.2025     1.7189   5.936 7.91e-08 ***
+education     4.2163     0.3436  12.271  &lt; 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 7.298 on 77 degrees of freedom
+Multiple R-squared:  0.8221,	Adjusted R-squared:  0.8175 
+F-statistic: 177.9 on 2 and 77 DF,  p-value: &lt; 2.2e-16
+```
+
+
+```r
+model3_fitresid &lt;- broom::augment(model3)
+```
+
+---
+
+
+
+```r
+model3_fitresid &lt;- broom::augment(model3)
+model3_fitresid
+```
+
+```
+# A tibble: 80 x 9
+   .rownames prestige `log(income)` education .fitted .std.resid   .hat .sigma
+   &lt;chr&gt;        &lt;dbl&gt;         &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+ 1 medical.…     67.5          8.55     12.8     54.6      1.79  0.0254   7.19
+ 2 welders       41.8          8.78      7.92    36.3      0.762 0.0341   7.32
+ 3 commerci…     40.2          9.08     11.1     53.0     -1.77  0.0202   7.20
+ 4 economis…     62.2          8.99     14.4     66.0     -0.536 0.0349   7.33
+ 5 farmers       44.1          8.20      6.84    25.9      2.54  0.0376   7.03
+ 6 receptio…     38.7          7.97     11.0     41.3     -0.364 0.0423   7.34
+ 7 sales.su…     41.5          8.92      9.84    45.9     -0.610 0.0203   7.33
+ 8 mail.car…     36.1          8.61      9.22    40.2     -0.562 0.0168   7.33
+ 9 taxi.dri…     25.1          8.35      7.93    32.0     -0.960 0.0255   7.30
+10 veterina…     66.7          9.59     15.9     78.4     -1.66  0.0642   7.21
+# … with 70 more rows, and 1 more variable: .cooksd &lt;dbl&gt;
+```
+
+If the original outcome
+variable used to fit the model is not included in newdata, then no `.resid` column will be included
+in the output.
+
+When you transform variables (say a log transformation), augment will not display `.resid` column. 
+
+Augment will often behave differently depending on whether data or newdata is given. This is because there is often information associated with training observations (such as influences or related)
+measures that is not meaningfully defined for new observations.
+
+---
+Users may pass data to augment via either the `data` argument or the `newdata` argument. 
+
+If the user passes data to the data argument, it must be exactly the data that was used to fit the model object.
+
+Pass datasets to newdata to augment data that was not used during model fitting. This still requires that at least all predictor variable columns used to fit the model are present. If the original outcome variable used to fit the model is not included in newdata, then no `.resid` column will be included in the output.
+
+---
+
+
+Add new variable (`log.income`) to the training set.
+
+
+```r
+train$log.income &lt;- log(train$income)
+model3 &lt;- lm(prestige ~ log.income + education, data=train)
+model3_fitresid &lt;- broom::augment(model3)
+model3_fitresid
+```
+
+```
+# A tibble: 80 x 10
+   .rownames prestige log.income education .fitted .resid .std.resid   .hat
+   &lt;chr&gt;        &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;
+ 1 medical.…     67.5       8.55     12.8     54.6  12.9       1.79  0.0254
+ 2 welders       41.8       8.78      7.92    36.3   5.46      0.762 0.0341
+ 3 commerci…     40.2       9.08     11.1     53.0 -12.8      -1.77  0.0202
+ 4 economis…     62.2       8.99     14.4     66.0  -3.84     -0.536 0.0349
+ 5 farmers       44.1       8.20      6.84    25.9  18.2       2.54  0.0376
+ 6 receptio…     38.7       7.97     11.0     41.3  -2.60     -0.364 0.0423
+ 7 sales.su…     41.5       8.92      9.84    45.9  -4.40     -0.610 0.0203
+ 8 mail.car…     36.1       8.61      9.22    40.2  -4.07     -0.562 0.0168
+ 9 taxi.dri…     25.1       8.35      7.93    32.0  -6.92     -0.960 0.0255
+10 veterina…     66.7       9.59     15.9     78.4 -11.7      -1.66  0.0642
+# … with 70 more rows, and 2 more variables: .sigma &lt;dbl&gt;, .cooksd &lt;dbl&gt;
+```
+---
+
+
+## Plot of Residuals vs Fitted
+
+.pull-left[
+
+Now - Model 3
+
+![](l10_files/figure-html/unnamed-chunk-46-1.png)&lt;!-- --&gt;
+]
+
+
+.pull-right[
+
+Before - Model 2
+
+![](l10_files/figure-html/unnamed-chunk-47-1.png)&lt;!-- --&gt;
+]
+
+
+---
+# Normality of residuals
+
+.pull-left[
+
+```r
+ggplot(model3_fitresid, 
+       aes(x=.resid))+
+  geom_histogram(colour="white")+ggtitle("Distribution of Residuals")
+```
+
+![](l10_files/figure-html/unnamed-chunk-48-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+```r
+ggplot(model3_fitresid, 
+       aes(sample=.resid))+
+  stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")
+```
+
+![](l10_files/figure-html/unnamed-chunk-49-1.png)&lt;!-- --&gt;
+
+]
+
+
+```r
+shapiro.test(model3_fitresid$.resid)
+```
+
+```
+
+	Shapiro-Wilk normality test
+
+data:  model3_fitresid$.resid
+W = 0.9931, p-value = 0.9492
+```
+
+---
+## Plot of residuals vs predictor variables 
+
+
+.pull-left[
+![](l10_files/figure-html/unnamed-chunk-51-1.png)&lt;!-- --&gt;
+]
+
+.pull-left[
+![](l10_files/figure-html/unnamed-chunk-52-1.png)&lt;!-- --&gt;
+]
+
+
+---
+.pull-left[
+
+## Prestige vs income by type
+
+![](l10_files/figure-html/unnamed-chunk-53-1.png)&lt;!-- --&gt;
+
+R code: ___________
+
+]
+
+.pull-right[
+
+
+## Prestige vs income by type
+
+![](l10_files/figure-html/unnamed-chunk-54-1.png)&lt;!-- --&gt;
+
+R code: ______________
+
+]
+
+---
+
+class: duke-orange, middle
+
+## Model 4: prestige ~ education +  log(income) + `type`
+
+### 1. Fit a model
+
+### 2. Visualise the fitted model
+
+### 3. Measure the strength of the fit
+
+### 4. Residual analysis
+
+---
+
+
+```r
+str(train)
+```
+
+```
+'data.frame':	80 obs. of  7 variables:
+ $ education : num  12.79 7.92 11.13 14.44 6.84 ...
+ $ income    : int  5180 6477 8780 8049 3643 2901 7482 5511 4224 14558 ...
+ $ women     : num  76.04 5.17 3.16 57.31 3.6 ...
+ $ prestige  : num  67.5 41.8 40.2 62.2 44.1 38.7 41.5 36.1 25.1 66.7 ...
+ $ census    : int  3156 8335 5133 2311 7112 4171 5130 4172 9173 3115 ...
+ $ type      : Factor w/ 3 levels "bc","prof","wc": 3 1 3 2 NA 3 3 3 1 2 ...
+ $ log.income: num  8.55 8.78 9.08 8.99 8.2 ...
+```
+
+---
+## Model 4: prestige ~ education +  log(income) + `type`
+
+
+```r
+model4 &lt;- lm(prestige ~ log.income + education + type, data=train)
+summary(model4)
+```
+
+```
+
+Call:
+lm(formula = prestige ~ log.income + education + type, data = train)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-13.8420  -3.7790   0.6321   4.7393  17.8611 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) -71.9102    17.7934  -4.041 0.000133 ***
+log.income    9.1505     2.2945   3.988 0.000160 ***
+education     3.5136     0.7553   4.652 1.48e-05 ***
+typeprof      6.7702     4.3797   1.546 0.126595    
+typewc       -1.6497     3.0213  -0.546 0.586758    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 6.746 on 71 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.8494,	Adjusted R-squared:  0.8409 
+F-statistic: 100.1 on 4 and 71 DF,  p-value: &lt; 2.2e-16
+```
+
+---
+## Model 4: prestige ~ education +  log(income) + `type`
+
+
+```r
+model4_fitresid &lt;- augment(model4)
+head(model4_fitresid)
+```
+
+```
+# A tibble: 6 x 11
+  .rownames prestige log.income education type  .fitted .resid .std.resid   .hat
+  &lt;chr&gt;        &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;
+1 medical.…     67.5       8.55     12.8  wc       49.6 17.9       2.78   0.0934
+2 welders       41.8       8.78      7.92 bc       36.2  5.58      0.843  0.0377
+3 commerci…     40.2       9.08     11.1  wc       48.6 -8.43     -1.32   0.100 
+4 economis…     62.2       8.99     14.4  prof     67.9 -5.69     -0.862  0.0431
+5 receptio…     38.7       7.97     11.0  wc       38.2  0.515     0.0802 0.0944
+6 sales.su…     41.5       8.92      9.84 wc       42.6 -1.14     -0.180  0.122 
+# … with 2 more variables: .sigma &lt;dbl&gt;, .cooksd &lt;dbl&gt;
+```
+
+---
+
+## Plot of Residuals vs Fitted
+
+
+![](l10_files/figure-html/unnamed-chunk-58-1.png)&lt;!-- --&gt;
+
+---
+
+# Normality of residuals
+
+.pull-left[
+
+```r
+ggplot(model4_fitresid, 
+       aes(x=.resid))+
+  geom_histogram(colour="white")+ggtitle("Distribution of Residuals")
+```
+
+![](l10_files/figure-html/unnamed-chunk-59-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+```r
+ggplot(model4_fitresid, 
+       aes(sample=.resid))+
+  stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")
+```
+
+![](l10_files/figure-html/unnamed-chunk-60-1.png)&lt;!-- --&gt;
+
+]
+
+
+```r
+shapiro.test(model4_fitresid$.resid)
+```
+
+```
+
+	Shapiro-Wilk normality test
+
+data:  model4_fitresid$.resid
+W = 0.9838, p-value = 0.4445
+```
+
+---
+
+## Plot of residuals vs predictor variables 
+
+
+.pull-left[
+![](l10_files/figure-html/unnamed-chunk-62-1.png)&lt;!-- --&gt;
+]
+
+.pull-left[
+![](l10_files/figure-html/unnamed-chunk-63-1.png)&lt;!-- --&gt;
+]
+
+
+---
+## Multicollinearity
+
+
+```r
+car::vif(model4)
+```
+
+```
+               GVIF Df GVIF^(1/(2*Df))
+log.income 1.789890  1        1.337868
+education  7.471481  1        2.733401
+type       7.021948  2        1.627850
+```
+
+VIFs larger than 10 imply series problems with multicollinearity.
+
+---
+## Detecting influential observations
+
+
+```r
+library(lindia)
+gg_cooksd(model4)
+```
+
+![](l10_files/figure-html/unnamed-chunk-65-1.png)&lt;!-- --&gt;
+
+---
+# Influential outliers (cont.)
+
+
+```r
+model4_fitresid %&gt;%
+  top_n(4, wt = .cooksd)
+```
+
+```
+# A tibble: 4 x 11
+  .rownames prestige log.income education type  .fitted .resid .std.resid   .hat
+  &lt;chr&gt;        &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;
+1 medical.…     67.5       8.55      12.8 wc       49.6  17.9        2.78 0.0934
+2 veterina…     66.7       9.59      15.9 prof     78.6 -11.9       -1.84 0.0795
+3 file.cle…     32.7       8.01      12.1 wc       42.2  -9.53      -1.50 0.118 
+4 collecto…     29.4       8.46      11.2 wc       43.2 -13.8       -2.12 0.0629
+# … with 2 more variables: .sigma &lt;dbl&gt;, .cooksd &lt;dbl&gt;
+```
+
+## Solutions
+
+- Remove influential observations, and re-fit model. 
+
+- Transform explanatory variables to reduce influence.
+
+- Use weighted regression to down weight influence of extreme observations.
+---
+# Hypothesis testing
+
+`\(Y = \beta_0 + \beta_1x_{1} + \beta_2x_{2} +  \beta_3x_{3} +  \beta_4x_{4} + \epsilon\)`
+
+## What is the overall adequacy of the model?
+
+`\(H0: \beta_1= \beta_2 = \beta_3 = \beta_4\)`
+
+`\(H1: \beta_j \neq 0 \text{ for at least one } j, j=1, 2, 3, 4\)`
+
+## Which specific regressors seem important?
+
+`\(H0: \beta_1= 0\)`
+
+`\(H1: \beta_1 \neq 0\)`
+
+---
+# Making predictions
+
+Method 1
+
+
+```r
+head(test)
+```
+
+```
+                       education income women prestige census type
+gov.administrators         13.11  12351 11.16     68.8   1113 prof
+general.managers           12.26  25879  4.02     69.1   1130 prof
+mining.engineers           14.64  11023  0.94     68.8   2153 prof
+surveyors                  12.39   5902  1.91     62.0   2161 prof
+vocational.counsellors     15.22   9593 34.89     58.3   2391 prof
+physicians                 15.96  25308 10.56     87.2   3111 prof
+```
+
+
+```r
+test$log.income &lt;- log(test$income)
+```
+
+
+
+```r
+predict(model4, test)
+```
+
+```
+##        gov.administrators          general.managers          mining.engineers 
+##                  67.13432                  70.91638                  71.46917 
+##                 surveyors    vocational.counsellors                physicians 
+##                  57.84739                  72.23557                  83.71240 
+##             nursing.aides               secretaries               bookkeepers 
+##                  35.92664                  43.13913                  42.87183 
+##           shipping.clerks       telephone.operators             office.clerks 
+##                  36.14801                  37.10841                  41.15412 
+##              sales.clerks service.station.attendant      real.estate.salesmen 
+##                  33.68323                  34.08491                  46.41067 
+##                 policemen                launderers              farm.workers 
+##                  49.69682                  27.10663                  26.13155 
+##         textile.labourers                machinists        electronic.workers 
+##                  26.40488                  39.63996                  34.62981 
+##                    masons 
+##                  30.82164
+```
+
+---
+# Making predictions
+
+Method 2
+
+
+```r
+library(modelr)
+test &lt;- test %&gt;% add_predictions(model4)
+test
+```
+
+```
+                          education income women prestige census type
+gov.administrators            13.11  12351 11.16     68.8   1113 prof
+general.managers              12.26  25879  4.02     69.1   1130 prof
+mining.engineers              14.64  11023  0.94     68.8   2153 prof
+surveyors                     12.39   5902  1.91     62.0   2161 prof
+vocational.counsellors        15.22   9593 34.89     58.3   2391 prof
+physicians                    15.96  25308 10.56     87.2   3111 prof
+nursing.aides                  9.45   3485 76.14     34.9   3135   bc
+secretaries                   11.59   4036 97.51     46.0   4111   wc
+bookkeepers                   11.32   4348 68.24     49.4   4131   wc
+shipping.clerks                9.17   4761 11.37     30.9   4153   wc
+telephone.operators           10.51   3161 96.14     38.1   4175   wc
+office.clerks                 11.00   4075 63.23     35.6   4197   wc
+sales.clerks                  10.05   2594 67.82     26.5   5137   wc
+service.station.attendant      9.93   2370  3.69     23.3   5145   bc
+real.estate.salesmen          11.09   6992 24.44     47.1   5172   wc
+policemen                     10.93   8891  1.65     51.6   6112   bc
+launderers                     7.33   3000 69.31     20.8   6162   bc
+farm.workers                   8.60   1656 27.75     21.5   7182   bc
+textile.labourers              6.74   3485 39.48     28.8   8278   bc
+machinists                     8.81   6686  4.28     44.2   8313   bc
+electronic.workers             8.76   3942 74.54     50.8   8534   bc
+masons                         6.60   5959  0.52     36.2   8782   bc
+                          log.income     pred
+gov.administrators          9.421492 67.13432
+general.managers           10.161187 70.91638
+mining.engineers            9.307739 71.46917
+surveyors                   8.683047 57.84739
+vocational.counsellors      9.168789 72.23557
+physicians                 10.138876 83.71240
+nursing.aides               8.156223 35.92664
+secretaries                 8.303009 43.13913
+bookkeepers                 8.377471 42.87183
+shipping.clerks             8.468213 36.14801
+telephone.operators         8.058644 37.10841
+office.clerks               8.312626 41.15412
+sales.clerks                7.860956 33.68323
+service.station.attendant   7.770645 34.08491
+real.estate.salesmen        8.852522 46.41067
+policemen                   9.092795 49.69682
+launderers                  8.006368 27.10663
+farm.workers                7.412160 26.13155
+textile.labourers           8.156223 26.40488
+machinists                  8.807771 39.63996
+electronic.workers          8.279443 34.62981
+masons                      8.692658 30.82164
+```
+
+add log.income to `test`
+
+
+```r
+library(modelr)
+test &lt;- test %&gt;% add_predictions(model4)
+```
+
+---
+
+# In-sample accuracy and out of sample accuracy
+
+
+```r
+# test MSE
+test %&gt;%
+add_predictions(model4) %&gt;%
+summarise(MSE = mean((prestige - pred)^2, na.rm=TRUE))
+```
+
+```
+       MSE
+1 40.82736
+```
+
+```r
+# training MSE
+train %&gt;%
+add_predictions(model4) %&gt;%
+summarise(MSE = mean((prestige - pred)^2, na.rm=TRUE))
+```
+
+```
+       MSE
+1 42.51919
+```
+---
+
+## Out of sample accuracy: model 1, model 2 and model 3
+
+
+```r
+# test MSE
+test %&gt;%
+add_predictions(model1) %&gt;%
+summarise(MSE = mean((prestige - pred)^2, na.rm=TRUE))
+```
+
+```
+       MSE
+1 105.7605
+```
+
+```r
+# test MSE
+test %&gt;%
+add_predictions(model2) %&gt;%
+summarise(MSE = mean((prestige - pred)^2, na.rm=TRUE))
+```
+
+```
+       MSE
+1 67.16647
+```
+
+```r
+# test MSE
+test %&gt;%
+add_predictions(model3) %&gt;%
+summarise(MSE = mean((prestige - pred)^2, na.rm=TRUE))
+```
+
+```
+       MSE
+1 45.36052
+```
+
+Model 4: 42.51
+
+
+---
+
+.pull-left[
+
+## Modelling cycle
+
+1. EDA
+
+2. Fit
+
+3. Examine the residuals (multicollinearity/ Influential cases)
+
+4. Transform/ Add/ Drop regressors if necessary
+
+5. Repeat above until you find a good model(s)
+
+6. Use out-of-sample accuracy to select the final model
+
+
+]
+
+.pull-right[
+
+## Presenting results
+
+- EDA
+
+- Final regression fit: 
+
+    - sample size
+    - estimated coefficients and standard errors
+    - `\(R_{adj}^2\)`
+    - Visualizations (model fit, coefficients and CIs)
+
+- Model adequacy checking results: Residual plots and interpretations
+
+- Hypothesis testing and interpretations
+
+    - ANOVA, etc.
+
+- Out-of sample accuracy 
+
+]
+
+- Some flexibility is possible in the presentation of results and you may want to adjust the rules above to emphasize the point you are trying to make.
+
+---
+# Other models
+
+- Decision trees
+
+- Random forests
+
+- XGBoost
+
+- Deep learning approaches and many more..
+
+
+
+---
+
+class: center, middle
+
+
+Slides available at: https://thiyanga.netlify.app/courses/rmsc2020/contentr/
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,1186 @@
+---
+title: "STA 517 3.0 Programming and Statistical Computing with R"
+subtitle: "Regression Analysis"
+author: "Dr Thiyanga Talagala"
+date: "25 October 2020"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+    css: 
+      - default
+      - default-fonts
+      - duke-blue
+      - hygge-duke
+      - libs/cc-fonts.css
+      - libs/figure-captions.css
+      - custom.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE, comment=NA}
+options(htmltools.dir.version = FALSE, message=FALSE, comment=NA, warnings=FALSE)
+library(emo)
+```
+
+background-image: url('box.jpeg')
+background-position: center
+background-size: contain
+
+
+---
+# Packages
+
+```{r, message=FALSE, warning=FALSE}
+library(broom)
+library(modelr)
+library(GGally)
+library(carData)
+library(tidyverse)
+library(magrittr)
+library(car) # to calculate VIF
+```
+
+---
+# Data: Prestige of Canadian Occupations
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+head(Prestige, 5)
+summary(Prestige)
+```
+
+
+---
+# Data description
+
+
+**`prestige`**:  prestige of Canadian occupations, measured by the Pineo-Porter prestige score for occupation taken from a social survey conducted in the mid-1960s.
+
+**`education`**: Average education of occupational incumbents, years, in 1971.
+
+**`income`**: Average income of incumbents, dollars, in 1971.
+
+**`women`**: Percentage of incumbents who are women.
+
+**`census`**: Canadian Census occupational code.
+
+**`type`**: Type of occupation. 
+
+    - prof: professional and technical
+    
+    - wc: white collar
+    
+    - bc: blue collar
+    
+    - NA: missing
+
+The dataset consists of 102 observations, each corresponding to a particular occupation.
+
+---
+# Training test and Test set
+
+```{r, comment=NA}
+smp_size <- 80
+
+## set the seed to make your partition reproducible
+set.seed(123)
+train_ind <- sample(seq_len(nrow(Prestige)), size = smp_size)
+train <- Prestige[train_ind, ]
+dim(train)
+test <- Prestige[-train_ind, ]
+dim(test)
+```
+
+
+---
+# Exploratory Data Analysis
+
+```{r, comment=NA, eval=FALSE}
+Prestige_1 <- train %>%
+  pivot_longer(c(1, 2, 3, 4), names_to="variable", values_to="value")
+Prestige_1
+```
+
+.pull-left[
+```{r, comment=NA, echo=FALSE}
+Prestige_1 <- train %>%
+  pivot_longer(c(1, 2, 3, 4), names_to="variable", values_to="value")
+Prestige_1
+```
+
+]
+
+--
+.pull-right[
+```{r, comment=NA}
+head(train)
+```
+
+]
+
+---
+# Exploratory Data Analysis
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+ggplot(Prestige_1, aes(x=value)) + geom_histogram() + 
+  facet_wrap(variable ~., ncol=1)
+```
+
+---
+# Exploratory Data Analysis
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+ggplot(Prestige_1, aes(x=value)) + geom_histogram() + 
+  facet_wrap(variable ~., ncol=1, scales = "free")
+```
+
+---
+# Exploratory Data Analysis
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+
+ggplot(Prestige_1, aes(x=value)) + geom_histogram(colour="white") + 
+  facet_wrap(variable ~., ncol=1, scales = "free")
+
+```
+---
+
+# Exploratory Data Analysis
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+ggplot(Prestige_1, aes(x=value, fill=variable)) + geom_density() + 
+  facet_wrap(variable ~., ncol=1, scales = "free")
+```
+---
+# Exploratory Data Analysis
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+ggplot(Prestige_1, aes(y = value, x = type, fill = type)) + geom_boxplot() + 
+  facet_wrap(variable ~., ncol=1, scales = "free")
+```
+
+
+---
+# Exploratory Data Analysis
+
+```r
+*Prestige_1 %>%
+*  filter(is.na(type) == FALSE) %>%
+ggplot(aes(y=value, x=type, fill=type)) + geom_boxplot() + 
+  facet_wrap(variable ~., ncol=1, scales = "free")
+```
+
+```{r, comment=NA, message=FALSE, warning=FALSE, fig.height=6, echo=FALSE}
+Prestige_1 %>%
+  filter(is.na(type) == FALSE) %>%
+ggplot(aes(y = value, x = type, fill = type)) + geom_boxplot() + 
+  facet_wrap(variable ~., ncol=1, scales = "free")
+```
+---
+# Exploratory Data Analysis
+
+```{r, comment=NA, message=FALSE, warning=FALSE, fig.height=6}
+Prestige_1 %>%
+  filter(is.na(type) == FALSE) %>%
+ggplot(aes(x = value, y = type, fill = type)) + geom_boxplot() + 
+  facet_wrap(variable ~., ncol=1, scales = "free")
+```
+---
+# Exploratory Data Analysis
+
+```{r, comment=NA, message=FALSE, fig.height=6}
+train %>%
+  select(education, income, prestige, women) %>%
+  ggpairs()
+
+```
+---
+# Exploratory Data Analysis
+
+```{r, comment=NA, message=FALSE, fig.height=6, warning=FALSE}
+train %>%
+  filter(is.na(type) == FALSE) %>%
+  ggpairs(columns= c("education", "income", "prestige", "women"),
+          mapping=aes(color=type))
+
+```
+
+
+
+
+---
+class: duke-orange, center, middle
+# Regression analysis
+
+---
+# Steps
+
+1. Fit a model.
+
+2. Visualize the fitted model.
+
+3. Measuring the strength of the fit.
+
+4. Residual analysis. 
+
+5. Interpret the coefficients. 
+
+6. Make predictions using the fitted model.
+
+---
+
+class: duke-orange, middle
+
+# Model 1: prestige ~ education
+
+---
+## Recap 
+
+**True relationship between X and Y in the population**
+
+$$Y = f(X) + \epsilon$$
+
+**If $f$ is approximated by a linear function**
+
+$$Y = \beta_0 + \beta_1X + \epsilon$$
+
+The error terms are normally distributed with mean $0$ and variance $\sigma^2$. Then the mean response, $Y$, at any value of the $X$ is 
+
+$$E(Y|X=x_i) = E(\beta_0 + \beta_1x_i + \epsilon)=\beta_0+\beta_1x_i$$
+
+For a single unit $(y_i, x_i)$
+
+$$y_i = \beta_0 + \beta_1x_i+\epsilon_i \text{  where  } \epsilon_i \sim N(0, \sigma^2)$$
+
+We use sample values $(y_i, x_i)$ where $i=1, 2, ...n$ to estimate $\beta_0$ and $\beta_1$.
+
+The fitted regression model is 
+
+$$\hat{Y_i} = \hat{\beta}_0 + \hat{\beta}_1x_i$$
+---
+
+# How to estimate $\beta_0$ and $\beta_1$?
+
+Sum of squares of Residuals
+
+$$SSR=e_1^2+e_2^2+...+e_n^2$$
+
+The least-squares regression approach chooses coefficients $\hat{\beta}_0$ and $\hat{\beta}_1$ to minimize $SSR$.
+
+---
+background-image: url('reg/reg1.PNG')
+background-position: center
+background-size: contain
+---
+background-image: url('reg/reg2.PNG')
+background-position: center
+background-size: contain
+---
+background-image: url('reg/reg3.PNG')
+background-position: center
+background-size: contain
+---
+background-image: url('reg/reg4.PNG')
+background-position: center
+background-size: contain
+---
+background-image: url('reg/reg5.PNG')
+background-position: center
+background-size: contain
+---
+background-image: url('reg/reg6.PNG')
+background-position: center
+background-size: contain
+---
+background-image: url('reg/reg7.PNG')
+background-position: center
+background-size: contain
+
+---
+background-image: url('reg/errors.PNG')
+background-position: center
+background-size: contain
+
+---
+class: duke-orange, middle
+
+# Model 1: prestige ~ education
+
+### 1. Fit a model
+
+---
+# Model 1: Fit a model
+
+$$y_i = \beta_0 + \beta_1x_i + \epsilon_i, \text{where } \epsilon_i \sim NID(0, \sigma^2)$$
+
+To estimate $\beta_0$ and $\beta_1$
+
+```{r, comment=NA, message=FALSE}
+model1 <- lm(prestige ~ education, data=train)
+
+summary(model1)
+```
+
+---
+# What's messy about the output?
+
+```{r, comment=NA, message=FALSE, warning=FALSE, echo=FALSE}
+summary(model1)
+```
+
+
+- Extract coefficients takes multiple steps.
+
+  ```r
+  data.frame(coef(summary(model1)))
+  ```
+
+- Column names are inconvenient to use. 
+    
+- Information are stored in row names. 
+
+
+
+
+
+---
+# `broom` functions
+
+- broom takes model objects and
+turns them into tidy data frames
+that can be used with other tidy tools. 
+
+- Three main functions
+
+    `tidy()`: component-level statistics
+
+    `augment()`: observation-level statistics
+
+    `glance()`: model-level statistics
+
+---
+# Component-level statistics: `tidy()`
+
+```{r, comment=NA, message=FALSE}
+model1 %>% tidy()
+model1 %>% tidy(conf.int=TRUE)
+```
+
+
+```{r, comment=NA, message=FALSE}
+model1 %>% tidy() %>% select(term, estimate)
+```
+
+
+---
+# Component-level statistics: `tidy()` (cont.)
+
+```{r, comment=NA, message=FALSE}
+model1 %>% tidy()
+```
+
+Fitted model is
+
+$$\hat{Y}_i = -9.42 + 5.27  x_i$$
+---
+# Why are tidy model outputs useful?
+
+```{r, comment=NA, message=FALSE, warning=FALSE, fig.height=5}
+tidy_model1 <- model1 %>% tidy(conf.int=TRUE)
+ggplot(tidy_model1, aes(x=estimate, y=term, color=term)) + 
+  geom_point() + geom_errorbarh(aes(xmin = conf.low, xmax=conf.high))+ggtitle("Coefficient plot")
+
+```
+
+---
+class: duke-orange, middle
+
+# Model 1: prestige ~ education
+
+### 1. Fit a model
+
+### 2. Visualise the fitted model
+
+---
+
+# Model 1: Visualise the fitted model
+
+```{r, comment=NA, message=FALSE, message=FALSE, echo=FALSE}
+ggplot(data=train, aes(y=prestige, x=education)) +
+  geom_point(alpha=0.5) +
+  geom_smooth(method="lm", se=FALSE)
+```
+
+---
+## Model 1: Visualise the fitted model (style the line)
+
+
+```r
+ggplot(data=train, aes(y=prestige, x=education)) + 
+  geom_point(alpha=0.5) +
+  geom_smooth(method="lm", se=FALSE,
+*              col="forestgreen", lwd=2)
+```
+
+```{r, comment=NA, message=FALSE, message=FALSE, echo=FALSE, fig.height=6}
+ggplot(data=train, aes(y=prestige, x=education)) +
+  geom_point(alpha=0.5)+
+  geom_smooth(method="lm", se=FALSE,
+              col="forestgreen", lwd=2)
+```
+
+---
+class: duke-orange, middle
+
+# Model 1: prestige ~ education
+
+### 1. Fit a model
+
+### 2. Visualise the fitted model
+
+### 3. Measure the strength of the fit
+
+---
+# Model-level statistics: `glance()`
+
+ Measuring the strength of the fit
+
+```{r, comment=NA, message=FALSE}
+glance(model1)
+```
+
+
+```{r, comment=NA, message=FALSE}
+glance(model1)$adj.r.squared # extract values
+```
+
+Roughly 73% of the variability in prestige can be explained by the variable education.
+
+---
+class: duke-orange, middle
+
+# Model 1: prestige ~ education
+
+### 1. Fit a model
+
+### 2. Visualise the fitted model
+
+### 3. Measure the strength of the fit
+
+### 4. Residual analysis
+
+---
+# Observation-level statistics: `augment()`
+
+```{r, comment=NA, message=FALSE}
+model1_fitresid <- augment(model1)
+model1_fitresid
+```
+
+---
+
+# Residuals and Fitted Values
+
+```{r, comment=NA, echo=FALSE, fig.height=5, warning=FALSE, message=FALSE}
+ggplot(model1_fitresid, aes(x = education, y = prestige)) +
+geom_smooth(method = "lm", se = FALSE, color = "blue") +
+geom_point() 
+```
+
+---
+# Residuals and Fitted Values
+
+```{r, comment=NA, echo=FALSE, fig.height=5, warning=FALSE, message=FALSE}
+ggplot(model1_fitresid, aes(x = education, y = prestige)) +
+geom_smooth(method = "lm", se = FALSE, color = "blue") +
+geom_segment(aes(xend = education, yend = .fitted), col="red", lwd=2) +
+geom_point() +
+geom_point(aes(y = .fitted), shape = 1)
+```
+
+The residual is the difference between the observed and predicted response.
+
+The residual for the $i^{th}$ observation is 
+
+$$e_i = y_i - \hat{Y}_i=y_i - (\hat{\beta_0}+\hat{\beta_1}x_i)$$
+
+
+---
+## Conditions for inference for regression
+
+- The relationship between the response and the predictors is linear.
+
+- The error terms are assumed to have zero mean and unknown constant variance $\sigma^2$.
+
+- The errors are normally distributed.
+
+- The errors are uncorrelated.
+
+
+
+---
+
+# Plot of residuals in time sequence.
+
+- The errors are uncorrelated.
+
+- Often, we can conclude that the this assumption is sufficiently met
+based on a description of the data and how it was collected.
+
+
+
+---
+background-image: url('reg/errors.PNG')
+background-position: right
+background-size: contain
+
+### Plot of residuals vs fitted values
+
+.pull-left[
+This is useful for detecting several common types of model inadequacies.
+]
+
+---
+
+## Plot of residuals vs fitted values and Plot of residuals vs predictor 
+
+### linearity and constant variance
+
+.pull-left[
+
+Residuals vs Fitted
+
+```r
+ggplot(model1_fitresid, 
+  aes(x = .fitted, y = .resid))+
+  ------ +
+  ------
+
+```
+
+```{r, comment=NA, echo=FALSE}
+ggplot(model1_fitresid, 
+  aes(x = .fitted, y = .resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+```
+]
+
+
+.pull-right[
+
+Residuals vs X
+
+```r
+ggplot(model1_fitresid, 
+  aes(x = education, y = .resid))+
+  ------ +
+  ------
+
+```
+
+```{r comment=NA, echo=FALSE}
+ggplot(model1_fitresid, 
+  aes(x = education, y = .resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+```
+]
+
+
+---
+# Normality of residuals
+
+.pull-left[
+```{r, comment=NA, message=FALSE, fig.height=5}
+ggplot(model1_fitresid, 
+       aes(x=.resid))+
+  geom_histogram(colour="white")+ggtitle("Distribution of Residuals")
+```
+]
+
+.pull-right[
+```{r, comment=NA, message=FALSE, fig.height=5}
+ggplot(model1_fitresid, 
+       aes(sample=.resid))+
+  stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")
+```
+
+]
+
+```{r, comment=NA, message=FALSE, fig.height=4}
+shapiro.test(model1_fitresid$.resid)
+```
+
+---
+
+class: duke-orange, middle
+
+# Model 2: prestige ~ education +  `income`
+
+### 1. Fit a model
+
+### 2. Visualise the fitted model
+
+### 3. Measure the strength of the fit
+
+### 4. Residual analysis
+
+---
+# Model 2: prestige ~ education +  `income`
+
+```{r, comment=NA}
+model2 <- lm(prestige ~ income + education, data=train)
+summary(model2)
+```
+---
+# Model 2: prestige ~ education +  `income` (cont.)
+```{r, comment=NA}
+model2_fitresid <- augment(model2)
+model2_fitresid
+```
+
+---
+
+
+## Plot of residuals vs fitted values
+
+
+
+.pull-left[
+```{r, comment=NA, echo=FALSE}
+ggplot(model2_fitresid, 
+  aes(x = .fitted, y = .resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+```
+]
+
+.pull-right[
+linearity and constant variance?
+]
+
+---
+
+# Normality of residuals
+
+.pull-left[
+```{r, comment=NA, message=FALSE, fig.height=5}
+ggplot(model2_fitresid, 
+       aes(x=.resid))+
+  geom_histogram(colour="white")+ggtitle("Distribution of Residuals")
+```
+]
+
+.pull-right[
+```{r, comment=NA, message=FALSE, fig.height=5}
+ggplot(model2_fitresid, 
+       aes(sample=.resid))+
+  stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")
+```
+
+]
+
+```{r, comment=NA, message=FALSE, fig.height=4}
+shapiro.test(model2_fitresid$.resid)
+```
+
+
+---
+## Plot of residuals vs predictor variables 
+
+
+.pull-left[
+```{r, comment=NA, echo=FALSE}
+ggplot(model2_fitresid, 
+  aes(x = education, y = .resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+```
+]
+
+.pull-left[
+```{r, comment=NA, echo=FALSE}
+ggplot(model2_fitresid, 
+  aes(x = income, y = .resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+```
+]
+
+---
+
+class: duke-orange, middle
+
+## Model 3: prestige ~ education +  `log(income)`
+
+### 1. Fit a model
+
+### 2. Visualise the fitted model
+
+### 3. Measure the strength of the fit
+
+### 4. Residual analysis
+
+---
+## Model 3: prestige ~ education +  `log(income)`
+
+```{r, comment=NA}
+model3 <- lm(prestige ~ log(income) + education, data=train)
+summary(model3)
+```
+
+```{r, comment=NA}
+model3_fitresid <- broom::augment(model3)
+```
+
+---
+
+
+```{r, comment=NA}
+model3_fitresid <- broom::augment(model3)
+model3_fitresid
+```
+
+If the original outcome
+variable used to fit the model is not included in newdata, then no `.resid` column will be included
+in the output.
+
+When you transform variables (say a log transformation), augment will not display `.resid` column. 
+
+Augment will often behave differently depending on whether data or newdata is given. This is because there is often information associated with training observations (such as influences or related)
+measures that is not meaningfully defined for new observations.
+
+---
+Users may pass data to augment via either the `data` argument or the `newdata` argument. 
+
+If the user passes data to the data argument, it must be exactly the data that was used to fit the model object.
+
+Pass datasets to newdata to augment data that was not used during model fitting. This still requires that at least all predictor variable columns used to fit the model are present. If the original outcome variable used to fit the model is not included in newdata, then no `.resid` column will be included in the output.
+
+---
+
+
+Add new variable (`log.income`) to the training set.
+
+```{r, comment=NA}
+train$log.income <- log(train$income)
+model3 <- lm(prestige ~ log.income + education, data=train)
+model3_fitresid <- broom::augment(model3)
+model3_fitresid
+
+```
+---
+
+
+## Plot of Residuals vs Fitted
+
+.pull-left[
+
+Now - Model 3
+
+```{r, comment=NA, echo=FALSE}
+ggplot(model3_fitresid, 
+  aes(x = .fitted, y = .resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+```
+]
+
+
+.pull-right[
+
+Before - Model 2
+
+```{r, comment=NA, echo=FALSE}
+ggplot(model2_fitresid, 
+  aes(x = .fitted, y = .resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+```
+]
+
+
+---
+# Normality of residuals
+
+.pull-left[
+```{r, comment=NA, message=FALSE, fig.height=5}
+ggplot(model3_fitresid, 
+       aes(x=.resid))+
+  geom_histogram(colour="white")+ggtitle("Distribution of Residuals")
+```
+]
+
+.pull-right[
+```{r, comment=NA, message=FALSE, fig.height=5}
+ggplot(model3_fitresid, 
+       aes(sample=.resid))+
+  stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")
+```
+
+]
+
+```{r, comment=NA, message=FALSE, fig.height=4}
+shapiro.test(model3_fitresid$.resid)
+```
+
+---
+## Plot of residuals vs predictor variables 
+
+
+.pull-left[
+```{r, comment=NA, echo=FALSE}
+ggplot(model3_fitresid, 
+  aes(x = education, y = .resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+```
+]
+
+.pull-left[
+```{r, comment=NA, echo=FALSE}
+ggplot(model3_fitresid, 
+  aes(x = log.income, y = .resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+```
+]
+
+
+---
+.pull-left[
+
+## Prestige vs income by type
+
+```{r, comment=NA, message=FALSE, warning=FALSE, echo=FALSE}
+ggplot(train, aes(y=prestige, x=income, colour=type))+
+  geom_point()
+
+```
+
+R code: ___________
+
+]
+
+.pull-right[
+
+
+## Prestige vs income by type
+
+```{r, comment=NA, message=FALSE, warning=FALSE, echo=FALSE}
+ggplot(train, aes(y=prestige, x=education, colour=type))+
+  geom_point()
+
+```
+
+R code: ______________
+
+]
+
+---
+
+class: duke-orange, middle
+
+## Model 4: prestige ~ education +  log(income) + `type`
+
+### 1. Fit a model
+
+### 2. Visualise the fitted model
+
+### 3. Measure the strength of the fit
+
+### 4. Residual analysis
+
+---
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+str(train)
+```
+
+---
+## Model 4: prestige ~ education +  log(income) + `type`
+
+```{r, comment=NA}
+model4 <- lm(prestige ~ log.income + education + type, data=train)
+summary(model4)
+```
+
+---
+## Model 4: prestige ~ education +  log(income) + `type`
+
+```{r, comment=NA}
+model4_fitresid <- augment(model4)
+head(model4_fitresid)
+```
+
+---
+
+## Plot of Residuals vs Fitted
+
+
+```{r, comment=NA, echo=FALSE}
+ggplot(model4_fitresid, 
+  aes(x = .fitted, y = .resid))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+```
+
+---
+
+# Normality of residuals
+
+.pull-left[
+```{r, comment=NA, message=FALSE, fig.height=5}
+ggplot(model4_fitresid, 
+       aes(x=.resid))+
+  geom_histogram(colour="white")+ggtitle("Distribution of Residuals")
+```
+]
+
+.pull-right[
+```{r, comment=NA, message=FALSE, fig.height=5}
+ggplot(model4_fitresid, 
+       aes(sample=.resid))+
+  stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")
+```
+
+]
+
+```{r, comment=NA, message=FALSE, fig.height=4}
+shapiro.test(model4_fitresid$.resid)
+```
+
+---
+
+## Plot of residuals vs predictor variables 
+
+
+.pull-left[
+```{r, comment=NA, echo=FALSE}
+ggplot(model4_fitresid, 
+  aes(x = education, y = .resid, col=type))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+```
+]
+
+.pull-left[
+```{r, comment=NA, echo=FALSE}
+ggplot(model4_fitresid, 
+  aes(x = log.income, y = .resid, col=type))+
+  geom_point() +
+  geom_hline(yintercept = 0, col = "blue", size = 1)
+
+```
+]
+
+
+---
+## Multicollinearity
+
+```{r, comment=NA, message=FALSE}
+car::vif(model4)
+```
+
+VIFs larger than 10 imply series problems with multicollinearity.
+
+---
+## Detecting influential observations
+
+```{r, comment=NA, message=FALSE, fig.height=5}
+library(lindia)
+gg_cooksd(model4)
+```
+
+---
+# Influential outliers (cont.)
+
+```{r, comment=NA}
+model4_fitresid %>%
+  top_n(4, wt = .cooksd)
+```
+
+## Solutions
+
+- Remove influential observations, and re-fit model. 
+
+- Transform explanatory variables to reduce influence.
+
+- Use weighted regression to down weight influence of extreme observations.
+---
+# Hypothesis testing
+
+$Y = \beta_0 + \beta_1x_{1} + \beta_2x_{2} +  \beta_3x_{3} +  \beta_4x_{4} + \epsilon$
+
+## What is the overall adequacy of the model?
+
+$H0: \beta_1= \beta_2 = \beta_3 = \beta_4$
+
+$H1: \beta_j \neq 0 \text{ for at least one } j, j=1, 2, 3, 4$
+
+## Which specific regressors seem important?
+
+$H0: \beta_1= 0$
+
+$H1: \beta_1 \neq 0$
+
+---
+# Making predictions
+
+Method 1
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+head(test)
+```
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+test$log.income <- log(test$income)
+```
+
+
+```{r}
+predict(model4, test)
+```
+
+---
+# Making predictions
+
+Method 2
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+library(modelr)
+test <- test %>% add_predictions(model4)
+test
+```
+
+add log.income to `test`
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+library(modelr)
+test <- test %>% add_predictions(model4)
+
+```
+
+---
+
+# In-sample accuracy and out of sample accuracy
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+# test MSE
+test %>%
+add_predictions(model4) %>%
+summarise(MSE = mean((prestige - pred)^2, na.rm=TRUE))
+# training MSE
+train %>%
+add_predictions(model4) %>%
+summarise(MSE = mean((prestige - pred)^2, na.rm=TRUE))
+```
+---
+
+## Out of sample accuracy: model 1, model 2 and model 3
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+# test MSE
+test %>%
+add_predictions(model1) %>%
+summarise(MSE = mean((prestige - pred)^2, na.rm=TRUE))
+
+# test MSE
+test %>%
+add_predictions(model2) %>%
+summarise(MSE = mean((prestige - pred)^2, na.rm=TRUE))
+
+# test MSE
+test %>%
+add_predictions(model3) %>%
+summarise(MSE = mean((prestige - pred)^2, na.rm=TRUE))
+
+```
+
+Model 4: 42.51
+
+
+---
+
+.pull-left[
+
+## Modelling cycle
+
+1. EDA
+
+2. Fit
+
+3. Examine the residuals (multicollinearity/ Influential cases)
+
+4. Transform/ Add/ Drop regressors if necessary
+
+5. Repeat above until you find a good model(s)
+
+6. Use out-of-sample accuracy to select the final model
+
+
+]
+
+.pull-right[
+
+## Presenting results
+
+- EDA
+
+- Final regression fit: 
+
+    - sample size
+    - estimated coefficients and standard errors
+    - $R_{adj}^2$
+    - Visualizations (model fit, coefficients and CIs)
+
+- Model adequacy checking results: Residual plots and interpretations
+
+- Hypothesis testing and interpretations
+
+    - ANOVA, etc.
+
+- Out-of sample accuracy 
+
+]
+
+- Some flexibility is possible in the presentation of results and you may want to adjust the rules above to emphasize the point you are trying to make.
+
+---
+# Other models
+
+- Decision trees
+
+- Random forests
+
+- XGBoost
+
+- Deep learning approaches and many more..
+
+
+
+---
+
+class: center, middle
+
+
+Slides available at: https://thiyanga.netlify.app/courses/rmsc2020/contentr/
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+
+
+
