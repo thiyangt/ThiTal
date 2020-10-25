@@ -761,8 +761,8 @@ When you transform variables (say a log transformation), augment will not displa
 Add new variable (`log.income`) to the training set.
 
 ```{r, comment=NA}
-train$log.income <- log(train$income)
-model3 <- lm(prestige ~ log.income + education, data=train)
+train$log.income. <- log(train$income)
+model3 <- lm(prestige ~ log.income. + education, data=train)
 model3_fitresid <- broom::augment(model3)
 model3_fitresid
 
@@ -841,7 +841,7 @@ ggplot(model3_fitresid,
 .pull-left[
 ```{r, comment=NA, echo=FALSE}
 ggplot(model3_fitresid, 
-  aes(x = log.income, y = .resid))+
+  aes(x = log.income., y = .resid))+
   geom_point() +
   geom_hline(yintercept = 0, col = "blue", size = 1)
 
@@ -903,7 +903,7 @@ str(train)
 ## Model 4: prestige ~ education +  log(income) + `type`
 
 ```{r, comment=NA}
-model4 <- lm(prestige ~ log.income + education + type, data=train)
+model4 <- lm(prestige ~ log.income. + education + type, data=train)
 summary(model4)
 ```
 
@@ -971,7 +971,7 @@ ggplot(model4_fitresid,
 .pull-left[
 ```{r, comment=NA, echo=FALSE}
 ggplot(model4_fitresid, 
-  aes(x = log.income, y = .resid, col=type))+
+  aes(x = log.income., y = .resid, col=type))+
   geom_point() +
   geom_hline(yintercept = 0, col = "blue", size = 1)
 
@@ -1038,7 +1038,7 @@ head(test)
 ```
 
 ```{r, comment=NA, message=FALSE, warning=FALSE}
-test$log.income <- log(test$income)
+test$log.income. <- log(test$income)
 ```
 
 

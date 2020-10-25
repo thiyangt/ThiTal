@@ -1021,26 +1021,26 @@ Add new variable (`log.income`) to the training set.
 
 
 ```r
-train$log.income &lt;- log(train$income)
-model3 &lt;- lm(prestige ~ log.income + education, data=train)
+train$log.income. &lt;- log(train$income)
+model3 &lt;- lm(prestige ~ log.income. + education, data=train)
 model3_fitresid &lt;- broom::augment(model3)
 model3_fitresid
 ```
 
 ```
 # A tibble: 80 x 10
-   .rownames prestige log.income education .fitted .resid .std.resid   .hat
-   &lt;chr&gt;        &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;
- 1 medical.…     67.5       8.55     12.8     54.6  12.9       1.79  0.0254
- 2 welders       41.8       8.78      7.92    36.3   5.46      0.762 0.0341
- 3 commerci…     40.2       9.08     11.1     53.0 -12.8      -1.77  0.0202
- 4 economis…     62.2       8.99     14.4     66.0  -3.84     -0.536 0.0349
- 5 farmers       44.1       8.20      6.84    25.9  18.2       2.54  0.0376
- 6 receptio…     38.7       7.97     11.0     41.3  -2.60     -0.364 0.0423
- 7 sales.su…     41.5       8.92      9.84    45.9  -4.40     -0.610 0.0203
- 8 mail.car…     36.1       8.61      9.22    40.2  -4.07     -0.562 0.0168
- 9 taxi.dri…     25.1       8.35      7.93    32.0  -6.92     -0.960 0.0255
-10 veterina…     66.7       9.59     15.9     78.4 -11.7      -1.66  0.0642
+   .rownames prestige log.income. education .fitted .resid .std.resid   .hat
+   &lt;chr&gt;        &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;
+ 1 medical.…     67.5        8.55     12.8     54.6  12.9       1.79  0.0254
+ 2 welders       41.8        8.78      7.92    36.3   5.46      0.762 0.0341
+ 3 commerci…     40.2        9.08     11.1     53.0 -12.8      -1.77  0.0202
+ 4 economis…     62.2        8.99     14.4     66.0  -3.84     -0.536 0.0349
+ 5 farmers       44.1        8.20      6.84    25.9  18.2       2.54  0.0376
+ 6 receptio…     38.7        7.97     11.0     41.3  -2.60     -0.364 0.0423
+ 7 sales.su…     41.5        8.92      9.84    45.9  -4.40     -0.610 0.0203
+ 8 mail.car…     36.1        8.61      9.22    40.2  -4.07     -0.562 0.0168
+ 9 taxi.dri…     25.1        8.35      7.93    32.0  -6.92     -0.960 0.0255
+10 veterina…     66.7        9.59     15.9     78.4 -11.7      -1.66  0.0642
 # … with 70 more rows, and 2 more variables: .sigma &lt;dbl&gt;, .cooksd &lt;dbl&gt;
 ```
 ---
@@ -1161,13 +1161,13 @@ str(train)
 
 ```
 'data.frame':	80 obs. of  7 variables:
- $ education : num  12.79 7.92 11.13 14.44 6.84 ...
- $ income    : int  5180 6477 8780 8049 3643 2901 7482 5511 4224 14558 ...
- $ women     : num  76.04 5.17 3.16 57.31 3.6 ...
- $ prestige  : num  67.5 41.8 40.2 62.2 44.1 38.7 41.5 36.1 25.1 66.7 ...
- $ census    : int  3156 8335 5133 2311 7112 4171 5130 4172 9173 3115 ...
- $ type      : Factor w/ 3 levels "bc","prof","wc": 3 1 3 2 NA 3 3 3 1 2 ...
- $ log.income: num  8.55 8.78 9.08 8.99 8.2 ...
+ $ education  : num  12.79 7.92 11.13 14.44 6.84 ...
+ $ income     : int  5180 6477 8780 8049 3643 2901 7482 5511 4224 14558 ...
+ $ women      : num  76.04 5.17 3.16 57.31 3.6 ...
+ $ prestige   : num  67.5 41.8 40.2 62.2 44.1 38.7 41.5 36.1 25.1 66.7 ...
+ $ census     : int  3156 8335 5133 2311 7112 4171 5130 4172 9173 3115 ...
+ $ type       : Factor w/ 3 levels "bc","prof","wc": 3 1 3 2 NA 3 3 3 1 2 ...
+ $ log.income.: num  8.55 8.78 9.08 8.99 8.2 ...
 ```
 
 ---
@@ -1175,14 +1175,14 @@ str(train)
 
 
 ```r
-model4 &lt;- lm(prestige ~ log.income + education + type, data=train)
+model4 &lt;- lm(prestige ~ log.income. + education + type, data=train)
 summary(model4)
 ```
 
 ```
 
 Call:
-lm(formula = prestige ~ log.income + education + type, data = train)
+lm(formula = prestige ~ log.income. + education + type, data = train)
 
 Residuals:
      Min       1Q   Median       3Q      Max 
@@ -1191,7 +1191,7 @@ Residuals:
 Coefficients:
             Estimate Std. Error t value Pr(&gt;|t|)    
 (Intercept) -71.9102    17.7934  -4.041 0.000133 ***
-log.income    9.1505     2.2945   3.988 0.000160 ***
+log.income.   9.1505     2.2945   3.988 0.000160 ***
 education     3.5136     0.7553   4.652 1.48e-05 ***
 typeprof      6.7702     4.3797   1.546 0.126595    
 typewc       -1.6497     3.0213  -0.546 0.586758    
@@ -1215,15 +1215,15 @@ head(model4_fitresid)
 
 ```
 # A tibble: 6 x 11
-  .rownames prestige log.income education type  .fitted .resid .std.resid   .hat
-  &lt;chr&gt;        &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;
-1 medical.…     67.5       8.55     12.8  wc       49.6 17.9       2.78   0.0934
-2 welders       41.8       8.78      7.92 bc       36.2  5.58      0.843  0.0377
-3 commerci…     40.2       9.08     11.1  wc       48.6 -8.43     -1.32   0.100 
-4 economis…     62.2       8.99     14.4  prof     67.9 -5.69     -0.862  0.0431
-5 receptio…     38.7       7.97     11.0  wc       38.2  0.515     0.0802 0.0944
-6 sales.su…     41.5       8.92      9.84 wc       42.6 -1.14     -0.180  0.122 
-# … with 2 more variables: .sigma &lt;dbl&gt;, .cooksd &lt;dbl&gt;
+  .rownames prestige log.income. education type  .fitted .resid .std.resid
+  &lt;chr&gt;        &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+1 medical.…     67.5        8.55     12.8  wc       49.6 17.9       2.78  
+2 welders       41.8        8.78      7.92 bc       36.2  5.58      0.843 
+3 commerci…     40.2        9.08     11.1  wc       48.6 -8.43     -1.32  
+4 economis…     62.2        8.99     14.4  prof     67.9 -5.69     -0.862 
+5 receptio…     38.7        7.97     11.0  wc       38.2  0.515     0.0802
+6 sales.su…     41.5        8.92      9.84 wc       42.6 -1.14     -0.180 
+# … with 3 more variables: .hat &lt;dbl&gt;, .sigma &lt;dbl&gt;, .cooksd &lt;dbl&gt;
 ```
 
 ---
@@ -1296,10 +1296,10 @@ car::vif(model4)
 ```
 
 ```
-               GVIF Df GVIF^(1/(2*Df))
-log.income 1.789890  1        1.337868
-education  7.471481  1        2.733401
-type       7.021948  2        1.627850
+                GVIF Df GVIF^(1/(2*Df))
+log.income. 1.789890  1        1.337868
+education   7.471481  1        2.733401
+type        7.021948  2        1.627850
 ```
 
 VIFs larger than 10 imply series problems with multicollinearity.
@@ -1326,13 +1326,13 @@ model4_fitresid %&gt;%
 
 ```
 # A tibble: 4 x 11
-  .rownames prestige log.income education type  .fitted .resid .std.resid   .hat
-  &lt;chr&gt;        &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;
-1 medical.…     67.5       8.55      12.8 wc       49.6  17.9        2.78 0.0934
-2 veterina…     66.7       9.59      15.9 prof     78.6 -11.9       -1.84 0.0795
-3 file.cle…     32.7       8.01      12.1 wc       42.2  -9.53      -1.50 0.118 
-4 collecto…     29.4       8.46      11.2 wc       43.2 -13.8       -2.12 0.0629
-# … with 2 more variables: .sigma &lt;dbl&gt;, .cooksd &lt;dbl&gt;
+  .rownames prestige log.income. education type  .fitted .resid .std.resid
+  &lt;chr&gt;        &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+1 medical.…     67.5        8.55      12.8 wc       49.6  17.9        2.78
+2 veterina…     66.7        9.59      15.9 prof     78.6 -11.9       -1.84
+3 file.cle…     32.7        8.01      12.1 wc       42.2  -9.53      -1.50
+4 collecto…     29.4        8.46      11.2 wc       43.2 -13.8       -2.12
+# … with 3 more variables: .hat &lt;dbl&gt;, .sigma &lt;dbl&gt;, .cooksd &lt;dbl&gt;
 ```
 
 ## Solutions
@@ -1381,7 +1381,7 @@ physicians                 15.96  25308 10.56     87.2   3111 prof
 
 
 ```r
-test$log.income &lt;- log(test$income)
+test$log.income. &lt;- log(test$income)
 ```
 
 
@@ -1445,29 +1445,29 @@ textile.labourers              6.74   3485 39.48     28.8   8278   bc
 machinists                     8.81   6686  4.28     44.2   8313   bc
 electronic.workers             8.76   3942 74.54     50.8   8534   bc
 masons                         6.60   5959  0.52     36.2   8782   bc
-                          log.income     pred
-gov.administrators          9.421492 67.13432
-general.managers           10.161187 70.91638
-mining.engineers            9.307739 71.46917
-surveyors                   8.683047 57.84739
-vocational.counsellors      9.168789 72.23557
-physicians                 10.138876 83.71240
-nursing.aides               8.156223 35.92664
-secretaries                 8.303009 43.13913
-bookkeepers                 8.377471 42.87183
-shipping.clerks             8.468213 36.14801
-telephone.operators         8.058644 37.10841
-office.clerks               8.312626 41.15412
-sales.clerks                7.860956 33.68323
-service.station.attendant   7.770645 34.08491
-real.estate.salesmen        8.852522 46.41067
-policemen                   9.092795 49.69682
-launderers                  8.006368 27.10663
-farm.workers                7.412160 26.13155
-textile.labourers           8.156223 26.40488
-machinists                  8.807771 39.63996
-electronic.workers          8.279443 34.62981
-masons                      8.692658 30.82164
+                          log.income.     pred
+gov.administrators           9.421492 67.13432
+general.managers            10.161187 70.91638
+mining.engineers             9.307739 71.46917
+surveyors                    8.683047 57.84739
+vocational.counsellors       9.168789 72.23557
+physicians                  10.138876 83.71240
+nursing.aides                8.156223 35.92664
+secretaries                  8.303009 43.13913
+bookkeepers                  8.377471 42.87183
+shipping.clerks              8.468213 36.14801
+telephone.operators          8.058644 37.10841
+office.clerks                8.312626 41.15412
+sales.clerks                 7.860956 33.68323
+service.station.attendant    7.770645 34.08491
+real.estate.salesmen         8.852522 46.41067
+policemen                    9.092795 49.69682
+launderers                   8.006368 27.10663
+farm.workers                 7.412160 26.13155
+textile.labourers            8.156223 26.40488
+machinists                   8.807771 39.63996
+electronic.workers           8.279443 34.62981
+masons                       8.692658 30.82164
 ```
 
 add log.income to `test`
