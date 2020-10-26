@@ -20,7 +20,7 @@ selected = false
 
 # Links (optional).
 url_pdf = ""
-url_slides = "static/Slides/isf2020/ISF_2020_Thiyanga_S_Talagala.html"
+url_slides = "https://thiyanga.netlify.app/slides/isf2020/isf_2020_thiyanga_s_talagala#1"
 url_video = ""
 url_code = "https://github.com/thiyangt/isf2020"
 
