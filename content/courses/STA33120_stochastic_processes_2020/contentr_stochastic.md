@@ -53,24 +53,25 @@ Holiday
 
 - Assignment discussion.
 
-##### Week  9 
+
+### Week  9 
 
 - [Poisson Process (cont.), Splitting of a Poisson process, Compound Poisson processes](/Slides/2020s2StochasticProcesses/7_stochastic_processes_2020.pdf)
 
 
-#### Week 10
+### Week 10
 
 Ion Switching| [Kaggle competition](https://www.kaggle.com/c/liverpool-ion-switching)
 
-#### Week 11
+### Week 11
 
 - [Nonhomogeneous Poisson Processes](/Slides/2020s2StochasticProcesses/7_stochastic_processes_2020.pdf)
 
-#### Week 12 - 14
+### Week 12 - 14
 
 - Birth and death process
 
-#### Week 15
+### Week 15
 
 Revision
 
