@@ -60,7 +60,7 @@ Holiday
 
 #### Week 10
 
-Ion Switching|[Kaggle competition](https://www.kaggle.com/c/liverpool-ion-switching)
+Ion Switching| [Kaggle competition](https://www.kaggle.com/c/liverpool-ion-switching)
 
 #### Week 11
 
