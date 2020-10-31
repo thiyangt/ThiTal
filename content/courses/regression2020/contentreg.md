@@ -119,8 +119,7 @@ Mid Exam: Cancelled due to Covid-19 Outbreak
     
     - Tests on individual regression coefficients
 
-    - Extra-sum-of-squares method
-    
+
 
 | 📚 [Slides](https://edify-thiyanga.netlify.app/regression/regression7.html#1)  	| 📒 Reading - [here](https://bookdown.org/egarpor/SSS2-UC3M/multlin-aovfit.html) 	| 📊 Data Sets - [heart.data.csv](/data/heart.data.csv) and `alr3::heights` 	| 📎 Problems - Quiz Google Classroom	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
@@ -128,12 +127,14 @@ Mid Exam: Cancelled due to Covid-19 Outbreak
 
 ### Week 10
 
- - Confidence intervals in multiple regression
+- Confidence intervals in multiple regression
+ 
+    - Confidence intervals on the regression coefficients
+      
+    - Confidence interval estimation of the mean response
     
-    - Prediction of new observations
-    
-    - Standardized regression coefficients
-
+ - Prediction of new observations
+  
     
 - Transformations 
 
@@ -144,20 +145,6 @@ Mid Exam: Cancelled due to Covid-19 Outbreak
     - Analytical methods for selecting a transformation
 
 - Detection and treatment of outliers
-
-
-- Lack of fit of regression model
-
-    - Pure error
-    
-    - Model-independent measures of pure error
-    
-    - Lack-of-fit test
-    
-
-- Generalized least squares
-    
-- Weighted least squares
 
 - Diagnostics for leverage and influence
 
@@ -170,7 +157,7 @@ Mid Exam: Cancelled due to Covid-19 Outbreak
     - Treatment of influential observations
 
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚 [Slide-i](https://edify-thiyanga.netlify.app/regression/regression8.html#1)  	| 📒 Reading - Chapter 3, Montgomery, Peck, Vining 	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
