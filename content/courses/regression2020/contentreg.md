@@ -135,7 +135,20 @@ Mid Exam: Cancelled due to Covid-19 Outbreak
     
  - Prediction of new observations
   
-    
+#### Mid Evaluation Assignment - Visit LMS/ Google Classroom (1 Nov 2020) 📝
+
+Assignment deadline: 15 Nov 2020
+
+Special considerations email me on or before 8 Nov 2020
+
+| 📚 [Slide](https://edify-thiyanga.netlify.app/regression/regression8.html#1)  	| 📒 Reading - Chapter 3, Montgomery, Peck, Vining 	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+
+|:-:	|:-:	|:-:	|:-:	|:-:	|
+
+
+### Week 11
+
+   
 - Transformations 
 
     - Variance-stabilization transformations
@@ -156,12 +169,6 @@ Mid Exam: Cancelled due to Covid-19 Outbreak
     
     - Treatment of influential observations
 
-
-| 📚 [Slide-i](https://edify-thiyanga.netlify.app/regression/regression8.html#1)  	| 📒 Reading - Chapter 3, Montgomery, Peck, Vining 	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
-|:-:	|:-:	|:-:	|:-:	|:-:	|
-
-
-### Week 11
 
 - Regression with qualitative variables
 
