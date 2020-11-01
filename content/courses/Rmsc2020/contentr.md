@@ -84,7 +84,7 @@ Here is your road map for the course!
 | 📚 [Slides](/Slides/2020s1STA5173_0/l7_reshaping_data.html)  	| 📒 [Reading -R4DS Ch12](https://r4ds.had.co.nz/tidy-data.html) 	| 📊 [Cheat sheet](https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf)	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
-- Data wrangling with dplyr - 1
+- Data wrangling with dplyr 
 
 | 📚 [Slides](/Slides/2020s1STA5173_0/l7_data_manipulation_with_dplyr.html)  	| 📒 [Reading -R4DS Ch12](https://r4ds.had.co.nz/tidy-data.html) 	| 📊 [Cheat sheet](https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf)	| 📎 [Problems](https://hellor.netlify.app/problems/DataWrangling_Tutorial.pdf) 	| 🔖 [Answers](/Slides/2020s1STA5173_0/MSc_tutorials/DataWrangling_Tutorial_Answers_MSC.pdf) |
 
@@ -109,20 +109,21 @@ data(package = 'palmerpenguins')`
 
 - Statistical modelling - Regression Analysis
 
-| 📚 [Slides](/Slides/2020s1STA5173_0/l10.html)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚 [Slides](/Slides/2020s1STA5173_0/l10.html)  	| 📒 Reading  	| 📊 Data Sets -	i[house.csv](/data/house.csv) | 📎 [Problems - i](/data/regression_tutorial1.html)	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
 ### Week 11
 
-- Functional programming with R
+- Methods of generating random numbers
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚 [Slides](/Slides/2020s1STA5173_0/l11_inverse_transformation.html)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖 [Answers](/Slides/2020s1STA5173_0/l11_inverse_transformation.html)|
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 ### Week 12
 
-- Methods of generating random numbers
+
+- Functional programming with R
 
 | 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|

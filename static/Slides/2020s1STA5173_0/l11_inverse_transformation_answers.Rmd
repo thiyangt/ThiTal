@@ -6,7 +6,7 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# STA 326 2.0 Programming and Data Analysis with R
+# STA 517 3.0 Programming and Statistical Computing with R
 
 # Generating Random Numbers Using the Inverse Transform Method
 
@@ -239,25 +239,45 @@ n10000[[2]]
 
 i) Write a function to generate random numbers from the $Exponential(\lambda)$ distribution using the inverse transformation method.
 
-```{r, out.width="100%", fig.asp=0.9, fig.align='center', fig.pos='h', echo=FALSE}
-library(ggplot2)
-ggplot() + 
-  theme_void() + 
-  theme(panel.border = element_rect(colour="white", fill=NA, size = 1))
+
+```{r,  comment=NA}
+exp_generator <- function(n, lambda){
+  u <- runif(n, 0, 1)
+  exp.values <- -log(1-u)/lambda
+    exp.values
+}
 
 ```
 
 
-
-
 ii) Generate 1000 random numbers from the $Exponential(2)$ distribution.
 
+```{r, comment=NA, echo=TRUE}
+set.seed(111)
+exp2 <- exp_generator(1000, 2)
+
+```
 
 
-\newpage
+```{r, comment=NA}
+exp2
+```
+
 
 iii) Graph the density histogram of the sample with the $Exponential(2)$ density superimposed for comparison. 
 
 
+```{r, comment=NA}
+# values for empirical distribution
+empirical.df.exp <- data.frame(xgen=exp2) 
+# values for the theoretical distribution
+theoretical.df <- tibble(x = seq(0.1, 5, 0.01), 
+  fx = 2*exp(-2*x))
+
+ggplot(empirical.df.exp, aes(x = xgen, y=..density..)) + 
+  geom_histogram(col = "white", binwidth = 0.05) + 
+  geom_line(data = theoretical.df, aes(x = x, y = fx), color = "forestgreen") + 
+  labs(x="x", y="fx")
+```
 
 

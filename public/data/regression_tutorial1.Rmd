@@ -1,0 +1,307 @@
+---
+title: "Simple Linear Regression Analysis with R"
+author: "Prepared by Dr Thiyanga S. Talagala"
+date: "1/11/2020"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+---
+
+# Reproduce the results of this document and fill in the blanks.
+
+Mr. Perera who lives in Soratha Mawatha - Wijerama wants to sell his house. He wants to decide a price for his house to list it in the market. He believes that the size of the house is one likely determinant of price. He asked from 200 homes in the neighbourhood "what price should you ask for your home when you put it on the market?" and square feet. Collected data are available to you in the file `house.csv`. 
+
+1. Fit a suitable simple linear regression model for the data and carry out complete diagnostic tests for the model to check the validity of the regression assumptions.
+
+2. Comment on each and every output received in part (1).  You should clearly states corresponding hypotheses as appropriate.
+
+3. What price should you suggest for Mr. Perera's home? Square feet of Mr Perera's House is 2000.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA, message = FALSE, fig.height = 5, fig.width = 5)
+```
+
+# Load packages
+
+```{r}
+library(tidyverse)
+library(broom)
+
+```
+
+# Load dataset
+
+```{r, comment=NA}
+house <- read_csv("house.csv")
+attach(house)
+```
+
+## Overview of the dataset
+
+```{r}
+glimpse(house)
+```
+
+
+```{r}
+summary(house)
+```
+
+# Visualise data
+
+```{r}
+qplot(data=house, x=price, geom=c("histogram"))+
+  geom_histogram(color="black", fill="#d95f02")
+```
+
+Interpretation:
+
+
+__________________
+
+
+___________________
+
+```{r}
+qplot(data=house, x=houseSize, geom=c("histogram"))+
+  geom_histogram(color="black", fill="#1b9e77")
+```
+
+Interpretation: 
+
+
+___________________
+
+___________________
+
+
+```{r}
+qplot(data=house, y=price, x=houseSize) + 
+  xlab("House size (sqft)") + 
+  ylab("Price") + 
+  labs(title="Price vs House size (sqft)")
+  
+```
+
+
+```{r}
+
+cor(house$price, house$houseSize)
+```
+
+Interpretation: 
+
+
+___________________
+
+___________________
+
+
+
+
+
+# Fit a regression model
+
+```{r}
+slrfit <- lm(price ~ houseSize, data=house)
+slrfit
+
+  
+```
+
+```{r}
+qplot(data=house, y=price, x=houseSize) + 
+  xlab("House size (sqft)") + 
+  ylab("Price") + 
+  labs(title="Price vs House size (sqft)") + 
+   geom_abline(intercept = 5.15772, slope = 0.02489, colour="forestgreen", lwd=2) 
+```
+
+Write the fitted regression model:
+
+___________________
+
+___________________
+
+
+# Model adequacy checking
+
+## Compute fitted values and residuals
+
+```{r}
+slrfit_values <- augment(slrfit)
+slrfit_values
+```
+
+## Residuals vs fitted values
+
+Write the code to plot residual vs fitted values
+
+```{r}
+qplot(data=slrfit_values, y=.resid, x=.fitted)
+
+```
+
+___________________
+
+
+## Normality test of residuals
+
+
+```{r}
+qplot(data=slrfit_values, x=.resid, geom=c("histogram"))+
+  geom_histogram(color="black", fill="lightblue")
+```
+
+```{r}
+ggplot(slrfit_values, 
+       aes(sample=.resid))+
+  stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")
+
+
+```
+
+```{r}
+shapiro.test(slrfit_values$.resid)
+```
+
+H0:
+
+H1: 
+
+Decision:
+
+Conclusion: 
+
+
+
+
+# Interpretation of the model output
+
+```{r}
+summary(slrfit)
+```
+
+## Coefficient of determination
+
+$R^2 = 87.02\%$
+
+Interpretation: 
+
+___________________
+
+___________________
+
+___________________
+
+___________________
+
+## Point estimate of $\beta_0$
+
+Interpretation: 
+
+
+___________________
+
+___________________
+
+
+## Intervals estimate of $\beta_0$
+
+Interpretation: 
+
+
+___________________
+
+___________________
+
+
+## Point estimate of $\beta_1$
+
+Interpretation: 
+
+
+___________________
+
+___________________
+
+
+## Intervals estimate of $\beta_1$
+
+Interpretation: 
+
+
+___________________
+
+___________________
+
+# Hypothesis testing on the Slope and Intercept
+
+___________________
+
+___________________
+
+___________________
+
+___________________
+
+
+___________________
+
+___________________
+
+___________________
+
+___________________
+
+___________________
+
+___________________
+
+
+___________________
+
+___________________
+
+
+___________________
+
+___________________
+
+___________________
+
+___________________
+
+
+___________________
+
+___________________
+
+
+___________________
+
+___________________
+
+___________________
+
+___________________
+
+
+___________________
+
+___________________
+
+
+
+
+# Prediction of New Observations
+
+
+```{r, comment=NA}
+newhouseSize <- data.frame(houseSize = c(2000, 2500, 2300, 2400, 2760))
+predict(slrfit, newdata=newhouseSize , interval="predict")
+```
+
+

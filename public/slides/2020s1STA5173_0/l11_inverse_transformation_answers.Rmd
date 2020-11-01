@@ -6,7 +6,7 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# STA 326 2.0 Programming and Data Analysis with R
+# STA 517 3.0 Programming and Statistical Computing with R
 
 # Generating Random Numbers Using the Inverse Transform Method
 
