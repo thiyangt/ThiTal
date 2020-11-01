@@ -16,3 +16,6 @@ subtitle = ""
 
 
 <i class="fa fa-cog fa-spin" style="color:Maroon"></i> [explainer](https://github.com/thiyangt/explainer): Take a peek inside a random forest.
+
+<i class="fa fa-cog fa-spin" style="color:Maroon"></i> [tsdataleaks](https://github.com/thiyangt/tsdataleaks): R Package for detecting data leakages in time series forecasting competitions.
+
