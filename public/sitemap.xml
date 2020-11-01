@@ -118,12 +118,12 @@
   </url>
   
   <url>
-    <loc>/tags/nature/</loc>
+    <loc>/categories/nature/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/nature/</loc>
+    <loc>/tags/nature/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -138,22 +138,22 @@
   </url>
   
   <url>
-    <loc>/categories/stem/</loc>
-    <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/stem/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/women-in-stem/</loc>
+    <loc>/categories/stem/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/women-in-stem/</loc>
+    <lastmod>2020-05-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/women-in-stem/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -303,12 +303,12 @@
   </url>
   
   <url>
-    <loc>/tags/rmarkdown/</loc>
+    <loc>/categories/rmarkdown/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/rmarkdown/</loc>
+    <loc>/tags/rmarkdown/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
   </url>
   
@@ -328,12 +328,12 @@
   </url>
   
   <url>
-    <loc>/categories/ggplot2/</loc>
+    <loc>/tags/ggplot2/</loc>
     <lastmod>2018-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/ggplot2/</loc>
+    <loc>/categories/ggplot2/</loc>
     <lastmod>2018-09-05T00:00:00+00:00</lastmod>
   </url>
   
