@@ -69,7 +69,9 @@ Ion Switching| [Kaggle competition](https://www.kaggle.com/c/liverpool-ion-switc
 
 ### Week 12 - 14
 
-- Birth and death process
+- [Birth and death process - Introduction, Pure Birth Process](/Slides/2020s2StochasticProcesses/8_stochastic_processes_2020.pdf)
+
+- [Partial Differential Equations](/Slides/2020s2StochasticProcesses/PDF.pdf)
 
 ### Week 15
 
