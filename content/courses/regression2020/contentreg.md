@@ -169,6 +169,12 @@ Special considerations email me on or before 8 Nov 2020
     - Treatment of influential observations
 
 
+| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression9.html#1)  	| 📒 Reading - Section 3.3, Montgomery, Peck, Vining 	| 📊 Data Sets - [coconut.csv](/data/coconut.csv) [salarydata.csv](/data/salarydata.csv)	| 📎 Problems 	| 🔖Answers |
+|:-:	|:-:	|:-:	|:-:	|:-:	|
+
+### Week 12
+
+
 - Regression with qualitative variables
 
     - Indicator/ Dummy variables
@@ -178,13 +184,6 @@ Special considerations email me on or before 8 Nov 2020
     - More than one indicator variable
     
     - Interaction term involving dummy variables
-    
-    
-
-| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression9.html#1)  	| 📒 Reading - Section 3.3, Montgomery, Peck, Vining 	| 📊 Data Sets - [coconut.csv](/data/coconut.csv) [salarydata.csv](/data/salarydata.csv)	| 📎 Problems 	| 🔖Answers |
-|:-:	|:-:	|:-:	|:-:	|:-:	|
-
-### Week 12
 
 - Variable selection procedures
 

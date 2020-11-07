@@ -128,17 +128,12 @@
   </url>
   
   <url>
-    <loc>/categories/science/</loc>
-    <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/science/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/stem/</loc>
+    <loc>/categories/science/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -148,12 +143,17 @@
   </url>
   
   <url>
-    <loc>/tags/women-in-stem/</loc>
+    <loc>/tags/stem/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/women-in-stem/</loc>
+    <lastmod>2020-05-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/women-in-stem/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -178,22 +178,22 @@
   </url>
   
   <url>
-    <loc>/tags/plotly/</loc>
-    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/plotly/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/shiny/</loc>
+    <loc>/tags/plotly/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/shiny/</loc>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/shiny/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -213,12 +213,12 @@
   </url>
   
   <url>
-    <loc>/categories/dplyr/</loc>
+    <loc>/tags/dplyr/</loc>
     <lastmod>2019-05-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/dplyr/</loc>
+    <loc>/categories/dplyr/</loc>
     <lastmod>2019-05-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -328,12 +328,12 @@
   </url>
   
   <url>
-    <loc>/categories/ggplot2/</loc>
+    <loc>/tags/ggplot2/</loc>
     <lastmod>2018-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/ggplot2/</loc>
+    <loc>/categories/ggplot2/</loc>
     <lastmod>2018-09-05T00:00:00+00:00</lastmod>
   </url>
   
