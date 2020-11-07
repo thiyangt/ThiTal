@@ -141,7 +141,7 @@ Assignment deadline: 15 Nov 2020
 
 Special considerations email me on or before 8 Nov 2020
 
-| 📚 [Slide](https://edify-thiyanga.netlify.app/regression/regression8.html#1)  	| 📒 Reading - Chapter 3, Montgomery, Peck, Vining 	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚 [Slides](https://edify-thiyanga.netlify.app/regression/regression8.html#1)  	| 📒 Reading - Chapter 3, Montgomery, Peck, Vining 	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
@@ -181,7 +181,7 @@ Special considerations email me on or before 8 Nov 2020
     
     
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression9.html#1)  	| 📒 Reading - Section 3.3, Montgomery, Peck, Vining 	| 📊 Data Sets - [coconut.csv](/data/coconut.csv) [salarydata.csv](/data/salarydata.csv)	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 ### Week 12
