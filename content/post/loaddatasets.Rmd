@@ -19,7 +19,7 @@ happy <- data.frame(
 happy
 ```
 
-Name save the dataset as shown below.
+Save the dataset as shown below.
 
 ```r
 save(happy, file="happyindex.rda")

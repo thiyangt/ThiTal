@@ -34,7 +34,7 @@ happy&lt;/code&gt;&lt;/pre&gt;
 3     Denmark  7.55
 4     Iceland  7.49
 5 Netherlands  7.48&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Name save the dataset as shown below.&lt;/p&gt;
+&lt;p&gt;Save the dataset as shown below.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;save(happy, file=&amp;quot;happyindex.rda&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Let’s load the dataset with,&lt;/p&gt;

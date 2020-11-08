@@ -125,7 +125,7 @@ data(package = 'palmerpenguins')`
 
 - Functional programming with R
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚[Slides](/Slides/2020s1STA5173_0/l11_inverse_transformation.html)  	| 📒 [Reading](https://adv-r.hadley.nz/functionals.html)  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
