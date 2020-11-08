@@ -100,8 +100,7 @@ Load `palmerpenguins` using,
 
 ```r
 library(palmerpenguins)
-
-data(package = 'palmerpenguins')`
+data(package = 'palmerpenguins')
 ```
 
 
@@ -125,7 +124,7 @@ data(package = 'palmerpenguins')`
 
 - Functional programming with R
 
-| 📚[Slides](/Slides/2020s1STA5173_0/l12_functionals.html)  	| 📒 [Reading](https://adv-r.hadley.nz/functionals.html)  	| 📊 [Cheat sheet](/Slides/2020s1STA5173_0/R_purrr.pdf) 	| 📎 Problems 	| 🔖Answers |
+| 📚[Slides](/Slides/2020s1STA5173_0/l12_functionals.html)  	| 📒 [Reading](https://adv-r.hadley.nz/functionals.html)  	| 📊 [Cheat sheet](/Slides/2020s1STA5173_0/R_purrr.pdf) 	| 📎 [Problems](/Slides/2020s1STA5173_0/functionals_tutorial.pdf)  	| 🔖 [Answers](/Slides/2020s1STA5173_0/functionals_tutorial_answers.pdf) |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 

@@ -1,0 +1,127 @@
+---
+title: "Functionals - Tutorial"
+author: "Thiyanga Talagala"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Required packages
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(purrr)
+```
+
+## Dataset
+
+```{r, comment=NA}
+library(palmerpenguins)
+data(penguins, package = 'palmerpenguins')
+head(penguins)
+```
+
+Extract numeric columns only
+
+
+```{r}
+
+penguins.numeric <- penguins %>% select(-c(species, island, sex))
+```
+
+
+
+## Help
+
+Explore the following command before attempt the question.
+
+```{r, comment=NA}
+# Create a blank vector of size 2
+output1 <- vector("double", 2)
+output1
+
+# Create a blank list of size 3
+output2 <- vector("list", 3)
+output2
+
+# find number of unique values is a vector
+a <- c(1, 1, 2, 3, 4, 5)
+n_distinct(a)
+```
+
+## Useful map function
+
+`map` and `map_dbl`
+
+## Questions
+
+1. Write code using for loop to compute the mean of every column in `penguins.numeric`.
+
+```{r, comment=NA}
+output <- vector("double", ncol(penguins.numeric))# create a blank vector to store the results
+names(output) <- names(penguins.numeric)
+for (i in names(penguins.numeric)) {
+  output[i] <- mean(penguins.numeric[[i]], na.rm = TRUE)
+}
+output
+
+
+```
+
+2. Write code that uses one of the map functions to compute the mean of every column in `penguins.numeric`.
+
+
+```{r, comment=NA}
+map_dbl(penguins.numeric, mean, na.rm=TRUE)
+
+```
+
+3. Write for loop to generate 10 random normals for each of
+$\mu = 10, 20, 30, 40, 50$.
+
+```{r, comment=NA}
+n <- 10
+# values of the mean
+mu <- c(10, 20, 30, 40, 50)
+normals <- vector("list", length(mu))
+for (i in 1:length(normals)) {
+  normals[[i]] <- rnorm(n, mean = mu[i])
+}
+normals
+
+```
+
+
+4. Write code that uses one of the map functions to generate 10 random normals for each of
+$\mu = 10, 20, 30, 40, 50$.
+
+```{r, comment=NA}
+map(c(10, 20, 30, 40, 50), ~rnorm(n = 10, mean = .))
+
+```
+
+
+5. Write code that used for loop to compute the number of unique values in each column of the `penguins.numeric` dataset.
+
+
+```{r, comment=NA, message=FALSE}
+penguins.numeric_uniq <- vector("double", ncol(penguins.numeric))
+names(penguins.numeric_uniq) <- names(penguins.numeric)
+for (i in names(penguins.numeric_uniq)) {
+  penguins.numeric_uniq[i] <- n_distinct(penguins.numeric[[i]])
+}
+penguins.numeric_uniq
+```
+
+6. Write code that uses one of the map functions to compute the number of unique values in each column of the `penguins.numeric` dataset.
+
+```{r, comment=NA}
+map_dbl(penguins.numeric, n_distinct)
+
+```
+
+*This tutorial is based on R4DS.*
+
+ 
