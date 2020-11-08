@@ -1,6 +1,6 @@
 ---
 title: "STA 517 3.0 Programming and Statistical Computing with R"
-subtitle: "Functionals: Overview"
+subtitle: "Functionals - part 1: Overview"
 author: "Dr Thiyanga Talagala"
 date: "8 November 2020"
 output:

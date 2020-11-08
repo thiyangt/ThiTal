@@ -124,7 +124,7 @@ data(package = 'palmerpenguins')
 
 - Functional programming with R
 
-| 📚[Slides](/Slides/2020s1STA5173_0/l12_functionals.html)  	| 📒 [Reading](https://adv-r.hadley.nz/functionals.html)  	| 📊 [Cheat sheet](/Slides/2020s1STA5173_0/R_purrr.pdf) 	| 📎 [Problems](/Slides/2020s1STA5173_0/functionals_tutorial.pdf)  	| 🔖 [Answers](/Slides/2020s1STA5173_0/functionals_tutorial_answers.pdf) |
+| 📚[Slides - part 1](/Slides/2020s1STA5173_0/l12_functionals.html) [Slides - part 2](/Slides/2020s1STA5173_0/l13_functionals.html)  	| 📒 [Reading](https://adv-r.hadley.nz/functionals.html)  	| 📊 [Cheat sheet](/Slides/2020s1STA5173_0/R_purrr.pdf) 	| 📎 [Problems](/Slides/2020s1STA5173_0/functionals_tutorial.pdf)  	| 🔖 [Answers](/Slides/2020s1STA5173_0/functionals_tutorial_answers.pdf) |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 

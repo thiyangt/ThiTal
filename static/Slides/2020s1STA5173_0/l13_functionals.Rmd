@@ -1,0 +1,127 @@
+---
+title: "STA 517 3.0 Programming and Statistical Computing with R"
+subtitle: "Functionals - part 2: map vs map_dbl"
+author: "Dr Thiyanga Talagala"
+date: "8 November 2020"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+    css: 
+      - default
+      - default-fonts
+      - duke-blue
+      - hygge-duke
+      - libs/cc-fonts.css
+      - libs/figure-captions.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(emo)
+```
+
+## Package: purrr
+
+```{r}
+library(purrr)
+```
+
+![](purrr.png)
+
+---
+
+# map vs map_dbl
+
+```{r, comment=NA}
+x <- list(c(1, 2, NA), c(10, 20))
+x
+```
+
+.pull-left[
+
+# `map`
+
+```{r, comment=NA}
+
+map(x, mean, na.rm=TRUE)
+```
+
+
+]
+
+.pull-right[
+
+# `map_dbl`
+
+```{r, comment=NA}
+map_dbl(x, mean, na.rm=TRUE)
+
+```
+
+
+]
+
+---
+
+# map vs map_dbl
+
+.pull-left[
+
+# `map`
+
+```{r, comment=NA}
+
+map(x, mean, na.rm=TRUE)
+```
+
+## What is happing inside?
+
+```r
+map(.x, .f, ...)
+```
+
+For each element of `.x` do
+.f(.x, ...) and returns a **list**.
+
+]
+
+.pull-right[
+
+# `map_dbl`
+
+```{r, comment=NA}
+map_dbl(x, mean, na.rm=TRUE)
+
+```
+
+## What is happing inside?
+
+```r
+map_dbl(.x, .f, ...)
+```
+
+For each element of `.x` do
+.f(.x, ...) and returns a **numeric vector**.
+
+
+]
+
+---
+![](mapviz.PNG)
+
+---
+
+class: center, middle
+
+
+
+Slides available at: https://thiyanga.netlify.app/courses/rmsc2020/contentr/
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+
+
+Reference: Advanced R, Hadley Wickham
