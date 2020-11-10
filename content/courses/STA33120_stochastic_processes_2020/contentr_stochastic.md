@@ -75,6 +75,7 @@ Ion Switching| [Kaggle competition](https://www.kaggle.com/c/liverpool-ion-switc
 
 - [Pure Death Process](/Slides/2020s2StochasticProcesses/9_stochastic_processes_2020.pdf)
 
+- Assignment 3: Please go the LMS (Due date: 24 Nov 2020)
 
 ### Week 15
 
