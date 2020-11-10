@@ -73,6 +73,9 @@ Ion Switching| [Kaggle competition](https://www.kaggle.com/c/liverpool-ion-switc
 
 - [Partial Differential Equations](/Slides/2020s2StochasticProcesses/PDF.pdf)
 
+- [Pure Death Process](/Slides/2020s2StochasticProcesses/9_stochastic_processes_2020.pdf)
+
+
 ### Week 15
 
 Revision
