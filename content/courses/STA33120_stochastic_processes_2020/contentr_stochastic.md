@@ -71,7 +71,7 @@ Ion Switching| [Kaggle competition](https://www.kaggle.com/c/liverpool-ion-switc
 
 - [Birth and death process - Introduction, Pure Birth Process](/Slides/2020s2StochasticProcesses/8_stochastic_processes_2020.pdf)
 
-- [Partial Differential Equations](/Slides/2020s2StochasticProcesses/PDF.pdf)
+- [Partial Differential Equations](/Slides/2020s2StochasticProcesses/PDE.pdf)
 
 - [Pure Death Process](/Slides/2020s2StochasticProcesses/9_stochastic_processes_2020.pdf)
 
