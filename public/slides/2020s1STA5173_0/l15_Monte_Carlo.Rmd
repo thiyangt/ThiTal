@@ -1,9 +1,8 @@
 ---
 output: pdf_document
 title: "The Method of Monte Carlo"
-subtitle: "STA 326 2.0 Programming and Data Analysis with R"
 toc: true
-author: "Dr Thiyanga S Talagala"
+author: "Thiyanga S Talagala"
 ---
 
 

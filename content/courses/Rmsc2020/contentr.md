@@ -132,10 +132,18 @@ data(package = 'palmerpenguins')
 
 ### Week 13
 
-- Monte Carlo methods in inference
+- Hypothesis testing
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+
+| 📚[Slides](/Slides/2020s1STA5173_0/l14_Hypothesis_testing.html)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
+
+- The method of Monte Carlo 
+
+
+| 📚[Slides](/Slides/2020s1STA5173_0/l15_Monte_Carlo.html)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems - Questions given in the note.	| 🔖Answers |
+|:-:	|:-:	|:-:	|:-:	|:-:	|
+
 
 ### Week 14
 
