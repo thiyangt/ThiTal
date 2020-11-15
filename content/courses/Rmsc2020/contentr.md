@@ -135,7 +135,7 @@ data(package = 'palmerpenguins')
 - Hypothesis testing
 
 
-| 📚[Slides](/Slides/2020s1STA5173_0/l14_Hypothesis_testing.html)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚[Slides](/Slides/2020s1STA5173_0/l14_Hypothesis_testing.html)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 [Problems](/Slides/2020s1STA5173_0/Hypothesis_questions.pdf)	| 🔖 Answers  |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 - The method of Monte Carlo 
@@ -143,6 +143,8 @@ data(package = 'palmerpenguins')
 
 | 📚[Slides](/Slides/2020s1STA5173_0/l15_Monte_Carlo.html)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems - Questions given in the note.	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
+
+- Assignment (20 marks): Details visit google classroom or LMS.
 
 
 ### Week 14

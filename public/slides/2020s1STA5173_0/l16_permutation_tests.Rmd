@@ -1,0 +1,53 @@
+---
+title: "STA 517 3.0 Programming and Statistical Computing with R"
+subtitle: "Permutation Tests"
+author: "Dr Thiyanga Talagala"
+date: "2020-11-15"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+    css: 
+      - default
+      - default-fonts
+      - duke-blue
+      - hygge-duke
+      - libs/cc-fonts.css
+      - libs/figure-captions.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+# Permutation Tests
+
+- Permutation tests are useful when we do not know the distribution of a test statistic under null hypothesis.
+
+- Gives a simple way to compute sampling distribution under null hypothesis.
+
+
+- Generate data under null hypothesis. How?
+
+    - **shuffle** or **permute the observed data** (e.g., by assigning different outcome values to each observation from among the set of actually observed values.)
+
+- Permutation tests cannot solve all problems: they are valid only
+when the null hypothesis is ‘there is no association...’
+---
+
+
+
+---
+
+class: center, middle
+
+Slides available at: hellor.netlify.com
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+
+
+
+

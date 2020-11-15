@@ -1,0 +1,133 @@
+---
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Hypotheses testing
+
+### Question 1
+
+A national research institute in Sri Lanka concludes that Sri Lankans watch television on average 25 hours per week. It seems likely that graduate students do not watch nearly this much television per week. To test this, the following data were gathered from a random sample of 50 graduate students.
+
+```{r, comment=NA, message=FALSE}
+tvhour <- c(24, 20, 29.3, 25.1, 30.6, 34.6, 30.0, 39.0, 33.7, 31.6, 
+       25.9, 34.4, 26.9, 23.0, 31.1, 29.3, 34.5, 35.1, 31.2, 33.2, 
+       30.2, 36.4, 37.5, 27.6, 24.6, 23.9, 27.0, 29.5, 30.1, 29.6, 
+       27.3, 31.2, 32.5, 25.7, 30.1, 24.2, 24.1, 26.4, 31.0, 20.7, 
+       33.5, 32.2, 34.7, 32.6, 33.5, 32.7, 25.6, 31.1, 32.9, 25.9)
+```
+
+i. State the appropriate null and alternative hypothesis.
+
+ii. Perform an analysis to test the hypothesis in (i).
+
+### Question 2
+
+The following data (in litres) which were selected randomly from a normally distributed population of values, represent measurements of a bottle content that is supposed to contain, on average 5L.
+
+```{r}
+bottle.content <- c(5.1, 5.4, 5.3, 5.2, 5.5, 5.6, 5.4, 5.3, 5.4, 5.2,
+                    5.8, 5.2, 5.2, 5.3, 5.1, 5.3, 5.4, 5.5, 5.5, 5.7)
+```
+
+Use these data and $\alpha=0.01$ to test the hypothesis that the content average 5L.
+
+#### Question 3
+
+Use the following data to construct 80%, 90% and 95% confidence intervals to estimate $\mu$.
+
+```{r, comment=NA, echo=FALSE}
+set.seed(2020)
+round(rnorm(20, 100, 9),1)
+```
+
+Plot all confidence intervals on a single graph plane.
+
+#### Question 4
+
+A mathematics teacher gives their students a calculus pretest on the first day of class, and a similar test towards the end of the course. The results are shown below.
+
+|before|after|
+|---|---|
+|72|65|
+|57|91|
+|71|67|
+|64|66|
+|55|85|
+|60|60|
+|67|97|
+|65|72|
+|84|54|
+|64|65|
+|56|70|
+|60|75|
+|65|75|
+|69|70|
+|75|72|
+|67|78|
+|74|75|
+|81|90|
+|80|85|
+|71|76|
+|68|65|
+|70|83|
+
+Determine whether the students performed significantly better on the post test, using $\alpha=0.05$
+
+#### Question 5
+
+Use `heights` from `alr3` package.
+
+```{r, comment=NA, message=FALSE}
+library(alr3)
+data(heights)
+head(heights) # First 6 rows of the data frame
+```
+
+
+Test if there is a statistically significant correlation between mothers' height and daughters' height.
+
+#### Question 6
+
+Use `penguins` dataset in `palmerpenguins`. You can use the following code to remove missing cases.
+
+```{r, comment=NA, message=FALSE}
+library(palmerpenguins)
+library(tidyverse)
+library(magrittr)
+new_penguins <- penguins %>%
+    filter(complete.cases(flipper_length_mm, body_mass_g, species, sex))
+head(new_penguins)
+```
+
+a)
+
+Test if there is statistically significant differences in
+
+    i. flipper length
+    ii. body mass
+    iii. bill_length
+    iv. bill_depth
+
+between male penguins and female penguins.
+
+b)
+
+Test if there is statistically significant differences in
+
+    i. flipper length
+    ii. body mass
+    iii. bill_length
+    iv. bill_depth
+
+between species types.
+
+
+
+
+
+
+
