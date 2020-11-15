@@ -156,6 +156,16 @@ Special considerations email me on or before 8 Nov 2020
 
     - Analytical methods for selecting a transformation
 
+
+
+
+| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression9.html#1)  	| 📒 Reading - Section 3.3, Montgomery, Peck, Vining 	| 📊 Data Sets - [coconut.csv](/data/coconut.csv) [salarydata.csv](/data/salarydata.csv)	| 📎 Problems 	| 🔖Answers |
+|:-:	|:-:	|:-:	|:-:	|:-:	|
+
+#### 14 November 2020 - Public Holiday (Deepavali Festival Day)
+
+### Week 12
+
 - Detection and treatment of outliers
 
 - Diagnostics for leverage and influence
@@ -167,13 +177,6 @@ Special considerations email me on or before 8 Nov 2020
     - Measures of influence
     
     - Treatment of influential observations
-
-
-| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression9.html#1)  	| 📒 Reading - Section 3.3, Montgomery, Peck, Vining 	| 📊 Data Sets - [coconut.csv](/data/coconut.csv) [salarydata.csv](/data/salarydata.csv)	| 📎 Problems 	| 🔖Answers |
-|:-:	|:-:	|:-:	|:-:	|:-:	|
-
-### Week 12
-
 
 - Regression with qualitative variables
 
