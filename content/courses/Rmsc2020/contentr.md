@@ -87,7 +87,7 @@ Here is your road map for the course!
 - Data wrangling with dplyr 
 
 | 📚 [Slides](/Slides/2020s1STA5173_0/l7_data_manipulation_with_dplyr.html)  	| 📒 [Reading -R4DS Ch12](https://r4ds.had.co.nz/tidy-data.html) 	| 📊 [Cheat sheet](https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf)	| 📎 [Problems](https://hellor.netlify.app/problems/DataWrangling_Tutorial.pdf) 	| 🔖 [Answers](/Slides/2020s1STA5173_0/MSc_tutorials/DataWrangling_Tutorial_Answers_MSC.pdf) |
-
+|:-:	|:-:	|:-:	|:-:	|:-:	|
 
 ### Week 9
 
@@ -135,7 +135,7 @@ data(package = 'palmerpenguins')
 - Hypothesis testing
 
 
-| 📚[Slides](/Slides/2020s1STA5173_0/l14_Hypothesis_testing.html)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 [Problems](/Slides/2020s1STA5173_0/Hypothesis_questions.pdf)	| 🔖 Answers  |
+| 📚[Slides](/Slides/2020s1STA5173_0/l14_Hypothesis_testing.pdf)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 [Problems](/Slides/2020s1STA5173_0/Hypothesis_questions.pdf)	| 🔖 Answers  |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 - The method of Monte Carlo 
