@@ -141,7 +141,7 @@ data(package = 'palmerpenguins')
 - The method of Monte Carlo 
 
 
-| 📚[Slides](/Slides/2020s1STA5173_0/l15_Monte_Carlo.html)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems - Questions given in the note.	| 🔖Answers |
+| 📚[Slides](/Slides/2020s1STA5173_0/l15_Monte_Carlo.pdf)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems - Questions given in the note.	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 - Assignment (20 marks): Details visit google classroom or LMS.
