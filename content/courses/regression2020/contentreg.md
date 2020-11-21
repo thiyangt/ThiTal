@@ -201,7 +201,7 @@ Special considerations email me on or before 8 Nov 2020
     - Stepwise method
 
 
-| 📚 [Slides-i](https://edify-thiyanga.netlify.app/regression/regression10.html#1)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚 [Slides-i](https://edify-thiyanga.netlify.app/regression/regression10.html#1)  	| 📒 Reading - Ch6, 11.1 (Montgomery, Peck, Vining)  	| 📊 Data Sets - see slides	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
