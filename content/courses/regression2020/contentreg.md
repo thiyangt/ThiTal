@@ -188,6 +188,17 @@ Special considerations email me on or before 8 Nov 2020
     
     - Interaction term involving dummy variables
 
+
+
+| 📚 [Slides-i](https://edify-thiyanga.netlify.app/regression/regression10.html#1)  	| 📒 Reading - Ch6, 11.1 (Montgomery, Peck, Vining)  	| 📊 Data Sets - see slides	| 📎 Problems 	| 🔖Answers |
+|:-:	|:-:	|:-:	|:-:	|:-:	|
+
+
+> Week 13-14:  Discussion/practical (in class)
+
+### Week 13
+
+
 - Variable selection procedures
 
     - Introduction
@@ -199,15 +210,6 @@ Special considerations email me on or before 8 Nov 2020
     - Backward elimination procedure
     
     - Stepwise method
-
-
-| 📚 [Slides-i](https://edify-thiyanga.netlify.app/regression/regression10.html#1)  	| 📒 Reading - Ch6, 11.1 (Montgomery, Peck, Vining)  	| 📊 Data Sets - see slides	| 📎 Problems 	| 🔖Answers |
-|:-:	|:-:	|:-:	|:-:	|:-:	|
-
-
-> Week 13-14:  Discussion/practical (in class)
-
-### Week 13
 
 - Multicollinearity
 
