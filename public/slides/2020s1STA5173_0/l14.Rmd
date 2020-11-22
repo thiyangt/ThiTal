@@ -77,7 +77,7 @@ library(emo)
 ![](bootstrap.png)
 
 
-- Bootstrapping does not take new from the population. 
+- Bootstrapping does not take new observations from the population. 
 
 - It treats the original sample as a proxy for the real population and then draws random samples from it. 
 
