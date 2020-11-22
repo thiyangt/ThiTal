@@ -144,14 +144,14 @@ data(package = 'palmerpenguins')
 | 📚[Slides](/Slides/2020s1STA5173_0/l15_Monte_Carlo.pdf)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems - Questions given in the note.	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
-- Assignment (20 marks): Details visit google classroom or LMS.
+- Assignment (10 marks): Details visit google classroom or LMS.
 
 
 ### Week 14
 
 - Bootstrap and Jackknife
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚 [Slides](/Slides/2020s1STA5173_0/l14.html)    	| 📒 [Reading](http://bcs.whfreeman.com/webpub/statistics/ips9e/9781319013387/companionchapters/companionchapter16.pdf) 	| 📊 Data Sets - `iris`	| 📎 Problems - see slides	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 

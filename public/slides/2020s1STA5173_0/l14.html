@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>STA 517 3.0 Programming and Statistical Computing with R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr Thiyanga Talagala" />
+    <meta name="date" content="2020-11-22" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/duke-blue.css" rel="stylesheet" />
+    <link href="libs/remark-css/hygge-duke.css" rel="stylesheet" />
+    <link rel="stylesheet" href="libs/cc-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="libs/figure-captions.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# STA 517 3.0 Programming and Statistical Computing with R
+## An Introduction to the Bootstrap Method
+### Dr Thiyanga Talagala
+### 22 November 2020
+
+---
+
+
+
+&lt;!--https://statisticsbyjim.com/hypothesis-testing/bootstrapping/--&gt;
+
+# What is a bootstrap?
+
+
+- Bootstrap is a method of inference.
+
+- Bradley Efron first introduced this approach in 1979.
+
+    - Link to his original paper is [here](https://projecteuclid.org/euclid.aos/1176344552).
+    
+![](brad.jpeg)
+
+- Bootstrapping is a computer-intensive procedure.
+
+
+---
+
+# Applications
+
+- Estimate the standard error of any statistic and to obtain a confidence interval (CI) for it.
+
+- This is useful when CI doesn't have a closed form, or it has a very complicated one.
+
+- Hypothesis testing
+
+- Bootstrap sampling in regression, etc.
+
+
+## Three forms of bootstrapping 
+
+- Nonparametric (resampling)
+
+- Semiparametric (adding noise)
+
+- Parametric (simulation)
+
+&lt;!--https://online.stat.psu.edu/stat555/node/119/--&gt;
+
+&lt;!--There are three forms of bootstrapping which differ primarily in how the population is estimated. Most people who have heard of bootstrapping have only heard of the so-called nonparametric or resampling bootstrap.--&gt;
+
+---
+##  Bootstrapping Resamples 
+
+- The bootstrap sample is the same size as the original sample data. 
+
+- As a result, some observations will be represented multiple times in the bootstrap sample while others will not be selected at all.
+
+## Example of Bootstrap Samples
+
+![](bootstrap.png)
+
+
+- Bootstrapping does not new data set from the population. 
+
+- It treats the original sample as a proxy for the real population and then draws random samples from it. 
+
+- Consequently, the central assumption for bootstrapping is that the original sample accurately represents the actual population.
+ 
+---
+
+# Steps
+
+1. Take a sample from population. This is called the **original sample**. Suppose the sample size is `\(n\)`.
+
+2. Draw a sample from the original sample data with replacement with size `\(n\)` and repeat this step `\(N\)` times.
+
+3. Compute the statistic of `\(\theta\)` for each Bootstrap Sample, and there will be totally `\(N\)` estimates of `\(\theta\)`.
+
+4. Construct a sampling distribution with these `\(N\)` Bootstrap statistics and use it to make further statistical inference.
+---
+
+![](bs.PNG)
+
+---
+## Differences between Bootstrapping and Traditional Inference Methods
+
+- how they estimate sampling distributions
+
+- "The traditional approach also uses theory to tell what the sampling distribution should look like, but the results fall apart if the assumptions of the theory are not met. The bootstrapping method, on the other hand, takes the original sample data and then resamples it to create many bootstrap samples."
+
+&gt; source: towards data science.
+
+&lt;!--https://towardsdatascience.com/bootstrapping-statistics-what-it-is-and-why-its-used-e2fa29577307#:~:text=The%20traditional%20approach%20also%20uses,create%20many%20%5Bsimulated%5D%20samples.--&gt;
+
+
+---
+
+## Example 1
+
+&lt;!--http://bcs.whfreeman.com/webpub/statistics/ips9e/9781319013387/companionchapters/companionchapter16.pdf--&gt;
+
+Height of randomly selected individuals 
+
+
+```r
+height &lt;- c(5.2, 6.1, 5.5, 5.4, 5.3)
+height
+```
+
+```
+[1] 5.2 6.1 5.5 5.4 5.3
+```
+
+1.  Construct 100 bootstrap samples.
+
+2. Calculate the sample mean for each of the resamples. 
+
+3. Make a histogram of the means of the 100 bootstrap samples. This is the bootstrap distribution.
+
+4.  Calculate the bootstrap standard error. 
+
+---
+## Example 1 (cont.)
+
+Help:
+
+`$$\bar{X*} = \frac{1}{N}\sum_{i=1}^N\bar{x}_{i}^{bootstrap}$$`
+
+`$$se(\bar{X*}) =\sqrt{\frac{1}{B-1}\sum_{i=1}^N (\bar{x}_{i}^{bootstrap} - \bar{X*})^2}$$`
+
+The bootstrap standard error, of a statistic is the standard deviation of the bootstrap distribution of that statistic.
+
+---
+
+## Classical confidence interval
+
+`$$[\bar{x}- t_{\alpha/2, n-1}se(\bar{x}), \bar{x}- t_{\alpha/2, n-1}se(\bar{x})]$$`
+
+## Confidence intervals via bootstrap
+
+- `boot` package can generate bootstrap samples.
+
+- Step 1: To use the `boot` function for drawing samples, you need a function to compute the statistic of interest.
+
+
+```r
+samplemean &lt;- function(data, indices) {
+  return(mean(data[indices]))
+}
+```
+
+It should have at least two arguments: 
+
+  i) `data`: the original data
+
+  ii) a vector containing `indices`: frequencies or weights which define the bootstrap sample.
+
+`data[indices]` Creates the bootstrap sample (i.e., subset the provided data by the “indices” parameter). “indices” is automatically provided by the “boot” function; this is the sampling with replacement portion of bootstrapping.
+
+---
+
+## Confidence intervals via bootstrap (cont.)
+
+Step 2: Conduct the bootstrapping
+
+
+```r
+library(boot)
+result &lt;-  boot(data = height, statistic = samplemean, R = 1000)
+result
+```
+
+```
+
+ORDINARY NONPARAMETRIC BOOTSTRAP
+
+
+Call:
+boot(data = height, statistic = samplemean, R = 1000)
+
+
+Bootstrap Statistics :
+    original  bias    std. error
+t1*      5.5 0.00378   0.1450764
+```
+
+&lt;!--http://people.tamu.edu/~alawing/materials/ESSM689/Btutorial.pdf--&gt;
+
+
+---
+
+## View some calculated statistics of boot object
+
+.pull-left[
+
+**Bootstrap sample means**
+
+```r
+result$t
+```
+
+```
+        [,1]
+   [1,] 5.54
+   [2,] 5.48
+   [3,] 5.48
+   [4,] 5.70
+   [5,] 5.56
+   [6,] 5.64
+   [7,] 5.28
+   [8,] 5.50
+   [9,] 5.68
+  [10,] 5.42
+  [11,] 5.68
+  [12,] 5.44
+  [13,] 5.46
+  [14,] 5.44
+  [15,] 5.48
+  [16,] 5.46
+  [17,] 5.32
+  [18,] 5.52
+  [19,] 5.44
+  [20,] 5.52
+  [21,] 5.72
+  [22,] 5.58
+  [23,] 5.36
+  [24,] 5.44
+  [25,] 5.40
+  [26,] 5.56
+  [27,] 5.34
+  [28,] 5.66
+  [29,] 5.42
+  [30,] 5.60
+  [31,] 5.44
+  [32,] 5.46
+  [33,] 5.50
+  [34,] 5.36
+  [35,] 5.30
+  [36,] 5.68
+  [37,] 5.30
+  [38,] 5.68
+  [39,] 5.56
+  [40,] 5.30
+  [41,] 5.58
+  [42,] 5.56
+  [43,] 5.30
+  [44,] 5.38
+  [45,] 5.80
+  [46,] 5.36
+  [47,] 5.40
+  [48,] 5.34
+  [49,] 5.82
+  [50,] 5.32
+  [51,] 5.42
+  [52,] 5.66
+  [53,] 5.64
+  [54,] 5.28
+  [55,] 5.28
+  [56,] 5.48
+  [57,] 5.48
+  [58,] 5.82
+  [59,] 5.50
+  [60,] 5.50
+  [61,] 5.40
+  [62,] 5.66
+  [63,] 5.66
+  [64,] 5.42
+  [65,] 5.70
+  [66,] 5.44
+  [67,] 5.68
+  [68,] 5.48
+  [69,] 5.32
+  [70,] 5.60
+  [71,] 5.52
+  [72,] 5.56
+  [73,] 5.36
+  [74,] 5.52
+  [75,] 5.70
+  [76,] 5.56
+  [77,] 5.48
+  [78,] 5.34
+  [79,] 5.36
+  [80,] 5.70
+  [81,] 5.38
+  [82,] 5.70
+  [83,] 5.76
+  [84,] 5.32
+  [85,] 5.84
+  [86,] 5.44
+  [87,] 5.68
+  [88,] 5.46
+  [89,] 5.36
+  [90,] 5.58
+  [91,] 5.66
+  [92,] 5.32
+  [93,] 5.42
+  [94,] 5.46
+  [95,] 5.32
+  [96,] 5.38
+  [97,] 5.30
+  [98,] 5.34
+  [99,] 5.30
+ [100,] 5.48
+ [101,] 5.58
+ [102,] 5.74
+ [103,] 5.44
+ [104,] 5.58
+ [105,] 5.58
+ [106,] 5.50
+ [107,] 5.48
+ [108,] 5.66
+ [109,] 5.74
+ [110,] 5.66
+ [111,] 5.34
+ [112,] 5.48
+ [113,] 5.52
+ [114,] 5.42
+ [115,] 5.66
+ [116,] 5.82
+ [117,] 5.32
+ [118,] 5.28
+ [119,] 5.42
+ [120,] 5.66
+ [121,] 5.36
+ [122,] 5.42
+ [123,] 5.46
+ [124,] 5.50
+ [125,] 5.52
+ [126,] 5.34
+ [127,] 5.40
+ [128,] 5.60
+ [129,] 5.34
+ [130,] 5.30
+ [131,] 5.54
+ [132,] 5.36
+ [133,] 5.28
+ [134,] 5.36
+ [135,] 5.56
+ [136,] 5.54
+ [137,] 5.42
+ [138,] 5.54
+ [139,] 5.50
+ [140,] 5.48
+ [141,] 5.32
+ [142,] 5.60
+ [143,] 5.60
+ [144,] 5.50
+ [145,] 5.34
+ [146,] 5.52
+ [147,] 5.46
+ [148,] 5.82
+ [149,] 5.80
+ [150,] 5.50
+ [151,] 5.44
+ [152,] 5.44
+ [153,] 5.44
+ [154,] 5.42
+ [155,] 5.52
+ [156,] 5.46
+ [157,] 5.30
+ [158,] 5.50
+ [159,] 5.30
+ [160,] 5.66
+ [161,] 5.42
+ [162,] 5.48
+ [163,] 5.32
+ [164,] 5.32
+ [165,] 5.38
+ [166,] 5.54
+ [167,] 5.42
+ [168,] 5.68
+ [169,] 5.50
+ [170,] 5.36
+ [171,] 5.30
+ [172,] 5.30
+ [173,] 5.34
+ [174,] 5.38
+ [175,] 5.48
+ [176,] 5.48
+ [177,] 5.36
+ [178,] 5.32
+ [179,] 5.64
+ [180,] 5.38
+ [181,] 5.46
+ [182,] 5.30
+ [183,] 5.72
+ [184,] 5.52
+ [185,] 5.28
+ [186,] 5.46
+ [187,] 5.48
+ [188,] 5.70
+ [189,] 5.76
+ [190,] 5.50
+ [191,] 5.34
+ [192,] 5.68
+ [193,] 5.68
+ [194,] 5.36
+ [195,] 5.42
+ [196,] 5.46
+ [197,] 5.50
+ [198,] 5.60
+ [199,] 5.28
+ [200,] 5.32
+ [201,] 5.78
+ [202,] 5.98
+ [203,] 5.48
+ [204,] 5.34
+ [205,] 5.50
+ [206,] 5.26
+ [207,] 5.34
+ [208,] 5.48
+ [209,] 5.52
+ [210,] 5.52
+ [211,] 5.52
+ [212,] 5.40
+ [213,] 5.48
+ [214,] 5.50
+ [215,] 5.44
+ [216,] 5.48
+ [217,] 5.62
+ [218,] 5.62
+ [219,] 5.48
+ [220,] 5.62
+ [221,] 5.80
+ [222,] 5.32
+ [223,] 5.54
+ [224,] 5.64
+ [225,] 5.52
+ [226,] 5.62
+ [227,] 5.62
+ [228,] 5.48
+ [229,] 5.36
+ [230,] 5.64
+ [231,] 5.52
+ [232,] 5.48
+ [233,] 5.62
+ [234,] 5.50
+ [235,] 5.52
+ [236,] 5.58
+ [237,] 5.58
+ [238,] 5.56
+ [239,] 5.42
+ [240,] 5.70
+ [241,] 5.48
+ [242,] 5.82
+ [243,] 5.50
+ [244,] 5.80
+ [245,] 5.50
+ [246,] 5.60
+ [247,] 5.34
+ [248,] 5.52
+ [249,] 5.82
+ [250,] 5.70
+ [251,] 5.42
+ [252,] 5.44
+ [253,] 5.30
+ [254,] 5.56
+ [255,] 5.66
+ [256,] 5.62
+ [257,] 5.64
+ [258,] 5.38
+ [259,] 5.50
+ [260,] 5.32
+ [261,] 5.48
+ [262,] 5.52
+ [263,] 5.60
+ [264,] 5.46
+ [265,] 5.82
+ [266,] 5.66
+ [267,] 5.46
+ [268,] 5.38
+ [269,] 5.62
+ [270,] 5.72
+ [271,] 5.46
+ [272,] 5.48
+ [273,] 5.52
+ [274,] 5.54
+ [275,] 5.34
+ [276,] 5.54
+ [277,] 5.50
+ [278,] 5.40
+ [279,] 5.82
+ [280,] 5.66
+ [281,] 5.62
+ [282,] 5.62
+ [283,] 5.46
+ [284,] 5.32
+ [285,] 5.40
+ [286,] 5.68
+ [287,] 5.52
+ [288,] 5.38
+ [289,] 5.32
+ [290,] 5.38
+ [291,] 5.52
+ [292,] 5.28
+ [293,] 5.40
+ [294,] 5.42
+ [295,] 5.66
+ [296,] 5.50
+ [297,] 5.32
+ [298,] 5.50
+ [299,] 5.38
+ [300,] 5.54
+ [301,] 5.26
+ [302,] 5.40
+ [303,] 5.56
+ [304,] 5.42
+ [305,] 5.60
+ [306,] 5.66
+ [307,] 5.50
+ [308,] 5.30
+ [309,] 5.32
+ [310,] 5.44
+ [311,] 5.42
+ [312,] 5.48
+ [313,] 5.64
+ [314,] 5.46
+ [315,] 5.68
+ [316,] 5.32
+ [317,] 5.66
+ [318,] 5.34
+ [319,] 5.32
+ [320,] 5.50
+ [321,] 5.46
+ [322,] 5.62
+ [323,] 5.54
+ [324,] 5.46
+ [325,] 5.30
+ [326,] 5.54
+ [327,] 5.52
+ [328,] 5.70
+ [329,] 5.52
+ [330,] 5.32
+ [331,] 5.92
+ [332,] 5.46
+ [333,] 5.50
+ [334,] 5.42
+ [335,] 5.84
+ [336,] 5.28
+ [337,] 5.36
+ [338,] 5.56
+ [339,] 5.28
+ [340,] 5.46
+ [341,] 5.46
+ [342,] 5.52
+ [343,] 5.42
+ [344,] 5.66
+ [345,] 5.48
+ [346,] 5.44
+ [347,] 5.46
+ [348,] 5.58
+ [349,] 5.46
+ [350,] 5.74
+ [351,] 5.66
+ [352,] 5.48
+ [353,] 5.60
+ [354,] 5.48
+ [355,] 5.48
+ [356,] 5.66
+ [357,] 5.36
+ [358,] 5.54
+ [359,] 5.60
+ [360,] 5.44
+ [361,] 5.46
+ [362,] 5.94
+ [363,] 5.68
+ [364,] 5.52
+ [365,] 5.44
+ [366,] 5.38
+ [367,] 5.36
+ [368,] 5.54
+ [369,] 5.54
+ [370,] 5.64
+ [371,] 5.74
+ [372,] 5.34
+ [373,] 5.34
+ [374,] 5.34
+ [375,] 5.30
+ [376,] 5.56
+ [377,] 5.34
+ [378,] 5.50
+ [379,] 5.48
+ [380,] 5.40
+ [381,] 5.64
+ [382,] 5.66
+ [383,] 5.56
+ [384,] 5.40
+ [385,] 5.54
+ [386,] 5.58
+ [387,] 5.44
+ [388,] 5.84
+ [389,] 5.32
+ [390,] 5.36
+ [391,] 5.32
+ [392,] 5.44
+ [393,] 5.80
+ [394,] 5.38
+ [395,] 5.34
+ [396,] 5.50
+ [397,] 5.62
+ [398,] 5.48
+ [399,] 5.44
+ [400,] 5.66
+ [401,] 5.66
+ [402,] 5.68
+ [403,] 5.52
+ [404,] 5.68
+ [405,] 5.48
+ [406,] 5.46
+ [407,] 5.40
+ [408,] 5.36
+ [409,] 5.68
+ [410,] 5.56
+ [411,] 5.62
+ [412,] 5.26
+ [413,] 5.78
+ [414,] 5.38
+ [415,] 5.46
+ [416,] 5.52
+ [417,] 5.70
+ [418,] 5.62
+ [419,] 5.78
+ [420,] 5.68
+ [421,] 5.38
+ [422,] 5.30
+ [423,] 5.44
+ [424,] 5.32
+ [425,] 5.86
+ [426,] 5.36
+ [427,] 5.34
+ [428,] 5.34
+ [429,] 5.72
+ [430,] 5.34
+ [431,] 5.46
+ [432,] 5.66
+ [433,] 5.94
+ [434,] 5.34
+ [435,] 5.64
+ [436,] 5.34
+ [437,] 5.52
+ [438,] 5.66
+ [439,] 5.46
+ [440,] 5.36
+ [441,] 5.30
+ [442,] 5.68
+ [443,] 5.38
+ [444,] 5.36
+ [445,] 5.54
+ [446,] 5.58
+ [447,] 5.58
+ [448,] 5.68
+ [449,] 5.52
+ [450,] 5.34
+ [451,] 5.34
+ [452,] 5.32
+ [453,] 5.46
+ [454,] 5.60
+ [455,] 5.46
+ [456,] 5.42
+ [457,] 5.56
+ [458,] 5.32
+ [459,] 5.48
+ [460,] 5.56
+ [461,] 5.30
+ [462,] 5.42
+ [463,] 5.42
+ [464,] 5.52
+ [465,] 5.38
+ [466,] 5.32
+ [467,] 5.30
+ [468,] 5.58
+ [469,] 5.36
+ [470,] 5.26
+ [471,] 5.68
+ [472,] 5.34
+ [473,] 5.42
+ [474,] 5.78
+ [475,] 5.34
+ [476,] 5.28
+ [477,] 5.50
+ [478,] 5.54
+ [479,] 5.68
+ [480,] 5.52
+ [481,] 5.48
+ [482,] 5.52
+ [483,] 5.92
+ [484,] 5.48
+ [485,] 5.60
+ [486,] 5.26
+ [487,] 5.32
+ [488,] 5.42
+ [489,] 5.36
+ [490,] 5.74
+ [491,] 5.34
+ [492,] 5.44
+ [493,] 5.42
+ [494,] 5.52
+ [495,] 5.44
+ [496,] 5.50
+ [497,] 5.44
+ [498,] 5.38
+ [499,] 5.52
+ [500,] 5.56
+ [501,] 5.52
+ [502,] 5.80
+ [503,] 5.52
+ [504,] 5.36
+ [505,] 5.34
+ [506,] 5.50
+ [507,] 5.58
+ [508,] 5.60
+ [509,] 5.58
+ [510,] 5.52
+ [511,] 5.68
+ [512,] 5.66
+ [513,] 5.46
+ [514,] 5.66
+ [515,] 5.58
+ [516,] 5.38
+ [517,] 5.30
+ [518,] 5.60
+ [519,] 5.50
+ [520,] 5.68
+ [521,] 5.66
+ [522,] 5.80
+ [523,] 5.72
+ [524,] 5.66
+ [525,] 5.32
+ [526,] 5.52
+ [527,] 5.24
+ [528,] 5.60
+ [529,] 5.40
+ [530,] 5.36
+ [531,] 5.42
+ [532,] 5.54
+ [533,] 5.32
+ [534,] 5.40
+ [535,] 5.50
+ [536,] 5.64
+ [537,] 5.36
+ [538,] 5.42
+ [539,] 5.56
+ [540,] 5.28
+ [541,] 5.38
+ [542,] 5.58
+ [543,] 5.48
+ [544,] 5.64
+ [545,] 5.48
+ [546,] 5.34
+ [547,] 5.30
+ [548,] 5.56
+ [549,] 5.34
+ [550,] 5.46
+ [551,] 5.66
+ [552,] 5.48
+ [553,] 5.48
+ [554,] 5.54
+ [555,] 5.66
+ [556,] 5.32
+ [557,] 5.46
+ [558,] 5.62
+ [559,] 5.50
+ [560,] 5.30
+ [561,] 5.70
+ [562,] 5.44
+ [563,] 5.46
+ [564,] 5.48
+ [565,] 5.40
+ [566,] 5.36
+ [567,] 5.46
+ [568,] 5.68
+ [569,] 5.38
+ [570,] 5.64
+ [571,] 5.42
+ [572,] 5.84
+ [573,] 5.48
+ [574,] 5.62
+ [575,] 5.46
+ [576,] 5.36
+ [577,] 5.30
+ [578,] 5.34
+ [579,] 5.38
+ [580,] 5.52
+ [581,] 5.64
+ [582,] 5.64
+ [583,] 5.84
+ [584,] 5.46
+ [585,] 5.62
+ [586,] 5.64
+ [587,] 5.68
+ [588,] 5.60
+ [589,] 5.56
+ [590,] 5.52
+ [591,] 5.62
+ [592,] 5.72
+ [593,] 5.28
+ [594,] 5.36
+ [595,] 5.34
+ [596,] 5.56
+ [597,] 5.28
+ [598,] 5.62
+ [599,] 5.50
+ [600,] 5.34
+ [601,] 5.76
+ [602,] 5.64
+ [603,] 5.58
+ [604,] 5.32
+ [605,] 5.56
+ [606,] 5.50
+ [607,] 5.40
+ [608,] 5.64
+ [609,] 5.34
+ [610,] 5.42
+ [611,] 5.52
+ [612,] 5.36
+ [613,] 5.58
+ [614,] 5.44
+ [615,] 5.60
+ [616,] 5.44
+ [617,] 5.52
+ [618,] 5.86
+ [619,] 5.44
+ [620,] 5.60
+ [621,] 5.64
+ [622,] 5.48
+ [623,] 5.54
+ [624,] 5.56
+ [625,] 5.42
+ [626,] 5.50
+ [627,] 5.26
+ [628,] 5.66
+ [629,] 5.64
+ [630,] 5.44
+ [631,] 5.50
+ [632,] 5.60
+ [633,] 5.50
+ [634,] 5.44
+ [635,] 5.38
+ [636,] 5.78
+ [637,] 5.54
+ [638,] 5.30
+ [639,] 5.26
+ [640,] 5.50
+ [641,] 5.56
+ [642,] 5.32
+ [643,] 5.38
+ [644,] 5.38
+ [645,] 5.50
+ [646,] 5.46
+ [647,] 5.44
+ [648,] 5.52
+ [649,] 5.48
+ [650,] 5.44
+ [651,] 5.30
+ [652,] 5.56
+ [653,] 5.48
+ [654,] 5.78
+ [655,] 5.48
+ [656,] 5.50
+ [657,] 5.34
+ [658,] 5.40
+ [659,] 5.52
+ [660,] 5.50
+ [661,] 5.98
+ [662,] 5.28
+ [663,] 5.76
+ [664,] 5.80
+ [665,] 5.36
+ [666,] 5.54
+ [667,] 5.22
+ [668,] 5.50
+ [669,] 5.46
+ [670,] 5.50
+ [671,] 5.46
+ [672,] 5.28
+ [673,] 5.70
+ [674,] 5.82
+ [675,] 5.32
+ [676,] 5.50
+ [677,] 5.64
+ [678,] 5.52
+ [679,] 5.62
+ [680,] 5.52
+ [681,] 5.34
+ [682,] 5.30
+ [683,] 5.34
+ [684,] 5.82
+ [685,] 5.32
+ [686,] 5.48
+ [687,] 5.68
+ [688,] 5.46
+ [689,] 5.46
+ [690,] 5.24
+ [691,] 5.48
+ [692,] 5.56
+ [693,] 5.40
+ [694,] 5.64
+ [695,] 5.42
+ [696,] 5.62
+ [697,] 5.60
+ [698,] 5.60
+ [699,] 5.28
+ [700,] 5.52
+ [701,] 5.52
+ [702,] 5.32
+ [703,] 5.34
+ [704,] 5.60
+ [705,] 5.82
+ [706,] 5.62
+ [707,] 5.54
+ [708,] 5.44
+ [709,] 5.64
+ [710,] 5.66
+ [711,] 5.50
+ [712,] 5.32
+ [713,] 5.34
+ [714,] 5.60
+ [715,] 5.36
+ [716,] 5.44
+ [717,] 5.60
+ [718,] 5.64
+ [719,] 5.52
+ [720,] 5.46
+ [721,] 5.48
+ [722,] 5.28
+ [723,] 5.64
+ [724,] 5.50
+ [725,] 5.84
+ [726,] 5.48
+ [727,] 5.32
+ [728,] 5.32
+ [729,] 5.50
+ [730,] 5.30
+ [731,] 5.52
+ [732,] 5.64
+ [733,] 5.66
+ [734,] 5.46
+ [735,] 5.66
+ [736,] 5.44
+ [737,] 5.36
+ [738,] 5.46
+ [739,] 5.64
+ [740,] 5.80
+ [741,] 5.38
+ [742,] 5.62
+ [743,] 5.48
+ [744,] 5.56
+ [745,] 5.54
+ [746,] 5.54
+ [747,] 5.62
+ [748,] 5.54
+ [749,] 5.52
+ [750,] 5.32
+ [751,] 5.42
+ [752,] 5.72
+ [753,] 5.44
+ [754,] 5.62
+ [755,] 5.36
+ [756,] 5.54
+ [757,] 5.64
+ [758,] 5.50
+ [759,] 6.10
+ [760,] 5.50
+ [761,] 5.54
+ [762,] 5.28
+ [763,] 5.60
+ [764,] 5.60
+ [765,] 5.38
+ [766,] 5.68
+ [767,] 5.48
+ [768,] 5.44
+ [769,] 5.58
+ [770,] 5.28
+ [771,] 5.38
+ [772,] 5.34
+ [773,] 5.40
+ [774,] 5.34
+ [775,] 5.48
+ [776,] 5.38
+ [777,] 5.70
+ [778,] 5.52
+ [779,] 5.48
+ [780,] 5.52
+ [781,] 5.44
+ [782,] 5.34
+ [783,] 5.82
+ [784,] 5.54
+ [785,] 5.36
+ [786,] 5.34
+ [787,] 5.68
+ [788,] 5.72
+ [789,] 5.36
+ [790,] 5.32
+ [791,] 5.44
+ [792,] 5.38
+ [793,] 5.52
+ [794,] 5.62
+ [795,] 5.56
+ [796,] 5.46
+ [797,] 5.40
+ [798,] 5.46
+ [799,] 5.62
+ [800,] 5.50
+ [801,] 5.70
+ [802,] 5.30
+ [803,] 5.46
+ [804,] 5.52
+ [805,] 5.64
+ [806,] 5.44
+ [807,] 5.82
+ [808,] 5.44
+ [809,] 5.50
+ [810,] 5.58
+ [811,] 5.72
+ [812,] 5.86
+ [813,] 5.44
+ [814,] 5.48
+ [815,] 5.50
+ [816,] 5.68
+ [817,] 5.36
+ [818,] 5.26
+ [819,] 5.68
+ [820,] 5.72
+ [821,] 5.64
+ [822,] 5.54
+ [823,] 5.58
+ [824,] 5.54
+ [825,] 5.68
+ [826,] 5.38
+ [827,] 5.50
+ [828,] 5.42
+ [829,] 5.38
+ [830,] 5.54
+ [831,] 5.44
+ [832,] 5.50
+ [833,] 5.44
+ [834,] 5.34
+ [835,] 5.52
+ [836,] 5.50
+ [837,] 5.40
+ [838,] 5.46
+ [839,] 5.44
+ [840,] 5.64
+ [841,] 5.50
+ [842,] 5.58
+ [843,] 5.26
+ [844,] 5.54
+ [845,] 5.34
+ [846,] 5.52
+ [847,] 5.58
+ [848,] 5.80
+ [849,] 5.54
+ [850,] 5.56
+ [851,] 5.36
+ [852,] 5.38
+ [853,] 5.34
+ [854,] 5.50
+ [855,] 5.36
+ [856,] 5.64
+ [857,] 5.46
+ [858,] 5.48
+ [859,] 5.56
+ [860,] 5.30
+ [861,] 5.80
+ [862,] 5.34
+ [863,] 5.46
+ [864,] 5.68
+ [865,] 5.48
+ [866,] 5.52
+ [867,] 5.58
+ [868,] 5.32
+ [869,] 5.68
+ [870,] 5.68
+ [871,] 5.44
+ [872,] 5.36
+ [873,] 5.50
+ [874,] 5.36
+ [875,] 5.64
+ [876,] 5.64
+ [877,] 5.54
+ [878,] 5.46
+ [879,] 5.62
+ [880,] 5.52
+ [881,] 5.58
+ [882,] 5.66
+ [883,] 5.64
+ [884,] 5.40
+ [885,] 5.46
+ [886,] 5.80
+ [887,] 5.30
+ [888,] 5.36
+ [889,] 5.36
+ [890,] 5.42
+ [891,] 5.70
+ [892,] 5.48
+ [893,] 5.62
+ [894,] 5.46
+ [895,] 5.64
+ [896,] 5.50
+ [897,] 5.50
+ [898,] 5.40
+ [899,] 5.40
+ [900,] 5.26
+ [901,] 5.62
+ [902,] 5.26
+ [903,] 5.48
+ [904,] 5.60
+ [905,] 5.30
+ [906,] 5.46
+ [907,] 5.48
+ [908,] 5.32
+ [909,] 5.66
+ [910,] 5.30
+ [911,] 5.60
+ [912,] 5.62
+ [913,] 5.32
+ [914,] 5.34
+ [915,] 5.54
+ [916,] 5.44
+ [917,] 5.34
+ [918,] 5.44
+ [919,] 5.40
+ [920,] 5.52
+ [921,] 5.48
+ [922,] 5.34
+ [923,] 5.68
+ [924,] 5.48
+ [925,] 5.34
+ [926,] 5.64
+ [927,] 5.54
+ [928,] 5.46
+ [929,] 5.54
+ [930,] 5.66
+ [931,] 5.66
+ [932,] 5.34
+ [933,] 5.32
+ [934,] 5.56
+ [935,] 5.78
+ [936,] 5.80
+ [937,] 5.66
+ [938,] 5.60
+ [939,] 5.42
+ [940,] 5.60
+ [941,] 5.82
+ [942,] 5.48
+ [943,] 5.34
+ [944,] 5.34
+ [945,] 5.70
+ [946,] 5.82
+ [947,] 5.60
+ [948,] 5.42
+ [949,] 5.52
+ [950,] 5.84
+ [951,] 5.70
+ [952,] 5.40
+ [953,] 5.54
+ [954,] 5.64
+ [955,] 5.50
+ [956,] 5.30
+ [957,] 5.54
+ [958,] 5.46
+ [959,] 5.52
+ [960,] 5.50
+ [961,] 5.50
+ [962,] 5.26
+ [963,] 5.60
+ [964,] 5.34
+ [965,] 5.46
+ [966,] 5.42
+ [967,] 5.32
+ [968,] 5.40
+ [969,] 5.46
+ [970,] 5.56
+ [971,] 5.32
+ [972,] 5.38
+ [973,] 5.54
+ [974,] 5.78
+ [975,] 5.60
+ [976,] 5.30
+ [977,] 5.82
+ [978,] 5.60
+ [979,] 5.30
+ [980,] 5.96
+ [981,] 5.44
+ [982,] 5.66
+ [983,] 5.72
+ [984,] 5.60
+ [985,] 5.52
+ [986,] 5.50
+ [987,] 5.46
+ [988,] 5.68
+ [989,] 5.82
+ [990,] 5.64
+ [991,] 5.50
+ [992,] 5.50
+ [993,] 5.70
+ [994,] 5.32
+ [995,] 5.26
+ [996,] 5.60
+ [997,] 5.48
+ [998,] 5.54
+ [999,] 5.42
+[1000,] 5.72
+```
+]
+
+.pull-right[
+
+**Original sample mean**
+
+
+```r
+mean(height)
+```
+
+```
+[1] 5.5
+```
+
+]
+
+
+---
+
+## Understanding the output
+
+
+```r
+result
+```
+
+```
+
+ORDINARY NONPARAMETRIC BOOTSTRAP
+
+
+Call:
+boot(data = height, statistic = samplemean, R = 1000)
+
+
+Bootstrap Statistics :
+    original  bias    std. error
+t1*      5.5 0.00378   0.1450764
+```
+
+
+
+```r
+mean(height)
+```
+
+```
+[1] 5.5
+```
+
+```r
+mean(result$t) - mean(height)
+```
+
+```
+[1] 0.00378
+```
+
+```r
+sd(result$t)
+```
+
+```
+[1] 0.1450764
+```
+
+---
+## Confidence intervals via bootstrap (cont.)
+
+**Method 1:**
+
+The 95% bootstrap confidence interval is
+
+
+```r
+c(sort(result$t)[25],sort(result$t)[975])
+```
+
+```
+[1] 5.28 5.82
+```
+
+**Method 2:**
+
+
+
+```r
+boot.ci(result, type="all")
+```
+
+```
+Warning in boot.ci(result, type = "all"): bootstrap variances needed for
+studentized intervals
+```
+
+```
+BOOTSTRAP CONFIDENCE INTERVAL CALCULATIONS
+Based on 1000 bootstrap replicates
+
+CALL : 
+boot.ci(boot.out = result, type = "all")
+
+Intervals : 
+Level      Normal              Basic         
+95%   ( 5.212,  5.781 )   ( 5.180,  5.720 )  
+
+Level     Percentile            BCa          
+95%   ( 5.28,  5.82 )   ( 5.30,  5.86 )  
+Calculations and Intervals on Original Scale
+```
+
+---
+
+
+## Confidence intervals via bootstrap (cont.)
+
+1. Normal
+
+2. Basic
+
+3. Percentile
+
+4. BCa (“Bias Corrected and Accelerated)
+
+Reading here: https://www.r-bloggers.com/2019/09/understanding-bootstrap-confidence-interval-output-from-the-r-boot-package/
+
+---
+
+## Hypothesis testing
+
+`$$H_0: \mu =5$$`
+
+`$$H_1: \mu \neq 5$$`
+
+
+```r
+boot.ci(result, type="all")
+```
+
+```
+Warning in boot.ci(result, type = "all"): bootstrap variances needed for
+studentized intervals
+```
+
+```
+BOOTSTRAP CONFIDENCE INTERVAL CALCULATIONS
+Based on 1000 bootstrap replicates
+
+CALL : 
+boot.ci(boot.out = result, type = "all")
+
+Intervals : 
+Level      Normal              Basic         
+95%   ( 5.212,  5.781 )   ( 5.180,  5.720 )  
+
+Level     Percentile            BCa          
+95%   ( 5.28,  5.82 )   ( 5.30,  5.86 )  
+Calculations and Intervals on Original Scale
+```
+
+5 is outside the interval. Hence, `\(H_0\)` would be rejected under 0.05 level of significance. We can conclude that population mean is significantly different from 5.
+
+
+
+---
+
+## Your turn
+
+Compute bootstrap confidence interval for median.
+
+data: `heights`
+
+---
+## Answer
+
+
+```r
+samplemedian &lt;- function(data, indices) {
+  return(median(data[indices]))
+}
+
+resultmedian &lt;-  boot(data = height, statistic = samplemedian, R = 1000)
+resultmedian
+```
+
+```
+
+ORDINARY NONPARAMETRIC BOOTSTRAP
+
+
+Call:
+boot(data = height, statistic = samplemedian, R = 1000)
+
+
+Bootstrap Statistics :
+    original  bias    std. error
+t1*      5.4  0.0267   0.1794138
+```
+
+
+---
+
+## Answer (cont.)
+
+
+```r
+boot.ci(resultmedian, type="all")
+```
+
+```
+Warning in boot.ci(resultmedian, type = "all"): bootstrap variances needed for
+studentized intervals
+```
+
+```
+BOOTSTRAP CONFIDENCE INTERVAL CALCULATIONS
+Based on 1000 bootstrap replicates
+
+CALL : 
+boot.ci(boot.out = resultmedian, type = "all")
+
+Intervals : 
+Level      Normal              Basic         
+95%   ( 5.022,  5.725 )   ( 4.700,  5.600 )  
+
+Level     Percentile            BCa          
+95%   ( 5.2,  6.1 )   ( 5.2,  5.5 )  
+Calculations and Intervals on Original Scale
+Some BCa intervals may be unstable
+```
+
+
+---
+## Jackknife Approach
+
+
+ - Unlike bootstrap, jackknife is an iterative process. A parameter is calculated on the whole dataset and it is repeatedly recalculated by removing an element one after another.
+ 
+ - The main application of jackknife is to reduce bias and evaluate variance for an estimator.
+ 
+---
+
+## Exercise
+
+Construct 
+
+- CIs for median `Sepal.Length`, 
+
+- CIs for median `Sepal.Width` and
+
+- CIs for Spearman's rank correlation coefficient between  `Sepal.Length` and `Sepal.Width`
+
+using bootstrap sampling.
+
+Data: `iris`
+
+---
+
+class: center, middle
+
+Slides available at: https://thiyanga.netlify.app/courses/rmsc2020/contentr/
+
+All rights reserved by [Thiyanga S. Talagala](https://thiyanga.netlify.com/)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
