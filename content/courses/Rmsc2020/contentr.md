@@ -151,7 +151,7 @@ data(package = 'palmerpenguins')
 
 - Bootstrap and Jackknife
 
-| 📚 [Slides](/Slides/2020s1STA5173_0/l14.html)    	| 📒 [Reading](http://bcs.whfreeman.com/webpub/statistics/ips9e/9781319013387/companionchapters/companionchapter16.pdf) 	| 📊 Data Sets - `iris`	| 📎 Problems - see slides	| 🔖Answers |
+| 📚 [Slides](/Slides/2020s1STA5173_0/l14.html)    	| 📒 [Reading](http://bcs.whfreeman.com/webpub/statistics/ips9e/9781319013387/companionchapters/companionchapter16.pdf) 	| 📊 Data Sets - `iris`	| 📎 [Problems](https://thiyanga.netlify.app/slides/2020s1sta5173_0/l14#22)	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
