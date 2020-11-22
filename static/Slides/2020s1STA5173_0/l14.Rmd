@@ -206,6 +206,14 @@ mean(height)
 
 ]
 
+---
+## Make a histogram of the means of the 1000 bootstrap samples
+
+```{r, comment=NA, message=FALSE}
+df <- data.frame(mean=result$t)
+library(ggplot2)
+ggplot(df, aes(x=mean)) + geom_histogram(col="white")
+```
 
 ---
 
