@@ -79,13 +79,13 @@ Ion Switching| [Kaggle competition](https://www.kaggle.com/c/liverpool-ion-switc
 
 - Assignment 3: Please go the LMS (Due date: 24 Nov 2020)
 
-- [Birth-and-Death Process]
+- [Birth-and-Death Process](/Slides/2020s2StochasticProcesses/13_stochastic_processes_2020.pdf)
 
 - [Birth-and-Death Process - important results](/Slides/2020s2StochasticProcesses/12_stochastic_processes_2020.pdf)
 
 ### Week 15
 
-- Birth-and-Death Process - important results (cont)
+- [Birth-and-Death Process - important results (cont)](/Slides/2020s2StochasticProcesses/14_stochastic_processes_2020.pdf)
 
 Revision 
 
