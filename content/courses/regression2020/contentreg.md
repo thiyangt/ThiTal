@@ -211,6 +211,12 @@ Special considerations email me on or before 8 Nov 2020
     
     - Stepwise method
 
+
+| 📚 [Slides](https://edify-thiyanga.netlify.app/regression/regression12.pdf)  	| 📒 Reading - Ch 9 	| 📊 Data Sets -	[real-estate.csv](/data/real-estate.csv)| 📎 Problems 	| 🔖Answers |
+|:-:	|:-:	|:-:	|:-:	|:-:	|
+
+### Week 14
+
 - Multicollinearity
 
     - Introduction
@@ -218,11 +224,6 @@ Special considerations email me on or before 8 Nov 2020
     - Multocollinearity diagnostics
     
     - Treatments for dealing with multicollinearity
-
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
-|:-:	|:-:	|:-:	|:-:	|:-:	|
-
-### Week 14
 
 - Bootstrapping in regression
 
