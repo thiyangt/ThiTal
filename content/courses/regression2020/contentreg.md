@@ -190,7 +190,7 @@ Special considerations email me on or before 8 Nov 2020
 
 
 
-| 📚 [Slides-i](https://edify-thiyanga.netlify.app/regression/regression10.html#1) [Slides-ii](https://edify-thiyanga.netlify.app/regression/regression11.html#1) 	| 📒 Reading - Ch6, 11.1, Ch8 (Montgomery, Peck, Vining)  	| 📊 Data Sets - see slides	| 📎 Problems 	| 🔖Answers |
+| 📚 [Slides-i](https://edify-thiyanga.netlify.app/regression/regression10.html#1) [Slides-ii](https://edify-thiyanga.netlify.app/regression/regression11.html#1) 	| 📒 Reading - Ch6, 11.1, Ch8 (Montgomery, Peck, Vining)  	| 📊 Data Sets - see slides	| 📎 [Problems](https://edify-thiyanga.netlify.app/regression/regression11.html#9) 	| 🔖Answers - see Week 13 discussion notes|
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
@@ -212,7 +212,7 @@ Special considerations email me on or before 8 Nov 2020
     - Stepwise method
 
 
-| 📚 [Slides](https://edify-thiyanga.netlify.app/regression/regression12.pdf)  	| 📒 Reading - Ch 9 	| 📊 Data Sets -	[real-estate.csv](/data/real-estate.csv)| 📎 Problems 	| 🔖Answers |
+| 📚 [Slides](https://edify-thiyanga.netlify.app/regression/regression12.pdf)  	| 📒 Reading - Ch 9 	| 📊 Data Sets -	[real-estate.csv](/data/real-estate.csv)| 📎 [Problems](https://edify-thiyanga.netlify.app/regression/variableSelectionproblem.pdf) 	| 🔖Answers - inclass|
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 ### Week 14
