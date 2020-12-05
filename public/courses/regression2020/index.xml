@@ -386,7 +386,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression13.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;📚&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression13.pdf&#34;&gt;Slides - 1&lt;/a&gt; &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression14.pdf&#34;&gt;Slides - 2&lt;/a&gt;&lt;/th&gt;
 &lt;th align=&#34;center&#34;&gt;📒 Reading  - Ch 10&lt;/th&gt;
 &lt;th align=&#34;center&#34;&gt;📊 &lt;a href=&#34;/data/bloodpressure.csv&#34;&gt;Data Sets-bloodpressure&lt;/a&gt;&lt;/th&gt;
 &lt;th align=&#34;center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/multicollinearity_questions.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
@@ -394,6 +394,9 @@
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Model questions: Download from the Google Classroom. We will discuss answers next week (12 Dec 2020).&lt;/li&gt;
+&lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Week 15: Revision&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -401,6 +404,9 @@
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Current state-of-art techniques in regression analysis and statistical modelling&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Model questions: Discuss answers&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Open problems&lt;/p&gt;
