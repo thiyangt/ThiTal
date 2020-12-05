@@ -212,7 +212,7 @@ Special considerations email me on or before 8 Nov 2020
     - Stepwise method
 
 
-| 📚 [Slides](https://edify-thiyanga.netlify.app/regression/regression12.pdf)  	| 📒 Reading - Ch 9 	| 📊 Data Sets -	[real-estate.csv](/data/real-estate.csv)| 📎 [Problems](https://edify-thiyanga.netlify.app/regression/variableSelectionproblem.pdf) 	| 🔖Answers - inclass|
+| 📚 [Slides](https://edify-thiyanga.netlify.app/regression/regression12.pdf)  	| 📒 Reading - Ch 9 	| 📊 Data Sets -	[real-estate.csv](/data/real-estate.csv)| 📎 [Problems](https://edify-thiyanga.netlify.app/regression/variableSelectionproblem.pdf) 	| 🔖Answers - Inclass discussion|
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 ### Week 14
@@ -233,7 +233,7 @@ Special considerations email me on or before 8 Nov 2020
     
     - Bootsrap confidence intervals
 
-| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression13.pdf)  	| 📒 Reading  - Ch 10	| 📊 [Data Sets](/data/bloodpressure.csv) 	| 📎 Problems 	| 🔖Answers |
+| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression13.pdf)  	| 📒 Reading  - Ch 10	| 📊 [Data Sets](/data/bloodpressure.csv) 	| 📎 Problems 	| 🔖Answers - Inclass discussion |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
