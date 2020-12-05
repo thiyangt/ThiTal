@@ -233,12 +233,12 @@ Special considerations email me on or before 8 Nov 2020
     
     - Bootsrap confidence intervals
 
-| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression13.pdf)  	| 📒 Reading  - Ch 10	| 📊 [Data Sets](/data/bloodpressure.csv) 	| 📎 Problems 	| 🔖Answers - Inclass discussion |
+| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression13.pdf)  	| 📒 Reading  - Ch 10	| 📊 [Data Sets-bloodpressure](/data/bloodpressure.csv) 	| 📎 [Problems](https://edify-thiyanga.netlify.app/regression/multicollinearity_questions.pdf) 	| 🔖Answers - Inclass discussion |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
 
-> Week 15: Revision (in class)
+> Week 15: Revision 
 
 ### Week 15: Revision
 
