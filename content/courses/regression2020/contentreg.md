@@ -233,7 +233,7 @@ Special considerations email me on or before 8 Nov 2020
     
     - Bootsrap confidence intervals
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
+| 📚[Slides](https://edify-thiyanga.netlify.app/regression/regression13.pdf)  	| 📒 Reading  - Ch 10	| 📊 [Data Sets](/data/bloodpressure.csv) 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
