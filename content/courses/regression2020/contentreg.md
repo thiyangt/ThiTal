@@ -194,7 +194,7 @@ Special considerations email me on or before 8 Nov 2020
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 
-> Week 13-14:  Discussion/practical (in class)
+> Week 13-14:  Discussion/practical (live - zoom)
 
 ### Week 13
 
@@ -236,10 +236,12 @@ Special considerations email me on or before 8 Nov 2020
 | 📚[Slides - 1](https://edify-thiyanga.netlify.app/regression/regression13.pdf) [Slides - 2](https://edify-thiyanga.netlify.app/regression/regression14.pdf)  	| 📒 Reading  - Ch 10	| 📊 [Data Sets-bloodpressure](/data/bloodpressure.csv) 	| 📎 [Problems](https://edify-thiyanga.netlify.app/regression/multicollinearity_questions.pdf) 	| 🔖Answers - Inclass discussion |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
+- Mid semester examination - Answer discussions.
+
 - Model questions: Download from the Google Classroom. We will discuss answers next week (12 Dec 2020).
 
 
-> Week 15: Revision 
+> Week 15: Revision (live - zoom)
 
 ### Week 15: Revision
 
@@ -253,6 +255,9 @@ Special considerations email me on or before 8 Nov 2020
 
 | 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
+
+
+
 > Week 16-18: Study leave and Final Examination
 
 ### Week 16: Study leave

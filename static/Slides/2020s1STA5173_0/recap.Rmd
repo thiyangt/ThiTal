@@ -4,7 +4,7 @@ output: pdf_document
 
 # Recap
 
-# STA 326 2.0 Programming and Data Analysis with R
+# STA 517 3.0 Programming and Statistical Computing with R
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -160,5 +160,9 @@ function_name <- function(inputs){
 - modify
 
 - map_df
+
+# The method of Monte Carlo
+
+# Bootstrap
 
 You can update this with all the topics we discussed.

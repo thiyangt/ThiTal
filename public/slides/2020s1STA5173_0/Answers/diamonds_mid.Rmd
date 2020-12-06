@@ -1,0 +1,242 @@
+---
+title: "Diamonds data analysis"
+output: html_document 
+toc : T
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE}
+library(ggplot2)
+data(diamonds)
+```
+
+# Introduction
+This data analysis was carried out to identify the factors that could affect the price of the diamond.Almost 54000 diamonds' data were collected.
+
+| *Varibale*   | *Description* |
+| ---          | --- |
+| price        | price in US dollars (\$326–\$18,823)|
+| carat        | weight of the diamond (0.2–5.01)|
+| cut          | quality of the cut (Fair, Good, Very Good, Premium,     Ideal)|
+| color        | diamond colour, from D (best) to J (worst)|
+| clarity      | a measurement of how clear the diamond is (I1 (worst), SI2, SI1, VS2, VS1, VVS2, VVS1, IF (best))|
+| x            | length in mm (0–10.74)|
+| y            | width in mm (0–58.9)|
+| z            | depth in mm (0–31.8)|
+| depth        | total depth percentage = z / mean(x, y) = 2 * z / (x + y) (43–79)|
+| table        | width of top of diamond relative to widest point   (43–95)|
+ 
+## Types of variable
+
+Qualitative Variable   : Cut, Color, Clarity \
+Quantitative variables : Price, carat, x, y, z, depth, table
+
+## Scale of measuremnts
+price    -  Ratio   \
+carat    -  Ratio   \
+cut      -  Ordinal \
+color    -  Ordinal \
+clarity  -  Ordinal \
+x        -  Ratio   \
+y        -  Ratio   \
+z        -  Ratio   \
+depth    -  Ratio   \
+table    -  Ratio   
+# Anaysis of Diamonds
+
+```{r}
+summary(diamonds)
+```
+
+According to summary of the diamond data we can see that most of the diamond has ideal cut.Maximum weight of the diamond is almost 25 times than minimum.Since mean of the weight(carat) is 0.7979 we can assume that most of diamonds has low weight.Maximum price is atmost 60 times higher than minimum price.Depth, Width and Length of the diamond has almost same mean and median.Therefore we can say that length of the diamond has symmetric distribution.
+
+----------------------------------------------------------------------
+
+
+```{r}
+ggplot(diamonds, aes(x = cut, y = price, color=cut)) +
+       geom_boxplot(alpha = 0.2)
+
+```
+
+
+The price of diamonds with good cut has approximatelty symmetric distribution.All the other cuts have positively skewed disribution on price.The ideal cut diamonds have the lowest price and the premium cut diamonds have the highest price.
+
+
+```{r}
+ggplot(diamonds, aes(x = color, y = price, color=color)) +
+       geom_boxplot(alpha = 0.2)
+
+```
+
+All the color of diamonds have positively skewed distribution on price.The highest price diamonds have color J and the lowest price have color E.
+
+```{r}
+ggplot(diamonds, aes(x = clarity, y = price, color = clarity) ) +
+       geom_boxplot(alpha = 0.2) 
+
+```
+
+The highest price diamonds have clarity VS2 and VS1 and the lowest price have clarity WS2.
+
+```{r}
+ggplot(diamonds, aes(x = clarity, y = price, color = clarity) ) +
+       geom_boxplot(alpha = 0.5) + facet_grid( . ~ cut)
+
+```
+
+The highest price diamonds have clarity VS2 with premium cut and the lowest price have clarity WS2 with ideal cut.
+
+```{r}
+ggplot(diamonds, aes(x = color,y = price, color = color)) +
+       geom_boxplot(alpha = 0.5) + facet_grid( . ~ clarity)
+
+```
+
+The highest price diamonds have clarity VS2 with color D. 
+
+```{r}
+ggplot(diamonds, aes(x = color,y = price, color = color)) +
+       geom_boxplot(alpha = 0.5) + facet_grid( . ~ cut)
+
+```
+
+The highest price diamonds have color J and premium cut. 
+
+
+```{r}
+ggplot(diamonds, aes(y = price, x = carat)) +
+      geom_point(color = "purple" , alpha = 0.3) 
+     
+```
+
+There is a positive weak linear relationship between price and carat.
+
+```{r}
+ggplot(diamonds, aes(y = price, x = x)) +
+      geom_point(color = "red" , alpha = 0.3) 
+
+```
+
+There is a positive weak linear relationship between price and x.
+
+```{r}
+ggplot(diamonds, aes(y = price, x = y)) +
+      geom_point(color = "blue" , alpha = 0.3) 
+
+```
+
+There is a positive weak linear relationship between price and y.
+
+```{r}
+ggplot(diamonds, aes(y = price, x = z)) +
+      geom_point(color = "green" , alpha = 0.3) 
+
+```
+
+There is a positive weak linear relationship between price and z.The daimond with highest depth has lower price.
+
+```{r}
+ggplot(diamonds, aes(y = price, x = depth)) +
+      geom_point(color = "black" , alpha = 0.3) 
+
+```
+
+There is a positive weak linear relationship between price and depth.
+
+```{r}
+ggplot(diamonds, aes(y = price, x = table)) +
+      geom_point(color = "magenta" , alpha = 0.3) 
+
+```
+
+There is a positive weak linear relationship between price and table.
+
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = price)) +
+      geom_point(aes(color = cut), alpha=0.5) 
+
+```
+
+we can see premium cut diamonds with lowest weight has lowest ptice.
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = price)) +
+      geom_point(aes(color = color), alpha=0.5) 
+
+```
+
+In here strongness of linear reltionship between carat and price is reduced when color goes to D to J.
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = price)) +
+      geom_point(aes(color = clarity), alpha=0.5) 
+
+```
+
+In here strongness of linear reltionship between carat and price is reduced when clarity goes to lF to l1.
+
+
+```{r}
+ggplot(diamonds, aes(x = x, y = price)) +
+      geom_point(aes(color = cut), alpha=0.5) 
+
+```
+
+
+```{r}
+ggplot(diamonds, aes(x = x, y = price)) +
+      geom_point(aes(color = color), alpha=0.5) 
+
+```
+
+In here strongness of linear reltionship between carat and length(x) is reduced when color goes to D to J.
+
+```{r}
+ggplot(diamonds, aes(x = x, y = price)) +
+      geom_point(aes(color = clarity), alpha=0.5) 
+
+```
+
+In here strongness of linear reltionship between carat and length(x) is reduced when clarity is goes to lF to l1.
+
+```{r}
+ggplot(diamonds, aes(x = y, y = price)) +
+      geom_point(aes(color = cut), alpha=0.5) 
+
+```
+
+
+```{r}
+ggplot(diamonds, aes(x = y, y = price)) +
+      geom_point(aes(color = color), alpha=0.5) 
+
+```
+
+```{r}
+ggplot(diamonds, aes(x = y, y = price)) +
+      geom_point(aes(color = clarity), alpha=0.5) 
+```
+
+```{r}
+ggplot(diamonds, aes(x = z, y = price)) +
+      geom_point(aes(color = cut), alpha=0.5) 
+
+```
+
+
+```{r}
+ggplot(diamonds, aes(x = z, y = price)) +
+      geom_point(aes(color = color), alpha=0.5) 
+
+```
+
+```{r}
+ggplot(diamonds, aes(x = z, y = price)) +
+      geom_point(aes(color = clarity), alpha=0.5) 
+```

@@ -156,14 +156,16 @@ data(package = 'palmerpenguins')
 
 
 
-> Week 15: Revision (in class)
+> Week 15: Revision (live zoom)
 
 ### Week 15: Revision
 
-- Recap
 
-| 📚Slides  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖Answers |
-|:-:	|:-:	|:-:	|:-:	|:-:	|
+| 📚 [Recap](/Slides/2020s1STA5173_0/recap.pdf)  	| 📒 Model questions and Answers - Download from google classroom 	 |
+|:-:	|:-:	|
+
+- Mid semester examination - Answer discussions.
+
 > Week 16-18: Study leave and Final Examination
 
 ### Week 16: Study leave
