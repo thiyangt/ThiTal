@@ -118,7 +118,7 @@ data(package = 'palmerpenguins')
 
 - Methods of generating random numbers
 
-| 📚 [Slides](/Slides/2020s1STA5173_0/l11_inverse_transformation.html)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖 [Answers](/Slides/2020s1STA5173_0/l11_inverse_transformation.html)|
+| 📚 [Slides](/Slides/2020s1STA5173_0/l11_inverse_transformation.pdf)  	| 📒 Reading  	| 📊 Data Sets 	| 📎 Problems 	| 🔖 [Answers](/Slides/2020s1STA5173_0/l11_inverse_transformation_answers.pdf)|
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 
 ### Week 12
