@@ -18,7 +18,7 @@ Here is your road map for the course!
 
 [📗](/Slides/2020s1STA5173_0/l0.html)
 
-> Week 1-4: lectures (online)
+> Week 1-2: lectures (online)
 
 ### Week 1
 
@@ -36,6 +36,8 @@ Here is your road map for the course!
 
 | 📚[Slides](/Slides/2020s1STA5173_0/l2.html) 	| 📒 [Reading-5.3, 5.8](https://rstudio-education.github.io/hopr/r-objects.html#matrices)  	| 📊 [Cheat sheet](https://hellor.netlify.app/cheatsheets/baser.pdf) 	| 📎 [Problems](/Slides/2020s1STA5173_0/MSc_tutorials/Tutorial1_Questions_MSC_2020.pdf) 	| 🔖 [Answers](/Slides/2020s1STA5173_0/MSc_tutorials/Tutorial1_Ans_MSC_2020.pdf) |
 |:-:	|:-:	|:-:	|:-:	|:-:	|
+
+> Week 3-7: lectures (in-class)
 
 ### Week 3
 
