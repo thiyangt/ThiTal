@@ -78,3 +78,4 @@ subtitle = ""
 <i class="fa fa-cog fa-spin" style="color:Maroon"></i> [m4comp2018](https://github.com/carlanetto/M4comp2018): R package for [M4 Competition](https://www.m4.unic.ac.cy/) time series data 
 
 <i class="fa fa-cog fa-spin" style="color:Maroon"></i> [DSjobtracker](https://github.com/thiyangt/DSjobtracker): R package containing information related to data science job advertisements. What skills and qualifications are required for data science related jobs?
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/DSjobtracker)](https://CRAN.R-project.org/package=DSjobtracker)
