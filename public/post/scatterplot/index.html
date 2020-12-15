@@ -615,7 +615,9 @@ df2</code></pre>
 <pre class="r"><code>ggplot(df, aes(x=x, y=y)) + 
   geom_point() + 
   coord_equal() + 
-  geom_point(data=df2, aes(x=x, y=y), pch=21, fill=NA, size=4, colour=&quot;red&quot;, stroke=1)</code></pre>
+  geom_point(data=df2, aes(x=x, y=y), pch=21, 
+             fill=NA, size=4, 
+             colour=&quot;red&quot;, stroke=1)</code></pre>
 <p><img src="/post/scatterplot_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 </div>
 

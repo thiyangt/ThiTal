@@ -70,7 +70,9 @@ We can circle around the points by using the following command.
 ggplot(df, aes(x=x, y=y)) + 
   geom_point() + 
   coord_equal() + 
-  geom_point(data=df2, aes(x=x, y=y), pch=21, fill=NA, size=4, colour="red", stroke=1)
+  geom_point(data=df2, aes(x=x, y=y), pch=21, 
+             fill=NA, size=4, 
+             colour="red", stroke=1)
 ```
 
 
