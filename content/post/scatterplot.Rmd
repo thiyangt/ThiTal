@@ -1,0 +1,76 @@
+---
+title: "Highlight data points in a scatterplot"
+author: Thiyanga Talagala
+date: '2020-12-15'
+categories: [R, tidyverse, ggplot2, scatterplot]
+tags: [R, tidyverse, ggplot2, scatterplot]
+summary: "Highlight selected points in the scatterplot"
+---
+
+<img src="/post/highlight.jpg" alt="final image" width="700"/>
+
+
+# Step 1: Load Libraries 
+
+
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
+```
+
+# Step 2: Dataset
+
+```{r, warning=FALSE, message=FALSE}
+set.seed(20201215)
+df <- tibble::tibble(x=rnorm(100), y=rnorm(100))
+```
+
+Now we are going to work on our scatterplot.
+
+# Step 3: First draw a scatterplot with your full data
+
+```{r, warning=FALSE, message=FALSE}
+ggplot(df, aes(x=x, y=y)) + 
+  geom_point() + 
+  coord_equal()
+```
+
+# Step 4: Store the points that you need to highlight in a new `data.frame` or `tibble`.
+
+Suppose I want to highlight 5th, 10th and 15th points.
+
+```{r, warning=FALSE, message=FALSE, comment=NA}
+df2 <- df[c(5, 10, 15), ]
+df2
+```
+
+# Step 5: Now you need to inform above points to the ggplot through another `geom_point` layer.
+
+
+```{r, warning=FALSE, message=FALSE}
+ggplot(df, aes(x=x, y=y)) + 
+  geom_point() + 
+  coord_equal() + 
+  geom_point(data=df2, aes(x=x, y=y), colour="red")
+```
+
+We can change the size by passing a value to `size` argument.
+
+
+```{r, warning=FALSE, message=FALSE}
+ggplot(df, aes(x=x, y=y)) + 
+  geom_point() + 
+  coord_equal() + 
+  geom_point(data=df2, aes(x=x, y=y), colour="red", size=5)
+```
+
+We can circle around the points by using the following command.
+
+
+```{r, warning=FALSE, message=FALSE}
+ggplot(df, aes(x=x, y=y)) + 
+  geom_point() + 
+  coord_equal() + 
+  geom_point(data=df2, aes(x=x, y=y), pch=21, fill=NA, size=4, colour="red", stroke=1)
+```
+
+

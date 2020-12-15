@@ -1,0 +1,61 @@
+---
+title: "Highlight data points in a scatterplot"
+author: Thiyanga Talagala
+date: '2020-12-15'
+categories: [R, tidyverse, ggplot2, scatterplot]
+tags: [R, tidyverse, ggplot2, scatterplot]
+summary: "Highlight selected points in the scatterplot"
+---
+
+
+
+<p><img src="/post/highlight.jpg" alt="final image" width="700"/></p>
+<div id="step-1-load-libraries" class="section level1">
+<h1>Step 1: Load Libraries</h1>
+<pre class="r"><code>library(tidyverse)</code></pre>
+</div>
+<div id="step-2-dataset" class="section level1">
+<h1>Step 2: Dataset</h1>
+<pre class="r"><code>set.seed(20201215)
+df &lt;- tibble::tibble(x=rnorm(100), y=rnorm(100))</code></pre>
+<p>Now we are going to work on our scatterplot.</p>
+</div>
+<div id="step-3-first-draw-a-scatterplot-with-your-full-data" class="section level1">
+<h1>Step 3: First draw a scatterplot with your full data</h1>
+<pre class="r"><code>ggplot(df, aes(x=x, y=y)) + 
+  geom_point() + 
+  coord_equal()</code></pre>
+<p><img src="/post/scatterplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="step-4-store-the-points-that-you-need-to-highlight-in-a-new-data.frame-or-tibble." class="section level1">
+<h1>Step 4: Store the points that you need to highlight in a new <code>data.frame</code> or <code>tibble</code>.</h1>
+<p>Suppose I want to highlight 5th, 10th and 15th points.</p>
+<pre class="r"><code>df2 &lt;- df[c(5, 10, 15), ]
+df2</code></pre>
+<pre><code># A tibble: 3 x 2
+       x      y
+   &lt;dbl&gt;  &lt;dbl&gt;
+1  0.646 -3.30 
+2  2.54  -0.732
+3 -0.383  0.855</code></pre>
+</div>
+<div id="step-5-now-you-need-to-inform-above-points-to-the-ggplot-through-another-geom_point-layer." class="section level1">
+<h1>Step 5: Now you need to inform above points to the ggplot through another <code>geom_point</code> layer.</h1>
+<pre class="r"><code>ggplot(df, aes(x=x, y=y)) + 
+  geom_point() + 
+  coord_equal() + 
+  geom_point(data=df2, aes(x=x, y=y), colour=&quot;red&quot;)</code></pre>
+<p><img src="/post/scatterplot_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>We can change the size by passing a value to <code>size</code> argument.</p>
+<pre class="r"><code>ggplot(df, aes(x=x, y=y)) + 
+  geom_point() + 
+  coord_equal() + 
+  geom_point(data=df2, aes(x=x, y=y), colour=&quot;red&quot;, size=5)</code></pre>
+<p><img src="/post/scatterplot_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>We can circle around the points by using the following command.</p>
+<pre class="r"><code>ggplot(df, aes(x=x, y=y)) + 
+  geom_point() + 
+  coord_equal() + 
+  geom_point(data=df2, aes(x=x, y=y), pch=21, fill=NA, size=4, colour=&quot;red&quot;, stroke=1)</code></pre>
+<p><img src="/post/scatterplot_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>

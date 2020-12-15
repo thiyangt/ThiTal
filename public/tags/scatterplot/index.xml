@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tidyverse | THIYANGA TALAGALA</title>
-    <link>/categories/tidyverse/</link>
-      <atom:link href="/categories/tidyverse/index.xml" rel="self" type="application/rss+xml" />
-    <description>tidyverse</description>
+    <title>scatterplot | THIYANGA TALAGALA</title>
+    <link>/tags/scatterplot/</link>
+      <atom:link href="/tags/scatterplot/index.xml" rel="self" type="application/rss+xml" />
+    <description>scatterplot</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 15 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
-      <title>tidyverse</title>
-      <link>/categories/tidyverse/</link>
+      <title>scatterplot</title>
+      <link>/tags/scatterplot/</link>
     </image>
     
     <item>
@@ -69,73 +69,6 @@ df2&lt;/code&gt;&lt;/pre&gt;
   coord_equal() + 
   geom_point(data=df2, aes(x=x, y=y), pch=21, fill=NA, size=4, colour=&amp;quot;red&amp;quot;, stroke=1)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/scatterplot_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>How to install and load multiple packages at once?</title>
-      <link>/post/multiplepkg/</link>
-      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>/post/multiplepkg/</guid>
-      <description>
-
-
-&lt;style type=&#34;text/css&#34;&gt;
-h2 { /* Header 2 */
-    font-size: 22px;
-  color: DarkBlue;
-}
-&lt;/style&gt;
-&lt;div id=&#34;install-packages&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;install packages&lt;/h2&gt;
-&lt;p&gt;To install multiple packages with a single call to &lt;code&gt;install.packages&lt;/code&gt;, pass the names of the packages as a character vector to the install.packages() function.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;load-packages&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;load packages&lt;/h2&gt;
-&lt;p&gt;Once you have the packages installed, you can make their contents available to use in your current R session by running,&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;lapply(c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;), require, character.only = TRUE)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [[1]]
-## [1] TRUE
-## 
-## [[2]]
-## [1] TRUE
-## 
-## [[3]]
-## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;check-and-install-missing-packages&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;check and install missing packages&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;list.of.packages &amp;lt;- c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;)
-new.packages &amp;lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&amp;quot;Package&amp;quot;])]
-if(length(new.packages)) install.packages(new.packages)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;for-other-alternatives-see&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;For other alternatives see&lt;/h2&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;a href=&#34;http://dirk.eddelbuettel.com/code/littler.html&#34;&gt;littler&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(littler)
-install.r EIAdata gdata ggmap ggplot2 &lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;a href=&#34;https://gist.github.com/stevenworthington/3178163&#34;&gt;ipak&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ipak &amp;lt;- function(pkg){
-    new.pkg &amp;lt;- pkg[!(pkg %in% installed.packages()[, &amp;quot;Package&amp;quot;])]
-    if (length(new.pkg)) 
-        install.packages(new.pkg, dependencies = TRUE)
-    sapply(pkg, require, character.only = TRUE)
-}
-
-# usage
-packages &amp;lt;- c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;)
-ipak(packages)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## gganimate tidyverse gapminder 
-##      TRUE      TRUE      TRUE&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;a href=&#34;https://cran.r-project.org/web/packages/easypackages/README.html&#34;&gt;easypackages&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>

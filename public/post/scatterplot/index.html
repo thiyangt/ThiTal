@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="PhD in Statistics">
+  <meta name="description" content="Highlight selected points in the scatterplot">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/">
+  <link rel="alternate" hreflang="en-us" href="/post/scatterplot/">
 
   
 
@@ -103,14 +103,12 @@
 
 
   
-  <link rel="alternate" href="/post/index.xml" type="application/rss+xml" title="THIYANGA TALAGALA">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/post/">
+  <link rel="canonical" href="/post/scatterplot/">
 
   
   
@@ -123,18 +121,65 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="THIYANGA TALAGALA">
-  <meta property="og:url" content="/post/">
-  <meta property="og:title" content="Posts | THIYANGA TALAGALA">
-  <meta property="og:description" content="PhD in Statistics"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/post/scatterplot/">
+  <meta property="og:title" content="Highlight data points in a scatterplot | THIYANGA TALAGALA">
+  <meta property="og:description" content="Highlight selected points in the scatterplot"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2020-12-15T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2020-12-15T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-12-15T00:00:00&#43;00:00">
   
 
   
 
 
+    
 
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/scatterplot/"
+  },
+  "headline": "Highlight data points in a scatterplot",
+  
+  "datePublished": "2020-12-15T00:00:00Z",
+  "dateModified": "2020-12-15T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Thiyanga S. Talagala"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "THIYANGA TALAGALA",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/img/icon-512.png"
+    }
+  },
+  "description": "Highlight selected points in the scatterplot"
+}
+</script>
+
+  
 
   
 
@@ -142,10 +187,13 @@
   
 
 
+  
 
 
 
-  <title>Posts | THIYANGA TALAGALA</title>
+
+
+  <title>Highlight data points in a scatterplot | THIYANGA TALAGALA</title>
 
 </head>
 
@@ -428,44 +476,12 @@
 </nav>
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
+  <article class="article">
 
   
 
-  
-  
-  
-    
-  
-<div class="universal-wrapper pt-3">
-  <h1>Posts</h1>
-
-  
-
-  
-</div>
 
 
-
-<div class="universal-wrapper">
-
-  
-
-  
-  
-    
-      
 
 
 
@@ -477,8 +493,13 @@
 
   
 
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Highlight data points in a scatterplot</h1>
 
-<div class="card-simple">
+  
 
   
     
@@ -521,748 +542,328 @@
 
 </div>
 
-  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/scatterplot/">Highlight data points in a scatterplot</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>Highlight selected points in the scatterplot</p>
-  </div>
-  
-
-  
-
 </div>
 
-    
-  
-    
+
+
+  <div class="article-container">
+
+    <div class="article-style">
       
 
 
+<p><img src="/post/highlight.jpg" alt="final image" width="700"/></p>
+<div id="step-1-load-libraries" class="section level1">
+<h1>Step 1: Load Libraries</h1>
+<pre class="r"><code>library(tidyverse)</code></pre>
+</div>
+<div id="step-2-dataset" class="section level1">
+<h1>Step 2: Dataset</h1>
+<pre class="r"><code>set.seed(20201215)
+df &lt;- tibble::tibble(x=rnorm(100), y=rnorm(100))</code></pre>
+<p>Now we are going to work on our scatterplot.</p>
+</div>
+<div id="step-3-first-draw-a-scatterplot-with-your-full-data" class="section level1">
+<h1>Step 3: First draw a scatterplot with your full data</h1>
+<pre class="r"><code>ggplot(df, aes(x=x, y=y)) + 
+  geom_point() + 
+  coord_equal()</code></pre>
+<p><img src="/post/scatterplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="step-4-store-the-points-that-you-need-to-highlight-in-a-new-data.frame-or-tibble." class="section level1">
+<h1>Step 4: Store the points that you need to highlight in a new <code>data.frame</code> or <code>tibble</code>.</h1>
+<p>Suppose I want to highlight 5th, 10th and 15th points.</p>
+<pre class="r"><code>df2 &lt;- df[c(5, 10, 15), ]
+df2</code></pre>
+<pre><code># A tibble: 3 x 2
+       x      y
+   &lt;dbl&gt;  &lt;dbl&gt;
+1  0.646 -3.30 
+2  2.54  -0.732
+3 -0.383  0.855</code></pre>
+</div>
+<div id="step-5-now-you-need-to-inform-above-points-to-the-ggplot-through-another-geom_point-layer." class="section level1">
+<h1>Step 5: Now you need to inform above points to the ggplot through another <code>geom_point</code> layer.</h1>
+<pre class="r"><code>ggplot(df, aes(x=x, y=y)) + 
+  geom_point() + 
+  coord_equal() + 
+  geom_point(data=df2, aes(x=x, y=y), colour=&quot;red&quot;)</code></pre>
+<p><img src="/post/scatterplot_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>We can change the size by passing a value to <code>size</code> argument.</p>
+<pre class="r"><code>ggplot(df, aes(x=x, y=y)) + 
+  geom_point() + 
+  coord_equal() + 
+  geom_point(data=df2, aes(x=x, y=y), colour=&quot;red&quot;, size=5)</code></pre>
+<p><img src="/post/scatterplot_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>We can circle around the points by using the following command.</p>
+<pre class="r"><code>ggplot(df, aes(x=x, y=y)) + 
+  geom_point() + 
+  coord_equal() + 
+  geom_point(data=df2, aes(x=x, y=y), pch=21, fill=NA, size=4, colour=&quot;red&quot;, stroke=1)</code></pre>
+<p><img src="/post/scatterplot_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
 
+    </div>
 
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
     
 
 
-<div class="article-metadata">
 
-  
-  
 
+
+<div class="article-tags">
   
-  <span class="article-date">
-    
+  <a class="badge badge-light" href="/tags/r/">R</a>
+  
+  <a class="badge badge-light" href="/tags/tidyverse/">tidyverse</a>
+  
+  <a class="badge badge-light" href="/tags/ggplot2/">ggplot2</a>
+  
+  <a class="badge badge-light" href="/tags/scatterplot/">scatterplot</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
       
-    
-    Oct 14, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a></span>
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/loaddatasets/">Import data into R: Overwritten object names</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>Read data files</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/scatterplot/&amp;text=Highlight%20data%20points%20in%20a%20scatterplot" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
       
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/scatterplot/&amp;t=Highlight%20data%20points%20in%20a%20scatterplot" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
     
       
-    
-    Aug 31, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    2 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a></span>
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/datasets/">Working with built-in data sets in R</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>How to view datasets in a particular package, or or list the available data sets?</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Highlight%20data%20points%20in%20a%20scatterplot&amp;body=/post/scatterplot/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
     
       
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/scatterplot/&amp;title=Highlight%20data%20points%20in%20a%20scatterplot" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
     
       
-    
-    Jul 8, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/available/">Small things matter!</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>Checks whether your package name is taken or available !!
-install.packages(&quot;available&quot;) library(available) available(&quot;seer&quot;) ── seer ──────────────────────────────────────────────────────────────── Name valid: ✔ Available on CRAN: ✖ Available on Bioconductor: ✔ Available on GitHub: ✖ Abbreviations: http://www.abbreviations.com/seer Wikipedia: https://en.wikipedia.org/wiki/seer Wiktionary: https://en.wiktionary.org/wiki/seer Urban Dictionary: someone who is able to see [the past], present, and future. also known as an [oracle] or a [prophet]. http://seer.urbanup.com/7101409 Sentiment:??? This means the name seer is taken in both CRAN and GitHub.</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Highlight%20data%20points%20in%20a%20scatterplot%20/post/scatterplot/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
     
       
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
       
-    
-    Jul 4, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    7 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/statterms1/">Parameter, Statistic, Random Variable, Estimator and Estimate</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>The most common problem while learning Statistics is that students’ lack of understanding of the basic terminologies, notations, definitions and concepts. Think of Statistics as building blocks, and you need a solid foundation to move forward. Here, I explain five common terms in Statistics: i) Parameter, ii) Statistic, iii) Random Variable, iv) Estimator, v) Estimate and their notations.
-I will start with the definition of Population and Sample.
-A population is a complete collection of individuals/ objects that we are interested in.</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
-    
       
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
+        
       
-    
-    May 13, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/mathematics/">Mathematics</a>, <a href="/categories/nature/">Nature</a>, <a href="/categories/stem/">STEM</a>, <a href="/categories/science/">Science</a>, <a href="/categories/women-in-stem/">Women in STEM</a></span>
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/mathsday2020/">Happy Women in Maths Day - 12 May 2020</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>Nature is my biggest inspiration for my love and passion for mathematics.</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
-    
       
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
       
-    
-    Mar 25, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a>, <a href="/categories/shiny/">shiny</a>, <a href="/categories/plotly/">plotly</a></span>
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/covid19/">Dashboard to monitor COVID-19 situation in Sri Lanka</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>Dashboard to monitor COVID-19 situation in Sri Lanka. This dashboard is built with R using the R Makrdown framework and was adapted from “coronavirus_dashboard” by Rami Krispin.</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    May 18, 2019
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    2 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/dplyr/">dplyr</a></span>
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/dplyr/">Summarizing with dplyr</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>Summarizing variables with dplyr</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Mar 22, 2019
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a>, <a href="/categories/tidyverse/">tidyverse</a>, <a href="/categories/gganimate/">gganimate</a></span>
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/multiplepkg/">How to install and load multiple packages at once?</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>Install multiple R packages at once/ check and install missing packages.</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Jan 29, 2019
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a>, <a href="/categories/rmarkdown/">Rmarkdown</a></span>
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/greekletters/">Some useful Greek letters you might use on your reports</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>Commands to type Greek letters on Rmarkdown or Latex</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
-
-  
-<nav>
-  <ul class="pagination justify-content-center">
-    
-    
-    <li class="page-item"><a class="page-link" href="/post/page/2/">&raquo;</a></li>
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/scatterplot/&amp;title=Highlight%20data%20points%20in%20a%20scatterplot" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
     
   </ul>
-</nav>
-
-
-
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu359a1e8778b22ce5123ff1bde46aef51_2002805_250x250_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">Thiyanga S. Talagala</a></h5>
+      <h6 class="card-subtitle">PhD in Statistics</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/thiyangt" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=7cUtrWUAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/thiyangt" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/multiplepkg/">How to install and load multiple packages at once?</a></li>
+      
+      <li><a href="/post/blog/">Customizing boxplots with ggplot2</a></li>
+      
+      <li><a href="/post/loaddatasets/">Import data into R: Overwritten object names</a></li>
+      
+      <li><a href="/post/datasets/">Working with built-in data sets in R</a></li>
+      
+      <li><a href="/post/covid19/">Dashboard to monitor COVID-19 situation in Sri Lanka</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</article>
 
       
 
