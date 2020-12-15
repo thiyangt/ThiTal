@@ -60,7 +60,9 @@ We can change the size by passing a value to `size` argument.
 ggplot(df, aes(x=x, y=y)) + 
   geom_point() + 
   coord_equal() + 
-  geom_point(data=df2, aes(x=x, y=y), colour="red", size=5)
+  geom_point(data=df2, aes(x=x, y=y), 
+             colour="red", 
+             size=5)
 ```
 
 We can circle around the points by using the following command.

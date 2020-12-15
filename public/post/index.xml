@@ -61,7 +61,9 @@ df2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(df, aes(x=x, y=y)) + 
   geom_point() + 
   coord_equal() + 
-  geom_point(data=df2, aes(x=x, y=y), colour=&amp;quot;red&amp;quot;, size=5)&lt;/code&gt;&lt;/pre&gt;
+  geom_point(data=df2, aes(x=x, y=y), 
+             colour=&amp;quot;red&amp;quot;, 
+             size=5)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/scatterplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We can circle around the points by using the following command.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(df, aes(x=x, y=y)) + 
