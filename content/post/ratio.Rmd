@@ -1,13 +1,12 @@
 ---
 title: "Ratio matters: change the way you see things!"
-author: Thiyanga Talagala
-date: '2020-12-22'
-slug: blog
-categories: [ggplot2, DataViz]
-tags: [R, ggplot2, DataViz]
+date: "2020-12-22"
 summary: "Aspect ratio: what it is and why it is. How often do you fix aspect ratio?"
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 ### How often do you fix the aspect ratio?
 
@@ -70,4 +69,3 @@ ggplot(circle.points, aes(x=x, y=y, col=coly)) + geom_point() +
 
 
 When you create the plot by preserving the aspect ratio the region is bounded by a circle.   
-

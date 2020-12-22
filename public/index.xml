@@ -810,9 +810,9 @@
     
     <item>
       <title>Ratio matters: change the way you see things!</title>
-      <link>/post/blog/</link>
+      <link>/post/ratio/</link>
       <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>/post/blog/</guid>
+      <guid>/post/ratio/</guid>
       <description>
 
 
@@ -829,7 +829,7 @@ When creating scatterplots, how often do you fix the aspect ratio? &lt;a href=&#
 &lt;div id=&#34;aspect-ratio&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Aspect ratio&lt;/h3&gt;
 &lt;p&gt;The &lt;strong&gt;aspect ratio&lt;/strong&gt; of a plot is the ratio of its height-to-width . The aspect ratio we choose for our graph plays a significant role. The graphs below plot exactly the same data points but they have different aspect ratios.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ratiosmatter_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/ratio_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;the-aspect-ratio-of-a-plot-can-make-an-influence-on-the-readers-mind.&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;The aspect-ratio of a plot can make an influence on the reader’s mind.&lt;/h2&gt;
@@ -853,7 +853,7 @@ head(circle.points)&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Without fixing aspect ratio&lt;/h3&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(circle.points, aes(x=x, y=y, col=coly)) + geom_point()  +
    scale_colour_manual(values = c(&amp;quot;#e7298a&amp;quot;, &amp;quot;#1b9e77&amp;quot;))+ theme(legend.position = &amp;quot;none&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ratiosmatter_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/ratio_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;According to the plot above it seems that the region is bounded by a ellipse. However, our points are not generated from an elliptical region.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;aspect-ratio-is-fixed&#34; class=&#34;section level3&#34;&gt;
@@ -861,7 +861,7 @@ head(circle.points)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(circle.points, aes(x=x, y=y, col=coly)) + geom_point() +
    scale_colour_manual(values = c(&amp;quot;#e7298a&amp;quot;, &amp;quot;#1b9e77&amp;quot;)) + 
   coord_equal() + ggtitle(&amp;quot;Figure 2: Aspect ratio is fixed.&amp;quot;) +  theme(legend.position = &amp;quot;none&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ratiosmatter_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/ratio_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;When you create the plot by preserving the aspect ratio the region is bounded by a circle.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
