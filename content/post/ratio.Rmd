@@ -53,8 +53,10 @@ head(circle.points)
 ### Without fixing aspect ratio
 
 ```{r, fig.height=4}
-ggplot(circle.points, aes(x=x, y=y, col=coly)) + geom_point()  +
-   scale_colour_manual(values = c("#e7298a", "#1b9e77"))+ theme(legend.position = "none") 
+ggplot(circle.points, aes(x=x, y=y, col=coly)) + 
+   geom_point() +
+   scale_colour_manual(values = c("#e7298a", "#1b9e77")) +
+   theme(legend.position = "none") 
 ```
 
 According to the plot above it seems that the region is bounded by a ellipse. However, our points are not generated from an elliptical region.
@@ -64,7 +66,9 @@ According to the plot above it seems that the region is bounded by a ellipse. Ho
 ```{r, fig.height=4}
 ggplot(circle.points, aes(x=x, y=y, col=coly)) + geom_point() +
    scale_colour_manual(values = c("#e7298a", "#1b9e77")) + 
-  coord_equal() + ggtitle("Figure 2: Aspect ratio is fixed.") +  theme(legend.position = "none") 
+  coord_equal() +
+  ggtitle("Figure 2: Aspect ratio is fixed.") +  
+  theme(legend.position = "none") 
 ```
 
 

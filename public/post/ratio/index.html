@@ -599,8 +599,10 @@ head(circle.points)</code></pre>
 6 -0.86523123 -0.3060675    1</code></pre>
 <div id="without-fixing-aspect-ratio" class="section level3">
 <h3>Without fixing aspect ratio</h3>
-<pre class="r"><code>ggplot(circle.points, aes(x=x, y=y, col=coly)) + geom_point()  +
-   scale_colour_manual(values = c(&quot;#e7298a&quot;, &quot;#1b9e77&quot;))+ theme(legend.position = &quot;none&quot;) </code></pre>
+<pre class="r"><code>ggplot(circle.points, aes(x=x, y=y, col=coly)) + 
+   geom_point() +
+   scale_colour_manual(values = c(&quot;#e7298a&quot;, &quot;#1b9e77&quot;)) +
+   theme(legend.position = &quot;none&quot;) </code></pre>
 <p><img src="/post/ratio_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>According to the plot above it seems that the region is bounded by a ellipse. However, our points are not generated from an elliptical region.</p>
 </div>
@@ -608,7 +610,9 @@ head(circle.points)</code></pre>
 <h3>Aspect ratio is fixed</h3>
 <pre class="r"><code>ggplot(circle.points, aes(x=x, y=y, col=coly)) + geom_point() +
    scale_colour_manual(values = c(&quot;#e7298a&quot;, &quot;#1b9e77&quot;)) + 
-  coord_equal() + ggtitle(&quot;Figure 2: Aspect ratio is fixed.&quot;) +  theme(legend.position = &quot;none&quot;) </code></pre>
+  coord_equal() +
+  ggtitle(&quot;Figure 2: Aspect ratio is fixed.&quot;) +  
+  theme(legend.position = &quot;none&quot;) </code></pre>
 <p><img src="/post/ratio_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>When you create the plot by preserving the aspect ratio the region is bounded by a circle.</p>
 </div>

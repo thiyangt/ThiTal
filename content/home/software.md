@@ -69,7 +69,7 @@ subtitle = ""
 
 <i class="fa fa-cog fa-spin" style="color:Maroon"></i> [tea](https://github.com/thiyangt/tea): R package for tea exporting countries
 
-<i class="fa fa-cog fa-spin" style="color:Maroon"></i> [mozzie](https://github.com/thiyangt/mozzie): R package for dengue cases in Sri Lanka[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/mozzie)](https://cran.r-project.org/package=mozzie) 
+<i class="fa fa-cog fa-spin" style="color:Maroon"></i> [mozzie](https://github.com/thiyangt/mozzie): R package for dengue cases in Sri Lanka [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/mozzie)](https://cran.r-project.org/package=mozzie) 
 
 <i class="fa fa-cog fa-spin" style="color:Maroon"></i> [colmozzie](https://github.com/thiyangt/colmozzie): R package for dengue cases and climate variables in Colombo Sri Lanka
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/colmozzie)](https://cran.r-project.org/package=colmozzie)
