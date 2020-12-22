@@ -5,12 +5,72 @@
     <link>/tags/r/</link>
       <atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <description>R</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 15 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 22 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>R</title>
       <link>/tags/r/</link>
     </image>
+    
+    <item>
+      <title>Ratio matters: change the way you see things!</title>
+      <link>/post/blog/</link>
+      <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>/post/blog/</guid>
+      <description>
+
+
+&lt;div id=&#34;how-often-do-you-fix-the-aspect-ratio&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;How often do you fix the aspect ratio?&lt;/h3&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+When creating scatterplots, how often do you fix the aspect ratio? &lt;a href=&#34;https://twitter.com/hashtag/RStats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RStats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/tidyverse?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tidyverse&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/TidyTuesday?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TidyTuesday&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Python?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Python&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ggplot2?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ggplot2&lt;/a&gt;
+&lt;/p&gt;
+— Thiyanga Talagala (&lt;span class=&#34;citation&#34;&gt;@thiyangt&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/thiyangt/status/1292444445015605248?ref_src=twsrc%5Etfw&#34;&gt;August 9, 2020&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;aspect-ratio&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Aspect ratio&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;aspect ratio&lt;/strong&gt; of a plot is the ratio of its height-to-width . The aspect ratio we choose for our graph plays a significant role. The graphs below plot exactly the same data points but they have different aspect ratios.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/ratiosmatter_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-aspect-ratio-of-a-plot-can-make-an-influence-on-the-readers-mind.&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The aspect-ratio of a plot can make an influence on the reader’s mind.&lt;/h2&gt;
+&lt;p&gt;Here is an example. I generate a set of random points inside a unit circle. The equation of the unit circle center at (0, 0) is: &lt;span class=&#34;math inline&#34;&gt;\(x^2+y^2=1\)&lt;/span&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(2020)
+x &amp;lt;- runif(10000, -1, 1)
+y &amp;lt;- runif(10000, -1, 1)
+fx &amp;lt;- x^2 + y^2
+coly &amp;lt;-  ifelse(fx &amp;lt;= 1, 1, 0)
+coly &amp;lt;- as.factor(coly)
+circle.points &amp;lt;- data.frame(x=x, y=y, coly=coly)
+head(circle.points)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;            x          y coly
+1  0.29380568 -0.7572887    1
+2 -0.21154848  0.2479973    1
+3  0.23700363  0.4911537    1
+4 -0.04621773  0.3838934    1
+5 -0.72780563  0.8263328    0
+6 -0.86523123 -0.3060675    1&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;without-fixing-aspect-ratio&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Without fixing aspect ratio&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(circle.points, aes(x=x, y=y, col=coly)) + geom_point()  +
+   scale_colour_manual(values = c(&amp;quot;#e7298a&amp;quot;, &amp;quot;#1b9e77&amp;quot;))+ theme(legend.position = &amp;quot;none&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/ratiosmatter_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;According to the plot above it seems that the region is bounded by a ellipse. However, our points are not generated from an elliptical region.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;aspect-ratio-is-fixed&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Aspect ratio is fixed&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(circle.points, aes(x=x, y=y, col=coly)) + geom_point() +
+   scale_colour_manual(values = c(&amp;quot;#e7298a&amp;quot;, &amp;quot;#1b9e77&amp;quot;)) + 
+  coord_equal() + ggtitle(&amp;quot;Figure 2: Aspect ratio is fixed.&amp;quot;) +  theme(legend.position = &amp;quot;none&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/ratiosmatter_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;When you create the plot by preserving the aspect ratio the region is bounded by a circle.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Highlight data points in a scatterplot</title>

@@ -1,0 +1,73 @@
+---
+title: "Ratio matters: change the way you see things!"
+author: Thiyanga Talagala
+date: '2020-12-22'
+slug: blog
+categories: [ggplot2, DataViz]
+tags: [R, ggplot2, DataViz]
+summary: "Aspect ratio: what it is and why it is. How often do you fix aspect ratio?"
+---
+
+
+### How often do you fix the aspect ratio?
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">When creating scatterplots, how often do you fix the aspect ratio? <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a> <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a> <a href="https://twitter.com/hashtag/TidyTuesday?src=hash&amp;ref_src=twsrc%5Etfw">#TidyTuesday</a> <a href="https://twitter.com/hashtag/Python?src=hash&amp;ref_src=twsrc%5Etfw">#Python</a> <a href="https://twitter.com/hashtag/ggplot2?src=hash&amp;ref_src=twsrc%5Etfw">#ggplot2</a></p>&mdash; Thiyanga Talagala (@thiyangt) <a href="https://twitter.com/thiyangt/status/1292444445015605248?ref_src=twsrc%5Etfw">August 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+### Aspect ratio 
+
+The **aspect ratio** of a plot is the ratio of its height-to-width . The aspect ratio we choose for our graph plays a significant role. The graphs below plot exactly the same data points but they have different aspect ratios.
+
+```{r, comment=NA, message=FALSE, echo=FALSE, fig.width=12}
+library(tidyverse)
+library(patchwork)
+x <- 1:100
+y <- x
+df <- data.frame(x=x, y=y)
+p1 <- ggplot(df, aes(x=x, y=y)) + geom_point() +  coord_fixed(ratio=2) + ggtitle("Aspect ratio = 2")
+p2 <- ggplot(df, aes(x=x, y=y)) + geom_point() +  coord_fixed(ratio=0.5) + ggtitle("Aspect ratio = 0.5")
+p3 <- ggplot(df, aes(x=x, y=y)) + geom_point() +  coord_fixed(ratio=1) + ggtitle("Aspect ratio = 1")
+p1|p2|p3
+```
+
+
+
+
+
+
+## The aspect-ratio of a plot can make an influence on the reader's mind.
+
+Here is an example. I generate a set of random points inside a unit circle. The equation of the unit circle center at (0, 0) is: $x^2+y^2=1$. 
+
+```{r, comment=NA, message=FALSE, warning=FALSE}
+set.seed(2020)
+x <- runif(10000, -1, 1)
+y <- runif(10000, -1, 1)
+fx <- x^2 + y^2
+coly <-  ifelse(fx <= 1, 1, 0)
+coly <- as.factor(coly)
+circle.points <- data.frame(x=x, y=y, coly=coly)
+head(circle.points)
+```
+
+### Without fixing aspect ratio
+
+```{r, fig.height=4}
+ggplot(circle.points, aes(x=x, y=y, col=coly)) + geom_point()  +
+   scale_colour_manual(values = c("#e7298a", "#1b9e77"))+ theme(legend.position = "none") 
+```
+
+According to the plot above it seems that the region is bounded by a ellipse. However, our points are not generated from an elliptical region.
+
+### Aspect ratio is fixed
+
+```{r, fig.height=4}
+ggplot(circle.points, aes(x=x, y=y, col=coly)) + geom_point() +
+   scale_colour_manual(values = c("#e7298a", "#1b9e77")) + 
+  coord_equal() + ggtitle("Figure 2: Aspect ratio is fixed.") +  theme(legend.position = "none") 
+```
+
+
+When you create the plot by preserving the aspect ratio the region is bounded by a circle.   
+
