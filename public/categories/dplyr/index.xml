@@ -35,6 +35,7 @@ head(iris)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;summarise-to-summarize-only-a-single-column&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;&lt;code&gt;summarise&lt;/code&gt;: to summarize only a single column&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% summarise(mean(Sepal.Length))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` ungrouping output (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 2
 ##   Species    `mean(Sepal.Length)`
 ##   &amp;lt;fct&amp;gt;                     &amp;lt;dbl&amp;gt;
@@ -46,12 +47,11 @@ head(iris)&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;&lt;code&gt;summarise_all&lt;/code&gt;: to summarize all columns&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% summarise_all(.funs = c(mean=&amp;quot;mean&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
-##   Species Sepal.Length_me… Sepal.Width_mean Petal.Length_me…
-##   &amp;lt;fct&amp;gt;              &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
-## 1 setosa              5.01             3.43             1.46
-## 2 versic…             5.94             2.77             4.26
-## 3 virgin…             6.59             2.97             5.55
-## # … with 1 more variable: Petal.Width_mean &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   Species   Sepal.Length_mean Sepal.Width_mean Petal.Length_me… Petal.Width_mean
+##   &amp;lt;fct&amp;gt;                 &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+## 1 setosa                 5.01             3.43             1.46            0.246
+## 2 versicol…              5.94             2.77             4.26            1.33 
+## 3 virginica              6.59             2.97             5.55            2.03&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;summarise_at-to-summarize-only-certain-columns&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;&lt;code&gt;summarise_at&lt;/code&gt;: to summarize only certain columns&lt;/h2&gt;
@@ -70,7 +70,7 @@ head(iris)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% 
   summarise_if(.predicate = function(x) is.numeric(x),
                .funs = funs(mean=&amp;quot;mean&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: funs() is soft deprecated as of dplyr 0.8.0
+&lt;pre&gt;&lt;code&gt;## Warning: `funs()` is deprecated as of dplyr 0.8.0.
 ## Please use a list of either functions or lambdas: 
 ## 
 ##   # Simple named list: 
@@ -81,26 +81,26 @@ head(iris)&lt;/code&gt;&lt;/pre&gt;
 ## 
 ##   # Using lambdas
 ##   list(~ mean(., trim = .2), ~ median(., na.rm = TRUE))
-## This warning is displayed once per session.&lt;/code&gt;&lt;/pre&gt;
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
-##   Species Sepal.Length_me… Sepal.Width_mean Petal.Length_me…
-##   &amp;lt;fct&amp;gt;              &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
-## 1 setosa              5.01             3.43             1.46
-## 2 versic…             5.94             2.77             4.26
-## 3 virgin…             6.59             2.97             5.55
-## # … with 1 more variable: Petal.Width_mean &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   Species   Sepal.Length_mean Sepal.Width_mean Petal.Length_me… Petal.Width_mean
+##   &amp;lt;fct&amp;gt;                 &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+## 1 setosa                 5.01             3.43             1.46            0.246
+## 2 versicol…              5.94             2.77             4.26            1.33 
+## 3 virginica              6.59             2.97             5.55            2.03&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;pass multiple functions&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% 
   summarise_if(.predicate = function(x) is.numeric(x),
                .funs = funs(mean=&amp;quot;mean&amp;quot;, Sd=&amp;quot;sd&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 9
-##   Species Sepal.Length_me… Sepal.Width_mean Petal.Length_me…
-##   &amp;lt;fct&amp;gt;              &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
-## 1 setosa              5.01             3.43             1.46
-## 2 versic…             5.94             2.77             4.26
-## 3 virgin…             6.59             2.97             5.55
-## # … with 5 more variables: Petal.Width_mean &amp;lt;dbl&amp;gt;, Sepal.Length_Sd &amp;lt;dbl&amp;gt;,
-## #   Sepal.Width_Sd &amp;lt;dbl&amp;gt;, Petal.Length_Sd &amp;lt;dbl&amp;gt;, Petal.Width_Sd &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   Species Sepal.Length_me… Sepal.Width_mean Petal.Length_me… Petal.Width_mean
+##   &amp;lt;fct&amp;gt;              &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+## 1 setosa              5.01             3.43             1.46            0.246
+## 2 versic…             5.94             2.77             4.26            1.33 
+## 3 virgin…             6.59             2.97             5.55            2.03 
+## # … with 4 more variables: Sepal.Length_Sd &amp;lt;dbl&amp;gt;, Sepal.Width_Sd &amp;lt;dbl&amp;gt;,
+## #   Petal.Length_Sd &amp;lt;dbl&amp;gt;, Petal.Width_Sd &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -118,140 +118,102 @@ This is done in the same way you would list variables in your workspace, using t
 &lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt; Getting a list of functions inside the &lt;code&gt;dplyr&lt;/code&gt; package&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
 ls(&amp;quot;package:dplyr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   [1] &amp;quot;%&amp;gt;%&amp;quot;                   &amp;quot;add_count&amp;quot;            
-##   [3] &amp;quot;add_count_&amp;quot;            &amp;quot;add_row&amp;quot;              
-##   [5] &amp;quot;add_rownames&amp;quot;          &amp;quot;add_tally&amp;quot;            
-##   [7] &amp;quot;add_tally_&amp;quot;            &amp;quot;all_equal&amp;quot;            
-##   [9] &amp;quot;all_vars&amp;quot;              &amp;quot;anti_join&amp;quot;            
-##  [11] &amp;quot;any_vars&amp;quot;              &amp;quot;arrange&amp;quot;              
-##  [13] &amp;quot;arrange_&amp;quot;              &amp;quot;arrange_all&amp;quot;          
-##  [15] &amp;quot;arrange_at&amp;quot;            &amp;quot;arrange_if&amp;quot;           
-##  [17] &amp;quot;as_data_frame&amp;quot;         &amp;quot;as_label&amp;quot;             
-##  [19] &amp;quot;as_tibble&amp;quot;             &amp;quot;as.tbl&amp;quot;               
-##  [21] &amp;quot;as.tbl_cube&amp;quot;           &amp;quot;auto_copy&amp;quot;            
-##  [23] &amp;quot;band_instruments&amp;quot;      &amp;quot;band_instruments2&amp;quot;    
-##  [25] &amp;quot;band_members&amp;quot;          &amp;quot;bench_tbls&amp;quot;           
-##  [27] &amp;quot;between&amp;quot;               &amp;quot;bind_cols&amp;quot;            
-##  [29] &amp;quot;bind_rows&amp;quot;             &amp;quot;case_when&amp;quot;            
-##  [31] &amp;quot;changes&amp;quot;               &amp;quot;check_dbplyr&amp;quot;         
-##  [33] &amp;quot;coalesce&amp;quot;              &amp;quot;collapse&amp;quot;             
-##  [35] &amp;quot;collect&amp;quot;               &amp;quot;combine&amp;quot;              
-##  [37] &amp;quot;common_by&amp;quot;             &amp;quot;compare_tbls&amp;quot;         
-##  [39] &amp;quot;compare_tbls2&amp;quot;         &amp;quot;compute&amp;quot;              
-##  [41] &amp;quot;contains&amp;quot;              &amp;quot;copy_to&amp;quot;              
-##  [43] &amp;quot;count&amp;quot;                 &amp;quot;count_&amp;quot;               
-##  [45] &amp;quot;cumall&amp;quot;                &amp;quot;cumany&amp;quot;               
-##  [47] &amp;quot;cume_dist&amp;quot;             &amp;quot;cummean&amp;quot;              
-##  [49] &amp;quot;current_vars&amp;quot;          &amp;quot;data_frame&amp;quot;           
-##  [51] &amp;quot;data_frame_&amp;quot;           &amp;quot;db_analyze&amp;quot;           
-##  [53] &amp;quot;db_begin&amp;quot;              &amp;quot;db_commit&amp;quot;            
-##  [55] &amp;quot;db_create_index&amp;quot;       &amp;quot;db_create_indexes&amp;quot;    
-##  [57] &amp;quot;db_create_table&amp;quot;       &amp;quot;db_data_type&amp;quot;         
-##  [59] &amp;quot;db_desc&amp;quot;               &amp;quot;db_drop_table&amp;quot;        
-##  [61] &amp;quot;db_explain&amp;quot;            &amp;quot;db_has_table&amp;quot;         
-##  [63] &amp;quot;db_insert_into&amp;quot;        &amp;quot;db_list_tables&amp;quot;       
-##  [65] &amp;quot;db_query_fields&amp;quot;       &amp;quot;db_query_rows&amp;quot;        
-##  [67] &amp;quot;db_rollback&amp;quot;           &amp;quot;db_save_query&amp;quot;        
-##  [69] &amp;quot;db_write_table&amp;quot;        &amp;quot;dense_rank&amp;quot;           
-##  [71] &amp;quot;desc&amp;quot;                  &amp;quot;dim_desc&amp;quot;             
-##  [73] &amp;quot;distinct&amp;quot;              &amp;quot;distinct_&amp;quot;            
-##  [75] &amp;quot;distinct_all&amp;quot;          &amp;quot;distinct_at&amp;quot;          
-##  [77] &amp;quot;distinct_if&amp;quot;           &amp;quot;distinct_prepare&amp;quot;     
-##  [79] &amp;quot;do&amp;quot;                    &amp;quot;do_&amp;quot;                  
-##  [81] &amp;quot;dr_dplyr&amp;quot;              &amp;quot;ends_with&amp;quot;            
-##  [83] &amp;quot;enexpr&amp;quot;                &amp;quot;enexprs&amp;quot;              
-##  [85] &amp;quot;enquo&amp;quot;                 &amp;quot;enquos&amp;quot;               
-##  [87] &amp;quot;ensym&amp;quot;                 &amp;quot;ensyms&amp;quot;               
-##  [89] &amp;quot;eval_tbls&amp;quot;             &amp;quot;eval_tbls2&amp;quot;           
-##  [91] &amp;quot;everything&amp;quot;            &amp;quot;explain&amp;quot;              
-##  [93] &amp;quot;expr&amp;quot;                  &amp;quot;failwith&amp;quot;             
-##  [95] &amp;quot;filter&amp;quot;                &amp;quot;filter_&amp;quot;              
-##  [97] &amp;quot;filter_all&amp;quot;            &amp;quot;filter_at&amp;quot;            
-##  [99] &amp;quot;filter_if&amp;quot;             &amp;quot;first&amp;quot;                
-## [101] &amp;quot;frame_data&amp;quot;            &amp;quot;full_join&amp;quot;            
-## [103] &amp;quot;funs&amp;quot;                  &amp;quot;funs_&amp;quot;                
-## [105] &amp;quot;glimpse&amp;quot;               &amp;quot;group_by&amp;quot;             
-## [107] &amp;quot;group_by_&amp;quot;             &amp;quot;group_by_all&amp;quot;         
-## [109] &amp;quot;group_by_at&amp;quot;           &amp;quot;group_by_drop_default&amp;quot;
-## [111] &amp;quot;group_by_if&amp;quot;           &amp;quot;group_by_prepare&amp;quot;     
-## [113] &amp;quot;group_cols&amp;quot;            &amp;quot;group_data&amp;quot;           
-## [115] &amp;quot;group_indices&amp;quot;         &amp;quot;group_indices_&amp;quot;       
-## [117] &amp;quot;group_keys&amp;quot;            &amp;quot;group_map&amp;quot;            
-## [119] &amp;quot;group_modify&amp;quot;          &amp;quot;group_nest&amp;quot;           
-## [121] &amp;quot;group_rows&amp;quot;            &amp;quot;group_size&amp;quot;           
-## [123] &amp;quot;group_split&amp;quot;           &amp;quot;group_trim&amp;quot;           
-## [125] &amp;quot;group_vars&amp;quot;            &amp;quot;group_walk&amp;quot;           
-## [127] &amp;quot;grouped_df&amp;quot;            &amp;quot;groups&amp;quot;               
-## [129] &amp;quot;hybrid_call&amp;quot;           &amp;quot;id&amp;quot;                   
-## [131] &amp;quot;ident&amp;quot;                 &amp;quot;if_else&amp;quot;              
-## [133] &amp;quot;inner_join&amp;quot;            &amp;quot;intersect&amp;quot;            
-## [135] &amp;quot;is_grouped_df&amp;quot;         &amp;quot;is.grouped_df&amp;quot;        
-## [137] &amp;quot;is.src&amp;quot;                &amp;quot;is.tbl&amp;quot;               
-## [139] &amp;quot;lag&amp;quot;                   &amp;quot;last&amp;quot;                 
-## [141] &amp;quot;last_col&amp;quot;              &amp;quot;lead&amp;quot;                 
-## [143] &amp;quot;left_join&amp;quot;             &amp;quot;location&amp;quot;             
-## [145] &amp;quot;lst&amp;quot;                   &amp;quot;lst_&amp;quot;                 
-## [147] &amp;quot;make_tbl&amp;quot;              &amp;quot;matches&amp;quot;              
-## [149] &amp;quot;min_rank&amp;quot;              &amp;quot;mutate&amp;quot;               
-## [151] &amp;quot;mutate_&amp;quot;               &amp;quot;mutate_all&amp;quot;           
-## [153] &amp;quot;mutate_at&amp;quot;             &amp;quot;mutate_each&amp;quot;          
-## [155] &amp;quot;mutate_each_&amp;quot;          &amp;quot;mutate_if&amp;quot;            
-## [157] &amp;quot;n&amp;quot;                     &amp;quot;n_distinct&amp;quot;           
-## [159] &amp;quot;n_groups&amp;quot;              &amp;quot;na_if&amp;quot;                
-## [161] &amp;quot;nasa&amp;quot;                  &amp;quot;near&amp;quot;                 
-## [163] &amp;quot;nest_join&amp;quot;             &amp;quot;new_grouped_df&amp;quot;       
-## [165] &amp;quot;nth&amp;quot;                   &amp;quot;ntile&amp;quot;                
-## [167] &amp;quot;num_range&amp;quot;             &amp;quot;one_of&amp;quot;               
-## [169] &amp;quot;order_by&amp;quot;              &amp;quot;percent_rank&amp;quot;         
-## [171] &amp;quot;progress_estimated&amp;quot;    &amp;quot;pull&amp;quot;                 
-## [173] &amp;quot;quo&amp;quot;                   &amp;quot;quo_name&amp;quot;             
-## [175] &amp;quot;quos&amp;quot;                  &amp;quot;rbind_all&amp;quot;            
-## [177] &amp;quot;rbind_list&amp;quot;            &amp;quot;recode&amp;quot;               
-## [179] &amp;quot;recode_factor&amp;quot;         &amp;quot;rename&amp;quot;               
-## [181] &amp;quot;rename_&amp;quot;               &amp;quot;rename_all&amp;quot;           
-## [183] &amp;quot;rename_at&amp;quot;             &amp;quot;rename_if&amp;quot;            
-## [185] &amp;quot;rename_vars&amp;quot;           &amp;quot;rename_vars_&amp;quot;         
-## [187] &amp;quot;right_join&amp;quot;            &amp;quot;row_number&amp;quot;           
-## [189] &amp;quot;rowwise&amp;quot;               &amp;quot;same_src&amp;quot;             
-## [191] &amp;quot;sample_frac&amp;quot;           &amp;quot;sample_n&amp;quot;             
-## [193] &amp;quot;select&amp;quot;                &amp;quot;select_&amp;quot;              
-## [195] &amp;quot;select_all&amp;quot;            &amp;quot;select_at&amp;quot;            
-## [197] &amp;quot;select_if&amp;quot;             &amp;quot;select_var&amp;quot;           
-## [199] &amp;quot;select_vars&amp;quot;           &amp;quot;select_vars_&amp;quot;         
-## [201] &amp;quot;semi_join&amp;quot;             &amp;quot;setdiff&amp;quot;              
-## [203] &amp;quot;setequal&amp;quot;              &amp;quot;show_query&amp;quot;           
-## [205] &amp;quot;slice&amp;quot;                 &amp;quot;slice_&amp;quot;               
-## [207] &amp;quot;sql&amp;quot;                   &amp;quot;sql_escape_ident&amp;quot;     
-## [209] &amp;quot;sql_escape_string&amp;quot;     &amp;quot;sql_join&amp;quot;             
-## [211] &amp;quot;sql_select&amp;quot;            &amp;quot;sql_semi_join&amp;quot;        
-## [213] &amp;quot;sql_set_op&amp;quot;            &amp;quot;sql_subquery&amp;quot;         
-## [215] &amp;quot;sql_translate_env&amp;quot;     &amp;quot;src&amp;quot;                  
-## [217] &amp;quot;src_df&amp;quot;                &amp;quot;src_local&amp;quot;            
-## [219] &amp;quot;src_mysql&amp;quot;             &amp;quot;src_postgres&amp;quot;         
-## [221] &amp;quot;src_sqlite&amp;quot;            &amp;quot;src_tbls&amp;quot;             
-## [223] &amp;quot;starts_with&amp;quot;           &amp;quot;starwars&amp;quot;             
-## [225] &amp;quot;storms&amp;quot;                &amp;quot;summarise&amp;quot;            
-## [227] &amp;quot;summarise_&amp;quot;            &amp;quot;summarise_all&amp;quot;        
-## [229] &amp;quot;summarise_at&amp;quot;          &amp;quot;summarise_each&amp;quot;       
-## [231] &amp;quot;summarise_each_&amp;quot;       &amp;quot;summarise_if&amp;quot;         
-## [233] &amp;quot;summarize&amp;quot;             &amp;quot;summarize_&amp;quot;           
-## [235] &amp;quot;summarize_all&amp;quot;         &amp;quot;summarize_at&amp;quot;         
-## [237] &amp;quot;summarize_each&amp;quot;        &amp;quot;summarize_each_&amp;quot;      
-## [239] &amp;quot;summarize_if&amp;quot;          &amp;quot;sym&amp;quot;                  
-## [241] &amp;quot;syms&amp;quot;                  &amp;quot;tally&amp;quot;                
-## [243] &amp;quot;tally_&amp;quot;                &amp;quot;tbl&amp;quot;                  
-## [245] &amp;quot;tbl_cube&amp;quot;              &amp;quot;tbl_df&amp;quot;               
-## [247] &amp;quot;tbl_nongroup_vars&amp;quot;     &amp;quot;tbl_sum&amp;quot;              
-## [249] &amp;quot;tbl_vars&amp;quot;              &amp;quot;tibble&amp;quot;               
-## [251] &amp;quot;top_frac&amp;quot;              &amp;quot;top_n&amp;quot;                
-## [253] &amp;quot;transmute&amp;quot;             &amp;quot;transmute_&amp;quot;           
-## [255] &amp;quot;transmute_all&amp;quot;         &amp;quot;transmute_at&amp;quot;         
-## [257] &amp;quot;transmute_if&amp;quot;          &amp;quot;tribble&amp;quot;              
-## [259] &amp;quot;trunc_mat&amp;quot;             &amp;quot;type_sum&amp;quot;             
-## [261] &amp;quot;ungroup&amp;quot;               &amp;quot;union&amp;quot;                
-## [263] &amp;quot;union_all&amp;quot;             &amp;quot;validate_grouped_df&amp;quot;  
-## [265] &amp;quot;vars&amp;quot;                  &amp;quot;with_order&amp;quot;           
-## [267] &amp;quot;wrap_dbplyr_obj&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   [1] &amp;quot;%&amp;gt;%&amp;quot;                   &amp;quot;across&amp;quot;                &amp;quot;add_count&amp;quot;            
+##   [4] &amp;quot;add_count_&amp;quot;            &amp;quot;add_row&amp;quot;               &amp;quot;add_rownames&amp;quot;         
+##   [7] &amp;quot;add_tally&amp;quot;             &amp;quot;add_tally_&amp;quot;            &amp;quot;all_equal&amp;quot;            
+##  [10] &amp;quot;all_of&amp;quot;                &amp;quot;all_vars&amp;quot;              &amp;quot;anti_join&amp;quot;            
+##  [13] &amp;quot;any_of&amp;quot;                &amp;quot;any_vars&amp;quot;              &amp;quot;arrange&amp;quot;              
+##  [16] &amp;quot;arrange_&amp;quot;              &amp;quot;arrange_all&amp;quot;           &amp;quot;arrange_at&amp;quot;           
+##  [19] &amp;quot;arrange_if&amp;quot;            &amp;quot;as_data_frame&amp;quot;         &amp;quot;as_label&amp;quot;             
+##  [22] &amp;quot;as_tibble&amp;quot;             &amp;quot;as.tbl&amp;quot;                &amp;quot;auto_copy&amp;quot;            
+##  [25] &amp;quot;band_instruments&amp;quot;      &amp;quot;band_instruments2&amp;quot;     &amp;quot;band_members&amp;quot;         
+##  [28] &amp;quot;bench_tbls&amp;quot;            &amp;quot;between&amp;quot;               &amp;quot;bind_cols&amp;quot;            
+##  [31] &amp;quot;bind_rows&amp;quot;             &amp;quot;c_across&amp;quot;              &amp;quot;case_when&amp;quot;            
+##  [34] &amp;quot;changes&amp;quot;               &amp;quot;check_dbplyr&amp;quot;          &amp;quot;coalesce&amp;quot;             
+##  [37] &amp;quot;collapse&amp;quot;              &amp;quot;collect&amp;quot;               &amp;quot;combine&amp;quot;              
+##  [40] &amp;quot;common_by&amp;quot;             &amp;quot;compare_tbls&amp;quot;          &amp;quot;compare_tbls2&amp;quot;        
+##  [43] &amp;quot;compute&amp;quot;               &amp;quot;contains&amp;quot;              &amp;quot;copy_to&amp;quot;              
+##  [46] &amp;quot;count&amp;quot;                 &amp;quot;count_&amp;quot;                &amp;quot;cumall&amp;quot;               
+##  [49] &amp;quot;cumany&amp;quot;                &amp;quot;cume_dist&amp;quot;             &amp;quot;cummean&amp;quot;              
+##  [52] &amp;quot;cur_column&amp;quot;            &amp;quot;cur_data&amp;quot;              &amp;quot;cur_data_all&amp;quot;         
+##  [55] &amp;quot;cur_group&amp;quot;             &amp;quot;cur_group_id&amp;quot;          &amp;quot;cur_group_rows&amp;quot;       
+##  [58] &amp;quot;current_vars&amp;quot;          &amp;quot;data_frame&amp;quot;            &amp;quot;data_frame_&amp;quot;          
+##  [61] &amp;quot;db_analyze&amp;quot;            &amp;quot;db_begin&amp;quot;              &amp;quot;db_commit&amp;quot;            
+##  [64] &amp;quot;db_create_index&amp;quot;       &amp;quot;db_create_indexes&amp;quot;     &amp;quot;db_create_table&amp;quot;      
+##  [67] &amp;quot;db_data_type&amp;quot;          &amp;quot;db_desc&amp;quot;               &amp;quot;db_drop_table&amp;quot;        
+##  [70] &amp;quot;db_explain&amp;quot;            &amp;quot;db_has_table&amp;quot;          &amp;quot;db_insert_into&amp;quot;       
+##  [73] &amp;quot;db_list_tables&amp;quot;        &amp;quot;db_query_fields&amp;quot;       &amp;quot;db_query_rows&amp;quot;        
+##  [76] &amp;quot;db_rollback&amp;quot;           &amp;quot;db_save_query&amp;quot;         &amp;quot;db_write_table&amp;quot;       
+##  [79] &amp;quot;dense_rank&amp;quot;            &amp;quot;desc&amp;quot;                  &amp;quot;dim_desc&amp;quot;             
+##  [82] &amp;quot;distinct&amp;quot;              &amp;quot;distinct_&amp;quot;             &amp;quot;distinct_all&amp;quot;         
+##  [85] &amp;quot;distinct_at&amp;quot;           &amp;quot;distinct_if&amp;quot;           &amp;quot;distinct_prepare&amp;quot;     
+##  [88] &amp;quot;do&amp;quot;                    &amp;quot;do_&amp;quot;                   &amp;quot;dplyr_col_modify&amp;quot;     
+##  [91] &amp;quot;dplyr_reconstruct&amp;quot;     &amp;quot;dplyr_row_slice&amp;quot;       &amp;quot;ends_with&amp;quot;            
+##  [94] &amp;quot;enexpr&amp;quot;                &amp;quot;enexprs&amp;quot;               &amp;quot;enquo&amp;quot;                
+##  [97] &amp;quot;enquos&amp;quot;                &amp;quot;ensym&amp;quot;                 &amp;quot;ensyms&amp;quot;               
+## [100] &amp;quot;eval_tbls&amp;quot;             &amp;quot;eval_tbls2&amp;quot;            &amp;quot;everything&amp;quot;           
+## [103] &amp;quot;explain&amp;quot;               &amp;quot;expr&amp;quot;                  &amp;quot;failwith&amp;quot;             
+## [106] &amp;quot;filter&amp;quot;                &amp;quot;filter_&amp;quot;               &amp;quot;filter_all&amp;quot;           
+## [109] &amp;quot;filter_at&amp;quot;             &amp;quot;filter_if&amp;quot;             &amp;quot;first&amp;quot;                
+## [112] &amp;quot;frame_data&amp;quot;            &amp;quot;full_join&amp;quot;             &amp;quot;funs&amp;quot;                 
+## [115] &amp;quot;funs_&amp;quot;                 &amp;quot;glimpse&amp;quot;               &amp;quot;group_by&amp;quot;             
+## [118] &amp;quot;group_by_&amp;quot;             &amp;quot;group_by_all&amp;quot;          &amp;quot;group_by_at&amp;quot;          
+## [121] &amp;quot;group_by_drop_default&amp;quot; &amp;quot;group_by_if&amp;quot;           &amp;quot;group_by_prepare&amp;quot;     
+## [124] &amp;quot;group_cols&amp;quot;            &amp;quot;group_data&amp;quot;            &amp;quot;group_indices&amp;quot;        
+## [127] &amp;quot;group_indices_&amp;quot;        &amp;quot;group_keys&amp;quot;            &amp;quot;group_map&amp;quot;            
+## [130] &amp;quot;group_modify&amp;quot;          &amp;quot;group_nest&amp;quot;            &amp;quot;group_rows&amp;quot;           
+## [133] &amp;quot;group_size&amp;quot;            &amp;quot;group_split&amp;quot;           &amp;quot;group_trim&amp;quot;           
+## [136] &amp;quot;group_vars&amp;quot;            &amp;quot;group_walk&amp;quot;            &amp;quot;grouped_df&amp;quot;           
+## [139] &amp;quot;groups&amp;quot;                &amp;quot;id&amp;quot;                    &amp;quot;ident&amp;quot;                
+## [142] &amp;quot;if_else&amp;quot;               &amp;quot;inner_join&amp;quot;            &amp;quot;intersect&amp;quot;            
+## [145] &amp;quot;is_grouped_df&amp;quot;         &amp;quot;is.grouped_df&amp;quot;         &amp;quot;is.src&amp;quot;               
+## [148] &amp;quot;is.tbl&amp;quot;                &amp;quot;lag&amp;quot;                   &amp;quot;last&amp;quot;                 
+## [151] &amp;quot;last_col&amp;quot;              &amp;quot;lead&amp;quot;                  &amp;quot;left_join&amp;quot;            
+## [154] &amp;quot;location&amp;quot;              &amp;quot;lst&amp;quot;                   &amp;quot;lst_&amp;quot;                 
+## [157] &amp;quot;make_tbl&amp;quot;              &amp;quot;matches&amp;quot;               &amp;quot;min_rank&amp;quot;             
+## [160] &amp;quot;mutate&amp;quot;                &amp;quot;mutate_&amp;quot;               &amp;quot;mutate_all&amp;quot;           
+## [163] &amp;quot;mutate_at&amp;quot;             &amp;quot;mutate_each&amp;quot;           &amp;quot;mutate_each_&amp;quot;         
+## [166] &amp;quot;mutate_if&amp;quot;             &amp;quot;n&amp;quot;                     &amp;quot;n_distinct&amp;quot;           
+## [169] &amp;quot;n_groups&amp;quot;              &amp;quot;na_if&amp;quot;                 &amp;quot;near&amp;quot;                 
+## [172] &amp;quot;nest_by&amp;quot;               &amp;quot;nest_join&amp;quot;             &amp;quot;new_grouped_df&amp;quot;       
+## [175] &amp;quot;nth&amp;quot;                   &amp;quot;ntile&amp;quot;                 &amp;quot;num_range&amp;quot;            
+## [178] &amp;quot;one_of&amp;quot;                &amp;quot;order_by&amp;quot;              &amp;quot;percent_rank&amp;quot;         
+## [181] &amp;quot;progress_estimated&amp;quot;    &amp;quot;pull&amp;quot;                  &amp;quot;quo&amp;quot;                  
+## [184] &amp;quot;quo_name&amp;quot;              &amp;quot;quos&amp;quot;                  &amp;quot;recode&amp;quot;               
+## [187] &amp;quot;recode_factor&amp;quot;         &amp;quot;relocate&amp;quot;              &amp;quot;rename&amp;quot;               
+## [190] &amp;quot;rename_&amp;quot;               &amp;quot;rename_all&amp;quot;            &amp;quot;rename_at&amp;quot;            
+## [193] &amp;quot;rename_if&amp;quot;             &amp;quot;rename_vars&amp;quot;           &amp;quot;rename_vars_&amp;quot;         
+## [196] &amp;quot;rename_with&amp;quot;           &amp;quot;right_join&amp;quot;            &amp;quot;row_number&amp;quot;           
+## [199] &amp;quot;rows_delete&amp;quot;           &amp;quot;rows_insert&amp;quot;           &amp;quot;rows_patch&amp;quot;           
+## [202] &amp;quot;rows_update&amp;quot;           &amp;quot;rows_upsert&amp;quot;           &amp;quot;rowwise&amp;quot;              
+## [205] &amp;quot;same_src&amp;quot;              &amp;quot;sample_frac&amp;quot;           &amp;quot;sample_n&amp;quot;             
+## [208] &amp;quot;select&amp;quot;                &amp;quot;select_&amp;quot;               &amp;quot;select_all&amp;quot;           
+## [211] &amp;quot;select_at&amp;quot;             &amp;quot;select_if&amp;quot;             &amp;quot;select_var&amp;quot;           
+## [214] &amp;quot;select_vars&amp;quot;           &amp;quot;select_vars_&amp;quot;          &amp;quot;semi_join&amp;quot;            
+## [217] &amp;quot;setdiff&amp;quot;               &amp;quot;setequal&amp;quot;              &amp;quot;show_query&amp;quot;           
+## [220] &amp;quot;slice&amp;quot;                 &amp;quot;slice_&amp;quot;                &amp;quot;slice_head&amp;quot;           
+## [223] &amp;quot;slice_max&amp;quot;             &amp;quot;slice_min&amp;quot;             &amp;quot;slice_sample&amp;quot;         
+## [226] &amp;quot;slice_tail&amp;quot;            &amp;quot;sql&amp;quot;                   &amp;quot;sql_escape_ident&amp;quot;     
+## [229] &amp;quot;sql_escape_string&amp;quot;     &amp;quot;sql_join&amp;quot;              &amp;quot;sql_select&amp;quot;           
+## [232] &amp;quot;sql_semi_join&amp;quot;         &amp;quot;sql_set_op&amp;quot;            &amp;quot;sql_subquery&amp;quot;         
+## [235] &amp;quot;sql_translate_env&amp;quot;     &amp;quot;src&amp;quot;                   &amp;quot;src_df&amp;quot;               
+## [238] &amp;quot;src_local&amp;quot;             &amp;quot;src_mysql&amp;quot;             &amp;quot;src_postgres&amp;quot;         
+## [241] &amp;quot;src_sqlite&amp;quot;            &amp;quot;src_tbls&amp;quot;              &amp;quot;starts_with&amp;quot;          
+## [244] &amp;quot;starwars&amp;quot;              &amp;quot;storms&amp;quot;                &amp;quot;summarise&amp;quot;            
+## [247] &amp;quot;summarise_&amp;quot;            &amp;quot;summarise_all&amp;quot;         &amp;quot;summarise_at&amp;quot;         
+## [250] &amp;quot;summarise_each&amp;quot;        &amp;quot;summarise_each_&amp;quot;       &amp;quot;summarise_if&amp;quot;         
+## [253] &amp;quot;summarize&amp;quot;             &amp;quot;summarize_&amp;quot;            &amp;quot;summarize_all&amp;quot;        
+## [256] &amp;quot;summarize_at&amp;quot;          &amp;quot;summarize_each&amp;quot;        &amp;quot;summarize_each_&amp;quot;      
+## [259] &amp;quot;summarize_if&amp;quot;          &amp;quot;sym&amp;quot;                   &amp;quot;syms&amp;quot;                 
+## [262] &amp;quot;tally&amp;quot;                 &amp;quot;tally_&amp;quot;                &amp;quot;tbl&amp;quot;                  
+## [265] &amp;quot;tbl_df&amp;quot;                &amp;quot;tbl_nongroup_vars&amp;quot;     &amp;quot;tbl_ptype&amp;quot;            
+## [268] &amp;quot;tbl_sum&amp;quot;               &amp;quot;tbl_vars&amp;quot;              &amp;quot;tibble&amp;quot;               
+## [271] &amp;quot;top_frac&amp;quot;              &amp;quot;top_n&amp;quot;                 &amp;quot;transmute&amp;quot;            
+## [274] &amp;quot;transmute_&amp;quot;            &amp;quot;transmute_all&amp;quot;         &amp;quot;transmute_at&amp;quot;         
+## [277] &amp;quot;transmute_if&amp;quot;          &amp;quot;tribble&amp;quot;               &amp;quot;trunc_mat&amp;quot;            
+## [280] &amp;quot;type_sum&amp;quot;              &amp;quot;ungroup&amp;quot;               &amp;quot;union&amp;quot;                
+## [283] &amp;quot;union_all&amp;quot;             &amp;quot;validate_grouped_df&amp;quot;   &amp;quot;vars&amp;quot;                 
+## [286] &amp;quot;with_groups&amp;quot;           &amp;quot;with_order&amp;quot;            &amp;quot;wrap_dbplyr_obj&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

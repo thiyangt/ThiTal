@@ -29,9 +29,9 @@ Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewar
 
 - [STA 517 3.0 Programming and Statistical Computing with R](https://thiyanga.netlify.app/courses/rmsc2020/) 
 
+Department of Information and Communication Technology (BSc (Hons) IT Degree)
 
-
-
+- [ICTC 3104.3 Data Analytics and Big Data: Introduction to R](https://edify-thiyanga.netlify.app/ictc2020/)
 
 
 ## Semester 1
