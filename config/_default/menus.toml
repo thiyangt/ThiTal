@@ -27,20 +27,23 @@
   name = "Talks"
   url = "#talks"
   weight = 4
+  
 
 [[main]]
   name = "Teaching"
   url = "courses/"
   weight = 6
+  
+ [[main]]
+   name = "Workshops"
+   url = "#workshop"
+   weight = 7
 
 [[main]]
   name = "Contact"
   url = "#contact"
-  weight = 7
+  weight = 8
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
- [[main]]
-   name = "Workshops"
-   url = "http://talks-thiyanga.netlify.com/"
-   weight = 70
+
