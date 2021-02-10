@@ -15,9 +15,10 @@ summary: "Maintaining a calendar to organize your events allows for having more 
 <h3>1. Load calendar - 2021</h3>
 <pre class="r"><code>calendR(year = 2021, # Set the year
         start = &quot;M&quot;,  # Set the first day of the calendar week as Monday (optional argument)
-        special.days = &quot;weekend&quot;, # Colour  weekends (optional argument)
+        special.days = &quot;weekend&quot;, # Colour  weekends (optional argument),
+        text.size = 4,
         special.col = &quot;#b2df8a&quot;) # background colour for weekends (optional arguments)</code></pre>
-<p><img src="/post/calendar_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="/post/calendar_files/figure-html/unnamed-chunk-2-1.png" width="1440" /></p>
 </div>
 <div id="mark-events" class="section level3">
 <h3>2. Mark events</h3>
@@ -33,8 +34,9 @@ calendR(year = 2021,
         special.days = events,
         start = &quot;M&quot;, 
         special.col = c(&quot;#1b9e77&quot;, &quot;#d95f02&quot;, &quot;#7570b3&quot;, &quot;#e7298a&quot;),
+        text.size = 4,
         legend.pos = &quot;right&quot;) </code></pre>
-<p><img src="/post/calendar_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="/post/calendar_files/figure-html/unnamed-chunk-3-1.png" width="1440" /></p>
 </div>
 <div id="monthly-plan" class="section level3">
 <h3>3. Monthly plan</h3>

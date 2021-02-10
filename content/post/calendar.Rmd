@@ -18,17 +18,19 @@ library(calendR)
 
 ### 1. Load calendar - 2021
 
-```{r, comment=NA, message=FALSE}
+```{r, comment=NA, message=FALSE, fig.width=15, fig.height=10}
 calendR(year = 2021, # Set the year
         start = "M",  # Set the first day of the calendar week as Monday (optional argument)
-        special.days = "weekend", # Colour  weekends (optional argument)
+        special.days = "weekend", # Colour  weekends (optional argument),
+        text.size = 4,
         special.col = "#b2df8a") # background colour for weekends (optional arguments)
+
 ```
 
 
 ### 2. Mark events
 
-```{r, comment=NA, message=FALSE}
+```{r, comment=NA, message=FALSE, fig.width=15, fig.height=10}
 events <- rep(NA, 365)
 
 # Event dates
@@ -41,6 +43,7 @@ calendR(year = 2021,
         special.days = events,
         start = "M", 
         special.col = c("#1b9e77", "#d95f02", "#7570b3", "#e7298a"),
+        text.size = 4,
         legend.pos = "right") 
 ```
 

@@ -29,9 +29,10 @@
 &lt;h3&gt;1. Load calendar - 2021&lt;/h3&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;calendR(year = 2021, # Set the year
         start = &amp;quot;M&amp;quot;,  # Set the first day of the calendar week as Monday (optional argument)
-        special.days = &amp;quot;weekend&amp;quot;, # Colour  weekends (optional argument)
+        special.days = &amp;quot;weekend&amp;quot;, # Colour  weekends (optional argument),
+        text.size = 4,
         special.col = &amp;quot;#b2df8a&amp;quot;) # background colour for weekends (optional arguments)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/calendar_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/calendar_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;1440&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;mark-events&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;2. Mark events&lt;/h3&gt;
@@ -47,8 +48,9 @@ calendR(year = 2021,
         special.days = events,
         start = &amp;quot;M&amp;quot;, 
         special.col = c(&amp;quot;#1b9e77&amp;quot;, &amp;quot;#d95f02&amp;quot;, &amp;quot;#7570b3&amp;quot;, &amp;quot;#e7298a&amp;quot;),
+        text.size = 4,
         legend.pos = &amp;quot;right&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/calendar_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/calendar_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;1440&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;monthly-plan&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;3. Monthly plan&lt;/h3&gt;
