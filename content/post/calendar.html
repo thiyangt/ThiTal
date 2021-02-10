@@ -1,0 +1,48 @@
+---
+title: "Organize your priorities using CalendaR package in R"
+date: "2021-02-09"
+summary: "Maintaining a calendar to organize your events allows for having more smooth and productive day. In this post, I will show you some basic functionalities in CalendaR package."
+---
+
+
+
+<p>It is important to maintain a calendar in order to budget your time well. In this post, I will show you some basic functionalities of <code>calendaR</code> package in R. You can find more information <a href="https://r-coder.com/calendar-plot-r/">here</a>.</p>
+<div id="load-package" class="section level3">
+<h3>Load package</h3>
+<pre class="r"><code>library(calendR)</code></pre>
+</div>
+<div id="load-calendar---2021" class="section level3">
+<h3>1. Load calendar - 2021</h3>
+<pre class="r"><code>calendR(year = 2021, # Set the year
+        start = &quot;M&quot;,  # Set the first day of the calendar week as Monday (optional argument)
+        special.days = &quot;weekend&quot;, # Colour  weekends (optional argument)
+        special.col = &quot;#b2df8a&quot;) # background colour for weekends (optional arguments)</code></pre>
+<p><img src="/post/calendar_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+<div id="mark-events" class="section level3">
+<h3>2. Mark events</h3>
+<pre class="r"><code>events &lt;- rep(NA, 365)
+
+# Event dates
+events[100:200] &lt;- &quot;2nd semester&quot;
+events[213:240] &lt;- &quot;Examination&quot;
+events[300:310] &lt;- &quot;Conference&quot;
+events[359] &lt;- &quot;Christmas&quot; 
+
+calendR(year = 2021,
+        special.days = events,
+        start = &quot;M&quot;, 
+        special.col = c(&quot;#1b9e77&quot;, &quot;#d95f02&quot;, &quot;#7570b3&quot;, &quot;#e7298a&quot;),
+        legend.pos = &quot;right&quot;) </code></pre>
+<p><img src="/post/calendar_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="monthly-plan" class="section level3">
+<h3>3. Monthly plan</h3>
+<pre class="r"><code>calendR(year = 2021, month = 2,
+          text = c(&quot;Exam&quot;, &quot;Exam&quot;, # Event labels
+                 &quot;RLadies&quot;), 
+        text.pos = c(18, 20, 23), # Events dates texts 
+        text.size = 4.5,          # Font size of the labels
+        text.col = &quot;#1b9e77&quot;)</code></pre>
+<p><img src="/post/calendar_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>

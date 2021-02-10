@@ -55,3 +55,5 @@ I am also an Associate Investigator of the [Australian Research Council (ARC) Ce
 I enjoy solving general data science problems from three different angles: theoretical, computational, applied. On this website you will find some of my work and interests in statistics and data analysis. My research focuses on developing new statistical machine learning tools to help both practitioners and theoreticians make more open, explainable and reproducible data-driven discoveries. I am also interested in R programming language.
 
 [Priyanga Dilini Talagala](https://prital.netlify.com/)  PhD in Statistics, Monash University, Australia is my sister.
+
+

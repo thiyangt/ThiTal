@@ -5,12 +5,63 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 22 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 09 Feb 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>Organize your priorities using CalendaR package in R</title>
+      <link>/post/calendar/</link>
+      <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>/post/calendar/</guid>
+      <description>
+
+
+&lt;p&gt;It is important to maintain a calendar in order to budget your time well. In this post, I will show you some basic functionalities of &lt;code&gt;calendaR&lt;/code&gt; package in R. You can find more information &lt;a href=&#34;https://r-coder.com/calendar-plot-r/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;div id=&#34;load-package&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Load package&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(calendR)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;load-calendar---2021&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;1. Load calendar - 2021&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;calendR(year = 2021, # Set the year
+        start = &amp;quot;M&amp;quot;,  # Set the first day of the calendar week as Monday (optional argument)
+        special.days = &amp;quot;weekend&amp;quot;, # Colour  weekends (optional argument)
+        special.col = &amp;quot;#b2df8a&amp;quot;) # background colour for weekends (optional arguments)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/calendar_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mark-events&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;2. Mark events&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;events &amp;lt;- rep(NA, 365)
+
+# Event dates
+events[100:200] &amp;lt;- &amp;quot;2nd semester&amp;quot;
+events[213:240] &amp;lt;- &amp;quot;Examination&amp;quot;
+events[300:310] &amp;lt;- &amp;quot;Conference&amp;quot;
+events[359] &amp;lt;- &amp;quot;Christmas&amp;quot; 
+
+calendR(year = 2021,
+        special.days = events,
+        start = &amp;quot;M&amp;quot;, 
+        special.col = c(&amp;quot;#1b9e77&amp;quot;, &amp;quot;#d95f02&amp;quot;, &amp;quot;#7570b3&amp;quot;, &amp;quot;#e7298a&amp;quot;),
+        legend.pos = &amp;quot;right&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/calendar_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;monthly-plan&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;3. Monthly plan&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;calendR(year = 2021, month = 2,
+          text = c(&amp;quot;Exam&amp;quot;, &amp;quot;Exam&amp;quot;, # Event labels
+                 &amp;quot;RLadies&amp;quot;), 
+        text.pos = c(18, 20, 23), # Events dates texts 
+        text.size = 4.5,          # Font size of the labels
+        text.col = &amp;quot;#1b9e77&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/calendar_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Ratio matters: change the way you see things!</title>
