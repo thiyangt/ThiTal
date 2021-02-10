@@ -1,6 +1,6 @@
 ---
-title: "Organize your priorities using CalendaR package in R"
-date: "2021-02-09"
+title: "Organize your priorities using CalendR package in R"
+date: "2021-02-10"
 summary: "Maintaining a calendar to organize your events allows for having more smooth and productive day. In this post, I will show you some basic functionalities in CalendaR package."
 ---
 
@@ -8,7 +8,7 @@ summary: "Maintaining a calendar to organize your events allows for having more 
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-It is important to maintain a calendar in order to budget your time well.  In this post, I will show you some basic functionalities of `calendaR` package in R. You can find more information [here](https://r-coder.com/calendar-plot-r/).
+It is important to maintain a calendar in order to budget your time well.  In this post, I will show you some basic functionalities of `calendR` package in R. You can find more information [here](https://r-coder.com/calendar-plot-r/).
 
 ### Load package
 

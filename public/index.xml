@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>THIYANGA TALAGALA</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 09 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 10 Feb 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>THIYANGA TALAGALA</title>
@@ -809,14 +809,14 @@
     </item>
     
     <item>
-      <title>Organize your priorities using CalendaR package in R</title>
+      <title>Organize your priorities using CalendR package in R</title>
       <link>/post/calendar/</link>
-      <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
       <guid>/post/calendar/</guid>
       <description>
 
 
-&lt;p&gt;It is important to maintain a calendar in order to budget your time well. In this post, I will show you some basic functionalities of &lt;code&gt;calendaR&lt;/code&gt; package in R. You can find more information &lt;a href=&#34;https://r-coder.com/calendar-plot-r/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It is important to maintain a calendar in order to budget your time well. In this post, I will show you some basic functionalities of &lt;code&gt;calendR&lt;/code&gt; package in R. You can find more information &lt;a href=&#34;https://r-coder.com/calendar-plot-r/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;div id=&#34;load-package&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Load package&lt;/h3&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(calendR)&lt;/code&gt;&lt;/pre&gt;
