@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Let's see how to format your model outputs with [parameters](https://easystats.github.io/parameters/index.html) package in R by @param.
 
-## Fit a simple linear regression model
+### Fit a simple linear regression model
 
 ```{r, comment=NA}
 #install.packages("parameters")
@@ -23,7 +23,7 @@ library(see)
 model <- lm(Volume ~ Height + Girth, data=trees)
 ```
 
-## Reporting model parameter estimates
+### Reporting model parameter estimates
 
 ```{r, comment=NA, message=FALSE}
 model %>% model_parameters()
