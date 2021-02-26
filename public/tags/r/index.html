@@ -126,7 +126,7 @@
   <meta property="og:description" content="PhD in Statistics"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2020-12-15T00:00:00&#43;00:00">
+    <meta property="og:updated_time" content="2021-02-26T00:00:00&#43;00:00">
   
 
   
@@ -489,6 +489,16 @@
   
 
   
+  
+  <div>
+    <h2><a href="/post/regoutputs/">Reporting your model outputs</a></h2>
+    <div class="article-style">
+      
+      Let’s see how to format your model outputs with parameters package in R by Lüdecke et al. (2020).
+Fit a simple linear regression model #install.packages(&quot;parameters&quot;) library(parameters) library(magrittr) library(gt) library(see) model &lt;- lm(Volume ~ Height + Girth, data=trees)  Reporting model parameter estimates model %&gt;% model_parameters() Parameter | Coefficient | SE | 95% CI | t(28) | p -------------------------------------------------------------------- (Intercept) | -57.99 | 8.64 | [-75.68, -40.29] | -6.71 | &lt; .
+      
+    </div>
+  </div>
   
   <div>
     <h2><a href="/post/scatterplot/">Highlight data points in a scatterplot</a></h2>

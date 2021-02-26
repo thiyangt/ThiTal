@@ -1,0 +1,55 @@
+---
+title: "Reporting your model outputs"
+author: "Thiyanga Talagala"
+date: '2021-02-26'
+tags: [R]
+bibliography: [one.bib]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Let's see how to format your model outputs with [parameters](https://easystats.github.io/parameters/index.html) package in R by @param.
+
+## Fit a simple linear regression model
+
+```{r, comment=NA}
+#install.packages("parameters")
+library(parameters)
+library(magrittr)
+library(gt)
+library(see)
+model <- lm(Volume ~ Height + Girth, data=trees)
+```
+
+## Reporting model parameter estimates
+
+```{r, comment=NA, message=FALSE}
+model %>% model_parameters()
+model %>% model_parameters() %>% print_md()
+model %>% model_parameters() %>% print_html()
+```
+
+### Control the number of decimal places
+
+```{r, comment=NA, message=FALSE}
+model %>% model_parameters(digits=3) %>% print_html()
+```
+
+### Visualise model parameter estimates
+
+```{r, comment=NA, message=FALSE}
+model %>% model_parameters(digits=3) %>% plot()
+```
+
+### Reporting ANOVA table
+
+```{r, comment=NA}
+model %>% aov() %>% model_parameters() %>% print_html()
+
+```
+
+
+
+## References
