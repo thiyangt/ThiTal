@@ -114,8 +114,10 @@
   {{- end -}}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
-  {{ partial "marketing/google_analytics" . }}
-  {{ partial "marketing/google_tag_manager" . }}
+<!--  {{ partial "marketing/google_analytics" . }} -->
+<!--  {{ partial "marketing/google_tag_manager" . }}-->
+
+{{ partial "marketing/analytics" . }}
 
   {{ with .OutputFormats.Get "RSS" }}
   <link rel="alternate" href="{{.RelPermalink}}" type="application/rss+xml" title="{{site.Title}}">
