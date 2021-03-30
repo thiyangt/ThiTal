@@ -95,5 +95,9 @@ Individual Presentations - SIR models
 
 Visit LMS
 
+### Resources
+
+[Visual Explanation of Markov Chains](https://setosa.io/blog/2014/07/26/markov-chains/index.html)
+
 
 > END
