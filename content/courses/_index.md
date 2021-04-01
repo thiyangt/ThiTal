@@ -14,6 +14,17 @@ title: Courses
 
 -----
 
+# 2021 
+
+## Semester 1 (To begin)
+
+Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura (USJ)
+
+- STA 326 2.0 Programming and Data Analysis with R
+
+- ASP 460 2.0 Data Visualisation
+
+
 # 2020
 
 ## Semester 2 
@@ -40,7 +51,7 @@ Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewar
 
 - [STA 326 2.0 Programming and Data Analysis with R](https://hellor.netlify.com/) 
 
-- [ASP 460 2.0/ STA 479 2.0 Special Topics in Statistics](https://tstdataviz.netlify.com/slides/2020dataviz.pdf)
+- [ASP 460 2.0 Data Visualisation](https://tstdataviz.netlify.com/slides/2020dataviz.pdf)
 
 Department of Mathematics, Faculty of Applied Sciences, USJ
 
