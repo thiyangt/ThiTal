@@ -2,7 +2,7 @@
 # Workshop widget
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 7
+weight = 130
 
 title = "Workshops"
 
