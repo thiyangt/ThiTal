@@ -63,16 +63,6 @@
   </url>
   
   <url>
-    <loc>/talk/rl20-talk/</loc>
-    <lastmod>2020-12-28T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>/talk/</loc>
-    <lastmod>2020-12-28T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/ratio/</loc>
     <lastmod>2020-12-22T00:00:00+00:00</lastmod>
   </url>
@@ -83,12 +73,12 @@
   </url>
   
   <url>
-    <loc>/tags/ggplot2/</loc>
+    <loc>/categories/ggplot2/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/ggplot2/</loc>
+    <loc>/tags/ggplot2/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -124,6 +114,11 @@
   
   <url>
     <loc>/talk/isf20-talk/</loc>
+    <lastmod>2020-10-27T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/</loc>
     <lastmod>2020-10-27T00:00:00+05:30</lastmod>
   </url>
   
@@ -173,12 +168,12 @@
   </url>
   
   <url>
-    <loc>/categories/nature/</loc>
+    <loc>/tags/nature/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/nature/</loc>
+    <loc>/categories/nature/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -268,12 +263,12 @@
   </url>
   
   <url>
-    <loc>/tags/dplyr/</loc>
+    <loc>/categories/dplyr/</loc>
     <lastmod>2019-05-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/dplyr/</loc>
+    <loc>/tags/dplyr/</loc>
     <lastmod>2019-05-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -348,12 +343,12 @@
   </url>
   
   <url>
-    <loc>/tags/rmarkdown/</loc>
+    <loc>/categories/rmarkdown/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/rmarkdown/</loc>
+    <loc>/tags/rmarkdown/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
   </url>
   

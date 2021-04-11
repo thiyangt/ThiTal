@@ -5,20 +5,12 @@
     <link>/talk/</link>
       <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 28 Dec 2020 00:00:00 +0530</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 27 Oct 2020 00:00:00 +0530</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Recent &amp; Upcoming Talks</title>
       <link>/talk/</link>
     </image>
-    
-    <item>
-      <title>R Markdown: ON YOUR MARKS, GET SET, GO!!</title>
-      <link>/talk/rl20-talk/</link>
-      <pubDate>Mon, 28 Dec 2020 00:00:00 +0530</pubDate>
-      <guid>/talk/rl20-talk/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>A Tool to Detect Potential Data Leaks in Forecasting Competitions</title>

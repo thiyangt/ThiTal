@@ -34,11 +34,11 @@
   url = "courses/"
   weight = 6
   
- [[main]]
+[[main]]
    name = "Workshops"
    url = "#workshop"
    weight = 7
-
+   
 [[main]]
   name = "Contact"
   url = "#contact"
