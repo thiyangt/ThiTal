@@ -79,3 +79,6 @@ subtitle = ""
 
 <i class="fa fa-cog fa-spin" style="color:Maroon"></i> [DSjobtracker](https://github.com/thiyangt/DSjobtracker): R package containing information related to data science job advertisements. What skills and qualifications are required for data science related jobs?
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/DSjobtracker)](https://CRAN.R-project.org/package=DSjobtracker)
+
+<i class="fa fa-cog fa-spin" style="color:Maroon"></i> [MedLEA](https://github.com/SMART-Research/MedLEA): The MedLEA package provides morphological and structural features of 471 medicinal plant leaves and 1099 leaf images of 31 species and 29-45 images per species.
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/MedLEA)](https://CRAN.R-project.org/package=MedLEA)

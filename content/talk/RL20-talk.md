@@ -1,14 +1,14 @@
 +++
-date = 2018-02-12T00:00:00  # Schedule page publish date.
+date = 2020-12-28T00:00:00  # Schedule page publish date.
 
-title = "Analysing large collections of time series"
-time_start = 2018-02-12T15:20:00
-time_end = 2018-08-15T15:40:00
+title = "R Markdown: ON YOUR MARKS, GET SET, GO!!"
+time_start = 2020-12-28T17:00:00
+time_end = 2020-12-28T17:40:00
 abstract = ""
 abstract_short = ""
-event = "NII Shonan Meeting, Kanagawa, Japan"
-event_url = "http://shonan.nii.ac.jp/shonan/report/"
-location = "1560-39 Kamiyamaguchi, Hayama, Miuragun, Kanagawa Prefecture 240-0198, Japan"
+event = "R-Ladies Colombo Meetup"
+event_url = "https://www.meetup.com/rladies-colombo/events/275260700/"
+location = " "
 
 # Is this a selected talk? (true/false)
 selected = false
@@ -19,10 +19,10 @@ selected = false
 #projects = ["deep-learning"]
 
 # Links (optional).
-url_pdf = "http://shonan.nii.ac.jp/shonan/wp-content/uploads/2018/05/No.2018-3.pdf"
-url_slides = "talks/japan18.pdf"
+url_pdf = ""
+url_slides = "https://rladiescolombo.netlify.app/talk/1_rmarkdown/"
 url_video = ""
-url_code = ""
+url_code = "https://github.com/thiyangt/RMarkdown_RLadiesColombo"
 
 # Does the content use math formatting?
 math = true

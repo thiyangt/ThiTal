@@ -1,5 +1,5 @@
 +++
-date = 2017-01-01T00:00:00  # Schedule page publish date.
+date = 2018-07-13T00:00:00  # Schedule page publish date.
 
 title = "seer: R package for feature-based forecast model selection"
 time_start = 2018-07-13T11:30:00

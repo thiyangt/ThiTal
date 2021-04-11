@@ -63,6 +63,16 @@
   </url>
   
   <url>
+    <loc>/talk/rl20-talk/</loc>
+    <lastmod>2020-12-28T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/</loc>
+    <lastmod>2020-12-28T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/ratio/</loc>
     <lastmod>2020-12-22T00:00:00+00:00</lastmod>
   </url>
@@ -103,22 +113,17 @@
   </url>
   
   <url>
-    <loc>/categories/tidyverse/</loc>
-    <lastmod>2020-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/tidyverse/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/talk/isf20-talk/</loc>
-    <lastmod>2020-10-27T00:00:00+05:30</lastmod>
+    <loc>/categories/tidyverse/</loc>
+    <lastmod>2020-12-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/talk/</loc>
+    <loc>/talk/isf20-talk/</loc>
     <lastmod>2020-10-27T00:00:00+05:30</lastmod>
   </url>
   
@@ -158,17 +163,12 @@
   </url>
   
   <url>
-    <loc>/categories/mathematics/</loc>
-    <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/mathematics/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/nature/</loc>
+    <loc>/categories/mathematics/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -178,7 +178,7 @@
   </url>
   
   <url>
-    <loc>/tags/science/</loc>
+    <loc>/tags/nature/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -188,12 +188,17 @@
   </url>
   
   <url>
-    <loc>/categories/stem/</loc>
+    <loc>/tags/science/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/stem/</loc>
+    <lastmod>2020-05-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/stem/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -228,12 +233,12 @@
   </url>
   
   <url>
-    <loc>/categories/plotly/</loc>
+    <loc>/tags/plotly/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/plotly/</loc>
+    <loc>/categories/plotly/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -313,12 +318,12 @@
   </url>
   
   <url>
-    <loc>/tags/gganimate/</loc>
+    <loc>/categories/gganimate/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/gganimate/</loc>
+    <loc>/tags/gganimate/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -343,12 +348,12 @@
   </url>
   
   <url>
-    <loc>/categories/rmarkdown/</loc>
+    <loc>/tags/rmarkdown/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/rmarkdown/</loc>
+    <loc>/categories/rmarkdown/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
   </url>
   
@@ -378,6 +383,16 @@
   </url>
   
   <url>
+    <loc>/talk/jsm18-talk/</loc>
+    <lastmod>2018-08-01T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/user18-talk/</loc>
+    <lastmod>2018-07-13T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/privacy/</loc>
     <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
@@ -388,18 +403,18 @@
   </url>
   
   <url>
-    <loc>/talk/isf17-talk/</loc>
-    <lastmod>2017-06-26T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>/talk/jsm18-talk/</loc>
-    <lastmod>2017-01-01T00:00:00+05:30</lastmod>
+    <loc>/talk/isf18-talk/</loc>
+    <lastmod>2018-06-09T00:00:00+05:30</lastmod>
   </url>
   
   <url>
     <loc>/talk/japan18-talk/</loc>
-    <lastmod>2017-01-01T00:00:00+05:30</lastmod>
+    <lastmod>2018-02-12T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/isf17-talk/</loc>
+    <lastmod>2017-06-26T00:00:00+05:30</lastmod>
   </url>
   
   <url>
@@ -409,16 +424,6 @@
   
   <url>
     <loc>/talk/ysc17-talk/</loc>
-    <lastmod>2017-01-01T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>/talk/isf18-talk/</loc>
-    <lastmod>2017-01-01T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>/talk/user18-talk/</loc>
     <lastmod>2017-01-01T00:00:00+05:30</lastmod>
   </url>
   

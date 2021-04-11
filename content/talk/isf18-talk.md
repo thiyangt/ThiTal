@@ -1,5 +1,5 @@
 +++
-date = 2017-01-01T00:00:00  # Schedule page publish date.
+date = 2018-06-09T00:00:00  # Schedule page publish date.
 
 title = "Meta-learning how to forecast time series"
 time_start = 2018-06-19T14:20:00
