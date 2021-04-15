@@ -37,7 +37,7 @@ hero_media = "headers/bubbles-wide.jpg"
 #   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
 #   Remove a link/note by deleting a cta/note block.
 [cta]
-  url = "https://sourcethemes.com/academic/docs/install/"
+  url = ""
   label = "SCROLL DOWN"
   icon_pack = "fas"
   icon = "home"
