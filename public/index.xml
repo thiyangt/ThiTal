@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>THIYANGA TALAGALA</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 26 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 29 Jun 2021 00:00:00 +0530</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>THIYANGA TALAGALA</title>
@@ -132,11 +132,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression1.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 [Reading-Ch1 Introduction to Linear Regression Analysis]&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets - &lt;code&gt;anscombe&lt;/code&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 Problems - Install R and R studio&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression1.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 [Reading-Ch1 Introduction to Linear Regression Analysis]&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;code&gt;anscombe&lt;/code&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 Problems - Install R and R studio&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -157,11 +157,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression2.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 [Reading-Ch2/2.2.2 Introduction to Linear Regression Analysis]&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets - &lt;code&gt;alr3::heights&lt;/code&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/tutorial_1.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers - Discussions&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression2.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 [Reading-Ch2/2.2.2 Introduction to Linear Regression Analysis]&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;code&gt;alr3::heights&lt;/code&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/tutorial_1.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers - Discussions&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -185,11 +185,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression3.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading - Ch1 (2.6) and Ch4 (4.2.3)&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 Problems&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression3.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - Ch1 (2.6) and Ch4 (4.2.3)&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -226,11 +226,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression4.html#1&#34;&gt;1. Slides&lt;/a&gt; &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression5.html&#34;&gt;2. Basics of R Programming&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading - Ch1 and Ch2 (2.3, 2.4)&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Set - &lt;a href=&#34;/data/house.csv&#34;&gt;house.csv&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/simplelinearregression2&#34;&gt;Problems &lt;/a&gt; 	&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/tutorial2.pdf&#34;&gt;Tutorial 2&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖 Additional problems - Ch2 Problems: 2.1 - 2.17&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression4.html#1&#34;&gt;1. Slides&lt;/a&gt; &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression5.html&#34;&gt;2. Basics of R Programming&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - Ch1 and Ch2 (2.3, 2.4)&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Set - &lt;a href=&#34;/data/house.csv&#34;&gt;house.csv&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/simplelinearregression2&#34;&gt;Problems &lt;/a&gt; 	&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/tutorial2.pdf&#34;&gt;Tutorial 2&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖 Additional problems - Ch2 Problems: 2.1 - 2.17&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -262,11 +262,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression6.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading - Ch3&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets - &lt;a href=&#34;/data/heart.data.csv&#34;&gt;heart.data.csv&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 Problems&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression6.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - Ch3&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;/data/heart.data.csv&#34;&gt;heart.data.csv&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -287,11 +287,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression7.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading - &lt;a href=&#34;https://bookdown.org/egarpor/SSS2-UC3M/multlin-aovfit.html&#34;&gt;here&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets - &lt;a href=&#34;/data/heart.data.csv&#34;&gt;heart.data.csv&lt;/a&gt; and &lt;code&gt;alr3::heights&lt;/code&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 Problems - Quiz Google Classroom&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression7.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - &lt;a href=&#34;https://bookdown.org/egarpor/SSS2-UC3M/multlin-aovfit.html&#34;&gt;here&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;/data/heart.data.csv&#34;&gt;heart.data.csv&lt;/a&gt; and &lt;code&gt;alr3::heights&lt;/code&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 Problems - Quiz Google Classroom&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -318,11 +318,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression8.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading - Chapter 3, Montgomery, Peck, Vining&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 Problems&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression8.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - Chapter 3, Montgomery, Peck, Vining&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -346,11 +346,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression9.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading - Section 3.3, Montgomery, Peck, Vining&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets - &lt;a href=&#34;/data/coconut.csv&#34;&gt;coconut.csv&lt;/a&gt; &lt;a href=&#34;/data/salarydata.csv&#34;&gt;salarydata.csv&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 Problems&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression9.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - Section 3.3, Montgomery, Peck, Vining&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;/data/coconut.csv&#34;&gt;coconut.csv&lt;/a&gt; &lt;a href=&#34;/data/salarydata.csv&#34;&gt;salarydata.csv&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -398,11 +398,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression10.html#1&#34;&gt;Slides-i&lt;/a&gt; &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression11.html#1&#34;&gt;Slides-ii&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading - Ch6, 11.1, Ch8 (Montgomery, Peck, Vining)&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets - see slides&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression11.html#9&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers - see Week 13 discussion notes&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression10.html#1&#34;&gt;Slides-i&lt;/a&gt; &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression11.html#1&#34;&gt;Slides-ii&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - Ch6, 11.1, Ch8 (Montgomery, Peck, Vining)&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - see slides&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression11.html#9&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers - see Week 13 discussion notes&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -435,11 +435,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression12.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading - Ch 9&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets -	&lt;a href=&#34;/data/real-estate.csv&#34;&gt;real-estate.csv&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/variableSelectionproblem.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers - Inclass discussion&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression12.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - Ch 9&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets -	&lt;a href=&#34;/data/real-estate.csv&#34;&gt;real-estate.csv&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/variableSelectionproblem.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers - Inclass discussion&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -477,11 +477,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression13.pdf&#34;&gt;Slides - 1&lt;/a&gt; &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression14.pdf&#34;&gt;Slides - 2&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading  - Ch 10&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 &lt;a href=&#34;/data/bloodpressure.csv&#34;&gt;Data Sets-bloodpressure&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/multicollinearity_questions.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers - Inclass discussion&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression13.pdf&#34;&gt;Slides - 1&lt;/a&gt; &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression14.pdf&#34;&gt;Slides - 2&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 Reading  - Ch 10&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 &lt;a href=&#34;/data/bloodpressure.csv&#34;&gt;Data Sets-bloodpressure&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/multicollinearity_questions.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers - Inclass discussion&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -514,11 +514,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚Slides&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 Problems&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚Slides&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 Reading&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -551,11 +551,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l1.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 &lt;a href=&#34;https://rstudio-education.github.io/hopr/basics.html&#34;&gt;Reading-2.1, 2.2, 5.1&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 &lt;a href=&#34;https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200210-sitrep-21-ncov.pdf?sfvrsn=947679ef_2&#34;&gt;Data Sets&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 &lt;a href=&#34;https://thiyanga.netlify.app/slides/2020s1sta5173_0/l1#61&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖&lt;a href=&#34;/Slides/2020s1STA5173_0/Answers/Week1Answers.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l1.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://rstudio-education.github.io/hopr/basics.html&#34;&gt;Reading-2.1, 2.2, 5.1&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 &lt;a href=&#34;https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200210-sitrep-21-ncov.pdf?sfvrsn=947679ef_2&#34;&gt;Data Sets&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://thiyanga.netlify.app/slides/2020s1sta5173_0/l1#61&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖&lt;a href=&#34;/Slides/2020s1STA5173_0/Answers/Week1Answers.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -566,11 +566,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l2.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 &lt;a href=&#34;https://rstudio-education.github.io/hopr/r-objects.html#matrices&#34;&gt;Reading-5.3, 5.8&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 &lt;a href=&#34;https://hellor.netlify.app/cheatsheets/baser.pdf&#34;&gt;Cheat sheet&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 &lt;a href=&#34;/Slides/2020s1STA5173_0/MSc_tutorials/Tutorial1_Questions_MSC_2020.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖 &lt;a href=&#34;/Slides/2020s1STA5173_0/MSc_tutorials/Tutorial1_Ans_MSC_2020.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l2.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://rstudio-education.github.io/hopr/r-objects.html#matrices&#34;&gt;Reading-5.3, 5.8&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 &lt;a href=&#34;https://hellor.netlify.app/cheatsheets/baser.pdf&#34;&gt;Cheat sheet&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;/Slides/2020s1STA5173_0/MSc_tutorials/Tutorial1_Questions_MSC_2020.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖 &lt;a href=&#34;/Slides/2020s1STA5173_0/MSc_tutorials/Tutorial1_Ans_MSC_2020.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -584,11 +584,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l3.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 &lt;a href=&#34;https://rstudio-education.github.io/hopr/basics.html#functions&#34;&gt;Reading-Section 2.3&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets - &lt;code&gt;iris&lt;/code&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 Problems - EDA on &lt;code&gt;iris&lt;/code&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers - In class discussion (13 Sep 2020)&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l3.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://rstudio-education.github.io/hopr/basics.html#functions&#34;&gt;Reading-Section 2.3&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;code&gt;iris&lt;/code&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 Problems - EDA on &lt;code&gt;iris&lt;/code&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers - In class discussion (13 Sep 2020)&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -599,11 +599,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l4.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 &lt;a href=&#34;https://rstudio-education.github.io/hopr/basics.html#functions&#34;&gt;Reading-Section 2.3&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 Problems&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l4.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://rstudio-education.github.io/hopr/basics.html#functions&#34;&gt;Reading-Section 2.3&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -615,11 +615,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l5.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 &lt;a href=&#34;https://r4ds.had.co.nz/introduction.html&#34;&gt;Reading&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 Problems&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l5.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://r4ds.had.co.nz/introduction.html&#34;&gt;Reading&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -630,11 +630,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l6.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 &lt;a href=&#34;/Slides/2020s1STA5173_0/l6_problems.html&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l6.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 Reading&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;/Slides/2020s1STA5173_0/l6_problems.html&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -649,11 +649,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l7_reshaping_data.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 &lt;a href=&#34;https://r4ds.had.co.nz/tidy-data.html&#34;&gt;Reading -R4DS Ch12&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 &lt;a href=&#34;https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf&#34;&gt;Cheat sheet&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 Problems&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l7_reshaping_data.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://r4ds.had.co.nz/tidy-data.html&#34;&gt;Reading -R4DS Ch12&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 &lt;a href=&#34;https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf&#34;&gt;Cheat sheet&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -663,11 +663,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l7_data_manipulation_with_dplyr.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 &lt;a href=&#34;https://r4ds.had.co.nz/tidy-data.html&#34;&gt;Reading -R4DS Ch12&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 &lt;a href=&#34;https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf&#34;&gt;Cheat sheet&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 &lt;a href=&#34;https://hellor.netlify.app/problems/DataWrangling_Tutorial.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖 &lt;a href=&#34;/Slides/2020s1STA5173_0/MSc_tutorials/DataWrangling_Tutorial_Answers_MSC.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l7_data_manipulation_with_dplyr.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://r4ds.had.co.nz/tidy-data.html&#34;&gt;Reading -R4DS Ch12&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 &lt;a href=&#34;https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf&#34;&gt;Cheat sheet&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://hellor.netlify.app/problems/DataWrangling_Tutorial.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖 &lt;a href=&#34;/Slides/2020s1STA5173_0/MSc_tutorials/DataWrangling_Tutorial_Answers_MSC.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -678,17 +678,17 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/week9MSC_ggplot.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 &lt;a href=&#34;https://ggplot2-book.org/&#34;&gt;Reading&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets - &lt;a href=&#34;https://github.com/allisonhorst/palmerpenguins&#34;&gt;Details&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 Problems	- Perform EDA on palmerpenguins using ggplot2&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/week9MSC_ggplot.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://ggplot2-book.org/&#34;&gt;Reading&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;https://github.com/allisonhorst/palmerpenguins&#34;&gt;Details&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 Problems	- Perform EDA on palmerpenguins using ggplot2&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
 &lt;p&gt;Load &lt;code&gt;palmerpenguins&lt;/code&gt; using,&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(palmerpenguins)
-&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;(package &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;palmerpenguins&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;(package &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;palmerpenguins&amp;#39;&lt;/span&gt;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;week-10&#34;&gt;Week 10&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Statistical modelling - Regression Analysis&lt;/li&gt;
@@ -696,11 +696,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l10.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets -	i&lt;a href=&#34;/data/house.csv&#34;&gt;house.csv&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 &lt;a href=&#34;/data/regression_tutorial1.html&#34;&gt;Problems - i&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l10.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 Reading&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets -	i&lt;a href=&#34;/data/house.csv&#34;&gt;house.csv&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;/data/regression_tutorial1.html&#34;&gt;Problems - i&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -711,11 +711,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l11_inverse_transformation.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 Problems&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖 &lt;a href=&#34;/Slides/2020s1STA5173_0/l11_inverse_transformation_answers.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l11_inverse_transformation.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 Reading&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖 &lt;a href=&#34;/Slides/2020s1STA5173_0/l11_inverse_transformation_answers.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -726,11 +726,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l12_functionals.html&#34;&gt;Slides - part 1&lt;/a&gt; &lt;a href=&#34;/Slides/2020s1STA5173_0/l13_functionals.html&#34;&gt;Slides - part 2&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 &lt;a href=&#34;https://adv-r.hadley.nz/functionals.html&#34;&gt;Reading&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 &lt;a href=&#34;/Slides/2020s1STA5173_0/R_purrr.pdf&#34;&gt;Cheat sheet&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 &lt;a href=&#34;/Slides/2020s1STA5173_0/functionals_tutorial.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖 &lt;a href=&#34;/Slides/2020s1STA5173_0/functionals_tutorial_answers.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l12_functionals.html&#34;&gt;Slides - part 1&lt;/a&gt; &lt;a href=&#34;/Slides/2020s1STA5173_0/l13_functionals.html&#34;&gt;Slides - part 2&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://adv-r.hadley.nz/functionals.html&#34;&gt;Reading&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 &lt;a href=&#34;/Slides/2020s1STA5173_0/R_purrr.pdf&#34;&gt;Cheat sheet&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;/Slides/2020s1STA5173_0/functionals_tutorial.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖 &lt;a href=&#34;/Slides/2020s1STA5173_0/functionals_tutorial_answers.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -744,11 +744,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l14_Hypothesis_testing.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 &lt;a href=&#34;/Slides/2020s1STA5173_0/Hypothesis_questions.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖 Answers&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l14_Hypothesis_testing.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 Reading&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;/Slides/2020s1STA5173_0/Hypothesis_questions.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖 Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -758,11 +758,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l15_Monte_Carlo.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Reading&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 Problems - Questions given in the note.&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l15_Monte_Carlo.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 Reading&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 Problems - Questions given in the note.&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -776,11 +776,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l14.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 &lt;a href=&#34;http://bcs.whfreeman.com/webpub/statistics/ips9e/9781319013387/companionchapters/companionchapter16.pdf&#34;&gt;Reading&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📊 Data Sets - &lt;code&gt;iris&lt;/code&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📎 &lt;a href=&#34;https://thiyanga.netlify.app/slides/2020s1sta5173_0/l14#22&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;🔖Answers&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l14.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;http://bcs.whfreeman.com/webpub/statistics/ips9e/9781319013387/companionchapters/companionchapter16.pdf&#34;&gt;Reading&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;code&gt;iris&lt;/code&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://thiyanga.netlify.app/slides/2020s1sta5173_0/l14#22&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -791,8 +791,8 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/recap.pdf&#34;&gt;Recap&lt;/a&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;📒 Model questions and Answers - Download from google classroom&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/recap.pdf&#34;&gt;Recap&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📒 Model questions and Answers - Download from google classroom&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -808,6 +808,24 @@
 &lt;p&gt;END&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Forecasting Model Territories</title>
+      <link>/talk/isf21-talk/</link>
+      <pubDate>Tue, 29 Jun 2021 00:00:00 +0530</pubDate>
+      <guid>/talk/isf21-talk/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;The field of time series forecasting has  been evolving rapidly with advances in techniques for modelling and forecasting. However, choosing the right technique for a given series is at the heart of forecasting research. This process is challenging because certain forecasting techniques will perform best on some series while different alternative will perform best on other series. Certainly, each forecasting technique has its own territory and dominance. Discovering the conditions under which a forecasting technique will function well and under which not is useful in identifying model territory and dominance. The forecast submissions of the top 25 participants of the M4-competition are used for the analysis. Evaluating forecasting submission only using global measures such as forecasting error measure collapse all local information and does not allow to identify local differences of those methodologies. We explore the relationships between features of the methodologies used to generate forecasts, features of the resulting forecasts and features of the time series to identify model territories and their characteristics. Taking these local information into account can have benefit in developing new methods and shed some light for further development in the field of forecasting.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Large-Scale Time Series Forecasting</title>
+      <link>/talk/norway21-talk/</link>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0530</pubDate>
+      <guid>/talk/norway21-talk/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -2582,10 +2600,10 @@ License&lt;/a&gt;.&lt;/p&gt;
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
       <guid>/project/datasets/</guid>
       <description>&lt;h1 id=&#34;dataset-1&#34;&gt;Dataset 1&lt;/h1&gt;
-&lt;h2 id=&#34;consumers-use-of-food-labels&#34;&gt;Consumers&amp;rsquo; use of Food Labels&lt;/h2&gt;
-&lt;p&gt;Food industry is one of the fastest moving industrial sectors. The glamorous and glittering retail shops and supermarkets are expanding very fast all over the country. The majority of food is pre-packed and presented to the consumer in a labelled container. This study was conducted to evaluate the consumers&amp;rsquo; level of knowledge and use of information provided on food labels in making purchasing decisions. A structured questionnaire-based survey was used for the purpose of the study. This is a cross sectional study done over a period of five months from October, 2010 to March, 2011 with an average of seven interviews being conducted each week. The survey was conducted at supermarkets, retail shops of various sizes in five towns: Colombo 02, Kottawa, Maharagama, Nugegoda and Horana in Sri Lanka. A total of 586 respondents were considered for the study. The dataset and the questionnaire used in this studey can be downloaded from the following links. Please see the questionnaire for the column name description.&lt;/p&gt;
+&lt;h2 id=&#34;consumers-use-of-food-labels&#34;&gt;Consumers&#39; use of Food Labels&lt;/h2&gt;
+&lt;p&gt;Food industry is one of the fastest moving industrial sectors. The glamorous and glittering retail shops and supermarkets are expanding very fast all over the country. The majority of food is pre-packed and presented to the consumer in a labelled container. This study was conducted to evaluate the consumers&#39; level of knowledge and use of information provided on food labels in making purchasing decisions. A structured questionnaire-based survey was used for the purpose of the study. This is a cross sectional study done over a period of five months from October, 2010 to March, 2011 with an average of seven interviews being conducted each week. The survey was conducted at supermarkets, retail shops of various sizes in five towns: Colombo 02, Kottawa, Maharagama, Nugegoda and Horana in Sri Lanka. A total of 586 respondents were considered for the study. The dataset and the questionnaire used in this studey can be downloaded from the following links. Please see the questionnaire for the column name description.&lt;/p&gt;
 &lt;p&gt;Dataset: &lt;a href=&#34;foodlabel.csv&#34;&gt;foodlabel.csv&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;food2ques.pdf&#34;&gt;Questionnaire: Consumers&amp;rsquo; awareness and use of food label information&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;food2ques.pdf&#34;&gt;Questionnaire: Consumers&#39; awareness and use of food label information&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;datasets-in-ggplot2&#34;&gt;Datasets in ggplot2&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;vcdExtra::datasets(&amp;quot;ggplot2&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;</description>
@@ -2873,9 +2891,9 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
 &lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Code block:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;porridge &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;blueberry&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; porridge &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;blueberry&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;:
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Eating...&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;porridge &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;blueberry&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; porridge &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;blueberry&amp;#34;&lt;/span&gt;:
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Eating...&amp;#34;&lt;/span&gt;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
 &lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
@@ -2918,6 +2936,7 @@ Three
 &lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
 &lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;/aside&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
@@ -2945,12 +2964,12 @@ Three
 
 &lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
 &lt;p&gt;Customize the slide style and background&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;#34;/img/boards.jpg&amp;#34; &amp;gt;}}
-{{&amp;lt; slide background-color=&amp;#34;#0000FF&amp;#34; &amp;gt;}}
-{{&amp;lt; slide class=&amp;#34;my-style&amp;#34; &amp;gt;}}
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;{{&amp;lt; &lt;span style=&#34;color:#f92672&#34;&gt;slide&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;background-image&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/img/boards.jpg&amp;#34;&lt;/span&gt; &amp;gt;}}
+{{&amp;lt; &lt;span style=&#34;color:#f92672&#34;&gt;slide&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;background-color&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#0000FF&amp;#34;&lt;/span&gt; &amp;gt;}}
+{{&amp;lt; &lt;span style=&#34;color:#f92672&#34;&gt;slide&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;my-style&amp;#34;&lt;/span&gt; &amp;gt;}}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
-&lt;p&gt;Let&#39;s make headers navy colored.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
 &lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;reveal&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;section&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;
 .&lt;span style=&#34;color:#a6e22e&#34;&gt;reveal&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;section&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;h2&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;
@@ -3319,26 +3338,6 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The seer package provides a novel framework for forecast model selection using time series features. We call this framework FFORMS (Feature-based FORecast Model Selection). The underlying approach involves computing a vector of features from the time series which are then used to select the forecasting model. The model selection process is carried out using a classification algorithm &amp;ndash; we use the time series features as inputs, and the best forecasting algorithm as the output. The classification algorithm can be built in advance of the forecasting exercise (so it is an “offline” procedure). Then, when we have a new time series to forecast, we can quickly compute its features, use the pre-trained classification algorithm to identify the best forecasting model, and produce the required forecasts. Thus, the “online” part of our algorithm requires only feature computation, and the application of a single forecasting model, with no need to estimate large numbers of models within a class, or to carry out a computationally-intensive cross-validation procedure. This framework is compared against several benchmarks and other commonly used forecasting methods.&lt;/p&gt;
 &lt;p&gt;Link to git repository: &lt;a href=&#34;https://github.com/thiyangt/seer&#34;&gt;seer&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Privacy Policy</title>
-      <link>/privacy/</link>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
-      <guid>/privacy/</guid>
-      <description>&lt;p&gt;Available via license: CC BY 4.0&lt;/p&gt;
-&lt;p&gt;Content may be subject to copyright.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Terms</title>
-      <link>/terms/</link>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
-      <guid>/terms/</guid>
-      <description>&lt;p&gt;Available via license: CC BY 4.0&lt;/p&gt;
-&lt;p&gt;Content may be subject to copyright.&lt;/p&gt;
 </description>
     </item>
     

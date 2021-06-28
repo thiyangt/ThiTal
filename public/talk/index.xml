@@ -5,12 +5,30 @@
     <link>/talk/</link>
       <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 27 Oct 2020 00:00:00 +0530</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 29 Jun 2021 00:00:00 +0530</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Recent &amp; Upcoming Talks</title>
       <link>/talk/</link>
     </image>
+    
+    <item>
+      <title>Forecasting Model Territories</title>
+      <link>/talk/isf21-talk/</link>
+      <pubDate>Tue, 29 Jun 2021 00:00:00 +0530</pubDate>
+      <guid>/talk/isf21-talk/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;The field of time series forecasting has  been evolving rapidly with advances in techniques for modelling and forecasting. However, choosing the right technique for a given series is at the heart of forecasting research. This process is challenging because certain forecasting techniques will perform best on some series while different alternative will perform best on other series. Certainly, each forecasting technique has its own territory and dominance. Discovering the conditions under which a forecasting technique will function well and under which not is useful in identifying model territory and dominance. The forecast submissions of the top 25 participants of the M4-competition are used for the analysis. Evaluating forecasting submission only using global measures such as forecasting error measure collapse all local information and does not allow to identify local differences of those methodologies. We explore the relationships between features of the methodologies used to generate forecasts, features of the resulting forecasts and features of the time series to identify model territories and their characteristics. Taking these local information into account can have benefit in developing new methods and shed some light for further development in the field of forecasting.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Large-Scale Time Series Forecasting</title>
+      <link>/talk/norway21-talk/</link>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0530</pubDate>
+      <guid>/talk/norway21-talk/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>A Tool to Detect Potential Data Leaks in Forecasting Competitions</title>

@@ -1,473 +1,286 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/courses/sta33120_stochastic_processes_2020/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/courses/sta33120_stochastic_processes_2020/contentr_stochastic/</loc>
     <lastmod>2020-07-27T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/courses/regression2020/</loc>
     <lastmod>2020-07-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/courses/rmsc2020/</loc>
     <lastmod>2020-07-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/courses/regression2020/contentreg/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/courses/rmsc2020/contentr/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/talk/isf21-talk/</loc>
+    <lastmod>2021-06-29T00:00:00+05:30</lastmod>
+  </url><url>
+    <loc>/talk/</loc>
+    <lastmod>2021-06-29T00:00:00+05:30</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2021-06-29T00:00:00+05:30</lastmod>
+  </url><url>
+    <loc>/talk/norway21-talk/</loc>
+    <lastmod>2021-06-24T00:00:00+05:30</lastmod>
+  </url><url>
     <loc>/post/</loc>
     <lastmod>2021-02-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/r/</loc>
     <lastmod>2021-02-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/regoutputs/</loc>
     <lastmod>2021-02-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/</loc>
     <lastmod>2021-02-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2021-02-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/calendar/</loc>
     <lastmod>2021-02-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/ratio/</loc>
     <lastmod>2020-12-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/ggplot2/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/ggplot2/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/scatterplot/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/r/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/scatterplot/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/scatterplot/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/tidyverse/</loc>
-    <lastmod>2020-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/tidyverse/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/categories/tidyverse/</loc>
+    <lastmod>2020-12-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/talk/isf20-talk/</loc>
     <lastmod>2020-10-27T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>/talk/</loc>
-    <lastmod>2020-10-27T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/loaddatasets/</loc>
     <lastmod>2020-10-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/fable/</loc>
     <lastmod>2020-08-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/ggplot/</loc>
     <lastmod>2020-08-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/datasets/</loc>
     <lastmod>2020-08-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/courses/</loc>
+    <lastmod>2020-07-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/post/available/</loc>
     <lastmod>2020-07-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/statterms1/</loc>
     <lastmod>2020-07-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/mathsday2020/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/mathematics/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/mathematics/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/nature/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/nature/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/science/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/science/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/stem/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/stem/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/women-in-stem/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/women-in-stem/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/demo/</loc>
     <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/</loc>
     <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/datasets/</loc>
     <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/covid19/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/plotly/</loc>
-    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/plotly/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/categories/plotly/</loc>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/shiny/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/shiny/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/rladies/</loc>
     <lastmod>2019-12-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/talk/user19-talk/</loc>
     <lastmod>2019-07-05T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/talk/isf19-talk/</loc>
     <lastmod>2019-06-11T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/dplyr/</loc>
     <lastmod>2019-05-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/dplyr/</loc>
     <lastmod>2019-05-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/dplyr/</loc>
     <lastmod>2019-05-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/authors/admin/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication_types/3/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication/preprint/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/authors/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication_types/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/source-themes/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/gganimate/</loc>
-    <lastmod>2019-03-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/gganimate/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/categories/gganimate/</loc>
+    <lastmod>2019-03-22T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/post/multiplepkg/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/talk/beijingtalk19-talk/</loc>
     <lastmod>2019-03-13T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/rmarkdown/</loc>
-    <lastmod>2019-01-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/rmarkdown/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/categories/rmarkdown/</loc>
+    <lastmod>2019-01-29T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/post/greekletters/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/packageinfo/</loc>
     <lastmod>2018-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/blog/</loc>
     <lastmod>2018-09-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/parallelcomputing/</loc>
     <lastmod>2018-08-08T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/datatypes/</loc>
     <lastmod>2018-08-07T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/talk/jsm18-talk/</loc>
     <lastmod>2018-08-01T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/talk/user18-talk/</loc>
     <lastmod>2018-07-13T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>/privacy/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/terms/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/talk/isf18-talk/</loc>
     <lastmod>2018-06-09T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/talk/japan18-talk/</loc>
     <lastmod>2018-02-12T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/talk/isf17-talk/</loc>
     <lastmod>2017-06-26T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/talk/ssa17-talk/</loc>
     <lastmod>2017-01-01T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/talk/ysc17-talk/</loc>
     <lastmod>2017-01-01T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/timeseries/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/hellor/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/dengue/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication_types/2/</loc>
     <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication/journal-article/</loc>
     <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/authors/robert-ford/</loc>
     <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication_types/1/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication/conference-paper/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/courses/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/software/</loc>
   </url>
-  
 </urlset>
