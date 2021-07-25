@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects | THIYANGA TALAGALA</title>
-    <link>/project/</link>
-      <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
-    <description>Projects</description>
+    <title>Python | THIYANGA TALAGALA</title>
+    <link>/tags/python/</link>
+      <atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <description>Python</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 25 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
-      <title>Projects</title>
-      <link>/project/</link>
+      <title>Python</title>
+      <link>/tags/python/</link>
     </image>
     
     <item>
@@ -46,53 +46,6 @@ contains two main phases (i) The offline phase, and (ii) The online phase. The a
 &lt;p&gt;Figure 3: Overview of MEDIPI algorithm&lt;/p&gt;
 &lt;p&gt;This work is a part of &lt;a href=&#34;https://www.linkedin.com/in/jayani-lakshika-9a0297162/&#34;&gt;Jayani P G Lakshika&lt;/a&gt; BSc (Hons) Degree in Statistics thesis - 2021 thesis supervised me.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Teaching Statistics</title>
-      <link>/project/datasets/</link>
-      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/project/datasets/</guid>
-      <description>&lt;h1 id=&#34;dataset-1&#34;&gt;Dataset 1&lt;/h1&gt;
-&lt;h2 id=&#34;consumers-use-of-food-labels&#34;&gt;Consumers&#39; use of Food Labels&lt;/h2&gt;
-&lt;p&gt;Food industry is one of the fastest moving industrial sectors. The glamorous and glittering retail shops and supermarkets are expanding very fast all over the country. The majority of food is pre-packed and presented to the consumer in a labelled container. This study was conducted to evaluate the consumers&#39; level of knowledge and use of information provided on food labels in making purchasing decisions. A structured questionnaire-based survey was used for the purpose of the study. This is a cross sectional study done over a period of five months from October, 2010 to March, 2011 with an average of seven interviews being conducted each week. The survey was conducted at supermarkets, retail shops of various sizes in five towns: Colombo 02, Kottawa, Maharagama, Nugegoda and Horana in Sri Lanka. A total of 586 respondents were considered for the study. The dataset and the questionnaire used in this studey can be downloaded from the following links. Please see the questionnaire for the column name description.&lt;/p&gt;
-&lt;p&gt;Dataset: &lt;a href=&#34;foodlabel.csv&#34;&gt;foodlabel.csv&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;food2ques.pdf&#34;&gt;Questionnaire: Consumers&#39; awareness and use of food label information&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;datasets-in-ggplot2&#34;&gt;Datasets in ggplot2&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;vcdExtra::datasets(&amp;quot;ggplot2&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>R-Ladies Colombo</title>
-      <link>/project/rladies/</link>
-      <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/project/rladies/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Large-Scale Time Series Forecasting</title>
-      <link>/project/timeseries/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/timeseries/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programming and Data Analysis with R</title>
-      <link>/project/hellor/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/hellor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Small Bite Big threat</title>
-      <link>/project/dengue/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/dengue/</guid>
-      <description></description>
     </item>
     
   </channel>

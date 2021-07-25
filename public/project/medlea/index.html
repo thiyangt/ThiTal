@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="PhD in Statistics">
+  <meta name="description" content="MEDIPI, a statistical machine learning algorithm for medicinal plant identification and a leaf image database for plant classification.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/project/">
+  <link rel="alternate" hreflang="en-us" href="/project/medlea/">
 
   
 
@@ -101,49 +101,98 @@
 
 
   
-  <link rel="alternate" href="/project/index.xml" type="application/rss+xml" title="THIYANGA TALAGALA">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/project/">
+  <link rel="canonical" href="/project/medlea/">
 
   
   
   
   
     
-    
   
   
-  <meta property="twitter:card" content="summary">
+  <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="THIYANGA TALAGALA">
-  <meta property="og:url" content="/project/">
-  <meta property="og:title" content="Projects | THIYANGA TALAGALA">
-  <meta property="og:description" content="PhD in Statistics"><meta property="og:image" content="/img/icon-192.png">
-  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  <meta property="og:url" content="/project/medlea/">
+  <meta property="og:title" content="Statistical Machine Learning for  Medicinal Plant Identification | THIYANGA TALAGALA">
+  <meta property="og:description" content="MEDIPI, a statistical machine learning algorithm for medicinal plant identification and a leaf image database for plant classification."><meta property="og:image" content="/project/medlea/featured.jpeg">
+  <meta property="twitter:image" content="/project/medlea/featured.jpeg"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2020-07-25T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2020-07-25T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-07-25T00:00:00&#43;00:00">
   
-
-  
-
-
-
 
   
 
 
+    
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/project/medlea/"
+  },
+  "headline": "Statistical Machine Learning for  Medicinal Plant Identification",
+  
+  "image": [
+    "/project/medlea/featured.jpeg"
+  ],
+  
+  "datePublished": "2020-07-25T00:00:00Z",
+  "dateModified": "2020-07-25T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Thiyanga S. Talagala"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "THIYANGA TALAGALA",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/img/icon-512.png"
+    }
+  },
+  "description": "MEDIPI, a statistical machine learning algorithm for medicinal plant identification and a leaf image database for plant classification."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
   
 
 
 
 
 
-  <title>Projects | THIYANGA TALAGALA</title>
+  <title>Statistical Machine Learning for  Medicinal Plant Identification | THIYANGA TALAGALA</title>
 
 </head>
 
@@ -484,6 +533,71 @@
 </nav>
 
 
+  <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>Statistical Machine Learning for  Medicinal Plant Identification</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jul 25, 2020
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
   
 
 
@@ -497,86 +611,317 @@
 
 
 
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 480px;">
+  <div style="position: relative">
+    <img src="/project/medlea/featured_hude588a5025db47080eed5849992c7ba5_770155_720x0_resize_q90_lanczos.jpeg" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="benchmark-dataset-for-plant-leaves-classification">Benchmark dataset for plant leaves classification</h1>
+<p>Researchers usually struggle and spend a lot of time
+establishing a database by gathering many leaf samples as raw data. By sharing our database we
+provide a training/test database to other researchers to develop new algorithms or to evaluate their algorithms. Furthermore,  data
+sharing encourages more connections and collaboration between scientists, which leads to better decision-making.</p>
+<h2 id="r-software-package-medlea-medicinal-leaf">R Software Package <code>MedLEA</code>: <strong>Med</strong>icinal <strong>LEA</strong>f</h2>
+<p>The <a href="https://github.com/SMART-Research/MedLEA">MedLEA</a> package provides two datasets.</p>
+<p>i) A dataset of morphological and structural features of 471 medicinal plant leaves. The features of each species are recorded by manually viewing the medicinal plant repository available at (<a href="http://www.instituteofayurveda.org/plants/">http://www.instituteofayurveda.org/plants/</a>). For more information visit at <a href="https://github.com/SMART-Research/MedLEA">https://github.com/SMART-Research/MedLEA</a>.</p>
+<p><img src="leaf.png" alt=""></p>
+<p>Figure 1:  Some morphological characteristics of profiles</p>
+<p>ii) Leaf image data set:  A database of leaf images of medicinal plants in Sri Lanka is
+not yet available. Hence, through this research, we establish a repository of medicinal
+plant images. This repository contains 1099 leaf images of 31 species. There are 29-45 images per species.</p>
+<p><img src="imgleaf.png" alt=""></p>
+<p>Figure 2: Few samples from the MedLEA images</p>
+<p>You can get access to the data set via the MedLEA package.</p>
+<pre><code class="language-{r," data-lang="{r,">install.packages(&quot;MedLEA&quot;)
+</code></pre><h1 id="algorithm-for-leaves-classification">Algorithm for leaves classification</h1>
+<h2 id="medipi-mediicinal-plant-identification-algorithm">MEDIPI (<strong>MEDI</strong>icinal <strong>P</strong>lant <strong>I</strong>dentification) algorithm</h2>
+<p>Medicinal plants are usually identified by practitioners based on years of experience through
+sensory or olfactory senses. The other method of recognizing these plants involves Laboratory-
+based testing, which requires trained skills, data interpretation which is costly and time-intensive. Automatic ways to identify medicinal plants are useful especially for those that are lacking experience in herbal recognition. We introduce a computationally efficient new algorithm for medicinal plant classification.  We
+refer to our medicinal plant classification algorithm as MEDIPI : MEDIicinal Plant
+Identification. MEDIPI
+contains two main phases (i) The offline phase, and (ii) The online phase. The algorithm operates on a set of interpretable features computed from the images.  Figure 3 provides an overview of our algorithm.</p>
+<p><img src="medipi.png" alt=""></p>
+<p>Figure 3: Overview of MEDIPI algorithm</p>
+<p>This work is a part of <a href="https://www.linkedin.com/in/jayani-lakshika-9a0297162/">Jayani P G Lakshika</a> BSc (Hons) Degree in Statistics thesis - 2021 thesis supervised me.</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
   
+  <a class="badge badge-light" href="/tags/r/">R</a>
+  
+  <a class="badge badge-light" href="/tags/python/">Python</a>
+  
+  <a class="badge badge-light" href="/tags/opencv/">OpenCV</a>
+  
+  <a class="badge badge-light" href="/tags/data-mining/">Data Mining</a>
+  
+  <a class="badge badge-light" href="/tags/pattern-recognition/">Pattern Recognition</a>
+  
+  <a class="badge badge-light" href="/tags/machine-learning/">Machine Learning</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/project/medlea/&amp;text=Statistical%20Machine%20Learning%20for%20%20Medicinal%20Plant%20Identification" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/project/medlea/&amp;t=Statistical%20Machine%20Learning%20for%20%20Medicinal%20Plant%20Identification" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Statistical%20Machine%20Learning%20for%20%20Medicinal%20Plant%20Identification&amp;body=/project/medlea/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/project/medlea/&amp;title=Statistical%20Machine%20Learning%20for%20%20Medicinal%20Plant%20Identification" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Statistical%20Machine%20Learning%20for%20%20Medicinal%20Plant%20Identification%20/project/medlea/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/project/medlea/&amp;title=Statistical%20Machine%20Learning%20for%20%20Medicinal%20Plant%20Identification" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
 
   
   
   
     
   
-<div class="universal-wrapper pt-3">
-  <h1>Projects</h1>
-
   
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  
-
-  
-  
-  <div>
-    <h2><a href="/project/medlea/">Statistical Machine Learning for  Medicinal Plant Identification</a></h2>
-    <div class="article-style">
+  <div class="media author-card content-widget-hr">
+    
       
-      MEDIPI, a statistical machine learning algorithm for medicinal plant identification and a leaf image database for plant classification.
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu359a1e8778b22ce5123ff1bde46aef51_2002805_250x250_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">Thiyanga S. Talagala</a></h5>
+      <h6 class="card-subtitle">PhD in Statistics</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/thiyangt" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=7cUtrWUAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/thiyangt" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/covid19/">Dashboard to monitor COVID-19 situation in Sri Lanka</a></li>
+      
+      <li><a href="/post/dplyr/">Summarizing with dplyr</a></li>
+      
+      <li><a href="/post/multiplepkg/">How to install and load multiple packages at once?</a></li>
+      
+      <li><a href="/post/greekletters/">Some useful Greek letters you might use on your reports</a></li>
+      
+      <li><a href="/post/packageinfo/">What&#39;s in a package?</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
       
     </div>
   </div>
-  
-  <div>
-    <h2><a href="/project/datasets/">Teaching Statistics</a></h2>
-    <div class="article-style">
-      
-      Data sets for teaching data analysis.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/project/rladies/">R-Ladies Colombo</a></h2>
-    <div class="article-style">
-      
-      R-Ladies is a worldwide organization whose mission is to promote diversity in the R community.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/project/timeseries/">Large-Scale Time Series Forecasting</a></h2>
-    <div class="article-style">
-      
-      Computationally efficient forecasting methods for large-scale real-time applications
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/project/hellor/">Programming and Data Analysis with R</a></h2>
-    <div class="article-style">
-      
-      The course website for my teaching unit STA 326 2.0 Programming and Data Analysis with R
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/project/dengue/">Small Bite Big threat</a></h2>
-    <div class="article-style">
-      
-      Potential impacts of climate change on dengue fever
-      
-    </div>
-  </div>
-  
-
-  
-
-</div>
+</article>
 
       
 
