@@ -14,15 +14,35 @@ title: Courses
 
 -----
 
+
 # 2021 
 
-## Semester 1 (To begin)
+## Semester 1 
 
 Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura (USJ)
 
-- STA 326 2.0 Programming and Data Analysis with R
+BSc (Hon) Degree in Statistics/ Applied Sciences 
+
+- [STA 326 2.0 Programming and Data Analysis with R](https://hellor.netlify.app/schedule/)
 
 - ASP 460 2.0 Data Visualisation
+
+MSc in Applied Statistics 
+
+- STA 529 2.0 Data Mining
+
+- STA 517 3.0 Programming and Statistical Computing with R
+
+PG Certificate Course in Applied Statistics
+
+- STA 506 2.0 Linear Regression Analysis
+
+
+
+
+
+
+
 
 
 # 2020
