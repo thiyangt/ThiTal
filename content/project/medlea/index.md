@@ -68,6 +68,7 @@ Figure 3: Overview of MEDIPI algorithm
 
 
 
-This work is a part of [Jayani P G Lakshika](https://www.linkedin.com/in/jayani-lakshika-9a0297162/) BSc (Hons) Degree in Statistics thesis - 2021 thesis supervised me.
+This work is a part of [Jayani P G Lakshika](https://www.linkedin.com/in/jayani-lakshika-9a0297162/) BSc (Hons) Degree in Statistics thesis - 2021.
+
 
 
