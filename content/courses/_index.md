@@ -25,7 +25,7 @@ BSc (Hon) Degree in Statistics/ Applied Sciences
 
 - [STA 326 2.0 Programming and Data Analysis with R](https://hellor.netlify.app/schedule/)
 
-- ASP 460 2.0 Data Visualisation
+- [ASP 460 2.0 Data Visualisation](https://tstdataviz.netlify.app/schedule/)
 
 MSc in Applied Statistics 
 
