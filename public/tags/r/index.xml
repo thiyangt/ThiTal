@@ -5,12 +5,48 @@
     <link>/tags/r/</link>
       <atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <description>R</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 26 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 07 Aug 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>R</title>
       <link>/tags/r/</link>
     </image>
+    
+    <item>
+      <title>Weighted LOESS (LOcal regrESSion) </title>
+      <link>/post/blog/</link>
+      <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>/post/blog/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;local-regression-loess-or-locally-weighted-scatter-plot-smoother-lowess&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;code&gt;LO&lt;/code&gt;cal regr&lt;code&gt;ESS&lt;/code&gt;ion (LOESS) or &lt;code&gt;LO&lt;/code&gt;cally &lt;code&gt;WE&lt;/code&gt;ighted &lt;code&gt;S&lt;/code&gt;catter-plot &lt;code&gt;S&lt;/code&gt;moother (LOWESS)&lt;/h1&gt;
+&lt;p&gt;LOESS or LOWESS is a nonparametric technique to fit a smooth curve through points in a scatter plot. This approach uses locally estimated linear regression at its core.&lt;/p&gt;
+&lt;p&gt;The following code illustrates how to include a loess line using the ggplot2 package.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+
+set.seed(1)
+x &amp;lt;- rnorm(60)
+y &amp;lt;- c(rnorm(40), 10, rnorm(19))
+df &amp;lt;- data.frame(x=x, y=y)
+
+## Without weights
+ggplot(data=df, aes(x=x, y=y)) + geom_point() + 
+ geom_smooth(method=loess, legend=FALSE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/loess_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Furthermore your can plot loess smoothing weighting the observations as follows:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;weights &amp;lt;- c(rep(1, 40), 20, rep(1, 19))
+df$weights &amp;lt;- weights
+
+
+ggplot(data=df, aes(x=x, y=y, size=weights, weight=weights)) + geom_point() + 
+ geom_smooth(method=loess, legend=TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/loess_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Reporting your model outputs</title>

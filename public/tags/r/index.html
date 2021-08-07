@@ -126,7 +126,7 @@
   <meta property="og:description" content="PhD in Statistics"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2021-02-26T00:00:00&#43;00:00">
+    <meta property="og:updated_time" content="2021-08-07T00:00:00&#43;00:00">
   
 
   
@@ -520,6 +520,17 @@
   
   
   <div>
+    <h2><a href="/post/blog/">Weighted LOESS (LOcal regrESSion) </a></h2>
+    <div class="article-style">
+      
+      LOcal regrESSion (LOESS) or LOcally WEighted Scatter-plot Smoother (LOWESS) LOESS or LOWESS is a nonparametric technique to fit a smooth curve through points in a scatter plot. This approach uses locally estimated linear regression at its core.
+The following code illustrates how to include a loess line using the ggplot2 package.
+library(ggplot2) set.seed(1) x &lt;- rnorm(60) y &lt;- c(rnorm(40), 10, rnorm(19)) df &lt;- data.frame(x=x, y=y) ## Without weights ggplot(data=df, aes(x=x, y=y)) + geom_point() + geom_smooth(method=loess, legend=FALSE) Furthermore your can plot loess smoothing weighting the observations as follows:
+      
+    </div>
+  </div>
+  
+  <div>
     <h2><a href="/post/regoutputs/">Reporting your model outputs</a></h2>
     <div class="article-style">
       
@@ -597,15 +608,6 @@ Fit a simple linear regression model #install.packages(&quot;parameters&quot;) l
     <div class="article-style">
       
       Commands to type Greek letters on Rmarkdown or Latex
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/packageinfo/">What&#39;s in a package?</a></h2>
-    <div class="article-style">
-      
-      Sometimes we need to view all the functions that are built into an R package.
       
     </div>
   </div>
