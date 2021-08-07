@@ -26,7 +26,7 @@ ggplot(data=df, aes(x=x, y=y)) + geom_point() +
 
  ```
  
-Furthermore your can plot loess smoothing weighting the observations as follows:
+Furthermore, you can plot loess smoothing weighting the observations as follows:
  
  ```{r, comment=NA, warning=FALSE, message=FALSE}
  
