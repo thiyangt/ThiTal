@@ -17,6 +17,11 @@ email_form = 0
 +++
 
   
+## 2021
+
+[Data analysis with R: Sri Lanka Association for the Advancement of Science (SLAAS) - Section C](https://r4fun.netlify.app/blog/)
+
+
 ## 2020
 
- [R Markdown-On your marks, get set, ready, go!](https://rladiescolombo.netlify.app/talk/1_rmarkdown/)
+[R Markdown-On your marks, get set, ready, go!](https://rladiescolombo.netlify.app/talk/1_rmarkdown/)
