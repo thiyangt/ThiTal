@@ -28,9 +28,7 @@
   
     
   
-  <meta name="description" content="LOcal regrESSion (LOESS) or LOcally WEighted Scatter-plot Smoother (LOWESS) LOESS or LOWESS is a nonparametric technique to fit a smooth curve through points in a scatter plot. This approach uses locally estimated linear regression at its core.
-The following code illustrates how to include a loess line using the ggplot2 package.
-library(ggplot2) set.seed(1) x &lt;- rnorm(60) y &lt;- c(rnorm(40), 10, rnorm(19)) df &lt;- data.frame(x=x, y=y) ## Without weights ggplot(data=df, aes(x=x, y=y)) &#43; geom_point() &#43; geom_smooth(method=loess, legend=FALSE) Furthermore your can plot loess smoothing weighting the observations as follows:">
+  <meta name="description" content="Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/blog/">
@@ -122,16 +120,14 @@ library(ggplot2) set.seed(1) x &lt;- rnorm(60) y &lt;- c(rnorm(40), 10, rnorm(19
   
   <meta property="og:site_name" content="THIYANGA TALAGALA">
   <meta property="og:url" content="/post/blog/">
-  <meta property="og:title" content="Weighted LOESS (LOcal regrESSion)  | THIYANGA TALAGALA">
-  <meta property="og:description" content="LOcal regrESSion (LOESS) or LOcally WEighted Scatter-plot Smoother (LOWESS) LOESS or LOWESS is a nonparametric technique to fit a smooth curve through points in a scatter plot. This approach uses locally estimated linear regression at its core.
-The following code illustrates how to include a loess line using the ggplot2 package.
-library(ggplot2) set.seed(1) x &lt;- rnorm(60) y &lt;- c(rnorm(40), 10, rnorm(19)) df &lt;- data.frame(x=x, y=y) ## Without weights ggplot(data=df, aes(x=x, y=y)) &#43; geom_point() &#43; geom_smooth(method=loess, legend=FALSE) Furthermore your can plot loess smoothing weighting the observations as follows:"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:title" content="Customizing boxplots with ggplot2 | THIYANGA TALAGALA">
+  <meta property="og:description" content="Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots."><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-08-07T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2018-09-05T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-08-07T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2018-09-05T00:00:00&#43;00:00">
   
 
   
@@ -159,10 +155,10 @@ library(ggplot2) set.seed(1) x &lt;- rnorm(60) y &lt;- c(rnorm(40), 10, rnorm(19
     "@type": "WebPage",
     "@id": "/post/blog/"
   },
-  "headline": "Weighted LOESS (LOcal regrESSion) ",
+  "headline": "Customizing boxplots with ggplot2",
   
-  "datePublished": "2021-08-07T00:00:00Z",
-  "dateModified": "2021-08-07T00:00:00Z",
+  "datePublished": "2018-09-05T00:00:00Z",
+  "dateModified": "2018-09-05T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -177,7 +173,7 @@ library(ggplot2) set.seed(1) x &lt;- rnorm(60) y &lt;- c(rnorm(40), 10, rnorm(19
       "url": "/img/icon-512.png"
     }
   },
-  "description": "LOcal regrESSion (LOESS) or LOcally WEighted Scatter-plot Smoother (LOWESS) LOESS or LOWESS is a nonparametric technique to fit a smooth curve through points in a scatter plot. This approach uses locally estimated linear regression at its core.\nThe following code illustrates how to include a loess line using the ggplot2 package.\nlibrary(ggplot2) set.seed(1) x \u0026lt;- rnorm(60) y \u0026lt;- c(rnorm(40), 10, rnorm(19)) df \u0026lt;- data.frame(x=x, y=y) ## Without weights ggplot(data=df, aes(x=x, y=y)) + geom_point() + geom_smooth(method=loess, legend=FALSE) Furthermore your can plot loess smoothing weighting the observations as follows:"
+  "description": "Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots."
 }
 </script>
 
@@ -195,7 +191,7 @@ library(ggplot2) set.seed(1) x &lt;- rnorm(60) y &lt;- c(rnorm(40), 10, rnorm(19
 
 
 
-  <title>Weighted LOESS (LOcal regrESSion)  | THIYANGA TALAGALA</title>
+  <title>Customizing boxplots with ggplot2 | THIYANGA TALAGALA</title>
 
 </head>
 
@@ -557,7 +553,7 @@ library(ggplot2) set.seed(1) x &lt;- rnorm(60) y &lt;- c(rnorm(40), 10, rnorm(19
   
   
 <div class="article-container pt-3">
-  <h1>Weighted LOESS (LOcal regrESSion) </h1>
+  <h1>Customizing boxplots with ggplot2</h1>
 
   
 
@@ -576,7 +572,7 @@ library(ggplot2) set.seed(1) x &lt;- rnorm(60) y &lt;- c(rnorm(40), 10, rnorm(19
     
       
     
-    Aug 7, 2021
+    Sep 5, 2018
   </span>
   
 
@@ -585,7 +581,7 @@ library(ggplot2) set.seed(1) x &lt;- rnorm(60) y &lt;- c(rnorm(40), 10, rnorm(19
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    2 min read
   </span>
   
 
@@ -626,33 +622,70 @@ library(ggplot2) set.seed(1) x &lt;- rnorm(60) y &lt;- c(rnorm(40), 10, rnorm(19
 
     <div class="article-style">
       
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
-<div id="local-regression-loess-or-locally-weighted-scatter-plot-smoother-lowess" class="section level1">
-<h1><code>LO</code>cal regr<code>ESS</code>ion (LOESS) or <code>LO</code>cally <code>WE</code>ighted <code>S</code>catter-plot <code>S</code>moother (LOWESS)</h1>
-<p>LOESS or LOWESS is a nonparametric technique to fit a smooth curve through points in a scatter plot. This approach uses locally estimated linear regression at its core.</p>
-<p>The following code illustrates how to include a loess line using the ggplot2 package.</p>
+<p>Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.</p>
+<p>You will learn,</p>
+<ul>
+<li><p>how to change the order of labels</p></li>
+<li><p>how to change the colours</p></li>
+<li><p>how to flip coordinates</p></li>
+</ul>
+<p>Step 1: we create a simple data set.</p>
+<pre class="r"><code>Gender &lt;- rep(c(&quot;Male&quot;, &quot;Female&quot;), times = 3, each = 4)
+Quality &lt;- rep(c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;), times = 1, each = 8)
+Accepted &lt;- seq(0, 100, by = 100/23)
+
+DF &lt;- data.frame(Gender, Quality, Accepted)
+head(DF)</code></pre>
+<pre><code>##   Gender Quality  Accepted
+## 1   Male   Taste  0.000000
+## 2   Male   Taste  4.347826
+## 3   Male   Taste  8.695652
+## 4   Male   Taste 13.043478
+## 5 Female   Taste 17.391304
+## 6 Female   Taste 21.739130</code></pre>
+<p>Step 2: Generate a simple boxplot with ggplot</p>
 <pre class="r"><code>library(ggplot2)
-
-set.seed(1)
-x &lt;- rnorm(60)
-y &lt;- c(rnorm(40), 10, rnorm(19))
-df &lt;- data.frame(x=x, y=y)
-
-## Without weights
-ggplot(data=df, aes(x=x, y=y)) + geom_point() + 
- geom_smooth(method=loess, legend=FALSE)</code></pre>
-<p><img src="/post/loess_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<p>Furthermore your can plot loess smoothing weighting the observations as follows:</p>
-<pre class="r"><code>weights &lt;- c(rep(1, 40), 20, rep(1, 19))
-df$weights &lt;- weights
-
-
-ggplot(data=df, aes(x=x, y=y, size=weights, weight=weights)) + geom_point() + 
- geom_smooth(method=loess, legend=TRUE)</code></pre>
-<p><img src="/post/loess_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-</div>
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() </code></pre>
+<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Step 3: Change the colours, legend position and x-axis order</p>
+<pre class="r"><code>ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;)) +
+  xlab(&quot;&quot;) +
+  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
+  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
+<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Step 4: Change the plotting order: first you have to include <code>factor</code> code to set the order of the levels.</p>
+<pre class="r"><code>DF$Gender_factor &lt;- factor(DF$Gender, levels=c(&quot;Male&quot;, &quot;Female&quot;))
+ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;)) +
+  xlab(&quot;&quot;) +
+  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
+  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
+<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Step 5: Horizontal bar chart: coord_flip()</p>
+<pre class="r"><code>ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;)) +
+  xlab(&quot;&quot;) +
+  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
+  coord_flip()+
+  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
+<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>step 6: Change the legend order similar to plot order: under themes <code>fill=guide_legend(reverse=FALSE)</code></p>
+<pre class="r"><code>ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c(&quot;green&quot;, &quot;orange&quot;)) +
+  xlab(&quot;&quot;) +
+  theme(legend.position = &quot;top&quot;, legend.title = element_blank()) + 
+  guides(fill=guide_legend(reverse=TRUE)) +
+  coord_flip()+
+  scale_x_discrete(limits=c(&quot;Taste&quot;, &quot;Color of package&quot;, &quot;Capacity&quot;))</code></pre>
+<p><img src="/post/boxplot_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 
     </div>
 
@@ -683,7 +716,7 @@ ggplot(data=df, aes(x=x, y=y, size=weights, weight=weights)) + geom_point() +
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/blog/&amp;text=Weighted%20LOESS%20%28LOcal%20regrESSion%29%20" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/blog/&amp;text=Customizing%20boxplots%20with%20ggplot2" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -696,7 +729,7 @@ ggplot(data=df, aes(x=x, y=y, size=weights, weight=weights)) + geom_point() +
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/blog/&amp;t=Weighted%20LOESS%20%28LOcal%20regrESSion%29%20" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/blog/&amp;t=Customizing%20boxplots%20with%20ggplot2" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -709,7 +742,7 @@ ggplot(data=df, aes(x=x, y=y, size=weights, weight=weights)) + geom_point() +
       
       
       <li>
-        <a href="mailto:?subject=Weighted%20LOESS%20%28LOcal%20regrESSion%29%20&amp;body=/post/blog/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Customizing%20boxplots%20with%20ggplot2&amp;body=/post/blog/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -722,7 +755,7 @@ ggplot(data=df, aes(x=x, y=y, size=weights, weight=weights)) + geom_point() +
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/blog/&amp;title=Weighted%20LOESS%20%28LOcal%20regrESSion%29%20" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/blog/&amp;title=Customizing%20boxplots%20with%20ggplot2" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -735,7 +768,7 @@ ggplot(data=df, aes(x=x, y=y, size=weights, weight=weights)) + geom_point() +
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Weighted%20LOESS%20%28LOcal%20regrESSion%29%20%20/post/blog/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Customizing%20boxplots%20with%20ggplot2%20/post/blog/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -748,7 +781,7 @@ ggplot(data=df, aes(x=x, y=y, size=weights, weight=weights)) + geom_point() +
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/blog/&amp;title=Weighted%20LOESS%20%28LOcal%20regrESSion%29%20" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/blog/&amp;title=Customizing%20boxplots%20with%20ggplot2" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -872,23 +905,6 @@ ggplot(data=df, aes(x=x, y=y, size=weights, weight=weights)) + geom_point() +
 
 
   
-  
-  <div class="article-widget content-widget-hr">
-    <h3>Related</h3>
-    <ul>
-      
-      <li><a href="/post/scatterplot/">Highlight data points in a scatterplot</a></li>
-      
-      <li><a href="/post/blog/">Customizing boxplots with ggplot2</a></li>
-      
-      <li><a href="/post/regoutputs/">Reporting your model outputs</a></li>
-      
-      <li><a href="/post/loaddatasets/">Import data into R: Overwritten object names</a></li>
-      
-      <li><a href="/post/datasets/">Working with built-in data sets in R</a></li>
-      
-    </ul>
-  </div>
   
 
 
