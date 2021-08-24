@@ -21,6 +21,8 @@ email_form = 0
 
 [Data analysis with R: Sri Lanka Association for the Advancement of Science (SLAAS) - Section C](https://r4fun.netlify.app/blog/)
 
+[Thesis Writing - MSc in Applied Statistics, USJ](https://talks-thiyanga.netlify.app/6_thesiswriting/main.html#1)
+
 
 ## 2020
 
