@@ -33,7 +33,7 @@ plant images. This repository contains 1099 leaf images of 31 species. There are
 &lt;p&gt;&lt;img src=&#34;imgleaf.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Figure 2: Few samples from the MedLEA images&lt;/p&gt;
 &lt;p&gt;You can get access to the data set via the MedLEA package.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34; data-lang=&#34;{r,&#34;&gt;install.packages(&amp;quot;MedLEA&amp;quot;)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r,&#34; data-lang=&#34;{r,&#34;&gt;install.packages(&amp;quot;MedLEA&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;algorithm-for-leaves-classification&#34;&gt;Algorithm for leaves classification&lt;/h1&gt;
 &lt;h2 id=&#34;medipi-mediicinal-plant-identification-algorithm&#34;&gt;MEDIPI (&lt;strong&gt;MEDI&lt;/strong&gt;icinal &lt;strong&gt;P&lt;/strong&gt;lant &lt;strong&gt;I&lt;/strong&gt;dentification) algorithm&lt;/h2&gt;
 &lt;p&gt;Medicinal plants are usually identified by practitioners based on years of experience through

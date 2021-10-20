@@ -5,12 +5,101 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 07 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 20 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>Covid-19/ Coronavirus data in Sri Lanka</title>
+      <link>/post/covid19srilanka/</link>
+      <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>/post/covid19srilanka/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;img src=&#34;https://github.com/thiyangt/covid19srilanka/blob/main/man/figures/hex.png?raw=true&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;covid19srilanka&lt;/code&gt; package provides a tidy format dataset of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) epidemic in Sri Lanka&lt;/p&gt;
+&lt;div id=&#34;package-installation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Package installation&lt;/h1&gt;
+&lt;p&gt;You can install the development version from &lt;a href=&#34;https://github.com/thiyangt/covid19srilanka&#34;&gt;GitHub&lt;/a&gt; with:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install.packages(&amp;quot;devtools&amp;quot;)
+devtools::install_github(&amp;quot;thiyangt/covid19srilanka&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;snapshot-of-avaliable-datasets&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Snapshot of Avaliable Datasets&lt;/h1&gt;
+&lt;div id=&#34;covid.cases&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;covid.cases&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;covid.cases&lt;/code&gt; provides Covid-19 Cases by Type (Confirmed, Recovered, Death).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(covid19srilanka)
+data(&amp;quot;covid.cases&amp;quot;)
+dplyr::glimpse(covid.cases)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Rows: 2,084
+## Columns: 3
+## $ Date  &amp;lt;date&amp;gt; 2020-03-29, 2020-03-29, 2020-03-29, 2020-03-29, 2020-03-30, 202…
+## $ Type  &amp;lt;chr&amp;gt; &amp;quot;Confirmed&amp;quot;, &amp;quot;Recovered&amp;quot;, &amp;quot;Deaths&amp;quot;, &amp;quot;Active&amp;quot;, &amp;quot;Confirmed&amp;quot;, &amp;quot;Reco…
+## $ Count &amp;lt;dbl&amp;gt; 115, 10, 1, 104, 120, 11, 1, 108, 122, 16, 2, 104, 143, 18, 2, 1…&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(covid.cases)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 × 3
+##   Date       Type      Count
+##   &amp;lt;date&amp;gt;     &amp;lt;chr&amp;gt;     &amp;lt;dbl&amp;gt;
+## 1 2020-03-29 Confirmed   115
+## 2 2020-03-29 Recovered    10
+## 3 2020-03-29 Deaths        1
+## 4 2020-03-29 Active      104
+## 5 2020-03-30 Confirmed   120
+## 6 2020-03-30 Recovered    11&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;district.wise.cases&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;district.wise.cases&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;district.wise.cases&lt;/code&gt; provides daily summary of the Coronavirus (COVID-19) cases by province.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data(&amp;quot;district.wise.cases&amp;quot;)
+dplyr::glimpse(district.wise.cases)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Rows: 832
+## Columns: 3
+## $ Date     &amp;lt;date&amp;gt; 2021-08-01, 2021-08-01, 2021-08-01, 2021-08-01, 2021-08-01, …
+## $ District &amp;lt;chr&amp;gt; &amp;quot;Colombo&amp;quot;, &amp;quot;Gampaha&amp;quot;, &amp;quot;Kalutara&amp;quot;, &amp;quot;Kandy&amp;quot;, &amp;quot;Kurunagala&amp;quot;, &amp;quot;Gal…
+## $ Count    &amp;lt;dbl&amp;gt; 71267, 56085, 33300, 14576, 15327, 14841, 12267, 7778, 5694, …&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(district.wise.cases)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 × 3
+##   Date       District   Count
+##   &amp;lt;date&amp;gt;     &amp;lt;chr&amp;gt;      &amp;lt;dbl&amp;gt;
+## 1 2021-08-01 Colombo    71267
+## 2 2021-08-01 Gampaha    56085
+## 3 2021-08-01 Kalutara   33300
+## 4 2021-08-01 Kandy      14576
+## 5 2021-08-01 Kurunagala 15327
+## 6 2021-08-01 Galle      14841&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;vaccination&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;vaccination&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;vaccination&lt;/code&gt; provides daily summary of vaccination details&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data(&amp;quot;vaccination&amp;quot;)
+dplyr::glimpse(vaccination)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Rows: 471
+## Columns: 4
+## $ Date          &amp;lt;date&amp;gt; 2021-04-29, 2021-04-29, 2021-04-30, 2021-04-30, 2021-05…
+## $ Vaccine       &amp;lt;chr&amp;gt; &amp;quot;Covishield Vaccine&amp;quot;, &amp;quot;Sinopharm Vaccine&amp;quot;, &amp;quot;Covishield V…
+## $ `first dose`  &amp;lt;dbl&amp;gt; 925242, 2469, 925242, 2865, 925242, 2865, 925242, 2865, …
+## $ `Second dose` &amp;lt;dbl&amp;gt; 3445, 2435, 22919, 2435, 60757, 2435, 85653, 2435, 94436…&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(vaccination)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 × 4
+##   Date       Vaccine            `first dose` `Second dose`
+##   &amp;lt;date&amp;gt;     &amp;lt;chr&amp;gt;                     &amp;lt;dbl&amp;gt;         &amp;lt;dbl&amp;gt;
+## 1 2021-04-29 Covishield Vaccine       925242          3445
+## 2 2021-04-29 Sinopharm Vaccine          2469          2435
+## 3 2021-04-30 Covishield Vaccine       925242         22919
+## 4 2021-04-30 Sinopharm Vaccine          2865          2435
+## 5 2021-05-01 Covishield Vaccine       925242         60757
+## 6 2021-05-01 Sinopharm Vaccine          2865          2435&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Please cite the package as follows&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Weighted LOESS (LOcal regrESSion) </title>

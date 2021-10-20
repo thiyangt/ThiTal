@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="PhD in Statistics">
+  <meta name="description" content="The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data in Sri Lanka">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/">
+  <link rel="alternate" hreflang="en-us" href="/post/covid19srilanka/">
 
   
 
@@ -101,14 +101,12 @@
 
 
   
-  <link rel="alternate" href="/post/index.xml" type="application/rss+xml" title="THIYANGA TALAGALA">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/post/">
+  <link rel="canonical" href="/post/covid19srilanka/">
 
   
   
@@ -121,18 +119,65 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="THIYANGA TALAGALA">
-  <meta property="og:url" content="/post/">
-  <meta property="og:title" content="Posts | THIYANGA TALAGALA">
-  <meta property="og:description" content="PhD in Statistics"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/post/covid19srilanka/">
+  <meta property="og:title" content="Covid-19/ Coronavirus data in Sri Lanka | THIYANGA TALAGALA">
+  <meta property="og:description" content="The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data in Sri Lanka"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2021-10-20T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2021-10-20T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2021-10-20T00:00:00&#43;00:00">
   
 
   
 
 
+    
 
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/covid19srilanka/"
+  },
+  "headline": "Covid-19/ Coronavirus data in Sri Lanka",
+  
+  "datePublished": "2021-10-20T00:00:00Z",
+  "dateModified": "2021-10-20T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Thiyanga S. Talagala"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "THIYANGA TALAGALA",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/img/icon-512.png"
+    }
+  },
+  "description": "The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data in Sri Lanka"
+}
+</script>
+
+  
 
   
 
@@ -140,10 +185,13 @@
   
 
 
+  
 
 
 
-  <title>Posts | THIYANGA TALAGALA</title>
+
+
+  <title>Covid-19/ Coronavirus data in Sri Lanka | THIYANGA TALAGALA</title>
 
 </head>
 
@@ -484,44 +532,12 @@
 </nav>
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
+  <article class="article">
 
   
 
-  
-  
-  
-    
-  
-<div class="universal-wrapper pt-3">
-  <h1>Posts</h1>
-
-  
-
-  
-</div>
 
 
-
-<div class="universal-wrapper">
-
-  
-
-  
-  
-    
-      
 
 
 
@@ -533,8 +549,13 @@
 
   
 
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Covid-19/ Coronavirus data in Sri Lanka</h1>
 
-<div class="card-simple">
+  
 
   
     
@@ -573,739 +594,327 @@
 
 </div>
 
-  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/covid19srilanka/">Covid-19/ Coronavirus data in Sri Lanka</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data in Sri Lanka</p>
-  </div>
-  
-
-  
-
 </div>
 
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p><img src="https://github.com/thiyangt/covid19srilanka/blob/main/man/figures/hex.png?raw=true" /></p>
+<p>The <code>covid19srilanka</code> package provides a tidy format dataset of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) epidemic in Sri Lanka</p>
+<div id="package-installation" class="section level1">
+<h1>Package installation</h1>
+<p>You can install the development version from <a href="https://github.com/thiyangt/covid19srilanka">GitHub</a> with:</p>
+<pre class="r"><code># install.packages(&quot;devtools&quot;)
+devtools::install_github(&quot;thiyangt/covid19srilanka&quot;)</code></pre>
+</div>
+<div id="snapshot-of-avaliable-datasets" class="section level1">
+<h1>Snapshot of Avaliable Datasets</h1>
+<div id="covid.cases" class="section level2">
+<h2>covid.cases</h2>
+<p><code>covid.cases</code> provides Covid-19 Cases by Type (Confirmed, Recovered, Death).</p>
+<pre class="r"><code>library(covid19srilanka)
+data(&quot;covid.cases&quot;)
+dplyr::glimpse(covid.cases)</code></pre>
+<pre><code>## Rows: 2,084
+## Columns: 3
+## $ Date  &lt;date&gt; 2020-03-29, 2020-03-29, 2020-03-29, 2020-03-29, 2020-03-30, 202…
+## $ Type  &lt;chr&gt; &quot;Confirmed&quot;, &quot;Recovered&quot;, &quot;Deaths&quot;, &quot;Active&quot;, &quot;Confirmed&quot;, &quot;Reco…
+## $ Count &lt;dbl&gt; 115, 10, 1, 104, 120, 11, 1, 108, 122, 16, 2, 104, 143, 18, 2, 1…</code></pre>
+<pre class="r"><code>head(covid.cases)</code></pre>
+<pre><code>## # A tibble: 6 × 3
+##   Date       Type      Count
+##   &lt;date&gt;     &lt;chr&gt;     &lt;dbl&gt;
+## 1 2020-03-29 Confirmed   115
+## 2 2020-03-29 Recovered    10
+## 3 2020-03-29 Deaths        1
+## 4 2020-03-29 Active      104
+## 5 2020-03-30 Confirmed   120
+## 6 2020-03-30 Recovered    11</code></pre>
+</div>
+<div id="district.wise.cases" class="section level2">
+<h2>district.wise.cases</h2>
+<p><code>district.wise.cases</code> provides daily summary of the Coronavirus (COVID-19) cases by province.</p>
+<pre class="r"><code>data(&quot;district.wise.cases&quot;)
+dplyr::glimpse(district.wise.cases)</code></pre>
+<pre><code>## Rows: 832
+## Columns: 3
+## $ Date     &lt;date&gt; 2021-08-01, 2021-08-01, 2021-08-01, 2021-08-01, 2021-08-01, …
+## $ District &lt;chr&gt; &quot;Colombo&quot;, &quot;Gampaha&quot;, &quot;Kalutara&quot;, &quot;Kandy&quot;, &quot;Kurunagala&quot;, &quot;Gal…
+## $ Count    &lt;dbl&gt; 71267, 56085, 33300, 14576, 15327, 14841, 12267, 7778, 5694, …</code></pre>
+<pre class="r"><code>head(district.wise.cases)</code></pre>
+<pre><code>## # A tibble: 6 × 3
+##   Date       District   Count
+##   &lt;date&gt;     &lt;chr&gt;      &lt;dbl&gt;
+## 1 2021-08-01 Colombo    71267
+## 2 2021-08-01 Gampaha    56085
+## 3 2021-08-01 Kalutara   33300
+## 4 2021-08-01 Kandy      14576
+## 5 2021-08-01 Kurunagala 15327
+## 6 2021-08-01 Galle      14841</code></pre>
+</div>
+<div id="vaccination" class="section level2">
+<h2>vaccination</h2>
+<p><code>vaccination</code> provides daily summary of vaccination details</p>
+<pre class="r"><code>data(&quot;vaccination&quot;)
+dplyr::glimpse(vaccination)</code></pre>
+<pre><code>## Rows: 471
+## Columns: 4
+## $ Date          &lt;date&gt; 2021-04-29, 2021-04-29, 2021-04-30, 2021-04-30, 2021-05…
+## $ Vaccine       &lt;chr&gt; &quot;Covishield Vaccine&quot;, &quot;Sinopharm Vaccine&quot;, &quot;Covishield V…
+## $ `first dose`  &lt;dbl&gt; 925242, 2469, 925242, 2865, 925242, 2865, 925242, 2865, …
+## $ `Second dose` &lt;dbl&gt; 3445, 2435, 22919, 2435, 60757, 2435, 85653, 2435, 94436…</code></pre>
+<pre class="r"><code>head(vaccination)</code></pre>
+<pre><code>## # A tibble: 6 × 4
+##   Date       Vaccine            `first dose` `Second dose`
+##   &lt;date&gt;     &lt;chr&gt;                     &lt;dbl&gt;         &lt;dbl&gt;
+## 1 2021-04-29 Covishield Vaccine       925242          3445
+## 2 2021-04-29 Sinopharm Vaccine          2469          2435
+## 3 2021-04-30 Covishield Vaccine       925242         22919
+## 4 2021-04-30 Sinopharm Vaccine          2865          2435
+## 5 2021-05-01 Covishield Vaccine       925242         60757
+## 6 2021-05-01 Sinopharm Vaccine          2865          2435</code></pre>
+<p>Please cite the package as follows</p>
+</div>
+</div>
+
+    </div>
+
     
-  
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
       
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/covid19srilanka/&amp;text=Covid-19/%20Coronavirus%20data%20in%20Sri%20Lanka" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
       
-    
-    Aug 7, 2021
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/ggplot2/">ggplot2</a></span>
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/blog/">Weighted LOESS (LOcal regrESSion) </a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>LOcal regrESSion (LOESS) or LOcally WEighted Scatter-plot Smoother (LOWESS) LOESS or LOWESS is a nonparametric technique to fit a smooth curve through points in a scatter plot. This approach uses locally estimated linear regression at its core.
-The following code illustrates how to include a loess line using the ggplot2 package.
-library(ggplot2) set.seed(1) x &lt;- rnorm(60) y &lt;- c(rnorm(40), 10, rnorm(19)) df &lt;- data.frame(x=x, y=y) ## Without weights ggplot(data=df, aes(x=x, y=y)) + geom_point() + geom_smooth(method=loess, legend=FALSE) Furthermore your can plot loess smoothing weighting the observations as follows:</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/covid19srilanka/&amp;t=Covid-19/%20Coronavirus%20data%20in%20Sri%20Lanka" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
     
       
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Covid-19/%20Coronavirus%20data%20in%20Sri%20Lanka&amp;body=/post/covid19srilanka/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
     
       
-    
-    Feb 26, 2021
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    11 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/regoutputs/">Reporting your model outputs</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>Let’s see how to format your model outputs with parameters package in R by Lüdecke et al. (2020).
-Fit a simple linear regression model #install.packages(&quot;parameters&quot;) library(parameters) library(magrittr) library(gt) library(see) model &lt;- lm(Volume ~ Height + Girth, data=trees)  Reporting model parameter estimates model %&gt;% model_parameters() Parameter | Coefficient | SE | 95% CI | t(28) | p -------------------------------------------------------------------- (Intercept) | -57.99 | 8.64 | [-75.68, -40.29] | -6.71 | &lt; .</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/covid19srilanka/&amp;title=Covid-19/%20Coronavirus%20data%20in%20Sri%20Lanka" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
     
       
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Covid-19/%20Coronavirus%20data%20in%20Sri%20Lanka%20/post/covid19srilanka/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
     
       
-    
-    Feb 10, 2021
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/calendar/">Organize your priorities using CalendR package in R</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>Maintaining a calendar to organize your events allows for having more smooth and productive day. In this post, I will show you some basic functionalities in CalendaR package.</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
-    
       
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
       
-    
-    Dec 22, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    2 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/ratio/">Ratio matters: change the way you see things!</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>Aspect ratio: what it is and why it is. How often do you fix aspect ratio?</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
-    
+        
       
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
       
-    
-    Dec 15, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a>, <a href="/categories/tidyverse/">tidyverse</a>, <a href="/categories/ggplot2/">ggplot2</a>, <a href="/categories/scatterplot/">scatterplot</a></span>
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/scatterplot/">Highlight data points in a scatterplot</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>Highlight selected points in the scatterplot</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
-    
       
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Oct 14, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a></span>
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/loaddatasets/">Import data into R: Overwritten object names</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>Read data files</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Aug 31, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    2 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a></span>
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/datasets/">Working with built-in data sets in R</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>How to view datasets in a particular package, or or list the available data sets?</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Jul 8, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/available/">Small things matter!</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>Checks whether your package name is taken or available !!
-install.packages(&quot;available&quot;) library(available) available(&quot;seer&quot;) ── seer ─────────────────────────────────────────── Name valid: ✔ Available on CRAN: ✖ Available on Bioconductor: ✖ Available on GitHub: ✖ Abbreviations: http://www.abbreviations.com/seer Wikipedia: https://en.wikipedia.org/wiki/seer Wiktionary: https://en.wiktionary.org/wiki/seer Urban Dictionary: short for &quot;serious&quot;, common [lingo] between [douche bags] and fags. other common words are used such as &quot;[yon]&quot; and &quot;non&quot; http://seer.urbanup.com/5727698 Sentiment:??? This means the name seer is taken in both CRAN and GitHub.</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Jul 4, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    7 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/post/statterms1/">Parameter, Statistic, Random Variable, Estimator and Estimate</a>
-  </h3>
-
-  
-  <div class="article-style">
-    <p>The most common problem while learning Statistics is that students’ lack of understanding of the basic terminologies, notations, definitions and concepts. Think of Statistics as building blocks, and you need a solid foundation to move forward. Here, I explain five common terms in Statistics: i) Parameter, ii) Statistic, iii) Random Variable, iv) Estimator, v) Estimate and their notations.
-I will start with the definition of Population and Sample.
-A population is a complete collection of individuals/ objects that we are interested in.</p>
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
-
-  
-<nav>
-  <ul class="pagination justify-content-center">
-    
-    
-    <li class="page-item"><a class="page-link" href="/post/page/2/">&raquo;</a></li>
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/covid19srilanka/&amp;title=Covid-19/%20Coronavirus%20data%20in%20Sri%20Lanka" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
     
   </ul>
-</nav>
-
-
-
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu359a1e8778b22ce5123ff1bde46aef51_2002805_250x250_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">Thiyanga S. Talagala</a></h5>
+      <h6 class="card-subtitle">PhD in Statistics</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/thiyangt" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=7cUtrWUAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/thiyangt" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
 
       
 

@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ![](https://github.com/thiyangt/covid19srilanka/blob/main/man/figures/hex.png?raw=true)
 
-The covid19srilanka package provides a tidy format dataset of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) epidemic in Sri Lanka
+The `covid19srilanka` package provides a tidy format dataset of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) epidemic in Sri Lanka
 
 # Package installation
 
