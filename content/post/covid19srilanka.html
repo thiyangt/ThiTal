@@ -1,0 +1,89 @@
+---
+title: "Covid-19/ Coronavirus data in Sri Lanka"
+author: Thiyanga Talagala
+date: '2021-10-20'
+category: [R, data, ggplot, tidyverse]
+tag: [R, data, ggplot, tidyverse]
+summary: "The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data in Sri Lanka"
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p><img src="https://github.com/thiyangt/covid19srilanka/blob/main/man/figures/hex.png?raw=true" /></p>
+<p>The covid19srilanka package provides a tidy format dataset of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) epidemic in Sri Lanka</p>
+<div id="package-installation" class="section level1">
+<h1>Package installation</h1>
+<p>You can install the development version from <a href="https://github.com/thiyangt/covid19srilanka">GitHub</a> with:</p>
+<pre class="r"><code># install.packages(&quot;devtools&quot;)
+devtools::install_github(&quot;thiyangt/covid19srilanka&quot;)</code></pre>
+</div>
+<div id="snapshot-of-avaliable-datasets" class="section level1">
+<h1>Snapshot of Avaliable Datasets</h1>
+<div id="covid.cases" class="section level2">
+<h2>covid.cases</h2>
+<p><code>covid.cases</code> provides Covid-19 Cases by Type (Confirmed, Recovered, Death).</p>
+<pre class="r"><code>library(covid19srilanka)
+data(&quot;covid.cases&quot;)
+dplyr::glimpse(covid.cases)</code></pre>
+<pre><code>## Rows: 2,084
+## Columns: 3
+## $ Date  &lt;date&gt; 2020-03-29, 2020-03-29, 2020-03-29, 2020-03-29, 2020-03-30, 202…
+## $ Type  &lt;chr&gt; &quot;Confirmed&quot;, &quot;Recovered&quot;, &quot;Deaths&quot;, &quot;Active&quot;, &quot;Confirmed&quot;, &quot;Reco…
+## $ Count &lt;dbl&gt; 115, 10, 1, 104, 120, 11, 1, 108, 122, 16, 2, 104, 143, 18, 2, 1…</code></pre>
+<pre class="r"><code>head(covid.cases)</code></pre>
+<pre><code>## # A tibble: 6 × 3
+##   Date       Type      Count
+##   &lt;date&gt;     &lt;chr&gt;     &lt;dbl&gt;
+## 1 2020-03-29 Confirmed   115
+## 2 2020-03-29 Recovered    10
+## 3 2020-03-29 Deaths        1
+## 4 2020-03-29 Active      104
+## 5 2020-03-30 Confirmed   120
+## 6 2020-03-30 Recovered    11</code></pre>
+</div>
+<div id="district.wise.cases" class="section level2">
+<h2>district.wise.cases</h2>
+<p><code>district.wise.cases</code> provides daily summary of the Coronavirus (COVID-19) cases by province.</p>
+<pre class="r"><code>data(&quot;district.wise.cases&quot;)
+dplyr::glimpse(district.wise.cases)</code></pre>
+<pre><code>## Rows: 832
+## Columns: 3
+## $ Date     &lt;date&gt; 2021-08-01, 2021-08-01, 2021-08-01, 2021-08-01, 2021-08-01, …
+## $ District &lt;chr&gt; &quot;Colombo&quot;, &quot;Gampaha&quot;, &quot;Kalutara&quot;, &quot;Kandy&quot;, &quot;Kurunagala&quot;, &quot;Gal…
+## $ Count    &lt;dbl&gt; 71267, 56085, 33300, 14576, 15327, 14841, 12267, 7778, 5694, …</code></pre>
+<pre class="r"><code>head(district.wise.cases)</code></pre>
+<pre><code>## # A tibble: 6 × 3
+##   Date       District   Count
+##   &lt;date&gt;     &lt;chr&gt;      &lt;dbl&gt;
+## 1 2021-08-01 Colombo    71267
+## 2 2021-08-01 Gampaha    56085
+## 3 2021-08-01 Kalutara   33300
+## 4 2021-08-01 Kandy      14576
+## 5 2021-08-01 Kurunagala 15327
+## 6 2021-08-01 Galle      14841</code></pre>
+</div>
+<div id="vaccination" class="section level2">
+<h2>vaccination</h2>
+<p><code>vaccination</code> provides daily summary of vaccination details</p>
+<pre class="r"><code>data(&quot;vaccination&quot;)
+dplyr::glimpse(vaccination)</code></pre>
+<pre><code>## Rows: 471
+## Columns: 4
+## $ Date          &lt;date&gt; 2021-04-29, 2021-04-29, 2021-04-30, 2021-04-30, 2021-05…
+## $ Vaccine       &lt;chr&gt; &quot;Covishield Vaccine&quot;, &quot;Sinopharm Vaccine&quot;, &quot;Covishield V…
+## $ `first dose`  &lt;dbl&gt; 925242, 2469, 925242, 2865, 925242, 2865, 925242, 2865, …
+## $ `Second dose` &lt;dbl&gt; 3445, 2435, 22919, 2435, 60757, 2435, 85653, 2435, 94436…</code></pre>
+<pre class="r"><code>head(vaccination)</code></pre>
+<pre><code>## # A tibble: 6 × 4
+##   Date       Vaccine            `first dose` `Second dose`
+##   &lt;date&gt;     &lt;chr&gt;                     &lt;dbl&gt;         &lt;dbl&gt;
+## 1 2021-04-29 Covishield Vaccine       925242          3445
+## 2 2021-04-29 Sinopharm Vaccine          2469          2435
+## 3 2021-04-30 Covishield Vaccine       925242         22919
+## 4 2021-04-30 Sinopharm Vaccine          2865          2435
+## 5 2021-05-01 Covishield Vaccine       925242         60757
+## 6 2021-05-01 Sinopharm Vaccine          2865          2435</code></pre>
+<p>Please cite the package as follows</p>
+</div>
+</div>

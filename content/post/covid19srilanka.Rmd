@@ -1,0 +1,61 @@
+---
+title: "Covid-19/ Coronavirus data in Sri Lanka"
+author: Thiyanga Talagala
+date: '2021-10-20'
+category: [R, data, ggplot, tidyverse]
+tag: [R, data, ggplot, tidyverse]
+summary: "The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data in Sri Lanka"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+![](https://github.com/thiyangt/covid19srilanka/blob/main/man/figures/hex.png?raw=true)
+
+The covid19srilanka package provides a tidy format dataset of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) epidemic in Sri Lanka
+
+# Package installation
+
+
+You can install the development version from [GitHub](https://github.com/thiyangt/covid19srilanka) with:
+
+```r
+# install.packages("devtools")
+devtools::install_github("thiyangt/covid19srilanka")
+```
+
+# Snapshot of Avaliable Datasets
+
+## covid.cases
+
+`covid.cases` provides Covid-19 Cases by Type (Confirmed, Recovered, Death).
+
+```{r}
+library(covid19srilanka)
+data("covid.cases")
+dplyr::glimpse(covid.cases)
+head(covid.cases)
+```
+
+## district.wise.cases
+
+`district.wise.cases` provides daily summary of the Coronavirus (COVID-19) cases by province.
+
+```{r}
+data("district.wise.cases")
+dplyr::glimpse(district.wise.cases)
+head(district.wise.cases)
+```
+
+## vaccination
+
+`vaccination` provides daily summary of vaccination details
+
+```{r}
+data("vaccination")
+dplyr::glimpse(vaccination)
+head(vaccination)
+```
+
+Please cite the package as follows
