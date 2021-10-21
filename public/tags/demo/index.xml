@@ -5,12 +5,20 @@
     <link>/tags/demo/</link>
       <atom:link href="/tags/demo/index.xml" rel="self" type="application/rss+xml" />
     <description>Demo</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 21 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Demo</title>
       <link>/tags/demo/</link>
     </image>
+    
+    <item>
+      <title>Data of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) epidemic in Sri Lanka</title>
+      <link>/project/covid19srilanka/</link>
+      <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>/project/covid19srilanka/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Teaching Statistics</title>

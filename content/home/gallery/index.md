@@ -19,3 +19,6 @@ subtitle = ""
 
 <i class="fa fa-cog fa-spin" style="color:Maroon"></i> [tsdataleaks](https://github.com/thiyangt/tsdataleaks): R Package for detecting data leakages in time series forecasting competitions.
 
+<i class="fa fa-cog fa-spin" style="color:Maroon"></i> [nic](https://github.com/thiyangt/nic): Nature inspired colour palette for data visualization.
+
+

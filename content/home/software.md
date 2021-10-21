@@ -82,3 +82,7 @@ subtitle = ""
 
 <i class="fa fa-cog fa-spin" style="color:Maroon"></i> [MedLEA](https://github.com/SMART-Research/MedLEA): The MedLEA package provides morphological and structural features of 471 medicinal plant leaves and 1099 leaf images of 31 species and 29-45 images per species.
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/MedLEA)](https://CRAN.R-project.org/package=MedLEA)
+
+<i class="fa fa-cog fa-spin" style="color:Maroon"></i> [ceylon](https://github.com/thiyangt/ceylon): An R package to plot maps of Sri Lanka
+
+<i class="fa fa-cog fa-spin" style="color:Maroon"></i> [covid19srilanka](https://github.com/thiyangt/covid19srilanka): An R package to get tidy format dataset of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) epidemic in Sri Lanka.

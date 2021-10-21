@@ -17,6 +17,20 @@ title: Courses
 
 # 2021 
 
+## Semester 2
+
+Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura (USJ)
+
+- [STA 474 2.0 Statistical Consultancy](https://scs-fas-sjp.netlify.app/)
+
+- [STA 331 2.0 Stochastic Processes](https://thiyanga.netlify.app/courses/sta33120_stochastic_processes_2020/)
+
+- [STA 225 2.0 Design and Analysis of Experiments](https://smart-doe.netlify.app/) 
+
+MSc in Applied Statistics 
+
+- STA 529 2.0 Data Mining
+
 ## Semester 1 
 
 Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura (USJ)
@@ -29,7 +43,6 @@ BSc (Hon) Degree in Statistics/ Applied Sciences
 
 MSc in Applied Statistics 
 
-- STA 529 2.0 Data Mining
 
 - STA 517 3.0 Programming and Statistical Computing with R
 

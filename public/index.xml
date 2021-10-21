@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>THIYANGA TALAGALA</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 20 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 21 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>THIYANGA TALAGALA</title>
@@ -811,6 +811,14 @@
     </item>
     
     <item>
+      <title>Data of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) epidemic in Sri Lanka</title>
+      <link>/project/covid19srilanka/</link>
+      <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>/project/covid19srilanka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Covid-19/ Coronavirus data in Sri Lanka</title>
       <link>/post/covid19srilanka/</link>
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
@@ -894,6 +902,7 @@ dplyr::glimpse(vaccination)&lt;/code&gt;&lt;/pre&gt;
 ## 5 2021-05-01 Covishield Vaccine       925242         60757
 ## 6 2021-05-01 Sinopharm Vaccine          2865          2435&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Please cite the package as follows&lt;/p&gt;
+&lt;p&gt;Thiyanga S. Talagala, covid19srilanka: a tidy format dataset of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) epidemic in Sri Lanka , (2021), GitHub repository, &lt;a href=&#34;https://github.com/thiyangt/covid19srilanka&#34; class=&#34;uri&#34;&gt;https://github.com/thiyangt/covid19srilanka&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

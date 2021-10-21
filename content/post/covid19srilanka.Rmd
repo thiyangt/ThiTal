@@ -59,3 +59,5 @@ head(vaccination)
 ```
 
 Please cite the package as follows
+
+Thiyanga S. Talagala, covid19srilanka: a tidy format dataset of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) epidemic in Sri Lanka , (2021), GitHub repository, https://github.com/thiyangt/covid19srilanka
