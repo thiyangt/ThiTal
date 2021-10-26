@@ -1,0 +1,70 @@
+---
+title: "Project 1"
+author: "Thiyanga Talagala"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Project ID:**
+
+2021_1
+
+**Date - Assigned: **
+
+2021 October 21
+
+**Date - Completed:**
+
+2021 October 26
+
+**Client name and details:**
+
+Ann Dick, MBA, University of Sri Jayewardenepura
+
+**Project details:**
+
+Type poject title and description
+
+
+
+**Consulting problem:**
+
+
+You can use the application form to fill this part (Data Analysis and Interpretation of Results, Software, etc.)
+
+**Team members:**
+
+**Meeting summary:**
+
+\begin{table}[!h]
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|l|}{Date: 31 July 2020} \\ \hline
+      Time     &      9.00am - 10.00am     \\ \hline
+       Mode    &     Zoom      \\ \hline
+       Description    &     Client explained..................................................      \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|l|}{Date: 02 August 2020} \\ \hline
+      Time     &      9.00am - 10.00am     \\ \hline
+       Mode    &     Zoom      \\ \hline
+       Description    &     Client explained..................................................      \\ \hline
+\end{tabular}
+\end{table}
+
+**Final outputs:**
+
+**Client report id:**
+
+**Remarks/ Other:**
+
+
+

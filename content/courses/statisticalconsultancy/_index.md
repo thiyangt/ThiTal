@@ -14,19 +14,17 @@ type: docs
 weight: 1
 ---
 
-## STA 331 2.0 Stochastic Processes
+## STA 474 2.0 Statistical Consultancy
 
 BSc (Hons) Statistics, Department of Statistics, University of Sri Jayewardenepura.
 
 ## Course information
 
-Course website: [here](logo.png)
-
 Year and Semester: 2021 - Semester 2
 
-Commencement date: 26 October 2021
+Commencement date: 11 October 2021
 
-Course meeting time: Tuesday, 1.00pm - 3.00pm
+Course meeting time: Friday, 1.00pm - 3.00pm
 
 Location: Online/ Department of Statistics, Faculty of Applied Sciences, USJ
 
@@ -41,3 +39,17 @@ Email: ttalagala@sjp.ac.lk
 Office hours: Tuesday 3:00pm – 4:00pm. Email me for other times.
 
 E-mail is the best way to get in contact with me—I will respond to all course-related e-mails within 24 hours.
+
+# Tools: To consultants
+
+Project log form:
+
+[pdf](/SCS/template_logform.pdf)
+
+[rmd](/SCS/template_logform.Rmd)
+
+
+
+# Tools: To clients
+
+website: https://scs-fas-sjp.netlify.app/
