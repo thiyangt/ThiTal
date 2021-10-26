@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>THIYANGA TALAGALA</title>
+    <link>/courses/sta33120_stochastic_processes_2021/</link>
+      <atom:link href="/courses/sta33120_stochastic_processes_2021/index.xml" rel="self" type="application/rss+xml" />
+    <description>THIYANGA TALAGALA</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 24 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>THIYANGA TALAGALA</title>
+      <link>/courses/sta33120_stochastic_processes_2021/</link>
+    </image>
+    
+    <item>
+      <title>STA 331 2.0 Stochastic Processes</title>
+      <link>/courses/sta33120_stochastic_processes_2021/contentr_stochastic/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 +0100</pubDate>
+      <guid>/courses/sta33120_stochastic_processes_2021/contentr_stochastic/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

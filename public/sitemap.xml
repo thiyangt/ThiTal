@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/courses/sta33120_stochastic_processes_2021/</loc>
+    <lastmod>2021-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/courses/sta33120_stochastic_processes_2021/contentr_stochastic/</loc>
+    <lastmod>2020-10-26T00:00:00+01:00</lastmod>
+  </url><url>
     <loc>/courses/sta33120_stochastic_processes_2020/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
   </url><url>
@@ -20,6 +26,12 @@
     <loc>/courses/rmsc2020/contentr/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
+    <loc>/courses/</loc>
+    <lastmod>2021-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2021-10-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/project/covid19srilanka/</loc>
     <lastmod>2021-10-21T00:00:00+00:00</lastmod>
   </url><url>
@@ -30,9 +42,6 @@
     <lastmod>2021-10-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
     <lastmod>2021-10-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/covid19srilanka/</loc>
@@ -106,9 +115,6 @@
   </url><url>
     <loc>/post/datasets/</loc>
     <lastmod>2020-08-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/courses/</loc>
-    <lastmod>2020-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/data-mining/</loc>
     <lastmod>2020-07-25T00:00:00+00:00</lastmod>
