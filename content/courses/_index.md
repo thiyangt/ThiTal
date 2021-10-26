@@ -21,11 +21,13 @@ title: Courses
 
 Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura (USJ)
 
-- [STA 474 2.0 Statistical Consultancy](https://scs-fas-sjp.netlify.app/)
+
+- [STA 225 2.0 Design and Analysis of Experiments](https://smart-doe.netlify.app/) 
+
 
 - [STA 331 2.0 Stochastic Processes](https://stochasticprocesses.netlify.app/)
 
-- [STA 225 2.0 Design and Analysis of Experiments](https://smart-doe.netlify.app/) 
+- [STA 474 2.0 Statistical Consultancy](https://scs-fas-sjp.netlify.app/) [Course information](https://thiyanga.netlify.app/courses/sta33120_stochastic_processes_2021/)
 
 MSc in Applied Statistics 
 
