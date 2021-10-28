@@ -12,8 +12,8 @@ education:
     year: 2015
   - course: BSc (Hons) Special Degree in Statistics
     institution: University of Sri Jayewardenepura, Sri Lanka
-    year: 2012
-  - course: Professor R A Dayananda Gold Medalist and Batch first, 2012
+    year: 2011
+  - course: Professor R A Dayananda Gold Medalist and Batch first, 2011
 email: ""
 interests:
 - Time Series Analysis
