@@ -27,7 +27,9 @@ Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewar
 
 - [STA 331 2.0 Stochastic Processes](https://stochasticprocesses.netlify.app/)
 
-- [STA 474 2.0 Statistical Consultancy](https://scs-fas-sjp.netlify.app/) [Course information](https://thiyanga.netlify.app/courses/sta33120_stochastic_processes_2021/)
+- [STA 474 2.0 Statistical Consultancy](https://scs-fas-sjp.netlify.app/) 
+
+[Course information](https://thiyanga.netlify.app/courses/statisticalconsultancy/)
 
 MSc in Applied Statistics 
 

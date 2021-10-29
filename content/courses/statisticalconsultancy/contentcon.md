@@ -1,7 +1,7 @@
 ---
-date: "2020-10-26T00:00:00+01:00"
+date: "2021-10-26T00:00:00+01:00"
 draft: false
-linktitle: https://thiyanga.netlify.app/courses/statisticalconsultancy/
+linktitle:
 menu:
   331:
     parent: 
