@@ -2,7 +2,7 @@
 date: "2021-10-24T00:00:00Z"
 draft: false
 lastmod: "2021-10-25T00:00:00Z"
-linktitle: ".."
+linktitle: "https://thiyanga.netlify.app/courses/statisticalconsultancy/"
 menu:
   331: 
     name: 
