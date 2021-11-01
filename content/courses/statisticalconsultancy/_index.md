@@ -42,7 +42,15 @@ E-mail is the best way to get in contact with me—I will respond to all course-
 
 # Tools: To consultants
 
-Project log form:
+**1. Slides**
+
+[Click here](https://thiyangt.github.io/statconsultancy/#1)
+
+**2. Gitrepo**
+
+[Click here](https://github.com/thiyangt/statconsultancy)
+
+**3. Project log form**
 
 [pdf](/SCS/template_logform.pdf)
 
