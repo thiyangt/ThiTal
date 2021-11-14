@@ -41,6 +41,9 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/thiyangt
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/thiyanga-talagala-24bb63134/
 superuser: true
 user_groups:
 - Researchers
