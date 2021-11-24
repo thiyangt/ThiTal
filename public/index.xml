@@ -2562,7 +2562,7 @@ plant images. This repository contains 1099 leaf images of 31 species. There are
 &lt;p&gt;Figure 5: Few samples from the MedLEA images&lt;/p&gt;
 &lt;p&gt;You can get access to the data set via the MedLEA package.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r,&#34; data-lang=&#34;{r,&#34;&gt;install.packages(&amp;quot;MedLEA&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;research-outputs&#34;&gt;Research outputs&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;research-outputs&#34;&gt;Research outputs&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Papers&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Lakshika, J. P., &amp;amp; Talagala, T. S. (2021). Computer-aided Interpretable Features for Leaf Image Classification. arXiv preprint arXiv:2106.08077.](&lt;a href=&#34;https://arxiv.org/abs/2106.08077&#34;&gt;https://arxiv.org/abs/2106.08077&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Software&lt;/strong&gt;&lt;/p&gt;
@@ -2570,11 +2570,13 @@ plant images. This repository contains 1099 leaf images of 31 species. There are
 https://CRAN.R-project.org/package=MedLEA&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=MedLEA&#34;&gt;&lt;img src=&#34;http://www.r-pkg.org/badges/version/MedLEA&#34; alt=&#34;CRAN\_Status\_Badge&#34;&gt;&lt;/a&gt;
 &lt;a href=&#34;https://cran.r-project.org/package=MedLEA&#34;&gt;&lt;img src=&#34;http://cranlogs.r-pkg.org/badges/MedLEA&#34; alt=&#34;Downloads&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&lt;strong&gt;Conference talks&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCqfu75XVtV4s-W5aiw1tavQ&#34;&gt;Click here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Research reproducibility&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;R codes and data to reproduce the results in the paper &amp;ldquo;Computer-aided Interpretable Features for Leaf Image Classification&amp;rdquo; available at &lt;a href=&#34;https://github.com/SMART-Research/leaffeatures_paper&#34;&gt;https://github.com/SMART-Research/leaffeatures_paper&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This work is a part of &lt;a href=&#34;https://www.linkedin.com/in/jayani-lakshika-9a0297162/&#34;&gt;Jayani P G Lakshika&lt;/a&gt; BSc (Hons) Degree in Statistics thesis - 2021, which was supervised by me.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;octave.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     

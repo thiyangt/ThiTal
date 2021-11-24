@@ -80,7 +80,7 @@ install.packages("MedLEA")
 
 
 
-## Research outputs
+# Research outputs
 
 **Papers**
 
@@ -96,6 +96,8 @@ https://CRAN.R-project.org/package=MedLEA
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/MedLEA)](https://CRAN.R-project.org/package=MedLEA)
 [![Downloads](http://cranlogs.r-pkg.org/badges/MedLEA)](https://cran.r-project.org/package=MedLEA)
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Do you want a new data package for teaching? MedLEA package provides morphological and structural features of 471 medicinal plant leaves and 1099 leaf images of 31 species and 29-45 images per species. <a href="https://t.co/y14wvvMBH8">https://t.co/y14wvvMBH8</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/DataVisualization?src=hash&amp;ref_src=twsrc%5Etfw">#DataVisualization</a> <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> <a href="https://twitter.com/hashtag/MachineLearning?src=hash&amp;ref_src=twsrc%5Etfw">#MachineLearning</a> <a href="https://t.co/rYpyj16rTs">pic.twitter.com/rYpyj16rTs</a></p>&mdash; Thiyanga Talagala (@thiyangt) <a href="https://twitter.com/thiyangt/status/1381060311357136896?ref_src=twsrc%5Etfw">April 11, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 **Conference talks**
 
 [Click here](https://www.youtube.com/channel/UCqfu75XVtV4s-W5aiw1tavQ)
@@ -108,6 +110,7 @@ R codes and data to reproduce the results in the paper "Computer-aided Interpret
 
 This work is a part of [Jayani P G Lakshika](https://www.linkedin.com/in/jayani-lakshika-9a0297162/) BSc (Hons) Degree in Statistics thesis - 2021, which was supervised by me.
 
+![](octave.jpg)
 
 
 
