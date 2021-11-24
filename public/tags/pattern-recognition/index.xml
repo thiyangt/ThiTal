@@ -17,24 +17,7 @@
       <link>/project/medlea/</link>
       <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/project/medlea/</guid>
-      <description>&lt;h1 id=&#34;benchmark-dataset-for-plant-leaves-classification&#34;&gt;Benchmark dataset for plant leaves classification&lt;/h1&gt;
-&lt;p&gt;Researchers usually struggle and spend a lot of time
-establishing a database by gathering many leaf samples as raw data. By sharing our database we
-provide a training/test database to other researchers to develop new algorithms or to evaluate their algorithms. Furthermore,  data
-sharing encourages more connections and collaboration between scientists, which leads to better decision-making.&lt;/p&gt;
-&lt;h2 id=&#34;r-software-package-medlea-medicinal-leaf&#34;&gt;R Software Package &lt;code&gt;MedLEA&lt;/code&gt;: &lt;strong&gt;Med&lt;/strong&gt;icinal &lt;strong&gt;LEA&lt;/strong&gt;f&lt;/h2&gt;
-&lt;p&gt;The &lt;a href=&#34;https://github.com/SMART-Research/MedLEA&#34;&gt;MedLEA&lt;/a&gt; package provides two datasets.&lt;/p&gt;
-&lt;p&gt;i) A dataset of morphological and structural features of 471 medicinal plant leaves. The features of each species are recorded by manually viewing the medicinal plant repository available at (&lt;a href=&#34;http://www.instituteofayurveda.org/plants/&#34;&gt;http://www.instituteofayurveda.org/plants/&lt;/a&gt;). For more information visit at &lt;a href=&#34;https://github.com/SMART-Research/MedLEA&#34;&gt;https://github.com/SMART-Research/MedLEA&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;leaf.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Figure 1:  Some morphological characteristics of profiles&lt;/p&gt;
-&lt;p&gt;ii) Leaf image data set:  A database of leaf images of medicinal plants in Sri Lanka is
-not yet available. Hence, through this research, we establish a repository of medicinal
-plant images. This repository contains 1099 leaf images of 31 species. There are 29-45 images per species.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;imgleaf.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Figure 2: Few samples from the MedLEA images&lt;/p&gt;
-&lt;p&gt;You can get access to the data set via the MedLEA package.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r,&#34; data-lang=&#34;{r,&#34;&gt;install.packages(&amp;quot;MedLEA&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;algorithm-for-leaves-classification&#34;&gt;Algorithm for leaves classification&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;algorithm-for-leaves-classification&#34;&gt;Algorithm for leaves classification&lt;/h1&gt;
 &lt;h2 id=&#34;medipi-mediicinal-plant-identification-algorithm&#34;&gt;MEDIPI (&lt;strong&gt;MEDI&lt;/strong&gt;icinal &lt;strong&gt;P&lt;/strong&gt;lant &lt;strong&gt;I&lt;/strong&gt;dentification) algorithm&lt;/h2&gt;
 &lt;p&gt;Medicinal plants are usually identified by practitioners based on years of experience through
 sensory or olfactory senses. The other method of recognizing these plants involves Laboratory-
@@ -43,13 +26,29 @@ refer to our medicinal plant classification algorithm as MEDIPI : MEDIicinal Pla
 Identification. MEDIPI
 contains two main phases (i) The offline phase, and (ii) The online phase. The algorithm operates on a set of interpretable features (see Figure 4) computed from the leaf images.  Figure 3 provides an overview of our algorithm.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;medipi.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Figure 3: Overview of MEDIPI algorithm&lt;/p&gt;
+&lt;p&gt;Figure 1: Overview of MEDIPI algorithm&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;sh_f.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Figure 4: Leaf image features&lt;/p&gt;
-&lt;p&gt;This work is a part of &lt;a href=&#34;https://www.linkedin.com/in/jayani-lakshika-9a0297162/&#34;&gt;Jayani P G Lakshika&lt;/a&gt; BSc (Hons) Degree in Statistics thesis - 2021, which was supervised by me.&lt;/p&gt;
-&lt;h2 id=&#34;research-outputs&#34;&gt;Research outputs&lt;/h2&gt;
+&lt;p&gt;Figure 2: Leaf image features&lt;/p&gt;
+&lt;h1 id=&#34;benchmark-dataset-for-plant-leaves-classification&#34;&gt;Benchmark dataset for plant leaves classification&lt;/h1&gt;
+&lt;p&gt;Researchers usually struggle and spend a lot of time
+establishing a database by gathering many leaf samples as raw data. By sharing our database we
+provide a training/test database to other researchers to develop new algorithms or to evaluate their algorithms. Furthermore,  data
+sharing encourages more connections and collaboration between scientists, which leads to better decision-making.&lt;/p&gt;
+&lt;h2 id=&#34;r-software-package-medlea-medicinal-leaf&#34;&gt;R Software Package &lt;code&gt;MedLEA&lt;/code&gt;: &lt;strong&gt;Med&lt;/strong&gt;icinal &lt;strong&gt;LEA&lt;/strong&gt;f&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&#34;https://github.com/SMART-Research/MedLEA&#34;&gt;MedLEA&lt;/a&gt; package provides two datasets.&lt;/p&gt;
+&lt;p&gt;i) A dataset of morphological and structural features of 471 medicinal plant leaves. The features of each species are recorded by manually viewing the medicinal plant repository available at (&lt;a href=&#34;http://www.instituteofayurveda.org/plants/&#34;&gt;http://www.instituteofayurveda.org/plants/&lt;/a&gt;). For more information visit at &lt;a href=&#34;https://github.com/SMART-Research/MedLEA&#34;&gt;https://github.com/SMART-Research/MedLEA&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;leaf.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Figure 3:  Some morphological characteristics of profiles&lt;/p&gt;
+&lt;p&gt;ii) Leaf image data set:  A database of leaf images of medicinal plants in Sri Lanka is
+not yet available. Hence, through this research, we establish a repository of medicinal
+plant images. This repository contains 1099 leaf images of 31 species. There are 29-45 images per species.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;imgleaf.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Figure 4: Few samples from the MedLEA images&lt;/p&gt;
+&lt;p&gt;You can get access to the data set via the MedLEA package.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r,&#34; data-lang=&#34;{r,&#34;&gt;install.packages(&amp;quot;MedLEA&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;research-outputs&#34;&gt;Research outputs&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Papers&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2106.08077&#34;&gt;Lakshika, J. P., &amp;amp; Talagala, T. S. (2021). Computer-aided Interpretable Features for Leaf Image Classification. arXiv preprint arXiv:2106.08077.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Lakshika, J. P., &amp;amp; Talagala, T. S. (2021). Computer-aided Interpretable Features for Leaf Image Classification. arXiv preprint arXiv:2106.08077.](&lt;a href=&#34;https://arxiv.org/abs/2106.08077&#34;&gt;https://arxiv.org/abs/2106.08077&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Software&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;[Jayani P. G. Lakshika and Thiyanga S. Talagala (2021). MedLEA: Morphological and Structural Features of Medicinal Leaves. R package version 1.0.1.
 https://CRAN.R-project.org/package=MedLEA&lt;/p&gt;
@@ -57,6 +56,9 @@ https://CRAN.R-project.org/package=MedLEA&lt;/p&gt;
 &lt;a href=&#34;https://cran.r-project.org/package=MedLEA&#34;&gt;&lt;img src=&#34;http://cranlogs.r-pkg.org/badges/MedLEA&#34; alt=&#34;Downloads&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Conference talks&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCqfu75XVtV4s-W5aiw1tavQ&#34;&gt;Click here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Research reproducibility&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;R codes and data to reproduce the results in the paper &amp;ldquo;Computer-aided Interpretable Features for Leaf Image Classification&amp;rdquo; available at &lt;a href=&#34;https://github.com/SMART-Research/leaffeatures_paper&#34;&gt;https://github.com/SMART-Research/leaffeatures_paper&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This work is a part of &lt;a href=&#34;https://www.linkedin.com/in/jayani-lakshika-9a0297162/&#34;&gt;Jayani P G Lakshika&lt;/a&gt; BSc (Hons) Degree in Statistics thesis - 2021, which was supervised by me.&lt;/p&gt;
 </description>
     </item>
     
