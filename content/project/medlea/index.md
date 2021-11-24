@@ -84,12 +84,12 @@ install.packages("MedLEA")
 
 **Papers**
 
-Lakshika, J. P., & Talagala, T. S. (2021). Computer-aided Interpretable Features for Leaf Image Classification. arXiv preprint arXiv:2106.08077.](https://arxiv.org/abs/2106.08077)
+[Lakshika, J. P., & Talagala, T. S. (2021). Computer-aided Interpretable Features for Leaf Image Classification. arXiv preprint arXiv:2106.08077.](https://arxiv.org/abs/2106.08077)
 
 
 **Software**
 
-[Jayani P. G. Lakshika and Thiyanga S. Talagala (2021). MedLEA: Morphological and Structural Features of Medicinal Leaves. R package version 1.0.1.
+Jayani P. G. Lakshika and Thiyanga S. Talagala (2021). MedLEA: Morphological and Structural Features of Medicinal Leaves. R package version 1.0.1.
 https://CRAN.R-project.org/package=MedLEA
 
 

@@ -58,10 +58,10 @@ plant images. This repository contains 1099 leaf images of 31 species. There are
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r,&#34; data-lang=&#34;{r,&#34;&gt;install.packages(&amp;quot;MedLEA&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;research-outputs&#34;&gt;Research outputs&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Papers&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Lakshika, J. P., &amp;amp; Talagala, T. S. (2021). Computer-aided Interpretable Features for Leaf Image Classification. arXiv preprint arXiv:2106.08077.](&lt;a href=&#34;https://arxiv.org/abs/2106.08077&#34;&gt;https://arxiv.org/abs/2106.08077&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2106.08077&#34;&gt;Lakshika, J. P., &amp;amp; Talagala, T. S. (2021). Computer-aided Interpretable Features for Leaf Image Classification. arXiv preprint arXiv:2106.08077.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Software&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;[Jayani P. G. Lakshika and Thiyanga S. Talagala (2021). MedLEA: Morphological and Structural Features of Medicinal Leaves. R package version 1.0.1.
-https://CRAN.R-project.org/package=MedLEA&lt;/p&gt;
+&lt;p&gt;Jayani P. G. Lakshika and Thiyanga S. Talagala (2021). MedLEA: Morphological and Structural Features of Medicinal Leaves. R package version 1.0.1.
+&lt;a href=&#34;https://CRAN.R-project.org/package=MedLEA&#34;&gt;https://CRAN.R-project.org/package=MedLEA&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=MedLEA&#34;&gt;&lt;img src=&#34;http://www.r-pkg.org/badges/version/MedLEA&#34; alt=&#34;CRAN\_Status\_Badge&#34;&gt;&lt;/a&gt;
 &lt;a href=&#34;https://cran.r-project.org/package=MedLEA&#34;&gt;&lt;img src=&#34;http://cranlogs.r-pkg.org/badges/MedLEA&#34; alt=&#34;Downloads&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
