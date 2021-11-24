@@ -54,7 +54,6 @@ ggplot(data=df, aes(x=x, y=y, size=weights, weight=weights)) + geom_point() +
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
       <guid>/project/medlea/</guid>
       <description>&lt;h1 id=&#34;algorithm-for-leaves-classification&#34;&gt;Algorithm for leaves classification&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;cover.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;medipi-mediicinal-plant-identification-algorithm&#34;&gt;MEDIPI (&lt;strong&gt;MEDI&lt;/strong&gt;icinal &lt;strong&gt;P&lt;/strong&gt;lant &lt;strong&gt;I&lt;/strong&gt;dentification) algorithm&lt;/h2&gt;
 &lt;p&gt;Medicinal plants are usually identified by practitioners based on years of experience through
 sensory or olfactory senses. The other method of recognizing these plants involves Laboratory-

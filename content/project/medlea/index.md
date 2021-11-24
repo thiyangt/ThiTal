@@ -15,10 +15,8 @@ tags:
 title: Statistical Machine Learning for  Medicinal Plant Identification
 ---
 
-
 # Algorithm for leaves classification
 
-![](cover.png)
 
 ## MEDIPI (**MEDI**icinal **P**lant **I**dentification) algorithm 
 
