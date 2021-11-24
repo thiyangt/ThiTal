@@ -25,7 +25,7 @@ sensory or olfactory senses. The other method of recognizing these plants involv
 based testing, which requires trained skills, data interpretation which is costly and time-intensive. Automatic ways to identify medicinal plants are useful especially for those that are lacking experience in herbal recognition. We introduce a computationally efficient new algorithm for medicinal plant classification.  We
 refer to our medicinal plant classification algorithm as MEDIPI : MEDIicinal Plant
 Identification. MEDIPI
-contains two main phases (i) The offline phase, and (ii) The online phase. The algorithm operates on a set of interpretable features (see Figure 4) computed from the leaf images.  Figure 3 provides an overview of our algorithm.
+contains two main phases (i) The offline phase, and (ii) The online phase. The algorithm operates on a set of interpretable features  computed from the leaf images. The offline phase of the algorithm contains 4 main steps: i) image processing, ii) feature extraction, iii) train a algorithm. Figure 1 provides an overview of our algorithm. Figure 2 provides a selected set of features we use in the algorithm. The image processing steps are shown in Figure 3.
 
 ![](medipi.png)
 
@@ -35,6 +35,10 @@ Figure 1: Overview of MEDIPI algorithm
 
 
 Figure 2: Leaf image features
+
+![](image_processing.png)
+
+Figure 3: Image processing workflow
 
 
 # Benchmark dataset for plant leaves classification
