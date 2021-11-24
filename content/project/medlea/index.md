@@ -61,7 +61,7 @@ i) A dataset of morphological and structural features of 471 medicinal plant lea
 
 ![](leaf.png)
 
-Figure 3:  Some morphological characteristics of profiles
+Figure 4:  Some morphological characteristics of profiles
 
 ii) Leaf image data set:  A database of leaf images of medicinal plants in Sri Lanka is
 not yet available. Hence, through this research, we establish a repository of medicinal
@@ -69,7 +69,7 @@ plant images. This repository contains 1099 leaf images of 31 species. There are
 
 ![](imgleaf.png)
 
-Figure 4: Few samples from the MedLEA images
+Figure 5: Few samples from the MedLEA images
 
 You can get access to the data set via the MedLEA package. 
 

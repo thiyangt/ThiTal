@@ -48,12 +48,12 @@ sharing encourages more connections and collaboration between scientists, which 
 &lt;p&gt;The &lt;a href=&#34;https://github.com/SMART-Research/MedLEA&#34;&gt;MedLEA&lt;/a&gt; package provides two datasets.&lt;/p&gt;
 &lt;p&gt;i) A dataset of morphological and structural features of 471 medicinal plant leaves. The features of each species are recorded by manually viewing the medicinal plant repository available at (&lt;a href=&#34;http://www.instituteofayurveda.org/plants/&#34;&gt;http://www.instituteofayurveda.org/plants/&lt;/a&gt;). For more information visit at &lt;a href=&#34;https://github.com/SMART-Research/MedLEA&#34;&gt;https://github.com/SMART-Research/MedLEA&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;leaf.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Figure 3:  Some morphological characteristics of profiles&lt;/p&gt;
+&lt;p&gt;Figure 4:  Some morphological characteristics of profiles&lt;/p&gt;
 &lt;p&gt;ii) Leaf image data set:  A database of leaf images of medicinal plants in Sri Lanka is
 not yet available. Hence, through this research, we establish a repository of medicinal
 plant images. This repository contains 1099 leaf images of 31 species. There are 29-45 images per species.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;imgleaf.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Figure 4: Few samples from the MedLEA images&lt;/p&gt;
+&lt;p&gt;Figure 5: Few samples from the MedLEA images&lt;/p&gt;
 &lt;p&gt;You can get access to the data set via the MedLEA package.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r,&#34; data-lang=&#34;{r,&#34;&gt;install.packages(&amp;quot;MedLEA&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;research-outputs&#34;&gt;Research outputs&lt;/h2&gt;
