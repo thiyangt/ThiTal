@@ -33,4 +33,4 @@ Reproducible code is available at https://github.com/thiyangt/coviddashboard
 
 *Cite the work as follows*
 
-Talagala, S. T; De Alwis R. S (2021, December 6). Covid-19 Dashboard Visualisation: Sri Lanka https://thiyangt.github.io/coviddashboard/
+Talagala, T. S; De Alwis R. S (2021, December 6). Covid-19 Dashboard Visualisation: Sri Lanka https://thiyangt.github.io/coviddashboard/
