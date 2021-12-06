@@ -5,12 +5,36 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 20 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 06 Dec 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>Coronavirus Dashboard - Sri Lanka</title>
+      <link>/post/covid19srilankadb/</link>
+      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>/post/covid19srilankadb/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;iframe width=&#34;880&#34; height=&#34;450&#34; src=&#34;https://www.youtube.com/embed/fHypdnkr4_c&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;blockquote&gt;
+&lt;div class=&#34;alert alert-info&#34;&gt;
+&lt;p&gt;&lt;strong&gt;&lt;/strong&gt; Click &lt;a href=&#34;https://thiyangt.github.io/coviddashboard/&#34;&gt;here&lt;/a&gt; to view the dashboard.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This dashboard provides an overview of the COVID-19 pandemic in Sri Lanka.&lt;/p&gt;
+&lt;p&gt;All input data (related to the local situation) for the dashboard is pulled from COVID-19 daily situation reports published by Epidemiology Unit, Ministry of Health and Indigenous Medical Services, Sri Lanka through &lt;a href=&#34;https://github.com/thiyangt/covid19srilanka&#34;&gt;covid19srilanka&lt;/a&gt; package in R. Sri Lanka maps are created based on &lt;a href=&#34;https://github.com/thiyangt/ceylon&#34;&gt;ceylon&lt;/a&gt; package in R.&lt;/p&gt;
+&lt;p&gt;Reproducible code is available at &lt;a href=&#34;https://github.com/thiyangt/coviddashboard&#34; class=&#34;uri&#34;&gt;https://github.com/thiyangt/coviddashboard&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Cite the work as follows&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Talagala, S. T; De Alwis R. S (2021, December 6). Covid-19 Dashboard Visualisation: Sri Lanka &lt;a href=&#34;https://thiyangt.github.io/coviddashboard/&#34; class=&#34;uri&#34;&gt;https://thiyangt.github.io/coviddashboard/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Covid-19/ Coronavirus data in Sri Lanka</title>
