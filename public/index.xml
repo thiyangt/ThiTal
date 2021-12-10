@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>THIYANGA TALAGALA</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 06 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 09 Dec 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>THIYANGA TALAGALA</title>
@@ -815,6 +815,15 @@
 &lt;blockquote&gt;
 &lt;p&gt;END&lt;/p&gt;
 &lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Forecasting Model Territories</title>
+      <link>/talk/whyr-talk/</link>
+      <pubDate>Thu, 09 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>/talk/whyr-talk/</guid>
+      <description>&lt;p&gt;Seer package: &lt;a href=&#34;https://github.com/thiyangt/seer&#34;&gt;https://github.com/thiyangt/seer&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
