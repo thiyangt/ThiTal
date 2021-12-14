@@ -1,9 +1,9 @@
 +++
-date = 2021-12-09T00:00:00  # Schedule page publish date.
+date = 2021-12-10T00:00:00  # Schedule page publish date.
 
 title = "Why R? 2021: Keynote"
-time_start = 2021-12-09T12:20:00
-time_end = 2021-12-09T12:40:00
+time_start = 2021-12-10T12:20:00
+time_end = 2021-12-10T12:40:00
 abstract = ""
 abstract_short = ""
 event = "Why R? 2021 conference"
@@ -33,16 +33,16 @@ highlight = true
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
-image = "thiyanga.jpeg"
+image = "whyr/thiyanga.jpg"
 caption = "Why R? 2021 conference"
 
 +++
 
 The Why R? Foundation held its [Why R? 2021 Conference - the fifth meeting of Central-Eastern-European](https://2021.whyr.pl/) in December 2021. I was honored to be asked by this esteemed group to provide a keynote address on Feature-based Time Series Forecasting and join with forecasting and prediction panel discussion.
 
-<img src="/whyr/thiyanga.jpeg" alt="" />
+<img src="whyr/panel.jpg" alt="" />
 
-![](whyr/panel.jpeg)
+![](whyr/panel.jpg)
 
 **Abstract**
 
