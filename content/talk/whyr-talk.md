@@ -40,7 +40,7 @@ caption = "Why R? 2021 conference"
 
 The Why R? Foundation held its [Why R? 2021 Conference - the fifth meeting of Central-Eastern-European](https://2021.whyr.pl/) in December 2021. I was honored to be asked by this esteemed group to provide a keynote address on Feature-based Time Series Forecasting and join with forecasting and prediction panel discussion.
 
-<img src="whyr/thiyanga.jpeg" alt="" />
+<img src="/whyr/thiyanga.jpeg" alt="" />
 
 ![](whyr/panel.jpeg)
 
