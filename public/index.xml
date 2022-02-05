@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>THIYANGA TALAGALA</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 10 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 16 Dec 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>THIYANGA TALAGALA</title>
@@ -815,6 +815,78 @@
 &lt;blockquote&gt;
 &lt;p&gt;END&lt;/p&gt;
 &lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Heatmap with ggplot2</title>
+      <link>/post/heatmap/</link>
+      <pubDate>Thu, 16 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>/post/heatmap/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;pre&gt;&lt;code&gt;here() starts at /Users/thiyangashaminitalagala/Lecturer/ThiTal&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;data-set&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Set&lt;/h2&gt;
+&lt;p&gt;In this dataset there are three variables&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;ID (Time order is represented by row names.)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Species (There are 5 levels: A, B, C, D, E. This variable is spread across column names.)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Score (This is represented by the cell values.)&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I want to plot head-map as follows&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;X-axis: ID&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Y- axis: Species&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Cell: score&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;heatmapdata.png&#34; width=&#34;377&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;necessary-packages&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Necessary packages&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(here)
+library(tidyverse)
+library(readxl)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;read-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Read data&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data &amp;lt;- read_excel(&amp;quot;datafile.xlsx&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# View the first few rows of data
+head(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 × 6
+##   ID         A       B      C      D      E
+##   &amp;lt;chr&amp;gt;  &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
+## 1 1     -0.122 -0.260   0.270  1.21  -0.675
+## 2 2      0.552  0.450  -1.34   0.994  0.238
+## 3 3      0.349 -0.143  -0.849  1.54   0.545
+## 4 4      0.360 -0.487  -0.408  0.292 -0.449
+## 5 5      0.898 -1.20   -0.666  0.511  0.971
+## 6 6     -1.92   0.0469 -0.103 -0.541 -1.55&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;convert-data-into-the-suitable-format&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Convert data into the suitable format&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data &amp;lt;- data %&amp;gt;% pivot_longer(!ID, names_to = &amp;quot;species&amp;quot;, values_to = &amp;quot;score&amp;quot;)
+data$ID &amp;lt;- as.numeric(data$ID)
+head(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;# A tibble: 6 × 3
+     ID species  score
+  &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;    &amp;lt;dbl&amp;gt;
+1     1 A       -0.122
+2     1 B       -0.260
+3     1 C        0.270
+4     1 D        1.21 
+5     1 E       -0.675
+6     2 A        0.552&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot-heatmap&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Plot heatmap&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(y=ID, x=species, fill= score)) + 
+  geom_tile(color = &amp;quot;white&amp;quot;) +
+  coord_equal()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/heatmap_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     

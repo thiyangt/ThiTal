@@ -1,0 +1,69 @@
+---
+title: "Heatmap with ggplot2"
+date: "2021-12-16"
+summary: "Heatmaps are used to show relationships between three variables, two plotted on each axis and cell color to show changes and magnitude of the third variable."
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<pre><code>here() starts at /Users/thiyangashaminitalagala/Lecturer/ThiTal</code></pre>
+<div id="data-set" class="section level2">
+<h2>Data Set</h2>
+<p>In this dataset there are three variables</p>
+<ol style="list-style-type: decimal">
+<li><p>ID (Time order is represented by row names.)</p></li>
+<li><p>Species (There are 5 levels: A, B, C, D, E. This variable is spread across column names.)</p></li>
+<li><p>Score (This is represented by the cell values.)</p></li>
+</ol>
+<p>I want to plot head-map as follows</p>
+<ol style="list-style-type: decimal">
+<li><p>X-axis: ID</p></li>
+<li><p>Y- axis: Species</p></li>
+<li><p>Cell: score</p></li>
+</ol>
+<p><img src="heatmapdata.png" width="377" /></p>
+</div>
+<div id="necessary-packages" class="section level2">
+<h2>Necessary packages</h2>
+<pre class="r"><code>library(here)
+library(tidyverse)
+library(readxl)</code></pre>
+</div>
+<div id="read-data" class="section level2">
+<h2>Read data</h2>
+<pre class="r"><code>data &lt;- read_excel(&quot;datafile.xlsx&quot;)</code></pre>
+<pre class="r"><code># View the first few rows of data
+head(data)</code></pre>
+<pre><code>## # A tibble: 6 × 6
+##   ID         A       B      C      D      E
+##   &lt;chr&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+## 1 1     -0.122 -0.260   0.270  1.21  -0.675
+## 2 2      0.552  0.450  -1.34   0.994  0.238
+## 3 3      0.349 -0.143  -0.849  1.54   0.545
+## 4 4      0.360 -0.487  -0.408  0.292 -0.449
+## 5 5      0.898 -1.20   -0.666  0.511  0.971
+## 6 6     -1.92   0.0469 -0.103 -0.541 -1.55</code></pre>
+</div>
+<div id="convert-data-into-the-suitable-format" class="section level2">
+<h2>Convert data into the suitable format</h2>
+<pre class="r"><code>data &lt;- data %&gt;% pivot_longer(!ID, names_to = &quot;species&quot;, values_to = &quot;score&quot;)
+data$ID &lt;- as.numeric(data$ID)
+head(data)</code></pre>
+<pre><code># A tibble: 6 × 3
+     ID species  score
+  &lt;dbl&gt; &lt;chr&gt;    &lt;dbl&gt;
+1     1 A       -0.122
+2     1 B       -0.260
+3     1 C        0.270
+4     1 D        1.21 
+5     1 E       -0.675
+6     2 A        0.552</code></pre>
+</div>
+<div id="plot-heatmap" class="section level2">
+<h2>Plot heatmap</h2>
+<pre class="r"><code>ggplot(data, aes(y=ID, x=species, fill= score)) + 
+  geom_tile(color = &quot;white&quot;) +
+  coord_equal()</code></pre>
+<p><img src="/post/heatmap_files/figure-html/unnamed-chunk-8-1.png" width="480" /></p>
+</div>
