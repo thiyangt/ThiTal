@@ -22,7 +22,7 @@ selected = false
 url_pdf = ""
 url_slides = "https://talks-thiyanga.netlify.app/rmarkdown_rladies/rmarkdownrladiesnigeria#1"
 url_video = ""
-url_code = ""
+url_code = "https://github.com/thiyangt/RMarkdown_RLadiesColombo"
 
 # Does the content use math formatting?
 math = true
