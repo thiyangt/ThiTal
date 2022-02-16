@@ -1,14 +1,14 @@
 +++
 date = 2022-02-16T00:00:00  # Schedule page publish date.
 
-title = "R Markdown: Create Insightful Reports in R"
+title = "RMarkdown: Create insightful reports in R"
 time_start = 2022-02-16T12:20:00
-time_end = 2021-02-16T12:40:00
+time_end = 2022-02-16T12:40:00
 abstract = ""
 abstract_short = ""
-event = "R Ladies Abuja, Nigeria"
+event = "R-Ladies Community based in Abuja FCT, Nigeria"
 event_url = "https://www.meetup.com/rladies-abuja/events/283638358/"
-location = "Virtual"
+location = "Hosted from Abuja FCT, Nigeria"
 
 # Is this a selected talk? (true/false)
 selected = false
@@ -33,10 +33,11 @@ highlight = true
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
-image = "whyr/thiyanga.jpg"
-caption = "Why R? 2021 conference"
+image = "nigeria/abuja.png"
+caption = "R-Ladies Community based in Abuja FCT, Nigeria"
 
 +++
+
 
 
 ![](/nigeria/abuja.png)
