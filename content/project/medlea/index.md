@@ -108,10 +108,6 @@ R codes and data to reproduce the results in the paper "Computer-aided Interpret
 
 
 
-This work is a part of [Jayani P G Lakshika](https://www.linkedin.com/in/jayani-lakshika-9a0297162/) BSc (Hons) Degree in Statistics thesis - 2021, which was supervised by me.
-
-![](octave.jpeg)
-
 
 
 
