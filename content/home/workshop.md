@@ -16,6 +16,10 @@ autolink = false
 email_form = 0
 +++
 
+## 2022
+
+[Data analysis with R: Institute of Applied Statistics, Sri Lanka (IASSL)](https://r4fun.netlify.app/blog/)
+
   
 ## 2021
 
