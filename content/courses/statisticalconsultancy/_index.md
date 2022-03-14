@@ -42,6 +42,8 @@ E-mail is the best way to get in contact with me—I will respond to all course-
 
 # Tools: To consultants
 
+[Course outline](/CO/2021s2/STA474_2_statistical_consultancy_2021_2022.pdf)
+
 **1. Slides**
 
 [Click here](https://thiyangt.github.io/statconsultancy/#1)
