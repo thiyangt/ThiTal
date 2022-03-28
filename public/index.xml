@@ -848,12 +848,12 @@ african_names %&amp;gt;%
 &lt;p&gt;The ggplot2 package &lt;code&gt;element text&lt;/code&gt; can be used to alter the label angles as well as the horizontal and vertical justifications.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(palmerpenguins)
 penguins %&amp;gt;%
-  ggplot(aes(x=species, col=species)) + geom_bar() +
+  ggplot(aes(x=species, fill=species)) + geom_bar() +
   theme(axis.text.x=element_text(angle=30))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/plotaxis_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Angles, horizontal justification and vertical justification&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins %&amp;gt;%
-  ggplot(aes(x=species, col=species)) + geom_bar() +
+  ggplot(aes(x=species, fill=species)) + geom_bar() +  scale_fill_manual(values=c(&amp;quot;#1b9e77&amp;quot;, &amp;quot;#d95f02&amp;quot;, &amp;quot;#7570b3&amp;quot;)) + 
   theme(axis.text.x=element_text(angle=30, vjust=.8, hjust=0.8))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/plotaxis_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;

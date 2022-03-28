@@ -646,12 +646,12 @@ african_names %&gt;%
 <p>The ggplot2 package <code>element text</code> can be used to alter the label angles as well as the horizontal and vertical justifications.</p>
 <pre class="r"><code>library(palmerpenguins)
 penguins %&gt;%
-  ggplot(aes(x=species, col=species)) + geom_bar() +
+  ggplot(aes(x=species, fill=species)) + geom_bar() +
   theme(axis.text.x=element_text(angle=30))</code></pre>
 <p><img src="/post/plotaxis_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p><strong>Angles, horizontal justification and vertical justification</strong></p>
 <pre class="r"><code>penguins %&gt;%
-  ggplot(aes(x=species, col=species)) + geom_bar() +
+  ggplot(aes(x=species, fill=species)) + geom_bar() +  scale_fill_manual(values=c(&quot;#1b9e77&quot;, &quot;#d95f02&quot;, &quot;#7570b3&quot;)) + 
   theme(axis.text.x=element_text(angle=30, vjust=.8, hjust=0.8))</code></pre>
 <p><img src="/post/plotaxis_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 </div>
