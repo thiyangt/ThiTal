@@ -28,10 +28,11 @@
   
     
   
-  <meta name="description" content="With the ggplot2 package, you&#39;ve got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing">
+  <meta name="description" content="  To enlarge a section of data in your ggplots, use the facet zoom function in the ggforce package. To illustrate I am using the gapminder dataset in gapminder package.
+Load necessary library(tidyverse) library(ggforce) library(gapminder)  Zoom according to a continuous scale variable ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(ylim = c(60, 80))  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(xlim = c(0, 10000))  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(xlim = c(0, 10000), ylim=c(60, 80))   Zoom according to a qualitative variable ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(y = continent == &#39;Oceania&#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(x = continent == &#39;Oceania&#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(xy = continent == &#39;Oceania&#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(xy = continent == &#39;Oceania&#39;, split = TRUE)   ">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/plotaxis/">
+  <link rel="alternate" hreflang="en-us" href="/post/ggforce/">
 
   
 
@@ -106,7 +107,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/post/plotaxis/">
+  <link rel="canonical" href="/post/ggforce/">
 
   
   
@@ -119,15 +120,16 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="THIYANGA TALAGALA">
-  <meta property="og:url" content="/post/plotaxis/">
-  <meta property="og:title" content="Formatting axis labels in ggplot | THIYANGA TALAGALA">
-  <meta property="og:description" content="With the ggplot2 package, you&#39;ve got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/post/ggforce/">
+  <meta property="og:title" content="Zoom Your Plots with ggforce | THIYANGA TALAGALA">
+  <meta property="og:description" content="  To enlarge a section of data in your ggplots, use the facet zoom function in the ggforce package. To illustrate I am using the gapminder dataset in gapminder package.
+Load necessary library(tidyverse) library(ggforce) library(gapminder)  Zoom according to a continuous scale variable ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(ylim = c(60, 80))  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(xlim = c(0, 10000))  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(xlim = c(0, 10000), ylim=c(60, 80))   Zoom according to a qualitative variable ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(y = continent == &#39;Oceania&#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(x = continent == &#39;Oceania&#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(xy = continent == &#39;Oceania&#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(xy = continent == &#39;Oceania&#39;, split = TRUE)   "><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2022-03-27T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2022-03-28T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2022-03-27T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2022-03-28T00:00:00&#43;00:00">
   
 
   
@@ -153,12 +155,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "/post/plotaxis/"
+    "@id": "/post/ggforce/"
   },
-  "headline": "Formatting axis labels in ggplot",
+  "headline": "Zoom Your Plots with ggforce",
   
-  "datePublished": "2022-03-27T00:00:00Z",
-  "dateModified": "2022-03-27T00:00:00Z",
+  "datePublished": "2022-03-28T00:00:00Z",
+  "dateModified": "2022-03-28T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -173,7 +175,7 @@
       "url": "/img/icon-512.png"
     }
   },
-  "description": "With the ggplot2 package, you've got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing"
+  "description": "  To enlarge a section of data in your ggplots, use the facet zoom function in the ggforce package. To illustrate I am using the gapminder dataset in gapminder package.\nLoad necessary library(tidyverse) library(ggforce) library(gapminder)  Zoom according to a continuous scale variable ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + facet_zoom(ylim = c(60, 80))  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + facet_zoom(xlim = c(0, 10000))  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + facet_zoom(xlim = c(0, 10000), ylim=c(60, 80))   Zoom according to a qualitative variable ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + facet_zoom(y = continent == \u0026#39;Oceania\u0026#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + facet_zoom(x = continent == \u0026#39;Oceania\u0026#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + facet_zoom(xy = continent == \u0026#39;Oceania\u0026#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + facet_zoom(xy = continent == \u0026#39;Oceania\u0026#39;, split = TRUE)   "
 }
 </script>
 
@@ -191,7 +193,7 @@
 
 
 
-  <title>Formatting axis labels in ggplot | THIYANGA TALAGALA</title>
+  <title>Zoom Your Plots with ggforce | THIYANGA TALAGALA</title>
 
 </head>
 
@@ -553,7 +555,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Formatting axis labels in ggplot</h1>
+  <h1>Zoom Your Plots with ggforce</h1>
 
   
 
@@ -572,7 +574,7 @@
     
       
     
-    Mar 27, 2022
+    Mar 28, 2022
   </span>
   
 
@@ -625,36 +627,39 @@
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
-<p>With the ggplot2 package, you’ve got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing.</p>
-<div id="comma-separated-labels" class="section level2">
-<h2>Comma-separated labels</h2>
-<p><code>comma_format</code> function in <code>scales</code> can be used to add comma separated labels. To illustrate this I use African names data set in TidyTuesday.</p>
+<p>To enlarge a section of data in your <code>ggplots</code>, use the <code>facet zoom</code> function in the <code>ggforce</code> package. To illustrate I am using the <a href="https://cran.r-project.org/web/packages/gapminder/README.html">gapminder</a> dataset in <a href="https://cran.r-project.org/web/packages/gapminder/README.html">gapminder</a> package.</p>
+<div id="load-necessary" class="section level2">
+<h2>Load necessary</h2>
 <pre class="r"><code>library(tidyverse)
-library(scales) 
-## read data
-african_names &lt;- readr::read_csv(&quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-06-16/african_names.csv&quot;)
-## plot
-african_names %&gt;%
-  ggplot(aes(year_arrival)) +
-  geom_histogram(bins = 20, fill = &quot;darkslateblue&quot;, alpha = 0.7, col=&quot;white&quot;) +
-  scale_y_continuous(labels = scales::comma_format()) </code></pre>
-<p><img src="/post/plotaxis_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+library(ggforce)
+library(gapminder)</code></pre>
 </div>
-<div id="change-label-angles-horizontal-justification-and-vertical-justification" class="section level2">
-<h2>Change label angles, horizontal justification and vertical justification</h2>
-<p><strong>Angles only</strong></p>
-<p>The ggplot2 package <code>element text</code> can be used to alter the label angles as well as the horizontal and vertical justifications.</p>
-<pre class="r"><code>library(palmerpenguins)
-penguins %&gt;%
-  ggplot(aes(x=species, fill=species)) + geom_bar() +
-  scale_fill_manual(values=c(&quot;#1b9e77&quot;, &quot;#d95f02&quot;, &quot;#7570b3&quot;)) + 
-  theme(axis.text.x=element_text(angle=30))</code></pre>
-<p><img src="/post/plotaxis_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p><strong>Angles, horizontal justification and vertical justification</strong></p>
-<pre class="r"><code>penguins %&gt;%
-  ggplot(aes(x=species, fill=species)) + geom_bar() +  scale_fill_manual(values=c(&quot;#1b9e77&quot;, &quot;#d95f02&quot;, &quot;#7570b3&quot;)) + 
-  theme(axis.text.x=element_text(angle=30, vjust=.8, hjust=0.8))</code></pre>
-<p><img src="/post/plotaxis_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<div id="zoom-according-to-a-continuous-scale-variable" class="section level2">
+<h2>Zoom according to a continuous scale variable</h2>
+<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + 
+  facet_zoom(ylim = c(60, 80)) </code></pre>
+<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + 
+  facet_zoom(xlim = c(0, 10000)) </code></pre>
+<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + 
+  facet_zoom(xlim = c(0, 10000), ylim=c(60, 80)) </code></pre>
+<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-2-3.png" width="672" /></p>
+</div>
+<div id="zoom-according-to-a-qualitative-variable" class="section level2">
+<h2>Zoom according to a qualitative variable</h2>
+<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+  facet_zoom(y = continent == &#39;Oceania&#39;) </code></pre>
+<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+  facet_zoom(x = continent == &#39;Oceania&#39;) </code></pre>
+<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-3-2.png" width="672" /></p>
+<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+  facet_zoom(xy = continent == &#39;Oceania&#39;) </code></pre>
+<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-3-3.png" width="672" /></p>
+<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+  facet_zoom(xy = continent == &#39;Oceania&#39;, split = TRUE) </code></pre>
+<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-3-4.png" width="672" /></p>
 </div>
 
     </div>
@@ -688,7 +693,7 @@ penguins %&gt;%
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/plotaxis/&amp;text=Formatting%20axis%20labels%20in%20ggplot" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/ggforce/&amp;text=Zoom%20Your%20Plots%20with%20ggforce" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -701,7 +706,7 @@ penguins %&gt;%
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/plotaxis/&amp;t=Formatting%20axis%20labels%20in%20ggplot" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/ggforce/&amp;t=Zoom%20Your%20Plots%20with%20ggforce" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -714,7 +719,7 @@ penguins %&gt;%
       
       
       <li>
-        <a href="mailto:?subject=Formatting%20axis%20labels%20in%20ggplot&amp;body=/post/plotaxis/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Zoom%20Your%20Plots%20with%20ggforce&amp;body=/post/ggforce/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -727,7 +732,7 @@ penguins %&gt;%
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/plotaxis/&amp;title=Formatting%20axis%20labels%20in%20ggplot" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/ggforce/&amp;title=Zoom%20Your%20Plots%20with%20ggforce" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -740,7 +745,7 @@ penguins %&gt;%
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Formatting%20axis%20labels%20in%20ggplot%20/post/plotaxis/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Zoom%20Your%20Plots%20with%20ggforce%20/post/ggforce/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -753,7 +758,7 @@ penguins %&gt;%
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/plotaxis/&amp;title=Formatting%20axis%20labels%20in%20ggplot" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/ggforce/&amp;title=Zoom%20Your%20Plots%20with%20ggforce" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -899,6 +904,8 @@ penguins %&gt;%
     <h3>Related</h3>
     <ul>
       
+      <li><a href="/post/plotaxis/">Formatting axis labels in ggplot</a></li>
+      
       <li><a href="/post/scatterplot/">Highlight data points in a scatterplot</a></li>
       
       <li><a href="/post/blog/">Weighted LOESS (LOcal regrESSion) </a></li>
@@ -906,8 +913,6 @@ penguins %&gt;%
       <li><a href="/post/multiplepkg/">How to install and load multiple packages at once?</a></li>
       
       <li><a href="/post/blog/">Customizing boxplots with ggplot2</a></li>
-      
-      <li><a href="/project/medlea/">Statistical Machine Learning for  Medicinal Plant Identification</a></li>
       
     </ul>
   </div>

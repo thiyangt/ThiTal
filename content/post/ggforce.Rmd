@@ -1,58 +1,84 @@
 ---
-title: "Formatting axis labels in ggplot"
+title: "Zoom Your Plots with ggforce"
 author: Thiyanga Talagala
-date: '2022-03-27'
+date: '2022-03-28'
 categories: [R, tidyverse, ggplot2, scatterplot]
 tags: [R, tidyverse, ggplot2]
-summary: "With the ggplot2 package, you've got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing"
+summary: "You can use facet_zoom from the ggforce package to zoom out graphs instead of using your mouse (Contextual zoom)."
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+To enlarge a section of data in your `ggplots`, use the `facet zoom` function in the [ggforce](https://rdrr.io/cran/ggforce/man/facet_zoom.html) package. To illustrate I am using the [gapminder](https://cran.r-project.org/web/packages/gapminder/README.html) dataset in [gapminder](https://cran.r-project.org/web/packages/gapminder/README.html) package.
 
-With the ggplot2 package, you've got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing.
+## Load necessary 
 
-## Comma-separated labels
-
-`comma_format` function in `scales` can be used to add comma separated labels. To illustrate this I use African names data set in TidyTuesday.
-
-```{r, message=FALSE, warning=FALSE}
+```{r, comment=NA, message=FALSE, warning=FALSE}
 library(tidyverse)
-library(scales) 
-## read data
-african_names <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-06-16/african_names.csv")
-## plot
-african_names %>%
-  ggplot(aes(year_arrival)) +
-  geom_histogram(bins = 20, fill = "darkslateblue", alpha = 0.7, col="white") +
-  scale_y_continuous(labels = scales::comma_format()) 
+library(ggforce)
+library(gapminder)
 ```
 
-
-## Change label angles, horizontal justification and vertical justification
-
-**Angles only**
-
-The ggplot2 package `element text` can be used to alter the label angles as well as the horizontal and vertical justifications.
-
-```{r, fig.height=5, fig.height=5}
-library(palmerpenguins)
-penguins %>%
-  ggplot(aes(x=species, fill=species)) + geom_bar() +
-  theme(axis.text.x=element_text(angle=30))
-```
-
-**Angles, horizontal justification and vertical justification**
+## Set the theme for plots
 
 ```{r}
-penguins %>%
-  ggplot(aes(x=species, fill=species)) + geom_bar() +  scale_fill_manual(values=c("#1b9e77", "#d95f02", "#7570b3")) + 
-  theme(axis.text.x=element_text(angle=30, vjust=.8, hjust=0.8))
+theme_set(theme_bw())
+```
+
+
+
+## Zoom according to a  continuous scale variable
+
+**zoom the Y axis**
+
+```{r}
+ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + 
+  facet_zoom(ylim = c(60, 80)) 
+```
+
+**zoom the X axis**
+
+```{r}
+ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + 
+  facet_zoom(xlim = c(0, 10000)) 
+```
+
+**zoom the X axis and the Y axis**
+
+```{r}
+ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + 
+  facet_zoom(xlim = c(0, 10000), ylim=c(60, 80)) 
 ```
 
 
 
 
+## Zoom according to a qualitative variable
 
+**zoom the Y axis**
+
+```{r}
+ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+  facet_zoom(y = continent == 'Oceania') 
+```
+
+**zoom the X axis**
+
+```{r}
+ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+  facet_zoom(x = continent == 'Oceania') 
+```
+
+**zoom the X axis and the Y axis**
+
+```{r}
+ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+  facet_zoom(xy = continent == 'Oceania') 
+```
+
+```{r}
+ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+  facet_zoom(xy = continent == 'Oceania', split = TRUE) 
+```
