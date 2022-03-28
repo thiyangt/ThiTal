@@ -11,12 +11,13 @@ summary: "You can use facet_zoom from the ggforce package to zoom out graphs ins
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-To enlarge a section of data in your `ggplots`, use the `facet zoom` function in the [ggforce](https://rdrr.io/cran/ggforce/man/facet_zoom.html) package. To illustrate I am using the [gapminder](https://cran.r-project.org/web/packages/gapminder/README.html) dataset in [gapminder](https://cran.r-project.org/web/packages/gapminder/README.html) package.
+To enlarge a section of data in your `ggplots`, use the `facet_zoom` function in the [ggforce](https://rdrr.io/cran/ggforce/man/facet_zoom.html) package. To illustrate I am using the [gapminder](https://cran.r-project.org/web/packages/gapminder/README.html) dataset in [gapminder](https://cran.r-project.org/web/packages/gapminder/README.html) package.
 
 ## Load necessary 
 
 ```{r, comment=NA, message=FALSE, warning=FALSE}
 library(tidyverse)
+library(RColorBrewer)
 library(ggforce)
 library(gapminder)
 ```
@@ -34,21 +35,21 @@ theme_set(theme_bw())
 **zoom the Y axis**
 
 ```{r}
-ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + 
+ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +  
   facet_zoom(ylim = c(60, 80)) 
 ```
 
 **zoom the X axis**
 
 ```{r}
-ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + 
+ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +   
   facet_zoom(xlim = c(0, 10000)) 
 ```
 
 **zoom the X axis and the Y axis**
 
 ```{r}
-ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + 
+ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +  
   facet_zoom(xlim = c(0, 10000), ylim=c(60, 80)) 
 ```
 
@@ -61,6 +62,7 @@ ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +
 
 ```{r}
 ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+  scale_color_brewer(palette = "Dark2") +
   facet_zoom(y = continent == 'Oceania') 
 ```
 
@@ -68,6 +70,7 @@ ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + c
 
 ```{r}
 ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+  scale_color_brewer(palette = "Dark2") +
   facet_zoom(x = continent == 'Oceania') 
 ```
 
@@ -75,10 +78,12 @@ ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + c
 
 ```{r}
 ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+  scale_color_brewer(palette = "Dark2") +
   facet_zoom(xy = continent == 'Oceania') 
 ```
 
 ```{r}
 ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+  scale_color_brewer(palette = "Dark2") +
   facet_zoom(xy = continent == 'Oceania', split = TRUE) 
 ```

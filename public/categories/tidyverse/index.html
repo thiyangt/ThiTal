@@ -523,8 +523,7 @@
     <h2><a href="/post/ggforce/">Zoom Your Plots with ggforce</a></h2>
     <div class="article-style">
       
-        To enlarge a section of data in your ggplots, use the facet zoom function in the ggforce package. To illustrate I am using the gapminder dataset in gapminder package.
-Load necessary library(tidyverse) library(ggforce) library(gapminder)  Zoom according to a continuous scale variable ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + facet_zoom(ylim = c(60, 80))  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + facet_zoom(xlim = c(0, 10000))  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + facet_zoom(xlim = c(0, 10000), ylim=c(60, 80))   Zoom according to a qualitative variable ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + facet_zoom(y = continent == &#39;Oceania&#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + facet_zoom(x = continent == &#39;Oceania&#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + facet_zoom(xy = continent == &#39;Oceania&#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + facet_zoom(xy = continent == &#39;Oceania&#39;, split = TRUE)   
+      You can use facet_zoom from the ggforce package to zoom out graphs instead of using your mouse (Contextual zoom).
       
     </div>
   </div>

@@ -28,8 +28,7 @@
   
     
   
-  <meta name="description" content="  To enlarge a section of data in your ggplots, use the facet zoom function in the ggforce package. To illustrate I am using the gapminder dataset in gapminder package.
-Load necessary library(tidyverse) library(ggforce) library(gapminder)  Zoom according to a continuous scale variable ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(ylim = c(60, 80))  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(xlim = c(0, 10000))  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(xlim = c(0, 10000), ylim=c(60, 80))   Zoom according to a qualitative variable ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(y = continent == &#39;Oceania&#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(x = continent == &#39;Oceania&#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(xy = continent == &#39;Oceania&#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(xy = continent == &#39;Oceania&#39;, split = TRUE)   ">
+  <meta name="description" content="You can use facet_zoom from the ggforce package to zoom out graphs instead of using your mouse (Contextual zoom).">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/ggforce/">
@@ -122,8 +121,7 @@ Load necessary library(tidyverse) library(ggforce) library(gapminder)  Zoom acco
   <meta property="og:site_name" content="THIYANGA TALAGALA">
   <meta property="og:url" content="/post/ggforce/">
   <meta property="og:title" content="Zoom Your Plots with ggforce | THIYANGA TALAGALA">
-  <meta property="og:description" content="  To enlarge a section of data in your ggplots, use the facet zoom function in the ggforce package. To illustrate I am using the gapminder dataset in gapminder package.
-Load necessary library(tidyverse) library(ggforce) library(gapminder)  Zoom according to a continuous scale variable ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(ylim = c(60, 80))  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(xlim = c(0, 10000))  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(xlim = c(0, 10000), ylim=c(60, 80))   Zoom according to a qualitative variable ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(y = continent == &#39;Oceania&#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(x = continent == &#39;Oceania&#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(xy = continent == &#39;Oceania&#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) &#43; geom_point() &#43; coord_fixed() &#43; facet_zoom(xy = continent == &#39;Oceania&#39;, split = TRUE)   "><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:description" content="You can use facet_zoom from the ggforce package to zoom out graphs instead of using your mouse (Contextual zoom)."><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -175,7 +173,7 @@ Load necessary library(tidyverse) library(ggforce) library(gapminder)  Zoom acco
       "url": "/img/icon-512.png"
     }
   },
-  "description": "  To enlarge a section of data in your ggplots, use the facet zoom function in the ggforce package. To illustrate I am using the gapminder dataset in gapminder package.\nLoad necessary library(tidyverse) library(ggforce) library(gapminder)  Zoom according to a continuous scale variable ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + facet_zoom(ylim = c(60, 80))  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + facet_zoom(xlim = c(0, 10000))  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + facet_zoom(xlim = c(0, 10000), ylim=c(60, 80))   Zoom according to a qualitative variable ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + facet_zoom(y = continent == \u0026#39;Oceania\u0026#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + facet_zoom(x = continent == \u0026#39;Oceania\u0026#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + facet_zoom(xy = continent == \u0026#39;Oceania\u0026#39;)  ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + facet_zoom(xy = continent == \u0026#39;Oceania\u0026#39;, split = TRUE)   "
+  "description": "You can use facet_zoom from the ggforce package to zoom out graphs instead of using your mouse (Contextual zoom)."
 }
 </script>
 
@@ -627,39 +625,54 @@ Load necessary library(tidyverse) library(ggforce) library(gapminder)  Zoom acco
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
-<p>To enlarge a section of data in your <code>ggplots</code>, use the <code>facet zoom</code> function in the <code>ggforce</code> package. To illustrate I am using the <a href="https://cran.r-project.org/web/packages/gapminder/README.html">gapminder</a> dataset in <a href="https://cran.r-project.org/web/packages/gapminder/README.html">gapminder</a> package.</p>
+<p>To enlarge a section of data in your <code>ggplots</code>, use the <code>facet zoom</code> function in the <a href="https://rdrr.io/cran/ggforce/man/facet_zoom.html">ggforce</a> package. To illustrate I am using the <a href="https://cran.r-project.org/web/packages/gapminder/README.html">gapminder</a> dataset in <a href="https://cran.r-project.org/web/packages/gapminder/README.html">gapminder</a> package.</p>
 <div id="load-necessary" class="section level2">
 <h2>Load necessary</h2>
 <pre class="r"><code>library(tidyverse)
+library(RColorBrewer)
 library(ggforce)
 library(gapminder)</code></pre>
 </div>
+<div id="set-the-theme-for-plots" class="section level2">
+<h2>Set the theme for plots</h2>
+<pre class="r"><code>theme_set(theme_bw())</code></pre>
+</div>
 <div id="zoom-according-to-a-continuous-scale-variable" class="section level2">
 <h2>Zoom according to a continuous scale variable</h2>
-<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + 
+<p><strong>zoom the Y axis</strong></p>
+<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +  
   facet_zoom(ylim = c(60, 80)) </code></pre>
-<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + 
+<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><strong>zoom the X axis</strong></p>
+<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +   
   facet_zoom(xlim = c(0, 10000)) </code></pre>
-<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
-<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() + 
+<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><strong>zoom the X axis and the Y axis</strong></p>
+<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +  
   facet_zoom(xlim = c(0, 10000), ylim=c(60, 80)) </code></pre>
-<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-2-3.png" width="672" /></p>
+<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 </div>
 <div id="zoom-according-to-a-qualitative-variable" class="section level2">
 <h2>Zoom according to a qualitative variable</h2>
+<p><strong>zoom the Y axis</strong></p>
 <pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+  scale_color_brewer(palette = &quot;Dark2&quot;) +
   facet_zoom(y = continent == &#39;Oceania&#39;) </code></pre>
-<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><strong>zoom the X axis</strong></p>
 <pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+  scale_color_brewer(palette = &quot;Dark2&quot;) +
   facet_zoom(x = continent == &#39;Oceania&#39;) </code></pre>
-<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-3-2.png" width="672" /></p>
+<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><strong>zoom the X axis and the Y axis</strong></p>
 <pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+  scale_color_brewer(palette = &quot;Dark2&quot;) +
   facet_zoom(xy = continent == &#39;Oceania&#39;) </code></pre>
-<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-3-3.png" width="672" /></p>
+<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+  scale_color_brewer(palette = &quot;Dark2&quot;) +
   facet_zoom(xy = continent == &#39;Oceania&#39;, split = TRUE) </code></pre>
-<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-3-4.png" width="672" /></p>
+<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 </div>
 
     </div>
