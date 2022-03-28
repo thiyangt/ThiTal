@@ -1,0 +1,37 @@
+---
+title: "Formatting axis labels in ggplot"
+author: Thiyanga Talagala
+date: '2022-03-38'
+categories: [R, tidyverse, ggplot2, scatterplot]
+tags: [R, tidyverse, ggplot2, scatterplot]
+summary: "With the ggplot2 package, you've got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+With the ggplot2 package, you've got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing.
+
+## Comma-separated labels
+
+`comma_format` function in `scales` can be used to add comma separated labels. To illustrate this I use African names data set in TidyTuesday.
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(scales) 
+## read data
+african_names <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-06-16/african_names.csv")
+## plot
+african_names %>%
+  ggplot(aes(year_arrival)) +
+  geom_histogram(bins = 20, fill = "darkslateblue", alpha = 0.7, col="white") +
+  scale_y_continuous(labels = scales::comma_format()) 
+```
+
+
+
+
+
+
