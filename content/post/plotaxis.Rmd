@@ -33,12 +33,23 @@ african_names %>%
 
 ## Change label angles, horizontal justification and vertical justification
 
+**Angles only**
+
 The ggplot2 package `element text` can be used to alter the label angles as well as the horizontal and vertical justifications.
 
-```{r}
+```{r, fig.height=5, fig.height=5}
 library(palmerpenguins)
 penguins %>%
-  ggplot(aes(x=species)) + geom_bar() + theme(axis.text.x=element_text(angle=30, vjust=.8, hjust=0.8))
+  ggplot(aes(x=species, col=species)) + geom_bar() +
+  theme(axis.text.x=element_text(angle=30))
+```
+
+**Angles, horizontal justification and vertical justification**
+
+```{r}
+penguins %>%
+  ggplot(aes(x=species, col=species)) + geom_bar() +
+  theme(axis.text.x=element_text(angle=30, vjust=.8, hjust=0.8))
 ```
 
 

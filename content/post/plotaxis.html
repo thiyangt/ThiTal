@@ -3,7 +3,7 @@ title: "Formatting axis labels in ggplot"
 author: Thiyanga Talagala
 date: '2022-03-27'
 categories: [R, tidyverse, ggplot2, scatterplot]
-tags: [R, tidyverse, ggplot2, scatterplot]
+tags: [R, tidyverse, ggplot2]
 summary: "With the ggplot2 package, you've got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing"
 ---
 
@@ -27,12 +27,16 @@ african_names %&gt;%
 </div>
 <div id="change-label-angles-horizontal-justification-and-vertical-justification" class="section level2">
 <h2>Change label angles, horizontal justification and vertical justification</h2>
+<p><strong>Angles only</strong></p>
 <p>The ggplot2 package <code>element text</code> can be used to alter the label angles as well as the horizontal and vertical justifications.</p>
 <pre class="r"><code>library(palmerpenguins)
 penguins %&gt;%
-  ggplot(aes(x=species)) + geom_bar() + theme(axis.text.x=element_text(angle=30))</code></pre>
+  ggplot(aes(x=species, col=species)) + geom_bar() +
+  theme(axis.text.x=element_text(angle=30))</code></pre>
 <p><img src="/post/plotaxis_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><strong>Angles, horizontal justification and vertical justification</strong></p>
 <pre class="r"><code>penguins %&gt;%
-  ggplot(aes(x=species)) + geom_bar() + theme(axis.text.x=element_text(angle=30, vjust=.8, hjust=0.8))</code></pre>
-<p><img src="/post/plotaxis_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+  ggplot(aes(x=species, col=species)) + geom_bar() +
+  theme(axis.text.x=element_text(angle=30, vjust=.8, hjust=0.8))</code></pre>
+<p><img src="/post/plotaxis_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 </div>

@@ -47,9 +47,6 @@
     <loc>/categories/r/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/scatterplot/</loc>
-    <lastmod>2022-03-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/categories/scatterplot/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
   </url><url>
@@ -129,6 +126,9 @@
     <lastmod>2020-12-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/scatterplot/</loc>
+    <lastmod>2020-12-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/scatterplot/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/talk/isf20-talk/</loc>
