@@ -61,7 +61,8 @@ ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +
 **zoom the Y axis**
 
 ```{r}
-ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
+  coord_fixed() + 
   scale_color_brewer(palette = "Dark2") +
   facet_zoom(y = continent == 'Oceania') 
 ```
@@ -69,7 +70,8 @@ ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + c
 **zoom the X axis**
 
 ```{r}
-ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
+  coord_fixed() + 
   scale_color_brewer(palette = "Dark2") +
   facet_zoom(x = continent == 'Oceania') 
 ```
@@ -77,13 +79,15 @@ ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + c
 **zoom the X axis and the Y axis**
 
 ```{r}
-ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
+  coord_fixed() + 
   scale_color_brewer(palette = "Dark2") +
   facet_zoom(xy = continent == 'Oceania') 
 ```
 
 ```{r}
-ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + coord_fixed() + 
+ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
+  coord_fixed() + 
   scale_color_brewer(palette = "Dark2") +
   facet_zoom(xy = continent == 'Oceania', split = TRUE) 
 ```
