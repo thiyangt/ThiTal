@@ -125,7 +125,9 @@
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
+      <meta property="article:published_time" content="2022-03-27T00:00:00&#43;00:00">
     
+    <meta property="article:modified_time" content="2022-03-27T00:00:00&#43;00:00">
   
 
   
@@ -155,8 +157,8 @@
   },
   "headline": "Formatting axis labels in ggplot",
   
-  "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "0001-01-01T00:00:00Z",
+  "datePublished": "2022-03-27T00:00:00Z",
+  "dateModified": "2022-03-27T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -570,7 +572,7 @@
     
       
     
-    Jan 1, 0001
+    Mar 27, 2022
   </span>
   
 
@@ -637,6 +639,17 @@ african_names %&gt;%
   geom_histogram(bins = 20, fill = &quot;darkslateblue&quot;, alpha = 0.7, col=&quot;white&quot;) +
   scale_y_continuous(labels = scales::comma_format()) </code></pre>
 <p><img src="/post/plotaxis_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="change-label-angles-horizontal-justification-and-vertical-justification" class="section level2">
+<h2>Change label angles, horizontal justification and vertical justification</h2>
+<p>The ggplot2 package <code>element text</code> can be used to alter the label angles as well as the horizontal and vertical justifications.</p>
+<pre class="r"><code>library(palmerpenguins)
+penguins %&gt;%
+  ggplot(aes(x=species)) + geom_bar() + theme(axis.text.x=element_text(angle=30))</code></pre>
+<p><img src="/post/plotaxis_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>penguins %&gt;%
+  ggplot(aes(x=species)) + geom_bar() + theme(axis.text.x=element_text(angle=30, vjust=.8, hjust=0.8))</code></pre>
+<p><img src="/post/plotaxis_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
 </div>
 
     </div>

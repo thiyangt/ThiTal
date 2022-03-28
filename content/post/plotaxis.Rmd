@@ -3,7 +3,7 @@ title: "Formatting axis labels in ggplot"
 author: Thiyanga Talagala
 date: '2022-03-27'
 categories: [R, tidyverse, ggplot2, scatterplot]
-tags: [R, tidyverse, ggplot2, scatterplot]
+tags: [R, tidyverse, ggplot2]
 summary: "With the ggplot2 package, you've got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing"
 ---
 
@@ -30,6 +30,16 @@ african_names %>%
   scale_y_continuous(labels = scales::comma_format()) 
 ```
 
+
+## Change label angles, horizontal justification and vertical justification
+
+The ggplot2 package `element text` can be used to alter the label angles as well as the horizontal and vertical justifications.
+
+```{r}
+library(palmerpenguins)
+penguins %>%
+  ggplot(aes(x=species)) + geom_bar() + theme(axis.text.x=element_text(angle=30, vjust=.8, hjust=0.8))
+```
 
 
 

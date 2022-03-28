@@ -5,12 +5,50 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 06 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 27 Mar 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>Formatting axis labels in ggplot</title>
+      <link>/post/plotaxis/</link>
+      <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>/post/plotaxis/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;With the ggplot2 package, you’ve got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing.&lt;/p&gt;
+&lt;div id=&#34;comma-separated-labels&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Comma-separated labels&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;comma_format&lt;/code&gt; function in &lt;code&gt;scales&lt;/code&gt; can be used to add comma separated labels. To illustrate this I use African names data set in TidyTuesday.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(scales) 
+## read data
+african_names &amp;lt;- readr::read_csv(&amp;quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-06-16/african_names.csv&amp;quot;)
+## plot
+african_names %&amp;gt;%
+  ggplot(aes(year_arrival)) +
+  geom_histogram(bins = 20, fill = &amp;quot;darkslateblue&amp;quot;, alpha = 0.7, col=&amp;quot;white&amp;quot;) +
+  scale_y_continuous(labels = scales::comma_format()) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/plotaxis_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;change-label-angles-horizontal-justification-and-vertical-justification&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Change label angles, horizontal justification and vertical justification&lt;/h2&gt;
+&lt;p&gt;The ggplot2 package &lt;code&gt;element text&lt;/code&gt; can be used to alter the label angles as well as the horizontal and vertical justifications.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(palmerpenguins)
+penguins %&amp;gt;%
+  ggplot(aes(x=species)) + geom_bar() + theme(axis.text.x=element_text(angle=30))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/plotaxis_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins %&amp;gt;%
+  ggplot(aes(x=species)) + geom_bar() + theme(axis.text.x=element_text(angle=30, vjust=.8, hjust=0.8))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/plotaxis_files/figure-html/unnamed-chunk-2-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Coronavirus Dashboard - Sri Lanka</title>
@@ -2443,33 +2481,6 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       <guid>/post/datatypes/</guid>
       <description>&lt;p&gt;coming up soon!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Formatting axis labels in ggplot</title>
-      <link>/post/plotaxis/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/post/plotaxis/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;With the ggplot2 package, you’ve got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing.&lt;/p&gt;
-&lt;div id=&#34;comma-separated-labels&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Comma-separated labels&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;comma_format&lt;/code&gt; function in &lt;code&gt;scales&lt;/code&gt; can be used to add comma separated labels. To illustrate this I use African names data set in TidyTuesday.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
-library(scales) 
-## read data
-african_names &amp;lt;- readr::read_csv(&amp;quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-06-16/african_names.csv&amp;quot;)
-## plot
-african_names %&amp;gt;%
-  ggplot(aes(year_arrival)) +
-  geom_histogram(bins = 20, fill = &amp;quot;darkslateblue&amp;quot;, alpha = 0.7, col=&amp;quot;white&amp;quot;) +
-  scale_y_continuous(labels = scales::comma_format()) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/plotaxis_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
 </description>
     </item>
     
