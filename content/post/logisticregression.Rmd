@@ -58,7 +58,7 @@ vis_miss(penguins_omit)
 
 ## Building logistic regression
 
-Then, using the other variables in the dataset, I'll create a logistic regression model to predict the gender of the palmer penguins. Before beginning to build the model, double-check that all qualitative variables have been saved as factors.
+Then, using the other variables in the dataset, I'll create a logistic regression model to predict the gender of the palmer penguins. One goal of this work is to identify which variables significantly contribute to determining the gender of penguins. Before beginning to build the model, double-check that all qualitative variables have been saved as factors.
 
 
 ```{r, fig.height=13, fig.width=13}
