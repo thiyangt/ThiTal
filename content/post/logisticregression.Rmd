@@ -1,0 +1,90 @@
+---
+title: "Logistic Regression: Model Building and Interpretation"
+author: Thiyanga Talagala
+date: '2022-04-11'
+categories: [R, tidyverse, ggplot2, scatterplot]
+tags: [R, tidyverse, ggplot2]
+summary: "Logistic regression is a widely used modelling approach, however little is known about the modelling processes and interpretation of model outputs. This post demonstrates how to build a logistic model with R and how to interpret the results. "
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, comment = NA)
+```
+
+## Data
+
+In this post I am going to use `penguins` dataset in `palmerpenguins` package in R. First we load the dataset.
+
+```{r, warning=FALSE, message=FALSE}
+library(palmerpenguins)
+library(skimr)
+library(tidyverse)
+library(plotly)
+library(visdat)
+data("penguins")
+skim(penguins)
+```
+
+Here is an overview of the dataset.
+
+```{r}
+summary(penguins)
+```
+
+To plot each pair of variables, I used `GGally::ggpairs` function.
+
+```{r}
+p1 <- penguins %>%
+  select(species, body_mass_g, ends_with("_mm")) %>%
+  GGally::ggpairs(aes(color = species)) +
+  scale_colour_manual(values = c("darkorange","purple","cyan4")) +
+  scale_fill_manual(values = c("darkorange","purple","cyan4"))
+ggplotly(p1)
+```
+
+## Missing values exploration
+
+```{r}
+penguins_omit <- penguins %>%
+  na.omit()
+vis_miss(penguins_omit)
+```
+
+## Remove missing values
+
+## Building logistic regression
+
+Then, using the other variables in the dataset, I'll create a logistic regression model to predict the gender of the palmer penguins. Before beginning to build the model, double-check that all qualitative variables have been saved as factors.
+
+
+```{r}
+fit <- glm(sex ~ species + island + bill_length_mm + bill_depth_mm + flipper_length_mm + body_mass_g, data=penguins_omit, family="binomial")
+summary(fit)
+```
+
+
+## Interpretation of parameter estimates of logistic regression
+
+The Estimates in the above output  corresponds to the **log-odds**. The **odd ratios** can be obtained as follows:
+
+```{r}
+exp(coefficients(fit))
+
+```
+
+The 95\% confidence intervals for log-odds can be obtained as follows
+
+```{r}
+confint.default(fit)
+```
+
+The 95\% confidence intervals for odds are as follows
+
+```{r}
+exp(confint.default(fit))
+```
+
+
+We can write the estimated logistic regression model as follows
+
+$$\phi(z) = \frac{1}{1+e^{-z}} = \frac{1}{e^{-80.83 -7.40Chinstrap -8.42Gentoo +0.32Dream -0.50Torgersen + 0.61 bill\_length\_mm + 1.64 bill\_depth\_mm + 0.02 flipper\_length\_mm + 0.005 body\_mass\_g}}$$
