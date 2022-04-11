@@ -89,9 +89,9 @@ exp(confint.default(fit))
 ```
 
 
-We can write the estimated logistic regression model as follows
+We can write the fitted logistic regression model as follows
 
-$$\phi(z) = \frac{1}{1+e^{-z}} = \frac{1}{e^{-80.83 -7.40Chinstrap -8.42Gentoo +0.32Dream -0.50Torgersen + 0.61 bill\_length\_mm + 1.64 bill\_depth\_mm + 0.02 flipper\_length\_mm + 0.005 body\_mass\_g}}$$
+$$\hat{Y} = \frac{1}{1+e^{-z}} = \frac{1}{e^{-80.83 -7.40Chinstrap -8.42Gentoo +0.32Dream -0.50Torgersen + 0.61 bill\_length\_mm + 1.64 bill\_depth\_mm + 0.02 flipper\_length\_mm + 0.005 body\_mass\_g}}$$
 
 ## Interpretation of parameter estimates
 
