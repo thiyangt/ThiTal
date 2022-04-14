@@ -29,10 +29,11 @@ library(tidyverse)
 library(plotly)
 library(visdat)
 library(patchwork)
-data(&quot;penguins&quot;)
-skim(penguins)</code></pre>
+data(&quot;penguins&quot;)</code></pre>
+<p>Here is an overview of the dataset.</p>
+<pre class="r"><code>skim(penguins)</code></pre>
 <table>
-<caption><span id="tab:unnamed-chunk-1">Table 1: </span>Data summary</caption>
+<caption><span id="tab:unnamed-chunk-2">Table 1: </span>Data summary</caption>
 <tbody>
 <tr class="odd">
 <td align="left">Name</td>
@@ -196,7 +197,6 @@ skim(penguins)</code></pre>
 </tr>
 </tbody>
 </table>
-<p>Here is an overview of the dataset.</p>
 <pre class="r"><code>summary(penguins)</code></pre>
 <pre><code>      species          island    bill_length_mm  bill_depth_mm  
  Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  
@@ -238,7 +238,12 @@ p2_island &lt;- penguins %&gt;%
   theme(legend.position = &quot;bottom&quot;) +
   ggtitle(&quot;b&quot;)
 (p1_species|p2_island)</code></pre>
-<p><img src="/post/logisticregression_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="/post/logisticregression_files/figure-html/unnamed-chunk-3-1.png" alt="Distribution of (a) species and (d) island by gender." width="672" />
+<p class="caption">
+Figure 1: Distribution of (a) species and (d) island by gender.
+</p>
+</div>
 <pre class="r"><code>p3_length &lt;-  ggplot(penguins, aes(x=sex, y=bill_length_mm, fill=sex)) +
   geom_boxplot() + 
   scale_fill_manual(values = c(&quot;purple&quot;,&quot;cyan4&quot;)) + 
@@ -260,19 +265,24 @@ p6_bmi &lt;-  ggplot(penguins, aes(x=sex, y=body_mass_g, fill=sex)) +
   theme(legend.position = &quot;bottom&quot;) + ggtitle(&quot;d&quot;)
 
 (p3_length|p4_depth)/(p5_flipper|p6_bmi)</code></pre>
-<p><img src="/post/logisticregression_files/figure-html/unnamed-chunk-3-2.png" width="672" /></p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="/post/logisticregression_files/figure-html/unnamed-chunk-4-1.png" alt="Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender." width="672" />
+<p class="caption">
+Figure 2: Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.
+</p>
+</div>
 </div>
 <div id="missing-values-exploration" class="section level2">
 <h2>Missing values exploration</h2>
 <pre class="r"><code>vis_miss(penguins)</code></pre>
-<p><img src="/post/logisticregression_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 </div>
 <div id="remove-missing-values" class="section level2">
 <h2>Remove missing values</h2>
 <pre class="r"><code>penguins_omit &lt;- penguins %&gt;%
   na.omit()
 vis_miss(penguins_omit)</code></pre>
-<p><img src="/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="/post/logisticregression_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 </div>
 <div id="building-logistic-regression" class="section level2">
 <h2>Building logistic regression</h2>

@@ -33,12 +33,13 @@ library(plotly)
 library(visdat)
 library(patchwork)
 data("penguins")
-skim(penguins)
+
 ```
 
 Here is an overview of the dataset.
 
 ```{r}
+skim(penguins)
 summary(penguins)
 ```
 
@@ -47,7 +48,7 @@ Before moving on to the full logistic regression model, it's a good idea to look
 
 
 
-```{r}
+```{r, fig.cap="Distribution of (a) species and (d) island by gender."}
 p1_species <- penguins %>% 
   na.omit() %>%
   count(species,sex) %>% 
@@ -71,6 +72,11 @@ p2_island <- penguins %>%
   theme(legend.position = "bottom") +
   ggtitle("b")
 (p1_species|p2_island)
+
+```
+
+
+```{r, fig.cap="Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender."}
 
 p3_length <-  ggplot(penguins, aes(x=sex, y=bill_length_mm, fill=sex)) +
   geom_boxplot() + 
