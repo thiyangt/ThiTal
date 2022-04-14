@@ -389,7 +389,7 @@ body_mass_g       1.003695e+00 1.007982e+00&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Interpretation of parameter estimates&lt;/h2&gt;
 &lt;p&gt;The variables species, bill length (mm), bill depth (mm) and body mass (g) significantly contribute to the model.&lt;/p&gt;
 &lt;p&gt;With all other factors held constant, this fitted model predicts that the odds of discovering a male penguin on Dream island are 1.38 times higher than on Biscoe island.&lt;/p&gt;
-&lt;p&gt;For each one-unit increase in bill depth, the probabilities of detecting a male increased 5.18 times (95 percent CI 2.68–10.02).&lt;/p&gt;
+&lt;p&gt;For each one-unit increase in bill depth, the odds of detecting a male increased 5.18 times (95 percent CI 2.68–10.02).&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Model Evaluation: Next Post! Model evaluation should be done before interpreting the model.&lt;/p&gt;
 &lt;/blockquote&gt;
