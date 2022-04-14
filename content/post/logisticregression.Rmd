@@ -163,6 +163,7 @@ We can write the fitted logistic regression model as follows
 
 $$\hat{Y} = \frac{1}{1+e^{-z}} = \frac{1}{e^{-80.83 -7.40Chinstrap -8.42Gentoo +0.32Dream -0.50Torgersen + 0.61 bill\_length\_mm + 1.64 bill\_depth\_mm + 0.02 flipper\_length\_mm + 0.005 body\_mass\_g}}$$
 
+Where,
 
 $$Chinstrap=\begin{cases}
 1, & \text{if Chinstrap}\\
@@ -184,6 +185,14 @@ $$Torgersen=\begin{cases}
 1, & \text{if Torgersen}\\
 0, & \text{otherwise}
 \end{cases}$$
+
+$$bill\_length\_mm = \text{bill length (millimeters)},$$
+$$bill\_depth\_mm = \text{bill depth (millimeters)},$$
+
+$$flipper\_length\_mm = \text{flipper length (millimeters)},$$
+
+$$body\_mass\_g = \text{body mass (grams)}.$$
+
 
 ## Interpretation of parameter estimates
 

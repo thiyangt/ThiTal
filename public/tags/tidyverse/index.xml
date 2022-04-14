@@ -363,6 +363,7 @@ flipper_length_mm 9.342361e-01 1.129001e+00
 body_mass_g       1.003695e+00 1.007982e+00&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We can write the fitted logistic regression model as follows&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\hat{Y} = \frac{1}{1+e^{-z}} = \frac{1}{e^{-80.83 -7.40Chinstrap -8.42Gentoo +0.32Dream -0.50Torgersen + 0.61 bill\_length\_mm + 1.64 bill\_depth\_mm + 0.02 flipper\_length\_mm + 0.005 body\_mass\_g}}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Where,&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Chinstrap=\begin{cases}
 1, &amp;amp; \text{if Chinstrap}\\
 0, &amp;amp; \text{otherwise}
@@ -379,6 +380,10 @@ body_mass_g       1.003695e+00 1.007982e+00&lt;/code&gt;&lt;/pre&gt;
 1, &amp;amp; \text{if Torgersen}\\
 0, &amp;amp; \text{otherwise}
 \end{cases}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[bill\_length\_mm = \text{bill length (millimeters)},\]&lt;/span&gt;
+&lt;span class=&#34;math display&#34;&gt;\[bill\_depth\_mm = \text{bill depth (millimeters)},\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[flipper\_length\_mm = \text{flipper length (millimeters)},\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[body\_mass\_g = \text{body mass (grams)}.\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;interpretation-of-parameter-estimates&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Interpretation of parameter estimates&lt;/h2&gt;

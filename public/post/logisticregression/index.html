@@ -967,6 +967,7 @@ flipper_length_mm 9.342361e-01 1.129001e+00
 body_mass_g       1.003695e+00 1.007982e+00</code></pre>
 <p>We can write the fitted logistic regression model as follows</p>
 <p><span class="math display">\[\hat{Y} = \frac{1}{1+e^{-z}} = \frac{1}{e^{-80.83 -7.40Chinstrap -8.42Gentoo +0.32Dream -0.50Torgersen + 0.61 bill\_length\_mm + 1.64 bill\_depth\_mm + 0.02 flipper\_length\_mm + 0.005 body\_mass\_g}}\]</span></p>
+<p>Where,</p>
 <p><span class="math display">\[Chinstrap=\begin{cases}
 1, &amp; \text{if Chinstrap}\\
 0, &amp; \text{otherwise}
@@ -983,6 +984,10 @@ body_mass_g       1.003695e+00 1.007982e+00</code></pre>
 1, &amp; \text{if Torgersen}\\
 0, &amp; \text{otherwise}
 \end{cases}\]</span></p>
+<p><span class="math display">\[bill\_length\_mm = \text{bill length (millimeters)},\]</span>
+<span class="math display">\[bill\_depth\_mm = \text{bill depth (millimeters)},\]</span></p>
+<p><span class="math display">\[flipper\_length\_mm = \text{flipper length (millimeters)},\]</span></p>
+<p><span class="math display">\[body\_mass\_g = \text{body mass (grams)}.\]</span></p>
 </div>
 <div id="interpretation-of-parameter-estimates" class="section level2">
 <h2>Interpretation of parameter estimates</h2>
