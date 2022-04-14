@@ -838,11 +838,34 @@ p2_island &lt;- penguins %&gt;%
   mutate(Percentage = 100*n/sum(n)) %&gt;% 
   ggplot(aes(x = island,y = Percentage,fill=sex))+
   geom_bar(stat=&quot;identity&quot;) + 
+  scale_fill_manual(values = c(&quot;purple&quot;,&quot;cyan4&quot;)) + 
   coord_flip() +
   theme(legend.position = &quot;bottom&quot;) +
   ggtitle(&quot;b&quot;)
 (p1_species|p2_island)</code></pre>
 <p><img src="/post/logisticregression_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<pre class="r"><code>p3_length &lt;-  ggplot(penguins, aes(x=sex, y=bill_length_mm, fill=sex)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = c(&quot;purple&quot;,&quot;cyan4&quot;)) + 
+  theme(legend.position = &quot;bottom&quot;) + ggtitle(&quot;a&quot;)
+
+p4_depth &lt;-  ggplot(penguins, aes(x=sex, y=bill_depth_mm, fill=sex)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = c(&quot;purple&quot;,&quot;cyan4&quot;)) + 
+  theme(legend.position = &quot;bottom&quot;) + ggtitle(&quot;b&quot;)
+
+p5_flipper &lt;-  ggplot(penguins, aes(x=sex, y=flipper_length_mm, fill=sex)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = c(&quot;purple&quot;,&quot;cyan4&quot;)) + 
+  theme(legend.position = &quot;bottom&quot;) + ggtitle(&quot;c&quot;)
+
+p6_bmi &lt;-  ggplot(penguins, aes(x=sex, y=body_mass_g, fill=sex)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = c(&quot;purple&quot;,&quot;cyan4&quot;)) + 
+  theme(legend.position = &quot;bottom&quot;) + ggtitle(&quot;d&quot;)
+
+(p3_length|p4_depth)/(p5_flipper|p6_bmi)</code></pre>
+<p><img src="/post/logisticregression_files/figure-html/unnamed-chunk-3-2.png" width="672" /></p>
 </div>
 <div id="missing-values-exploration" class="section level2">
 <h2>Missing values exploration</h2>

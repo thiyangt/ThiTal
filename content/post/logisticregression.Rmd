@@ -66,10 +66,33 @@ p2_island <- penguins %>%
   mutate(Percentage = 100*n/sum(n)) %>% 
   ggplot(aes(x = island,y = Percentage,fill=sex))+
   geom_bar(stat="identity") + 
+  scale_fill_manual(values = c("purple","cyan4")) + 
   coord_flip() +
   theme(legend.position = "bottom") +
   ggtitle("b")
 (p1_species|p2_island)
+
+p3_length <-  ggplot(penguins, aes(x=sex, y=bill_length_mm, fill=sex)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = c("purple","cyan4")) + 
+  theme(legend.position = "bottom") + ggtitle("a")
+
+p4_depth <-  ggplot(penguins, aes(x=sex, y=bill_depth_mm, fill=sex)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = c("purple","cyan4")) + 
+  theme(legend.position = "bottom") + ggtitle("b")
+
+p5_flipper <-  ggplot(penguins, aes(x=sex, y=flipper_length_mm, fill=sex)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = c("purple","cyan4")) + 
+  theme(legend.position = "bottom") + ggtitle("c")
+
+p6_bmi <-  ggplot(penguins, aes(x=sex, y=body_mass_g, fill=sex)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = c("purple","cyan4")) + 
+  theme(legend.position = "bottom") + ggtitle("d")
+
+(p3_length|p4_depth)/(p5_flipper|p6_bmi)
 ```
 
 

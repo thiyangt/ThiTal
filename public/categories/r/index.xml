@@ -234,11 +234,34 @@ p2_island &amp;lt;- penguins %&amp;gt;%
   mutate(Percentage = 100*n/sum(n)) %&amp;gt;% 
   ggplot(aes(x = island,y = Percentage,fill=sex))+
   geom_bar(stat=&amp;quot;identity&amp;quot;) + 
+  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
   coord_flip() +
   theme(legend.position = &amp;quot;bottom&amp;quot;) +
   ggtitle(&amp;quot;b&amp;quot;)
 (p1_species|p2_island)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p3_length &amp;lt;-  ggplot(penguins, aes(x=sex, y=bill_length_mm, fill=sex)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
+  theme(legend.position = &amp;quot;bottom&amp;quot;) + ggtitle(&amp;quot;a&amp;quot;)
+
+p4_depth &amp;lt;-  ggplot(penguins, aes(x=sex, y=bill_depth_mm, fill=sex)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
+  theme(legend.position = &amp;quot;bottom&amp;quot;) + ggtitle(&amp;quot;b&amp;quot;)
+
+p5_flipper &amp;lt;-  ggplot(penguins, aes(x=sex, y=flipper_length_mm, fill=sex)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
+  theme(legend.position = &amp;quot;bottom&amp;quot;) + ggtitle(&amp;quot;c&amp;quot;)
+
+p6_bmi &amp;lt;-  ggplot(penguins, aes(x=sex, y=body_mass_g, fill=sex)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
+  theme(legend.position = &amp;quot;bottom&amp;quot;) + ggtitle(&amp;quot;d&amp;quot;)
+
+(p3_length|p4_depth)/(p5_flipper|p6_bmi)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-3-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;missing-values-exploration&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Missing values exploration&lt;/h2&gt;
