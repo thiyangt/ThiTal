@@ -1127,6 +1127,10 @@ AIC: 144.05
 
 Number of Fisher Scoring iterations: 7&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To represent qualitative variables, R will build an indicator (dummy) variable using the lowest coded category as the reference group. For example,&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y=\begin{cases}
+0, &amp;amp; \text{if female}\\
+1, &amp;amp; \text{if male}
+\end{cases}\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;interpretation-of-parameter-estimates-of-logistic-regression&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Interpretation of parameter estimates of logistic regression&lt;/h2&gt;
@@ -1165,13 +1169,28 @@ flipper_length_mm 9.342361e-01 1.129001e+00
 body_mass_g       1.003695e+00 1.007982e+00&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We can write the fitted logistic regression model as follows&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\hat{Y} = \frac{1}{1+e^{-z}} = \frac{1}{e^{-80.83 -7.40Chinstrap -8.42Gentoo +0.32Dream -0.50Torgersen + 0.61 bill\_length\_mm + 1.64 bill\_depth\_mm + 0.02 flipper\_length\_mm + 0.005 body\_mass\_g}}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Chinstrap=\begin{cases}
+1, &amp;amp; \text{if Chinstrap}\\
+0, &amp;amp; \text{otherwise}
+\end{cases}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Gentoo=\begin{cases}
+1, &amp;amp; \text{if Gentoo}\\
+0, &amp;amp; \text{otherwise}
+\end{cases}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Dream=\begin{cases}
+1, &amp;amp; \text{if Dream}\\
+0, &amp;amp; \text{otherwise}
+\end{cases}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Torgersen=\begin{cases}
+1, &amp;amp; \text{if Torgersen}\\
+0, &amp;amp; \text{otherwise}
+\end{cases}\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;interpretation-of-parameter-estimates&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Interpretation of parameter estimates&lt;/h2&gt;
 &lt;p&gt;The variables species, bill length (mm), bill depth (mm) and body mass (g) significantly contribute to the model.&lt;/p&gt;
-&lt;p&gt;Holding all other variables constant, this fitted model predicts that the odds of detecting a male are 1.38 times higher for penguins on Dream Island than on Biscoe.&lt;/p&gt;
-&lt;p&gt;The odds of detecting a male increased 1.005 times (95%CI 1.003–1.007) for each one-unit
-increase in the body mass (g).&lt;/p&gt;
+&lt;p&gt;With all other factors held constant, this fitted model predicts that the odds of discovering a male penguin on Dream island are 1.38 times higher than on Biscoe island.&lt;/p&gt;
+&lt;p&gt;For each one-unit increase in bill depth, the probabilities of detecting a male increased 5.18 times (95 percent CI 2.68–10.02).&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Model Evaluation: Next Post! Model evaluation should be done before interpreting the model.&lt;/p&gt;
 &lt;/blockquote&gt;
