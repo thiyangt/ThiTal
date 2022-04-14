@@ -38,6 +38,15 @@
     <loc>/post/logisticregression/</loc>
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/patchwork/</loc>
+    <lastmod>2022-04-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/plotly/</loc>
+    <lastmod>2022-04-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/plotly/</loc>
+    <lastmod>2022-04-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/post/</loc>
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
   </url><url>
@@ -60,6 +69,12 @@
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/tidyverse/</loc>
+    <lastmod>2022-04-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/visdat/</loc>
+    <lastmod>2022-04-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/visdat/</loc>
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/ggforce/</loc>
@@ -195,12 +210,6 @@
     <lastmod>2020-04-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/covid19/</loc>
-    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/plotly/</loc>
-    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/plotly/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/shiny/</loc>

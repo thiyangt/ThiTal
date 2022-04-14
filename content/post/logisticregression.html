@@ -7,10 +7,15 @@ categories:
 - tidyverse
 - ggplot2
 - scatterplot
+- visdat
+- plotly
 tags:
 - R
 - tidyverse
 - ggplot2
+- visdat
+- patchwork
+- plotly
 summary: 'Logistic regression is a widely used modelling approach, however little
   is known about the modelling processes and interpretation of model outputs. This
   post demonstrates how to build a logistic model with R and how to interpret the
@@ -388,7 +393,7 @@ body_mass_g       1.003695e+00 1.007982e+00</code></pre>
 <h2>Interpretation of parameter estimates</h2>
 <p>The variables species, bill length (mm), bill depth (mm) and body mass (g) significantly contribute to the model.</p>
 <p>With all other factors held constant, this fitted model predicts that the odds of discovering a male penguin on Dream island are 1.38 times higher than on Biscoe island.</p>
-<p>For each one-unit increase in bill depth, the probabilities of detecting a male increased 5.18 times (95 percent CI 2.68–10.02).</p>
+<p>For each one-unit increase in bill depth, the odds of detecting a male increased 5.18 times (95 percent CI 2.68–10.02).</p>
 <blockquote>
 <p>Model Evaluation: Next Post! Model evaluation should be done before interpreting the model.</p>
 </blockquote>

@@ -5,12 +5,397 @@
     <link>/categories/plotly/</link>
       <atom:link href="/categories/plotly/index.xml" rel="self" type="application/rss+xml" />
     <description>plotly</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 25 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 11 Apr 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>plotly</title>
       <link>/categories/plotly/</link>
     </image>
+    
+    <item>
+      <title>Logistic Regression: Model Building and Interpretation</title>
+      <link>/post/logisticregression/</link>
+      <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>/post/logisticregression/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data&lt;/h2&gt;
+&lt;p&gt;In this post I am going to use &lt;code&gt;penguins&lt;/code&gt; dataset in &lt;code&gt;palmerpenguins&lt;/code&gt; package in R. First we load the dataset.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(palmerpenguins)
+library(skimr)
+library(tidyverse)
+library(plotly)
+library(visdat)
+library(patchwork)
+data(&amp;quot;penguins&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here is an overview of the dataset.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;skim(penguins)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;caption&gt;&lt;span id=&#34;tab:unnamed-chunk-2&#34;&gt;Table 1: &lt;/span&gt;Data summary&lt;/caption&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Name&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;penguins&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Number of rows&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;344&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Number of columns&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;_______________________&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Column type frequency:&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;factor&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;________________________&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Group variables&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Variable type: factor&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;skim_variable&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;n_missing&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;complete_rate&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;ordered&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;n_unique&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;top_counts&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;species&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Ade: 152, Gen: 124, Chi: 68&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;island&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Bis: 168, Dre: 124, Tor: 52&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;sex&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.97&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;mal: 168, fem: 165&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Variable type: numeric&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;skim_variable&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;n_missing&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;complete_rate&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;mean&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;sd&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;p0&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;p25&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;p50&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;p75&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;p100&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;hist&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;bill_length_mm&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.99&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;43.92&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.46&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;32.1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;39.23&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;44.45&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;48.5&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;59.6&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▃▇▇▆▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;bill_depth_mm&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.99&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;17.15&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.97&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;13.1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;15.60&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;17.30&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;18.7&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;21.5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▅▅▇▇▂&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;flipper_length_mm&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.99&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;200.92&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;14.06&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;172.0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;190.00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;197.00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;213.0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;231.0&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▂▇▃▅▂&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;body_mass_g&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.99&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4201.75&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;801.95&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2700.0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3550.00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4050.00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4750.0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6300.0&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▃▇▆▃▂&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;year&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2008.03&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.82&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2007.0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2007.00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2008.00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2009.0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2009.0&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▇▁▇▁▇&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(penguins)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;      species          island    bill_length_mm  bill_depth_mm  
+ Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  
+ Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  
+ Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  
+                                 Mean   :43.92   Mean   :17.15  
+                                 3rd Qu.:48.50   3rd Qu.:18.70  
+                                 Max.   :59.60   Max.   :21.50  
+                                 NA&amp;#39;s   :2       NA&amp;#39;s   :2      
+ flipper_length_mm  body_mass_g       sex           year     
+ Min.   :172.0     Min.   :2700   female:165   Min.   :2007  
+ 1st Qu.:190.0     1st Qu.:3550   male  :168   1st Qu.:2007  
+ Median :197.0     Median :4050   NA&amp;#39;s  : 11   Median :2008  
+ Mean   :200.9     Mean   :4202                Mean   :2008  
+ 3rd Qu.:213.0     3rd Qu.:4750                3rd Qu.:2009  
+ Max.   :231.0     Max.   :6300                Max.   :2009  
+ NA&amp;#39;s   :2         NA&amp;#39;s   :2                                 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Before moving on to the full logistic regression model, it’s a good idea to look at the associations between each predictor and gender. Before moving on to the whole model, It’s critical to first grasp these linkages. We can use logistic regression to look at all of the predictors simultaneously.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p1_species &amp;lt;- penguins %&amp;gt;% 
+  na.omit() %&amp;gt;%
+  count(species,sex) %&amp;gt;% 
+  group_by(species) %&amp;gt;% 
+  mutate(Percentage = 100*n/sum(n)) %&amp;gt;% 
+  ggplot(aes(x = species,y = Percentage,fill=sex))+
+  geom_bar(stat=&amp;quot;identity&amp;quot;) + 
+  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) +
+  coord_flip() +
+  theme(legend.position = &amp;quot;bottom&amp;quot;) +
+  ggtitle(&amp;quot;a&amp;quot;) 
+
+p2_island &amp;lt;- penguins %&amp;gt;% 
+  count(island,sex) %&amp;gt;% 
+  group_by(island) %&amp;gt;% 
+  mutate(Percentage = 100*n/sum(n)) %&amp;gt;% 
+  ggplot(aes(x = island,y = Percentage,fill=sex))+
+  geom_bar(stat=&amp;quot;identity&amp;quot;) + 
+  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
+  coord_flip() +
+  theme(legend.position = &amp;quot;bottom&amp;quot;) +
+  ggtitle(&amp;quot;b&amp;quot;)
+(p1_species|p2_island)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:unnamed-chunk-3&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-3-1.png&#34; alt=&#34;Distribution of (a) species and (d) island by gender.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: Distribution of (a) species and (d) island by gender.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p3_length &amp;lt;-  ggplot(penguins, aes(x=sex, y=bill_length_mm, fill=sex)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
+  theme(legend.position = &amp;quot;bottom&amp;quot;) + ggtitle(&amp;quot;a&amp;quot;)
+
+p4_depth &amp;lt;-  ggplot(penguins, aes(x=sex, y=bill_depth_mm, fill=sex)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
+  theme(legend.position = &amp;quot;bottom&amp;quot;) + ggtitle(&amp;quot;b&amp;quot;)
+
+p5_flipper &amp;lt;-  ggplot(penguins, aes(x=sex, y=flipper_length_mm, fill=sex)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
+  theme(legend.position = &amp;quot;bottom&amp;quot;) + ggtitle(&amp;quot;c&amp;quot;)
+
+p6_bmi &amp;lt;-  ggplot(penguins, aes(x=sex, y=body_mass_g, fill=sex)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
+  theme(legend.position = &amp;quot;bottom&amp;quot;) + ggtitle(&amp;quot;d&amp;quot;)
+
+(p3_length|p4_depth)/(p5_flipper|p6_bmi)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:unnamed-chunk-4&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-4-1.png&#34; alt=&#34;Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;missing-values-exploration&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Missing values exploration&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vis_miss(penguins)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;remove-missing-values&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Remove missing values&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins_omit &amp;lt;- penguins %&amp;gt;%
+  na.omit()
+vis_miss(penguins_omit)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;building-logistic-regression&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Building logistic regression&lt;/h2&gt;
+&lt;p&gt;Then, using the other variables in the dataset, I’ll create a logistic regression model to predict the gender of the palmer penguins. One goal of this work is to identify which variables significantly contribute to determining the gender of penguins. Before beginning to build the model, double-check that all qualitative variables have been saved as factors.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit &amp;lt;- glm(sex ~ species + island + bill_length_mm + bill_depth_mm + flipper_length_mm + body_mass_g, data=penguins_omit, family=&amp;quot;binomial&amp;quot;)
+summary(fit)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;
+Call:
+glm(formula = sex ~ species + island + bill_length_mm + bill_depth_mm + 
+    flipper_length_mm + body_mass_g, family = &amp;quot;binomial&amp;quot;, data = penguins_omit)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-3.4128  -0.2000   0.0022   0.1441   2.8235  
+
+Coefficients:
+                    Estimate Std. Error z value Pr(&amp;gt;|z|)    
+(Intercept)       -80.376672  12.329735  -6.519 7.08e-11 ***
+speciesChinstrap   -7.402697   1.662534  -4.453 8.48e-06 ***
+speciesGentoo      -8.427611   2.597027  -3.245  0.00117 ** 
+islandDream         0.324158   0.809135   0.401  0.68870    
+islandTorgersen    -0.507858   0.855746  -0.593  0.55287    
+bill_length_mm      0.614436   0.131968   4.656 3.22e-06 ***
+bill_depth_mm       1.646446   0.335798   4.903 9.43e-07 ***
+flipper_length_mm   0.026654   0.048307   0.552  0.58111    
+body_mass_g         0.005819   0.001087   5.352 8.71e-08 ***
+---
+Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 461.61  on 332  degrees of freedom
+Residual deviance: 126.05  on 324  degrees of freedom
+AIC: 144.05
+
+Number of Fisher Scoring iterations: 7&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To represent qualitative variables, R will build an indicator (dummy) variable using the lowest coded category as the reference group. For example,&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y=\begin{cases}
+0, &amp;amp; \text{if female}\\
+1, &amp;amp; \text{if male}
+\end{cases}\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;interpretation-of-parameter-estimates-of-logistic-regression&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Interpretation of parameter estimates of logistic regression&lt;/h2&gt;
+&lt;p&gt;The “Estimates” in the above output corresponds to the &lt;strong&gt;log-odds&lt;/strong&gt;. The &lt;strong&gt;odd ratios&lt;/strong&gt; can be obtained as follows:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;exp(coefficients(fit))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;      (Intercept)  speciesChinstrap     speciesGentoo       islandDream 
+     1.238383e-35      6.096066e-04      2.187435e-04      1.382866e+00 
+  islandTorgersen    bill_length_mm     bill_depth_mm flipper_length_mm 
+     6.017832e-01      1.848613e+00      5.188507e+00      1.027012e+00 
+      body_mass_g 
+     1.005836e+00 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[odd = \frac{P(event)}{1-P(event)}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The 95% confidence intervals for log-odds can be obtained as follows&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;confint.default(fit)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;                          2.5 %        97.5 %
+(Intercept)       -1.045425e+02 -56.210836165
+speciesChinstrap  -1.066120e+01  -4.144190616
+speciesGentoo     -1.351769e+01  -3.337530854
+islandDream       -1.261718e+00   1.910034317
+islandTorgersen   -2.185089e+00   1.169372704
+bill_length_mm     3.557834e-01   0.873088085
+bill_depth_mm      9.882945e-01   2.304597483
+flipper_length_mm -6.802606e-02   0.121333507
+body_mass_g        3.687778e-03   0.007949886&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The 95% confidence intervals for odds are as follows&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;exp(confint.default(fit))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;                         2.5 %       97.5 %
+(Intercept)       3.960644e-46 3.872077e-25
+speciesChinstrap  2.343681e-05 1.585626e-02
+speciesGentoo     1.346919e-06 3.552456e-02
+islandDream       2.831672e-01 6.753321e+00
+islandTorgersen   1.124677e-01 3.219972e+00
+bill_length_mm    1.427298e+00 2.394293e+00
+bill_depth_mm     2.686648e+00 1.002014e+01
+flipper_length_mm 9.342361e-01 1.129001e+00
+body_mass_g       1.003695e+00 1.007982e+00&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can write the fitted logistic regression model as follows&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\hat{Y} = \frac{1}{1+e^{-z}} = \frac{1}{e^{-80.83 -7.40Chinstrap -8.42Gentoo +0.32Dream -0.50Torgersen + 0.61 bill\_length\_mm + 1.64 bill\_depth\_mm + 0.02 flipper\_length\_mm + 0.005 body\_mass\_g}}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Where,&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Chinstrap=\begin{cases}
+1, &amp;amp; \text{if Chinstrap}\\
+0, &amp;amp; \text{otherwise}
+\end{cases}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Gentoo=\begin{cases}
+1, &amp;amp; \text{if Gentoo}\\
+0, &amp;amp; \text{otherwise}
+\end{cases}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Dream=\begin{cases}
+1, &amp;amp; \text{if Dream}\\
+0, &amp;amp; \text{otherwise}
+\end{cases}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Torgersen=\begin{cases}
+1, &amp;amp; \text{if Torgersen}\\
+0, &amp;amp; \text{otherwise}
+\end{cases}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[bill\_length\_mm = \text{bill length (millimeters)},\]&lt;/span&gt;
+&lt;span class=&#34;math display&#34;&gt;\[bill\_depth\_mm = \text{bill depth (millimeters)},\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[flipper\_length\_mm = \text{flipper length (millimeters)},\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[body\_mass\_g = \text{body mass (grams)}.\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;interpretation-of-parameter-estimates&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Interpretation of parameter estimates&lt;/h2&gt;
+&lt;p&gt;The variables species, bill length (mm), bill depth (mm) and body mass (g) significantly contribute to the model.&lt;/p&gt;
+&lt;p&gt;With all other factors held constant, this fitted model predicts that the odds of discovering a male penguin on Dream island are 1.38 times higher than on Biscoe island.&lt;/p&gt;
+&lt;p&gt;For each one-unit increase in bill depth, the odds of detecting a male increased 5.18 times (95 percent CI 2.68–10.02).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Model Evaluation: Next Post! Model evaluation should be done before interpreting the model.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Dashboard to monitor COVID-19 situation in Sri Lanka</title>
