@@ -1,10 +1,20 @@
 ---
-title: "Logistic Regression: Model Building and Interpretation"
-author: Thiyanga Talagala
+title: 'Logistic Regression: Model Building and Interpretation'
+author: "Thiyanga Talagala"
 date: '2022-04-11'
-categories: [R, tidyverse, ggplot2, scatterplot]
-tags: [R, tidyverse, ggplot2]
-summary: "Logistic regression is a widely used modelling approach, however little is known about the modelling processes and interpretation of model outputs. This post demonstrates how to build a logistic model with R and how to interpret the results. "
+categories:
+- R
+- tidyverse
+- ggplot2
+- scatterplot
+tags:
+- R
+- tidyverse
+- ggplot2
+summary: 'Logistic regression is a widely used modelling approach, however little
+  is known about the modelling processes and interpretation of model outputs. This
+  post demonstrates how to build a logistic model with R and how to interpret the
+  results. '
 ---
 
 ```{r setup, include=FALSE}
@@ -21,6 +31,7 @@ library(skimr)
 library(tidyverse)
 library(plotly)
 library(visdat)
+library(patchwork)
 data("penguins")
 skim(penguins)
 ```
@@ -31,16 +42,38 @@ Here is an overview of the dataset.
 summary(penguins)
 ```
 
-To plot each pair of variables, I used `GGally::ggpairs` function.
+
+Before moving on to the full logistic regression model, it's a good idea to look at the associations between each predictor and gender. Before moving on to the whole model, It's critical to first grasp these linkages. We can use logistic regression to look at all of the predictors simultaneously.
+
+
 
 ```{r}
-p1 <- penguins %>%
-  select(species, body_mass_g, ends_with("_mm")) %>%
-  GGally::ggpairs(aes(color = species)) +
-  scale_colour_manual(values = c("darkorange","purple","cyan4")) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"))
-ggplotly(p1)
+p1_species <- penguins %>% 
+  na.omit() %>%
+  count(species,sex) %>% 
+  group_by(species) %>% 
+  mutate(Percentage = 100*n/sum(n)) %>% 
+  ggplot(aes(x = species,y = Percentage,fill=sex))+
+  geom_bar(stat="identity") + 
+  scale_fill_manual(values = c("purple","cyan4")) +
+  coord_flip() +
+  theme(legend.position = "bottom") +
+  ggtitle("a") 
+
+p2_island <- penguins %>% 
+  count(island,sex) %>% 
+  group_by(island) %>% 
+  mutate(Percentage = 100*n/sum(n)) %>% 
+  ggplot(aes(x = island,y = Percentage,fill=sex))+
+  geom_bar(stat="identity") + 
+  coord_flip() +
+  theme(legend.position = "bottom") +
+  ggtitle("b")
+(p1_species|p2_island)
 ```
+
+
+
 
 ## Missing values exploration
 
@@ -66,15 +99,20 @@ fit <- glm(sex ~ species + island + bill_length_mm + bill_depth_mm + flipper_len
 summary(fit)
 ```
 
+To represent qualitative variables, R will build an indicator (dummy) variable using the lowest coded category as the reference group. For example, 
+
+
 
 ## Interpretation of parameter estimates of logistic regression
 
-The Estimates in the above output  corresponds to the **log-odds**. The **odd ratios** can be obtained as follows:
+The "Estimates" in the above output  corresponds to the **log-odds**. The **odd ratios** can be obtained as follows:
 
 ```{r}
 exp(coefficients(fit))
 
 ```
+
+$$odd = \frac{P(event)}{1-P(event)}$$
 
 The 95\% confidence intervals for log-odds can be obtained as follows
 
@@ -97,10 +135,10 @@ $$\hat{Y} = \frac{1}{1+e^{-z}} = \frac{1}{e^{-80.83 -7.40Chinstrap -8.42Gentoo +
 
 The variables species, bill length (mm), bill depth (mm) and body mass (g) significantly contribute to the model.
 
-Holding all other variables constant, this fitted model predicts that the odds of detecting a female are 1.38 times higher for penguins on Dream Island than on Biscoe.
+Holding all other variables constant, this fitted model predicts that the odds of detecting a male are 1.38 times higher for penguins on Dream Island than on Biscoe.
 
 
-The odds of detecting a female increased 1.005 times (95%CI 1.003–1.007) for each one-unit
+The odds of detecting a male increased 1.005 times (95%CI 1.003–1.007) for each one-unit
 increase in the body mass (g).
 
 > Model Evaluation: Next Post! Model evaluation should be done before interpreting the model. 
