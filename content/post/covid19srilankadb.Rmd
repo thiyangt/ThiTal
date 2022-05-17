@@ -26,6 +26,7 @@ This dashboard provides an overview of the COVID-19 pandemic in Sri Lanka.
 
 All input data (related to the local situation) for the dashboard is pulled from COVID-19 daily situation reports published by Epidemiology Unit, Ministry of Health and Indigenous Medical Services, Sri Lanka through [covid19srilanka](https://github.com/thiyangt/covid19srilanka) package in R. Sri Lanka maps are created based on [ceylon](https://github.com/thiyangt/ceylon) package in R.
 
+Our paper is available at https://arxiv.org/pdf/2205.07286.pdf
 
 
 
