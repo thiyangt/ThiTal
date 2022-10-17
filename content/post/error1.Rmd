@@ -1,7 +1,7 @@
 ---
 title: "Error: C stack usage is too close to the limit"
 author: "Thiyanga Talagala"
-date: "2022-10-16"
+date: '2022-10-16'
 categories: [R, RStudio, Error]
 tags: [R, RStudio, Error]
 summary: "Delete .Rprofile"
