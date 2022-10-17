@@ -16,9 +16,8 @@ knitr::opts_chunk$set(echo = TRUE)
 While using Rstudio on macOS Mojave (version 10.14.6) to work with R, I recently ran across the following problem.
 
 
-```{r, echo=FALSE, comment=NA, message=FALSE}
-knitr::include_graphics("error.png")
-```
+![](error.png)
+
 
 In order to fix the error, I deleted the `.Rprofile`. You can erase everything in the ".Rprofile" by using the commands listed below.
 
