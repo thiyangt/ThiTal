@@ -14,6 +14,41 @@ title: Courses
 
 -----
 
+# 2022
+
+## Semester 2
+
+Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura (USJ)
+
+
+- [STA 331 2.0 Stochastic Processes](https://stochasticprocesses.netlify.app/)
+
+- [STA 474 2.0 Statistical Consultancy](https://scs-fas-sjp.netlify.app/) | [Course information](https://thiyanga.netlify.app/courses/statisticalconsultancy/)
+
+
+
+## Semester 1 
+
+Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura (USJ)
+
+BSc (Hon) Degree in Statistics/ Applied Sciences 
+
+- [STA 326 2.0 Programming and Data Analysis with R](https://hellor.netlify.app/schedule/)
+
+- [ASP 460 2.0 Data Visualisation](https://tstdataviz.netlify.app/schedule/)
+
+MSc in Applied Statistics 
+
+
+- [STA 517 3.0 Programming and Statistical Computing with R](https://hellor.netlify.app/mscschedule/)
+
+MSc in Data Science and AI
+
+Spatio-temporal Data Analysis
+
+
+
+
 
 # 2021 
 

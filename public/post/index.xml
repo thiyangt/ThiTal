@@ -5,12 +5,31 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 11 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 16 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>Error: C stack usage is too close to the limit</title>
+      <link>/post/error1/</link>
+      <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>/post/error1/</guid>
+      <description>
+
+
+&lt;div id=&#34;error-c-stack-usage-is-too-close-to-the-limit&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Error: C stack usage is too close to the limit&lt;/h2&gt;
+&lt;p&gt;I faced the following issue recently while working with R via Rstudio on macOS Mojave (version10.14.6).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;error.png&#34; width=&#34;1660&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Inorder to solve the error, I deleted the &lt;code&gt;.Rprofile&lt;/code&gt;. The following commands open the &lt;code&gt;.Rprofile&lt;/code&gt;and you can deleteevery&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;file.edit(file.path(&amp;quot;~&amp;quot;, &amp;quot;.Rprofile&amp;quot;)) 
+file.edit(&amp;quot;.Rprofile&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Logistic Regression: Model Building and Interpretation</title>

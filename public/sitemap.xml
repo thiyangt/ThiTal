@@ -27,7 +27,37 @@
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
     <loc>/categories/</loc>
-    <lastmod>2022-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/error/</loc>
+    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/error/</loc>
+    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/error1/</loc>
+    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/r/</loc>
+    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/r/</loc>
+    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/rstudio/</loc>
+    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/rstudio/</loc>
+    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/ggplot2/</loc>
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
@@ -47,22 +77,7 @@
     <loc>/categories/plotly/</loc>
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/</loc>
-    <lastmod>2022-04-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/r/</loc>
-    <lastmod>2022-04-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/r/</loc>
-    <lastmod>2022-04-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/categories/scatterplot/</loc>
-    <lastmod>2022-04-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2022-04-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/tidyverse/</loc>
