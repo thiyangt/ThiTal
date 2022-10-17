@@ -22,9 +22,9 @@
 
 &lt;div id=&#34;error-c-stack-usage-is-too-close-to-the-limit&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Error: C stack usage is too close to the limit&lt;/h2&gt;
-&lt;p&gt;I faced the following issue recently while working with R via Rstudio on macOS Mojave (version10.14.6).&lt;/p&gt;
+&lt;p&gt;While using Rstudio on macOS Mojave (version 10.14.6) to work with R, I recently ran across the following problem.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;error.png&#34; width=&#34;1660&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Inorder to solve the error, I deleted the &lt;code&gt;.Rprofile&lt;/code&gt;. The following commands open the &lt;code&gt;.Rprofile&lt;/code&gt;and you can deleteevery&lt;/p&gt;
+&lt;p&gt;In order to fix the error, I deleted the &lt;code&gt;.Rprofile&lt;/code&gt;. You can erase everything in the “.Rprofile” by using the commands listed below.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;file.edit(file.path(&amp;quot;~&amp;quot;, &amp;quot;.Rprofile&amp;quot;)) 
 file.edit(&amp;quot;.Rprofile&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;

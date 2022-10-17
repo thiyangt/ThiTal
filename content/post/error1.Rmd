@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 While using Rstudio on macOS Mojave (version 10.14.6) to work with R, I recently ran across the following problem.
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, comment=NA, message=FALSE}
 knitr::include_graphics("error.png")
 ```
 
