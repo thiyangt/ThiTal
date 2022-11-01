@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 While using Rstudio on macOS Mojave (version 10.14.6) to work with R, I recently ran across the following problem.
 
-<img src="/post/error.PNG" alt="final image" width="300"/>
+<img src="/post/error.PNG" alt="final image" width="400"/>
 
 
 
