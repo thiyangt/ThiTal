@@ -5,12 +5,25 @@
     <link>/project/</link>
       <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 21 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 31 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Projects</title>
       <link>/project/</link>
     </image>
+    
+    <item>
+      <title>Introduction to Python</title>
+      <link>/project/python/</link>
+      <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>/project/python/</guid>
+      <description>&lt;h2 id=&#34;content&#34;&gt;Content&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/thiyangt/helloPython/blob/master/1_basics.ipynb&#34;&gt;1. Python basics&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/thiyangt/helloPython/blob/master/2module_installation.ipynb&#34;&gt;2. Python Modules and Packages - Installation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/thiyangt/helloPython/blob/master/3_dataviz.ipynb&#34;&gt;3. Data Visualization with Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/thiyangt/helloPython/blob/master/4_datawringling.ipynb&#34;&gt;4. Data Wrangling with Python&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Data of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) epidemic in Sri Lanka</title>

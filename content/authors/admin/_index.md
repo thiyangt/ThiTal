@@ -44,6 +44,9 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/thiyanga-talagala-24bb63134/
+- icon: youtube
+  icon_pack: fab
+  link: https://www.youtube.com/channel/UCA-gmE5LxrIZTTjSP3z2ZTg
 superuser: true
 user_groups:
 - Researchers
@@ -57,7 +60,7 @@ I am also an Associate Investigator of the [Australian Research Council (ARC) Ce
 
 I am a co-founder and co-organizer of [RLadies-Colombo, Sri Lanka](https://github.com/thiyangt/covid19srilanka), a local chapter of [R-Ladies Global](https://rladies.org/), an organization that promotes diversity in the R community worldwide
 
-I enjoy solving general data science problems from three different angles: theoretical, computational, applied. On this website you will find some of my work and interests in statistics and data analysis. My research focuses on developing new statistical machine learning tools to help both practitioners and theoreticians make more open, explainable and reproducible data-driven discoveries. I am also interested in R programming language.
+I enjoy solving general data science problems from three different angles: theoretical, computational, applied. On this website you will find some of my work and interests in statistics and data analysis. My research focuses on developing new statistical machine learning tools to help both practitioners and theoreticians make more open, explainable and reproducible data-driven discoveries. I am also interested in R and Python programming language.
 
 [Priyanga Dilini Talagala](https://prital.netlify.com/)  PhD in Statistics, Monash University, Australia is my sister.
 

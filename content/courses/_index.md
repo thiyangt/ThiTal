@@ -26,6 +26,20 @@ Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewar
 - [STA 474 2.0 Statistical Consultancy](https://scs-fas-sjp.netlify.app/) | [Course information](https://thiyanga.netlify.app/courses/statisticalconsultancy/)
 
 
+MSc in Applied Statistics 
+
+
+- [STA 517 3.0 Programming and Statistical Computing with R](https://hellor.netlify.app/mscschedule/) - Batch 3
+
+MSc in Data Science and Artificial Intelligence
+
+ The MSc in DS and AI at USJ was designed in partnership with the [Erasmus+ DS and AI consortium](https://dsai-project.eu/site/), a group of 15 European and Asian organizations with the mission of bringing European-standard advanced education to Asia
+
+- [DSA 554 3.0 Spatio-temporal Data Analysis](https://thiyanga-spatiotemporal.netlify.app/)
+
+- DSA 557 1.0 Scientific Writing and Communication
+
+
 
 ## Semester 1 
 
@@ -37,17 +51,13 @@ BSc (Hon) Degree in Statistics/ Applied Sciences
 
 - [ASP 460 2.0 Data Visualisation](https://tstdataviz.netlify.app/schedule/)
 
+Department of Physics: BSc. General Degree - Electronics and Embedded Systems
+
+- [EES 211 2.0 Data Analysis and Modeling](https://edify-thiyanga.netlify.app/ees211/)
+
 MSc in Applied Statistics 
 
-
-- [STA 517 3.0 Programming and Statistical Computing with R](https://hellor.netlify.app/mscschedule/)
-
-MSc in Data Science and AI
-
-Spatio-temporal Data Analysis
-
-
-
+- [STA 529 2.0 Data Mining](https://thiyanga-datamining.netlify.app/)
 
 
 # 2021 
@@ -64,9 +74,7 @@ Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewar
 
 - [STA 474 2.0 Statistical Consultancy](https://scs-fas-sjp.netlify.app/) | [Course information](https://thiyanga.netlify.app/courses/statisticalconsultancy/)
 
-MSc in Applied Statistics 
 
-- STA 529 2.0 Data Mining
 
 ## Semester 1 
 
@@ -81,11 +89,11 @@ BSc (Hon) Degree in Statistics/ Applied Sciences
 MSc in Applied Statistics 
 
 
-- [STA 517 3.0 Programming and Statistical Computing with R](https://hellor.netlify.app/mscschedule/)
+- [STA 517 3.0 Programming and Statistical Computing with R](https://hellor.netlify.app/mscschedule/) - Batch 2
 
 PG Certificate Course in Applied Statistics
 
-- [STA 506 2.0 Linear Regression Analysis](https://thiyangaregression.netlify.app/about/)
+- [STA 506 2.0 Linear Regression Analysis](https://thiyangaregression.netlify.app/about/) - Batch 2
 
 
 
@@ -108,7 +116,7 @@ Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewar
 - [STA 506 2.0 Linear Regression Analysis](https://thiyanga.netlify.app/courses/regression2020/) 
 
 
-- [STA 517 3.0 Programming and Statistical Computing with R](https://thiyanga.netlify.app/courses/rmsc2020/) 
+- [STA 517 3.0 Programming and Statistical Computing with R](https://thiyanga.netlify.app/courses/rmsc2020/)  - Batch 1
 
 Department of Information and Communication Technology (BSc (Hons) IT Degree)
 

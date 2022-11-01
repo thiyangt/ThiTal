@@ -18,6 +18,10 @@ email_form = 0
 
 ## 2022
 
+[Reproducible Research with R Markdown - Research Lounge Meet, University of Moratuwa](https://hellormd.netlify.app/)
+
+Date: 18 Oct 2022, Venue: University of Moratuwa
+
 [Data analysis with R: Institute of Applied Statistics, Sri Lanka (IASSL)](https://r4fun.netlify.app/blog/)
 
   
