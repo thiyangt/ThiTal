@@ -31,7 +31,7 @@ title: Students
 |:-----:|:---|
 |[ Janith Wanniarachchi](https://janithwanni.netlify.app/) ![](janith.jpg)  |**Thesis title:** Transparency, auditability and explainability of interpretable machine learning methods **Degree:** BSc (Hons) Statistics - 2022 **Current position:** R Shiny Developer at [Appsilon](https://appsilon.com/) **Awards:** SLAAS Physical Science Award Winner - 2022 |
 |[ Jayani Lakshika](https://jayanilakshika.netlify.app/) ![](jayani.png) | **Thesis title:** Computer vision system for automatic Sri Lankan medicinal plant identification **Degree:** BSc (Hons) Statistics - 2021 **Current position:** PhD Candidate, Monash University, Australia **Awards** Fully funded Monash University PhD Scholarship |
-|[Samudra Madhushani](https://darecentre.org.au/portfolio_page/samudra-madushani/)![](samudra.png)|**Thesis title:**  [Hierarchical Forecasting of Dengue Incidence in Sri Lanka](https://samudramadushani.github.io/HierarchicalForecasting/SlidesCodingR.html#1) **Degree:** MSc in Applied Mathematics - 2021 **Current position:** PhD Candidate, University of New South Wales, AUstralia **Awards:**Fully funded PhD Scholarship from [DARE](https://darecentre.org.au/) and NSW|
+|[Samudra Madhushani](https://darecentre.org.au/portfolio_page/samudra-madushani/)![](samudra.png)|**Thesis title:**  [Hierarchical Forecasting of Dengue Incidence in Sri Lanka](https://samudramadushani.github.io/HierarchicalForecasting/SlidesCodingR.html#1) **Degree:** MSc in Applied Mathematics - 2021 **Current position:** PhD Candidate, University of New South Wales, AUstralia **Awards:** Fully funded PhD Scholarship from [DARE](https://darecentre.org.au/) and NSW|
 
 
 
