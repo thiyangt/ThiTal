@@ -3,11 +3,12 @@ header:
   caption: ""
   image: ""
 layout: docs
-title: Research Team
+title: Students
 ---
 
 
 # Current research students
+
 
 [Udeshi Salgado](https://www.linkedin.com/in/udeshi-salgado/?originalSubdomain=lk)
 
@@ -16,6 +17,7 @@ title: Research Team
 **Thesis title:** Deep learning for dental caries detection
 
 **Degree:** BSc (Hons) Statistics - Reading
+
 
 
 [Lakna Perera](https://www.linkedin.com/in/lakna-perera/?trk=public_profile_browsemap&originalSubdomain=lk)
