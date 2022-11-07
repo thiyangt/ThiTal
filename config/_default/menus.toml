@@ -41,7 +41,7 @@
    
 [[main]]
    name = "Students"
-   url = "#team/"
+   url = "team/"
    weight = 8
    
 [[main]]

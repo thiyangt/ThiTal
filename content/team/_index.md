@@ -5,9 +5,6 @@ header:
 layout: docs
 title: Students
 ---
-
-
-
 # Current research students
 
 
