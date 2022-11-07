@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Research Team | THIYANGA TALAGALA</title>
+    <title>Students | THIYANGA TALAGALA</title>
     <link>/team/</link>
       <atom:link href="/team/index.xml" rel="self" type="application/rss+xml" />
-    <description>Research Team</description>
+    <description>Students</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
       <url>/img/icon-192.png</url>
-      <title>Research Team</title>
+      <title>Students</title>
       <link>/team/</link>
     </image>
     
