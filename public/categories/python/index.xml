@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Quarto | THIYANGA TALAGALA</title>
-    <link>/categories/quarto/</link>
-      <atom:link href="/categories/quarto/index.xml" rel="self" type="application/rss+xml" />
-    <description>Quarto</description>
+    <title>Python | THIYANGA TALAGALA</title>
+    <link>/categories/python/</link>
+      <atom:link href="/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <description>Python</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 06 Nov 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
-      <title>Quarto</title>
-      <link>/categories/quarto/</link>
+      <title>Python</title>
+      <link>/categories/python/</link>
     </image>
     
     <item>

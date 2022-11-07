@@ -5,12 +5,67 @@
     <link>/categories/rstudio/</link>
       <atom:link href="/categories/rstudio/index.xml" rel="self" type="application/rss+xml" />
     <description>RStudio</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 16 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 06 Nov 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>RStudio</title>
       <link>/categories/rstudio/</link>
     </image>
+    
+    <item>
+      <title>Building a website using Quarto</title>
+      <link>/post/blog/</link>
+      <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>/post/blog/</guid>
+      <description>
+
+
+&lt;p&gt;I created &lt;a href=&#34;https://thiyanga-spatiotemporal.netlify.app/&#34;&gt;this blog&lt;/a&gt; using Quarto. Here are the steps that I used to create the blog.&lt;/p&gt;
+&lt;div id=&#34;step-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 1&lt;/h2&gt;
+&lt;p&gt;Install Quarto. Follow the instructions in &lt;a href=&#34;https://quarto.org/docs/get-started/&#34;&gt;this&lt;/a&gt; tutorial.&lt;/p&gt;
+&lt;p&gt;On R Console install Quarto using the command&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(quarto)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-2&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 2&lt;/h2&gt;
+&lt;p&gt;Create a git hub repository and create a RStudio project.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-3&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 3&lt;/h2&gt;
+&lt;p&gt;The type the following command in the RStudio terminal&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;quarto create-project myblog --type website:blog&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will create a folder called &lt;code&gt;myblog&lt;/code&gt; with the following documents inside.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/quarto.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;Copy all the documents inside the folder into your project folder, and delete the &lt;code&gt;myblog&lt;/code&gt; folder.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-4&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 4&lt;/h2&gt;
+&lt;p&gt;Rename &lt;code&gt;index.qmd&lt;/code&gt; to &lt;code&gt;blog.qmd&lt;/code&gt; and rename &lt;code&gt;about.qmd&lt;/code&gt; to &lt;code&gt;index.qmd&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-5&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 5&lt;/h2&gt;
+&lt;p&gt;Include your details to &lt;code&gt;_quarto.yml&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-6&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 6&lt;/h2&gt;
+&lt;p&gt;Click &lt;code&gt;Render&lt;/code&gt; button to preview the blog.&lt;/p&gt;
+&lt;p&gt;To preview the website in the current directory type the following command in the terminal&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;quarto preview&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-7&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 7&lt;/h2&gt;
+&lt;p&gt;To publish the blog with Netlify, type the following command.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;quarto publish netlify&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;other-useful-links&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Other useful links&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html&#34;&gt;https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://quarto.org/docs/publishing/netlify.htm&#34;&gt;https://quarto.org/docs/publishing/netlify.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/&#34;&gt;https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Error: C stack usage is too close to the limit</title>
