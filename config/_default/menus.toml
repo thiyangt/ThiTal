@@ -40,14 +40,19 @@
    weight = 7
    
 [[main]]
+   name = "Students"
+   url = "#team"
+   weight = 8
+   
+[[main]]
   name = "Contact"
   url = "#contact"
-  weight = 8
+  weight = 9
 
 [[main]]
   name = ""
   url = "#head"
-  weight = 9
+  weight = 10
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.

@@ -14,4 +14,6 @@ title: Introduction to Python
 
 [3. Data Visualization with Python](https://github.com/thiyangt/helloPython/blob/master/3_dataviz.ipynb)
 
+[Data Visualization slides](https://thiyanga-spatiotemporal.netlify.app/posts/quarto/1_intro.html#/title-slide)
+
 [4. Data Wrangling with Python](https://github.com/thiyangt/helloPython/blob/master/4_datawringling.ipynb)

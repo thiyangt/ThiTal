@@ -1,0 +1,23 @@
+---
+title: "Building a website using Quarto"
+author: Thiyanga Talagala
+date: '2022-10-31'
+slug: blog
+categories: [R, RStudio, Quarto]
+tags: [R, RStudio, Quarto]
+summary: "In this post, you will learn how to build a website using Quarto."
+---
+
+## Step 1
+
+Install Quarto. Follow the instructions in [this](https://quarto.org/docs/get-started/) tutorial.
+
+
+
+## Other useful links
+
+[https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html](https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html)
+
+[https://quarto.org/docs/publishing/netlify.html](https://quarto.org/docs/publishing/netlify.htm)
+
+

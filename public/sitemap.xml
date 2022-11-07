@@ -26,13 +26,40 @@
     <loc>/courses/rmsc2020/contentr/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
+    <loc>/post/blog/</loc>
+    <lastmod>2022-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2022-10-31T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/demo/</loc>
     <lastmod>2022-10-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/project/python/</loc>
     <lastmod>2022-10-31T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/post/</loc>
+    <lastmod>2022-10-31T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/project/</loc>
+    <lastmod>2022-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/quarto/</loc>
+    <lastmod>2022-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/quarto/</loc>
+    <lastmod>2022-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/r/</loc>
+    <lastmod>2022-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/r/</loc>
+    <lastmod>2022-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/rstudio/</loc>
+    <lastmod>2022-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/rstudio/</loc>
     <lastmod>2022-10-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
@@ -41,9 +68,6 @@
     <loc>/</loc>
     <lastmod>2022-10-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/error/</loc>
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
@@ -51,21 +75,6 @@
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/error1/</loc>
-    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/post/</loc>
-    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/r/</loc>
-    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/r/</loc>
-    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/rstudio/</loc>
-    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/rstudio/</loc>
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/ggplot2/</loc>
@@ -358,6 +367,8 @@
   </url><url>
     <loc>/publication/conference-paper/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/team/</loc>
   </url><url>
     <loc>/software/</loc>
   </url>

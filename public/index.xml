@@ -819,6 +819,26 @@
     </item>
     
     <item>
+      <title>Building a website using Quarto</title>
+      <link>/post/blog/</link>
+      <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>/post/blog/</guid>
+      <description>
+
+
+&lt;div id=&#34;step-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 1&lt;/h2&gt;
+&lt;p&gt;Install Quarto. Follow the instructions in &lt;a href=&#34;https://quarto.org/docs/get-started/&#34;&gt;this&lt;/a&gt; tutorial.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;other-useful-links&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Other useful links&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html&#34;&gt;https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://quarto.org/docs/publishing/netlify.htm&#34;&gt;https://quarto.org/docs/publishing/netlify.html&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Introduction to Python</title>
       <link>/project/python/</link>
       <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
@@ -827,6 +847,7 @@
 &lt;p&gt;&lt;a href=&#34;https://github.com/thiyangt/helloPython/blob/master/1_basics.ipynb&#34;&gt;1. Python basics&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/thiyangt/helloPython/blob/master/2module_installation.ipynb&#34;&gt;2. Python Modules and Packages - Installation&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/thiyangt/helloPython/blob/master/3_dataviz.ipynb&#34;&gt;3. Data Visualization with Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga-spatiotemporal.netlify.app/posts/quarto/1_intro.html#/title-slide&#34;&gt;Data Visualization slides&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/thiyangt/helloPython/blob/master/4_datawringling.ipynb&#34;&gt;4. Data Wrangling with Python&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
