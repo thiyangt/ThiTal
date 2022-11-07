@@ -27,11 +27,6 @@ title: Students
 
 
 # Former research students
-
-![](janith_octave.jpeg)
-
-
-
 |       ||
 |:-----:|:---|
 |[ Janith Wanniarachchi](https://janithwanni.netlify.app/) ![](janith.jpg)  |**Thesis title:** Transparency, auditability and explainability of interpretable machine learning methods **Degree:** BSc (Hons) Statistics - 2022 **Current position:** R Shiny Developer at [Appsilon](https://appsilon.com/) **Awards:** SLAAS Physical Science Award Winner - 2022 |
