@@ -7,12 +7,15 @@ title: Students
 ---
 
 
+
 # Current research students
 
 
 [Udeshi Salgado](https://www.linkedin.com/in/udeshi-salgado/?originalSubdomain=lk)
 
 ![](udeshi.jpeg)
+
+
 
 **Thesis title:** Deep learning for dental caries detection
 
