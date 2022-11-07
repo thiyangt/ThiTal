@@ -38,7 +38,9 @@ title: Students
 # Industrial Training Supervision 
 
 
+
 |     ||
 |:---:|:---|
 |    [Randi Shashikala](https://www.linkedin.com/in/randi-shashikala-b885351b8/) ![](randi.jpg)        | **Research project:** [Interactive Dashboard to Monitor the COVID-19 Outbreak and Vaccine Administration](https://thiyangt.github.io/coviddashboard/) **Degree:** BSc (Hons) Statistics - 2022 **Current Position:** Analyst, Actuarial and Analytics Team, Fairfirst Insurance |
+
 
