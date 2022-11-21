@@ -67,7 +67,7 @@ MSc in Applied Statistics
 Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura (USJ)
 
 
-- [STA 225 2.0 Design and Analysis of Experiments](https://smart-doe.netlify.app/) 
+- [STA 225 2.0 Design and Analysis of Experiments](https://thiyanga-doe.netlify.app/) 
 
 
 - [STA 331 2.0 Stochastic Processes](https://stochasticprocesses.netlify.app/)
