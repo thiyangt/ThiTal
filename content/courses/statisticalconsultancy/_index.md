@@ -20,9 +20,9 @@ BSc (Hons) Statistics, Department of Statistics, University of Sri Jayewardenepu
 
 ## Course information
 
-Year and Semester: 2021 - Semester 2
+Year and Semester: 2022 - Semester 2
 
-Commencement date: 11 October 2021
+Commencement date: 09 December 2022
 
 Course meeting time: Friday, 1.00pm - 3.00pm
 
@@ -42,7 +42,7 @@ E-mail is the best way to get in contact with me—I will respond to all course-
 
 # Tools: To consultants
 
-[Course outline](/CO/2021s2/STA474_2_statistical_consultancy_2021_2022.pdf)
+[Course outline](/CO/2022s2/STA474_2_statistical_consultancy_2021_2022.pdf)
 
 **1. Slides**
 
