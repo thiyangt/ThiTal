@@ -23,7 +23,7 @@ Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewar
 
 - [STA 331 2.0 Stochastic Processes](https://stochasticprocesses.netlify.app/)
 
-- [STA 474 2.0 Statistical Consultancy](https://scs-fas-sjp.netlify.app/) | [Course information](https://thiyanga.netlify.app/courses/statisticalconsultancy/)
+- [STA 474 2.0 Statistical Consultancy](https://scs-fas-sjp.netlify.app/) | [Course information](https://thiyanga-statisticalconsultancy.netlify.app/)
 
 
 MSc in Applied Statistics 
@@ -37,7 +37,7 @@ MSc in Data Science and Artificial Intelligence
 
 - [DSA 554 3.0 Spatio-temporal Data Analysis](https://thiyanga-spatiotemporal.netlify.app/)
 
-- DSA 557 1.0 Scientific Writing and Communication
+- [DSA 557 1.0 Scientific Writing and Communication](https://thiyanga-scientificwriting.netlify.app/)
 
 
 

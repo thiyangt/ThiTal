@@ -47,7 +47,7 @@ plant images. This repository contains 1099 leaf images of 31 species. There are
 &lt;p&gt;&lt;img src=&#34;imgleaf.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Figure 5: Few samples from the MedLEA images&lt;/p&gt;
 &lt;p&gt;You can get access to the data set via the MedLEA package.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r,&#34; data-lang=&#34;{r,&#34;&gt;install.packages(&amp;quot;MedLEA&amp;quot;)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;install.packages(&amp;#34;MedLEA&amp;#34;)
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;research-outputs&#34;&gt;Research outputs&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Papers&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2106.08077&#34;&gt;Lakshika, J. P., &amp;amp; Talagala, T. S. (2021). Computer-aided Interpretable Features for Leaf Image Classification. arXiv preprint arXiv:2106.08077.&lt;/a&gt;&lt;/p&gt;
