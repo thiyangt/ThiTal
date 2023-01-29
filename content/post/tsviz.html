@@ -1,0 +1,50 @@
+---
+title: "Time Series Visualization"
+date: '2023-01-04'
+---
+
+
+
+<p>As the coordinator of the Statistical Consultancy Service-University of Sri Jayewardenepura, I frequently receive requests from clients (particularly those in the Biological Science sector) who need assistance with visualizing time series data. This blog post is for them. For time series pre-processing, I’ll be using R packages created by my PhD advisor Rob Hyndman, Professor Di Cook, Dr. Earo Wang, and a few other friends at Monash University, Australia, to carry out the visualizations.</p>
+<div id="r-packages" class="section level1">
+<h1>1. R packages</h1>
+<p>Load necessary R packages</p>
+<pre class="r"><code>library(tidyverse)
+library(tsibble)</code></pre>
+</div>
+<div id="data" class="section level1">
+<h1>2. Data</h1>
+<p>For the illustrations I will be using daily average temperature values recorded in major cities of the world available. The corresponding dataset is available at <a href="https://www.kaggle.com/datasets/sudalairajkumar/daily-temperature-of-major-cities?resource=download" class="uri">https://www.kaggle.com/datasets/sudalairajkumar/daily-temperature-of-major-cities?resource=download</a></p>
+<p><strong>Read data into R</strong></p>
+<pre class="r"><code>data &lt;- read_csv(&quot;city_temperature.csv&quot;)</code></pre>
+<pre class="r"><code>dim(data)</code></pre>
+<p><code>dim(data)</code> output gives the number of rows and number of columns in the dataset. There are 2906327 rows and 8 columns.</p>
+<p>I now view the first 10 few rows of the dataset to understand the format of the data.</p>
+<pre class="r"><code>as.data.frame(head(data, 10))</code></pre>
+<p>To keep things simple I will illustrate this only for three cities. They are Charleston, Columbus and Portland.</p>
+<pre class="r"><code>data_cha_col_por &lt;- filter(data, City %in% c(&quot;Charleston&quot;, &quot;Columbus&quot;, &quot;Portland&quot;))
+
+head(data_cha_col_por)</code></pre>
+</div>
+<div id="data-pre-processing" class="section level1">
+<h1>3. Data Pre-processing</h1>
+<p>First I create a date column for my dataset. For each City I have 18530 data points.</p>
+<pre class="r"><code>date = rep(as.Date(&quot;1995-01-01&quot;) + 0:18529, 3)</code></pre>
+<p>After that add date column to <code>data_cha_col_por</code></p>
+<pre class="r"><code>data_cha_col_por$date &lt;- date</code></pre>
+<p>Now we create the dataset into tsibble structure</p>
+<pre class="r"><code>data_tsibble &lt;- as_tsibble(data_cha_col_por,
+                  index=date, key = c(&quot;Region&quot;, &quot;Country&quot;, &quot;State&quot;, &quot;City&quot;))
+data_tsibble</code></pre>
+</div>
+<div id="data-visualization" class="section level1">
+<h1>4. Data visualization</h1>
+<div id="time-series-plots" class="section level2">
+<h2>4.1 Time series plots</h2>
+<pre class="r"><code>ggplot(data_tsibble,
+       aes(x=date, y=AvgTemperature, col=City)) +geom_line()</code></pre>
+</div>
+<div id="section" class="section level2">
+<h2>4.2</h2>
+</div>
+</div>
