@@ -8,11 +8,61 @@ summary: "Time series data wrangling"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(eval=FALSE, echo = TRUE)
+knitr::opts_chunk$set(eval=TRUE, echo = TRUE, comment = NA)
 ```
+
+# Creating data and time objects.
+
+The `lubridate`  package in R provides a set of functions for working with dates and times. 
+
+## year-month-date `ymd` function
+
+`ymd` function converts a character vector of dates in the format "year-month-day" to a Date object. The name of the function stands for "year-month-day", which is the order of the components in the date format that the function expects. 
+
+```{r}
+library(lubridate)
+dates.ex1 <- c("2022-03-15", "2022-03-16", "2022-03-17")
+class(dates.ex1)
+dates1 <- ymd(dates.ex1)
+dates1
+class(dates1)
+
+```
+
+The ymd() function also supports variations of the "year-month-day" format, such as "year/month/day" or "year.month.day". 
+
+```{r}
+dates.ex2 <- c("2022/03/15", "2022/03/16", "2022/03/17")
+dates2 <- ymd(dates.ex2)
+dates2
+class(dates2)
+```
+
+## month-date-year `mdy` function
+
+```{r}
+mdy(c("03-15-2023", "03-16-2023"))
+```
+
+## date-month-year `dmy` function
+
+```{r}
+dmy(c("15-03-2023", "16-03-2023"))
+```
+
+
+##  `parse_date_time`
+
+If you have a date format that doesn't match any of the built-in formats, you can use the parse_date_time() function in lubridate to specify a custom format.
+
+## 
 
 # Creating a sequence of time
 
 ```{r}
 seq(as.Date("2012-01-01"),as.Date("2012-12-01"), by = "1 month")
+```
+
+```{r, echo=TRUE, eval=TRUE}
+seq(as.Date("2023-03-01"),as.Date("2023-04-01"), by = "1 week")
 ```
