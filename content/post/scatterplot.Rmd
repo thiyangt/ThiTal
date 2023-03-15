@@ -24,7 +24,7 @@ set.seed(20201215)
 df <- tibble::tibble(x=rnorm(100), y=rnorm(100))
 ```
 
-Now we are going to work on our scatterplot.
+Now we are going to work on our scatter plot.
 
 # Step 3: First draw a scatterplot with your full data
 

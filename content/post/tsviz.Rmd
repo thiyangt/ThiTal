@@ -1,36 +1,18 @@
 ---
-title: "Time Series Visualization"
-date: '2023-01-04'
+title: "Some useful functions to Wrangle with Time Series Data"
+author: Thiyanga Talagala
+date: '2023-03-14'
+categories: [R, tidyverse, tsibble, time series]
+tags: [R, tidyverse, tsibble, time series]
+summary: "Time series data wrangling"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(eval=FALSE, echo = TRUE)
 ```
 
-
-## Step 1: Load packages
+# Creating a sequence of time
 
 ```{r}
-library(tsibble)
-library(ggplot2)
+seq(as.Date("2012-01-01"),as.Date("2012-12-01"), by = "1 month")
 ```
-
-## Step 2: `tsibble`
-
-index - 	
-A variable to specify the time index variable.
-
-An extensive range of indices are supported by tsibble:
-
-native time classes in R (such as Date, POSIXct, and difftime)
-
-tsibble's new additions (such as yearweek, yearmonth, and yearquarter).
-
-other commonly-used classes: ordered, hms::hms, lubridate::period, and nanotime::nanotime.
-
-key -  NULL indicates single time series.
-
-measured variables - 
-
-
-Source: https://tsibble.tidyverts.org/reference/tsibble-package.html
