@@ -38,10 +38,20 @@ dates2
 class(dates2)
 ```
 
+
+
+```{r}
+dates.ex3 <- c("2022/03/15", "2022/03/16", "2022/03/17")
+dates2 <- ymd(dates.ex2)
+dates2
+class(dates2)
+```
+
 ## month-date-year `mdy` function
 
 ```{r}
 mdy(c("03-15-2023", "03-16-2023"))
+
 ```
 
 ## date-month-year `dmy` function
@@ -50,12 +60,25 @@ mdy(c("03-15-2023", "03-16-2023"))
 dmy(c("15-03-2023", "16-03-2023"))
 ```
 
+## 
 
 ##  `parse_date_time`
 
 If you have a date format that doesn't match any of the built-in formats, you can use the parse_date_time() function in lubridate to specify a custom format.
 
-## 
+```{r}
+dates.ex4 <- c("2022/03/15 10:30:00", "2022/03/16 11:00:00", "2022/03/17 12:15:00")
+
+# Define the custom format using the format string
+date_format <- "%Y/%m/%d %H:%M:%S"
+
+# Convert the character vector to POSIXct objects using parse_date_time()
+parse_date_time(dates.ex4, date_format)
+
+
+```
+
+
 
 # Creating a sequence of time
 
