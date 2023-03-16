@@ -2,392 +2,392 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/courses/statisticalconsultancy/contentcon/</loc>
+    <loc>https://thiyanga.netlify.app/courses/statisticalconsultancy/contentcon/</loc>
     <lastmod>2021-10-26T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>/courses/statisticalconsultancy/</loc>
+    <loc>https://thiyanga.netlify.app/courses/statisticalconsultancy/</loc>
     <lastmod>2021-10-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/courses/sta33120_stochastic_processes_2020/</loc>
+    <loc>https://thiyanga.netlify.app/courses/sta33120_stochastic_processes_2020/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/courses/sta33120_stochastic_processes_2020/contentr_stochastic/</loc>
+    <loc>https://thiyanga.netlify.app/courses/sta33120_stochastic_processes_2020/contentr_stochastic/</loc>
     <lastmod>2020-07-27T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>/courses/regression2020/</loc>
+    <loc>https://thiyanga.netlify.app/courses/regression2020/</loc>
     <lastmod>2020-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/courses/rmsc2020/</loc>
+    <loc>https://thiyanga.netlify.app/courses/rmsc2020/</loc>
     <lastmod>2020-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/courses/regression2020/contentreg/</loc>
+    <loc>https://thiyanga.netlify.app/courses/regression2020/contentreg/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>/courses/rmsc2020/contentr/</loc>
+    <loc>https://thiyanga.netlify.app/courses/rmsc2020/contentr/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://thiyanga.netlify.app/categories/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/</loc>
+    <loc>https://thiyanga.netlify.app/post/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/r/</loc>
+    <loc>https://thiyanga.netlify.app/tags/r/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/r/</loc>
+    <loc>https://thiyanga.netlify.app/categories/r/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/tsviz/</loc>
+    <loc>https://thiyanga.netlify.app/post/tsviz/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://thiyanga.netlify.app/tags/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>https://thiyanga.netlify.app/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/tidyverse/</loc>
+    <loc>https://thiyanga.netlify.app/tags/tidyverse/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/tidyverse/</loc>
+    <loc>https://thiyanga.netlify.app/categories/tidyverse/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/time-series/</loc>
+    <loc>https://thiyanga.netlify.app/tags/time-series/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/time-series/</loc>
+    <loc>https://thiyanga.netlify.app/categories/time-series/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/tsibble/</loc>
+    <loc>https://thiyanga.netlify.app/tags/tsibble/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/tsibble/</loc>
+    <loc>https://thiyanga.netlify.app/categories/tsibble/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/blog/</loc>
+    <loc>https://thiyanga.netlify.app/post/blog/</loc>
     <lastmod>2022-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/python/</loc>
+    <loc>https://thiyanga.netlify.app/tags/python/</loc>
     <lastmod>2022-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/python/</loc>
+    <loc>https://thiyanga.netlify.app/categories/python/</loc>
     <lastmod>2022-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/quarto/</loc>
+    <loc>https://thiyanga.netlify.app/tags/quarto/</loc>
     <lastmod>2022-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/quarto/</loc>
+    <loc>https://thiyanga.netlify.app/categories/quarto/</loc>
     <lastmod>2022-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/rstudio/</loc>
+    <loc>https://thiyanga.netlify.app/tags/rstudio/</loc>
     <lastmod>2022-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/rstudio/</loc>
+    <loc>https://thiyanga.netlify.app/categories/rstudio/</loc>
     <lastmod>2022-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/demo/</loc>
+    <loc>https://thiyanga.netlify.app/tags/demo/</loc>
     <lastmod>2022-10-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/project/python/</loc>
+    <loc>https://thiyanga.netlify.app/project/python/</loc>
     <lastmod>2022-10-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/project/</loc>
+    <loc>https://thiyanga.netlify.app/project/</loc>
     <lastmod>2022-10-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/error/</loc>
+    <loc>https://thiyanga.netlify.app/tags/error/</loc>
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/error/</loc>
+    <loc>https://thiyanga.netlify.app/categories/error/</loc>
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/error1/</loc>
+    <loc>https://thiyanga.netlify.app/post/error1/</loc>
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/ggplot2/</loc>
+    <loc>https://thiyanga.netlify.app/tags/ggplot2/</loc>
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/ggplot2/</loc>
+    <loc>https://thiyanga.netlify.app/categories/ggplot2/</loc>
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/logisticregression/</loc>
+    <loc>https://thiyanga.netlify.app/post/logisticregression/</loc>
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/patchwork/</loc>
+    <loc>https://thiyanga.netlify.app/tags/patchwork/</loc>
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/plotly/</loc>
+    <loc>https://thiyanga.netlify.app/tags/plotly/</loc>
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/plotly/</loc>
+    <loc>https://thiyanga.netlify.app/categories/plotly/</loc>
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/scatterplot/</loc>
+    <loc>https://thiyanga.netlify.app/categories/scatterplot/</loc>
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/visdat/</loc>
+    <loc>https://thiyanga.netlify.app/tags/visdat/</loc>
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/visdat/</loc>
+    <loc>https://thiyanga.netlify.app/categories/visdat/</loc>
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/ggforce/</loc>
+    <loc>https://thiyanga.netlify.app/post/ggforce/</loc>
     <lastmod>2022-03-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/plotaxis/</loc>
+    <loc>https://thiyanga.netlify.app/post/plotaxis/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/</loc>
+    <loc>https://thiyanga.netlify.app/talk/</loc>
     <lastmod>2022-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/nigeria/</loc>
+    <loc>https://thiyanga.netlify.app/talk/nigeria/</loc>
     <lastmod>2022-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/whyr-talk/</loc>
+    <loc>https://thiyanga.netlify.app/talk/whyr-talk/</loc>
     <lastmod>2021-12-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/covid19srilankadb/</loc>
+    <loc>https://thiyanga.netlify.app/post/covid19srilankadb/</loc>
     <lastmod>2021-12-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/courses/</loc>
+    <loc>https://thiyanga.netlify.app/courses/</loc>
     <lastmod>2021-10-26T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>/project/covid19srilanka/</loc>
+    <loc>https://thiyanga.netlify.app/project/covid19srilanka/</loc>
     <lastmod>2021-10-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/covid19srilanka/</loc>
+    <loc>https://thiyanga.netlify.app/post/covid19srilanka/</loc>
     <lastmod>2021-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/blog/</loc>
+    <loc>https://thiyanga.netlify.app/post/blog/</loc>
     <lastmod>2021-08-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/data-mining/</loc>
+    <loc>https://thiyanga.netlify.app/tags/data-mining/</loc>
     <lastmod>2021-07-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/machine-learning/</loc>
+    <loc>https://thiyanga.netlify.app/tags/machine-learning/</loc>
     <lastmod>2021-07-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/opencv/</loc>
+    <loc>https://thiyanga.netlify.app/tags/opencv/</loc>
     <lastmod>2021-07-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/pattern-recognition/</loc>
+    <loc>https://thiyanga.netlify.app/tags/pattern-recognition/</loc>
     <lastmod>2021-07-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/project/medlea/</loc>
+    <loc>https://thiyanga.netlify.app/project/medlea/</loc>
     <lastmod>2021-07-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/isf21-talk/</loc>
+    <loc>https://thiyanga.netlify.app/talk/isf21-talk/</loc>
     <lastmod>2021-06-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/norway21-talk/</loc>
+    <loc>https://thiyanga.netlify.app/talk/norway21-talk/</loc>
     <lastmod>2021-06-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/regoutputs/</loc>
+    <loc>https://thiyanga.netlify.app/post/regoutputs/</loc>
     <lastmod>2021-02-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/calendar/</loc>
+    <loc>https://thiyanga.netlify.app/post/calendar/</loc>
     <lastmod>2021-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/ratio/</loc>
+    <loc>https://thiyanga.netlify.app/post/ratio/</loc>
     <lastmod>2020-12-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/scatterplot/</loc>
+    <loc>https://thiyanga.netlify.app/post/scatterplot/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/scatterplot/</loc>
+    <loc>https://thiyanga.netlify.app/tags/scatterplot/</loc>
     <lastmod>2020-12-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/isf20-talk/</loc>
+    <loc>https://thiyanga.netlify.app/talk/isf20-talk/</loc>
     <lastmod>2020-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/loaddatasets/</loc>
+    <loc>https://thiyanga.netlify.app/post/loaddatasets/</loc>
     <lastmod>2020-10-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/fable/</loc>
+    <loc>https://thiyanga.netlify.app/tags/fable/</loc>
     <lastmod>2020-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/ggplot/</loc>
+    <loc>https://thiyanga.netlify.app/tags/ggplot/</loc>
     <lastmod>2020-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/datasets/</loc>
+    <loc>https://thiyanga.netlify.app/post/datasets/</loc>
     <lastmod>2020-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/available/</loc>
+    <loc>https://thiyanga.netlify.app/post/available/</loc>
     <lastmod>2020-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/statterms1/</loc>
+    <loc>https://thiyanga.netlify.app/post/statterms1/</loc>
     <lastmod>2020-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/mathsday2020/</loc>
+    <loc>https://thiyanga.netlify.app/post/mathsday2020/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/mathematics/</loc>
+    <loc>https://thiyanga.netlify.app/tags/mathematics/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/mathematics/</loc>
+    <loc>https://thiyanga.netlify.app/categories/mathematics/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/nature/</loc>
+    <loc>https://thiyanga.netlify.app/tags/nature/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/nature/</loc>
+    <loc>https://thiyanga.netlify.app/categories/nature/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/science/</loc>
+    <loc>https://thiyanga.netlify.app/tags/science/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/science/</loc>
+    <loc>https://thiyanga.netlify.app/categories/science/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/stem/</loc>
+    <loc>https://thiyanga.netlify.app/tags/stem/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/stem/</loc>
+    <loc>https://thiyanga.netlify.app/categories/stem/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/women-in-stem/</loc>
+    <loc>https://thiyanga.netlify.app/tags/women-in-stem/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/women-in-stem/</loc>
+    <loc>https://thiyanga.netlify.app/categories/women-in-stem/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/project/datasets/</loc>
+    <loc>https://thiyanga.netlify.app/project/datasets/</loc>
     <lastmod>2020-04-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/covid19/</loc>
+    <loc>https://thiyanga.netlify.app/post/covid19/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/shiny/</loc>
+    <loc>https://thiyanga.netlify.app/tags/shiny/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/shiny/</loc>
+    <loc>https://thiyanga.netlify.app/categories/shiny/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/project/rladies/</loc>
+    <loc>https://thiyanga.netlify.app/project/rladies/</loc>
     <lastmod>2019-12-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/user19-talk/</loc>
+    <loc>https://thiyanga.netlify.app/talk/user19-talk/</loc>
     <lastmod>2019-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/isf19-talk/</loc>
+    <loc>https://thiyanga.netlify.app/talk/isf19-talk/</loc>
     <lastmod>2019-06-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/dplyr/</loc>
+    <loc>https://thiyanga.netlify.app/tags/dplyr/</loc>
     <lastmod>2019-05-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/dplyr/</loc>
+    <loc>https://thiyanga.netlify.app/categories/dplyr/</loc>
     <lastmod>2019-05-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/dplyr/</loc>
+    <loc>https://thiyanga.netlify.app/post/dplyr/</loc>
     <lastmod>2019-05-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/authors/admin/</loc>
+    <loc>https://thiyanga.netlify.app/authors/admin/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication_types/3/</loc>
+    <loc>https://thiyanga.netlify.app/publication_types/3/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication/preprint/</loc>
+    <loc>https://thiyanga.netlify.app/publication/preprint/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/authors/</loc>
+    <loc>https://thiyanga.netlify.app/authors/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication_types/</loc>
+    <loc>https://thiyanga.netlify.app/publication_types/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication/</loc>
+    <loc>https://thiyanga.netlify.app/publication/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/source-themes/</loc>
+    <loc>https://thiyanga.netlify.app/tags/source-themes/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/gganimate/</loc>
+    <loc>https://thiyanga.netlify.app/tags/gganimate/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/gganimate/</loc>
+    <loc>https://thiyanga.netlify.app/categories/gganimate/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/multiplepkg/</loc>
+    <loc>https://thiyanga.netlify.app/post/multiplepkg/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/beijingtalk19-talk/</loc>
+    <loc>https://thiyanga.netlify.app/talk/beijingtalk19-talk/</loc>
     <lastmod>2019-03-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/slides/</loc>
+    <loc>https://thiyanga.netlify.app/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/slides/example/</loc>
+    <loc>https://thiyanga.netlify.app/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/rmarkdown/</loc>
+    <loc>https://thiyanga.netlify.app/tags/rmarkdown/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/rmarkdown/</loc>
+    <loc>https://thiyanga.netlify.app/categories/rmarkdown/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/greekletters/</loc>
+    <loc>https://thiyanga.netlify.app/post/greekletters/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/packageinfo/</loc>
+    <loc>https://thiyanga.netlify.app/post/packageinfo/</loc>
     <lastmod>2018-10-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/blog/</loc>
+    <loc>https://thiyanga.netlify.app/post/blog/</loc>
     <lastmod>2018-09-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/parallelcomputing/</loc>
+    <loc>https://thiyanga.netlify.app/post/parallelcomputing/</loc>
     <lastmod>2018-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/datatypes/</loc>
+    <loc>https://thiyanga.netlify.app/post/datatypes/</loc>
     <lastmod>2018-08-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/jsm18-talk/</loc>
+    <loc>https://thiyanga.netlify.app/talk/jsm18-talk/</loc>
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/user18-talk/</loc>
+    <loc>https://thiyanga.netlify.app/talk/user18-talk/</loc>
     <lastmod>2018-07-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/isf18-talk/</loc>
+    <loc>https://thiyanga.netlify.app/talk/isf18-talk/</loc>
     <lastmod>2018-06-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/japan18-talk/</loc>
+    <loc>https://thiyanga.netlify.app/talk/japan18-talk/</loc>
     <lastmod>2018-02-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/isf17-talk/</loc>
+    <loc>https://thiyanga.netlify.app/talk/isf17-talk/</loc>
     <lastmod>2017-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/ssa17-talk/</loc>
+    <loc>https://thiyanga.netlify.app/talk/ssa17-talk/</loc>
     <lastmod>2017-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/ysc17-talk/</loc>
+    <loc>https://thiyanga.netlify.app/talk/ysc17-talk/</loc>
     <lastmod>2017-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/project/timeseries/</loc>
+    <loc>https://thiyanga.netlify.app/project/timeseries/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/project/hellor/</loc>
+    <loc>https://thiyanga.netlify.app/project/hellor/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/project/dengue/</loc>
+    <loc>https://thiyanga.netlify.app/project/dengue/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication_types/2/</loc>
+    <loc>https://thiyanga.netlify.app/publication_types/2/</loc>
     <lastmod>2015-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication/journal-article/</loc>
+    <loc>https://thiyanga.netlify.app/publication/journal-article/</loc>
     <lastmod>2015-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/authors/robert-ford/</loc>
+    <loc>https://thiyanga.netlify.app/authors/robert-ford/</loc>
     <lastmod>2015-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication_types/1/</loc>
+    <loc>https://thiyanga.netlify.app/publication_types/1/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication/conference-paper/</loc>
+    <loc>https://thiyanga.netlify.app/publication/conference-paper/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/software/</loc>
+    <loc>https://thiyanga.netlify.app/software/</loc>
   </url><url>
-    <loc>/team/</loc>
+    <loc>https://thiyanga.netlify.app/team/</loc>
   </url>
 </urlset>

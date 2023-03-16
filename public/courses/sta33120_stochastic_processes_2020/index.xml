@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>THIYANGA TALAGALA</title>
-    <link>/courses/sta33120_stochastic_processes_2020/</link>
-      <atom:link href="/courses/sta33120_stochastic_processes_2020/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/courses/sta33120_stochastic_processes_2020/</link>
+      <atom:link href="https://thiyanga.netlify.app/courses/sta33120_stochastic_processes_2020/index.xml" rel="self" type="application/rss+xml" />
     <description>THIYANGA TALAGALA</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 28 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>THIYANGA TALAGALA</title>
-      <link>/courses/sta33120_stochastic_processes_2020/</link>
+      <link>https://thiyanga.netlify.app/courses/sta33120_stochastic_processes_2020/</link>
     </image>
     
     <item>
       <title>STA 331 2.0 Stochastic Processes</title>
-      <link>/courses/sta33120_stochastic_processes_2020/contentr_stochastic/</link>
+      <link>https://thiyanga.netlify.app/courses/sta33120_stochastic_processes_2020/contentr_stochastic/</link>
       <pubDate>Mon, 27 Jul 2020 00:00:00 +0100</pubDate>
-      <guid>/courses/sta33120_stochastic_processes_2020/contentr_stochastic/</guid>
+      <guid>https://thiyanga.netlify.app/courses/sta33120_stochastic_processes_2020/contentr_stochastic/</guid>
       <description>&lt;p&gt;Here is your road map for the course!&lt;/p&gt;
 &lt;h3 id=&#34;week-1&#34;&gt;Week 1&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/1_stochastic_processes_2020.pdf&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/1_stochastic_processes_2020.pdf&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;week-2---3&#34;&gt;Week 2 - 3&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/2_stochastic_processes_2020.pdf&#34;&gt;Markov Chains&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/2_stochastic_processes_2020.pdf&#34;&gt;Markov Chains&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;📚 &lt;a href=&#34;https://github.com/thiyangt/STA33120_assignments/blob/master/2020/sta331_20_Assignment_1.md&#34;&gt;Individual Assignment - week 3&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;week-4&#34;&gt;Week 4&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/3_stochastic_processes_2020.pdf&#34;&gt;Classification of states&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/3_stochastic_processes_2020.pdf&#34;&gt;Classification of states&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;week-5&#34;&gt;Week 5&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/4_stochastic_processes_2020.pdf&#34;&gt;Limiting Probabilities&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/4_stochastic_processes_2020.pdf&#34;&gt;Limiting Probabilities&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;week--1-september-2020-&#34;&gt;Week ( 1 September 2020 )&lt;/h3&gt;
 &lt;p&gt;Holiday&lt;/p&gt;
 &lt;h3 id=&#34;week-6&#34;&gt;Week 6&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/5_stochastic_processes_2020.pdf&#34;&gt;Continuous Parameter Markov Chains&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/5_stochastic_processes_2020.pdf&#34;&gt;Continuous Parameter Markov Chains&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;week-7---8&#34;&gt;Week 7 - 8&lt;/h3&gt;
 &lt;h5 id=&#34;week-7&#34;&gt;Week 7&lt;/h5&gt;
@@ -47,7 +47,7 @@
 &lt;h5 id=&#34;week-7---8-1&#34;&gt;Week 7 - 8&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/6_stochastic_processes_2020.pdf&#34;&gt;Poisson Process (cont.), Interarrival and Waiting Time Distributions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/6_stochastic_processes_2020.pdf&#34;&gt;Poisson Process (cont.), Interarrival and Waiting Time Distributions&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Assignment discussion.&lt;/p&gt;
@@ -55,24 +55,24 @@
 &lt;/ul&gt;
 &lt;h3 id=&#34;week--9&#34;&gt;Week  9&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/7_stochastic_processes_2020.pdf&#34;&gt;Poisson Process (cont.), Splitting of a Poisson process, Compound Poisson processes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/7_stochastic_processes_2020.pdf&#34;&gt;Poisson Process (cont.), Splitting of a Poisson process, Compound Poisson processes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;week-10&#34;&gt;Week 10&lt;/h3&gt;
 &lt;p&gt;Ion Switching| &lt;a href=&#34;https://www.kaggle.com/c/liverpool-ion-switching&#34;&gt;Kaggle competition&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;week-11&#34;&gt;Week 11&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/7_stochastic_processes_2020.pdf&#34;&gt;Nonhomogeneous Poisson Processes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/7_stochastic_processes_2020.pdf&#34;&gt;Nonhomogeneous Poisson Processes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;week-12---14&#34;&gt;Week 12 - 14&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/8_stochastic_processes_2020.pdf&#34;&gt;Birth and death process - Introduction, Pure Birth Process&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/8_stochastic_processes_2020.pdf&#34;&gt;Birth and death process - Introduction, Pure Birth Process&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/PDE.pdf&#34;&gt;Partial Differential Equations&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/PDE.pdf&#34;&gt;Partial Differential Equations&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/9_stochastic_processes_2020.pdf&#34;&gt;Pure Death Process&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/9_stochastic_processes_2020.pdf&#34;&gt;Pure Death Process&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Answers for Pure Death Process - Download from LMS&lt;/p&gt;
@@ -81,15 +81,15 @@
 &lt;p&gt;Assignment 3: Please go the LMS (Due date: 24 Nov 2020)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/13_stochastic_processes_2020.pdf&#34;&gt;Birth-and-Death Process&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/13_stochastic_processes_2020.pdf&#34;&gt;Birth-and-Death Process&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/12_stochastic_processes_2020.pdf&#34;&gt;Birth-and-Death Process - important results&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/12_stochastic_processes_2020.pdf&#34;&gt;Birth-and-Death Process - important results&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;week-15&#34;&gt;Week 15&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/14_stochastic_processes_2020.pdf&#34;&gt;Birth-and-Death Process - important results (cont)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/14_stochastic_processes_2020.pdf&#34;&gt;Birth-and-Death Process - important results (cont)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Revision&lt;/p&gt;
 &lt;p&gt;Individual Presentations - SIR models&lt;/p&gt;

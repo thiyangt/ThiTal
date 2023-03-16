@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tidyverse | THIYANGA TALAGALA</title>
-    <link>/categories/tidyverse/</link>
-      <atom:link href="/categories/tidyverse/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/categories/tidyverse/</link>
+      <atom:link href="https://thiyanga.netlify.app/categories/tidyverse/index.xml" rel="self" type="application/rss+xml" />
     <description>tidyverse</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>tidyverse</title>
-      <link>/categories/tidyverse/</link>
+      <link>https://thiyanga.netlify.app/categories/tidyverse/</link>
     </image>
     
     <item>
-      <title>Some useful functions to Wrangle with Time Series Data</title>
-      <link>/post/tsviz/</link>
+      <title>Some useful functions to wrangle with time series data</title>
+      <link>https://thiyanga.netlify.app/post/tsviz/</link>
       <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>/post/tsviz/</guid>
+      <guid>https://thiyanga.netlify.app/post/tsviz/</guid>
       <description>
 
 
@@ -155,11 +155,11 @@ y1&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Logistic Regression: Model Building and Interpretation</title>
-      <link>/post/logisticregression/</link>
+      <link>https://thiyanga.netlify.app/post/logisticregression/</link>
       <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>/post/logisticregression/</guid>
+      <guid>https://thiyanga.netlify.app/post/logisticregression/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;data&#34; class=&#34;section level2&#34;&gt;
@@ -381,7 +381,7 @@ p2_island &amp;lt;- penguins %&amp;gt;%
   ggtitle(&amp;quot;b&amp;quot;)
 (p1_species|p2_island)&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:unnamed-chunk-3&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-3-1.png&#34; alt=&#34;Distribution of (a) species and (d) island by gender.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-3-1.png&#34; alt=&#34;Distribution of (a) species and (d) island by gender.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Distribution of (a) species and (d) island by gender.
 &lt;/p&gt;
@@ -408,7 +408,7 @@ p6_bmi &amp;lt;-  ggplot(penguins, aes(x=sex, y=body_mass_g, fill=sex)) +
 
 (p3_length|p4_depth)/(p5_flipper|p6_bmi)&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:unnamed-chunk-4&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-4-1.png&#34; alt=&#34;Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-4-1.png&#34; alt=&#34;Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.
 &lt;/p&gt;
@@ -417,14 +417,14 @@ Figure 2: Distribution of (a) bill length, (b) bill depth, (c) flipper length an
 &lt;div id=&#34;missing-values-exploration&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Missing values exploration&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vis_miss(penguins)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;remove-missing-values&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Remove missing values&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins_omit &amp;lt;- penguins %&amp;gt;%
   na.omit()
 vis_miss(penguins_omit)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;building-logistic-regression&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Building logistic regression&lt;/h2&gt;
@@ -540,11 +540,11 @@ body_mass_g       1.003695e+00 1.007982e+00&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Zoom Your Plots with ggforce</title>
-      <link>/post/ggforce/</link>
+      <link>https://thiyanga.netlify.app/post/ggforce/</link>
       <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>/post/ggforce/</guid>
+      <guid>https://thiyanga.netlify.app/post/ggforce/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;To enlarge a section of data in your &lt;code&gt;ggplots&lt;/code&gt;, use the &lt;code&gt;facet_zoom&lt;/code&gt; function in the &lt;a href=&#34;https://rdrr.io/cran/ggforce/man/facet_zoom.html&#34;&gt;ggforce&lt;/a&gt; package. To illustrate I am using the &lt;a href=&#34;https://cran.r-project.org/web/packages/gapminder/README.html&#34;&gt;gapminder&lt;/a&gt; dataset in &lt;a href=&#34;https://cran.r-project.org/web/packages/gapminder/README.html&#34;&gt;gapminder&lt;/a&gt; package.&lt;/p&gt;
@@ -564,15 +564,15 @@ library(gapminder)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;zoom the Y axis&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +  
   facet_zoom(ylim = c(60, 80)) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +   
   facet_zoom(xlim = c(0, 10000)) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis and the Y axis&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +  
   facet_zoom(xlim = c(0, 10000), ylim=c(60, 80)) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;zoom-according-to-a-qualitative-variable&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Zoom according to a qualitative variable&lt;/h2&gt;
@@ -581,35 +581,35 @@ library(gapminder)&lt;/code&gt;&lt;/pre&gt;
   coord_fixed() + 
   scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
   facet_zoom(y = continent == &amp;#39;Oceania&amp;#39;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
   coord_fixed() + 
   scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
   facet_zoom(x = continent == &amp;#39;Oceania&amp;#39;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis and the Y axis&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
   coord_fixed() + 
   scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
   facet_zoom(xy = continent == &amp;#39;Oceania&amp;#39;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
   coord_fixed() + 
   scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
   facet_zoom(xy = continent == &amp;#39;Oceania&amp;#39;, split = TRUE) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Formatting axis labels in ggplot</title>
-      <link>/post/plotaxis/</link>
+      <link>https://thiyanga.netlify.app/post/plotaxis/</link>
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>/post/plotaxis/</guid>
+      <guid>https://thiyanga.netlify.app/post/plotaxis/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;With the ggplot2 package, you’ve got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing.&lt;/p&gt;
@@ -625,7 +625,7 @@ african_names %&amp;gt;%
   ggplot(aes(year_arrival)) +
   geom_histogram(bins = 20, fill = &amp;quot;darkslateblue&amp;quot;, alpha = 0.7, col=&amp;quot;white&amp;quot;) +
   scale_y_continuous(labels = scales::comma_format()) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/plotaxis_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;change-label-angles-horizontal-justification-and-vertical-justification&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Change label angles, horizontal justification and vertical justification&lt;/h2&gt;
@@ -636,25 +636,25 @@ penguins %&amp;gt;%
   ggplot(aes(x=species, fill=species)) + geom_bar() +
   scale_fill_manual(values=c(&amp;quot;#1b9e77&amp;quot;, &amp;quot;#d95f02&amp;quot;, &amp;quot;#7570b3&amp;quot;)) + 
   theme(axis.text.x=element_text(angle=30))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/plotaxis_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Angles, horizontal justification and vertical justification&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins %&amp;gt;%
   ggplot(aes(x=species, fill=species)) + geom_bar() +  scale_fill_manual(values=c(&amp;quot;#1b9e77&amp;quot;, &amp;quot;#d95f02&amp;quot;, &amp;quot;#7570b3&amp;quot;)) + 
   theme(axis.text.x=element_text(angle=30, vjust=.8, hjust=0.8))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/plotaxis_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Highlight data points in a scatterplot</title>
-      <link>/post/scatterplot/</link>
+      <link>https://thiyanga.netlify.app/post/scatterplot/</link>
       <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>/post/scatterplot/</guid>
+      <guid>https://thiyanga.netlify.app/post/scatterplot/</guid>
       <description>
 
 
-&lt;p&gt;&lt;img src=&#34;/post/highlight.jpg&#34; alt=&#34;final image&#34; width=&#34;700&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/highlight.jpg&#34; alt=&#34;final image&#34; width=&#34;700&#34;/&gt;&lt;/p&gt;
 &lt;div id=&#34;step-1-load-libraries&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Step 1: Load Libraries&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
@@ -670,7 +670,7 @@ df &amp;lt;- tibble::tibble(x=rnorm(100), y=rnorm(100))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(df, aes(x=x, y=y)) + 
   geom_point() + 
   coord_equal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/scatterplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/scatterplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;step-4-store-the-points-that-you-need-to-highlight-in-a-new-data.frame-or-tibble.&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Step 4: Store the points that you need to highlight in a new &lt;code&gt;data.frame&lt;/code&gt; or &lt;code&gt;tibble&lt;/code&gt;.&lt;/h1&gt;
@@ -690,7 +690,7 @@ df2&lt;/code&gt;&lt;/pre&gt;
   geom_point() + 
   coord_equal() + 
   geom_point(data=df2, aes(x=x, y=y), colour=&amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/scatterplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/scatterplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We can change the size by passing a value to &lt;code&gt;size&lt;/code&gt; argument.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(df, aes(x=x, y=y)) + 
   geom_point() + 
@@ -698,7 +698,7 @@ df2&lt;/code&gt;&lt;/pre&gt;
   geom_point(data=df2, aes(x=x, y=y), 
              colour=&amp;quot;red&amp;quot;, 
              size=5)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/scatterplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/scatterplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We can circle around the points by using the following command.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(df, aes(x=x, y=y)) + 
   geom_point() + 
@@ -706,16 +706,16 @@ df2&lt;/code&gt;&lt;/pre&gt;
   geom_point(data=df2, aes(x=x, y=y), pch=21, 
              fill=NA, size=4, 
              colour=&amp;quot;red&amp;quot;, stroke=1)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/scatterplot_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/scatterplot_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>How to install and load multiple packages at once?</title>
-      <link>/post/multiplepkg/</link>
+      <link>https://thiyanga.netlify.app/post/multiplepkg/</link>
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>/post/multiplepkg/</guid>
+      <guid>https://thiyanga.netlify.app/post/multiplepkg/</guid>
       <description>
 
 

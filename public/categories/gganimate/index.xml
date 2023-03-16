@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gganimate | THIYANGA TALAGALA</title>
-    <link>/categories/gganimate/</link>
-      <atom:link href="/categories/gganimate/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/categories/gganimate/</link>
+      <atom:link href="https://thiyanga.netlify.app/categories/gganimate/index.xml" rel="self" type="application/rss+xml" />
     <description>gganimate</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 22 Mar 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>gganimate</title>
-      <link>/categories/gganimate/</link>
+      <link>https://thiyanga.netlify.app/categories/gganimate/</link>
     </image>
     
     <item>
       <title>How to install and load multiple packages at once?</title>
-      <link>/post/multiplepkg/</link>
+      <link>https://thiyanga.netlify.app/post/multiplepkg/</link>
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>/post/multiplepkg/</guid>
+      <guid>https://thiyanga.netlify.app/post/multiplepkg/</guid>
       <description>
 
 

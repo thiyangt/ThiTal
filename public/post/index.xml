@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts | THIYANGA TALAGALA</title>
-    <link>/post/</link>
-      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/post/</link>
+      <atom:link href="https://thiyanga.netlify.app/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>Posts</title>
-      <link>/post/</link>
+      <link>https://thiyanga.netlify.app/post/</link>
     </image>
     
     <item>
-      <title>Some useful functions to Wrangle with Time Series Data</title>
-      <link>/post/tsviz/</link>
+      <title>Some useful functions to wrangle with time series data</title>
+      <link>https://thiyanga.netlify.app/post/tsviz/</link>
       <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>/post/tsviz/</guid>
+      <guid>https://thiyanga.netlify.app/post/tsviz/</guid>
       <description>
 
 
@@ -155,9 +155,9 @@ y1&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Building a website using Quarto</title>
-      <link>/post/blog/</link>
+      <link>https://thiyanga.netlify.app/post/blog/</link>
       <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>/post/blog/</guid>
+      <guid>https://thiyanga.netlify.app/post/blog/</guid>
       <description>
 
 
@@ -177,7 +177,7 @@ y1&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The type the following command in the RStudio terminal&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;quarto create-project myblog --type website:blog&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This will create a folder called &lt;code&gt;myblog&lt;/code&gt; with the following documents inside.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/quarto.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/quarto.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;Copy all the documents inside the folder into your project folder, and delete the &lt;code&gt;myblog&lt;/code&gt; folder.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;step-4&#34; class=&#34;section level2&#34;&gt;
@@ -210,16 +210,16 @@ y1&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Error: C stack usage is too close to the limit</title>
-      <link>/post/error1/</link>
+      <link>https://thiyanga.netlify.app/post/error1/</link>
       <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>/post/error1/</guid>
+      <guid>https://thiyanga.netlify.app/post/error1/</guid>
       <description>
 
 
 &lt;div id=&#34;error-c-stack-usage-is-too-close-to-the-limit&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Error: C stack usage is too close to the limit&lt;/h2&gt;
 &lt;p&gt;While using Rstudio on macOS Mojave (version 10.14.6) to work with R, I recently ran across the following problem.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/error.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/error.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;In order to fix the error, I deleted the &lt;code&gt;.Rprofile&lt;/code&gt;. You can erase everything in the “.Rprofile” by using the commands listed below.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;file.edit(file.path(&amp;quot;~&amp;quot;, &amp;quot;.Rprofile&amp;quot;)) 
 file.edit(&amp;quot;.Rprofile&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
@@ -229,11 +229,11 @@ file.edit(&amp;quot;.Rprofile&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Logistic Regression: Model Building and Interpretation</title>
-      <link>/post/logisticregression/</link>
+      <link>https://thiyanga.netlify.app/post/logisticregression/</link>
       <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>/post/logisticregression/</guid>
+      <guid>https://thiyanga.netlify.app/post/logisticregression/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;data&#34; class=&#34;section level2&#34;&gt;
@@ -455,7 +455,7 @@ p2_island &amp;lt;- penguins %&amp;gt;%
   ggtitle(&amp;quot;b&amp;quot;)
 (p1_species|p2_island)&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:unnamed-chunk-3&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-3-1.png&#34; alt=&#34;Distribution of (a) species and (d) island by gender.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-3-1.png&#34; alt=&#34;Distribution of (a) species and (d) island by gender.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Distribution of (a) species and (d) island by gender.
 &lt;/p&gt;
@@ -482,7 +482,7 @@ p6_bmi &amp;lt;-  ggplot(penguins, aes(x=sex, y=body_mass_g, fill=sex)) +
 
 (p3_length|p4_depth)/(p5_flipper|p6_bmi)&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:unnamed-chunk-4&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-4-1.png&#34; alt=&#34;Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-4-1.png&#34; alt=&#34;Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.
 &lt;/p&gt;
@@ -491,14 +491,14 @@ Figure 2: Distribution of (a) bill length, (b) bill depth, (c) flipper length an
 &lt;div id=&#34;missing-values-exploration&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Missing values exploration&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vis_miss(penguins)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;remove-missing-values&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Remove missing values&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins_omit &amp;lt;- penguins %&amp;gt;%
   na.omit()
 vis_miss(penguins_omit)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;building-logistic-regression&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Building logistic regression&lt;/h2&gt;
@@ -614,11 +614,11 @@ body_mass_g       1.003695e+00 1.007982e+00&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Zoom Your Plots with ggforce</title>
-      <link>/post/ggforce/</link>
+      <link>https://thiyanga.netlify.app/post/ggforce/</link>
       <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>/post/ggforce/</guid>
+      <guid>https://thiyanga.netlify.app/post/ggforce/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;To enlarge a section of data in your &lt;code&gt;ggplots&lt;/code&gt;, use the &lt;code&gt;facet_zoom&lt;/code&gt; function in the &lt;a href=&#34;https://rdrr.io/cran/ggforce/man/facet_zoom.html&#34;&gt;ggforce&lt;/a&gt; package. To illustrate I am using the &lt;a href=&#34;https://cran.r-project.org/web/packages/gapminder/README.html&#34;&gt;gapminder&lt;/a&gt; dataset in &lt;a href=&#34;https://cran.r-project.org/web/packages/gapminder/README.html&#34;&gt;gapminder&lt;/a&gt; package.&lt;/p&gt;
@@ -638,15 +638,15 @@ library(gapminder)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;zoom the Y axis&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +  
   facet_zoom(ylim = c(60, 80)) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +   
   facet_zoom(xlim = c(0, 10000)) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis and the Y axis&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +  
   facet_zoom(xlim = c(0, 10000), ylim=c(60, 80)) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;zoom-according-to-a-qualitative-variable&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Zoom according to a qualitative variable&lt;/h2&gt;
@@ -655,35 +655,35 @@ library(gapminder)&lt;/code&gt;&lt;/pre&gt;
   coord_fixed() + 
   scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
   facet_zoom(y = continent == &amp;#39;Oceania&amp;#39;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
   coord_fixed() + 
   scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
   facet_zoom(x = continent == &amp;#39;Oceania&amp;#39;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis and the Y axis&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
   coord_fixed() + 
   scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
   facet_zoom(xy = continent == &amp;#39;Oceania&amp;#39;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
   coord_fixed() + 
   scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
   facet_zoom(xy = continent == &amp;#39;Oceania&amp;#39;, split = TRUE) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Formatting axis labels in ggplot</title>
-      <link>/post/plotaxis/</link>
+      <link>https://thiyanga.netlify.app/post/plotaxis/</link>
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>/post/plotaxis/</guid>
+      <guid>https://thiyanga.netlify.app/post/plotaxis/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;With the ggplot2 package, you’ve got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing.&lt;/p&gt;
@@ -699,7 +699,7 @@ african_names %&amp;gt;%
   ggplot(aes(year_arrival)) +
   geom_histogram(bins = 20, fill = &amp;quot;darkslateblue&amp;quot;, alpha = 0.7, col=&amp;quot;white&amp;quot;) +
   scale_y_continuous(labels = scales::comma_format()) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/plotaxis_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;change-label-angles-horizontal-justification-and-vertical-justification&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Change label angles, horizontal justification and vertical justification&lt;/h2&gt;
@@ -710,23 +710,23 @@ penguins %&amp;gt;%
   ggplot(aes(x=species, fill=species)) + geom_bar() +
   scale_fill_manual(values=c(&amp;quot;#1b9e77&amp;quot;, &amp;quot;#d95f02&amp;quot;, &amp;quot;#7570b3&amp;quot;)) + 
   theme(axis.text.x=element_text(angle=30))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/plotaxis_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Angles, horizontal justification and vertical justification&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins %&amp;gt;%
   ggplot(aes(x=species, fill=species)) + geom_bar() +  scale_fill_manual(values=c(&amp;quot;#1b9e77&amp;quot;, &amp;quot;#d95f02&amp;quot;, &amp;quot;#7570b3&amp;quot;)) + 
   theme(axis.text.x=element_text(angle=30, vjust=.8, hjust=0.8))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/plotaxis_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Coronavirus Dashboard - Sri Lanka</title>
-      <link>/post/covid19srilankadb/</link>
+      <link>https://thiyanga.netlify.app/post/covid19srilankadb/</link>
       <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>/post/covid19srilankadb/</guid>
+      <guid>https://thiyanga.netlify.app/post/covid19srilankadb/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;iframe width=&#34;880&#34; height=&#34;450&#34; src=&#34;https://www.youtube.com/embed/fHypdnkr4_c&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
@@ -746,11 +746,11 @@ penguins %&amp;gt;%
     
     <item>
       <title>Covid-19/ Coronavirus data in Sri Lanka</title>
-      <link>/post/covid19srilanka/</link>
+      <link>https://thiyanga.netlify.app/post/covid19srilanka/</link>
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>/post/covid19srilanka/</guid>
+      <guid>https://thiyanga.netlify.app/post/covid19srilanka/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;&lt;img src=&#34;https://github.com/thiyangt/covid19srilanka/blob/main/man/figures/hex.png?raw=true&#34; /&gt;&lt;/p&gt;
@@ -836,11 +836,11 @@ dplyr::glimpse(vaccination)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Weighted LOESS (LOcal regrESSion) </title>
-      <link>/post/blog/</link>
+      <link>https://thiyanga.netlify.app/post/blog/</link>
       <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>/post/blog/</guid>
+      <guid>https://thiyanga.netlify.app/post/blog/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;local-regression-loess-or-locally-weighted-scatter-plot-smoother-lowess&#34; class=&#34;section level1&#34;&gt;
@@ -857,7 +857,7 @@ df &amp;lt;- data.frame(x=x, y=y)
 ## Without weights
 ggplot(data=df, aes(x=x, y=y)) + geom_point() + 
  geom_smooth(method=loess, legend=FALSE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/loess_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/loess_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Furthermore your can plot loess smoothing weighting the observations as follows:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;weights &amp;lt;- c(rep(1, 40), 20, rep(1, 19))
 df$weights &amp;lt;- weights
@@ -865,16 +865,16 @@ df$weights &amp;lt;- weights
 
 ggplot(data=df, aes(x=x, y=y, size=weights, weight=weights)) + geom_point() + 
  geom_smooth(method=loess, legend=TRUE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/loess_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/loess_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Reporting your model outputs</title>
-      <link>/post/regoutputs/</link>
+      <link>https://thiyanga.netlify.app/post/regoutputs/</link>
       <pubDate>Fri, 26 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>/post/regoutputs/</guid>
+      <guid>https://thiyanga.netlify.app/post/regoutputs/</guid>
       <description>
 
 
@@ -1712,7 +1712,7 @@ Girth       |        4.71 | 0.26 | [  4.17,   5.25] | 17.82 | &amp;lt; .001&lt;/
 &lt;div id=&#34;visualise-model-parameter-estimates&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Visualise model parameter estimates&lt;/h3&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;model %&amp;gt;% model_parameters(digits=3) %&amp;gt;% plot()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/regoutputs_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/regoutputs_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;reporting-anova-table&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Reporting ANOVA table&lt;/h3&gt;
@@ -2115,9 +2115,9 @@ Girth       |        4.71 | 0.26 | [  4.17,   5.25] | 17.82 | &amp;lt; .001&lt;/
     
     <item>
       <title>Organize your priorities using CalendR package in R</title>
-      <link>/post/calendar/</link>
+      <link>https://thiyanga.netlify.app/post/calendar/</link>
       <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>/post/calendar/</guid>
+      <guid>https://thiyanga.netlify.app/post/calendar/</guid>
       <description>
 
 
@@ -2133,7 +2133,7 @@ Girth       |        4.71 | 0.26 | [  4.17,   5.25] | 17.82 | &amp;lt; .001&lt;/
         special.days = &amp;quot;weekend&amp;quot;, # Colour  weekends (optional argument),
         text.size = 4,
         special.col = &amp;quot;#b2df8a&amp;quot;) # background colour for weekends (optional arguments)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/calendar_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;1440&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/calendar_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;1440&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;mark-events&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;2. Mark events&lt;/h3&gt;
@@ -2151,7 +2151,7 @@ calendR(year = 2021,
         special.col = c(&amp;quot;#1b9e77&amp;quot;, &amp;quot;#d95f02&amp;quot;, &amp;quot;#7570b3&amp;quot;, &amp;quot;#e7298a&amp;quot;),
         text.size = 4,
         legend.pos = &amp;quot;right&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/calendar_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;1440&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/calendar_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;1440&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;monthly-plan&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;3. Monthly plan&lt;/h3&gt;
@@ -2161,16 +2161,16 @@ calendR(year = 2021,
         text.pos = c(18, 20, 23), # Events dates texts 
         text.size = 4.5,          # Font size of the labels
         text.col = &amp;quot;#1b9e77&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/calendar_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/calendar_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Ratio matters: change the way you see things!</title>
-      <link>/post/ratio/</link>
+      <link>https://thiyanga.netlify.app/post/ratio/</link>
       <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>/post/ratio/</guid>
+      <guid>https://thiyanga.netlify.app/post/ratio/</guid>
       <description>
 
 
@@ -2187,7 +2187,7 @@ When creating scatterplots, how often do you fix the aspect ratio? &lt;a href=&#
 &lt;div id=&#34;aspect-ratio&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Aspect ratio&lt;/h3&gt;
 &lt;p&gt;The &lt;strong&gt;aspect ratio&lt;/strong&gt; of a plot is the ratio of its height-to-width . The aspect ratio we choose for our graph plays a significant role. The graphs below plot exactly the same data points but they have different aspect ratios.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ratio_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ratio_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;the-aspect-ratio-of-a-plot-can-make-an-influence-on-the-readers-mind.&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;The aspect-ratio of a plot can make an influence on the reader’s mind.&lt;/h2&gt;
@@ -2213,7 +2213,7 @@ head(circle.points)&lt;/code&gt;&lt;/pre&gt;
    geom_point() +
    scale_colour_manual(values = c(&amp;quot;#e7298a&amp;quot;, &amp;quot;#1b9e77&amp;quot;)) +
    theme(legend.position = &amp;quot;none&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ratio_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ratio_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;According to the plot above it seems that the region is bounded by a ellipse. However, our points are not generated from an elliptical region.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;aspect-ratio-is-fixed&#34; class=&#34;section level3&#34;&gt;
@@ -2223,7 +2223,7 @@ head(circle.points)&lt;/code&gt;&lt;/pre&gt;
   coord_equal() +
   ggtitle(&amp;quot;Figure 2: Aspect ratio is fixed.&amp;quot;) +  
   theme(legend.position = &amp;quot;none&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ratio_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ratio_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;When you create the plot by preserving the aspect ratio the region is bounded by a circle.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2232,13 +2232,13 @@ head(circle.points)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Highlight data points in a scatterplot</title>
-      <link>/post/scatterplot/</link>
+      <link>https://thiyanga.netlify.app/post/scatterplot/</link>
       <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>/post/scatterplot/</guid>
+      <guid>https://thiyanga.netlify.app/post/scatterplot/</guid>
       <description>
 
 
-&lt;p&gt;&lt;img src=&#34;/post/highlight.jpg&#34; alt=&#34;final image&#34; width=&#34;700&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/highlight.jpg&#34; alt=&#34;final image&#34; width=&#34;700&#34;/&gt;&lt;/p&gt;
 &lt;div id=&#34;step-1-load-libraries&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Step 1: Load Libraries&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
@@ -2254,7 +2254,7 @@ df &amp;lt;- tibble::tibble(x=rnorm(100), y=rnorm(100))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(df, aes(x=x, y=y)) + 
   geom_point() + 
   coord_equal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/scatterplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/scatterplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;step-4-store-the-points-that-you-need-to-highlight-in-a-new-data.frame-or-tibble.&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Step 4: Store the points that you need to highlight in a new &lt;code&gt;data.frame&lt;/code&gt; or &lt;code&gt;tibble&lt;/code&gt;.&lt;/h1&gt;
@@ -2274,7 +2274,7 @@ df2&lt;/code&gt;&lt;/pre&gt;
   geom_point() + 
   coord_equal() + 
   geom_point(data=df2, aes(x=x, y=y), colour=&amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/scatterplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/scatterplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We can change the size by passing a value to &lt;code&gt;size&lt;/code&gt; argument.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(df, aes(x=x, y=y)) + 
   geom_point() + 
@@ -2282,7 +2282,7 @@ df2&lt;/code&gt;&lt;/pre&gt;
   geom_point(data=df2, aes(x=x, y=y), 
              colour=&amp;quot;red&amp;quot;, 
              size=5)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/scatterplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/scatterplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We can circle around the points by using the following command.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(df, aes(x=x, y=y)) + 
   geom_point() + 
@@ -2290,16 +2290,16 @@ df2&lt;/code&gt;&lt;/pre&gt;
   geom_point(data=df2, aes(x=x, y=y), pch=21, 
              fill=NA, size=4, 
              colour=&amp;quot;red&amp;quot;, stroke=1)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/scatterplot_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/scatterplot_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Import data into R: Overwritten object names</title>
-      <link>/post/loaddatasets/</link>
+      <link>https://thiyanga.netlify.app/post/loaddatasets/</link>
       <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/post/loaddatasets/</guid>
+      <guid>https://thiyanga.netlify.app/post/loaddatasets/</guid>
       <description>
 
 
@@ -2339,9 +2339,9 @@ happyDataloaded&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Working with built-in data sets in R</title>
-      <link>/post/datasets/</link>
+      <link>https://thiyanga.netlify.app/post/datasets/</link>
       <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>/post/datasets/</guid>
+      <guid>https://thiyanga.netlify.app/post/datasets/</guid>
       <description>
 
 
@@ -2389,7 +2389,7 @@ Loading package: forecast &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;To view data sets in package &lt;code&gt;datasets&lt;/code&gt;.&lt;/h3&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data() &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This opens a file called “R data sets” in the Code-Editor window as below.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/datafiles.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/datafiles.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;to-list-the-data-sets-in-all-available-packages&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;To list the data sets in all &lt;em&gt;available&lt;/em&gt; packages&lt;/h3&gt;
@@ -2416,9 +2416,9 @@ Data sets in package ‘asbio’:
     
     <item>
       <title>Small things matter!</title>
-      <link>/post/available/</link>
+      <link>https://thiyanga.netlify.app/post/available/</link>
       <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/available/</guid>
+      <guid>https://thiyanga.netlify.app/post/available/</guid>
       <description>
 
 
@@ -2444,9 +2444,9 @@ Sentiment:???&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Parameter, Statistic, Random Variable, Estimator and Estimate</title>
-      <link>/post/statterms1/</link>
+      <link>https://thiyanga.netlify.app/post/statterms1/</link>
       <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/statterms1/</guid>
+      <guid>https://thiyanga.netlify.app/post/statterms1/</guid>
       <description>
 
 
@@ -2500,7 +2500,7 @@ tosscoin(1)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Loosely speaking a &lt;strong&gt;Random variable&lt;/strong&gt; is a function from the sample space to the real numbers. There are two types of random variables: i) Discrete random variable and ii) Continuous random variable. We use Roman capital letters to denote random variables (&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(U\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;, etc.). However, as soon as a variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is observed, the observed values are represented by the corresponding simple Roman letter.&lt;/p&gt;
 &lt;p&gt;The notation &lt;span class=&#34;math inline&#34;&gt;\(X(\omega)\)&lt;/span&gt; denotes the numerical value of the random variable X, when the outcome of the experiment is some particular &lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;An example will help you to understand how this works. To start with, let’s consider a simple experiment with two possible outcomes: &lt;a href=&#34;(https://en.wikipedia.org/wiki/Polymerase_chain_reaction)&#34;&gt;PCR&lt;/a&gt; test result of a randomly selected individual.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/PCR.PNG&#34; alt=&#34;final image&#34; width=&#34;300&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/PCR.PNG&#34; alt=&#34;final image&#34; width=&#34;300&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;The random variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; can be defined as follows:&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Solution 1.1&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Sample space&lt;/em&gt;&lt;/p&gt;
@@ -2513,7 +2513,7 @@ tosscoin(1)&lt;/code&gt;&lt;/pre&gt;
     1,              &amp;amp; \text{if } \omega =  Positive
 \end{cases}
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/sample_space.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/sample_space.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Solution 1.2&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Simply drop &lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt; and define the random variable as follows:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
@@ -2524,7 +2524,7 @@ tosscoin(1)&lt;/code&gt;&lt;/pre&gt;
 \end{cases}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Let’s consider another experiment. The experiment consists in selecting a random undergraduate student in the University during a period of one week, and measuring their height.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/height.PNG&#34; alt=&#34;final image&#34; width=&#34;300&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/height.PNG&#34; alt=&#34;final image&#34; width=&#34;300&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;The random variable &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; can be defined as follows:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\Omega = \{ \omega: \omega &amp;gt; 0\}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y(\omega) =  \omega, \text{ } \omega \in \Omega. \]&lt;/span&gt;&lt;/p&gt;
@@ -2549,7 +2549,7 @@ uncertainty, before the results becomes available we view each observation as a 
 variable and denote the sample by &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, X_3, X_4, X_5\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;We again performed the PCR test on another randomly selected 5 individuals. We called this sample 2. Now results are &lt;span class=&#34;math inline&#34;&gt;\(x_1=0, x_2=0, x_3=0, x_4=1, x_5=0\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;You can see observable values for &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, X_3, X_4, X_5\)&lt;/span&gt; vary from sample to sample.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/pop_sam.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/pop_sam.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;estimator-and-estimate&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Estimator and Estimate&lt;/h1&gt;
@@ -2602,9 +2602,9 @@ License&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Happy Women in Maths Day - 12 May 2020</title>
-      <link>/post/mathsday2020/</link>
+      <link>https://thiyanga.netlify.app/post/mathsday2020/</link>
       <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
-      <guid>/post/mathsday2020/</guid>
+      <guid>https://thiyanga.netlify.app/post/mathsday2020/</guid>
       <description>
 
 
@@ -2626,14 +2626,14 @@ License&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Dashboard to monitor COVID-19 situation in Sri Lanka</title>
-      <link>/post/covid19/</link>
+      <link>https://thiyanga.netlify.app/post/covid19/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/covid19/</guid>
+      <guid>https://thiyanga.netlify.app/post/covid19/</guid>
       <description>
 
 
 &lt;p&gt;Visit here: &lt;a href=&#34;https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary&#34; class=&#34;uri&#34;&gt;https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/covid.png&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/covid.png&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
 &lt;iframe width=&#34;1000&#34; height=&#34;600&#34; scrolling=&#34;no&#34; frameborder=&#34;no&#34; src=&#34;https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary&#34;&gt;
 &lt;/iframe&gt;
 &lt;div id=&#34;code&#34; class=&#34;section level2&#34;&gt;
@@ -2659,9 +2659,9 @@ License&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Summarizing with dplyr</title>
-      <link>/post/dplyr/</link>
+      <link>https://thiyanga.netlify.app/post/dplyr/</link>
       <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
-      <guid>/post/dplyr/</guid>
+      <guid>https://thiyanga.netlify.app/post/dplyr/</guid>
       <description>
 
 
@@ -2752,9 +2752,9 @@ head(iris)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>How to install and load multiple packages at once?</title>
-      <link>/post/multiplepkg/</link>
+      <link>https://thiyanga.netlify.app/post/multiplepkg/</link>
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>/post/multiplepkg/</guid>
+      <guid>https://thiyanga.netlify.app/post/multiplepkg/</guid>
       <description>
 
 
@@ -2819,9 +2819,9 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Some useful Greek letters you might use on your reports</title>
-      <link>/post/greekletters/</link>
+      <link>https://thiyanga.netlify.app/post/greekletters/</link>
       <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/post/greekletters/</guid>
+      <guid>https://thiyanga.netlify.app/post/greekletters/</guid>
       <description>
 
 
@@ -2953,9 +2953,9 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>What&#39;s in a package?</title>
-      <link>/post/packageinfo/</link>
+      <link>https://thiyanga.netlify.app/post/packageinfo/</link>
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
-      <guid>/post/packageinfo/</guid>
+      <guid>https://thiyanga.netlify.app/post/packageinfo/</guid>
       <description>
 
 
@@ -3065,9 +3065,9 @@ ls(&amp;quot;package:dplyr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Customizing boxplots with ggplot2</title>
-      <link>/post/blog/</link>
+      <link>https://thiyanga.netlify.app/post/blog/</link>
       <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>/post/blog/</guid>
+      <guid>https://thiyanga.netlify.app/post/blog/</guid>
       <description>
 
 
@@ -3096,7 +3096,7 @@ head(DF)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Step 3: Change the colours, legend position and x-axis order&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
@@ -3104,7 +3104,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   xlab(&amp;quot;&amp;quot;) +
   theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
   scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Step 4: Change the plotting order: first you have to include &lt;code&gt;factor&lt;/code&gt; code to set the order of the levels.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;DF$Gender_factor &amp;lt;- factor(DF$Gender, levels=c(&amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;))
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
@@ -3113,7 +3113,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
   xlab(&amp;quot;&amp;quot;) +
   theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
   scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Step 5: Horizontal bar chart: coord_flip()&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
@@ -3122,7 +3122,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
   theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
   coord_flip()+
   scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;step 6: Change the legend order similar to plot order: under themes &lt;code&gt;fill=guide_legend(reverse=FALSE)&lt;/code&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
@@ -3132,24 +3132,24 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
   guides(fill=guide_legend(reverse=TRUE)) +
   coord_flip()+
   scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Parallel computing with R</title>
-      <link>/post/parallelcomputing/</link>
+      <link>https://thiyanga.netlify.app/post/parallelcomputing/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>/post/parallelcomputing/</guid>
+      <guid>https://thiyanga.netlify.app/post/parallelcomputing/</guid>
       <description>&lt;p&gt;Working on this..&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Data Types in R</title>
-      <link>/post/datatypes/</link>
+      <link>https://thiyanga.netlify.app/post/datatypes/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>/post/datatypes/</guid>
+      <guid>https://thiyanga.netlify.app/post/datatypes/</guid>
       <description>&lt;p&gt;coming up soon!&lt;/p&gt;
 </description>
     </item>

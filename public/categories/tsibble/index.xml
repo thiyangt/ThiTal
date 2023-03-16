@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tsibble | THIYANGA TALAGALA</title>
-    <link>/categories/tsibble/</link>
-      <atom:link href="/categories/tsibble/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/categories/tsibble/</link>
+      <atom:link href="https://thiyanga.netlify.app/categories/tsibble/index.xml" rel="self" type="application/rss+xml" />
     <description>tsibble</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>tsibble</title>
-      <link>/categories/tsibble/</link>
+      <link>https://thiyanga.netlify.app/categories/tsibble/</link>
     </image>
     
     <item>
-      <title>Some useful functions to Wrangle with Time Series Data</title>
-      <link>/post/tsviz/</link>
+      <title>Some useful functions to wrangle with time series data</title>
+      <link>https://thiyanga.netlify.app/post/tsviz/</link>
       <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>/post/tsviz/</guid>
+      <guid>https://thiyanga.netlify.app/post/tsviz/</guid>
       <description>
 
 

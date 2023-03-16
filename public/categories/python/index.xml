@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python | THIYANGA TALAGALA</title>
-    <link>/categories/python/</link>
-      <atom:link href="/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/categories/python/</link>
+      <atom:link href="https://thiyanga.netlify.app/categories/python/index.xml" rel="self" type="application/rss+xml" />
     <description>Python</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 06 Nov 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>Python</title>
-      <link>/categories/python/</link>
+      <link>https://thiyanga.netlify.app/categories/python/</link>
     </image>
     
     <item>
       <title>Building a website using Quarto</title>
-      <link>/post/blog/</link>
+      <link>https://thiyanga.netlify.app/post/blog/</link>
       <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>/post/blog/</guid>
+      <guid>https://thiyanga.netlify.app/post/blog/</guid>
       <description>
 
 
@@ -36,7 +36,7 @@
 &lt;p&gt;The type the following command in the RStudio terminal&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;quarto create-project myblog --type website:blog&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This will create a folder called &lt;code&gt;myblog&lt;/code&gt; with the following documents inside.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/quarto.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/quarto.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;Copy all the documents inside the folder into your project folder, and delete the &lt;code&gt;myblog&lt;/code&gt; folder.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;step-4&#34; class=&#34;section level2&#34;&gt;

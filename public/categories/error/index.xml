@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Error | THIYANGA TALAGALA</title>
-    <link>/categories/error/</link>
-      <atom:link href="/categories/error/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/categories/error/</link>
+      <atom:link href="https://thiyanga.netlify.app/categories/error/index.xml" rel="self" type="application/rss+xml" />
     <description>Error</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 16 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>Error</title>
-      <link>/categories/error/</link>
+      <link>https://thiyanga.netlify.app/categories/error/</link>
     </image>
     
     <item>
       <title>Error: C stack usage is too close to the limit</title>
-      <link>/post/error1/</link>
+      <link>https://thiyanga.netlify.app/post/error1/</link>
       <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>/post/error1/</guid>
+      <guid>https://thiyanga.netlify.app/post/error1/</guid>
       <description>
 
 
 &lt;div id=&#34;error-c-stack-usage-is-too-close-to-the-limit&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Error: C stack usage is too close to the limit&lt;/h2&gt;
 &lt;p&gt;While using Rstudio on macOS Mojave (version 10.14.6) to work with R, I recently ran across the following problem.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/error.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/error.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;In order to fix the error, I deleted the &lt;code&gt;.Rprofile&lt;/code&gt;. You can erase everything in the “.Rprofile” by using the commands listed below.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;file.edit(file.path(&amp;quot;~&amp;quot;, &amp;quot;.Rprofile&amp;quot;)) 
 file.edit(&amp;quot;.Rprofile&amp;quot;)&lt;/code&gt;&lt;/pre&gt;

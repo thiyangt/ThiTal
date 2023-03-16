@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>patchwork | THIYANGA TALAGALA</title>
-    <link>/tags/patchwork/</link>
-      <atom:link href="/tags/patchwork/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/tags/patchwork/</link>
+      <atom:link href="https://thiyanga.netlify.app/tags/patchwork/index.xml" rel="self" type="application/rss+xml" />
     <description>patchwork</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 11 Apr 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>patchwork</title>
-      <link>/tags/patchwork/</link>
+      <link>https://thiyanga.netlify.app/tags/patchwork/</link>
     </image>
     
     <item>
       <title>Logistic Regression: Model Building and Interpretation</title>
-      <link>/post/logisticregression/</link>
+      <link>https://thiyanga.netlify.app/post/logisticregression/</link>
       <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>/post/logisticregression/</guid>
+      <guid>https://thiyanga.netlify.app/post/logisticregression/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;data&#34; class=&#34;section level2&#34;&gt;
@@ -240,7 +240,7 @@ p2_island &amp;lt;- penguins %&amp;gt;%
   ggtitle(&amp;quot;b&amp;quot;)
 (p1_species|p2_island)&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:unnamed-chunk-3&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-3-1.png&#34; alt=&#34;Distribution of (a) species and (d) island by gender.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-3-1.png&#34; alt=&#34;Distribution of (a) species and (d) island by gender.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Distribution of (a) species and (d) island by gender.
 &lt;/p&gt;
@@ -267,7 +267,7 @@ p6_bmi &amp;lt;-  ggplot(penguins, aes(x=sex, y=body_mass_g, fill=sex)) +
 
 (p3_length|p4_depth)/(p5_flipper|p6_bmi)&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:unnamed-chunk-4&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-4-1.png&#34; alt=&#34;Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-4-1.png&#34; alt=&#34;Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.
 &lt;/p&gt;
@@ -276,14 +276,14 @@ Figure 2: Distribution of (a) bill length, (b) bill depth, (c) flipper length an
 &lt;div id=&#34;missing-values-exploration&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Missing values exploration&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vis_miss(penguins)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;remove-missing-values&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Remove missing values&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins_omit &amp;lt;- penguins %&amp;gt;%
   na.omit()
 vis_miss(penguins_omit)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;building-logistic-regression&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Building logistic regression&lt;/h2&gt;

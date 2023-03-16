@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pattern Recognition | THIYANGA TALAGALA</title>
-    <link>/tags/pattern-recognition/</link>
-      <atom:link href="/tags/pattern-recognition/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/tags/pattern-recognition/</link>
+      <atom:link href="https://thiyanga.netlify.app/tags/pattern-recognition/index.xml" rel="self" type="application/rss+xml" />
     <description>Pattern Recognition</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 25 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>Pattern Recognition</title>
-      <link>/tags/pattern-recognition/</link>
+      <link>https://thiyanga.netlify.app/tags/pattern-recognition/</link>
     </image>
     
     <item>
       <title>Statistical Machine Learning for  Medicinal Plant Identification</title>
-      <link>/project/medlea/</link>
+      <link>https://thiyanga.netlify.app/project/medlea/</link>
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/project/medlea/</guid>
+      <guid>https://thiyanga.netlify.app/project/medlea/</guid>
       <description>&lt;h1 id=&#34;algorithm-for-leaves-classification&#34;&gt;Algorithm for leaves classification&lt;/h1&gt;
 &lt;h2 id=&#34;medipi-mediicinal-plant-identification-algorithm&#34;&gt;MEDIPI (&lt;strong&gt;MEDI&lt;/strong&gt;icinal &lt;strong&gt;P&lt;/strong&gt;lant &lt;strong&gt;I&lt;/strong&gt;dentification) algorithm&lt;/h2&gt;
 &lt;p&gt;Medicinal plants are usually identified by practitioners based on years of experience through

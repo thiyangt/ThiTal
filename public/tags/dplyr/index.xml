@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dplyr | THIYANGA TALAGALA</title>
-    <link>/tags/dplyr/</link>
-      <atom:link href="/tags/dplyr/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/tags/dplyr/</link>
+      <atom:link href="https://thiyanga.netlify.app/tags/dplyr/index.xml" rel="self" type="application/rss+xml" />
     <description>dplyr</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>dplyr</title>
-      <link>/tags/dplyr/</link>
+      <link>https://thiyanga.netlify.app/tags/dplyr/</link>
     </image>
     
     <item>
       <title>Summarizing with dplyr</title>
-      <link>/post/dplyr/</link>
+      <link>https://thiyanga.netlify.app/post/dplyr/</link>
       <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
-      <guid>/post/dplyr/</guid>
+      <guid>https://thiyanga.netlify.app/post/dplyr/</guid>
       <description>
 
 
@@ -107,9 +107,9 @@ head(iris)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>What&#39;s in a package?</title>
-      <link>/post/packageinfo/</link>
+      <link>https://thiyanga.netlify.app/post/packageinfo/</link>
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
-      <guid>/post/packageinfo/</guid>
+      <guid>https://thiyanga.netlify.app/post/packageinfo/</guid>
       <description>
 
 

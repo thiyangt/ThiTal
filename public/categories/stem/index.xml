@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>STEM | THIYANGA TALAGALA</title>
-    <link>/categories/stem/</link>
-      <atom:link href="/categories/stem/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/categories/stem/</link>
+      <atom:link href="https://thiyanga.netlify.app/categories/stem/index.xml" rel="self" type="application/rss+xml" />
     <description>STEM</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>STEM</title>
-      <link>/categories/stem/</link>
+      <link>https://thiyanga.netlify.app/categories/stem/</link>
     </image>
     
     <item>
       <title>Happy Women in Maths Day - 12 May 2020</title>
-      <link>/post/mathsday2020/</link>
+      <link>https://thiyanga.netlify.app/post/mathsday2020/</link>
       <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
-      <guid>/post/mathsday2020/</guid>
+      <guid>https://thiyanga.netlify.app/post/mathsday2020/</guid>
       <description>
 
 

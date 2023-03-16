@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>THIYANGA TALAGALA</title>
-    <link>/courses/regression2020/</link>
-      <atom:link href="/courses/regression2020/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/courses/regression2020/</link>
+      <atom:link href="https://thiyanga.netlify.app/courses/regression2020/index.xml" rel="self" type="application/rss+xml" />
     <description>THIYANGA TALAGALA</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 10 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>THIYANGA TALAGALA</title>
-      <link>/courses/regression2020/</link>
+      <link>https://thiyanga.netlify.app/courses/regression2020/</link>
     </image>
     
     <item>
       <title>Schedule and Lectorials</title>
-      <link>/courses/regression2020/contentreg/</link>
+      <link>https://thiyanga.netlify.app/courses/regression2020/contentreg/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/courses/regression2020/contentreg/</guid>
+      <guid>https://thiyanga.netlify.app/courses/regression2020/contentreg/</guid>
       <description>&lt;p&gt;Here is your road map for the course!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Week 1-4: lectures (online)&lt;/p&gt;
@@ -137,13 +137,13 @@
 &lt;tr&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression4.html#1&#34;&gt;1. Slides&lt;/a&gt; &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression5.html&#34;&gt;2. Basics of R Programming&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - Ch1 and Ch2 (2.3, 2.4)&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Set - &lt;a href=&#34;/data/house.csv&#34;&gt;house.csv&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Set - &lt;a href=&#34;https://thiyanga.netlify.app/data/house.csv&#34;&gt;house.csv&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/simplelinearregression2&#34;&gt;Problems &lt;/a&gt; 	&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/tutorial2.pdf&#34;&gt;Tutorial 2&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;🔖 Additional problems - Ch2 Problems: 2.1 - 2.17&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;a href=&#34;/Slides/Presentation1.pdf&#34;&gt;*&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/Presentation1.pdf&#34;&gt;*&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Week 7 - 8: lectures  (online)&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -173,7 +173,7 @@
 &lt;tr&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression6.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - Ch3&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;/data/heart.data.csv&#34;&gt;heart.data.csv&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;https://thiyanga.netlify.app/data/heart.data.csv&#34;&gt;heart.data.csv&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
@@ -198,7 +198,7 @@
 &lt;tr&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression7.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - &lt;a href=&#34;https://bookdown.org/egarpor/SSS2-UC3M/multlin-aovfit.html&#34;&gt;here&lt;/a&gt;&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;/data/heart.data.csv&#34;&gt;heart.data.csv&lt;/a&gt; and &lt;code&gt;alr3::heights&lt;/code&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;https://thiyanga.netlify.app/data/heart.data.csv&#34;&gt;heart.data.csv&lt;/a&gt; and &lt;code&gt;alr3::heights&lt;/code&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 Problems - Quiz Google Classroom&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
@@ -257,7 +257,7 @@
 &lt;tr&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression9.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - Section 3.3, Montgomery, Peck, Vining&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;/data/coconut.csv&#34;&gt;coconut.csv&lt;/a&gt; &lt;a href=&#34;/data/salarydata.csv&#34;&gt;salarydata.csv&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;https://thiyanga.netlify.app/data/coconut.csv&#34;&gt;coconut.csv&lt;/a&gt; &lt;a href=&#34;https://thiyanga.netlify.app/data/salarydata.csv&#34;&gt;salarydata.csv&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
@@ -346,7 +346,7 @@
 &lt;tr&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression12.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - Ch 9&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets -	&lt;a href=&#34;/data/real-estate.csv&#34;&gt;real-estate.csv&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets -	&lt;a href=&#34;https://thiyanga.netlify.app/data/real-estate.csv&#34;&gt;real-estate.csv&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/variableSelectionproblem.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;🔖Answers - Inclass discussion&lt;/th&gt;
 &lt;/tr&gt;
@@ -388,7 +388,7 @@
 &lt;tr&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression13.pdf&#34;&gt;Slides - 1&lt;/a&gt; &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression14.pdf&#34;&gt;Slides - 2&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading  - Ch 10&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📊 &lt;a href=&#34;/data/bloodpressure.csv&#34;&gt;Data Sets-bloodpressure&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 &lt;a href=&#34;https://thiyanga.netlify.app/data/bloodpressure.csv&#34;&gt;Data Sets-bloodpressure&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/multicollinearity_questions.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;🔖Answers - Inclass discussion&lt;/th&gt;
 &lt;/tr&gt;

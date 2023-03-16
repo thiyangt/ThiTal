@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Demo | THIYANGA TALAGALA</title>
-    <link>/tags/demo/</link>
-      <atom:link href="/tags/demo/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/tags/demo/</link>
+      <atom:link href="https://thiyanga.netlify.app/tags/demo/index.xml" rel="self" type="application/rss+xml" />
     <description>Demo</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 31 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>Demo</title>
-      <link>/tags/demo/</link>
+      <link>https://thiyanga.netlify.app/tags/demo/</link>
     </image>
     
     <item>
       <title>Introduction to Python</title>
-      <link>/project/python/</link>
+      <link>https://thiyanga.netlify.app/project/python/</link>
       <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>/project/python/</guid>
+      <guid>https://thiyanga.netlify.app/project/python/</guid>
       <description>&lt;h2 id=&#34;content&#34;&gt;Content&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/thiyangt/helloPython/blob/master/1_basics.ipynb&#34;&gt;1. Python basics&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/thiyangt/helloPython/blob/master/2module_installation.ipynb&#34;&gt;2. Python Modules and Packages - Installation&lt;/a&gt;&lt;/p&gt;
@@ -28,17 +28,17 @@
     
     <item>
       <title>Data of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) epidemic in Sri Lanka</title>
-      <link>/project/covid19srilanka/</link>
+      <link>https://thiyanga.netlify.app/project/covid19srilanka/</link>
       <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>/project/covid19srilanka/</guid>
+      <guid>https://thiyanga.netlify.app/project/covid19srilanka/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Teaching Statistics</title>
-      <link>/project/datasets/</link>
+      <link>https://thiyanga.netlify.app/project/datasets/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/project/datasets/</guid>
+      <guid>https://thiyanga.netlify.app/project/datasets/</guid>
       <description>&lt;h1 id=&#34;dataset-1&#34;&gt;Dataset 1&lt;/h1&gt;
 &lt;h2 id=&#34;consumers-use-of-food-labels&#34;&gt;Consumers&amp;rsquo; use of Food Labels&lt;/h2&gt;
 &lt;p&gt;Food industry is one of the fastest moving industrial sectors. The glamorous and glittering retail shops and supermarkets are expanding very fast all over the country. The majority of food is pre-packed and presented to the consumer in a labelled container. This study was conducted to evaluate the consumers&amp;rsquo; level of knowledge and use of information provided on food labels in making purchasing decisions. A structured questionnaire-based survey was used for the purpose of the study. This is a cross sectional study done over a period of five months from October, 2010 to March, 2011 with an average of seven interviews being conducted each week. The survey was conducted at supermarkets, retail shops of various sizes in five towns: Colombo 02, Kottawa, Maharagama, Nugegoda and Horana in Sri Lanka. A total of 586 respondents were considered for the study. The dataset and the questionnaire used in this studey can be downloaded from the following links. Please see the questionnaire for the column name description.&lt;/p&gt;
@@ -51,33 +51,33 @@
     
     <item>
       <title>R-Ladies Colombo</title>
-      <link>/project/rladies/</link>
+      <link>https://thiyanga.netlify.app/project/rladies/</link>
       <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/project/rladies/</guid>
+      <guid>https://thiyanga.netlify.app/project/rladies/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Large-Scale Time Series Forecasting</title>
-      <link>/project/timeseries/</link>
+      <link>https://thiyanga.netlify.app/project/timeseries/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/timeseries/</guid>
+      <guid>https://thiyanga.netlify.app/project/timeseries/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Programming and Data Analysis with R</title>
-      <link>/project/hellor/</link>
+      <link>https://thiyanga.netlify.app/project/hellor/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/hellor/</guid>
+      <guid>https://thiyanga.netlify.app/project/hellor/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Small Bite Big threat</title>
-      <link>/project/dengue/</link>
+      <link>https://thiyanga.netlify.app/project/dengue/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/dengue/</guid>
+      <guid>https://thiyanga.netlify.app/project/dengue/</guid>
       <description></description>
     </item>
     

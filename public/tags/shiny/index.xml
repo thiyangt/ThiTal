@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shiny | THIYANGA TALAGALA</title>
-    <link>/tags/shiny/</link>
-      <atom:link href="/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/tags/shiny/</link>
+      <atom:link href="https://thiyanga.netlify.app/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
     <description>shiny</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 25 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>shiny</title>
-      <link>/tags/shiny/</link>
+      <link>https://thiyanga.netlify.app/tags/shiny/</link>
     </image>
     
     <item>
       <title>Dashboard to monitor COVID-19 situation in Sri Lanka</title>
-      <link>/post/covid19/</link>
+      <link>https://thiyanga.netlify.app/post/covid19/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/covid19/</guid>
+      <guid>https://thiyanga.netlify.app/post/covid19/</guid>
       <description>
 
 
 &lt;p&gt;Visit here: &lt;a href=&#34;https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary&#34; class=&#34;uri&#34;&gt;https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/covid.png&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/covid.png&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
 &lt;iframe width=&#34;1000&#34; height=&#34;600&#34; scrolling=&#34;no&#34; frameborder=&#34;no&#34; src=&#34;https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary&#34;&gt;
 &lt;/iframe&gt;
 &lt;div id=&#34;code&#34; class=&#34;section level2&#34;&gt;

@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Students | THIYANGA TALAGALA</title>
-    <link>/team/</link>
-      <atom:link href="/team/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/team/</link>
+      <atom:link href="https://thiyanga.netlify.app/team/index.xml" rel="self" type="application/rss+xml" />
     <description>Students</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>Students</title>
-      <link>/team/</link>
+      <link>https://thiyanga.netlify.app/team/</link>
     </image>
     
   </channel>

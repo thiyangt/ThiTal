@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ggplot | THIYANGA TALAGALA</title>
-    <link>/tags/ggplot/</link>
-      <atom:link href="/tags/ggplot/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/tags/ggplot/</link>
+      <atom:link href="https://thiyanga.netlify.app/tags/ggplot/index.xml" rel="self" type="application/rss+xml" />
     <description>ggplot</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>ggplot</title>
-      <link>/tags/ggplot/</link>
+      <link>https://thiyanga.netlify.app/tags/ggplot/</link>
     </image>
     
     <item>
       <title>Working with built-in data sets in R</title>
-      <link>/post/datasets/</link>
+      <link>https://thiyanga.netlify.app/post/datasets/</link>
       <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>/post/datasets/</guid>
+      <guid>https://thiyanga.netlify.app/post/datasets/</guid>
       <description>
 
 
@@ -64,7 +64,7 @@ Loading package: forecast &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;To view data sets in package &lt;code&gt;datasets&lt;/code&gt;.&lt;/h3&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data() &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This opens a file called “R data sets” in the Code-Editor window as below.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/datafiles.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/datafiles.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;to-list-the-data-sets-in-all-available-packages&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;To list the data sets in all &lt;em&gt;available&lt;/em&gt; packages&lt;/h3&gt;

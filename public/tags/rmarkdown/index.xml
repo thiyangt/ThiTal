@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rmarkdown | THIYANGA TALAGALA</title>
-    <link>/tags/rmarkdown/</link>
-      <atom:link href="/tags/rmarkdown/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/tags/rmarkdown/</link>
+      <atom:link href="https://thiyanga.netlify.app/tags/rmarkdown/index.xml" rel="self" type="application/rss+xml" />
     <description>Rmarkdown</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 29 Jan 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>Rmarkdown</title>
-      <link>/tags/rmarkdown/</link>
+      <link>https://thiyanga.netlify.app/tags/rmarkdown/</link>
     </image>
     
     <item>
       <title>Some useful Greek letters you might use on your reports</title>
-      <link>/post/greekletters/</link>
+      <link>https://thiyanga.netlify.app/post/greekletters/</link>
       <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/post/greekletters/</guid>
+      <guid>https://thiyanga.netlify.app/post/greekletters/</guid>
       <description>
 
 
