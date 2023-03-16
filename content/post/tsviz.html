@@ -53,8 +53,34 @@ dates2</code></pre>
 <pre class="r"><code>dmy(c(&quot;15-03-2023&quot;, &quot;16-03-2023&quot;))</code></pre>
 <pre><code>[1] &quot;2023-03-15&quot; &quot;2023-03-16&quot;</code></pre>
 </div>
-<div id="section" class="section level2">
-<h2></h2>
+<div id="dates-with-strings" class="section level2">
+<h2>dates with strings</h2>
+<pre class="r"><code>ydm(&quot;2023, March 15th&quot;)</code></pre>
+<pre><code>Warning: All formats failed to parse. No formats found.</code></pre>
+<pre><code>[1] NA</code></pre>
+<pre class="r"><code>mdy(&quot;March 15th, 2023&quot;)</code></pre>
+<pre><code>[1] &quot;2023-03-15&quot;</code></pre>
+<pre class="r"><code>mdy(&quot;Mar 15th, 2023&quot;)</code></pre>
+<pre><code>[1] &quot;2023-03-15&quot;</code></pre>
+<pre class="r"><code>mdy(&quot;Wednesday, March 15th, 2023&quot;)</code></pre>
+<pre><code>[1] &quot;2023-03-15&quot;</code></pre>
+<pre class="r"><code>mdy(&quot;15th, March, 2023&quot;)</code></pre>
+<pre><code>Warning: All formats failed to parse. No formats found.</code></pre>
+<pre><code>[1] NA</code></pre>
+</div>
+<div id="hour-minutes-second-hms-working-with-dates-and-times" class="section level2">
+<h2>hour-minutes-second <code>hms</code> working with dates and times</h2>
+<pre class="r"><code>hms(&quot;10:30:00&quot;)</code></pre>
+<pre><code>[1] &quot;10H 30M 0S&quot;</code></pre>
+</div>
+<div id="ymd_hm-ymd_hms-and-mdy_hms" class="section level2">
+<h2><code>ymd_hm</code>, <code>ymd_hms</code> and <code>mdy_hms</code></h2>
+<pre class="r"><code>ymd_hm(&quot;2023-03-15 10:30&quot;)</code></pre>
+<pre><code>[1] &quot;2023-03-15 10:30:00 UTC&quot;</code></pre>
+<pre class="r"><code>ymd_hms(&quot;2023-03-15 10:30:00&quot;)</code></pre>
+<pre><code>[1] &quot;2023-03-15 10:30:00 UTC&quot;</code></pre>
+<pre class="r"><code>mdy_hms(&quot;03-15-2023 10:30:00&quot;)</code></pre>
+<pre><code>[1] &quot;2023-03-15 10:30:00 UTC&quot;</code></pre>
 </div>
 <div id="parse_date_time" class="section level2">
 <h2><code>parse_date_time</code></h2>
@@ -72,10 +98,44 @@ parse_date_time(dates.ex4, date_format)</code></pre>
 </div>
 <div id="creating-a-sequence-of-time" class="section level1">
 <h1>Creating a sequence of time</h1>
-<pre class="r"><code>seq(as.Date(&quot;2012-01-01&quot;),as.Date(&quot;2012-12-01&quot;), by = &quot;1 month&quot;)</code></pre>
+<pre class="r"><code>y1 &lt;- seq(as.Date(&quot;2012-01-01&quot;),as.Date(&quot;2012-12-01&quot;), by = &quot;1 month&quot;)
+y1</code></pre>
 <pre><code> [1] &quot;2012-01-01&quot; &quot;2012-02-01&quot; &quot;2012-03-01&quot; &quot;2012-04-01&quot; &quot;2012-05-01&quot;
  [6] &quot;2012-06-01&quot; &quot;2012-07-01&quot; &quot;2012-08-01&quot; &quot;2012-09-01&quot; &quot;2012-10-01&quot;
 [11] &quot;2012-11-01&quot; &quot;2012-12-01&quot;</code></pre>
+<pre class="r"><code>class(y1)</code></pre>
+<pre><code>[1] &quot;Date&quot;</code></pre>
 <pre class="r"><code>seq(as.Date(&quot;2023-03-01&quot;),as.Date(&quot;2023-04-01&quot;), by = &quot;1 week&quot;)</code></pre>
 <pre><code>[1] &quot;2023-03-01&quot; &quot;2023-03-08&quot; &quot;2023-03-15&quot; &quot;2023-03-22&quot; &quot;2023-03-29&quot;</code></pre>
+</div>
+<div id="extract-various-time-components" class="section level1">
+<h1>Extract various time components</h1>
+<p>Let’s see how to extract various time components from the elements of the following Date object.</p>
+<pre class="r"><code>y2023 &lt;- seq(as.Date(&quot;2023-01-01&quot;),as.Date(&quot;2023-12-31&quot;), by = &quot;1 month&quot;)</code></pre>
+<p><code>year()</code>: Extracts the year component</p>
+<pre class="r"><code>year(y2023)</code></pre>
+<pre><code> [1] 2023 2023 2023 2023 2023 2023 2023 2023 2023 2023 2023 2023</code></pre>
+<p><code>quarter()</code>: Extracts the quarter</p>
+<pre class="r"><code>quarter(y2023)</code></pre>
+<pre><code> [1] 1 1 1 2 2 2 3 3 3 4 4 4</code></pre>
+<p><code>month()</code>: Extracts the month component</p>
+<pre class="r"><code>month(y2023)</code></pre>
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10 11 12</code></pre>
+<p><code>week()</code>: Extracts the week component</p>
+<pre class="r"><code>week(y2023)</code></pre>
+<pre><code> [1]  1  5  9 13 18 22 26 31 35 40 44 48</code></pre>
+<p>day(): Extracts the day component</p>
+<pre class="r"><code>day(y2023)</code></pre>
+<pre><code> [1] 1 1 1 1 1 1 1 1 1 1 1 1</code></pre>
+<p>To illustrate the remaining functions I use the following example</p>
+<pre class="r"><code>mydate &lt;- ymd_hms(&quot;2023-03-15 10:30:01&quot;)</code></pre>
+<p>hour(): Extracts the hour component</p>
+<pre class="r"><code>hour(mydate)</code></pre>
+<pre><code>[1] 10</code></pre>
+<p>minute(): Extracts the minute component</p>
+<pre class="r"><code>minute(mydate)</code></pre>
+<pre><code>[1] 30</code></pre>
+<p>second(): Extracts the second component</p>
+<pre class="r"><code>second(mydate)</code></pre>
+<pre><code>[1] 1</code></pre>
 </div>

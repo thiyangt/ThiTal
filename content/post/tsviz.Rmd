@@ -60,7 +60,30 @@ mdy(c("03-15-2023", "03-16-2023"))
 dmy(c("15-03-2023", "16-03-2023"))
 ```
 
-## 
+## dates with strings
+
+```{r}
+ydm("2023, March 15th")
+mdy("March 15th, 2023")
+mdy("Mar 15th, 2023")
+mdy("Wednesday, March 15th, 2023")
+mdy("15th, March, 2023")
+```
+
+## hour-minutes-second `hms` working with dates and times
+
+```{r}
+hms("10:30:00")
+```
+
+## `ymd_hm`, `ymd_hms` and `mdy_hms`
+
+```{r}
+ymd_hm("2023-03-15 10:30")
+ymd_hms("2023-03-15 10:30:00")
+mdy_hms("03-15-2023 10:30:00")
+```
+
 
 ##  `parse_date_time`
 
@@ -83,9 +106,79 @@ parse_date_time(dates.ex4, date_format)
 # Creating a sequence of time
 
 ```{r}
-seq(as.Date("2012-01-01"),as.Date("2012-12-01"), by = "1 month")
+y1 <- seq(as.Date("2012-01-01"),as.Date("2012-12-01"), by = "1 month")
+y1
+class(y1)
 ```
 
 ```{r, echo=TRUE, eval=TRUE}
 seq(as.Date("2023-03-01"),as.Date("2023-04-01"), by = "1 week")
 ```
+
+
+
+# Extract various time components
+
+Let's see how to extract various time components from the elements of the following Date object.
+
+```{r}
+y2023 <- seq(as.Date("2023-01-01"),as.Date("2023-12-31"), by = "1 month")
+```
+
+`year()`: Extracts the year component 
+
+```{r}
+year(y2023)
+```
+
+`quarter()`: Extracts the quarter 
+
+```{r}
+quarter(y2023)
+```
+
+`month()`: Extracts the month component 
+
+```{r}
+month(y2023)
+```
+
+`week()`: Extracts the week component 
+
+```{r}
+week(y2023)
+```
+
+
+day(): Extracts the day component 
+
+```{r}
+day(y2023)
+```
+
+
+To illustrate the remaining functions I use the following example
+
+```{r}
+mydate <- ymd_hms("2023-03-15 10:30:01")
+```
+
+hour(): Extracts the hour component
+
+```{r}
+hour(mydate)
+```
+
+
+minute(): Extracts the minute component 
+
+```{r}
+minute(mydate)
+```
+
+second(): Extracts the second component 
+
+```{r}
+second(mydate)
+```
+
