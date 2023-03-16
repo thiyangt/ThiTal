@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>THIYANGA TALAGALA</title>
-    <link>/</link>
-      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://thiyanga.netlify.app/</link>
+      <atom:link href="https://thiyanga.netlify.app/index.xml" rel="self" type="application/rss+xml" />
     <description>THIYANGA TALAGALA</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>THIYANGA TALAGALA</title>
-      <link>/</link>
+      <link>https://thiyanga.netlify.app/</link>
     </image>
     
     <item>
       <title>STA 474 2.0 Statistical Consultancy</title>
-      <link>/courses/statisticalconsultancy/contentcon/</link>
+      <link>https://thiyanga.netlify.app/courses/statisticalconsultancy/contentcon/</link>
       <pubDate>Tue, 26 Oct 2021 00:00:00 +0100</pubDate>
-      <guid>/courses/statisticalconsultancy/contentcon/</guid>
+      <guid>https://thiyanga.netlify.app/courses/statisticalconsultancy/contentcon/</guid>
       <description></description>
     </item>
     
     <item>
       <title>STA 331 2.0 Stochastic Processes</title>
-      <link>/courses/sta33120_stochastic_processes_2020/contentr_stochastic/</link>
+      <link>https://thiyanga.netlify.app/courses/sta33120_stochastic_processes_2020/contentr_stochastic/</link>
       <pubDate>Mon, 27 Jul 2020 00:00:00 +0100</pubDate>
-      <guid>/courses/sta33120_stochastic_processes_2020/contentr_stochastic/</guid>
+      <guid>https://thiyanga.netlify.app/courses/sta33120_stochastic_processes_2020/contentr_stochastic/</guid>
       <description>&lt;p&gt;Here is your road map for the course!&lt;/p&gt;
 &lt;h3 id=&#34;week-1&#34;&gt;Week 1&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/1_stochastic_processes_2020.pdf&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/1_stochastic_processes_2020.pdf&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;week-2---3&#34;&gt;Week 2 - 3&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/2_stochastic_processes_2020.pdf&#34;&gt;Markov Chains&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/2_stochastic_processes_2020.pdf&#34;&gt;Markov Chains&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;📚 &lt;a href=&#34;https://github.com/thiyangt/STA33120_assignments/blob/master/2020/sta331_20_Assignment_1.md&#34;&gt;Individual Assignment - week 3&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;week-4&#34;&gt;Week 4&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/3_stochastic_processes_2020.pdf&#34;&gt;Classification of states&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/3_stochastic_processes_2020.pdf&#34;&gt;Classification of states&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;week-5&#34;&gt;Week 5&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/4_stochastic_processes_2020.pdf&#34;&gt;Limiting Probabilities&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/4_stochastic_processes_2020.pdf&#34;&gt;Limiting Probabilities&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;week--1-september-2020-&#34;&gt;Week ( 1 September 2020 )&lt;/h3&gt;
 &lt;p&gt;Holiday&lt;/p&gt;
 &lt;h3 id=&#34;week-6&#34;&gt;Week 6&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/5_stochastic_processes_2020.pdf&#34;&gt;Continuous Parameter Markov Chains&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/5_stochastic_processes_2020.pdf&#34;&gt;Continuous Parameter Markov Chains&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;week-7---8&#34;&gt;Week 7 - 8&lt;/h3&gt;
 &lt;h5 id=&#34;week-7&#34;&gt;Week 7&lt;/h5&gt;
@@ -55,7 +55,7 @@
 &lt;h5 id=&#34;week-7---8-1&#34;&gt;Week 7 - 8&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/6_stochastic_processes_2020.pdf&#34;&gt;Poisson Process (cont.), Interarrival and Waiting Time Distributions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/6_stochastic_processes_2020.pdf&#34;&gt;Poisson Process (cont.), Interarrival and Waiting Time Distributions&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Assignment discussion.&lt;/p&gt;
@@ -63,24 +63,24 @@
 &lt;/ul&gt;
 &lt;h3 id=&#34;week--9&#34;&gt;Week  9&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/7_stochastic_processes_2020.pdf&#34;&gt;Poisson Process (cont.), Splitting of a Poisson process, Compound Poisson processes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/7_stochastic_processes_2020.pdf&#34;&gt;Poisson Process (cont.), Splitting of a Poisson process, Compound Poisson processes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;week-10&#34;&gt;Week 10&lt;/h3&gt;
 &lt;p&gt;Ion Switching| &lt;a href=&#34;https://www.kaggle.com/c/liverpool-ion-switching&#34;&gt;Kaggle competition&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;week-11&#34;&gt;Week 11&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/7_stochastic_processes_2020.pdf&#34;&gt;Nonhomogeneous Poisson Processes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/7_stochastic_processes_2020.pdf&#34;&gt;Nonhomogeneous Poisson Processes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;week-12---14&#34;&gt;Week 12 - 14&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/8_stochastic_processes_2020.pdf&#34;&gt;Birth and death process - Introduction, Pure Birth Process&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/8_stochastic_processes_2020.pdf&#34;&gt;Birth and death process - Introduction, Pure Birth Process&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/PDE.pdf&#34;&gt;Partial Differential Equations&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/PDE.pdf&#34;&gt;Partial Differential Equations&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/9_stochastic_processes_2020.pdf&#34;&gt;Pure Death Process&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/9_stochastic_processes_2020.pdf&#34;&gt;Pure Death Process&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Answers for Pure Death Process - Download from LMS&lt;/p&gt;
@@ -89,15 +89,15 @@
 &lt;p&gt;Assignment 3: Please go the LMS (Due date: 24 Nov 2020)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/13_stochastic_processes_2020.pdf&#34;&gt;Birth-and-Death Process&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/13_stochastic_processes_2020.pdf&#34;&gt;Birth-and-Death Process&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/12_stochastic_processes_2020.pdf&#34;&gt;Birth-and-Death Process - important results&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/12_stochastic_processes_2020.pdf&#34;&gt;Birth-and-Death Process - important results&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;week-15&#34;&gt;Week 15&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/Slides/2020s2StochasticProcesses/14_stochastic_processes_2020.pdf&#34;&gt;Birth-and-Death Process - important results (cont)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s2StochasticProcesses/14_stochastic_processes_2020.pdf&#34;&gt;Birth-and-Death Process - important results (cont)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Revision&lt;/p&gt;
 &lt;p&gt;Individual Presentations - SIR models&lt;/p&gt;
@@ -113,9 +113,9 @@
     
     <item>
       <title>Schedule and Lectorials</title>
-      <link>/courses/regression2020/contentreg/</link>
+      <link>https://thiyanga.netlify.app/courses/regression2020/contentreg/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/courses/regression2020/contentreg/</guid>
+      <guid>https://thiyanga.netlify.app/courses/regression2020/contentreg/</guid>
       <description>&lt;p&gt;Here is your road map for the course!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Week 1-4: lectures (online)&lt;/p&gt;
@@ -236,13 +236,13 @@
 &lt;tr&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression4.html#1&#34;&gt;1. Slides&lt;/a&gt; &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression5.html&#34;&gt;2. Basics of R Programming&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - Ch1 and Ch2 (2.3, 2.4)&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Set - &lt;a href=&#34;/data/house.csv&#34;&gt;house.csv&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Set - &lt;a href=&#34;https://thiyanga.netlify.app/data/house.csv&#34;&gt;house.csv&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/simplelinearregression2&#34;&gt;Problems &lt;/a&gt; 	&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/tutorial2.pdf&#34;&gt;Tutorial 2&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;🔖 Additional problems - Ch2 Problems: 2.1 - 2.17&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;a href=&#34;/Slides/Presentation1.pdf&#34;&gt;*&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/Presentation1.pdf&#34;&gt;*&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Week 7 - 8: lectures  (online)&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -272,7 +272,7 @@
 &lt;tr&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression6.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - Ch3&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;/data/heart.data.csv&#34;&gt;heart.data.csv&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;https://thiyanga.netlify.app/data/heart.data.csv&#34;&gt;heart.data.csv&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
@@ -297,7 +297,7 @@
 &lt;tr&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression7.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - &lt;a href=&#34;https://bookdown.org/egarpor/SSS2-UC3M/multlin-aovfit.html&#34;&gt;here&lt;/a&gt;&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;/data/heart.data.csv&#34;&gt;heart.data.csv&lt;/a&gt; and &lt;code&gt;alr3::heights&lt;/code&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;https://thiyanga.netlify.app/data/heart.data.csv&#34;&gt;heart.data.csv&lt;/a&gt; and &lt;code&gt;alr3::heights&lt;/code&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 Problems - Quiz Google Classroom&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
@@ -356,7 +356,7 @@
 &lt;tr&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression9.html#1&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - Section 3.3, Montgomery, Peck, Vining&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;/data/coconut.csv&#34;&gt;coconut.csv&lt;/a&gt; &lt;a href=&#34;/data/salarydata.csv&#34;&gt;salarydata.csv&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;https://thiyanga.netlify.app/data/coconut.csv&#34;&gt;coconut.csv&lt;/a&gt; &lt;a href=&#34;https://thiyanga.netlify.app/data/salarydata.csv&#34;&gt;salarydata.csv&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
@@ -445,7 +445,7 @@
 &lt;tr&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression12.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading - Ch 9&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets -	&lt;a href=&#34;/data/real-estate.csv&#34;&gt;real-estate.csv&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets -	&lt;a href=&#34;https://thiyanga.netlify.app/data/real-estate.csv&#34;&gt;real-estate.csv&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/variableSelectionproblem.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;🔖Answers - Inclass discussion&lt;/th&gt;
 &lt;/tr&gt;
@@ -487,7 +487,7 @@
 &lt;tr&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression13.pdf&#34;&gt;Slides - 1&lt;/a&gt; &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/regression14.pdf&#34;&gt;Slides - 2&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading  - Ch 10&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📊 &lt;a href=&#34;/data/bloodpressure.csv&#34;&gt;Data Sets-bloodpressure&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 &lt;a href=&#34;https://thiyanga.netlify.app/data/bloodpressure.csv&#34;&gt;Data Sets-bloodpressure&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://edify-thiyanga.netlify.app/regression/multicollinearity_questions.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;🔖Answers - Inclass discussion&lt;/th&gt;
 &lt;/tr&gt;
@@ -543,12 +543,12 @@
     
     <item>
       <title>Schedule and Lectorials</title>
-      <link>/courses/rmsc2020/contentr/</link>
+      <link>https://thiyanga.netlify.app/courses/rmsc2020/contentr/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/courses/rmsc2020/contentr/</guid>
+      <guid>https://thiyanga.netlify.app/courses/rmsc2020/contentr/</guid>
       <description>&lt;p&gt;Here is your road map for the course!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Week 0&lt;/strong&gt;  &lt;a href=&#34;https://edify-thiyanga.netlify.app/installation/&#34;&gt;Help - R and R Studio Download and Install&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/Slides/2020s1STA5173_0/l0.html&#34;&gt;📗&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l0.html&#34;&gt;📗&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Week 1-2: lectures (online)&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -559,11 +559,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l1.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l1.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://rstudio-education.github.io/hopr/basics.html&#34;&gt;Reading-2.1, 2.2, 5.1&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📊 &lt;a href=&#34;https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200210-sitrep-21-ncov.pdf?sfvrsn=947679ef_2&#34;&gt;Data Sets&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://thiyanga.netlify.app/slides/2020s1sta5173_0/l1#61&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;🔖&lt;a href=&#34;/Slides/2020s1STA5173_0/Answers/Week1Answers.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/Answers/Week1Answers.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -574,11 +574,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l2.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l2.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://rstudio-education.github.io/hopr/r-objects.html#matrices&#34;&gt;Reading-5.3, 5.8&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📊 &lt;a href=&#34;https://hellor.netlify.app/cheatsheets/baser.pdf&#34;&gt;Cheat sheet&lt;/a&gt;&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;/Slides/2020s1STA5173_0/MSc_tutorials/Tutorial1_Questions_MSC_2020.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;🔖 &lt;a href=&#34;/Slides/2020s1STA5173_0/MSc_tutorials/Tutorial1_Ans_MSC_2020.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/MSc_tutorials/Tutorial1_Questions_MSC_2020.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/MSc_tutorials/Tutorial1_Ans_MSC_2020.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -592,7 +592,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l3.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l3.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://rstudio-education.github.io/hopr/basics.html#functions&#34;&gt;Reading-Section 2.3&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;code&gt;iris&lt;/code&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 Problems - EDA on &lt;code&gt;iris&lt;/code&gt;&lt;/th&gt;
@@ -607,7 +607,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l4.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l4.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://rstudio-education.github.io/hopr/basics.html#functions&#34;&gt;Reading-Section 2.3&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
@@ -615,7 +615,7 @@
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;a href=&#34;/Slides/2020s1STA5173_0/inclassanswers/l4ans.pdf&#34;&gt;💻&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/inclassanswers/l4ans.pdf&#34;&gt;💻&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;week-5&#34;&gt;Week 5&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Introduction to the tidyverse, pipe operator and data import and export&lt;/li&gt;
@@ -623,7 +623,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l5.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l5.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://r4ds.had.co.nz/introduction.html&#34;&gt;Reading&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
@@ -638,10 +638,10 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l6.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l6.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;/Slides/2020s1STA5173_0/l6_problems.html&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l6_problems.html&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
@@ -657,7 +657,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l7_reshaping_data.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l7_reshaping_data.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://r4ds.had.co.nz/tidy-data.html&#34;&gt;Reading -R4DS Ch12&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📊 &lt;a href=&#34;https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf&#34;&gt;Cheat sheet&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
@@ -671,11 +671,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l7_data_manipulation_with_dplyr.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l7_data_manipulation_with_dplyr.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://r4ds.had.co.nz/tidy-data.html&#34;&gt;Reading -R4DS Ch12&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📊 &lt;a href=&#34;https://hellor.netlify.app/cheatsheets/data-wrangling-cheatsheet.pdf&#34;&gt;Cheat sheet&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://hellor.netlify.app/problems/DataWrangling_Tutorial.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;🔖 &lt;a href=&#34;/Slides/2020s1STA5173_0/MSc_tutorials/DataWrangling_Tutorial_Answers_MSC.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/MSc_tutorials/DataWrangling_Tutorial_Answers_MSC.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -686,7 +686,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/week9MSC_ggplot.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/week9MSC_ggplot.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://ggplot2-book.org/&#34;&gt;Reading&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;a href=&#34;https://github.com/allisonhorst/palmerpenguins&#34;&gt;Details&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 Problems	- Perform EDA on palmerpenguins using ggplot2&lt;/th&gt;
@@ -704,10 +704,10 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l10.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l10.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets -	i&lt;a href=&#34;/data/house.csv&#34;&gt;house.csv&lt;/a&gt;&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;/data/regression_tutorial1.html&#34;&gt;Problems - i&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets -	i&lt;a href=&#34;https://thiyanga.netlify.app/data/house.csv&#34;&gt;house.csv&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://thiyanga.netlify.app/data/regression_tutorial1.html&#34;&gt;Problems - i&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;🔖Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
@@ -719,11 +719,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l11_inverse_transformation.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l11_inverse_transformation.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 Problems&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;🔖 &lt;a href=&#34;/Slides/2020s1STA5173_0/l11_inverse_transformation_answers.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l11_inverse_transformation_answers.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -734,11 +734,11 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l12_functionals.html&#34;&gt;Slides - part 1&lt;/a&gt; &lt;a href=&#34;/Slides/2020s1STA5173_0/l13_functionals.html&#34;&gt;Slides - part 2&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l12_functionals.html&#34;&gt;Slides - part 1&lt;/a&gt; &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l13_functionals.html&#34;&gt;Slides - part 2&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;https://adv-r.hadley.nz/functionals.html&#34;&gt;Reading&lt;/a&gt;&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📊 &lt;a href=&#34;/Slides/2020s1STA5173_0/R_purrr.pdf&#34;&gt;Cheat sheet&lt;/a&gt;&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;/Slides/2020s1STA5173_0/functionals_tutorial.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;🔖 &lt;a href=&#34;/Slides/2020s1STA5173_0/functionals_tutorial_answers.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📊 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/R_purrr.pdf&#34;&gt;Cheat sheet&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/functionals_tutorial.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;🔖 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/functionals_tutorial_answers.pdf&#34;&gt;Answers&lt;/a&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;/table&gt;
@@ -752,10 +752,10 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l14_Hypothesis_testing.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l14_Hypothesis_testing.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;/Slides/2020s1STA5173_0/Hypothesis_questions.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/Hypothesis_questions.pdf&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;🔖 Answers&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
@@ -766,7 +766,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;/Slides/2020s1STA5173_0/l15_Monte_Carlo.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚&lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l15_Monte_Carlo.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Reading&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 Problems - Questions given in the note.&lt;/th&gt;
@@ -784,7 +784,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/l14.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/l14.html&#34;&gt;Slides&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 &lt;a href=&#34;http://bcs.whfreeman.com/webpub/statistics/ips9e/9781319013387/companionchapters/companionchapter16.pdf&#34;&gt;Reading&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📊 Data Sets - &lt;code&gt;iris&lt;/code&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📎 &lt;a href=&#34;https://thiyanga.netlify.app/slides/2020s1sta5173_0/l14#22&#34;&gt;Problems&lt;/a&gt;&lt;/th&gt;
@@ -799,7 +799,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;/Slides/2020s1STA5173_0/recap.pdf&#34;&gt;Recap&lt;/a&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;📚 &lt;a href=&#34;https://thiyanga.netlify.app/Slides/2020s1STA5173_0/recap.pdf&#34;&gt;Recap&lt;/a&gt;&lt;/th&gt;
 &lt;th style=&#34;text-align:center&#34;&gt;📒 Model questions and Answers - Download from google classroom&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
@@ -819,10 +819,10 @@
     </item>
     
     <item>
-      <title>Some useful functions to Wrangle with Time Series Data</title>
-      <link>/post/tsviz/</link>
+      <title>Some useful functions to wrangle with time series data</title>
+      <link>https://thiyanga.netlify.app/post/tsviz/</link>
       <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>/post/tsviz/</guid>
+      <guid>https://thiyanga.netlify.app/post/tsviz/</guid>
       <description>
 
 
@@ -961,9 +961,9 @@ y1&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Building a website using Quarto</title>
-      <link>/post/blog/</link>
+      <link>https://thiyanga.netlify.app/post/blog/</link>
       <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>/post/blog/</guid>
+      <guid>https://thiyanga.netlify.app/post/blog/</guid>
       <description>
 
 
@@ -983,7 +983,7 @@ y1&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The type the following command in the RStudio terminal&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;quarto create-project myblog --type website:blog&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This will create a folder called &lt;code&gt;myblog&lt;/code&gt; with the following documents inside.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/quarto.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/quarto.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;Copy all the documents inside the folder into your project folder, and delete the &lt;code&gt;myblog&lt;/code&gt; folder.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;step-4&#34; class=&#34;section level2&#34;&gt;
@@ -1016,9 +1016,9 @@ y1&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Introduction to Python</title>
-      <link>/project/python/</link>
+      <link>https://thiyanga.netlify.app/project/python/</link>
       <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>/project/python/</guid>
+      <guid>https://thiyanga.netlify.app/project/python/</guid>
       <description>&lt;h2 id=&#34;content&#34;&gt;Content&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/thiyangt/helloPython/blob/master/1_basics.ipynb&#34;&gt;1. Python basics&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/thiyangt/helloPython/blob/master/2module_installation.ipynb&#34;&gt;2. Python Modules and Packages - Installation&lt;/a&gt;&lt;/p&gt;
@@ -1030,16 +1030,16 @@ y1&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Error: C stack usage is too close to the limit</title>
-      <link>/post/error1/</link>
+      <link>https://thiyanga.netlify.app/post/error1/</link>
       <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>/post/error1/</guid>
+      <guid>https://thiyanga.netlify.app/post/error1/</guid>
       <description>
 
 
 &lt;div id=&#34;error-c-stack-usage-is-too-close-to-the-limit&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Error: C stack usage is too close to the limit&lt;/h2&gt;
 &lt;p&gt;While using Rstudio on macOS Mojave (version 10.14.6) to work with R, I recently ran across the following problem.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/error.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/error.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;In order to fix the error, I deleted the &lt;code&gt;.Rprofile&lt;/code&gt;. You can erase everything in the “.Rprofile” by using the commands listed below.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;file.edit(file.path(&amp;quot;~&amp;quot;, &amp;quot;.Rprofile&amp;quot;)) 
 file.edit(&amp;quot;.Rprofile&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
@@ -1049,11 +1049,11 @@ file.edit(&amp;quot;.Rprofile&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Logistic Regression: Model Building and Interpretation</title>
-      <link>/post/logisticregression/</link>
+      <link>https://thiyanga.netlify.app/post/logisticregression/</link>
       <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>/post/logisticregression/</guid>
+      <guid>https://thiyanga.netlify.app/post/logisticregression/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;data&#34; class=&#34;section level2&#34;&gt;
@@ -1275,7 +1275,7 @@ p2_island &amp;lt;- penguins %&amp;gt;%
   ggtitle(&amp;quot;b&amp;quot;)
 (p1_species|p2_island)&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:unnamed-chunk-3&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-3-1.png&#34; alt=&#34;Distribution of (a) species and (d) island by gender.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-3-1.png&#34; alt=&#34;Distribution of (a) species and (d) island by gender.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Distribution of (a) species and (d) island by gender.
 &lt;/p&gt;
@@ -1302,7 +1302,7 @@ p6_bmi &amp;lt;-  ggplot(penguins, aes(x=sex, y=body_mass_g, fill=sex)) +
 
 (p3_length|p4_depth)/(p5_flipper|p6_bmi)&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:unnamed-chunk-4&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-4-1.png&#34; alt=&#34;Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-4-1.png&#34; alt=&#34;Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.
 &lt;/p&gt;
@@ -1311,14 +1311,14 @@ Figure 2: Distribution of (a) bill length, (b) bill depth, (c) flipper length an
 &lt;div id=&#34;missing-values-exploration&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Missing values exploration&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vis_miss(penguins)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;remove-missing-values&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Remove missing values&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins_omit &amp;lt;- penguins %&amp;gt;%
   na.omit()
 vis_miss(penguins_omit)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/logisticregression_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;building-logistic-regression&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Building logistic regression&lt;/h2&gt;
@@ -1434,11 +1434,11 @@ body_mass_g       1.003695e+00 1.007982e+00&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Zoom Your Plots with ggforce</title>
-      <link>/post/ggforce/</link>
+      <link>https://thiyanga.netlify.app/post/ggforce/</link>
       <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>/post/ggforce/</guid>
+      <guid>https://thiyanga.netlify.app/post/ggforce/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;To enlarge a section of data in your &lt;code&gt;ggplots&lt;/code&gt;, use the &lt;code&gt;facet_zoom&lt;/code&gt; function in the &lt;a href=&#34;https://rdrr.io/cran/ggforce/man/facet_zoom.html&#34;&gt;ggforce&lt;/a&gt; package. To illustrate I am using the &lt;a href=&#34;https://cran.r-project.org/web/packages/gapminder/README.html&#34;&gt;gapminder&lt;/a&gt; dataset in &lt;a href=&#34;https://cran.r-project.org/web/packages/gapminder/README.html&#34;&gt;gapminder&lt;/a&gt; package.&lt;/p&gt;
@@ -1458,15 +1458,15 @@ library(gapminder)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;zoom the Y axis&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +  
   facet_zoom(ylim = c(60, 80)) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +   
   facet_zoom(xlim = c(0, 10000)) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis and the Y axis&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +  
   facet_zoom(xlim = c(0, 10000), ylim=c(60, 80)) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;zoom-according-to-a-qualitative-variable&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Zoom according to a qualitative variable&lt;/h2&gt;
@@ -1475,35 +1475,35 @@ library(gapminder)&lt;/code&gt;&lt;/pre&gt;
   coord_fixed() + 
   scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
   facet_zoom(y = continent == &amp;#39;Oceania&amp;#39;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
   coord_fixed() + 
   scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
   facet_zoom(x = continent == &amp;#39;Oceania&amp;#39;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis and the Y axis&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
   coord_fixed() + 
   scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
   facet_zoom(xy = continent == &amp;#39;Oceania&amp;#39;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
   coord_fixed() + 
   scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
   facet_zoom(xy = continent == &amp;#39;Oceania&amp;#39;, split = TRUE) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ggforce_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Formatting axis labels in ggplot</title>
-      <link>/post/plotaxis/</link>
+      <link>https://thiyanga.netlify.app/post/plotaxis/</link>
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>/post/plotaxis/</guid>
+      <guid>https://thiyanga.netlify.app/post/plotaxis/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;With the ggplot2 package, you’ve got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing.&lt;/p&gt;
@@ -1519,7 +1519,7 @@ african_names %&amp;gt;%
   ggplot(aes(year_arrival)) +
   geom_histogram(bins = 20, fill = &amp;quot;darkslateblue&amp;quot;, alpha = 0.7, col=&amp;quot;white&amp;quot;) +
   scale_y_continuous(labels = scales::comma_format()) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/plotaxis_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;change-label-angles-horizontal-justification-and-vertical-justification&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Change label angles, horizontal justification and vertical justification&lt;/h2&gt;
@@ -1530,32 +1530,32 @@ penguins %&amp;gt;%
   ggplot(aes(x=species, fill=species)) + geom_bar() +
   scale_fill_manual(values=c(&amp;quot;#1b9e77&amp;quot;, &amp;quot;#d95f02&amp;quot;, &amp;quot;#7570b3&amp;quot;)) + 
   theme(axis.text.x=element_text(angle=30))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/plotaxis_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Angles, horizontal justification and vertical justification&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins %&amp;gt;%
   ggplot(aes(x=species, fill=species)) + geom_bar() +  scale_fill_manual(values=c(&amp;quot;#1b9e77&amp;quot;, &amp;quot;#d95f02&amp;quot;, &amp;quot;#7570b3&amp;quot;)) + 
   theme(axis.text.x=element_text(angle=30, vjust=.8, hjust=0.8))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/plotaxis_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>RMarkdown: Create insightful reports in R</title>
-      <link>/talk/nigeria/</link>
+      <link>https://thiyanga.netlify.app/talk/nigeria/</link>
       <pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>/talk/nigeria/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/nigeria/abuja.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+      <guid>https://thiyanga.netlify.app/talk/nigeria/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/nigeria/abuja.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Why R? 2021: Keynote</title>
-      <link>/talk/whyr-talk/</link>
+      <link>https://thiyanga.netlify.app/talk/whyr-talk/</link>
       <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>/talk/whyr-talk/</guid>
+      <guid>https://thiyanga.netlify.app/talk/whyr-talk/</guid>
       <description>&lt;p&gt;The Why R? Foundation held its &lt;a href=&#34;https://2021.whyr.pl/&#34;&gt;Why R? 2021 Conference - the fifth meeting of Central-Eastern-European&lt;/a&gt; in December 2021. I was honored to be asked by this esteemed group to provide a keynote address on Feature-based Time Series Forecasting and join with forecasting and prediction panel discussion.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/whyr/panel.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/img/whyr/panel.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Many applications require a large number of time series to be forecast. Providing better forecasts for these time series is important in decision and policy making. However, large scale time series data present numerous challenges in modelling and implementation due to the high dimensionality. It is unlikely that a single method will consistently provide better forecasts across all time series. On the other hand, selecting individual forecast models when the number of series is very large can be extremely challenging. In this talk, I will present a general framework for forecast model selection using meta-learning. We call this framework FFORMS (Feature-based FORecast Model Selection). The underlying approach involves computing a vector of features from the time series which are then used to select the forecasting model. The model selection process is carried out using a classification algorithm – we use the time series features as inputs, and the best forecasting algorithm as the output. Furthermore, we explore what is happening under the hood of the FFORMS framework and thereby gain an understanding of what features lead to the different choices of forecast models and how different features influence the predicted outcome. The proposed algorithm is implemented in the R package seer, which is available on CRAN at &lt;a href=&#34;https://CRAN.R-project.org/package=seer&#34;&gt;https://CRAN.R-project.org/package=seer&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Seer package: &lt;a href=&#34;https://github.com/thiyangt/seer&#34;&gt;https://github.com/thiyangt/seer&lt;/a&gt;&lt;/p&gt;
@@ -1564,11 +1564,11 @@ penguins %&amp;gt;%
     
     <item>
       <title>Coronavirus Dashboard - Sri Lanka</title>
-      <link>/post/covid19srilankadb/</link>
+      <link>https://thiyanga.netlify.app/post/covid19srilankadb/</link>
       <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>/post/covid19srilankadb/</guid>
+      <guid>https://thiyanga.netlify.app/post/covid19srilankadb/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;iframe width=&#34;880&#34; height=&#34;450&#34; src=&#34;https://www.youtube.com/embed/fHypdnkr4_c&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
@@ -1588,19 +1588,19 @@ penguins %&amp;gt;%
     
     <item>
       <title>Data of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) epidemic in Sri Lanka</title>
-      <link>/project/covid19srilanka/</link>
+      <link>https://thiyanga.netlify.app/project/covid19srilanka/</link>
       <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>/project/covid19srilanka/</guid>
+      <guid>https://thiyanga.netlify.app/project/covid19srilanka/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Covid-19/ Coronavirus data in Sri Lanka</title>
-      <link>/post/covid19srilanka/</link>
+      <link>https://thiyanga.netlify.app/post/covid19srilanka/</link>
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>/post/covid19srilanka/</guid>
+      <guid>https://thiyanga.netlify.app/post/covid19srilanka/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;&lt;img src=&#34;https://github.com/thiyangt/covid19srilanka/blob/main/man/figures/hex.png?raw=true&#34; /&gt;&lt;/p&gt;
@@ -1686,11 +1686,11 @@ dplyr::glimpse(vaccination)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Weighted LOESS (LOcal regrESSion) </title>
-      <link>/post/blog/</link>
+      <link>https://thiyanga.netlify.app/post/blog/</link>
       <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>/post/blog/</guid>
+      <guid>https://thiyanga.netlify.app/post/blog/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;local-regression-loess-or-locally-weighted-scatter-plot-smoother-lowess&#34; class=&#34;section level1&#34;&gt;
@@ -1707,7 +1707,7 @@ df &amp;lt;- data.frame(x=x, y=y)
 ## Without weights
 ggplot(data=df, aes(x=x, y=y)) + geom_point() + 
  geom_smooth(method=loess, legend=FALSE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/loess_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/loess_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Furthermore your can plot loess smoothing weighting the observations as follows:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;weights &amp;lt;- c(rep(1, 40), 20, rep(1, 19))
 df$weights &amp;lt;- weights
@@ -1715,16 +1715,16 @@ df$weights &amp;lt;- weights
 
 ggplot(data=df, aes(x=x, y=y, size=weights, weight=weights)) + geom_point() + 
  geom_smooth(method=loess, legend=TRUE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/loess_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/loess_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Statistical Machine Learning for  Medicinal Plant Identification</title>
-      <link>/project/medlea/</link>
+      <link>https://thiyanga.netlify.app/project/medlea/</link>
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/project/medlea/</guid>
+      <guid>https://thiyanga.netlify.app/project/medlea/</guid>
       <description>&lt;h1 id=&#34;algorithm-for-leaves-classification&#34;&gt;Algorithm for leaves classification&lt;/h1&gt;
 &lt;h2 id=&#34;medipi-mediicinal-plant-identification-algorithm&#34;&gt;MEDIPI (&lt;strong&gt;MEDI&lt;/strong&gt;icinal &lt;strong&gt;P&lt;/strong&gt;lant &lt;strong&gt;I&lt;/strong&gt;dentification) algorithm&lt;/h2&gt;
 &lt;p&gt;Medicinal plants are usually identified by practitioners based on years of experience through
@@ -1774,9 +1774,9 @@ plant images. This repository contains 1099 leaf images of 31 species. There are
     
     <item>
       <title>Forecasting Model Territories</title>
-      <link>/talk/isf21-talk/</link>
+      <link>https://thiyanga.netlify.app/talk/isf21-talk/</link>
       <pubDate>Tue, 29 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/talk/isf21-talk/</guid>
+      <guid>https://thiyanga.netlify.app/talk/isf21-talk/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;The field of time series forecasting has  been evolving rapidly with advances in techniques for modelling and forecasting. However, choosing the right technique for a given series is at the heart of forecasting research. This process is challenging because certain forecasting techniques will perform best on some series while different alternative will perform best on other series. Certainly, each forecasting technique has its own territory and dominance. Discovering the conditions under which a forecasting technique will function well and under which not is useful in identifying model territory and dominance. The forecast submissions of the top 25 participants of the M4-competition are used for the analysis. Evaluating forecasting submission only using global measures such as forecasting error measure collapse all local information and does not allow to identify local differences of those methodologies. We explore the relationships between features of the methodologies used to generate forecasts, features of the resulting forecasts and features of the time series to identify model territories and their characteristics. Taking these local information into account can have benefit in developing new methods and shed some light for further development in the field of forecasting.&lt;/p&gt;
 </description>
@@ -1784,17 +1784,17 @@ plant images. This repository contains 1099 leaf images of 31 species. There are
     
     <item>
       <title>Large-Scale Time Series Forecasting</title>
-      <link>/talk/norway21-talk/</link>
+      <link>https://thiyanga.netlify.app/talk/norway21-talk/</link>
       <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/talk/norway21-talk/</guid>
+      <guid>https://thiyanga.netlify.app/talk/norway21-talk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reporting your model outputs</title>
-      <link>/post/regoutputs/</link>
+      <link>https://thiyanga.netlify.app/post/regoutputs/</link>
       <pubDate>Fri, 26 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>/post/regoutputs/</guid>
+      <guid>https://thiyanga.netlify.app/post/regoutputs/</guid>
       <description>
 
 
@@ -2632,7 +2632,7 @@ Girth       |        4.71 | 0.26 | [  4.17,   5.25] | 17.82 | &amp;lt; .001&lt;/
 &lt;div id=&#34;visualise-model-parameter-estimates&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Visualise model parameter estimates&lt;/h3&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;model %&amp;gt;% model_parameters(digits=3) %&amp;gt;% plot()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/regoutputs_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/regoutputs_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;reporting-anova-table&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Reporting ANOVA table&lt;/h3&gt;
@@ -3035,9 +3035,9 @@ Girth       |        4.71 | 0.26 | [  4.17,   5.25] | 17.82 | &amp;lt; .001&lt;/
     
     <item>
       <title>Organize your priorities using CalendR package in R</title>
-      <link>/post/calendar/</link>
+      <link>https://thiyanga.netlify.app/post/calendar/</link>
       <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>/post/calendar/</guid>
+      <guid>https://thiyanga.netlify.app/post/calendar/</guid>
       <description>
 
 
@@ -3053,7 +3053,7 @@ Girth       |        4.71 | 0.26 | [  4.17,   5.25] | 17.82 | &amp;lt; .001&lt;/
         special.days = &amp;quot;weekend&amp;quot;, # Colour  weekends (optional argument),
         text.size = 4,
         special.col = &amp;quot;#b2df8a&amp;quot;) # background colour for weekends (optional arguments)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/calendar_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;1440&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/calendar_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;1440&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;mark-events&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;2. Mark events&lt;/h3&gt;
@@ -3071,7 +3071,7 @@ calendR(year = 2021,
         special.col = c(&amp;quot;#1b9e77&amp;quot;, &amp;quot;#d95f02&amp;quot;, &amp;quot;#7570b3&amp;quot;, &amp;quot;#e7298a&amp;quot;),
         text.size = 4,
         legend.pos = &amp;quot;right&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/calendar_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;1440&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/calendar_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;1440&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;monthly-plan&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;3. Monthly plan&lt;/h3&gt;
@@ -3081,16 +3081,16 @@ calendR(year = 2021,
         text.pos = c(18, 20, 23), # Events dates texts 
         text.size = 4.5,          # Font size of the labels
         text.col = &amp;quot;#1b9e77&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/calendar_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/calendar_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Ratio matters: change the way you see things!</title>
-      <link>/post/ratio/</link>
+      <link>https://thiyanga.netlify.app/post/ratio/</link>
       <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>/post/ratio/</guid>
+      <guid>https://thiyanga.netlify.app/post/ratio/</guid>
       <description>
 
 
@@ -3107,7 +3107,7 @@ When creating scatterplots, how often do you fix the aspect ratio? &lt;a href=&#
 &lt;div id=&#34;aspect-ratio&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Aspect ratio&lt;/h3&gt;
 &lt;p&gt;The &lt;strong&gt;aspect ratio&lt;/strong&gt; of a plot is the ratio of its height-to-width . The aspect ratio we choose for our graph plays a significant role. The graphs below plot exactly the same data points but they have different aspect ratios.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ratio_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ratio_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;the-aspect-ratio-of-a-plot-can-make-an-influence-on-the-readers-mind.&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;The aspect-ratio of a plot can make an influence on the reader’s mind.&lt;/h2&gt;
@@ -3133,7 +3133,7 @@ head(circle.points)&lt;/code&gt;&lt;/pre&gt;
    geom_point() +
    scale_colour_manual(values = c(&amp;quot;#e7298a&amp;quot;, &amp;quot;#1b9e77&amp;quot;)) +
    theme(legend.position = &amp;quot;none&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ratio_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ratio_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;According to the plot above it seems that the region is bounded by a ellipse. However, our points are not generated from an elliptical region.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;aspect-ratio-is-fixed&#34; class=&#34;section level3&#34;&gt;
@@ -3143,7 +3143,7 @@ head(circle.points)&lt;/code&gt;&lt;/pre&gt;
   coord_equal() +
   ggtitle(&amp;quot;Figure 2: Aspect ratio is fixed.&amp;quot;) +  
   theme(legend.position = &amp;quot;none&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ratio_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ratio_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;When you create the plot by preserving the aspect ratio the region is bounded by a circle.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -3152,13 +3152,13 @@ head(circle.points)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Highlight data points in a scatterplot</title>
-      <link>/post/scatterplot/</link>
+      <link>https://thiyanga.netlify.app/post/scatterplot/</link>
       <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>/post/scatterplot/</guid>
+      <guid>https://thiyanga.netlify.app/post/scatterplot/</guid>
       <description>
 
 
-&lt;p&gt;&lt;img src=&#34;/post/highlight.jpg&#34; alt=&#34;final image&#34; width=&#34;700&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/highlight.jpg&#34; alt=&#34;final image&#34; width=&#34;700&#34;/&gt;&lt;/p&gt;
 &lt;div id=&#34;step-1-load-libraries&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Step 1: Load Libraries&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
@@ -3174,7 +3174,7 @@ df &amp;lt;- tibble::tibble(x=rnorm(100), y=rnorm(100))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(df, aes(x=x, y=y)) + 
   geom_point() + 
   coord_equal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/scatterplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/scatterplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;step-4-store-the-points-that-you-need-to-highlight-in-a-new-data.frame-or-tibble.&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Step 4: Store the points that you need to highlight in a new &lt;code&gt;data.frame&lt;/code&gt; or &lt;code&gt;tibble&lt;/code&gt;.&lt;/h1&gt;
@@ -3194,7 +3194,7 @@ df2&lt;/code&gt;&lt;/pre&gt;
   geom_point() + 
   coord_equal() + 
   geom_point(data=df2, aes(x=x, y=y), colour=&amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/scatterplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/scatterplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We can change the size by passing a value to &lt;code&gt;size&lt;/code&gt; argument.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(df, aes(x=x, y=y)) + 
   geom_point() + 
@@ -3202,7 +3202,7 @@ df2&lt;/code&gt;&lt;/pre&gt;
   geom_point(data=df2, aes(x=x, y=y), 
              colour=&amp;quot;red&amp;quot;, 
              size=5)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/scatterplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/scatterplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We can circle around the points by using the following command.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(df, aes(x=x, y=y)) + 
   geom_point() + 
@@ -3210,16 +3210,16 @@ df2&lt;/code&gt;&lt;/pre&gt;
   geom_point(data=df2, aes(x=x, y=y), pch=21, 
              fill=NA, size=4, 
              colour=&amp;quot;red&amp;quot;, stroke=1)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/scatterplot_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/scatterplot_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>A Tool to Detect Potential Data Leaks in Forecasting Competitions</title>
-      <link>/talk/isf20-talk/</link>
+      <link>https://thiyanga.netlify.app/talk/isf20-talk/</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/talk/isf20-talk/</guid>
+      <guid>https://thiyanga.netlify.app/talk/isf20-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;a-tool-to-detect-potential-data-leaks-in-forecasting-competitions&#34;&gt;A Tool to Detect Potential Data Leaks in Forecasting Competitions&lt;/h2&gt;
 &lt;p&gt;Forecasting competitions are of increasing importance as a mean to learn best practices and gain knowledge. Data leakage is one of the most common issues that can often be found in competitions. Data leaks can happen when the training data contains information about the test data. There are a variety of different ways that data leaks can occur with time series data. For example: i) randomly chosen blocks of time series are concatenated to form a new time series, ii) scale-shifts, iii) repeating patterns in time series,  iv) white noise is added in the original time series to form a new time series, etc.  This work introduces a novel tool to detect these data leaks. The tsdataleaks package provides simple and computationally efficient algorithm to exploit data leaks in time series data. I will demonstrate the package design and its power to detect data leakages using recent forecasting competitions data.&lt;/p&gt;
@@ -3229,9 +3229,9 @@ df2&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Import data into R: Overwritten object names</title>
-      <link>/post/loaddatasets/</link>
+      <link>https://thiyanga.netlify.app/post/loaddatasets/</link>
       <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/post/loaddatasets/</guid>
+      <guid>https://thiyanga.netlify.app/post/loaddatasets/</guid>
       <description>
 
 
@@ -3271,9 +3271,9 @@ happyDataloaded&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Working with built-in data sets in R</title>
-      <link>/post/datasets/</link>
+      <link>https://thiyanga.netlify.app/post/datasets/</link>
       <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>/post/datasets/</guid>
+      <guid>https://thiyanga.netlify.app/post/datasets/</guid>
       <description>
 
 
@@ -3321,7 +3321,7 @@ Loading package: forecast &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;To view data sets in package &lt;code&gt;datasets&lt;/code&gt;.&lt;/h3&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data() &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This opens a file called “R data sets” in the Code-Editor window as below.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/datafiles.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/datafiles.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;to-list-the-data-sets-in-all-available-packages&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;To list the data sets in all &lt;em&gt;available&lt;/em&gt; packages&lt;/h3&gt;
@@ -3348,9 +3348,9 @@ Data sets in package ‘asbio’:
     
     <item>
       <title>Small things matter!</title>
-      <link>/post/available/</link>
+      <link>https://thiyanga.netlify.app/post/available/</link>
       <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/available/</guid>
+      <guid>https://thiyanga.netlify.app/post/available/</guid>
       <description>
 
 
@@ -3376,9 +3376,9 @@ Sentiment:???&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Parameter, Statistic, Random Variable, Estimator and Estimate</title>
-      <link>/post/statterms1/</link>
+      <link>https://thiyanga.netlify.app/post/statterms1/</link>
       <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/statterms1/</guid>
+      <guid>https://thiyanga.netlify.app/post/statterms1/</guid>
       <description>
 
 
@@ -3432,7 +3432,7 @@ tosscoin(1)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Loosely speaking a &lt;strong&gt;Random variable&lt;/strong&gt; is a function from the sample space to the real numbers. There are two types of random variables: i) Discrete random variable and ii) Continuous random variable. We use Roman capital letters to denote random variables (&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(U\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;, etc.). However, as soon as a variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is observed, the observed values are represented by the corresponding simple Roman letter.&lt;/p&gt;
 &lt;p&gt;The notation &lt;span class=&#34;math inline&#34;&gt;\(X(\omega)\)&lt;/span&gt; denotes the numerical value of the random variable X, when the outcome of the experiment is some particular &lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;An example will help you to understand how this works. To start with, let’s consider a simple experiment with two possible outcomes: &lt;a href=&#34;(https://en.wikipedia.org/wiki/Polymerase_chain_reaction)&#34;&gt;PCR&lt;/a&gt; test result of a randomly selected individual.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/PCR.PNG&#34; alt=&#34;final image&#34; width=&#34;300&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/PCR.PNG&#34; alt=&#34;final image&#34; width=&#34;300&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;The random variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; can be defined as follows:&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Solution 1.1&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Sample space&lt;/em&gt;&lt;/p&gt;
@@ -3445,7 +3445,7 @@ tosscoin(1)&lt;/code&gt;&lt;/pre&gt;
     1,              &amp;amp; \text{if } \omega =  Positive
 \end{cases}
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/sample_space.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/sample_space.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Solution 1.2&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Simply drop &lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt; and define the random variable as follows:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
@@ -3456,7 +3456,7 @@ tosscoin(1)&lt;/code&gt;&lt;/pre&gt;
 \end{cases}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Let’s consider another experiment. The experiment consists in selecting a random undergraduate student in the University during a period of one week, and measuring their height.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/height.PNG&#34; alt=&#34;final image&#34; width=&#34;300&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/height.PNG&#34; alt=&#34;final image&#34; width=&#34;300&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;The random variable &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; can be defined as follows:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\Omega = \{ \omega: \omega &amp;gt; 0\}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y(\omega) =  \omega, \text{ } \omega \in \Omega. \]&lt;/span&gt;&lt;/p&gt;
@@ -3481,7 +3481,7 @@ uncertainty, before the results becomes available we view each observation as a 
 variable and denote the sample by &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, X_3, X_4, X_5\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;We again performed the PCR test on another randomly selected 5 individuals. We called this sample 2. Now results are &lt;span class=&#34;math inline&#34;&gt;\(x_1=0, x_2=0, x_3=0, x_4=1, x_5=0\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;You can see observable values for &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2, X_3, X_4, X_5\)&lt;/span&gt; vary from sample to sample.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/pop_sam.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/pop_sam.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;estimator-and-estimate&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Estimator and Estimate&lt;/h1&gt;
@@ -3534,9 +3534,9 @@ License&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Happy Women in Maths Day - 12 May 2020</title>
-      <link>/post/mathsday2020/</link>
+      <link>https://thiyanga.netlify.app/post/mathsday2020/</link>
       <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
-      <guid>/post/mathsday2020/</guid>
+      <guid>https://thiyanga.netlify.app/post/mathsday2020/</guid>
       <description>
 
 
@@ -3558,9 +3558,9 @@ License&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Teaching Statistics</title>
-      <link>/project/datasets/</link>
+      <link>https://thiyanga.netlify.app/project/datasets/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/project/datasets/</guid>
+      <guid>https://thiyanga.netlify.app/project/datasets/</guid>
       <description>&lt;h1 id=&#34;dataset-1&#34;&gt;Dataset 1&lt;/h1&gt;
 &lt;h2 id=&#34;consumers-use-of-food-labels&#34;&gt;Consumers&amp;rsquo; use of Food Labels&lt;/h2&gt;
 &lt;p&gt;Food industry is one of the fastest moving industrial sectors. The glamorous and glittering retail shops and supermarkets are expanding very fast all over the country. The majority of food is pre-packed and presented to the consumer in a labelled container. This study was conducted to evaluate the consumers&amp;rsquo; level of knowledge and use of information provided on food labels in making purchasing decisions. A structured questionnaire-based survey was used for the purpose of the study. This is a cross sectional study done over a period of five months from October, 2010 to March, 2011 with an average of seven interviews being conducted each week. The survey was conducted at supermarkets, retail shops of various sizes in five towns: Colombo 02, Kottawa, Maharagama, Nugegoda and Horana in Sri Lanka. A total of 586 respondents were considered for the study. The dataset and the questionnaire used in this studey can be downloaded from the following links. Please see the questionnaire for the column name description.&lt;/p&gt;
@@ -3573,14 +3573,14 @@ License&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Dashboard to monitor COVID-19 situation in Sri Lanka</title>
-      <link>/post/covid19/</link>
+      <link>https://thiyanga.netlify.app/post/covid19/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/covid19/</guid>
+      <guid>https://thiyanga.netlify.app/post/covid19/</guid>
       <description>
 
 
 &lt;p&gt;Visit here: &lt;a href=&#34;https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary&#34; class=&#34;uri&#34;&gt;https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/covid.png&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/covid.png&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
 &lt;iframe width=&#34;1000&#34; height=&#34;600&#34; scrolling=&#34;no&#34; frameborder=&#34;no&#34; src=&#34;https://statisticsmart.shinyapps.io/coronaSLDashboard/#section-summary&#34;&gt;
 &lt;/iframe&gt;
 &lt;div id=&#34;code&#34; class=&#34;section level2&#34;&gt;
@@ -3606,17 +3606,17 @@ License&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>R-Ladies Colombo</title>
-      <link>/project/rladies/</link>
+      <link>https://thiyanga.netlify.app/project/rladies/</link>
       <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/project/rladies/</guid>
+      <guid>https://thiyanga.netlify.app/project/rladies/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Feature-based Time Series Forecasting</title>
-      <link>/talk/user19-talk/</link>
+      <link>https://thiyanga.netlify.app/talk/user19-talk/</link>
       <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>/talk/user19-talk/</guid>
+      <guid>https://thiyanga.netlify.app/talk/user19-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This work presents two feature-based forecasting algorithms for large-scale time series forecasting. The
 algorithms involve computing a range of features of the time series which are then used to select the forecasting model. The forecasting model selection process is carried out using a pre-trained classifier. In our first algorithm we use a random forest algorithm to train the classifier. We call this framework FFORMS (Feature-based FORecast Model Selection). The second algorithm use efficient Bayesian multivariate surface regression approach to estimate forecast error for each method, and then using the minimum predicted error to select a forecasting model. Both algorithms have been evaluated using time series from the M4 competition, and is shown to yield accurate forecasts comparable to several benchmarks and other commonly used automated approaches in the time series forecasting literature. The methods are made available in the seer and fformpp packages in R.&lt;/p&gt;
@@ -3626,9 +3626,9 @@ algorithms involve computing a range of features of the time series which are th
     
     <item>
       <title>Peeking inside FFORMS: Feature-based FORecast Model Selection</title>
-      <link>/talk/isf19-talk/</link>
+      <link>https://thiyanga.netlify.app/talk/isf19-talk/</link>
       <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>/talk/isf19-talk/</guid>
+      <guid>https://thiyanga.netlify.app/talk/isf19-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;peeking-inside-fforms-feature-based-forecast-model-selection&#34;&gt;Peeking inside FFORMS: Feature-based FORecast Model Selection&lt;/h2&gt;
 &lt;p&gt;Thiyanga S. Talagala$^1$, Rob J. Hyndman$^1$, George Athanasopoulos$^1$&lt;/p&gt;
@@ -3643,9 +3643,9 @@ forecasting, time series, machine learning interpretability, black-box models, L
     
     <item>
       <title>Summarizing with dplyr</title>
-      <link>/post/dplyr/</link>
+      <link>https://thiyanga.netlify.app/post/dplyr/</link>
       <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
-      <guid>/post/dplyr/</guid>
+      <guid>https://thiyanga.netlify.app/post/dplyr/</guid>
       <description>
 
 
@@ -3736,9 +3736,9 @@ head(iris)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>An example preprint / working paper</title>
-      <link>/publication/preprint/</link>
+      <link>https://thiyanga.netlify.app/publication/preprint/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/preprint/</guid>
+      <guid>https://thiyanga.netlify.app/publication/preprint/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -3746,9 +3746,9 @@ head(iris)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>How to install and load multiple packages at once?</title>
-      <link>/post/multiplepkg/</link>
+      <link>https://thiyanga.netlify.app/post/multiplepkg/</link>
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>/post/multiplepkg/</guid>
+      <guid>https://thiyanga.netlify.app/post/multiplepkg/</guid>
       <description>
 
 
@@ -3813,9 +3813,9 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Feature-based time series forecasting</title>
-      <link>/talk/beijingtalk19-talk/</link>
+      <link>https://thiyanga.netlify.app/talk/beijingtalk19-talk/</link>
       <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>/talk/beijingtalk19-talk/</guid>
+      <guid>https://thiyanga.netlify.app/talk/beijingtalk19-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This work presents three feature-based algorithms for large-scale time series forecasting.  The algorithms are developed based on meta-learning approach. In our first algorithm we use a random forest algorithm to identify the best forecasting model. We call this framework FFORMS (Feature-based FORecast Model Selection).  In the second algorithm, FFORMA (Feature-based FORecast Model Averaging), we use gradient boosting to obtain the weights for forecast combinations. The third algorithm use efficient Bayesian multivariate surface regression approach to estimate forecast error for each method, and then using the minimum predicted error to select a forecasting model or to choose individual models for forecast combinations. The proposed algorithms perform well compared to several benchmarks and other commonly used approaches in large-scale forecasting.&lt;/p&gt;
 </description>
@@ -3823,9 +3823,9 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Slides</title>
-      <link>/slides/example/</link>
+      <link>https://thiyanga.netlify.app/slides/example/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/slides/example/</guid>
+      <guid>https://thiyanga.netlify.app/slides/example/</guid>
       <description>&lt;h1 id=&#34;welcome-to-slides&#34;&gt;Welcome to Slides&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/&#34;&gt;Academic&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -3939,9 +3939,9 @@ $$&lt;/p&gt;
     
     <item>
       <title>Some useful Greek letters you might use on your reports</title>
-      <link>/post/greekletters/</link>
+      <link>https://thiyanga.netlify.app/post/greekletters/</link>
       <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/post/greekletters/</guid>
+      <guid>https://thiyanga.netlify.app/post/greekletters/</guid>
       <description>
 
 
@@ -4073,9 +4073,9 @@ $$&lt;/p&gt;
     
     <item>
       <title>What&#39;s in a package?</title>
-      <link>/post/packageinfo/</link>
+      <link>https://thiyanga.netlify.app/post/packageinfo/</link>
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
-      <guid>/post/packageinfo/</guid>
+      <guid>https://thiyanga.netlify.app/post/packageinfo/</guid>
       <description>
 
 
@@ -4185,9 +4185,9 @@ ls(&amp;quot;package:dplyr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Customizing boxplots with ggplot2</title>
-      <link>/post/blog/</link>
+      <link>https://thiyanga.netlify.app/post/blog/</link>
       <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>/post/blog/</guid>
+      <guid>https://thiyanga.netlify.app/post/blog/</guid>
       <description>
 
 
@@ -4216,7 +4216,7 @@ head(DF)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Step 3: Change the colours, legend position and x-axis order&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
@@ -4224,7 +4224,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   xlab(&amp;quot;&amp;quot;) +
   theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
   scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Step 4: Change the plotting order: first you have to include &lt;code&gt;factor&lt;/code&gt; code to set the order of the levels.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;DF$Gender_factor &amp;lt;- factor(DF$Gender, levels=c(&amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;))
 ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
@@ -4233,7 +4233,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
   xlab(&amp;quot;&amp;quot;) +
   theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
   scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Step 5: Horizontal bar chart: coord_flip()&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
@@ -4242,7 +4242,7 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
   theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
   coord_flip()+
   scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;step 6: Change the legend order similar to plot order: under themes &lt;code&gt;fill=guide_legend(reverse=FALSE)&lt;/code&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
   geom_boxplot() +
@@ -4252,33 +4252,33 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
   guides(fill=guide_legend(reverse=TRUE)) +
   coord_flip()+
   scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Parallel computing with R</title>
-      <link>/post/parallelcomputing/</link>
+      <link>https://thiyanga.netlify.app/post/parallelcomputing/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>/post/parallelcomputing/</guid>
+      <guid>https://thiyanga.netlify.app/post/parallelcomputing/</guid>
       <description>&lt;p&gt;Working on this..&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Data Types in R</title>
-      <link>/post/datatypes/</link>
+      <link>https://thiyanga.netlify.app/post/datatypes/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>/post/datatypes/</guid>
+      <guid>https://thiyanga.netlify.app/post/datatypes/</guid>
       <description>&lt;p&gt;coming up soon!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>A classification framework for forecast-model selection</title>
-      <link>/talk/jsm18-talk/</link>
+      <link>https://thiyanga.netlify.app/talk/jsm18-talk/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>/talk/jsm18-talk/</guid>
+      <guid>https://thiyanga.netlify.app/talk/jsm18-talk/</guid>
       <description>&lt;p&gt;The background pictures are of free copyright from &lt;a href=&#34;https://pixabay.com/en/photos/presentation/&#34;&gt;https://pixabay.com/en/photos/presentation/&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Associated R package: &lt;a href=&#34;https://github.com/thiyangt/seer&#34;&gt;seer&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -4286,9 +4286,9 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
     
     <item>
       <title>seer: R package for feature-based forecast model selection</title>
-      <link>/talk/user18-talk/</link>
+      <link>https://thiyanga.netlify.app/talk/user18-talk/</link>
       <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
-      <guid>/talk/user18-talk/</guid>
+      <guid>https://thiyanga.netlify.app/talk/user18-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The seer package provides a novel framework for forecast model selection using time series features. We call this framework FFORMS (Feature-based FORecast Model Selection). The underlying approach involves computing a vector of features from the time series which are then used to select the forecasting model. The model selection process is carried out using a classification algorithm &amp;ndash; we use the time series features as inputs, and the best forecasting algorithm as the output. The classification algorithm can be built in advance of the forecasting exercise (so it is an “offline” procedure). Then, when we have a new time series to forecast, we can quickly compute its features, use the pre-trained classification algorithm to identify the best forecasting model, and produce the required forecasts. Thus, the “online” part of our algorithm requires only feature computation, and the application of a single forecasting model, with no need to estimate large numbers of models within a class, or to carry out a computationally-intensive cross-validation procedure. This framework is compared against several benchmarks and other commonly used forecasting methods.&lt;/p&gt;
 &lt;p&gt;Link to git repository: &lt;a href=&#34;https://github.com/thiyangt/seer&#34;&gt;seer&lt;/a&gt;&lt;/p&gt;
@@ -4297,9 +4297,9 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
     
     <item>
       <title>Meta-learning how to forecast time series</title>
-      <link>/talk/isf18-talk/</link>
+      <link>https://thiyanga.netlify.app/talk/isf18-talk/</link>
       <pubDate>Sat, 09 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>/talk/isf18-talk/</guid>
+      <guid>https://thiyanga.netlify.app/talk/isf18-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;A crucial task in time series forecasting is the identification of the most suitable forecasting method. We present a general framework for forecast model selection using meta-learning. A Random Forest is used to predict the best forecasting method using only time series features. The proposed framework has been evaluated using time series from the M1 and M3 competitions, and is shown to yield accurate forecasts comparable to several benchmarks and other commonly used automated approaches of time series forecasting. A key advantage of our algorithm is that the time-consuming part of building the random forest can be handled in advance of the forecasting task.&lt;/p&gt;
 </description>
@@ -4307,17 +4307,17 @@ ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
     
     <item>
       <title>Analysing large collections of time series</title>
-      <link>/talk/japan18-talk/</link>
+      <link>https://thiyanga.netlify.app/talk/japan18-talk/</link>
       <pubDate>Mon, 12 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>/talk/japan18-talk/</guid>
+      <guid>https://thiyanga.netlify.app/talk/japan18-talk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Feature-based model selection for time series forecasting</title>
-      <link>/talk/isf17-talk/</link>
+      <link>https://thiyanga.netlify.app/talk/isf17-talk/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
-      <guid>/talk/isf17-talk/</guid>
+      <guid>https://thiyanga.netlify.app/talk/isf17-talk/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Many applications require a large number of time series to be forecast. Providing better forecasts for these time series is important in decision and policy making. However, large scale time series data present numerous challenges in modelling and implementation due to
 the high dimensionality. It is unlikely that a single method will consistently provides better forecasts across all time series. On the other hand, selecting individual forecast models when the number of series is very large can be extremely challenging. In this paper we propose a classification framework which selects forecast models based on features calculated from the time series. A Random Forest approach is used to develop the classifier. The proposed framework is tested using the M3 data and is compared against several benchmarks and other commonly used approaches of forecasting.&lt;/p&gt;
@@ -4326,49 +4326,49 @@ the high dimensionality. It is unlikely that a single method will consistently p
     
     <item>
       <title>Feature-based model selection for time series forecasting</title>
-      <link>/talk/ssa17-talk/</link>
+      <link>https://thiyanga.netlify.app/talk/ssa17-talk/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>/talk/ssa17-talk/</guid>
+      <guid>https://thiyanga.netlify.app/talk/ssa17-talk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Feature-based model selection for time series forecasting</title>
-      <link>/talk/ysc17-talk/</link>
+      <link>https://thiyanga.netlify.app/talk/ysc17-talk/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>/talk/ysc17-talk/</guid>
+      <guid>https://thiyanga.netlify.app/talk/ysc17-talk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Large-Scale Time Series Forecasting</title>
-      <link>/project/timeseries/</link>
+      <link>https://thiyanga.netlify.app/project/timeseries/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/timeseries/</guid>
+      <guid>https://thiyanga.netlify.app/project/timeseries/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Programming and Data Analysis with R</title>
-      <link>/project/hellor/</link>
+      <link>https://thiyanga.netlify.app/project/hellor/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/hellor/</guid>
+      <guid>https://thiyanga.netlify.app/project/hellor/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Small Bite Big threat</title>
-      <link>/project/dengue/</link>
+      <link>https://thiyanga.netlify.app/project/dengue/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/dengue/</guid>
+      <guid>https://thiyanga.netlify.app/project/dengue/</guid>
       <description></description>
     </item>
     
     <item>
       <title>An example journal article</title>
-      <link>/publication/journal-article/</link>
+      <link>https://thiyanga.netlify.app/publication/journal-article/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/</guid>
+      <guid>https://thiyanga.netlify.app/publication/journal-article/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
@@ -4377,9 +4377,9 @@ the high dimensionality. It is unlikely that a single method will consistently p
     
     <item>
       <title>An example conference paper</title>
-      <link>/publication/conference-paper/</link>
+      <link>https://thiyanga.netlify.app/publication/conference-paper/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>/publication/conference-paper/</guid>
+      <guid>https://thiyanga.netlify.app/publication/conference-paper/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
