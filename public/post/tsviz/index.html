@@ -746,7 +746,11 @@ y1</code></pre>
 <div id="extract-various-time-components" class="section level1">
 <h1>Extract various time components</h1>
 <p>Let’s see how to extract various time components from the elements of the following Date object.</p>
-<pre class="r"><code>y2023 &lt;- seq(as.Date(&quot;2023-01-01&quot;),as.Date(&quot;2023-12-31&quot;), by = &quot;1 month&quot;)</code></pre>
+<pre class="r"><code>y2023 &lt;- seq(as.Date(&quot;2023-01-01&quot;),as.Date(&quot;2023-12-31&quot;), by = &quot;1 month&quot;)
+y2023</code></pre>
+<pre><code> [1] &quot;2023-01-01&quot; &quot;2023-02-01&quot; &quot;2023-03-01&quot; &quot;2023-04-01&quot; &quot;2023-05-01&quot;
+ [6] &quot;2023-06-01&quot; &quot;2023-07-01&quot; &quot;2023-08-01&quot; &quot;2023-09-01&quot; &quot;2023-10-01&quot;
+[11] &quot;2023-11-01&quot; &quot;2023-12-01&quot;</code></pre>
 <p><code>year()</code>: Extracts the year component</p>
 <pre class="r"><code>year(y2023)</code></pre>
 <pre><code> [1] 2023 2023 2023 2023 2023 2023 2023 2023 2023 2023 2023 2023</code></pre>
@@ -759,18 +763,18 @@ y1</code></pre>
 <p><code>week()</code>: Extracts the week component</p>
 <pre class="r"><code>week(y2023)</code></pre>
 <pre><code> [1]  1  5  9 13 18 22 26 31 35 40 44 48</code></pre>
-<p>day(): Extracts the day component</p>
+<p><code>day()</code>: Extracts the day component</p>
 <pre class="r"><code>day(y2023)</code></pre>
 <pre><code> [1] 1 1 1 1 1 1 1 1 1 1 1 1</code></pre>
 <p>To illustrate the remaining functions I use the following example</p>
 <pre class="r"><code>mydate &lt;- ymd_hms(&quot;2023-03-15 10:30:01&quot;)</code></pre>
-<p>hour(): Extracts the hour component</p>
+<p><code>hour()</code>: Extracts the hour component</p>
 <pre class="r"><code>hour(mydate)</code></pre>
 <pre><code>[1] 10</code></pre>
-<p>minute(): Extracts the minute component</p>
+<p><code>minute()</code>: Extracts the minute component</p>
 <pre class="r"><code>minute(mydate)</code></pre>
 <pre><code>[1] 30</code></pre>
-<p>second(): Extracts the second component</p>
+<p><code>second()</code>: Extracts the second component</p>
 <pre class="r"><code>second(mydate)</code></pre>
 <pre><code>[1] 1</code></pre>
 </div>

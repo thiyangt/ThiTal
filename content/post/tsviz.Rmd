@@ -125,6 +125,7 @@ Let's see how to extract various time components from the elements of the follow
 
 ```{r}
 y2023 <- seq(as.Date("2023-01-01"),as.Date("2023-12-31"), by = "1 month")
+y2023
 ```
 
 `year()`: Extracts the year component 
@@ -152,7 +153,7 @@ week(y2023)
 ```
 
 
-day(): Extracts the day component 
+`day()`: Extracts the day component 
 
 ```{r}
 day(y2023)
@@ -165,20 +166,20 @@ To illustrate the remaining functions I use the following example
 mydate <- ymd_hms("2023-03-15 10:30:01")
 ```
 
-hour(): Extracts the hour component
+`hour()`: Extracts the hour component
 
 ```{r}
 hour(mydate)
 ```
 
 
-minute(): Extracts the minute component 
+`minute()`: Extracts the minute component 
 
 ```{r}
 minute(mydate)
 ```
 
-second(): Extracts the second component 
+`second()`: Extracts the second component 
 
 ```{r}
 second(mydate)
