@@ -536,7 +536,7 @@ df &amp;lt;- tibble::tibble(x=rnorm(100), y=rnorm(100))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Suppose I want to highlight 5th, 10th and 15th points.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;df2 &amp;lt;- df[c(5, 10, 15), ]
 df2&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;# A tibble: 3 x 2
+&lt;pre&gt;&lt;code&gt;# A tibble: 3 × 2
        x      y
    &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
 1  0.646 -3.30 
