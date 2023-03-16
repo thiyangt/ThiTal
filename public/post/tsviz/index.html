@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Highlight selected points in the scatterplot">
+  <meta name="description" content="Time series data wrangling">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/scatterplot/">
+  <link rel="alternate" hreflang="en-us" href="/post/tsviz/">
 
   
 
@@ -106,7 +106,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/post/scatterplot/">
+  <link rel="canonical" href="/post/tsviz/">
 
   
   
@@ -119,15 +119,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="THIYANGA TALAGALA">
-  <meta property="og:url" content="/post/scatterplot/">
-  <meta property="og:title" content="Highlight data points in a scatterplot | THIYANGA TALAGALA">
-  <meta property="og:description" content="Highlight selected points in the scatterplot"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/post/tsviz/">
+  <meta property="og:title" content="Some useful functions to Wrangle with Time Series Data | THIYANGA TALAGALA">
+  <meta property="og:description" content="Time series data wrangling"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-12-15T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2023-03-14T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-12-15T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2023-03-14T00:00:00&#43;00:00">
   
 
   
@@ -153,12 +153,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "/post/scatterplot/"
+    "@id": "/post/tsviz/"
   },
-  "headline": "Highlight data points in a scatterplot",
+  "headline": "Some useful functions to Wrangle with Time Series Data",
   
-  "datePublished": "2020-12-15T00:00:00Z",
-  "dateModified": "2020-12-15T00:00:00Z",
+  "datePublished": "2023-03-14T00:00:00Z",
+  "dateModified": "2023-03-14T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -173,7 +173,7 @@
       "url": "/img/icon-512.png"
     }
   },
-  "description": "Highlight selected points in the scatterplot"
+  "description": "Time series data wrangling"
 }
 </script>
 
@@ -191,7 +191,7 @@
 
 
 
-  <title>Highlight data points in a scatterplot | THIYANGA TALAGALA</title>
+  <title>Some useful functions to Wrangle with Time Series Data | THIYANGA TALAGALA</title>
 
 </head>
 
@@ -575,7 +575,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Highlight data points in a scatterplot</h1>
+  <h1>Some useful functions to Wrangle with Time Series Data</h1>
 
   
 
@@ -594,7 +594,7 @@
     
       
     
-    Dec 15, 2020
+    Mar 14, 2023
   </span>
   
 
@@ -603,7 +603,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    3 min read
   </span>
   
 
@@ -615,7 +615,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a>, <a href="/categories/tidyverse/">tidyverse</a>, <a href="/categories/ggplot2/">ggplot2</a>, <a href="/categories/scatterplot/">scatterplot</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a>, <a href="/categories/tidyverse/">tidyverse</a>, <a href="/categories/tsibble/">tsibble</a>, <a href="/categories/time-series/">time series</a></span>
   
 
 </div>
@@ -646,59 +646,135 @@
       
 
 
-<p><img src="/post/highlight.jpg" alt="final image" width="700"/></p>
-<div id="step-1-load-libraries" class="section level1">
-<h1>Step 1: Load Libraries</h1>
-<pre class="r"><code>library(tidyverse)</code></pre>
+<div id="creating-data-and-time-objects." class="section level1">
+<h1>Creating data and time objects.</h1>
+<p>The <code>lubridate</code> package in R provides a set of functions for working with dates and times.</p>
+<div id="year-month-date-ymd-function" class="section level2">
+<h2>year-month-date <code>ymd</code> function</h2>
+<p><code>ymd</code> function converts a character vector of dates in the format “year-month-day” to a Date object. The name of the function stands for “year-month-day”, which is the order of the components in the date format that the function expects.</p>
+<pre class="r"><code>library(lubridate)</code></pre>
+<pre><code>
+Attaching package: &#39;lubridate&#39;</code></pre>
+<pre><code>The following objects are masked from &#39;package:base&#39;:
+
+    date, intersect, setdiff, union</code></pre>
+<pre class="r"><code>dates.ex1 &lt;- c(&quot;2022-03-15&quot;, &quot;2022-03-16&quot;, &quot;2022-03-17&quot;)
+class(dates.ex1)</code></pre>
+<pre><code>[1] &quot;character&quot;</code></pre>
+<pre class="r"><code>dates1 &lt;- ymd(dates.ex1)
+dates1</code></pre>
+<pre><code>[1] &quot;2022-03-15&quot; &quot;2022-03-16&quot; &quot;2022-03-17&quot;</code></pre>
+<pre class="r"><code>class(dates1)</code></pre>
+<pre><code>[1] &quot;Date&quot;</code></pre>
+<p>The ymd() function also supports variations of the “year-month-day” format, such as “year/month/day” or “year.month.day”.</p>
+<pre class="r"><code>dates.ex2 &lt;- c(&quot;2022/03/15&quot;, &quot;2022/03/16&quot;, &quot;2022/03/17&quot;)
+dates2 &lt;- ymd(dates.ex2)
+dates2</code></pre>
+<pre><code>[1] &quot;2022-03-15&quot; &quot;2022-03-16&quot; &quot;2022-03-17&quot;</code></pre>
+<pre class="r"><code>class(dates2)</code></pre>
+<pre><code>[1] &quot;Date&quot;</code></pre>
+<pre class="r"><code>dates.ex3 &lt;- c(&quot;2022/03/15&quot;, &quot;2022/03/16&quot;, &quot;2022/03/17&quot;)
+dates2 &lt;- ymd(dates.ex2)
+dates2</code></pre>
+<pre><code>[1] &quot;2022-03-15&quot; &quot;2022-03-16&quot; &quot;2022-03-17&quot;</code></pre>
+<pre class="r"><code>class(dates2)</code></pre>
+<pre><code>[1] &quot;Date&quot;</code></pre>
 </div>
-<div id="step-2-dataset" class="section level1">
-<h1>Step 2: Dataset</h1>
-<pre class="r"><code>set.seed(20201215)
-df &lt;- tibble::tibble(x=rnorm(100), y=rnorm(100))</code></pre>
-<p>Now we are going to work on our scatterplot.</p>
+<div id="month-date-year-mdy-function" class="section level2">
+<h2>month-date-year <code>mdy</code> function</h2>
+<pre class="r"><code>mdy(c(&quot;03-15-2023&quot;, &quot;03-16-2023&quot;))</code></pre>
+<pre><code>[1] &quot;2023-03-15&quot; &quot;2023-03-16&quot;</code></pre>
 </div>
-<div id="step-3-first-draw-a-scatterplot-with-your-full-data" class="section level1">
-<h1>Step 3: First draw a scatterplot with your full data</h1>
-<pre class="r"><code>ggplot(df, aes(x=x, y=y)) + 
-  geom_point() + 
-  coord_equal()</code></pre>
-<p><img src="/post/scatterplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<div id="date-month-year-dmy-function" class="section level2">
+<h2>date-month-year <code>dmy</code> function</h2>
+<pre class="r"><code>dmy(c(&quot;15-03-2023&quot;, &quot;16-03-2023&quot;))</code></pre>
+<pre><code>[1] &quot;2023-03-15&quot; &quot;2023-03-16&quot;</code></pre>
 </div>
-<div id="step-4-store-the-points-that-you-need-to-highlight-in-a-new-data.frame-or-tibble." class="section level1">
-<h1>Step 4: Store the points that you need to highlight in a new <code>data.frame</code> or <code>tibble</code>.</h1>
-<p>Suppose I want to highlight 5th, 10th and 15th points.</p>
-<pre class="r"><code>df2 &lt;- df[c(5, 10, 15), ]
-df2</code></pre>
-<pre><code># A tibble: 3 × 2
-       x      y
-   &lt;dbl&gt;  &lt;dbl&gt;
-1  0.646 -3.30 
-2  2.54  -0.732
-3 -0.383  0.855</code></pre>
+<div id="dates-with-strings" class="section level2">
+<h2>dates with strings</h2>
+<pre class="r"><code>ydm(&quot;2023, March 15th&quot;)</code></pre>
+<pre><code>Warning: All formats failed to parse. No formats found.</code></pre>
+<pre><code>[1] NA</code></pre>
+<pre class="r"><code>mdy(&quot;March 15th, 2023&quot;)</code></pre>
+<pre><code>[1] &quot;2023-03-15&quot;</code></pre>
+<pre class="r"><code>mdy(&quot;Mar 15th, 2023&quot;)</code></pre>
+<pre><code>[1] &quot;2023-03-15&quot;</code></pre>
+<pre class="r"><code>mdy(&quot;Wednesday, March 15th, 2023&quot;)</code></pre>
+<pre><code>[1] &quot;2023-03-15&quot;</code></pre>
+<pre class="r"><code>mdy(&quot;15th, March, 2023&quot;)</code></pre>
+<pre><code>Warning: All formats failed to parse. No formats found.</code></pre>
+<pre><code>[1] NA</code></pre>
 </div>
-<div id="step-5-now-you-need-to-inform-above-points-to-the-ggplot-through-another-geom_point-layer." class="section level1">
-<h1>Step 5: Now you need to inform above points to the ggplot through another <code>geom_point</code> layer.</h1>
-<pre class="r"><code>ggplot(df, aes(x=x, y=y)) + 
-  geom_point() + 
-  coord_equal() + 
-  geom_point(data=df2, aes(x=x, y=y), colour=&quot;red&quot;)</code></pre>
-<p><img src="/post/scatterplot_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<p>We can change the size by passing a value to <code>size</code> argument.</p>
-<pre class="r"><code>ggplot(df, aes(x=x, y=y)) + 
-  geom_point() + 
-  coord_equal() + 
-  geom_point(data=df2, aes(x=x, y=y), 
-             colour=&quot;red&quot;, 
-             size=5)</code></pre>
-<p><img src="/post/scatterplot_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<p>We can circle around the points by using the following command.</p>
-<pre class="r"><code>ggplot(df, aes(x=x, y=y)) + 
-  geom_point() + 
-  coord_equal() + 
-  geom_point(data=df2, aes(x=x, y=y), pch=21, 
-             fill=NA, size=4, 
-             colour=&quot;red&quot;, stroke=1)</code></pre>
-<p><img src="/post/scatterplot_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<div id="hour-minutes-second-hms-working-with-dates-and-times" class="section level2">
+<h2>hour-minutes-second <code>hms</code> working with dates and times</h2>
+<pre class="r"><code>hms(&quot;10:30:00&quot;)</code></pre>
+<pre><code>[1] &quot;10H 30M 0S&quot;</code></pre>
+</div>
+<div id="ymd_hm-ymd_hms-and-mdy_hms" class="section level2">
+<h2><code>ymd_hm</code>, <code>ymd_hms</code> and <code>mdy_hms</code></h2>
+<pre class="r"><code>ymd_hm(&quot;2023-03-15 10:30&quot;)</code></pre>
+<pre><code>[1] &quot;2023-03-15 10:30:00 UTC&quot;</code></pre>
+<pre class="r"><code>ymd_hms(&quot;2023-03-15 10:30:00&quot;)</code></pre>
+<pre><code>[1] &quot;2023-03-15 10:30:00 UTC&quot;</code></pre>
+<pre class="r"><code>mdy_hms(&quot;03-15-2023 10:30:00&quot;)</code></pre>
+<pre><code>[1] &quot;2023-03-15 10:30:00 UTC&quot;</code></pre>
+</div>
+<div id="parse_date_time" class="section level2">
+<h2><code>parse_date_time</code></h2>
+<p>If you have a date format that doesn’t match any of the built-in formats, you can use the parse_date_time() function in lubridate to specify a custom format.</p>
+<pre class="r"><code>dates.ex4 &lt;- c(&quot;2022/03/15 10:30:00&quot;, &quot;2022/03/16 11:00:00&quot;, &quot;2022/03/17 12:15:00&quot;)
+
+# Define the custom format using the format string
+date_format &lt;- &quot;%Y/%m/%d %H:%M:%S&quot;
+
+# Convert the character vector to POSIXct objects using parse_date_time()
+parse_date_time(dates.ex4, date_format)</code></pre>
+<pre><code>[1] &quot;2022-03-15 10:30:00 UTC&quot; &quot;2022-03-16 11:00:00 UTC&quot;
+[3] &quot;2022-03-17 12:15:00 UTC&quot;</code></pre>
+</div>
+</div>
+<div id="creating-a-sequence-of-time" class="section level1">
+<h1>Creating a sequence of time</h1>
+<pre class="r"><code>y1 &lt;- seq(as.Date(&quot;2012-01-01&quot;),as.Date(&quot;2012-12-01&quot;), by = &quot;1 month&quot;)
+y1</code></pre>
+<pre><code> [1] &quot;2012-01-01&quot; &quot;2012-02-01&quot; &quot;2012-03-01&quot; &quot;2012-04-01&quot; &quot;2012-05-01&quot;
+ [6] &quot;2012-06-01&quot; &quot;2012-07-01&quot; &quot;2012-08-01&quot; &quot;2012-09-01&quot; &quot;2012-10-01&quot;
+[11] &quot;2012-11-01&quot; &quot;2012-12-01&quot;</code></pre>
+<pre class="r"><code>class(y1)</code></pre>
+<pre><code>[1] &quot;Date&quot;</code></pre>
+<pre class="r"><code>seq(as.Date(&quot;2023-03-01&quot;),as.Date(&quot;2023-04-01&quot;), by = &quot;1 week&quot;)</code></pre>
+<pre><code>[1] &quot;2023-03-01&quot; &quot;2023-03-08&quot; &quot;2023-03-15&quot; &quot;2023-03-22&quot; &quot;2023-03-29&quot;</code></pre>
+</div>
+<div id="extract-various-time-components" class="section level1">
+<h1>Extract various time components</h1>
+<p>Let’s see how to extract various time components from the elements of the following Date object.</p>
+<pre class="r"><code>y2023 &lt;- seq(as.Date(&quot;2023-01-01&quot;),as.Date(&quot;2023-12-31&quot;), by = &quot;1 month&quot;)</code></pre>
+<p><code>year()</code>: Extracts the year component</p>
+<pre class="r"><code>year(y2023)</code></pre>
+<pre><code> [1] 2023 2023 2023 2023 2023 2023 2023 2023 2023 2023 2023 2023</code></pre>
+<p><code>quarter()</code>: Extracts the quarter</p>
+<pre class="r"><code>quarter(y2023)</code></pre>
+<pre><code> [1] 1 1 1 2 2 2 3 3 3 4 4 4</code></pre>
+<p><code>month()</code>: Extracts the month component</p>
+<pre class="r"><code>month(y2023)</code></pre>
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10 11 12</code></pre>
+<p><code>week()</code>: Extracts the week component</p>
+<pre class="r"><code>week(y2023)</code></pre>
+<pre><code> [1]  1  5  9 13 18 22 26 31 35 40 44 48</code></pre>
+<p>day(): Extracts the day component</p>
+<pre class="r"><code>day(y2023)</code></pre>
+<pre><code> [1] 1 1 1 1 1 1 1 1 1 1 1 1</code></pre>
+<p>To illustrate the remaining functions I use the following example</p>
+<pre class="r"><code>mydate &lt;- ymd_hms(&quot;2023-03-15 10:30:01&quot;)</code></pre>
+<p>hour(): Extracts the hour component</p>
+<pre class="r"><code>hour(mydate)</code></pre>
+<pre><code>[1] 10</code></pre>
+<p>minute(): Extracts the minute component</p>
+<pre class="r"><code>minute(mydate)</code></pre>
+<pre><code>[1] 30</code></pre>
+<p>second(): Extracts the second component</p>
+<pre class="r"><code>second(mydate)</code></pre>
+<pre><code>[1] 1</code></pre>
 </div>
 
     </div>
@@ -715,9 +791,9 @@ df2</code></pre>
   
   <a class="badge badge-light" href="/tags/tidyverse/">tidyverse</a>
   
-  <a class="badge badge-light" href="/tags/ggplot2/">ggplot2</a>
+  <a class="badge badge-light" href="/tags/tsibble/">tsibble</a>
   
-  <a class="badge badge-light" href="/tags/scatterplot/">scatterplot</a>
+  <a class="badge badge-light" href="/tags/time-series/">time series</a>
   
 </div>
 
@@ -734,7 +810,7 @@ df2</code></pre>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/scatterplot/&amp;text=Highlight%20data%20points%20in%20a%20scatterplot" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/tsviz/&amp;text=Some%20useful%20functions%20to%20Wrangle%20with%20Time%20Series%20Data" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -747,7 +823,7 @@ df2</code></pre>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/scatterplot/&amp;t=Highlight%20data%20points%20in%20a%20scatterplot" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/tsviz/&amp;t=Some%20useful%20functions%20to%20Wrangle%20with%20Time%20Series%20Data" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -760,7 +836,7 @@ df2</code></pre>
       
       
       <li>
-        <a href="mailto:?subject=Highlight%20data%20points%20in%20a%20scatterplot&amp;body=/post/scatterplot/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Some%20useful%20functions%20to%20Wrangle%20with%20Time%20Series%20Data&amp;body=/post/tsviz/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -773,7 +849,7 @@ df2</code></pre>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/scatterplot/&amp;title=Highlight%20data%20points%20in%20a%20scatterplot" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/tsviz/&amp;title=Some%20useful%20functions%20to%20Wrangle%20with%20Time%20Series%20Data" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -786,7 +862,7 @@ df2</code></pre>
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Highlight%20data%20points%20in%20a%20scatterplot%20/post/scatterplot/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Some%20useful%20functions%20to%20Wrangle%20with%20Time%20Series%20Data%20/post/tsviz/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -799,7 +875,7 @@ df2</code></pre>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/scatterplot/&amp;title=Highlight%20data%20points%20in%20a%20scatterplot" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/tsviz/&amp;title=Some%20useful%20functions%20to%20Wrangle%20with%20Time%20Series%20Data" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -962,15 +1038,15 @@ df2</code></pre>
     <h3>Related</h3>
     <ul>
       
+      <li><a href="/post/logisticregression/">Logistic Regression: Model Building and Interpretation</a></li>
+      
+      <li><a href="/post/ggforce/">Zoom Your Plots with ggforce</a></li>
+      
+      <li><a href="/post/plotaxis/">Formatting axis labels in ggplot</a></li>
+      
+      <li><a href="/post/scatterplot/">Highlight data points in a scatterplot</a></li>
+      
       <li><a href="/post/multiplepkg/">How to install and load multiple packages at once?</a></li>
-      
-      <li><a href="/post/blog/">Customizing boxplots with ggplot2</a></li>
-      
-      <li><a href="/post/loaddatasets/">Import data into R: Overwritten object names</a></li>
-      
-      <li><a href="/post/datasets/">Working with built-in data sets in R</a></li>
-      
-      <li><a href="/post/covid19/">Dashboard to monitor COVID-19 situation in Sri Lanka</a></li>
       
     </ul>
   </div>
