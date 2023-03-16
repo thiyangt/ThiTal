@@ -20,19 +20,15 @@
       <description>
 
 
-&lt;div id=&#34;creating-data-and-time-objects.&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Creating data and time objects.&lt;/h1&gt;
+&lt;div id=&#34;creating-data-and-time-objects&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Creating data and time objects&lt;/h1&gt;
 &lt;p&gt;The &lt;code&gt;lubridate&lt;/code&gt; package in R provides a set of functions for working with dates and times.&lt;/p&gt;
-&lt;div id=&#34;year-month-date-ymd-function&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;year-month-date &lt;code&gt;ymd&lt;/code&gt; function&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;year-month-date-ymd-function&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;year-month-date &lt;code&gt;ymd&lt;/code&gt; function&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;ymd&lt;/code&gt; function converts a character vector of dates in the format “year-month-day” to a Date object. The name of the function stands for “year-month-day”, which is the order of the components in the date format that the function expects.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(lubridate)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;
-Attaching package: &amp;#39;lubridate&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;The following objects are masked from &amp;#39;package:base&amp;#39;:
-
-    date, intersect, setdiff, union&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dates.ex1 &amp;lt;- c(&amp;quot;2022-03-15&amp;quot;, &amp;quot;2022-03-16&amp;quot;, &amp;quot;2022-03-17&amp;quot;)
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(lubridate)
+dates.ex1 &amp;lt;- c(&amp;quot;2022-03-15&amp;quot;, &amp;quot;2022-03-16&amp;quot;, &amp;quot;2022-03-17&amp;quot;)
 class(dates.ex1)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;[1] &amp;quot;character&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dates1 &amp;lt;- ymd(dates.ex1)
@@ -40,6 +36,9 @@ dates1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;[1] &amp;quot;2022-03-15&amp;quot; &amp;quot;2022-03-16&amp;quot; &amp;quot;2022-03-17&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(dates1)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;[1] &amp;quot;Date&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;year-month-day-ymd-function&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;year-month-day &lt;code&gt;ymd&lt;/code&gt; function&lt;/h1&gt;
 &lt;p&gt;The ymd() function also supports variations of the “year-month-day” format, such as “year/month/day” or “year.month.day”.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dates.ex2 &amp;lt;- c(&amp;quot;2022/03/15&amp;quot;, &amp;quot;2022/03/16&amp;quot;, &amp;quot;2022/03/17&amp;quot;)
 dates2 &amp;lt;- ymd(dates.ex2)
@@ -54,18 +53,18 @@ dates2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(dates2)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;[1] &amp;quot;Date&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;month-date-year-mdy-function&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;month-date-year &lt;code&gt;mdy&lt;/code&gt; function&lt;/h2&gt;
+&lt;div id=&#34;month-date-year-mdy-function&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;month-date-year &lt;code&gt;mdy&lt;/code&gt; function&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mdy(c(&amp;quot;03-15-2023&amp;quot;, &amp;quot;03-16-2023&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;[1] &amp;quot;2023-03-15&amp;quot; &amp;quot;2023-03-16&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;date-month-year-dmy-function&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;date-month-year &lt;code&gt;dmy&lt;/code&gt; function&lt;/h2&gt;
+&lt;div id=&#34;date-month-year-dmy-function&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;date-month-year &lt;code&gt;dmy&lt;/code&gt; function&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dmy(c(&amp;quot;15-03-2023&amp;quot;, &amp;quot;16-03-2023&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;[1] &amp;quot;2023-03-15&amp;quot; &amp;quot;2023-03-16&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;dates-with-strings&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;dates with strings&lt;/h2&gt;
+&lt;div id=&#34;dates-with-strings&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;dates with strings&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ydm(&amp;quot;2023, March 15th&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;Warning: All formats failed to parse. No formats found.&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;[1] NA&lt;/code&gt;&lt;/pre&gt;
@@ -79,13 +78,13 @@ dates2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;Warning: All formats failed to parse. No formats found.&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;[1] NA&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;hour-minutes-second-hms-working-with-dates-and-times&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;hour-minutes-second &lt;code&gt;hms&lt;/code&gt; working with dates and times&lt;/h2&gt;
+&lt;div id=&#34;hour-minutes-second-hms-working-with-dates-and-times&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;hour-minutes-second &lt;code&gt;hms&lt;/code&gt; working with dates and times&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;hms(&amp;quot;10:30:00&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;[1] &amp;quot;10H 30M 0S&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;ymd_hm-ymd_hms-and-mdy_hms&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;code&gt;ymd_hm&lt;/code&gt;, &lt;code&gt;ymd_hms&lt;/code&gt; and &lt;code&gt;mdy_hms&lt;/code&gt;&lt;/h2&gt;
+&lt;div id=&#34;ymd_hm-ymd_hms-and-mdy_hms&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;code&gt;ymd_hm&lt;/code&gt;, &lt;code&gt;ymd_hms&lt;/code&gt; and &lt;code&gt;mdy_hms&lt;/code&gt;&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ymd_hm(&amp;quot;2023-03-15 10:30&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;[1] &amp;quot;2023-03-15 10:30:00 UTC&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ymd_hms(&amp;quot;2023-03-15 10:30:00&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
@@ -93,8 +92,8 @@ dates2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mdy_hms(&amp;quot;03-15-2023 10:30:00&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;[1] &amp;quot;2023-03-15 10:30:00 UTC&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;parse_date_time&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;code&gt;parse_date_time&lt;/code&gt;&lt;/h2&gt;
+&lt;div id=&#34;parse_date_time&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;code&gt;parse_date_time&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;If you have a date format that doesn’t match any of the built-in formats, you can use the parse_date_time() function in lubridate to specify a custom format.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dates.ex4 &amp;lt;- c(&amp;quot;2022/03/15 10:30:00&amp;quot;, &amp;quot;2022/03/16 11:00:00&amp;quot;, &amp;quot;2022/03/17 12:15:00&amp;quot;)
 
@@ -105,7 +104,6 @@ date_format &amp;lt;- &amp;quot;%Y/%m/%d %H:%M:%S&amp;quot;
 parse_date_time(dates.ex4, date_format)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;[1] &amp;quot;2022-03-15 10:30:00 UTC&amp;quot; &amp;quot;2022-03-16 11:00:00 UTC&amp;quot;
 [3] &amp;quot;2022-03-17 12:15:00 UTC&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;creating-a-sequence-of-time&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Creating a sequence of time&lt;/h1&gt;

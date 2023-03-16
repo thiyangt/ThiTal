@@ -11,15 +11,15 @@ summary: "Time series data wrangling"
 knitr::opts_chunk$set(eval=TRUE, echo = TRUE, comment = NA)
 ```
 
-# Creating data and time objects.
+# Creating data and time objects
 
 The `lubridate`  package in R provides a set of functions for working with dates and times. 
 
-## year-month-date `ymd` function
+# year-month-date `ymd` function
 
 `ymd` function converts a character vector of dates in the format "year-month-day" to a Date object. The name of the function stands for "year-month-day", which is the order of the components in the date format that the function expects. 
 
-```{r}
+```{r, warning=FALSE, message=FALSE}
 library(lubridate)
 dates.ex1 <- c("2022-03-15", "2022-03-16", "2022-03-17")
 class(dates.ex1)
@@ -28,6 +28,8 @@ dates1
 class(dates1)
 
 ```
+
+# year-month-day `ymd` function
 
 The ymd() function also supports variations of the "year-month-day" format, such as "year/month/day" or "year.month.day". 
 
@@ -47,20 +49,20 @@ dates2
 class(dates2)
 ```
 
-## month-date-year `mdy` function
+# month-date-year `mdy` function
 
 ```{r}
 mdy(c("03-15-2023", "03-16-2023"))
 
 ```
 
-## date-month-year `dmy` function
+# date-month-year `dmy` function
 
 ```{r}
 dmy(c("15-03-2023", "16-03-2023"))
 ```
 
-## dates with strings
+# dates with strings
 
 ```{r}
 ydm("2023, March 15th")
@@ -70,13 +72,13 @@ mdy("Wednesday, March 15th, 2023")
 mdy("15th, March, 2023")
 ```
 
-## hour-minutes-second `hms` working with dates and times
+# hour-minutes-second `hms` working with dates and times
 
 ```{r}
 hms("10:30:00")
 ```
 
-## `ymd_hm`, `ymd_hms` and `mdy_hms`
+# `ymd_hm`, `ymd_hms` and `mdy_hms`
 
 ```{r}
 ymd_hm("2023-03-15 10:30")
@@ -85,7 +87,7 @@ mdy_hms("03-15-2023 10:30:00")
 ```
 
 
-##  `parse_date_time`
+#  `parse_date_time`
 
 If you have a date format that doesn't match any of the built-in formats, you can use the parse_date_time() function in lubridate to specify a custom format.
 

@@ -646,19 +646,15 @@
       
 
 
-<div id="creating-data-and-time-objects." class="section level1">
-<h1>Creating data and time objects.</h1>
+<div id="creating-data-and-time-objects" class="section level1">
+<h1>Creating data and time objects</h1>
 <p>The <code>lubridate</code> package in R provides a set of functions for working with dates and times.</p>
-<div id="year-month-date-ymd-function" class="section level2">
-<h2>year-month-date <code>ymd</code> function</h2>
+</div>
+<div id="year-month-date-ymd-function" class="section level1">
+<h1>year-month-date <code>ymd</code> function</h1>
 <p><code>ymd</code> function converts a character vector of dates in the format “year-month-day” to a Date object. The name of the function stands for “year-month-day”, which is the order of the components in the date format that the function expects.</p>
-<pre class="r"><code>library(lubridate)</code></pre>
-<pre><code>
-Attaching package: &#39;lubridate&#39;</code></pre>
-<pre><code>The following objects are masked from &#39;package:base&#39;:
-
-    date, intersect, setdiff, union</code></pre>
-<pre class="r"><code>dates.ex1 &lt;- c(&quot;2022-03-15&quot;, &quot;2022-03-16&quot;, &quot;2022-03-17&quot;)
+<pre class="r"><code>library(lubridate)
+dates.ex1 &lt;- c(&quot;2022-03-15&quot;, &quot;2022-03-16&quot;, &quot;2022-03-17&quot;)
 class(dates.ex1)</code></pre>
 <pre><code>[1] &quot;character&quot;</code></pre>
 <pre class="r"><code>dates1 &lt;- ymd(dates.ex1)
@@ -666,6 +662,9 @@ dates1</code></pre>
 <pre><code>[1] &quot;2022-03-15&quot; &quot;2022-03-16&quot; &quot;2022-03-17&quot;</code></pre>
 <pre class="r"><code>class(dates1)</code></pre>
 <pre><code>[1] &quot;Date&quot;</code></pre>
+</div>
+<div id="year-month-day-ymd-function" class="section level1">
+<h1>year-month-day <code>ymd</code> function</h1>
 <p>The ymd() function also supports variations of the “year-month-day” format, such as “year/month/day” or “year.month.day”.</p>
 <pre class="r"><code>dates.ex2 &lt;- c(&quot;2022/03/15&quot;, &quot;2022/03/16&quot;, &quot;2022/03/17&quot;)
 dates2 &lt;- ymd(dates.ex2)
@@ -680,18 +679,18 @@ dates2</code></pre>
 <pre class="r"><code>class(dates2)</code></pre>
 <pre><code>[1] &quot;Date&quot;</code></pre>
 </div>
-<div id="month-date-year-mdy-function" class="section level2">
-<h2>month-date-year <code>mdy</code> function</h2>
+<div id="month-date-year-mdy-function" class="section level1">
+<h1>month-date-year <code>mdy</code> function</h1>
 <pre class="r"><code>mdy(c(&quot;03-15-2023&quot;, &quot;03-16-2023&quot;))</code></pre>
 <pre><code>[1] &quot;2023-03-15&quot; &quot;2023-03-16&quot;</code></pre>
 </div>
-<div id="date-month-year-dmy-function" class="section level2">
-<h2>date-month-year <code>dmy</code> function</h2>
+<div id="date-month-year-dmy-function" class="section level1">
+<h1>date-month-year <code>dmy</code> function</h1>
 <pre class="r"><code>dmy(c(&quot;15-03-2023&quot;, &quot;16-03-2023&quot;))</code></pre>
 <pre><code>[1] &quot;2023-03-15&quot; &quot;2023-03-16&quot;</code></pre>
 </div>
-<div id="dates-with-strings" class="section level2">
-<h2>dates with strings</h2>
+<div id="dates-with-strings" class="section level1">
+<h1>dates with strings</h1>
 <pre class="r"><code>ydm(&quot;2023, March 15th&quot;)</code></pre>
 <pre><code>Warning: All formats failed to parse. No formats found.</code></pre>
 <pre><code>[1] NA</code></pre>
@@ -705,13 +704,13 @@ dates2</code></pre>
 <pre><code>Warning: All formats failed to parse. No formats found.</code></pre>
 <pre><code>[1] NA</code></pre>
 </div>
-<div id="hour-minutes-second-hms-working-with-dates-and-times" class="section level2">
-<h2>hour-minutes-second <code>hms</code> working with dates and times</h2>
+<div id="hour-minutes-second-hms-working-with-dates-and-times" class="section level1">
+<h1>hour-minutes-second <code>hms</code> working with dates and times</h1>
 <pre class="r"><code>hms(&quot;10:30:00&quot;)</code></pre>
 <pre><code>[1] &quot;10H 30M 0S&quot;</code></pre>
 </div>
-<div id="ymd_hm-ymd_hms-and-mdy_hms" class="section level2">
-<h2><code>ymd_hm</code>, <code>ymd_hms</code> and <code>mdy_hms</code></h2>
+<div id="ymd_hm-ymd_hms-and-mdy_hms" class="section level1">
+<h1><code>ymd_hm</code>, <code>ymd_hms</code> and <code>mdy_hms</code></h1>
 <pre class="r"><code>ymd_hm(&quot;2023-03-15 10:30&quot;)</code></pre>
 <pre><code>[1] &quot;2023-03-15 10:30:00 UTC&quot;</code></pre>
 <pre class="r"><code>ymd_hms(&quot;2023-03-15 10:30:00&quot;)</code></pre>
@@ -719,8 +718,8 @@ dates2</code></pre>
 <pre class="r"><code>mdy_hms(&quot;03-15-2023 10:30:00&quot;)</code></pre>
 <pre><code>[1] &quot;2023-03-15 10:30:00 UTC&quot;</code></pre>
 </div>
-<div id="parse_date_time" class="section level2">
-<h2><code>parse_date_time</code></h2>
+<div id="parse_date_time" class="section level1">
+<h1><code>parse_date_time</code></h1>
 <p>If you have a date format that doesn’t match any of the built-in formats, you can use the parse_date_time() function in lubridate to specify a custom format.</p>
 <pre class="r"><code>dates.ex4 &lt;- c(&quot;2022/03/15 10:30:00&quot;, &quot;2022/03/16 11:00:00&quot;, &quot;2022/03/17 12:15:00&quot;)
 
@@ -731,7 +730,6 @@ date_format &lt;- &quot;%Y/%m/%d %H:%M:%S&quot;
 parse_date_time(dates.ex4, date_format)</code></pre>
 <pre><code>[1] &quot;2022-03-15 10:30:00 UTC&quot; &quot;2022-03-16 11:00:00 UTC&quot;
 [3] &quot;2022-03-17 12:15:00 UTC&quot;</code></pre>
-</div>
 </div>
 <div id="creating-a-sequence-of-time" class="section level1">
 <h1>Creating a sequence of time</h1>
