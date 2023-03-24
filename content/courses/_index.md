@@ -18,7 +18,7 @@ title: Courses
 
 ## Semester 2
 
-Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura (USJ)
+**BSc (Hons) Statistics, Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura (USJ)**
 
 
 - [STA 331 2.0 Stochastic Processes](https://stochasticprocesses.netlify.app/)
@@ -26,12 +26,12 @@ Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewar
 - [STA 474 2.0 Statistical Consultancy](https://scs-fas-sjp.netlify.app/) | [Course information](https://thiyanga-statisticalconsultancy.netlify.app/)
 
 
-MSc in Applied Statistics 
+**MSc in Applied Statistics**
 
 
 - [STA 517 3.0 Programming and Statistical Computing with R](https://hellor.netlify.app/mscschedule/) - Batch 3
 
-MSc in Data Science and Artificial Intelligence
+**MSc in Data Science and Artificial Intelligence**
 
  The MSc in DS and AI at USJ was designed in partnership with the [Erasmus+ DS and AI consortium](https://dsai-project.eu/site/), a group of 15 European and Asian organizations with the mission of bringing European-standard advanced education to Asia
 
