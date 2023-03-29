@@ -47,6 +47,9 @@ social:
 - icon: youtube
   icon_pack: fab
   link: https://www.youtube.com/channel/UCA-gmE5LxrIZTTjSP3z2ZTg
+- icon: orcid
+  icon_pack: fab
+  link: https://orcid.org/0000-0002-0656-9789
 superuser: true
 user_groups:
 - Researchers
@@ -56,9 +59,9 @@ user_groups:
 
 I am a Senior Lecturer in the Department of Statistics, Faculty of Applied Sciences at the [University of Sri Jayewardenepura](http://science.sjp.ac.lk/). I received my PhD in statistics from [Monash University, Australia](https://www.monash.edu/) in 2019. My thesis advisors were Professor [Rob J Hyndman](https://robjhyndman.com/hyndsight/) and Professor [George Athanasopoulos](https://research.monash.edu/en/persons/george-athanasopoulos). 
 
-I am also an Associate Investigator of the [Australian Research Council (ARC) Centre of Excellence for Mathematical and Statistical Frontiers (ACEMS).](https://acems.org.au/home)
+I was an Associate Investigator of the [Australian Research Council (ARC) Centre of Excellence for Mathematical and Statistical Frontiers (ACEMS).](https://acems.org.au/home)
 
-I am a co-founder and co-organizer of [RLadies-Colombo, Sri Lanka](https://github.com/thiyangt/covid19srilanka), a local chapter of [R-Ladies Global](https://rladies.org/), an organization that promotes diversity in the R community worldwide
+I am a co-founder and co-organizer of [RLadies-Colombo, Sri Lanka](https://github.com/thiyangt/covid19srilanka), a local chapter of [R-Ladies Global](https://rladies.org/), an organization that promotes diversity in the R community worldwide. I am the coordinator of the [statistical consulting service, University of Sri Jayewardenepura](http://science.sjp.ac.lk/sta/scs-sjp/).
 
 I enjoy solving general data science problems from three different angles: theoretical, computational, applied. On this website you will find some of my work and interests in statistics and data analysis. My research focuses on developing new statistical machine learning tools to help both practitioners and theoreticians make more open, explainable and reproducible data-driven discoveries. I am also interested in R and Python programming language.
 
