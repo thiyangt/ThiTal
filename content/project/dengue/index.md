@@ -1,6 +1,6 @@
 ---
 date: "2016-04-27T00:00:00Z"
-external_link: https://github.com/thiyangt/colmozzie
+external_link: https://denguedatahub.netlify.app/
 image:
   caption: https://pixabay.com/illustrations/aedes-aegypti-cartoon-illustration-1351001/
   focal_point: 
