@@ -5,7 +5,7 @@
     <link>https://thiyanga.netlify.app/</link>
       <atom:link href="https://thiyanga.netlify.app/index.xml" rel="self" type="application/rss+xml" />
     <description>THIYANGA TALAGALA</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 12 Apr 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>THIYANGA TALAGALA</title>
@@ -816,6 +816,14 @@
 &lt;p&gt;END&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Small Bite-Big threat = Small Data-Big Impact</title>
+      <link>https://thiyanga.netlify.app/project/dengue/</link>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://thiyanga.netlify.app/project/dengue/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -4356,14 +4364,6 @@ the high dimensionality. It is unlikely that a single method will consistently p
       <link>https://thiyanga.netlify.app/project/hellor/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/project/hellor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Small Bite Big threat</title>
-      <link>https://thiyanga.netlify.app/project/dengue/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://thiyanga.netlify.app/project/dengue/</guid>
       <description></description>
     </item>
     

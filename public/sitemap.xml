@@ -26,6 +26,21 @@
     <loc>https://thiyanga.netlify.app/courses/rmsc2020/contentr/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
+    <loc>https://thiyanga.netlify.app/tags/demo/</loc>
+    <lastmod>2023-04-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thiyanga.netlify.app/project/</loc>
+    <lastmod>2023-04-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thiyanga.netlify.app/project/dengue/</loc>
+    <lastmod>2023-04-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thiyanga.netlify.app/tags/</loc>
+    <lastmod>2023-04-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thiyanga.netlify.app/</loc>
+    <lastmod>2023-04-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://thiyanga.netlify.app/categories/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
@@ -39,12 +54,6 @@
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thiyanga.netlify.app/post/tsviz/</loc>
-    <lastmod>2023-03-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thiyanga.netlify.app/tags/</loc>
-    <lastmod>2023-03-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thiyanga.netlify.app/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thiyanga.netlify.app/tags/tidyverse/</loc>
@@ -86,13 +95,7 @@
     <loc>https://thiyanga.netlify.app/categories/rstudio/</loc>
     <lastmod>2022-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://thiyanga.netlify.app/tags/demo/</loc>
-    <lastmod>2022-10-31T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://thiyanga.netlify.app/project/python/</loc>
-    <lastmod>2022-10-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thiyanga.netlify.app/project/</loc>
     <lastmod>2022-10-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thiyanga.netlify.app/tags/error/</loc>
@@ -366,9 +369,6 @@
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thiyanga.netlify.app/project/hellor/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thiyanga.netlify.app/project/dengue/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thiyanga.netlify.app/publication_types/2/</loc>
