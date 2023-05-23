@@ -14,6 +14,12 @@ title: Courses
 
 -----
 
+# 2023
+
+Semester 1
+
+[STA 492 2.0/ ASP 460 2.0 Data Visualisation](https://thiyanga-dataviz.netlify.app/about/)
+
 # 2022
 
 ## Semester 2
