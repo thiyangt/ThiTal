@@ -18,7 +18,12 @@ title: Courses
 
 Semester 1
 
-[STA 492 2.0/ ASP 460 2.0 Data Visualisation](https://thiyanga-dataviz.netlify.app/about/)
+- [STA 326 2.0 Programming and Data Analysis with R](https://hellor2023.netlify.app/schedule/)
+
+
+- [STA 492 2.0/ ASP 460 2.0 Data Visualisation](https://thiyanga-dataviz.netlify.app/about/)
+
+- [STA 474 2.0 Statistical Consultancy](https://scs-fas-sjp.netlify.app/) | [Course information](https://thiyanga-statisticalconsultancy.netlify.app/)
 
 # 2022
 
