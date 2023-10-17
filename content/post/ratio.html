@@ -19,6 +19,15 @@ When creating scatterplots, how often do you fix the aspect ratio? <a href="http
 <div id="aspect-ratio" class="section level3">
 <h3>Aspect ratio</h3>
 <p>The <strong>aspect ratio</strong> of a plot is the ratio of its height-to-width . The aspect ratio we choose for our graph plays a significant role. The graphs below plot exactly the same data points but they have different aspect ratios.</p>
+<pre class="r"><code>library(tidyverse)
+library(patchwork)
+x &lt;- 1:100
+y &lt;- x
+df &lt;- data.frame(x=x, y=y)
+p1 &lt;- ggplot(df, aes(x=x, y=y)) + geom_point() +  coord_fixed(ratio=2) + ggtitle(&quot;Aspect ratio = 2&quot;)
+p2 &lt;- ggplot(df, aes(x=x, y=y)) + geom_point() +  coord_fixed(ratio=0.5) + ggtitle(&quot;Aspect ratio = 0.5&quot;)
+p3 &lt;- ggplot(df, aes(x=x, y=y)) + geom_point() +  coord_fixed(ratio=1) + ggtitle(&quot;Aspect ratio = 1&quot;)
+p1|p2|p3</code></pre>
 <p><img src="/post/ratio_files/figure-html/unnamed-chunk-1-1.png" width="1152" /></p>
 </div>
 <div id="the-aspect-ratio-of-a-plot-can-make-an-influence-on-the-readers-mind." class="section level2">

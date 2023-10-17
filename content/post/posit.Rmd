@@ -1,0 +1,34 @@
+---
+title: "My `Posit::conf 2023` Experience - A Conference of Insights, Knowledge, Connections, and Explorations"
+author: Thiyanga Talagala
+date: '2023-10-02'
+category: [R, Python]
+tags: [R, Python]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<img src="/post/positimages/cb.png" alt="posit" width="900"/><img src="/post/positcover.png" alt="posit" width="900"/>
+
+
+The Posit::conf 2023 (formerly known as RStudio conference) was held in Hyatt Regency in Chicago, Illinois, USA from 16 to 20 September, 2023. This was the first conference held since the name was changed from RStudio to Posit. It was a conference full of learning, making connections, and feeling inspired. As an attendee, I had the privilege of participating in workshops, attending various events, listening to great talks, meeting talented individuals, and experiencing the empowering atmosphere of R Ladies. I am immensely grateful for [Posit Software, PBC formerly RStudio, PBC](https://posit.co/) for this valuable opportunity. In this blog post, I'll share my key takeaways from each of these aspects of Posit::conf 2023.
+
+<img src="/post/positimages/hexwall.png" alt="posit" width="900"/>
+
+# Safe, positive, inclusive and respectfu and welcoming atmosphere for everyone
+
+The conference had a code of conduct in place, which provided a safer environment by setting clear guidelines for expected behavior, ensuring that all participants feel respected, safe, included, and free from any form of harassment or discrimination. It provided a positive and welcoming atmosphere for everyone attending the event.
+
+<img src="/post/positimages/codeofconduct.png" alt="posit" width="900"/>
+
+# Workshops
+
+## Big data with arrow in R
+
+
+## Data science workflows with Posit tools: Python focus
+
+
+# 

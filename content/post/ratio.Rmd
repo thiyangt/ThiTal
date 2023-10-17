@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 The **aspect ratio** of a plot is the ratio of its height-to-width . The aspect ratio we choose for our graph plays a significant role. The graphs below plot exactly the same data points but they have different aspect ratios.
 
-```{r, comment=NA, message=FALSE, echo=FALSE, fig.width=12}
+```{r, comment=NA, message=FALSE, echo=TRUE, fig.width=12}
 library(tidyverse)
 library(patchwork)
 x <- 1:100
