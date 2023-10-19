@@ -5,12 +5,36 @@
     <link>https://thiyanga.netlify.app/tags/python/</link>
       <atom:link href="https://thiyanga.netlify.app/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <description>Python</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 06 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 02 Oct 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>Python</title>
       <link>https://thiyanga.netlify.app/tags/python/</link>
     </image>
+    
+    <item>
+      <title>My `Posit::conf 2023` Experience - A Conference of Insights, Knowledge, Connections, and Explorations</title>
+      <link>https://thiyanga.netlify.app/post/posit/</link>
+      <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://thiyanga.netlify.app/post/posit/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/positimages/cb.png&#34; alt=&#34;posit&#34; width=&#34;900&#34;/&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/positcover.png&#34; alt=&#34;posit&#34; width=&#34;900&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;The Posit::conf 2023 (formerly known as RStudio conference) was held in Hyatt Regency in Chicago, Illinois, USA from 16 to 20 September, 2023. This was the first conference held since the name was changed from RStudio to Posit. It was a conference full of learning, making connections, and feeling inspired. As an attendee, I had the privilege of participating in workshops, attending various events, listening to great talks, meeting talented individuals, and experiencing the empowering atmosphere of R Ladies. I am immensely grateful for &lt;a href=&#34;https://posit.co/&#34;&gt;Posit Software, PBC formerly RStudio, PBC&lt;/a&gt; for this valuable opportunity. In this blog post, I&amp;rsquo;ll share my key takeaways from each of these aspects of Posit::conf 2023.&lt;/p&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/positimages/hexwall.png&#34; alt=&#34;posit&#34; width=&#34;900&#34;/&gt;
+&lt;h1 id=&#34;safe-positive-inclusive-and-respectfu-and-welcoming-atmosphere-for-everyone&#34;&gt;Safe, positive, inclusive and respectfu and welcoming atmosphere for everyone&lt;/h1&gt;
+&lt;p&gt;The conference had a code of conduct in place, which provided a safer environment by setting clear guidelines for expected behavior, ensuring that all participants feel respected, safe, included, and free from any form of harassment or discrimination. It provided a positive and welcoming atmosphere for everyone attending the event.&lt;/p&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/positimages/codeofconduct.png&#34; alt=&#34;posit&#34; width=&#34;900&#34;/&gt;
+&lt;h1 id=&#34;workshops&#34;&gt;Workshops&lt;/h1&gt;
+&lt;p&gt;Big data with arrow in R&lt;/p&gt;
+&lt;p&gt;Data science workflows with Posit tools: Python focus&lt;/p&gt;
+&lt;h1 id=&#34;keynotes-and-talks&#34;&gt;Keynotes and Talks&lt;/h1&gt;
+&lt;h1 id=&#34;r-ladies&#34;&gt;R Ladies&lt;/h1&gt;
+&lt;p&gt;R Ladies, a community that promotes gender diversity in the R programming community, had a significant presence at the conference. It was inspiring to see so many talented women sharing their expertise and experiences, and it reinforced the importance of diversity in tech. R Ladies events provided excellent networking opportunities. I had the chance to connect with amazing professionals, exchange ideas, and build lasting connections.&lt;/p&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/positimages/rladies.png&#34; alt=&#34;posit&#34; width=&#34;900&#34;/&gt;
+&lt;h1 id=&#34;meeting-great-people&#34;&gt;Meeting Great People&lt;/h1&gt;
+&lt;p&gt;Lastly, the people I met. The R community is filled with passionate and talented individuals who are eager to collaborate and share knowledge. Building relationships with like-minded professionals and making new friends was truly invaluable.&lt;/p&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/positimages/os.png&#34; alt=&#34;posit&#34; width=&#34;900&#34;/&gt;
+</description>
+    </item>
     
     <item>
       <title>Building a website using Quarto</title>
@@ -112,7 +136,7 @@ plant images. This repository contains 1099 leaf images of 31 species. There are
 &lt;a href=&#34;https://CRAN.R-project.org/package=MedLEA&#34;&gt;https://CRAN.R-project.org/package=MedLEA&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=MedLEA&#34;&gt;&lt;img src=&#34;http://www.r-pkg.org/badges/version/MedLEA&#34; alt=&#34;CRAN\_Status\_Badge&#34;&gt;&lt;/a&gt;
 &lt;a href=&#34;https://cran.r-project.org/package=MedLEA&#34;&gt;&lt;img src=&#34;http://cranlogs.r-pkg.org/badges/MedLEA&#34; alt=&#34;Downloads&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Do you want a new data package for teaching? MedLEA package provides morphological and structural features of 471 medicinal plant leaves and 1099 leaf images of 31 species and 29-45 images per species. &lt;a href=&#34;https://t.co/y14wvvMBH8&#34;&gt;https://t.co/y14wvvMBH8&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/DataVisualization?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DataVisualization&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/dataviz?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#dataviz&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/MachineLearning?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#MachineLearning&lt;/a&gt; &lt;a href=&#34;https://t.co/rYpyj16rTs&#34;&gt;pic.twitter.com/rYpyj16rTs&lt;/a&gt;&lt;/p&gt;&amp;mdash; Thiyanga Talagala (@thiyangt) &lt;a href=&#34;https://twitter.com/thiyangt/status/1381060311357136896?ref_src=twsrc%5Etfw&#34;&gt;April 11, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;&lt;strong&gt;Conference talks&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCqfu75XVtV4s-W5aiw1tavQ&#34;&gt;Click here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Research reproducibility&lt;/strong&gt;&lt;/p&gt;

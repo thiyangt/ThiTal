@@ -611,71 +611,74 @@ df2&lt;/code&gt;&lt;/pre&gt;
       <link>https://thiyanga.netlify.app/post/blog/</link>
       <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/blog/</guid>
-      <description>
-
-
-&lt;p&gt;Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.&lt;/p&gt;
+      <description>&lt;p&gt;Boxplot is probably one of the most common type of graphics. This will show how to customize boxplots.&lt;/p&gt;
 &lt;p&gt;You will learn,&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;how to change the order of labels&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;how to change the colours&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;how to flip coordinates&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;how to change the order of labels&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;how to change the colours&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;how to flip coordinates&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Step 1: we create a simple data set.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Gender &amp;lt;- rep(c(&amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;), times = 3, each = 4)
-Quality &amp;lt;- rep(c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;), times = 1, each = 8)
-Accepted &amp;lt;- seq(0, 100, by = 100/23)
-
-DF &amp;lt;- data.frame(Gender, Quality, Accepted)
-head(DF)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   Gender Quality  Accepted
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Gender &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;rep&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Male&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Female&amp;#34;&lt;/span&gt;), times &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, each &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Quality &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;rep&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Taste&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Color of package&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Capacity&amp;#34;&lt;/span&gt;), times &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, each &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Accepted &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;seq&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;, by &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;23&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;DF &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;data.frame&lt;/span&gt;(Gender, Quality, Accepted)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;head&lt;/span&gt;(DF)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;##   Gender Quality  Accepted
 ## 1   Male   Taste  0.000000
 ## 2   Male   Taste  4.347826
 ## 3   Male   Taste  8.695652
 ## 4   Male   Taste 13.043478
 ## 5 Female   Taste 17.391304
-## 6 Female   Taste 21.739130&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Step 2: Generate a simple boxplot with ggplot&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
-ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
-  geom_boxplot() &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+## 6 Female   Taste 21.739130
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Step 2: Generate a simple boxplot with ggplot&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(ggplot2)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(DF, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Quality, y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Accepted, fill &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Gender)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_boxplot&lt;/span&gt;() 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;p&gt;Step 3: Change the colours, legend position and x-axis order&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
-  geom_boxplot() +
-  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;)) +
-  xlab(&amp;quot;&amp;quot;) +
-  theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
-  scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(DF, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Quality, y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Accepted, fill &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Gender)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_boxplot&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;green&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;orange&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;xlab&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;top&amp;#34;&lt;/span&gt;, legend.title &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;element_blank&lt;/span&gt;()) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_x_discrete&lt;/span&gt;(limits&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Taste&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Color of package&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Capacity&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;p&gt;Step 4: Change the plotting order: first you have to include &lt;code&gt;factor&lt;/code&gt; code to set the order of the levels.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;DF$Gender_factor &amp;lt;- factor(DF$Gender, levels=c(&amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;))
-ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender_factor)) +
-  geom_boxplot() +
-  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;)) +
-  xlab(&amp;quot;&amp;quot;) +
-  theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
-  scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;DF&lt;span style=&#34;color:#f92672&#34;&gt;$&lt;/span&gt;Gender_factor &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;factor&lt;/span&gt;(DF&lt;span style=&#34;color:#f92672&#34;&gt;$&lt;/span&gt;Gender, levels&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Male&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Female&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(DF, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Quality, y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Accepted, fill &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Gender_factor)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_boxplot&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;green&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;orange&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;xlab&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;top&amp;#34;&lt;/span&gt;, legend.title &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;element_blank&lt;/span&gt;()) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_x_discrete&lt;/span&gt;(limits&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Taste&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Color of package&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Capacity&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;p&gt;Step 5: Horizontal bar chart: coord_flip()&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
-  geom_boxplot() +
-  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;)) +
-  xlab(&amp;quot;&amp;quot;) +
-  theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
-  coord_flip()+
-  scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(DF, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Quality, y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Accepted, fill &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Gender)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_boxplot&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;green&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;orange&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;xlab&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;top&amp;#34;&lt;/span&gt;, legend.title &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;element_blank&lt;/span&gt;()) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_flip&lt;/span&gt;()&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_x_discrete&lt;/span&gt;(limits&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Taste&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Color of package&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Capacity&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;p&gt;step 6: Change the legend order similar to plot order: under themes &lt;code&gt;fill=guide_legend(reverse=FALSE)&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(DF, aes(x = Quality, y = Accepted, fill = Gender)) +
-  geom_boxplot() +
-  scale_fill_manual(values = c(&amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;)) +
-  xlab(&amp;quot;&amp;quot;) +
-  theme(legend.position = &amp;quot;top&amp;quot;, legend.title = element_blank()) + 
-  guides(fill=guide_legend(reverse=TRUE)) +
-  coord_flip()+
-  scale_x_discrete(limits=c(&amp;quot;Taste&amp;quot;, &amp;quot;Color of package&amp;quot;, &amp;quot;Capacity&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(DF, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Quality, y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Accepted, fill &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Gender)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_boxplot&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;green&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;orange&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;xlab&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;top&amp;#34;&lt;/span&gt;, legend.title &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;element_blank&lt;/span&gt;()) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;guides&lt;/span&gt;(fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;guide_legend&lt;/span&gt;(reverse&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;TRUE&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_flip&lt;/span&gt;()&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_x_discrete&lt;/span&gt;(limits&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Taste&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Color of package&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Capacity&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;
 </description>
     </item>
     

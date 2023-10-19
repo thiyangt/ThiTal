@@ -73,7 +73,7 @@ Figure 5: Few samples from the MedLEA images
 
 You can get access to the data set via the MedLEA package. 
 
-```{r, eval=FLASE}
+```{r, eval=FALSE}
 install.packages("MedLEA")
 ```
 

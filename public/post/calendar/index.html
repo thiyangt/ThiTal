@@ -668,51 +668,44 @@
   <div class="article-container">
 
     <div class="article-style">
-      
-
-
-<p>It is important to maintain a calendar in order to budget your time well. In this post, I will show you some basic functionalities of <code>calendR</code> package in R. You can find more information <a href="https://r-coder.com/calendar-plot-r/">here</a>.</p>
-<div id="load-package" class="section level3">
-<h3>Load package</h3>
-<pre class="r"><code>library(calendR)</code></pre>
-</div>
-<div id="load-calendar---2021" class="section level3">
-<h3>1. Load calendar - 2021</h3>
-<pre class="r"><code>calendR(year = 2021, # Set the year
-        start = &quot;M&quot;,  # Set the first day of the calendar week as Monday (optional argument)
-        special.days = &quot;weekend&quot;, # Colour  weekends (optional argument),
-        text.size = 4,
-        special.col = &quot;#b2df8a&quot;) # background colour for weekends (optional arguments)</code></pre>
-<p><img src="/post/calendar_files/figure-html/unnamed-chunk-2-1.png" width="1440" /></p>
-</div>
-<div id="mark-events" class="section level3">
-<h3>2. Mark events</h3>
-<pre class="r"><code>events &lt;- rep(NA, 365)
-
-# Event dates
-events[100:200] &lt;- &quot;2nd semester&quot;
-events[213:240] &lt;- &quot;Examination&quot;
-events[300:310] &lt;- &quot;Conference&quot;
-events[359] &lt;- &quot;Christmas&quot; 
-
-calendR(year = 2021,
-        special.days = events,
-        start = &quot;M&quot;, 
-        special.col = c(&quot;#1b9e77&quot;, &quot;#d95f02&quot;, &quot;#7570b3&quot;, &quot;#e7298a&quot;),
-        text.size = 4,
-        legend.pos = &quot;right&quot;) </code></pre>
-<p><img src="/post/calendar_files/figure-html/unnamed-chunk-3-1.png" width="1440" /></p>
-</div>
-<div id="monthly-plan" class="section level3">
-<h3>3. Monthly plan</h3>
-<pre class="r"><code>calendR(year = 2021, month = 2,
-          text = c(&quot;Exam&quot;, &quot;Exam&quot;, # Event labels
-                 &quot;RLadies&quot;), 
-        text.pos = c(18, 20, 23), # Events dates texts 
-        text.size = 4.5,          # Font size of the labels
-        text.col = &quot;#1b9e77&quot;)</code></pre>
-<p><img src="/post/calendar_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-</div>
+      <p>It is important to maintain a calendar in order to budget your time well.  In this post, I will show you some basic functionalities of <code>calendR</code> package in R. You can find more information <a href="https://r-coder.com/calendar-plot-r/">here</a>.</p>
+<h3 id="load-package">Load package</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(calendR)
+</span></span></code></pre></div><h3 id="1-load-calendar---2021">1. Load calendar - 2021</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">calendR</span>(year <span style="color:#f92672">=</span> <span style="color:#ae81ff">2021</span>, <span style="color:#75715e"># Set the year</span>
+</span></span><span style="display:flex;"><span>        start <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;M&#34;</span>,  <span style="color:#75715e"># Set the first day of the calendar week as Monday (optional argument)</span>
+</span></span><span style="display:flex;"><span>        special.days <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;weekend&#34;</span>, <span style="color:#75715e"># Colour  weekends (optional argument),</span>
+</span></span><span style="display:flex;"><span>        text.size <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>,
+</span></span><span style="display:flex;"><span>        special.col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#b2df8a&#34;</span>) <span style="color:#75715e"># background colour for weekends (optional arguments)</span>
+</span></span></code></pre></div><img src="/post/calendar_files/figure-html/unnamed-chunk-2-1.png" width="1440" />
+<h3 id="2-mark-events">2. Mark events</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>events <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rep</span>(<span style="color:#66d9ef">NA</span>, <span style="color:#ae81ff">365</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Event dates</span>
+</span></span><span style="display:flex;"><span>events[100<span style="color:#f92672">:</span><span style="color:#ae81ff">200</span>] <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;2nd semester&#34;</span>
+</span></span><span style="display:flex;"><span>events[213<span style="color:#f92672">:</span><span style="color:#ae81ff">240</span>] <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;Examination&#34;</span>
+</span></span><span style="display:flex;"><span>events[300<span style="color:#f92672">:</span><span style="color:#ae81ff">310</span>] <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;Conference&#34;</span>
+</span></span><span style="display:flex;"><span>events[359] <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;Christmas&#34;</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">calendR</span>(year <span style="color:#f92672">=</span> <span style="color:#ae81ff">2021</span>,
+</span></span><span style="display:flex;"><span>        special.days <span style="color:#f92672">=</span> events,
+</span></span><span style="display:flex;"><span>        start <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;M&#34;</span>, 
+</span></span><span style="display:flex;"><span>        special.col <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;#1b9e77&#34;</span>, <span style="color:#e6db74">&#34;#d95f02&#34;</span>, <span style="color:#e6db74">&#34;#7570b3&#34;</span>, <span style="color:#e6db74">&#34;#e7298a&#34;</span>),
+</span></span><span style="display:flex;"><span>        text.size <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>,
+</span></span><span style="display:flex;"><span>        legend.pos <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;right&#34;</span>) 
+</span></span></code></pre></div><img src="/post/calendar_files/figure-html/unnamed-chunk-3-1.png" width="1440" />
+<h3 id="3-monthly-plan">3. Monthly plan</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">calendR</span>(year <span style="color:#f92672">=</span> <span style="color:#ae81ff">2021</span>, month <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>          text <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Exam&#34;</span>, <span style="color:#e6db74">&#34;Exam&#34;</span>, <span style="color:#75715e"># Event labels</span>
+</span></span><span style="display:flex;"><span>                 <span style="color:#e6db74">&#34;RLadies&#34;</span>), 
+</span></span><span style="display:flex;"><span>        text.pos <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">23</span>), <span style="color:#75715e"># Events dates texts </span>
+</span></span><span style="display:flex;"><span>        text.size <span style="color:#f92672">=</span> <span style="color:#ae81ff">4.5</span>,          <span style="color:#75715e"># Font size of the labels</span>
+</span></span><span style="display:flex;"><span>        text.col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#1b9e77&#34;</span>)
+</span></span></code></pre></div><pre tabindex="0"><code>Warning in text != &#34;&#34; &amp;&amp; is.null(text.pos): &#39;length(x) = 3 &gt; 1&#39; in coercion to
+&#39;logical(1)&#39;
+</code></pre><pre tabindex="0"><code>Warning in text == &#34;&#34; &amp;&amp; !is.null(text.pos): &#39;length(x) = 3 &gt; 1&#39; in coercion to
+&#39;logical(1)&#39;
+</code></pre><img src="/post/calendar_files/figure-html/unnamed-chunk-4-1.png" width="672" />
 
     </div>
 
