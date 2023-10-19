@@ -31,7 +31,7 @@ The workshops truly represent the breadth and depth of the data science field, c
 
 # Jan Pauls's inspiring story, Keynotes, Talks
 
-The posit conference kicked off with This is Jan Pauls's inspiring story. On Indian Island, a river gives the [Penobscot people](https://en.wikipedia.org/wiki/Penobscot) life. Jan Paul works for the Penobscot Nation in the Department of Natural Resources and Water Quality. She's using open-source technology, like R and the RStudio IDE, so that her people can stay healthy. You can watch the story using the following link.
+The Posit conference began with an inspiring narrative shared by Jan Paul, whose story is deeply intertwined with the vital relationship between the [Penobscot](https://en.wikipedia.org/wiki/Penobscot) people and their life-sustaining river on Indian Island. Jan Paul works for the Penobscot Nation in the Department of Natural Resources and Water Quality. Her work involves employing open-source technology, including tools like R and the RStudio IDE, for data analysis. Her mission is to ensure the well-being of the river, thereby safeguarding the health of her people. You can watch the story using the following link:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8VCr_bohahw?si=xBcSrHlM3OgrRuf9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
