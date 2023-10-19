@@ -40,6 +40,10 @@ The posit conference kicked off with This is Jan Pauls's inspiring story. On Ind
 The [keynotes, talks and lightning talks](https://posit.co/blog/keynotes-and-talks-at-posit-conf-2023/) featured an impressive line-up of speakers on various topics. 
 The talks comprehensively address various facets of data science, spanning topics such as data wrangling, modeling, communication, production tools, reproducible research, open science, and sharing experiences on transitioning to R and Python. Jeremy Howard gave a fascinating keynote on [A Hackers’ Guide to Language Models](https://www.youtube.com/watch?v=jkrNMKz9pWU).
 
+<img src="/post/positimages/conf.png" alt="posit" width="900"/>
+
+
+
 
 # R Ladies
 
