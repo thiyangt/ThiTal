@@ -5,7 +5,7 @@
     <link>https://thiyanga.netlify.app/</link>
       <atom:link href="https://thiyanga.netlify.app/index.xml" rel="self" type="application/rss+xml" />
     <description>THIYANGA TALAGALA</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 02 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 18 Oct 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>THIYANGA TALAGALA</title>
@@ -821,12 +821,12 @@
     <item>
       <title>My Posit::conf 2023 Experience - A Conference of Insights, Knowledge, Connections, and Explorations</title>
       <link>https://thiyanga.netlify.app/post/posit/</link>
-      <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 18 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/posit/</guid>
       <description>&lt;img src=&#34;https://thiyanga.netlify.app/post/positimages/cb.png&#34; alt=&#34;posit&#34; width=&#34;900&#34;/&gt;
 &lt;p&gt;The Posit::conf 2023 (formerly known as RStudio conference) was held in &lt;a href=&#34;https://www.google.com/maps/place/Hyatt+Regency+Chicago/@41.8874495,-87.6242363,17z/data=!3m2!4b1!5s0x880e2ca8e189d17b:0x5290a436f2868f40!4m9!3m8!1s0x880e2ca924587447:0x880c1ae8574967ef!5m2!4m1!1i2!8m2!3d41.8874455!4d-87.6216614!16s%2Fm%2F02vpgg1?entry=ttu&#34;&gt;Hyatt Regency in Chicago, Illinois, USA&lt;/a&gt; from 16 to 20 September, 2023. This was the first conference held since the name was changed from RStudio to Posit. It was a conference full of learning, making connections, and feeling inspired. As an attendee, I had the privilege of participating in workshops, attending various events, listening to great talks, meeting talented individuals, and experiencing the empowering atmosphere of R Ladies. I am immensely grateful for &lt;a href=&#34;https://posit.co/&#34;&gt;Posit Software, PBC formerly RStudio, PBC&lt;/a&gt; for this valuable opportunity. In this blog post, I&amp;rsquo;ll share my experience from Posit::conf 2023.&lt;/p&gt;
 &lt;img src=&#34;https://thiyanga.netlify.app/post/positcover.png&#34; alt=&#34;posit&#34; width=&#34;900&#34;/&gt;
-&lt;h1 id=&#34;safe-positive-inclusive-and-respectfu-and-welcoming-atmosphere-for-everyone&#34;&gt;Safe, positive, inclusive and respectfu and welcoming atmosphere for everyone&lt;/h1&gt;
+&lt;h1 id=&#34;safe-positive-inclusive-and-respectful-and-welcoming-atmosphere-for-everyone&#34;&gt;Safe, positive, inclusive and respectful and welcoming atmosphere for everyone&lt;/h1&gt;
 &lt;p&gt;The conference had a code of conduct in place, which provided a safer environment by setting clear guidelines for expected behavior, ensuring that all participants feel respected, safe, included, and free from any form of harassment or discrimination. It provided a positive and welcoming atmosphere for everyone attending the event.&lt;/p&gt;
 &lt;img src=&#34;https://thiyanga.netlify.app/post/positimages/codeofconduct.png&#34; alt=&#34;posit&#34; width=&#34;900&#34;/&gt;
 &lt;h1 id=&#34;workshops&#34;&gt;Workshops&lt;/h1&gt;

@@ -1,7 +1,7 @@
 ---
 title: "My Posit::conf 2023 Experience - A Conference of Insights, Knowledge, Connections, and Explorations"
 author: Thiyanga Talagala
-date: '2023-10-02'
+date: '2023-10-18'
 category: [R, Python]
 tags: [R, Python]
 ---
@@ -16,7 +16,7 @@ The Posit::conf 2023 (formerly known as RStudio conference) was held in [Hyatt R
 <img src="/post/positcover.png" alt="posit" width="900"/>
 
 
-# Safe, positive, inclusive and respectfu and welcoming atmosphere for everyone
+# Safe, positive, inclusive and respectful and welcoming atmosphere for everyone
 
 The conference had a code of conduct in place, which provided a safer environment by setting clear guidelines for expected behavior, ensuring that all participants feel respected, safe, included, and free from any form of harassment or discrimination. It provided a positive and welcoming atmosphere for everyone attending the event.
 
