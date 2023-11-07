@@ -16,6 +16,10 @@ title: Courses
 
 # 2023
 
+Semester 2
+
+- [STA 331 2.0 Stochastic Processes](https://stochasticprocesses.netlify.app/2023/10/31/2023-october-2024-february/)
+
 Semester 1
 
 - [STA 326 2.0 Programming and Data Analysis with R](https://hellor2023.netlify.app/schedule/)
