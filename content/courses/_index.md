@@ -14,6 +14,16 @@ title: Courses
 
 -----
 
+# 2024
+
+Semester 2
+
+- [STA 331 2.0 Stochastic Processes](https://thiyangt.github.io/sp/)
+
+Semester 1
+
+- [STA 113 2.0 Descriptive Statistics](https://thiyangt.github.io/descriptivestatisticsweb/)
+
 # 2023
 
 Semester 2
