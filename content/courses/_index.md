@@ -14,15 +14,32 @@ title: Courses
 
 -----
 
-# 2024
+# 2024/2025
+
+
+**MSc in Data Science and AI**
+
+[DSA 554 3.0 Spatio-temporal Data Analysis](https://thiyangt.github.io/spatio-temporal/)
+
+**BSc (Hons) Statistics, Department of Statistics, Faculty of Applied Sciences, University of Sri Jayewardenepura (USJ)**
 
 Semester 2
 
 - [STA 331 2.0 Stochastic Processes](https://thiyangt.github.io/sp/)
 
+- [STA 315 2.0 Essential Skills in Statistics](https://thiyangt.github.io/EssentialSkillsInStatistics/)
+
+
+
+# 2024
+
 Semester 1
 
 - [STA 113 2.0 Descriptive Statistics](https://thiyangt.github.io/descriptivestatisticsweb/)
+
+- [STA 326 2.0/ ASP 454 2.0/ CSC 381 2.0 Programming and Data Analysis with R](https://thiyangt.github.io/rprogramming/)
+
+- [STA 492 2.0/ ASP 460 2.0 Data Visualisation](https://thiyangt.github.io/datavisualisation/)
 
 # 2023
 
