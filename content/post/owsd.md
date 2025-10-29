@@ -1,5 +1,5 @@
 ---
-title: "How I Managed My Precious 180 Seconds at the OWSD Short Talk, Big Impact Competition and the Impact It Made"
+title: "How I Managed My Precious 180 Seconds at the UNESCO-OWSD Short Talk, Big Impact Competition and the Impact It Made"
 author: Thiyanga Talagala
 date: '2025-10-29'
 category: [Short Talk, Big Impact, 3MT, OWSD, UNESCO]
@@ -76,7 +76,12 @@ Participating in the OWSD competition gave me more than just a platform. I learn
 
 ## My 180 seconds might have been short, but the impact they created will stay with me for a long time.
 
+## Thank you 
 
+A huge thank you to Erin Johnson and Giulia Signori of the OWSD Secretariat. They highlighted the positive aspects of each talk and appreciated the valuable messages shared with the audience. The way they organized the event was also an excellent learning experience for us, providing insights into effective event planning and audience engagement.
 
+A big shout-out to UNESCO-OWSD and The World Academy of Sciences (TWAS) for providing this valuable opportunity by organizing such an impactful event,
+
+## My 180 seconds might have been short, but the impact it created will stay with me for a long time.
 
 <img src="/post/owsd/owsd1.png" alt="posit" width="900"/>
