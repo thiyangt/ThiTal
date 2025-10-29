@@ -1,0 +1,35 @@
+---
+title: "Coronavirus Dashboard - Sri Lanka"
+author: Thiyanga Talagala
+date: '2021-12-06'
+category: [R, data, ggplot, tidyverse]
+tag: [R, data, ggplot, tidyverse]
+summary: "The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data in Sri Lanka"
+---
+
+
+
+
+<iframe width="880" height="450" src="https://www.youtube.com/embed/fHypdnkr4_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+>
+<div class="alert alert-info">
+  <strong></strong> Click [here](https://thiyangt.github.io/coviddashboard/) to view the dashboard.
+</div>
+
+
+
+
+This dashboard provides an overview of the COVID-19 pandemic in Sri Lanka. 
+
+All input data (related to the local situation) for the dashboard is pulled from COVID-19 daily situation reports published by Epidemiology Unit, Ministry of Health and Indigenous Medical Services, Sri Lanka through [covid19srilanka](https://github.com/thiyangt/covid19srilanka) package in R. Sri Lanka maps are created based on [ceylon](https://github.com/thiyangt/ceylon) package in R.
+
+Our paper is available at https://arxiv.org/pdf/2205.07286.pdf
+
+
+
+Reproducible code is available at https://github.com/thiyangt/coviddashboard
+
+*Cite the work as follows*
+
+Talagala, T. S; De Alwis R. S (2021, December 6). Covid-19 Dashboard Visualisation: Sri Lanka https://thiyangt.github.io/coviddashboard/
