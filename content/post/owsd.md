@@ -74,13 +74,12 @@ Furthermore, this experience has also given me a platform to give a voice to our
 
 Participating in the OWSD competition gave me more than just a platform. I learned how to distill my ideas, how to communicate science with heart, and how to make every second count. 
 
-## My 180 seconds might have been short, but the impact they created will stay with me for a long time.
 
 ## Thank you 
 
 A huge thank you to Erin Johnson and Giulia Signori of the OWSD Secretariat. They highlighted the positive aspects of each talk and appreciated the valuable messages shared with the audience. The way they organized the event was also an excellent learning experience for us, providing insights into effective event planning and audience engagement.
 
-A big shout-out to UNESCO-OWSD and The World Academy of Sciences (TWAS) for providing this valuable opportunity by organizing such an impactful event,
+A big shout-out to UNESCO-OWSD and The World Academy of Sciences (TWAS) for providing this valuable opportunity by organizing such an impactful event.
 
 ## My 180 seconds might have been short, but the impact it created will stay with me for a long time.
 
