@@ -5,7 +5,7 @@
     <link>https://thiyanga.netlify.app/</link>
       <atom:link href="https://thiyanga.netlify.app/index.xml" rel="self" type="application/rss+xml" />
     <description>THIYANGA TALAGALA</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 29 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 11 Feb 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>THIYANGA TALAGALA</title>
@@ -819,6 +819,72 @@
     </item>
     
     <item>
+      <title>Recreating Nightingale&#39;s most famous diagram, known as the Coxcomb</title>
+      <link>https://thiyanga.netlify.app/post/blog/</link>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://thiyanga.netlify.app/post/blog/</guid>
+      <description>&lt;p&gt;Florence Nightingale showed the world that data can save lives.&lt;/p&gt;
+&lt;p&gt;Today, February 11, is recognized globally as the International Day of Women and Girls in Science. To mark this day, I recreated Florence Nightingale’s famous Coxcomb chart using R programming with hashtag#tidyverse mainly using hashtag#tidyr hashtag#dplyr and hashtag#ggplot2. It was one of the earliest and most powerful examples of data visualization influencing public policy.&lt;/p&gt;
+&lt;p&gt;Nightingale was not only a nurse but also a statistician. At a time when women had limited access to science, she used data to demonstrate that more soldiers were dying from preventable diseases than from battle wounds during the Crimean War. Her visualization changed healthcare policy. This plot is a reminder that:&lt;/p&gt;
+&lt;p&gt;• Data is powerful when communicated clearly.&lt;/p&gt;
+&lt;p&gt;• Visualization is not just decoration. It is evidence.&lt;/p&gt;
+&lt;p&gt;• Science needs more women and more visible role models.&lt;/p&gt;
+&lt;p&gt;#rprogramming #InternationalDayOfWomenAndGirlsInScience
+#WomenInScience #FlorenceNightingale #DataVisualization #WomenInSTEM #GirlsInScience #OWSD&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Packages&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(tidyverse)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(HistData)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Data&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Nightingale&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;glimpse&lt;/span&gt;(Nightingale)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Rows: 24
+## Columns: 10
+## $ Date         &amp;lt;date&amp;gt; 1854-04-01, 1854-05-01, 1854-06-01, 1854-07-01, 1854-08-…
+## $ Month        &amp;lt;ord&amp;gt; Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec, Jan, Feb, Ma…
+## $ Year         &amp;lt;int&amp;gt; 1854, 1854, 1854, 1854, 1854, 1854, 1854, 1854, 1854, 185…
+## $ Army         &amp;lt;int&amp;gt; 8571, 23333, 28333, 28722, 30246, 30290, 30643, 29736, 32…
+## $ Disease      &amp;lt;int&amp;gt; 1, 12, 11, 359, 828, 788, 503, 844, 1725, 2761, 2120, 120…
+## $ Wounds       &amp;lt;int&amp;gt; 0, 0, 0, 0, 1, 81, 132, 287, 114, 83, 42, 32, 48, 49, 209…
+## $ Other        &amp;lt;int&amp;gt; 5, 9, 6, 23, 30, 70, 128, 106, 131, 324, 361, 172, 57, 37…
+## $ Disease.rate &amp;lt;dbl&amp;gt; 1.4, 6.2, 4.7, 150.0, 328.5, 312.2, 197.0, 340.6, 631.5, …
+## $ Wounds.rate  &amp;lt;dbl&amp;gt; 0.0, 0.0, 0.0, 0.0, 0.4, 32.1, 51.7, 115.8, 41.7, 30.7, 1…
+## $ Other.rate   &amp;lt;dbl&amp;gt; 7.0, 4.6, 2.5, 9.6, 11.9, 27.7, 50.1, 42.8, 48.0, 120.0, …
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Data Pre-processing and Plotting&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Nightingale &lt;span style=&#34;color:#f92672&#34;&gt;|&amp;gt;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;(Date, Month, Year, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#a6e22e&#34;&gt;contains&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rate&amp;#34;&lt;/span&gt;))  &lt;span style=&#34;color:#f92672&#34;&gt;|&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;pivot_longer&lt;/span&gt;(cols &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               names_to &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Cause&amp;#34;&lt;/span&gt;, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               values_to &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Rate&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;|&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;mutate&lt;/span&gt;(Cause &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;gsub&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.rate&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, Cause),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         period &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ifelse&lt;/span&gt;(Date &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;as.Date&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1855-03-01&amp;#34;&lt;/span&gt;), 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;APRIL 1854 TO MARCH 1855&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;APRIL 1855 TO MARCH 1856&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         Month &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fct_relevel&lt;/span&gt;(Month, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Jul&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Aug&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sep&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Oct&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Nov&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Dec&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Jan&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Feb&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Mar&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Apr&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;May&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Jun&amp;#34;&lt;/span&gt;))&lt;span style=&#34;color:#f92672&#34;&gt;|&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;Month, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;Rate, fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;Cause)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_col&lt;/span&gt;(width&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, alpha&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_equal&lt;/span&gt;(ratio &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_polar&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;facet_wrap&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;~&lt;/span&gt;period) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;skyblue3&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                               &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;grey30&amp;#34;&lt;/span&gt;, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                               &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#fb9a99&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_y_sqrt&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme_bw&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(axis.title.x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;element_blank&lt;/span&gt;(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        axis.title.y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;element_blank&lt;/span&gt;(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        axis.text.y  &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;element_blank&lt;/span&gt;(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        axis.ticks.y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;element_blank&lt;/span&gt;(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        strip.text &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;element_text&lt;/span&gt;(size &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bottom&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        plot.margin &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;unit&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;pt&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        plot.title &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;element_text&lt;/span&gt;(vjust &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/feb112026_files/figure-html/unnamed-chunk-1-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How I Managed My Precious 180 Seconds at the UNESCO-OWSD Short Talk, Big Impact Competition and the Impact It Made</title>
       <link>https://thiyanga.netlify.app/post/owsd/</link>
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
@@ -854,10 +920,9 @@
 &lt;p&gt;The lessons I learned from the competition have become an integral part of my teaching. I now incorporate them into my Scientific Writing and Communication and Essential Skills in Statistics course units when teaching undergraduate and postgraduate students in the fields of Statistics, Data Science, and Artificial Intelligence. I have also been invited by several organizations to conduct training sessions on effective scientific communication and data storytelling.&lt;/p&gt;
 &lt;p&gt;Furthermore, this experience has also given me a platform to give a voice to our proud artifacts and historical paintings in Sri Lanka, highlighting the mathematical concepts rooted within them and how technology can help preserve and celebrate this heritage on a global stage.&lt;/p&gt;
 &lt;p&gt;Participating in the OWSD competition gave me more than just a platform. I learned how to distill my ideas, how to communicate science with heart, and how to make every second count.&lt;/p&gt;
-&lt;h2 id=&#34;my-180-seconds-might-have-been-short-but-the-impact-they-created-will-stay-with-me-for-a-long-time&#34;&gt;My 180 seconds might have been short, but the impact they created will stay with me for a long time.&lt;/h2&gt;
 &lt;h2 id=&#34;thank-you&#34;&gt;Thank you&lt;/h2&gt;
 &lt;p&gt;A huge thank you to Erin Johnson and Giulia Signori of the OWSD Secretariat. They highlighted the positive aspects of each talk and appreciated the valuable messages shared with the audience. The way they organized the event was also an excellent learning experience for us, providing insights into effective event planning and audience engagement.&lt;/p&gt;
-&lt;p&gt;A big shout-out to UNESCO-OWSD and The World Academy of Sciences (TWAS) for providing this valuable opportunity by organizing such an impactful event,&lt;/p&gt;
+&lt;p&gt;A big shout-out to UNESCO-OWSD and The World Academy of Sciences (TWAS) for providing this valuable opportunity by organizing such an impactful event.&lt;/p&gt;
 &lt;h2 id=&#34;my-180-seconds-might-have-been-short-but-the-impact-it-created-will-stay-with-me-for-a-long-time&#34;&gt;My 180 seconds might have been short, but the impact it created will stay with me for a long time.&lt;/h2&gt;
 &lt;img src=&#34;https://thiyanga.netlify.app/post/owsd/owsd1.png&#34; alt=&#34;posit&#34; width=&#34;900&#34;/&gt;
 </description>
