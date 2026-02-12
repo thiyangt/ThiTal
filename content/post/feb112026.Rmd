@@ -2,14 +2,15 @@
 title: "Recreating Nightingale's most famous diagram, known as the Coxcomb"
 author: Thiyanga Talagala
 date: '2026-02-11'
-categories: [ggplot2, tidyverse, data visualisation]
-tags: [R, ggplot2, International Day of Women and Girls in Science.]
+category: [ggplot2, tidyverse, data visualisation]
+tag: [R, ggplot2, STEM, tidyverse]
 summary: "February 11, is recognized globally as the International Day of Women and Girls in Science."
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
 
 Florence Nightingale showed the world that data can save lives.
 
@@ -25,6 +26,8 @@ Nightingale was not only a nurse but also a statistician. At a time when women h
 
 #rprogramming #InternationalDayOfWomenAndGirlsInScience
 #WomenInScience #FlorenceNightingale #DataVisualization #WomenInSTEM #GirlsInScience #OWSD
+
+<img src="/post/fn.png" alt="posit" width="900"/>
 
 ```{r, warning=FALSE, message=FALSE}
 
