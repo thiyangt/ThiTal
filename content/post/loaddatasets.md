@@ -1,0 +1,59 @@
+---
+title: "Import data into R: Overwritten object names"
+author: Thiyanga Talagala
+date: '2020-10-14'
+categories: [R]
+tags: [R]
+summary: "Read data files"
+---
+
+## Spotting the problem
+
+First, I create a small dataset for the demonstration. The following dataset represents the Happiness index for five countries.
+
+
+``` r
+happy <- data.frame(
+  country = c("Finland", "Norway", "Denmark", "Iceland", "Netherlands"),
+  score = c(7.76, 7.60, 7.55, 7.49, 7.48))
+
+happy
+```
+
+```
+      country score
+1     Finland  7.76
+2      Norway  7.60
+3     Denmark  7.55
+4     Iceland  7.49
+5 Netherlands  7.48
+```
+
+Save the dataset as shown below.
+
+```r
+save(happy, file="happyindex.rda")
+
+```
+
+Let's load the dataset with,
+
+```r
+load("happyindex.rda")
+```
+
+```r
+happyindex
+```
+
+The following error message pops up,
+
+> Error: object 'happyindex' not found
+
+## Tackling the problem
+
+```r
+loadHappy <- load("happyindex.rda")
+happyDataloaded <- get(loadHappy)
+happyDataloaded
+```

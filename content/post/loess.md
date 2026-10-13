@@ -1,0 +1,48 @@
+---
+title: "Weighted LOESS (LOcal regrESSion) "
+date: "2021-08-07"
+slug: blog
+categories: [ggplot2]
+tags: [R, ggplot2]
+---
+
+# `LO`cal regr`ESS`ion (LOESS) or `LO`cally `WE`ighted `S`catter-plot `S`moother (LOWESS)
+
+ LOESS or LOWESS is a nonparametric technique to fit a smooth curve through points in a scatter plot. This approach uses locally estimated linear regression at its core.
+ 
+ The following code illustrates how to include a loess line using the ggplot2 package.
+ 
+ 
+ ``` r
+ library(ggplot2)
+ 
+ set.seed(1)
+ x <- rnorm(60)
+ y <- c(rnorm(40), 10, rnorm(19))
+ df <- data.frame(x=x, y=y)
+ 
+ ## Without weights
+ ggplot(data=df, aes(x=x, y=y)) + geom_point() + 
+  geom_smooth(method=loess, legend=FALSE)
+ ```
+ 
+ <img src="/post/loess_files/figure-html/unnamed-chunk-1-1.png" alt="" width="672" />
+ 
+Furthermore, you can plot loess smoothing weighting the observations as follows:
+ 
+ 
+ ``` r
+ weights <- c(rep(1, 40), 20, rep(1, 19))
+ df$weights <- weights
+ 
+ 
+ ggplot(data=df, aes(x=x, y=y, size=weights, weight=weights)) + geom_point() + 
+  geom_smooth(method=loess, legend=TRUE)
+ ```
+ 
+ <img src="/post/loess_files/figure-html/unnamed-chunk-2-1.png" alt="" width="672" />
+ 
+ 
+ 
+ 
+ 

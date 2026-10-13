@@ -1,0 +1,50 @@
+---
+title: "Why Did ChatGPT Get My Simple Statistics Question Wrong?"
+author: Thiyanga Talagala
+date: '2026-10-23'
+category: [LLM, Probability, AI, Trustworthy AI, ChatGPT]
+tags: [LLM, Probability, AI, Trustworthy AI, ChatGPT]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+These days, I have been running a few experiments to understand how LLMs generate answers.
+
+I asked ChatGPT a simple statistics question:
+
+“The number of calls received at an information desk during a one-hour period follows a Poisson distribution with a mean of 10 calls. Write R code required to calculate the probability of receiving more than 6 but fewer than 13 calls within a one-hour period.”
+
+To my surprise, ChatGPT gave an incorrect answer.
+
+Interestingly, the approach was correct, but the final answer was wrong. 
+Here are the screenshots of my conversation with ChatGPT.
+
+<img src="/post/oct132026/chatgpt1.png" alt="posit" width="900"/>
+
+At first, this seemed strange. If the code is correct and the calculation is correct, how can the final answer be wrong? Following are the follow ups from the conversation.
+
+<img src="/post/oct132026/chatgpt4.png" alt="posit" width="900"/>
+
+<img src="/post/oct132026/chatgpt3.png" alt="posit" width="900"/>
+
+<img src="/post/oct132026/chatgpt2.png" alt="posit" width="900"/>
+
+The key point is that a wrong answer to a simple statistics problem does not necessarily mean that ChatGPT “does not know” the Poisson distribution.
+
+ChatGPT is not trained as a mathematician or statistician who calculates and checks every answer step by step. It is an LLM (Large Language Model) trained primarily to learn patterns in sequences of tokens. At a fundamental level, it learns relationships such as
+
+[
+P(\text{next token}\mid\text{previous tokens}),
+]
+
+means “given everything that has come before, what is the probability of each possible next token?”. In other words, an LLM does not directly calculate whether an answer is true. At each step, it estimates a probability distribution over possible next tokens, given the tokens that came before. It uses these learned patterns to generate a response.
+
+Because the model has learned an enormous number of language, statistical and mathematical patterns, it can often produce answers that look as if they were carefully reasoned. However, generating a convincing explanation is not the same as independently calculating and verifying every numerical result.
+
+The model predicts what tokens are likely to come next; it does not directly predict whether a statement is true.
+
+Therefore, an LLM can produce a statistically plausible explanation while making a mistake in a calculation or in the final numerical answer. The explanation may even look completely convincing.
+
+This is why validation is essential when using AI for statistics and mathematics. Never assume that a numerical answer is correct simply because the reasoning looks clear or the final answer is presented confidently. Check the calculation independently, use software when appropriate, and verify that the result.

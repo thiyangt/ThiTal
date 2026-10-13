@@ -1,0 +1,90 @@
+---
+title: "How to install and load multiple packages at once?"
+author: Thiyanga Talagala
+date: '2019-03-22'
+categories: [R, tidyverse, gganimate]
+tags: [R, tidyverse, gganimate]
+summary: "Install multiple R packages at once/ check and install missing packages."
+---
+
+<style type="text/css">
+h2 { /* Header 2 */
+    font-size: 22px;
+  color: DarkBlue;
+}
+</style>
+
+## install packages
+
+To install multiple packages with a single call to `install.packages`, pass the names of the packages as a character vector to the install.packages() function.
+
+
+``` r
+install.packages(c("gganimate", "tidyverse", "gapminder"))
+```
+
+
+## load packages
+
+Once you have the packages installed, you can make their contents available to use in your current R session by running,
+
+
+``` r
+lapply(c("gganimate", "tidyverse", "gapminder"), require, character.only = TRUE)
+```
+
+```
+## [[1]]
+## [1] TRUE
+## 
+## [[2]]
+## [1] TRUE
+## 
+## [[3]]
+## [1] TRUE
+```
+
+
+## check and install missing packages
+
+
+
+``` r
+list.of.packages <- c("gganimate", "tidyverse", "gapminder")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+```
+
+
+## For other alternatives see
+
+1. [littler](http://dirk.eddelbuettel.com/code/littler.html)
+
+```r
+library(littler)
+install.r EIAdata gdata ggmap ggplot2 
+```
+
+
+2. [ipak](https://gist.github.com/stevenworthington/3178163)
+
+
+``` r
+ipak <- function(pkg){
+    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE)
+}
+
+# usage
+packages <- c("gganimate", "tidyverse", "gapminder")
+ipak(packages)
+```
+
+```
+## gganimate tidyverse gapminder 
+##      TRUE      TRUE      TRUE
+```
+
+3. [easypackages](https://cran.r-project.org/web/packages/easypackages/README.html)

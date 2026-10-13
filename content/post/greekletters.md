@@ -1,0 +1,30 @@
+---
+title: "Some useful Greek letters you might use on your reports"
+author: Thiyanga Talagala
+date: '2019-01-29'
+categories: [R, Rmarkdown]
+tags: [R, Rmarkdown]
+summary: "Commands to type Greek letters on Rmarkdown or Latex"
+---
+
+|   |   |   |   |   |
+|---|---|---|---|---|
+| **alpha**:   | **beta**:  | **gamma**  | **delta**    
+| `\alpha` : `\(\alpha\)`   | `\beta`: `\(\beta\)`  | `\gamma`: `\(\gamma\)`  | `\delta`: `\(\delta\)`
+|   |   |  `\Gamma`: `\(\Gamma\)` | `\Delta`: `\(\Delta\)`    
+|**epsilon**   | **Zeta**  | **eta**  | **theta**     
+|`\epsilon`: `\(\epsilon\)`    | `\zeta`: `\(\zeta\)`  | `\eta`: `\(\eta\)`  | `\theta`: `\(\theta\)`  
+|`\varepsilon`: `\(\varepsilon\)`|||`\Theta`: `\(\Theta\)`
+|**iota**|**kappa**|**lambda**|**mu**
+|`\iota`: `\(\iota\)`|`\kappa:` `\(\kappa\)`|`\lambda:` `\(\lambda\)`|`\mu:` `\(\mu\)`
+|**nu**|**xi**|**pi**|**rho**
+|`\nu:` `\(\nu\)`|`\xi:` `\(\xi\)`|`\pi:` `\(\pi\)`|`\rho:` `\(\rho\)`
+||`\Xi:` `\(\Xi\)`|`\Pi:` `\(\Pi\)`|
+|**sigma**|**upsilon**|**phi**|**omicron**
+|`\sigma:` `\(\sigma\)`|`\upsilon:` `\(\upsilon\)`|`\phi:` `\(\phi\)`|`\omicron:` `\(\omicron\)`
+|`\Sigma:` `\(\Sigma\)`||`\Phi:` `\(\Phi\)`||
+|**tau**|**chi**|**psi**|**Omega**
+|`\tau:` `\(\tau\)`|`\chi:` `\(\chi\)`|`\psi:` `\(\psi\)`|`\omega:` `\(\omega\)`
+|||`\Psi:` `\(\Psi\)`|`\Omega:` `\(\Omega\)`
+
+
