@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI | THIYANGA TALAGALA</title>
+    <link>https://thiyanga.netlify.app/tags/ai/</link>
+      <atom:link href="https://thiyanga.netlify.app/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <description>AI</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 13 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://thiyanga.netlify.app/img/icon-192.png</url>
+      <title>AI</title>
+      <link>https://thiyanga.netlify.app/tags/ai/</link>
+    </image>
+    
+    <item>
+      <title>Why Did ChatGPT Get My Simple Statistics Question Wrong?</title>
+      <link>https://thiyanga.netlify.app/post/chatgpt/</link>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://thiyanga.netlify.app/post/chatgpt/</guid>
+      <description>&lt;p&gt;These days, I have been running a few experiments to understand how LLMs&amp;rsquo; generate answers for statistics questions.&lt;/p&gt;
+&lt;p&gt;I asked ChatGPT a simple statistics question:&lt;/p&gt;
+&lt;p&gt;“The number of calls received at an information desk during a one-hour period follows a Poisson distribution with a mean of 10 calls. Write R code required to calculate the probability of receiving more than 6 but fewer than 13 calls within a one-hour period.”&lt;/p&gt;
+&lt;p&gt;To my surprise, ChatGPT gave an incorrect answer.&lt;/p&gt;
+&lt;p&gt;Interestingly, the approach was correct, but the final answer was wrong.
+Here are the screenshots of my conversation with ChatGPT.&lt;/p&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/oct132026/chatgpt1.png&#34; alt=&#34;posit&#34; width=&#34;900&#34;/&gt;
+&lt;p&gt;At first, this seemed strange. If the approach and code is correct and the calculation is correct, how can the final answer be wrong? Following are the follow ups from the conversation.&lt;/p&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/oct132026/chatgpt4.png&#34; alt=&#34;posit&#34; width=&#34;900&#34;/&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/oct132026/chatgpt3.png&#34; alt=&#34;posit&#34; width=&#34;900&#34;/&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/oct132026/chatgpt2.png&#34; alt=&#34;posit&#34; width=&#34;900&#34;/&gt;
+&lt;p&gt;The key point is that a wrong answer to a simple statistics problem does not necessarily mean that ChatGPT “does not know” the Poisson distribution.&lt;/p&gt;
+&lt;h2 id=&#34;why-it-happens-arithmetic-is-done-by-prediction-not-computation&#34;&gt;Why it happens: Arithmetic is done by prediction, not computation.&lt;/h2&gt;
+&lt;p&gt;ChatGPT is not trained like a mathematician or statistician who solves a problem step by step and independently checks whether every calculation is correct. It is a Large Language Model (LLM), trained primarily to learn patterns and relationships in sequences of tokens from enormous amounts of text, including language, mathematics, statistics, programming, and other types of documents.&lt;/p&gt;
+&lt;p&gt;At a fundamental level, an LLM learns to predict what is likely to come next in a sequence. Very roughly, at each step it estimates:&lt;/p&gt;
+&lt;p&gt;[
+P(\text{next token}\mid\text{previous tokens})
+]&lt;/p&gt;
+&lt;p&gt;In simple terms, this means:&lt;/p&gt;
+&lt;p&gt;“Given everything that has been written so far, what is the most likely next piece of text?”&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\(P(next token | previous tokens)\)&lt;/code&gt; is the probability of each possible next token (a word or word fragment) given everything written so far. At every step the model scores all possible tokens, picks one (usually a high-probability one), appends it, and repeats.&lt;/p&gt;
+&lt;p&gt;This is an important distinction. Predicting the next token is not the same as independently calculating a mathematical answer.&lt;/p&gt;
+&lt;h2 id=&#34;why-this-matters-for-calculations&#34;&gt;Why this matters for calculations&lt;/h2&gt;
+&lt;p&gt;The LLM isn’t running a calculator. Inasted LLm &amp;ldquo;Looking up values from memory&amp;rdquo;. In other words, When it “computes” 47.3 × 18.6, it is predicting which digits most plausibly come next, based on patterns it learned. For familiar, short arithmetic those patterns are reliable. For long or unusual calculations, the most likely-looking digits can differ from the correct ones.&lt;/p&gt;
+&lt;h2 id=&#34;why-validation-matters&#34;&gt;Why validation matters&lt;/h2&gt;
+&lt;p&gt;This is why we need to be especially careful when using AI for statistics and mathematics.&lt;/p&gt;
+&lt;p&gt;We should not assume that a numerical answer is correct simply because:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;the explanation sounds convincing,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;the statistical terminology is correct,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;the R or Python code looks appropriate, or&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;the answer is presented confidently.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For numerical and statistical work, the result should be independently checked.&lt;/p&gt;
+&lt;p&gt;For example, we can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;calculate the result independently,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;run the code ourselves,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;use a calculator or statistical software,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;check the mathematical expression,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;or ask another method to verify the result.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The lesson is not that ChatGPT is “bad at statistics.” Rather, it is that an LLM can produce a convincing statistical answer without guaranteeing that every calculation in that answer has been independently verified.&lt;/p&gt;
+&lt;p&gt;AI can be a very useful assistant for learning, explaining, coding, and exploring statistical ideas. But when the answer involves a numerical result, we should treat the result as something to verify, not something to blindly trust.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

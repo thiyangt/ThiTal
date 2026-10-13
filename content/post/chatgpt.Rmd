@@ -1,7 +1,7 @@
 ---
 title: "Why Did ChatGPT Get My Simple Statistics Question Wrong?"
 author: Thiyanga Talagala
-date: '2026-10-23'
+date: '2026-10-13'
 category: [LLM, Probability, AI, Trustworthy AI, ChatGPT]
 tags: [LLM, Probability, AI, Trustworthy AI, ChatGPT]
 ---
@@ -10,7 +10,7 @@ tags: [LLM, Probability, AI, Trustworthy AI, ChatGPT]
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-These days, I have been running a few experiments to understand how LLMs generate answers.
+These days, I have been running a few experiments to understand how LLMs' generate answers for statistics questions.
 
 I asked ChatGPT a simple statistics question:
 
@@ -23,7 +23,7 @@ Here are the screenshots of my conversation with ChatGPT.
 
 <img src="/post/oct132026/chatgpt1.png" alt="posit" width="900"/>
 
-At first, this seemed strange. If the code is correct and the calculation is correct, how can the final answer be wrong? Following are the follow ups from the conversation.
+At first, this seemed strange. If the approach and code is correct and the calculation is correct, how can the final answer be wrong? Following are the follow ups from the conversation.
 
 <img src="/post/oct132026/chatgpt4.png" alt="posit" width="900"/>
 
@@ -33,18 +33,61 @@ At first, this seemed strange. If the code is correct and the calculation is cor
 
 The key point is that a wrong answer to a simple statistics problem does not necessarily mean that ChatGPT “does not know” the Poisson distribution.
 
-ChatGPT is not trained as a mathematician or statistician who calculates and checks every answer step by step. It is an LLM (Large Language Model) trained primarily to learn patterns in sequences of tokens. At a fundamental level, it learns relationships such as
+## Why it happens: Arithmetic is done by prediction, not computation.
+
+ChatGPT is not trained like a mathematician or statistician who solves a problem step by step and independently checks whether every calculation is correct. It is a Large Language Model (LLM), trained primarily to learn patterns and relationships in sequences of tokens from enormous amounts of text, including language, mathematics, statistics, programming, and other types of documents.
+
+At a fundamental level, an LLM learns to predict what is likely to come next in a sequence. Very roughly, at each step it estimates:
 
 [
-P(\text{next token}\mid\text{previous tokens}),
+P(\text{next token}\mid\text{previous tokens})
 ]
 
-means “given everything that has come before, what is the probability of each possible next token?”. In other words, an LLM does not directly calculate whether an answer is true. At each step, it estimates a probability distribution over possible next tokens, given the tokens that came before. It uses these learned patterns to generate a response.
+In simple terms, this means:
 
-Because the model has learned an enormous number of language, statistical and mathematical patterns, it can often produce answers that look as if they were carefully reasoned. However, generating a convincing explanation is not the same as independently calculating and verifying every numerical result.
+“Given everything that has been written so far, what is the most likely next piece of text?” 
 
-The model predicts what tokens are likely to come next; it does not directly predict whether a statement is true.
+$P(next token | previous tokens)$ is the probability of each possible next token (a word or word fragment) given everything written so far. At every step the model scores all possible tokens, picks one (usually a high-probability one), appends it, and repeats.
 
-Therefore, an LLM can produce a statistically plausible explanation while making a mistake in a calculation or in the final numerical answer. The explanation may even look completely convincing.
+This is an important distinction. Predicting the next token is not the same as independently calculating a mathematical answer. 
 
-This is why validation is essential when using AI for statistics and mathematics. Never assume that a numerical answer is correct simply because the reasoning looks clear or the final answer is presented confidently. Check the calculation independently, use software when appropriate, and verify that the result.
+## Why this matters for calculations
+
+The LLM isn’t running a calculator. Inasted LLm "Looking up values from memory". In other words, When it “computes” 47.3 × 18.6, it is predicting which digits most plausibly come next
+, based on patterns it learned. For familiar, short arithmetic those patterns are reliable. For long or unusual calculations, the most likely-looking digits can differ from the correct ones.
+
+## Why validation matters
+
+This is why we need to be especially careful when using AI for statistics and mathematics.
+
+We should not assume that a numerical answer is correct simply because:
+
+  - the explanation sounds convincing,
+
+  - the statistical terminology is correct,
+
+  - the R or Python code looks appropriate, or
+
+  - the answer is presented confidently.
+
+For numerical and statistical work, the result should be independently checked.
+
+For example, we can:
+
+  - calculate the result independently,
+
+  - run the code ourselves,
+
+  - use a calculator or statistical software,
+
+  - check the mathematical expression,
+
+  - or ask another method to verify the result.
+
+The lesson is not that ChatGPT is “bad at statistics.” Rather, it is that an LLM can produce a convincing statistical answer without guaranteeing that every calculation in that answer has been independently verified.
+
+AI can be a very useful assistant for learning, explaining, coding, and exploring statistical ideas. But when the answer involves a numerical result, we should treat the result as something to verify, not something to blindly trust.
+
+<img src="/post/oct132026/chatgpt5.png" alt="posit" width="900"/>
+
+Note: The last image is an AI-generated image carefully created based on the author’s prompt and subsequently reviewed and validated by the author.
