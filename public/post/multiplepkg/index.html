@@ -672,65 +672,54 @@
   <div class="article-container">
 
     <div class="article-style">
-      
-
-
-<style type="text/css">
+      <style type="text/css">
 h2 { /* Header 2 */
     font-size: 22px;
   color: DarkBlue;
 }
 </style>
-<div id="install-packages" class="section level2">
-<h2>install packages</h2>
+<h2 id="install-packages">install packages</h2>
 <p>To install multiple packages with a single call to <code>install.packages</code>, pass the names of the packages as a character vector to the install.packages() function.</p>
-<pre class="r"><code>install.packages(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;))</code></pre>
-</div>
-<div id="load-packages" class="section level2">
-<h2>load packages</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">install.packages</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;gganimate&#34;</span>, <span style="color:#e6db74">&#34;tidyverse&#34;</span>, <span style="color:#e6db74">&#34;gapminder&#34;</span>))
+</span></span></code></pre></div><h2 id="load-packages">load packages</h2>
 <p>Once you have the packages installed, you can make their contents available to use in your current R session by running,</p>
-<pre class="r"><code>lapply(c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;), require, character.only = TRUE)</code></pre>
-<pre><code>## [[1]]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">lapply</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;gganimate&#34;</span>, <span style="color:#e6db74">&#34;tidyverse&#34;</span>, <span style="color:#e6db74">&#34;gapminder&#34;</span>), require, character.only <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+</span></span></code></pre></div><pre tabindex="0"><code>## [[1]]
 ## [1] TRUE
 ## 
 ## [[2]]
 ## [1] TRUE
 ## 
 ## [[3]]
-## [1] TRUE</code></pre>
-</div>
-<div id="check-and-install-missing-packages" class="section level2">
-<h2>check and install missing packages</h2>
-<pre class="r"><code>list.of.packages &lt;- c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;)
-new.packages &lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&quot;Package&quot;])]
-if(length(new.packages)) install.packages(new.packages)</code></pre>
-</div>
-<div id="for-other-alternatives-see" class="section level2">
-<h2>For other alternatives see</h2>
-<ol style="list-style-type: decimal">
+## [1] TRUE
+</code></pre><h2 id="check-and-install-missing-packages">check and install missing packages</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>list.of.packages <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;gganimate&#34;</span>, <span style="color:#e6db74">&#34;tidyverse&#34;</span>, <span style="color:#e6db74">&#34;gapminder&#34;</span>)
+</span></span><span style="display:flex;"><span>new.packages <span style="color:#f92672">&lt;-</span> list.of.packages[<span style="color:#f92672">!</span>(list.of.packages <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">installed.packages</span>()[,<span style="color:#e6db74">&#34;Package&#34;</span>])]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">if</span>(<span style="color:#a6e22e">length</span>(new.packages)) <span style="color:#a6e22e">install.packages</span>(new.packages)
+</span></span></code></pre></div><h2 id="for-other-alternatives-see">For other alternatives see</h2>
+<ol>
 <li><a href="http://dirk.eddelbuettel.com/code/littler.html">littler</a></li>
 </ol>
-<pre class="r"><code>library(littler)
-install.r EIAdata gdata ggmap ggplot2 </code></pre>
-<ol start="2" style="list-style-type: decimal">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(littler)
+</span></span><span style="display:flex;"><span>install.r EIAdata gdata ggmap ggplot2 
+</span></span></code></pre></div><ol start="2">
 <li><a href="https://gist.github.com/stevenworthington/3178163">ipak</a></li>
 </ol>
-<pre class="r"><code>ipak &lt;- function(pkg){
-    new.pkg &lt;- pkg[!(pkg %in% installed.packages()[, &quot;Package&quot;])]
-    if (length(new.pkg)) 
-        install.packages(new.pkg, dependencies = TRUE)
-    sapply(pkg, require, character.only = TRUE)
-}
-
-# usage
-packages &lt;- c(&quot;gganimate&quot;, &quot;tidyverse&quot;, &quot;gapminder&quot;)
-ipak(packages)</code></pre>
-<pre><code>## gganimate tidyverse gapminder 
-##      TRUE      TRUE      TRUE</code></pre>
-<ol start="3" style="list-style-type: decimal">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>ipak <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(pkg){
+</span></span><span style="display:flex;"><span>    new.pkg <span style="color:#f92672">&lt;-</span> pkg[<span style="color:#f92672">!</span>(pkg <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">installed.packages</span>()[, <span style="color:#e6db74">&#34;Package&#34;</span>])]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">if </span>(<span style="color:#a6e22e">length</span>(new.pkg)) 
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">install.packages</span>(new.pkg, dependencies <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">sapply</span>(pkg, require, character.only <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># usage</span>
+</span></span><span style="display:flex;"><span>packages <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;gganimate&#34;</span>, <span style="color:#e6db74">&#34;tidyverse&#34;</span>, <span style="color:#e6db74">&#34;gapminder&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ipak</span>(packages)
+</span></span></code></pre></div><pre tabindex="0"><code>## gganimate tidyverse gapminder 
+##      TRUE      TRUE      TRUE
+</code></pre><ol start="3">
 <li><a href="https://cran.r-project.org/web/packages/easypackages/README.html">easypackages</a></li>
 </ol>
-</div>
 
     </div>
 

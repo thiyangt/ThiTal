@@ -672,15 +672,11 @@
   <div class="article-container">
 
     <div class="article-style">
-      
-
-
-<div id="to-view-list-of-data-sets-available-in-a-particular-package-or-a-group-of-packages." class="section level3">
-<h3>To view list of data sets available in a particular package or a group of packages.</h3>
-<pre class="r"><code>vcdExtra::datasets(c(&quot;ggplot2&quot;, &quot;forecast&quot;))</code></pre>
-<pre><code>Loading package: ggplot2 
-Loading package: forecast </code></pre>
-<pre><code>    Package           Item      class      dim
+      <h3 id="to-view-list-of-data-sets-available-in-a-particular-package-or-a-group-of-packages">To view list of data sets available in a particular package or a group of packages.</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>vcdExtra<span style="color:#f92672">::</span><span style="color:#a6e22e">datasets</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;ggplot2&#34;</span>, <span style="color:#e6db74">&#34;forecast&#34;</span>))
+</span></span></code></pre></div><pre tabindex="0"><code>Loading package: ggplot2 
+Loading package: forecast 
+</code></pre><pre tabindex="0"><code>    Package           Item      class      dim
 1   ggplot2       diamonds data.frame 53940x10
 2   ggplot2      economics data.frame    574x6
 3   ggplot2 economics_long data.frame   2870x4
@@ -689,7 +685,7 @@ Loading package: forecast </code></pre>
 6   ggplot2        midwest data.frame   437x28
 7   ggplot2            mpg data.frame   234x11
 8   ggplot2         msleep data.frame    83x11
-9   ggplot2   presidential data.frame     11x4
+9   ggplot2   presidential data.frame     12x4
 10  ggplot2          seals data.frame   1155x4
 11  ggplot2      txhousing data.frame   8602x9
 12 forecast            gas         ts      476
@@ -706,42 +702,36 @@ Loading package: forecast </code></pre>
 6                                               Midwest demographics
 7  Fuel economy data from 1999 to 2008 for 38 popular models of cars
 8       An updated and expanded version of the mammals sleep dataset
-9                    Terms of 11 presidents from Eisenhower to Obama
+9                    Terms of 12 presidents from Eisenhower to Trump
 10                                    Vector field of seal movements
 11                                               Housing sales in TX
 12                                 Australian monthly gas production
 13                                         Daily morning gold prices
 14                                    Half-hourly electricity demand
 15                                       Australian total wine sales
-16                 Quarterly production of woollen yarn in Australia</code></pre>
-</div>
-<div id="to-view-data-sets-in-package-datasets." class="section level3">
-<h3>To view data sets in package <code>datasets</code>.</h3>
-<pre class="r"><code>data() </code></pre>
-<p>This opens a file called “R data sets” in the Code-Editor window as below.</p>
-<p><img src="/post/datafiles.PNG" alt="final image" width="800"/></p>
-</div>
-<div id="to-list-the-data-sets-in-all-available-packages" class="section level3">
-<h3>To list the data sets in all <em>available</em> packages</h3>
+16                 Quarterly production of woollen yarn in Australia
+</code></pre><h3 id="to-view-data-sets-in-package-datasets">To view data sets in package <code>datasets</code>.</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">data</span>() 
+</span></span></code></pre></div><p>This opens a file called &ldquo;R data sets&rdquo; in the Code-Editor window as below.</p>
+<img src="/post/datafiles.PNG" alt="final image" width="800"/>
+<h3 id="to-list-the-data-sets-in-all-available-packages">To list the data sets in all <em>available</em> packages</h3>
 <p><code>data(package = .packages(all.available = TRUE))</code>.</p>
-<p>This opens a file called “R data sets” in the Code- Editor widow, listing datasets as</p>
-<pre class="r"><code>Data sets in package ‘alr4’:
-
-...
-
-
-Data sets in package ‘asbio’:
-
-...
-
-.
-
-.
-
-.
-</code></pre>
-</div>
-
+<p>This opens a file called &ldquo;R data sets&rdquo; in the Code- Editor widow, listing datasets as</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>Data sets in package ‘alr4’<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Data sets in package ‘asbio’<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.
+</span></span></code></pre></div>
     </div>
 
     

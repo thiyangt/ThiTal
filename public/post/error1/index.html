@@ -672,18 +672,13 @@
   <div class="article-container">
 
     <div class="article-style">
-      
-
-
-<div id="error-c-stack-usage-is-too-close-to-the-limit" class="section level2">
-<h2>Error: C stack usage is too close to the limit</h2>
+      <h2 id="error-c-stack-usage-is-too-close-to-the-limit">Error: C stack usage is too close to the limit</h2>
 <p>While using Rstudio on macOS Mojave (version 10.14.6) to work with R, I recently ran across the following problem.</p>
-<p><img src="/post/error.PNG" alt="final image" width="400"/></p>
-<p>In order to fix the error, I deleted the <code>.Rprofile</code>. You can erase everything in the “.Rprofile” by using the commands listed below.</p>
-<pre class="r"><code>file.edit(file.path(&quot;~&quot;, &quot;.Rprofile&quot;)) 
-file.edit(&quot;.Rprofile&quot;)</code></pre>
-</div>
-
+<img src="/post/error.PNG" alt="final image" width="400"/>
+<p>In order to fix the error, I deleted the <code>.Rprofile</code>. You can erase everything in the &ldquo;.Rprofile&rdquo; by using the commands listed below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">file.edit</span>(<span style="color:#a6e22e">file.path</span>(<span style="color:#e6db74">&#34;~&#34;</span>, <span style="color:#e6db74">&#34;.Rprofile&#34;</span>)) 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">file.edit</span>(<span style="color:#e6db74">&#34;.Rprofile&#34;</span>)
+</span></span></code></pre></div>
     </div>
 
     

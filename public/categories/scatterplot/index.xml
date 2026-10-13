@@ -17,189 +17,190 @@
       <link>https://thiyanga.netlify.app/post/logisticregression/</link>
       <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/logisticregression/</guid>
-      <description>
-&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div id=&#34;data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;
 &lt;p&gt;In this post I am going to use &lt;code&gt;penguins&lt;/code&gt; dataset in &lt;code&gt;palmerpenguins&lt;/code&gt; package in R. First we load the dataset.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(palmerpenguins)
-library(skimr)
-library(tidyverse)
-library(plotly)
-library(visdat)
-library(patchwork)
-data(&amp;quot;penguins&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Here is an overview of the dataset.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;skim(penguins)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(palmerpenguins)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(skimr)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(tidyverse)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(plotly)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(visdat)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(patchwork)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;penguins&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here is an overview of the dataset.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;skim&lt;/span&gt;(penguins)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Table: &lt;span id=&#34;tab:unnamed-chunk-2&#34;&gt;&lt;/span&gt;Table 1: Data summary&lt;/p&gt;
 &lt;table&gt;
-&lt;caption&gt;&lt;span id=&#34;tab:unnamed-chunk-2&#34;&gt;Table 1: &lt;/span&gt;Data summary&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Name&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;penguins&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Name&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;penguins&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Number of rows&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;344&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Number of rows&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;344&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Number of columns&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;8&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Number of columns&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;8&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;_______________________&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;_______________________&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Column type frequency:&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Column type frequency:&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;factor&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;factor&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;3&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;numeric&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;5&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;________________________&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;________________________&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Group variables&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;None&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Group variables&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;None&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;Variable type: factor&lt;/strong&gt;&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;skim_variable&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;n_missing&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;complete_rate&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;ordered&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;n_unique&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;top_counts&lt;/th&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;skim_variable&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;n_missing&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;complete_rate&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;ordered&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;n_unique&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;top_counts&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;species&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.00&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Ade: 152, Gen: 124, Chi: 68&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;species&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1.00&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Ade: 152, Gen: 124, Chi: 68&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;island&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.00&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Bis: 168, Dre: 124, Tor: 52&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;island&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1.00&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Bis: 168, Dre: 124, Tor: 52&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;sex&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;11&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.97&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;mal: 168, fem: 165&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;sex&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;11&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.97&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;mal: 168, fem: 165&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;Variable type: numeric&lt;/strong&gt;&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;skim_variable&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;n_missing&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;complete_rate&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;mean&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;sd&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;p0&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;p25&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;p50&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;p75&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;p100&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;hist&lt;/th&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;skim_variable&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;n_missing&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;complete_rate&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;mean&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;sd&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;p0&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;p25&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;p50&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;p75&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;p100&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;hist&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;bill_length_mm&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.99&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;43.92&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;5.46&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;32.1&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;39.23&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;44.45&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;48.5&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;59.6&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;▃▇▇▆▁&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;bill_length_mm&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.99&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;43.92&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5.46&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;32.1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;39.23&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;44.45&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;48.5&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;59.6&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;▃▇▇▆▁&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;bill_depth_mm&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.99&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;17.15&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.97&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;13.1&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;15.60&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;17.30&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;18.7&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;21.5&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;▅▅▇▇▂&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;bill_depth_mm&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.99&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;17.15&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1.97&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;13.1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;15.60&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;17.30&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;18.7&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;21.5&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;▅▅▇▇▂&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;flipper_length_mm&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.99&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;200.92&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;14.06&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;172.0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;190.00&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;197.00&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;213.0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;231.0&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;▂▇▃▅▂&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;flipper_length_mm&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.99&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;200.92&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;14.06&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;172.0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;190.00&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;197.00&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;213.0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;231.0&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;▂▇▃▅▂&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;body_mass_g&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.99&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;4201.75&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;801.95&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2700.0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;3550.00&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;4050.00&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;4750.0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;6300.0&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;▃▇▆▃▂&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;body_mass_g&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.99&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;4201.75&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;801.95&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2700.0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;3550.00&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;4050.00&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;4750.0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;6300.0&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;▃▇▆▃▂&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;year&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.00&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2008.03&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.82&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2007.0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2007.00&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2008.00&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2009.0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2009.0&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;▇▁▇▁▇&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;year&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1.00&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2008.03&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.82&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2007.0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2007.00&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2008.00&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2009.0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2009.0&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;▇▁▇▁▇&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(penguins)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;      species          island    bill_length_mm  bill_depth_mm  
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;summary&lt;/span&gt;(penguins)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;      species          island    bill_length_mm  bill_depth_mm  
  Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  
  Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  
  Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  
@@ -214,90 +215,76 @@ data(&amp;quot;penguins&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
  Mean   :200.9     Mean   :4202                Mean   :2008  
  3rd Qu.:213.0     3rd Qu.:4750                3rd Qu.:2009  
  Max.   :231.0     Max.   :6300                Max.   :2009  
- NA&amp;#39;s   :2         NA&amp;#39;s   :2                                 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Before moving on to the full logistic regression model, it’s a good idea to look at the associations between each predictor and gender. Before moving on to the whole model, It’s critical to first grasp these linkages. We can use logistic regression to look at all of the predictors simultaneously.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p1_species &amp;lt;- penguins %&amp;gt;% 
-  na.omit() %&amp;gt;%
-  count(species,sex) %&amp;gt;% 
-  group_by(species) %&amp;gt;% 
-  mutate(Percentage = 100*n/sum(n)) %&amp;gt;% 
-  ggplot(aes(x = species,y = Percentage,fill=sex))+
-  geom_bar(stat=&amp;quot;identity&amp;quot;) + 
-  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) +
-  coord_flip() +
-  theme(legend.position = &amp;quot;bottom&amp;quot;) +
-  ggtitle(&amp;quot;a&amp;quot;) 
-
-p2_island &amp;lt;- penguins %&amp;gt;% 
-  count(island,sex) %&amp;gt;% 
-  group_by(island) %&amp;gt;% 
-  mutate(Percentage = 100*n/sum(n)) %&amp;gt;% 
-  ggplot(aes(x = island,y = Percentage,fill=sex))+
-  geom_bar(stat=&amp;quot;identity&amp;quot;) + 
-  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
-  coord_flip() +
-  theme(legend.position = &amp;quot;bottom&amp;quot;) +
-  ggtitle(&amp;quot;b&amp;quot;)
-(p1_species|p2_island)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:unnamed-chunk-3&#34;&gt;&lt;/span&gt;
+ NA&amp;#39;s   :2         NA&amp;#39;s   :2                                 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Before moving on to the full logistic regression model, it&amp;rsquo;s a good idea to look at the associations between each predictor and gender. Before moving on to the whole model, It&amp;rsquo;s critical to first grasp these linkages. We can use logistic regression to look at all of the predictors simultaneously.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;p1_species &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; penguins &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;na.omit&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;count&lt;/span&gt;(species,sex) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;group_by&lt;/span&gt;(species) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;mutate&lt;/span&gt;(Percentage &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;n&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;sum&lt;/span&gt;(n)) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; species,y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Percentage,fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex))&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_bar&lt;/span&gt;(stat&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;identity&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cyan4&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_flip&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bottom&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggtitle&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt;) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;p2_island &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; penguins &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;count&lt;/span&gt;(island,sex) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;group_by&lt;/span&gt;(island) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;mutate&lt;/span&gt;(Percentage &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;n&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;sum&lt;/span&gt;(n)) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; island,y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Percentage,fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex))&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_bar&lt;/span&gt;(stat&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;identity&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cyan4&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_flip&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bottom&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggtitle&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;b&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(p1_species&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;p2_island)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-3-1.png&#34; alt=&#34;Distribution of (a) species and (d) island by gender.&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 1: Distribution of (a) species and (d) island by gender.
-&lt;/p&gt;
+&lt;p class=&#34;caption&#34;&gt;&lt;span id=&#34;fig:unnamed-chunk-3&#34;&gt;&lt;/span&gt;Figure 1: Distribution of (a) species and (d) island by gender.&lt;/p&gt;
 &lt;/div&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p3_length &amp;lt;-  ggplot(penguins, aes(x=sex, y=bill_length_mm, fill=sex)) +
-  geom_boxplot() + 
-  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
-  theme(legend.position = &amp;quot;bottom&amp;quot;) + ggtitle(&amp;quot;a&amp;quot;)
-
-p4_depth &amp;lt;-  ggplot(penguins, aes(x=sex, y=bill_depth_mm, fill=sex)) +
-  geom_boxplot() + 
-  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
-  theme(legend.position = &amp;quot;bottom&amp;quot;) + ggtitle(&amp;quot;b&amp;quot;)
-
-p5_flipper &amp;lt;-  ggplot(penguins, aes(x=sex, y=flipper_length_mm, fill=sex)) +
-  geom_boxplot() + 
-  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
-  theme(legend.position = &amp;quot;bottom&amp;quot;) + ggtitle(&amp;quot;c&amp;quot;)
-
-p6_bmi &amp;lt;-  ggplot(penguins, aes(x=sex, y=body_mass_g, fill=sex)) +
-  geom_boxplot() + 
-  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
-  theme(legend.position = &amp;quot;bottom&amp;quot;) + ggtitle(&amp;quot;d&amp;quot;)
-
-(p3_length|p4_depth)/(p5_flipper|p6_bmi)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:unnamed-chunk-4&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;p3_length &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(penguins, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;bill_length_mm, fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_boxplot&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cyan4&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bottom&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ggtitle&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;p4_depth &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(penguins, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;bill_depth_mm, fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_boxplot&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cyan4&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bottom&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ggtitle&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;b&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;p5_flipper &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(penguins, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;flipper_length_mm, fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_boxplot&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cyan4&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bottom&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ggtitle&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;c&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;p6_bmi &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(penguins, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;body_mass_g, fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_boxplot&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cyan4&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bottom&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ggtitle&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;d&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(p3_length&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;p4_depth)&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;(p5_flipper&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;p6_bmi)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-4-1.png&#34; alt=&#34;Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 2: Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.
-&lt;/p&gt;
+&lt;p class=&#34;caption&#34;&gt;&lt;span id=&#34;fig:unnamed-chunk-4&#34;&gt;&lt;/span&gt;Figure 2: Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;missing-values-exploration&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Missing values exploration&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vis_miss(penguins)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;remove-missing-values&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Remove missing values&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins_omit &amp;lt;- penguins %&amp;gt;%
-  na.omit()
-vis_miss(penguins_omit)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;building-logistic-regression&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Building logistic regression&lt;/h2&gt;
-&lt;p&gt;Then, using the other variables in the dataset, I’ll create a logistic regression model to predict the gender of the palmer penguins. One goal of this work is to identify which variables significantly contribute to determining the gender of penguins. Before beginning to build the model, double-check that all qualitative variables have been saved as factors.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit &amp;lt;- glm(sex ~ species + island + bill_length_mm + bill_depth_mm + flipper_length_mm + body_mass_g, data=penguins_omit, family=&amp;quot;binomial&amp;quot;)
-summary(fit)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h2 id=&#34;missing-values-exploration&#34;&gt;Missing values exploration&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;vis_miss&lt;/span&gt;(penguins)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
+&lt;h2 id=&#34;remove-missing-values&#34;&gt;Remove missing values&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;penguins_omit &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; penguins &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;na.omit&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;vis_miss&lt;/span&gt;(penguins_omit)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-6-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
+&lt;h2 id=&#34;building-logistic-regression&#34;&gt;Building logistic regression&lt;/h2&gt;
+&lt;p&gt;Then, using the other variables in the dataset, I&amp;rsquo;ll create a logistic regression model to predict the gender of the palmer penguins. One goal of this work is to identify which variables significantly contribute to determining the gender of penguins. Before beginning to build the model, double-check that all qualitative variables have been saved as factors.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fit &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;glm&lt;/span&gt;(sex &lt;span style=&#34;color:#f92672&#34;&gt;~&lt;/span&gt; species &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; island &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; bill_length_mm &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; bill_depth_mm &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; flipper_length_mm &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; body_mass_g, data&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;penguins_omit, family&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;binomial&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;summary&lt;/span&gt;(fit)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
 Call:
 glm(formula = sex ~ species + island + bill_length_mm + bill_depth_mm + 
-    flipper_length_mm + body_mass_g, family = &amp;quot;binomial&amp;quot;, data = penguins_omit)
-
-Deviance Residuals: 
-    Min       1Q   Median       3Q      Max  
--3.4128  -0.2000   0.0022   0.1441   2.8235  
+    flipper_length_mm + body_mass_g, family = &amp;#34;binomial&amp;#34;, data = penguins_omit)
 
 Coefficients:
                     Estimate Std. Error z value Pr(&amp;gt;|z|)    
@@ -319,27 +306,22 @@ Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39
 Residual deviance: 126.05  on 324  degrees of freedom
 AIC: 144.05
 
-Number of Fisher Scoring iterations: 7&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;To represent qualitative variables, R will build an indicator (dummy) variable using the lowest coded category as the reference group. For example,&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y=\begin{cases}
-0, &amp;amp; \text{if female}\\
-1, &amp;amp; \text{if male}
-\end{cases}\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;interpretation-of-parameter-estimates-of-logistic-regression&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Interpretation of parameter estimates of logistic regression&lt;/h2&gt;
-&lt;p&gt;The “Estimates” in the above output corresponds to the &lt;strong&gt;log-odds&lt;/strong&gt;. The &lt;strong&gt;odd ratios&lt;/strong&gt; can be obtained as follows:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;exp(coefficients(fit))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;      (Intercept)  speciesChinstrap     speciesGentoo       islandDream 
+Number of Fisher Scoring iterations: 7
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To represent qualitative variables, R will build an indicator (dummy) variable using the lowest coded category as the reference group. For example,&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$Y=\begin{cases} 0, &amp;amp; \text{if female}\\ 1, &amp;amp; \text{if male} \end{cases}$$&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;interpretation-of-parameter-estimates-of-logistic-regression&#34;&gt;Interpretation of parameter estimates of logistic regression&lt;/h2&gt;
+&lt;p&gt;The &amp;ldquo;Estimates&amp;rdquo; in the above output  corresponds to the &lt;strong&gt;log-odds&lt;/strong&gt;. The &lt;strong&gt;odd ratios&lt;/strong&gt; can be obtained as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;exp&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;coefficients&lt;/span&gt;(fit))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;      (Intercept)  speciesChinstrap     speciesGentoo       islandDream 
      1.238383e-35      6.096066e-04      2.187435e-04      1.382866e+00 
   islandTorgersen    bill_length_mm     bill_depth_mm flipper_length_mm 
      6.017832e-01      1.848613e+00      5.188507e+00      1.027012e+00 
       body_mass_g 
-     1.005836e+00 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[odd = \frac{P(event)}{1-P(event)}\]&lt;/span&gt;&lt;/p&gt;
+     1.005836e+00 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;$$odd = \frac{P(event)}{1-P(event)}$$&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;The 95% confidence intervals for log-odds can be obtained as follows&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;confint.default(fit)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;                          2.5 %        97.5 %
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;confint.default&lt;/span&gt;(fit)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;                          2.5 %        97.5 %
 (Intercept)       -1.045425e+02 -56.210836165
 speciesChinstrap  -1.066120e+01  -4.144190616
 speciesGentoo     -1.351769e+01  -3.337530854
@@ -348,10 +330,10 @@ islandTorgersen   -2.185089e+00   1.169372704
 bill_length_mm     3.557834e-01   0.873088085
 bill_depth_mm      9.882945e-01   2.304597483
 flipper_length_mm -6.802606e-02   0.121333507
-body_mass_g        3.687778e-03   0.007949886&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The 95% confidence intervals for odds are as follows&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;exp(confint.default(fit))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;                         2.5 %       97.5 %
+body_mass_g        3.687778e-03   0.007949886
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The 95% confidence intervals for odds are as follows&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;exp&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;confint.default&lt;/span&gt;(fit))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;                         2.5 %       97.5 %
 (Intercept)       3.960644e-46 3.872077e-25
 speciesChinstrap  2.343681e-05 1.585626e-02
 speciesGentoo     1.346919e-06 3.552456e-02
@@ -360,40 +342,25 @@ islandTorgersen   1.124677e-01 3.219972e+00
 bill_length_mm    1.427298e+00 2.394293e+00
 bill_depth_mm     2.686648e+00 1.002014e+01
 flipper_length_mm 9.342361e-01 1.129001e+00
-body_mass_g       1.003695e+00 1.007982e+00&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We can write the fitted logistic regression model as follows&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\hat{Y} = \frac{1}{1+e^{-z}} = \frac{1}{e^{-80.83 -7.40Chinstrap -8.42Gentoo +0.32Dream -0.50Torgersen + 0.61 bill\_length\_mm + 1.64 bill\_depth\_mm + 0.02 flipper\_length\_mm + 0.005 body\_mass\_g}}\]&lt;/span&gt;&lt;/p&gt;
+body_mass_g       1.003695e+00 1.007982e+00
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We can write the fitted logistic regression model as follows&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$\hat{Y} = \frac{1}{1+e^{-z}} = \frac{1}{e^{-80.83 -7.40Chinstrap -8.42Gentoo +0.32Dream -0.50Torgersen + 0.61 bill\_length\_mm + 1.64 bill\_depth\_mm + 0.02 flipper\_length\_mm + 0.005 body\_mass\_g}}$$&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Where,&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Chinstrap=\begin{cases}
-1, &amp;amp; \text{if Chinstrap}\\
-0, &amp;amp; \text{otherwise}
-\end{cases}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Gentoo=\begin{cases}
-1, &amp;amp; \text{if Gentoo}\\
-0, &amp;amp; \text{otherwise}
-\end{cases}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Dream=\begin{cases}
-1, &amp;amp; \text{if Dream}\\
-0, &amp;amp; \text{otherwise}
-\end{cases}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Torgersen=\begin{cases}
-1, &amp;amp; \text{if Torgersen}\\
-0, &amp;amp; \text{otherwise}
-\end{cases}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[bill\_length\_mm = \text{bill length (millimeters)},\]&lt;/span&gt;
-&lt;span class=&#34;math display&#34;&gt;\[bill\_depth\_mm = \text{bill depth (millimeters)},\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[flipper\_length\_mm = \text{flipper length (millimeters)},\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[body\_mass\_g = \text{body mass (grams)}.\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;interpretation-of-parameter-estimates&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Interpretation of parameter estimates&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;$$Chinstrap=\begin{cases} 1, &amp;amp; \text{if Chinstrap}\\ 0, &amp;amp; \text{otherwise} \end{cases}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$Gentoo=\begin{cases} 1, &amp;amp; \text{if Gentoo}\\ 0, &amp;amp; \text{otherwise} \end{cases}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$Dream=\begin{cases} 1, &amp;amp; \text{if Dream}\\ 0, &amp;amp; \text{otherwise} \end{cases}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$Torgersen=\begin{cases} 1, &amp;amp; \text{if Torgersen}\\ 0, &amp;amp; \text{otherwise} \end{cases}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$bill\_length\_mm = \text{bill length (millimeters)},$$&lt;/code&gt;
+&lt;code&gt;$$bill\_depth\_mm = \text{bill depth (millimeters)},$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$flipper\_length\_mm = \text{flipper length (millimeters)},$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$body\_mass\_g = \text{body mass (grams)}.$$&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;interpretation-of-parameter-estimates&#34;&gt;Interpretation of parameter estimates&lt;/h2&gt;
 &lt;p&gt;The variables species, bill length (mm), bill depth (mm) and body mass (g) significantly contribute to the model.&lt;/p&gt;
 &lt;p&gt;With all other factors held constant, this fitted model predicts that the odds of discovering a male penguin on Dream island are 1.38 times higher than on Biscoe island.&lt;/p&gt;
 &lt;p&gt;For each one-unit increase in bill depth, the odds of detecting a male increased 5.18 times (95 percent CI 2.68–10.02).&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Model Evaluation: Next Post! Model evaluation should be done before interpreting the model.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;/div&gt;
 </description>
     </item>
     
@@ -402,63 +369,51 @@ body_mass_g       1.003695e+00 1.007982e+00&lt;/code&gt;&lt;/pre&gt;
       <link>https://thiyanga.netlify.app/post/ggforce/</link>
       <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/ggforce/</guid>
-      <description>
-&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;To enlarge a section of data in your &lt;code&gt;ggplots&lt;/code&gt;, use the &lt;code&gt;facet_zoom&lt;/code&gt; function in the &lt;a href=&#34;https://rdrr.io/cran/ggforce/man/facet_zoom.html&#34;&gt;ggforce&lt;/a&gt; package. To illustrate I am using the &lt;a href=&#34;https://cran.r-project.org/web/packages/gapminder/README.html&#34;&gt;gapminder&lt;/a&gt; dataset in &lt;a href=&#34;https://cran.r-project.org/web/packages/gapminder/README.html&#34;&gt;gapminder&lt;/a&gt; package.&lt;/p&gt;
-&lt;div id=&#34;load-necessary&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Load necessary&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
-library(RColorBrewer)
-library(ggforce)
-library(gapminder)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;set-the-theme-for-plots&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Set the theme for plots&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;theme_set(theme_bw())&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;zoom-according-to-a-continuous-scale-variable&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Zoom according to a continuous scale variable&lt;/h2&gt;
+      <description>&lt;p&gt;To enlarge a section of data in your &lt;code&gt;ggplots&lt;/code&gt;, use the &lt;code&gt;facet_zoom&lt;/code&gt; function in the &lt;a href=&#34;https://rdrr.io/cran/ggforce/man/facet_zoom.html&#34;&gt;ggforce&lt;/a&gt; package. To illustrate I am using the &lt;a href=&#34;https://cran.r-project.org/web/packages/gapminder/README.html&#34;&gt;gapminder&lt;/a&gt; dataset in &lt;a href=&#34;https://cran.r-project.org/web/packages/gapminder/README.html&#34;&gt;gapminder&lt;/a&gt; package.&lt;/p&gt;
+&lt;h2 id=&#34;load-necessary&#34;&gt;Load necessary&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(tidyverse)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(RColorBrewer)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(ggforce)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(gapminder)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;set-the-theme-for-plots&#34;&gt;Set the theme for plots&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;theme_set&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;theme_bw&lt;/span&gt;())
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;zoom-according-to-a--continuous-scale-variable&#34;&gt;Zoom according to a  continuous scale variable&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;zoom the Y axis&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +  
-  facet_zoom(ylim = c(60, 80)) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(gapminder, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;lifeExp, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;gdpPercap)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_point&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_fixed&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;facet_zoom&lt;/span&gt;(ylim &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;)) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-3-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +   
-  facet_zoom(xlim = c(0, 10000)) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(gapminder, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;lifeExp, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;gdpPercap)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_point&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_fixed&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;facet_zoom&lt;/span&gt;(xlim &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt;)) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-4-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis and the Y axis&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +  
-  facet_zoom(xlim = c(0, 10000), ylim=c(60, 80)) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;zoom-according-to-a-qualitative-variable&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Zoom according to a qualitative variable&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(gapminder, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;lifeExp, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;gdpPercap)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_point&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_fixed&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;facet_zoom&lt;/span&gt;(xlim &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt;), ylim&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;)) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-5-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
+&lt;h2 id=&#34;zoom-according-to-a-qualitative-variable&#34;&gt;Zoom according to a qualitative variable&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;zoom the Y axis&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
-  coord_fixed() + 
-  scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
-  facet_zoom(y = continent == &amp;#39;Oceania&amp;#39;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(gapminder, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;lifeExp, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;gdpPercap, col&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;continent)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_point&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_fixed&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_color_brewer&lt;/span&gt;(palette &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Dark2&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;facet_zoom&lt;/span&gt;(y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; continent &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Oceania&amp;#39;&lt;/span&gt;) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-6-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
-  coord_fixed() + 
-  scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
-  facet_zoom(x = continent == &amp;#39;Oceania&amp;#39;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(gapminder, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;lifeExp, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;gdpPercap, col&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;continent)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_point&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_fixed&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_color_brewer&lt;/span&gt;(palette &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Dark2&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;facet_zoom&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; continent &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Oceania&amp;#39;&lt;/span&gt;) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-7-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis and the Y axis&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
-  coord_fixed() + 
-  scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
-  facet_zoom(xy = continent == &amp;#39;Oceania&amp;#39;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
-  coord_fixed() + 
-  scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
-  facet_zoom(xy = continent == &amp;#39;Oceania&amp;#39;, split = TRUE) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(gapminder, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;lifeExp, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;gdpPercap, col&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;continent)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_point&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_fixed&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_color_brewer&lt;/span&gt;(palette &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Dark2&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;facet_zoom&lt;/span&gt;(xy &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; continent &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Oceania&amp;#39;&lt;/span&gt;) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-8-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(gapminder, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;lifeExp, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;gdpPercap, col&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;continent)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_point&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_fixed&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_color_brewer&lt;/span&gt;(palette &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Dark2&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;facet_zoom&lt;/span&gt;(xy &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; continent &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Oceania&amp;#39;&lt;/span&gt;, split &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TRUE&lt;/span&gt;) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-9-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
 </description>
     </item>
     
@@ -467,41 +422,38 @@ library(gapminder)&lt;/code&gt;&lt;/pre&gt;
       <link>https://thiyanga.netlify.app/post/plotaxis/</link>
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/plotaxis/</guid>
-      <description>
-&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;With the ggplot2 package, you’ve got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing.&lt;/p&gt;
-&lt;div id=&#34;comma-separated-labels&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Comma-separated labels&lt;/h2&gt;
+      <description>&lt;p&gt;With the ggplot2 package, you&amp;rsquo;ve got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing.&lt;/p&gt;
+&lt;h2 id=&#34;comma-separated-labels&#34;&gt;Comma-separated labels&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;comma_format&lt;/code&gt; function in &lt;code&gt;scales&lt;/code&gt; can be used to add comma separated labels. To illustrate this I use African names data set in TidyTuesday.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
-library(scales) 
-## read data
-african_names &amp;lt;- readr::read_csv(&amp;quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-06-16/african_names.csv&amp;quot;)
-## plot
-african_names %&amp;gt;%
-  ggplot(aes(year_arrival)) +
-  geom_histogram(bins = 20, fill = &amp;quot;darkslateblue&amp;quot;, alpha = 0.7, col=&amp;quot;white&amp;quot;) +
-  scale_y_continuous(labels = scales::comma_format()) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;change-label-angles-horizontal-justification-and-vertical-justification&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Change label angles, horizontal justification and vertical justification&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(tidyverse)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(scales) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## read data&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;african_names &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; readr&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;read_csv&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-06-16/african_names.csv&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## plot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;african_names &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(year_arrival)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_histogram&lt;/span&gt;(bins &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;, fill &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;darkslateblue&amp;#34;&lt;/span&gt;, alpha &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.7&lt;/span&gt;, col&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;white&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_y_continuous&lt;/span&gt;(labels &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scales&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;comma_format&lt;/span&gt;()) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-1-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
+&lt;h2 id=&#34;change-label-angles-horizontal-justification-and-vertical-justification&#34;&gt;Change label angles, horizontal justification and vertical justification&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Angles only&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The ggplot2 package &lt;code&gt;element text&lt;/code&gt; can be used to alter the label angles as well as the horizontal and vertical justifications.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(palmerpenguins)
-penguins %&amp;gt;%
-  ggplot(aes(x=species, fill=species)) + geom_bar() +
-  scale_fill_manual(values=c(&amp;quot;#1b9e77&amp;quot;, &amp;quot;#d95f02&amp;quot;, &amp;quot;#7570b3&amp;quot;)) + 
-  theme(axis.text.x=element_text(angle=30))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(palmerpenguins)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## 
+## Attaching package: &amp;#39;palmerpenguins&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## The following objects are masked from &amp;#39;package:datasets&amp;#39;:
+## 
+##     penguins, penguins_raw
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;penguins &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;species, fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;species)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_bar&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#1b9e77&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#d95f02&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#7570b3&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(axis.text.x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;element_text&lt;/span&gt;(angle&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-2-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
 &lt;p&gt;&lt;strong&gt;Angles, horizontal justification and vertical justification&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins %&amp;gt;%
-  ggplot(aes(x=species, fill=species)) + geom_bar() +  scale_fill_manual(values=c(&amp;quot;#1b9e77&amp;quot;, &amp;quot;#d95f02&amp;quot;, &amp;quot;#7570b3&amp;quot;)) + 
-  theme(axis.text.x=element_text(angle=30, vjust=.8, hjust=0.8))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;penguins &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;species, fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;species)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_bar&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#1b9e77&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#d95f02&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#7570b3&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(axis.text.x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;element_text&lt;/span&gt;(angle&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;, vjust&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;.8&lt;/span&gt;, hjust&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.8&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-3-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
 </description>
     </item>
     

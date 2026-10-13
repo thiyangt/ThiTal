@@ -17,18 +17,13 @@
       <link>https://thiyanga.netlify.app/post/error1/</link>
       <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/error1/</guid>
-      <description>
-
-
-&lt;div id=&#34;error-c-stack-usage-is-too-close-to-the-limit&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Error: C stack usage is too close to the limit&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;error-c-stack-usage-is-too-close-to-the-limit&#34;&gt;Error: C stack usage is too close to the limit&lt;/h2&gt;
 &lt;p&gt;While using Rstudio on macOS Mojave (version 10.14.6) to work with R, I recently ran across the following problem.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/error.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
-&lt;p&gt;In order to fix the error, I deleted the &lt;code&gt;.Rprofile&lt;/code&gt;. You can erase everything in the “.Rprofile” by using the commands listed below.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;file.edit(file.path(&amp;quot;~&amp;quot;, &amp;quot;.Rprofile&amp;quot;)) 
-file.edit(&amp;quot;.Rprofile&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-</description>
+&lt;img src=&#34;https://thiyanga.netlify.app/post/error.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;
+&lt;p&gt;In order to fix the error, I deleted the &lt;code&gt;.Rprofile&lt;/code&gt;. You can erase everything in the &amp;ldquo;.Rprofile&amp;rdquo; by using the commands listed below.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;file.edit&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;file.path&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;~&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.Rprofile&amp;#34;&lt;/span&gt;)) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;file.edit&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.Rprofile&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

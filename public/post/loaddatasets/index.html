@@ -672,41 +672,33 @@
   <div class="article-container">
 
     <div class="article-style">
-      
-
-
-<div id="spotting-the-problem" class="section level2">
-<h2>Spotting the problem</h2>
+      <h2 id="spotting-the-problem">Spotting the problem</h2>
 <p>First, I create a small dataset for the demonstration. The following dataset represents the Happiness index for five countries.</p>
-<pre class="r"><code>happy &lt;- data.frame(
-  country = c(&quot;Finland&quot;, &quot;Norway&quot;, &quot;Denmark&quot;, &quot;Iceland&quot;, &quot;Netherlands&quot;),
-  score = c(7.76, 7.60, 7.55, 7.49, 7.48))
-
-happy</code></pre>
-<pre><code>      country score
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>happy <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">data.frame</span>(
+</span></span><span style="display:flex;"><span>  country <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Finland&#34;</span>, <span style="color:#e6db74">&#34;Norway&#34;</span>, <span style="color:#e6db74">&#34;Denmark&#34;</span>, <span style="color:#e6db74">&#34;Iceland&#34;</span>, <span style="color:#e6db74">&#34;Netherlands&#34;</span>),
+</span></span><span style="display:flex;"><span>  score <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">7.76</span>, <span style="color:#ae81ff">7.60</span>, <span style="color:#ae81ff">7.55</span>, <span style="color:#ae81ff">7.49</span>, <span style="color:#ae81ff">7.48</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>happy
+</span></span></code></pre></div><pre tabindex="0"><code>      country score
 1     Finland  7.76
 2      Norway  7.60
 3     Denmark  7.55
 4     Iceland  7.49
-5 Netherlands  7.48</code></pre>
-<p>Save the dataset as shown below.</p>
-<pre class="r"><code>save(happy, file=&quot;happyindex.rda&quot;)
-</code></pre>
-<p>Let’s load the dataset with,</p>
-<pre class="r"><code>load(&quot;happyindex.rda&quot;)</code></pre>
-<pre class="r"><code>happyindex</code></pre>
-<p>The following error message pops up,</p>
+5 Netherlands  7.48
+</code></pre><p>Save the dataset as shown below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">save</span>(happy, file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;happyindex.rda&#34;</span>)
+</span></span></code></pre></div><p>Let&rsquo;s load the dataset with,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">load</span>(<span style="color:#e6db74">&#34;happyindex.rda&#34;</span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>happyindex
+</span></span></code></pre></div><p>The following error message pops up,</p>
 <blockquote>
-<p>Error: object ‘happyindex’ not found</p>
+<p>Error: object &lsquo;happyindex&rsquo; not found</p>
 </blockquote>
-</div>
-<div id="tackling-the-problem" class="section level2">
-<h2>Tackling the problem</h2>
-<pre class="r"><code>loadHappy &lt;- load(&quot;happyindex.rda&quot;)
-happyDataloaded &lt;- get(loadHappy)
-happyDataloaded</code></pre>
-</div>
-
+<h2 id="tackling-the-problem">Tackling the problem</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>loadHappy <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">load</span>(<span style="color:#e6db74">&#34;happyindex.rda&#34;</span>)
+</span></span><span style="display:flex;"><span>happyDataloaded <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">get</span>(loadHappy)
+</span></span><span style="display:flex;"><span>happyDataloaded
+</span></span></code></pre></div>
     </div>
 
     

@@ -672,111 +672,108 @@
   <div class="article-container">
 
     <div class="article-style">
-      
-
-
-<p>Sometimes we need to view all the functions that are built into an R package.
+      <p>Sometimes we need to view all the functions that are built into an R package.
 This is done in the same way you would list variables in your workspace, using the <code>ls</code> function. Note that the package must be loaded before you run the <code>ls</code> command.</p>
 <p><strong>Usage:</strong> Getting a list of functions inside the <code>dplyr</code> package</p>
-<pre class="r"><code>library(dplyr)
-ls(&quot;package:dplyr&quot;)</code></pre>
-<pre><code>##   [1] &quot;%&gt;%&quot;                   &quot;across&quot;                &quot;add_count&quot;            
-##   [4] &quot;add_count_&quot;            &quot;add_row&quot;               &quot;add_rownames&quot;         
-##   [7] &quot;add_tally&quot;             &quot;add_tally_&quot;            &quot;all_equal&quot;            
-##  [10] &quot;all_of&quot;                &quot;all_vars&quot;              &quot;anti_join&quot;            
-##  [13] &quot;any_of&quot;                &quot;any_vars&quot;              &quot;arrange&quot;              
-##  [16] &quot;arrange_&quot;              &quot;arrange_all&quot;           &quot;arrange_at&quot;           
-##  [19] &quot;arrange_if&quot;            &quot;as_data_frame&quot;         &quot;as_label&quot;             
-##  [22] &quot;as_tibble&quot;             &quot;as.tbl&quot;                &quot;auto_copy&quot;            
-##  [25] &quot;band_instruments&quot;      &quot;band_instruments2&quot;     &quot;band_members&quot;         
-##  [28] &quot;bench_tbls&quot;            &quot;between&quot;               &quot;bind_cols&quot;            
-##  [31] &quot;bind_rows&quot;             &quot;c_across&quot;              &quot;case_when&quot;            
-##  [34] &quot;changes&quot;               &quot;check_dbplyr&quot;          &quot;coalesce&quot;             
-##  [37] &quot;collapse&quot;              &quot;collect&quot;               &quot;combine&quot;              
-##  [40] &quot;common_by&quot;             &quot;compare_tbls&quot;          &quot;compare_tbls2&quot;        
-##  [43] &quot;compute&quot;               &quot;contains&quot;              &quot;copy_to&quot;              
-##  [46] &quot;count&quot;                 &quot;count_&quot;                &quot;cumall&quot;               
-##  [49] &quot;cumany&quot;                &quot;cume_dist&quot;             &quot;cummean&quot;              
-##  [52] &quot;cur_column&quot;            &quot;cur_data&quot;              &quot;cur_data_all&quot;         
-##  [55] &quot;cur_group&quot;             &quot;cur_group_id&quot;          &quot;cur_group_rows&quot;       
-##  [58] &quot;current_vars&quot;          &quot;data_frame&quot;            &quot;data_frame_&quot;          
-##  [61] &quot;db_analyze&quot;            &quot;db_begin&quot;              &quot;db_commit&quot;            
-##  [64] &quot;db_create_index&quot;       &quot;db_create_indexes&quot;     &quot;db_create_table&quot;      
-##  [67] &quot;db_data_type&quot;          &quot;db_desc&quot;               &quot;db_drop_table&quot;        
-##  [70] &quot;db_explain&quot;            &quot;db_has_table&quot;          &quot;db_insert_into&quot;       
-##  [73] &quot;db_list_tables&quot;        &quot;db_query_fields&quot;       &quot;db_query_rows&quot;        
-##  [76] &quot;db_rollback&quot;           &quot;db_save_query&quot;         &quot;db_write_table&quot;       
-##  [79] &quot;dense_rank&quot;            &quot;desc&quot;                  &quot;dim_desc&quot;             
-##  [82] &quot;distinct&quot;              &quot;distinct_&quot;             &quot;distinct_all&quot;         
-##  [85] &quot;distinct_at&quot;           &quot;distinct_if&quot;           &quot;distinct_prepare&quot;     
-##  [88] &quot;do&quot;                    &quot;do_&quot;                   &quot;dplyr_col_modify&quot;     
-##  [91] &quot;dplyr_reconstruct&quot;     &quot;dplyr_row_slice&quot;       &quot;ends_with&quot;            
-##  [94] &quot;enexpr&quot;                &quot;enexprs&quot;               &quot;enquo&quot;                
-##  [97] &quot;enquos&quot;                &quot;ensym&quot;                 &quot;ensyms&quot;               
-## [100] &quot;eval_tbls&quot;             &quot;eval_tbls2&quot;            &quot;everything&quot;           
-## [103] &quot;explain&quot;               &quot;expr&quot;                  &quot;failwith&quot;             
-## [106] &quot;filter&quot;                &quot;filter_&quot;               &quot;filter_all&quot;           
-## [109] &quot;filter_at&quot;             &quot;filter_if&quot;             &quot;first&quot;                
-## [112] &quot;frame_data&quot;            &quot;full_join&quot;             &quot;funs&quot;                 
-## [115] &quot;funs_&quot;                 &quot;glimpse&quot;               &quot;group_by&quot;             
-## [118] &quot;group_by_&quot;             &quot;group_by_all&quot;          &quot;group_by_at&quot;          
-## [121] &quot;group_by_drop_default&quot; &quot;group_by_if&quot;           &quot;group_by_prepare&quot;     
-## [124] &quot;group_cols&quot;            &quot;group_data&quot;            &quot;group_indices&quot;        
-## [127] &quot;group_indices_&quot;        &quot;group_keys&quot;            &quot;group_map&quot;            
-## [130] &quot;group_modify&quot;          &quot;group_nest&quot;            &quot;group_rows&quot;           
-## [133] &quot;group_size&quot;            &quot;group_split&quot;           &quot;group_trim&quot;           
-## [136] &quot;group_vars&quot;            &quot;group_walk&quot;            &quot;grouped_df&quot;           
-## [139] &quot;groups&quot;                &quot;id&quot;                    &quot;ident&quot;                
-## [142] &quot;if_else&quot;               &quot;inner_join&quot;            &quot;intersect&quot;            
-## [145] &quot;is_grouped_df&quot;         &quot;is.grouped_df&quot;         &quot;is.src&quot;               
-## [148] &quot;is.tbl&quot;                &quot;lag&quot;                   &quot;last&quot;                 
-## [151] &quot;last_col&quot;              &quot;lead&quot;                  &quot;left_join&quot;            
-## [154] &quot;location&quot;              &quot;lst&quot;                   &quot;lst_&quot;                 
-## [157] &quot;make_tbl&quot;              &quot;matches&quot;               &quot;min_rank&quot;             
-## [160] &quot;mutate&quot;                &quot;mutate_&quot;               &quot;mutate_all&quot;           
-## [163] &quot;mutate_at&quot;             &quot;mutate_each&quot;           &quot;mutate_each_&quot;         
-## [166] &quot;mutate_if&quot;             &quot;n&quot;                     &quot;n_distinct&quot;           
-## [169] &quot;n_groups&quot;              &quot;na_if&quot;                 &quot;near&quot;                 
-## [172] &quot;nest_by&quot;               &quot;nest_join&quot;             &quot;new_grouped_df&quot;       
-## [175] &quot;nth&quot;                   &quot;ntile&quot;                 &quot;num_range&quot;            
-## [178] &quot;one_of&quot;                &quot;order_by&quot;              &quot;percent_rank&quot;         
-## [181] &quot;progress_estimated&quot;    &quot;pull&quot;                  &quot;quo&quot;                  
-## [184] &quot;quo_name&quot;              &quot;quos&quot;                  &quot;recode&quot;               
-## [187] &quot;recode_factor&quot;         &quot;relocate&quot;              &quot;rename&quot;               
-## [190] &quot;rename_&quot;               &quot;rename_all&quot;            &quot;rename_at&quot;            
-## [193] &quot;rename_if&quot;             &quot;rename_vars&quot;           &quot;rename_vars_&quot;         
-## [196] &quot;rename_with&quot;           &quot;right_join&quot;            &quot;row_number&quot;           
-## [199] &quot;rows_delete&quot;           &quot;rows_insert&quot;           &quot;rows_patch&quot;           
-## [202] &quot;rows_update&quot;           &quot;rows_upsert&quot;           &quot;rowwise&quot;              
-## [205] &quot;same_src&quot;              &quot;sample_frac&quot;           &quot;sample_n&quot;             
-## [208] &quot;select&quot;                &quot;select_&quot;               &quot;select_all&quot;           
-## [211] &quot;select_at&quot;             &quot;select_if&quot;             &quot;select_var&quot;           
-## [214] &quot;select_vars&quot;           &quot;select_vars_&quot;          &quot;semi_join&quot;            
-## [217] &quot;setdiff&quot;               &quot;setequal&quot;              &quot;show_query&quot;           
-## [220] &quot;slice&quot;                 &quot;slice_&quot;                &quot;slice_head&quot;           
-## [223] &quot;slice_max&quot;             &quot;slice_min&quot;             &quot;slice_sample&quot;         
-## [226] &quot;slice_tail&quot;            &quot;sql&quot;                   &quot;sql_escape_ident&quot;     
-## [229] &quot;sql_escape_string&quot;     &quot;sql_join&quot;              &quot;sql_select&quot;           
-## [232] &quot;sql_semi_join&quot;         &quot;sql_set_op&quot;            &quot;sql_subquery&quot;         
-## [235] &quot;sql_translate_env&quot;     &quot;src&quot;                   &quot;src_df&quot;               
-## [238] &quot;src_local&quot;             &quot;src_mysql&quot;             &quot;src_postgres&quot;         
-## [241] &quot;src_sqlite&quot;            &quot;src_tbls&quot;              &quot;starts_with&quot;          
-## [244] &quot;starwars&quot;              &quot;storms&quot;                &quot;summarise&quot;            
-## [247] &quot;summarise_&quot;            &quot;summarise_all&quot;         &quot;summarise_at&quot;         
-## [250] &quot;summarise_each&quot;        &quot;summarise_each_&quot;       &quot;summarise_if&quot;         
-## [253] &quot;summarize&quot;             &quot;summarize_&quot;            &quot;summarize_all&quot;        
-## [256] &quot;summarize_at&quot;          &quot;summarize_each&quot;        &quot;summarize_each_&quot;      
-## [259] &quot;summarize_if&quot;          &quot;sym&quot;                   &quot;syms&quot;                 
-## [262] &quot;tally&quot;                 &quot;tally_&quot;                &quot;tbl&quot;                  
-## [265] &quot;tbl_df&quot;                &quot;tbl_nongroup_vars&quot;     &quot;tbl_ptype&quot;            
-## [268] &quot;tbl_sum&quot;               &quot;tbl_vars&quot;              &quot;tibble&quot;               
-## [271] &quot;top_frac&quot;              &quot;top_n&quot;                 &quot;transmute&quot;            
-## [274] &quot;transmute_&quot;            &quot;transmute_all&quot;         &quot;transmute_at&quot;         
-## [277] &quot;transmute_if&quot;          &quot;tribble&quot;               &quot;trunc_mat&quot;            
-## [280] &quot;type_sum&quot;              &quot;ungroup&quot;               &quot;union&quot;                
-## [283] &quot;union_all&quot;             &quot;validate_grouped_df&quot;   &quot;vars&quot;                 
-## [286] &quot;with_groups&quot;           &quot;with_order&quot;            &quot;wrap_dbplyr_obj&quot;</code></pre>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(dplyr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ls</span>(<span style="color:#e6db74">&#34;package:dplyr&#34;</span>)
+</span></span></code></pre></div><pre tabindex="0"><code>##   [1] &#34;%&gt;%&#34;                   &#34;across&#34;                &#34;add_count&#34;            
+##   [4] &#34;add_count_&#34;            &#34;add_row&#34;               &#34;add_rownames&#34;         
+##   [7] &#34;add_tally&#34;             &#34;add_tally_&#34;            &#34;all_equal&#34;            
+##  [10] &#34;all_of&#34;                &#34;all_vars&#34;              &#34;anti_join&#34;            
+##  [13] &#34;any_of&#34;                &#34;any_vars&#34;              &#34;arrange&#34;              
+##  [16] &#34;arrange_&#34;              &#34;arrange_all&#34;           &#34;arrange_at&#34;           
+##  [19] &#34;arrange_if&#34;            &#34;as.tbl&#34;                &#34;as_data_frame&#34;        
+##  [22] &#34;as_label&#34;              &#34;as_tibble&#34;             &#34;auto_copy&#34;            
+##  [25] &#34;band_instruments&#34;      &#34;band_instruments2&#34;     &#34;band_members&#34;         
+##  [28] &#34;between&#34;               &#34;bind_cols&#34;             &#34;bind_rows&#34;            
+##  [31] &#34;c_across&#34;              &#34;case_match&#34;            &#34;case_when&#34;            
+##  [34] &#34;check_dbplyr&#34;          &#34;coalesce&#34;              &#34;collapse&#34;             
+##  [37] &#34;collect&#34;               &#34;combine&#34;               &#34;common_by&#34;            
+##  [40] &#34;compute&#34;               &#34;consecutive_id&#34;        &#34;contains&#34;             
+##  [43] &#34;copy_to&#34;               &#34;count&#34;                 &#34;count_&#34;               
+##  [46] &#34;cross_join&#34;            &#34;cumall&#34;                &#34;cumany&#34;               
+##  [49] &#34;cume_dist&#34;             &#34;cummean&#34;               &#34;cur_column&#34;           
+##  [52] &#34;cur_data&#34;              &#34;cur_data_all&#34;          &#34;cur_group&#34;            
+##  [55] &#34;cur_group_id&#34;          &#34;cur_group_rows&#34;        &#34;data_frame&#34;           
+##  [58] &#34;db_analyze&#34;            &#34;db_begin&#34;              &#34;db_commit&#34;            
+##  [61] &#34;db_create_index&#34;       &#34;db_create_indexes&#34;     &#34;db_create_table&#34;      
+##  [64] &#34;db_data_type&#34;          &#34;db_desc&#34;               &#34;db_drop_table&#34;        
+##  [67] &#34;db_explain&#34;            &#34;db_has_table&#34;          &#34;db_insert_into&#34;       
+##  [70] &#34;db_list_tables&#34;        &#34;db_query_fields&#34;       &#34;db_query_rows&#34;        
+##  [73] &#34;db_rollback&#34;           &#34;db_save_query&#34;         &#34;db_write_table&#34;       
+##  [76] &#34;dense_rank&#34;            &#34;desc&#34;                  &#34;dim_desc&#34;             
+##  [79] &#34;distinct&#34;              &#34;distinct_&#34;             &#34;distinct_all&#34;         
+##  [82] &#34;distinct_at&#34;           &#34;distinct_if&#34;           &#34;distinct_prepare&#34;     
+##  [85] &#34;do&#34;                    &#34;do_&#34;                   &#34;dplyr_col_modify&#34;     
+##  [88] &#34;dplyr_reconstruct&#34;     &#34;dplyr_row_slice&#34;       &#34;ends_with&#34;            
+##  [91] &#34;enexpr&#34;                &#34;enexprs&#34;               &#34;enquo&#34;                
+##  [94] &#34;enquos&#34;                &#34;ensym&#34;                 &#34;ensyms&#34;               
+##  [97] &#34;everything&#34;            &#34;explain&#34;               &#34;expr&#34;                 
+## [100] &#34;filter&#34;                &#34;filter_&#34;               &#34;filter_all&#34;           
+## [103] &#34;filter_at&#34;             &#34;filter_if&#34;             &#34;filter_out&#34;           
+## [106] &#34;first&#34;                 &#34;full_join&#34;             &#34;funs&#34;                 
+## [109] &#34;funs_&#34;                 &#34;glimpse&#34;               &#34;group_by&#34;             
+## [112] &#34;group_by_&#34;             &#34;group_by_all&#34;          &#34;group_by_at&#34;          
+## [115] &#34;group_by_drop_default&#34; &#34;group_by_if&#34;           &#34;group_by_prepare&#34;     
+## [118] &#34;group_cols&#34;            &#34;group_data&#34;            &#34;group_indices&#34;        
+## [121] &#34;group_indices_&#34;        &#34;group_keys&#34;            &#34;group_map&#34;            
+## [124] &#34;group_modify&#34;          &#34;group_nest&#34;            &#34;group_rows&#34;           
+## [127] &#34;group_size&#34;            &#34;group_split&#34;           &#34;group_trim&#34;           
+## [130] &#34;group_vars&#34;            &#34;group_walk&#34;            &#34;grouped_df&#34;           
+## [133] &#34;groups&#34;                &#34;ident&#34;                 &#34;if_all&#34;               
+## [136] &#34;if_any&#34;                &#34;if_else&#34;               &#34;inner_join&#34;           
+## [139] &#34;intersect&#34;             &#34;is.grouped_df&#34;         &#34;is.src&#34;               
+## [142] &#34;is.tbl&#34;                &#34;is_grouped_df&#34;         &#34;join_by&#34;              
+## [145] &#34;lag&#34;                   &#34;last&#34;                  &#34;last_col&#34;             
+## [148] &#34;last_dplyr_warnings&#34;   &#34;lead&#34;                  &#34;left_join&#34;            
+## [151] &#34;lst&#34;                   &#34;make_tbl&#34;              &#34;matches&#34;              
+## [154] &#34;min_rank&#34;              &#34;mutate&#34;                &#34;mutate_&#34;              
+## [157] &#34;mutate_all&#34;            &#34;mutate_at&#34;             &#34;mutate_each&#34;          
+## [160] &#34;mutate_each_&#34;          &#34;mutate_if&#34;             &#34;n&#34;                    
+## [163] &#34;n_distinct&#34;            &#34;n_groups&#34;              &#34;na_if&#34;                
+## [166] &#34;near&#34;                  &#34;nest_by&#34;               &#34;nest_join&#34;            
+## [169] &#34;new_grouped_df&#34;        &#34;new_rowwise_df&#34;        &#34;nth&#34;                  
+## [172] &#34;ntile&#34;                 &#34;num_range&#34;             &#34;one_of&#34;               
+## [175] &#34;order_by&#34;              &#34;percent_rank&#34;          &#34;pick&#34;                 
+## [178] &#34;progress_estimated&#34;    &#34;pull&#34;                  &#34;quo&#34;                  
+## [181] &#34;quo_name&#34;              &#34;quos&#34;                  &#34;recode&#34;               
+## [184] &#34;recode_factor&#34;         &#34;recode_values&#34;         &#34;reframe&#34;              
+## [187] &#34;relocate&#34;              &#34;rename&#34;                &#34;rename_&#34;              
+## [190] &#34;rename_all&#34;            &#34;rename_at&#34;             &#34;rename_if&#34;            
+## [193] &#34;rename_with&#34;           &#34;replace_values&#34;        &#34;replace_when&#34;         
+## [196] &#34;right_join&#34;            &#34;row_number&#34;            &#34;rows_append&#34;          
+## [199] &#34;rows_delete&#34;           &#34;rows_insert&#34;           &#34;rows_patch&#34;           
+## [202] &#34;rows_update&#34;           &#34;rows_upsert&#34;           &#34;rowwise&#34;              
+## [205] &#34;same_src&#34;              &#34;sample_frac&#34;           &#34;sample_n&#34;             
+## [208] &#34;select&#34;                &#34;select_&#34;               &#34;select_all&#34;           
+## [211] &#34;select_at&#34;             &#34;select_if&#34;             &#34;semi_join&#34;            
+## [214] &#34;setdiff&#34;               &#34;setequal&#34;              &#34;show_query&#34;           
+## [217] &#34;slice&#34;                 &#34;slice_&#34;                &#34;slice_head&#34;           
+## [220] &#34;slice_max&#34;             &#34;slice_min&#34;             &#34;slice_sample&#34;         
+## [223] &#34;slice_tail&#34;            &#34;sql&#34;                   &#34;sql_escape_ident&#34;     
+## [226] &#34;sql_escape_string&#34;     &#34;sql_join&#34;              &#34;sql_select&#34;           
+## [229] &#34;sql_semi_join&#34;         &#34;sql_set_op&#34;            &#34;sql_subquery&#34;         
+## [232] &#34;sql_translate_env&#34;     &#34;src&#34;                   &#34;src_df&#34;               
+## [235] &#34;src_local&#34;             &#34;src_mysql&#34;             &#34;src_postgres&#34;         
+## [238] &#34;src_sqlite&#34;            &#34;src_tbls&#34;              &#34;starts_with&#34;          
+## [241] &#34;starwars&#34;              &#34;storms&#34;                &#34;summarise&#34;            
+## [244] &#34;summarise_&#34;            &#34;summarise_all&#34;         &#34;summarise_at&#34;         
+## [247] &#34;summarise_each&#34;        &#34;summarise_each_&#34;       &#34;summarise_if&#34;         
+## [250] &#34;summarize&#34;             &#34;summarize_&#34;            &#34;summarize_all&#34;        
+## [253] &#34;summarize_at&#34;          &#34;summarize_each&#34;        &#34;summarize_each_&#34;      
+## [256] &#34;summarize_if&#34;          &#34;sym&#34;                   &#34;symdiff&#34;              
+## [259] &#34;syms&#34;                  &#34;tally&#34;                 &#34;tally_&#34;               
+## [262] &#34;tbl&#34;                   &#34;tbl_df&#34;                &#34;tbl_nongroup_vars&#34;    
+## [265] &#34;tbl_ptype&#34;             &#34;tbl_vars&#34;              &#34;tibble&#34;               
+## [268] &#34;top_frac&#34;              &#34;top_n&#34;                 &#34;transmute&#34;            
+## [271] &#34;transmute_&#34;            &#34;transmute_all&#34;         &#34;transmute_at&#34;         
+## [274] &#34;transmute_if&#34;          &#34;tribble&#34;               &#34;type_sum&#34;             
+## [277] &#34;ungroup&#34;               &#34;union&#34;                 &#34;union_all&#34;            
+## [280] &#34;validate_grouped_df&#34;   &#34;validate_rowwise_df&#34;   &#34;vars&#34;                 
+## [283] &#34;when_all&#34;              &#34;when_any&#34;              &#34;where&#34;                
+## [286] &#34;with_groups&#34;           &#34;with_order&#34;            &#34;wrap_dbplyr_obj&#34;
+</code></pre>
     </div>
 
     

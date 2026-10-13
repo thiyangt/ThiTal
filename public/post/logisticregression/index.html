@@ -672,189 +672,190 @@
   <div class="article-container">
 
     <div class="article-style">
-      
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
-
-
-<div id="data" class="section level2">
-<h2>Data</h2>
+      <h2 id="data">Data</h2>
 <p>In this post I am going to use <code>penguins</code> dataset in <code>palmerpenguins</code> package in R. First we load the dataset.</p>
-<pre class="r"><code>library(palmerpenguins)
-library(skimr)
-library(tidyverse)
-library(plotly)
-library(visdat)
-library(patchwork)
-data(&quot;penguins&quot;)</code></pre>
-<p>Here is an overview of the dataset.</p>
-<pre class="r"><code>skim(penguins)</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(palmerpenguins)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(skimr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidyverse)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(plotly)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(visdat)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(patchwork)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">data</span>(<span style="color:#e6db74">&#34;penguins&#34;</span>)
+</span></span></code></pre></div><p>Here is an overview of the dataset.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">skim</span>(penguins)
+</span></span></code></pre></div><p>Table: <span id="tab:unnamed-chunk-2"></span>Table 1: Data summary</p>
 <table>
-<caption><span id="tab:unnamed-chunk-2">Table 1: </span>Data summary</caption>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
 <tbody>
-<tr class="odd">
-<td align="left">Name</td>
-<td align="left">penguins</td>
+<tr>
+<td style="text-align:left">Name</td>
+<td style="text-align:left">penguins</td>
 </tr>
-<tr class="even">
-<td align="left">Number of rows</td>
-<td align="left">344</td>
+<tr>
+<td style="text-align:left">Number of rows</td>
+<td style="text-align:left">344</td>
 </tr>
-<tr class="odd">
-<td align="left">Number of columns</td>
-<td align="left">8</td>
+<tr>
+<td style="text-align:left">Number of columns</td>
+<td style="text-align:left">8</td>
 </tr>
-<tr class="even">
-<td align="left">_______________________</td>
-<td align="left"></td>
+<tr>
+<td style="text-align:left">_______________________</td>
+<td style="text-align:left"></td>
 </tr>
-<tr class="odd">
-<td align="left">Column type frequency:</td>
-<td align="left"></td>
+<tr>
+<td style="text-align:left">Column type frequency:</td>
+<td style="text-align:left"></td>
 </tr>
-<tr class="even">
-<td align="left">factor</td>
-<td align="left">3</td>
+<tr>
+<td style="text-align:left">factor</td>
+<td style="text-align:left">3</td>
 </tr>
-<tr class="odd">
-<td align="left">numeric</td>
-<td align="left">5</td>
+<tr>
+<td style="text-align:left">numeric</td>
+<td style="text-align:left">5</td>
 </tr>
-<tr class="even">
-<td align="left">________________________</td>
-<td align="left"></td>
+<tr>
+<td style="text-align:left">________________________</td>
+<td style="text-align:left"></td>
 </tr>
-<tr class="odd">
-<td align="left">Group variables</td>
-<td align="left">None</td>
+<tr>
+<td style="text-align:left">Group variables</td>
+<td style="text-align:left">None</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Variable type: factor</strong></p>
 <table>
 <thead>
-<tr class="header">
-<th align="left">skim_variable</th>
-<th align="right">n_missing</th>
-<th align="right">complete_rate</th>
-<th align="left">ordered</th>
-<th align="right">n_unique</th>
-<th align="left">top_counts</th>
+<tr>
+<th style="text-align:left">skim_variable</th>
+<th style="text-align:right">n_missing</th>
+<th style="text-align:right">complete_rate</th>
+<th style="text-align:left">ordered</th>
+<th style="text-align:right">n_unique</th>
+<th style="text-align:left">top_counts</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left">species</td>
-<td align="right">0</td>
-<td align="right">1.00</td>
-<td align="left">FALSE</td>
-<td align="right">3</td>
-<td align="left">Ade: 152, Gen: 124, Chi: 68</td>
+<tr>
+<td style="text-align:left">species</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">1.00</td>
+<td style="text-align:left">FALSE</td>
+<td style="text-align:right">3</td>
+<td style="text-align:left">Ade: 152, Gen: 124, Chi: 68</td>
 </tr>
-<tr class="even">
-<td align="left">island</td>
-<td align="right">0</td>
-<td align="right">1.00</td>
-<td align="left">FALSE</td>
-<td align="right">3</td>
-<td align="left">Bis: 168, Dre: 124, Tor: 52</td>
+<tr>
+<td style="text-align:left">island</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">1.00</td>
+<td style="text-align:left">FALSE</td>
+<td style="text-align:right">3</td>
+<td style="text-align:left">Bis: 168, Dre: 124, Tor: 52</td>
 </tr>
-<tr class="odd">
-<td align="left">sex</td>
-<td align="right">11</td>
-<td align="right">0.97</td>
-<td align="left">FALSE</td>
-<td align="right">2</td>
-<td align="left">mal: 168, fem: 165</td>
+<tr>
+<td style="text-align:left">sex</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">0.97</td>
+<td style="text-align:left">FALSE</td>
+<td style="text-align:right">2</td>
+<td style="text-align:left">mal: 168, fem: 165</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Variable type: numeric</strong></p>
 <table>
 <thead>
-<tr class="header">
-<th align="left">skim_variable</th>
-<th align="right">n_missing</th>
-<th align="right">complete_rate</th>
-<th align="right">mean</th>
-<th align="right">sd</th>
-<th align="right">p0</th>
-<th align="right">p25</th>
-<th align="right">p50</th>
-<th align="right">p75</th>
-<th align="right">p100</th>
-<th align="left">hist</th>
+<tr>
+<th style="text-align:left">skim_variable</th>
+<th style="text-align:right">n_missing</th>
+<th style="text-align:right">complete_rate</th>
+<th style="text-align:right">mean</th>
+<th style="text-align:right">sd</th>
+<th style="text-align:right">p0</th>
+<th style="text-align:right">p25</th>
+<th style="text-align:right">p50</th>
+<th style="text-align:right">p75</th>
+<th style="text-align:right">p100</th>
+<th style="text-align:left">hist</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left">bill_length_mm</td>
-<td align="right">2</td>
-<td align="right">0.99</td>
-<td align="right">43.92</td>
-<td align="right">5.46</td>
-<td align="right">32.1</td>
-<td align="right">39.23</td>
-<td align="right">44.45</td>
-<td align="right">48.5</td>
-<td align="right">59.6</td>
-<td align="left">▃▇▇▆▁</td>
+<tr>
+<td style="text-align:left">bill_length_mm</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">0.99</td>
+<td style="text-align:right">43.92</td>
+<td style="text-align:right">5.46</td>
+<td style="text-align:right">32.1</td>
+<td style="text-align:right">39.23</td>
+<td style="text-align:right">44.45</td>
+<td style="text-align:right">48.5</td>
+<td style="text-align:right">59.6</td>
+<td style="text-align:left">▃▇▇▆▁</td>
 </tr>
-<tr class="even">
-<td align="left">bill_depth_mm</td>
-<td align="right">2</td>
-<td align="right">0.99</td>
-<td align="right">17.15</td>
-<td align="right">1.97</td>
-<td align="right">13.1</td>
-<td align="right">15.60</td>
-<td align="right">17.30</td>
-<td align="right">18.7</td>
-<td align="right">21.5</td>
-<td align="left">▅▅▇▇▂</td>
+<tr>
+<td style="text-align:left">bill_depth_mm</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">0.99</td>
+<td style="text-align:right">17.15</td>
+<td style="text-align:right">1.97</td>
+<td style="text-align:right">13.1</td>
+<td style="text-align:right">15.60</td>
+<td style="text-align:right">17.30</td>
+<td style="text-align:right">18.7</td>
+<td style="text-align:right">21.5</td>
+<td style="text-align:left">▅▅▇▇▂</td>
 </tr>
-<tr class="odd">
-<td align="left">flipper_length_mm</td>
-<td align="right">2</td>
-<td align="right">0.99</td>
-<td align="right">200.92</td>
-<td align="right">14.06</td>
-<td align="right">172.0</td>
-<td align="right">190.00</td>
-<td align="right">197.00</td>
-<td align="right">213.0</td>
-<td align="right">231.0</td>
-<td align="left">▂▇▃▅▂</td>
+<tr>
+<td style="text-align:left">flipper_length_mm</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">0.99</td>
+<td style="text-align:right">200.92</td>
+<td style="text-align:right">14.06</td>
+<td style="text-align:right">172.0</td>
+<td style="text-align:right">190.00</td>
+<td style="text-align:right">197.00</td>
+<td style="text-align:right">213.0</td>
+<td style="text-align:right">231.0</td>
+<td style="text-align:left">▂▇▃▅▂</td>
 </tr>
-<tr class="even">
-<td align="left">body_mass_g</td>
-<td align="right">2</td>
-<td align="right">0.99</td>
-<td align="right">4201.75</td>
-<td align="right">801.95</td>
-<td align="right">2700.0</td>
-<td align="right">3550.00</td>
-<td align="right">4050.00</td>
-<td align="right">4750.0</td>
-<td align="right">6300.0</td>
-<td align="left">▃▇▆▃▂</td>
+<tr>
+<td style="text-align:left">body_mass_g</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">0.99</td>
+<td style="text-align:right">4201.75</td>
+<td style="text-align:right">801.95</td>
+<td style="text-align:right">2700.0</td>
+<td style="text-align:right">3550.00</td>
+<td style="text-align:right">4050.00</td>
+<td style="text-align:right">4750.0</td>
+<td style="text-align:right">6300.0</td>
+<td style="text-align:left">▃▇▆▃▂</td>
 </tr>
-<tr class="odd">
-<td align="left">year</td>
-<td align="right">0</td>
-<td align="right">1.00</td>
-<td align="right">2008.03</td>
-<td align="right">0.82</td>
-<td align="right">2007.0</td>
-<td align="right">2007.00</td>
-<td align="right">2008.00</td>
-<td align="right">2009.0</td>
-<td align="right">2009.0</td>
-<td align="left">▇▁▇▁▇</td>
+<tr>
+<td style="text-align:left">year</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">1.00</td>
+<td style="text-align:right">2008.03</td>
+<td style="text-align:right">0.82</td>
+<td style="text-align:right">2007.0</td>
+<td style="text-align:right">2007.00</td>
+<td style="text-align:right">2008.00</td>
+<td style="text-align:right">2009.0</td>
+<td style="text-align:right">2009.0</td>
+<td style="text-align:left">▇▁▇▁▇</td>
 </tr>
 </tbody>
 </table>
-<pre class="r"><code>summary(penguins)</code></pre>
-<pre><code>      species          island    bill_length_mm  bill_depth_mm  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">summary</span>(penguins)
+</span></span></code></pre></div><pre tabindex="0"><code>      species          island    bill_length_mm  bill_depth_mm  
  Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  
  Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  
  Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  
@@ -869,90 +870,76 @@ data(&quot;penguins&quot;)</code></pre>
  Mean   :200.9     Mean   :4202                Mean   :2008  
  3rd Qu.:213.0     3rd Qu.:4750                3rd Qu.:2009  
  Max.   :231.0     Max.   :6300                Max.   :2009  
- NA&#39;s   :2         NA&#39;s   :2                                 </code></pre>
-<p>Before moving on to the full logistic regression model, it’s a good idea to look at the associations between each predictor and gender. Before moving on to the whole model, It’s critical to first grasp these linkages. We can use logistic regression to look at all of the predictors simultaneously.</p>
-<pre class="r"><code>p1_species &lt;- penguins %&gt;% 
-  na.omit() %&gt;%
-  count(species,sex) %&gt;% 
-  group_by(species) %&gt;% 
-  mutate(Percentage = 100*n/sum(n)) %&gt;% 
-  ggplot(aes(x = species,y = Percentage,fill=sex))+
-  geom_bar(stat=&quot;identity&quot;) + 
-  scale_fill_manual(values = c(&quot;purple&quot;,&quot;cyan4&quot;)) +
-  coord_flip() +
-  theme(legend.position = &quot;bottom&quot;) +
-  ggtitle(&quot;a&quot;) 
-
-p2_island &lt;- penguins %&gt;% 
-  count(island,sex) %&gt;% 
-  group_by(island) %&gt;% 
-  mutate(Percentage = 100*n/sum(n)) %&gt;% 
-  ggplot(aes(x = island,y = Percentage,fill=sex))+
-  geom_bar(stat=&quot;identity&quot;) + 
-  scale_fill_manual(values = c(&quot;purple&quot;,&quot;cyan4&quot;)) + 
-  coord_flip() +
-  theme(legend.position = &quot;bottom&quot;) +
-  ggtitle(&quot;b&quot;)
-(p1_species|p2_island)</code></pre>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+ NA&#39;s   :2         NA&#39;s   :2                                 
+</code></pre><p>Before moving on to the full logistic regression model, it&rsquo;s a good idea to look at the associations between each predictor and gender. Before moving on to the whole model, It&rsquo;s critical to first grasp these linkages. We can use logistic regression to look at all of the predictors simultaneously.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p1_species <span style="color:#f92672">&lt;-</span> penguins <span style="color:#f92672">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">na.omit</span>() <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">count</span>(species,sex) <span style="color:#f92672">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(species) <span style="color:#f92672">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(Percentage <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span><span style="color:#f92672">*</span>n<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(n)) <span style="color:#f92672">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ggplot</span>(<span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> species,y <span style="color:#f92672">=</span> Percentage,fill<span style="color:#f92672">=</span>sex))<span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_bar</span>(stat<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;identity&#34;</span>) <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_fill_manual</span>(values <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;purple&#34;</span>,<span style="color:#e6db74">&#34;cyan4&#34;</span>)) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">coord_flip</span>() <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme</span>(legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bottom&#34;</span>) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ggtitle</span>(<span style="color:#e6db74">&#34;a&#34;</span>) 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>p2_island <span style="color:#f92672">&lt;-</span> penguins <span style="color:#f92672">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">count</span>(island,sex) <span style="color:#f92672">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(island) <span style="color:#f92672">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(Percentage <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span><span style="color:#f92672">*</span>n<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(n)) <span style="color:#f92672">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ggplot</span>(<span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> island,y <span style="color:#f92672">=</span> Percentage,fill<span style="color:#f92672">=</span>sex))<span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_bar</span>(stat<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;identity&#34;</span>) <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_fill_manual</span>(values <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;purple&#34;</span>,<span style="color:#e6db74">&#34;cyan4&#34;</span>)) <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">coord_flip</span>() <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme</span>(legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bottom&#34;</span>) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ggtitle</span>(<span style="color:#e6db74">&#34;b&#34;</span>)
+</span></span><span style="display:flex;"><span>(p1_species<span style="color:#f92672">|</span>p2_island)
+</span></span></code></pre></div><div class="figure">
 <img src="/post/logisticregression_files/figure-html/unnamed-chunk-3-1.png" alt="Distribution of (a) species and (d) island by gender." width="672" />
-<p class="caption">
-Figure 1: Distribution of (a) species and (d) island by gender.
-</p>
+<p class="caption"><span id="fig:unnamed-chunk-3"></span>Figure 1: Distribution of (a) species and (d) island by gender.</p>
 </div>
-<pre class="r"><code>p3_length &lt;-  ggplot(penguins, aes(x=sex, y=bill_length_mm, fill=sex)) +
-  geom_boxplot() + 
-  scale_fill_manual(values = c(&quot;purple&quot;,&quot;cyan4&quot;)) + 
-  theme(legend.position = &quot;bottom&quot;) + ggtitle(&quot;a&quot;)
-
-p4_depth &lt;-  ggplot(penguins, aes(x=sex, y=bill_depth_mm, fill=sex)) +
-  geom_boxplot() + 
-  scale_fill_manual(values = c(&quot;purple&quot;,&quot;cyan4&quot;)) + 
-  theme(legend.position = &quot;bottom&quot;) + ggtitle(&quot;b&quot;)
-
-p5_flipper &lt;-  ggplot(penguins, aes(x=sex, y=flipper_length_mm, fill=sex)) +
-  geom_boxplot() + 
-  scale_fill_manual(values = c(&quot;purple&quot;,&quot;cyan4&quot;)) + 
-  theme(legend.position = &quot;bottom&quot;) + ggtitle(&quot;c&quot;)
-
-p6_bmi &lt;-  ggplot(penguins, aes(x=sex, y=body_mass_g, fill=sex)) +
-  geom_boxplot() + 
-  scale_fill_manual(values = c(&quot;purple&quot;,&quot;cyan4&quot;)) + 
-  theme(legend.position = &quot;bottom&quot;) + ggtitle(&quot;d&quot;)
-
-(p3_length|p4_depth)/(p5_flipper|p6_bmi)</code></pre>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>p3_length <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">ggplot</span>(penguins, <span style="color:#a6e22e">aes</span>(x<span style="color:#f92672">=</span>sex, y<span style="color:#f92672">=</span>bill_length_mm, fill<span style="color:#f92672">=</span>sex)) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_boxplot</span>() <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_fill_manual</span>(values <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;purple&#34;</span>,<span style="color:#e6db74">&#34;cyan4&#34;</span>)) <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme</span>(legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bottom&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">ggtitle</span>(<span style="color:#e6db74">&#34;a&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>p4_depth <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">ggplot</span>(penguins, <span style="color:#a6e22e">aes</span>(x<span style="color:#f92672">=</span>sex, y<span style="color:#f92672">=</span>bill_depth_mm, fill<span style="color:#f92672">=</span>sex)) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_boxplot</span>() <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_fill_manual</span>(values <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;purple&#34;</span>,<span style="color:#e6db74">&#34;cyan4&#34;</span>)) <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme</span>(legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bottom&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">ggtitle</span>(<span style="color:#e6db74">&#34;b&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>p5_flipper <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">ggplot</span>(penguins, <span style="color:#a6e22e">aes</span>(x<span style="color:#f92672">=</span>sex, y<span style="color:#f92672">=</span>flipper_length_mm, fill<span style="color:#f92672">=</span>sex)) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_boxplot</span>() <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_fill_manual</span>(values <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;purple&#34;</span>,<span style="color:#e6db74">&#34;cyan4&#34;</span>)) <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme</span>(legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bottom&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">ggtitle</span>(<span style="color:#e6db74">&#34;c&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>p6_bmi <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">ggplot</span>(penguins, <span style="color:#a6e22e">aes</span>(x<span style="color:#f92672">=</span>sex, y<span style="color:#f92672">=</span>body_mass_g, fill<span style="color:#f92672">=</span>sex)) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_boxplot</span>() <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_fill_manual</span>(values <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;purple&#34;</span>,<span style="color:#e6db74">&#34;cyan4&#34;</span>)) <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme</span>(legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bottom&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">ggtitle</span>(<span style="color:#e6db74">&#34;d&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(p3_length<span style="color:#f92672">|</span>p4_depth)<span style="color:#f92672">/</span>(p5_flipper<span style="color:#f92672">|</span>p6_bmi)
+</span></span></code></pre></div><div class="figure">
 <img src="/post/logisticregression_files/figure-html/unnamed-chunk-4-1.png" alt="Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender." width="672" />
-<p class="caption">
-Figure 2: Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.
-</p>
+<p class="caption"><span id="fig:unnamed-chunk-4"></span>Figure 2: Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.</p>
 </div>
-</div>
-<div id="missing-values-exploration" class="section level2">
-<h2>Missing values exploration</h2>
-<pre class="r"><code>vis_miss(penguins)</code></pre>
-<p><img src="/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-</div>
-<div id="remove-missing-values" class="section level2">
-<h2>Remove missing values</h2>
-<pre class="r"><code>penguins_omit &lt;- penguins %&gt;%
-  na.omit()
-vis_miss(penguins_omit)</code></pre>
-<p><img src="/post/logisticregression_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-</div>
-<div id="building-logistic-regression" class="section level2">
-<h2>Building logistic regression</h2>
-<p>Then, using the other variables in the dataset, I’ll create a logistic regression model to predict the gender of the palmer penguins. One goal of this work is to identify which variables significantly contribute to determining the gender of penguins. Before beginning to build the model, double-check that all qualitative variables have been saved as factors.</p>
-<pre class="r"><code>fit &lt;- glm(sex ~ species + island + bill_length_mm + bill_depth_mm + flipper_length_mm + body_mass_g, data=penguins_omit, family=&quot;binomial&quot;)
-summary(fit)</code></pre>
-<pre><code>
+<h2 id="missing-values-exploration">Missing values exploration</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">vis_miss</span>(penguins)
+</span></span></code></pre></div><img src="/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png" alt="" width="672" />
+<h2 id="remove-missing-values">Remove missing values</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>penguins_omit <span style="color:#f92672">&lt;-</span> penguins <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">na.omit</span>()
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">vis_miss</span>(penguins_omit)
+</span></span></code></pre></div><img src="/post/logisticregression_files/figure-html/unnamed-chunk-6-1.png" alt="" width="672" />
+<h2 id="building-logistic-regression">Building logistic regression</h2>
+<p>Then, using the other variables in the dataset, I&rsquo;ll create a logistic regression model to predict the gender of the palmer penguins. One goal of this work is to identify which variables significantly contribute to determining the gender of penguins. Before beginning to build the model, double-check that all qualitative variables have been saved as factors.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>fit <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">glm</span>(sex <span style="color:#f92672">~</span> species <span style="color:#f92672">+</span> island <span style="color:#f92672">+</span> bill_length_mm <span style="color:#f92672">+</span> bill_depth_mm <span style="color:#f92672">+</span> flipper_length_mm <span style="color:#f92672">+</span> body_mass_g, data<span style="color:#f92672">=</span>penguins_omit, family<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;binomial&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summary</span>(fit)
+</span></span></code></pre></div><pre tabindex="0"><code>
 Call:
 glm(formula = sex ~ species + island + bill_length_mm + bill_depth_mm + 
-    flipper_length_mm + body_mass_g, family = &quot;binomial&quot;, data = penguins_omit)
-
-Deviance Residuals: 
-    Min       1Q   Median       3Q      Max  
--3.4128  -0.2000   0.0022   0.1441   2.8235  
+    flipper_length_mm + body_mass_g, family = &#34;binomial&#34;, data = penguins_omit)
 
 Coefficients:
                     Estimate Std. Error z value Pr(&gt;|z|)    
@@ -974,27 +961,22 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 Residual deviance: 126.05  on 324  degrees of freedom
 AIC: 144.05
 
-Number of Fisher Scoring iterations: 7</code></pre>
-<p>To represent qualitative variables, R will build an indicator (dummy) variable using the lowest coded category as the reference group. For example,</p>
-<p><span class="math display">\[Y=\begin{cases}
-0, &amp; \text{if female}\\
-1, &amp; \text{if male}
-\end{cases}\]</span></p>
-</div>
-<div id="interpretation-of-parameter-estimates-of-logistic-regression" class="section level2">
-<h2>Interpretation of parameter estimates of logistic regression</h2>
-<p>The “Estimates” in the above output corresponds to the <strong>log-odds</strong>. The <strong>odd ratios</strong> can be obtained as follows:</p>
-<pre class="r"><code>exp(coefficients(fit))</code></pre>
-<pre><code>      (Intercept)  speciesChinstrap     speciesGentoo       islandDream 
+Number of Fisher Scoring iterations: 7
+</code></pre><p>To represent qualitative variables, R will build an indicator (dummy) variable using the lowest coded category as the reference group. For example,</p>
+<p><code>$$Y=\begin{cases} 0, &amp; \text{if female}\\ 1, &amp; \text{if male} \end{cases}$$</code></p>
+<h2 id="interpretation-of-parameter-estimates-of-logistic-regression">Interpretation of parameter estimates of logistic regression</h2>
+<p>The &ldquo;Estimates&rdquo; in the above output  corresponds to the <strong>log-odds</strong>. The <strong>odd ratios</strong> can be obtained as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">exp</span>(<span style="color:#a6e22e">coefficients</span>(fit))
+</span></span></code></pre></div><pre tabindex="0"><code>      (Intercept)  speciesChinstrap     speciesGentoo       islandDream 
      1.238383e-35      6.096066e-04      2.187435e-04      1.382866e+00 
   islandTorgersen    bill_length_mm     bill_depth_mm flipper_length_mm 
      6.017832e-01      1.848613e+00      5.188507e+00      1.027012e+00 
       body_mass_g 
-     1.005836e+00 </code></pre>
-<p><span class="math display">\[odd = \frac{P(event)}{1-P(event)}\]</span></p>
+     1.005836e+00 
+</code></pre><p><code>$$odd = \frac{P(event)}{1-P(event)}$$</code></p>
 <p>The 95% confidence intervals for log-odds can be obtained as follows</p>
-<pre class="r"><code>confint.default(fit)</code></pre>
-<pre><code>                          2.5 %        97.5 %
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">confint.default</span>(fit)
+</span></span></code></pre></div><pre tabindex="0"><code>                          2.5 %        97.5 %
 (Intercept)       -1.045425e+02 -56.210836165
 speciesChinstrap  -1.066120e+01  -4.144190616
 speciesGentoo     -1.351769e+01  -3.337530854
@@ -1003,10 +985,10 @@ islandTorgersen   -2.185089e+00   1.169372704
 bill_length_mm     3.557834e-01   0.873088085
 bill_depth_mm      9.882945e-01   2.304597483
 flipper_length_mm -6.802606e-02   0.121333507
-body_mass_g        3.687778e-03   0.007949886</code></pre>
-<p>The 95% confidence intervals for odds are as follows</p>
-<pre class="r"><code>exp(confint.default(fit))</code></pre>
-<pre><code>                         2.5 %       97.5 %
+body_mass_g        3.687778e-03   0.007949886
+</code></pre><p>The 95% confidence intervals for odds are as follows</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">exp</span>(<span style="color:#a6e22e">confint.default</span>(fit))
+</span></span></code></pre></div><pre tabindex="0"><code>                         2.5 %       97.5 %
 (Intercept)       3.960644e-46 3.872077e-25
 speciesChinstrap  2.343681e-05 1.585626e-02
 speciesGentoo     1.346919e-06 3.552456e-02
@@ -1015,40 +997,25 @@ islandTorgersen   1.124677e-01 3.219972e+00
 bill_length_mm    1.427298e+00 2.394293e+00
 bill_depth_mm     2.686648e+00 1.002014e+01
 flipper_length_mm 9.342361e-01 1.129001e+00
-body_mass_g       1.003695e+00 1.007982e+00</code></pre>
-<p>We can write the fitted logistic regression model as follows</p>
-<p><span class="math display">\[\hat{Y} = \frac{1}{1+e^{-z}} = \frac{1}{e^{-80.83 -7.40Chinstrap -8.42Gentoo +0.32Dream -0.50Torgersen + 0.61 bill\_length\_mm + 1.64 bill\_depth\_mm + 0.02 flipper\_length\_mm + 0.005 body\_mass\_g}}\]</span></p>
+body_mass_g       1.003695e+00 1.007982e+00
+</code></pre><p>We can write the fitted logistic regression model as follows</p>
+<p><code>$$\hat{Y} = \frac{1}{1+e^{-z}} = \frac{1}{e^{-80.83 -7.40Chinstrap -8.42Gentoo +0.32Dream -0.50Torgersen + 0.61 bill\_length\_mm + 1.64 bill\_depth\_mm + 0.02 flipper\_length\_mm + 0.005 body\_mass\_g}}$$</code></p>
 <p>Where,</p>
-<p><span class="math display">\[Chinstrap=\begin{cases}
-1, &amp; \text{if Chinstrap}\\
-0, &amp; \text{otherwise}
-\end{cases}\]</span></p>
-<p><span class="math display">\[Gentoo=\begin{cases}
-1, &amp; \text{if Gentoo}\\
-0, &amp; \text{otherwise}
-\end{cases}\]</span></p>
-<p><span class="math display">\[Dream=\begin{cases}
-1, &amp; \text{if Dream}\\
-0, &amp; \text{otherwise}
-\end{cases}\]</span></p>
-<p><span class="math display">\[Torgersen=\begin{cases}
-1, &amp; \text{if Torgersen}\\
-0, &amp; \text{otherwise}
-\end{cases}\]</span></p>
-<p><span class="math display">\[bill\_length\_mm = \text{bill length (millimeters)},\]</span>
-<span class="math display">\[bill\_depth\_mm = \text{bill depth (millimeters)},\]</span></p>
-<p><span class="math display">\[flipper\_length\_mm = \text{flipper length (millimeters)},\]</span></p>
-<p><span class="math display">\[body\_mass\_g = \text{body mass (grams)}.\]</span></p>
-</div>
-<div id="interpretation-of-parameter-estimates" class="section level2">
-<h2>Interpretation of parameter estimates</h2>
+<p><code>$$Chinstrap=\begin{cases} 1, &amp; \text{if Chinstrap}\\ 0, &amp; \text{otherwise} \end{cases}$$</code></p>
+<p><code>$$Gentoo=\begin{cases} 1, &amp; \text{if Gentoo}\\ 0, &amp; \text{otherwise} \end{cases}$$</code></p>
+<p><code>$$Dream=\begin{cases} 1, &amp; \text{if Dream}\\ 0, &amp; \text{otherwise} \end{cases}$$</code></p>
+<p><code>$$Torgersen=\begin{cases} 1, &amp; \text{if Torgersen}\\ 0, &amp; \text{otherwise} \end{cases}$$</code></p>
+<p><code>$$bill\_length\_mm = \text{bill length (millimeters)},$$</code>
+<code>$$bill\_depth\_mm = \text{bill depth (millimeters)},$$</code></p>
+<p><code>$$flipper\_length\_mm = \text{flipper length (millimeters)},$$</code></p>
+<p><code>$$body\_mass\_g = \text{body mass (grams)}.$$</code></p>
+<h2 id="interpretation-of-parameter-estimates">Interpretation of parameter estimates</h2>
 <p>The variables species, bill length (mm), bill depth (mm) and body mass (g) significantly contribute to the model.</p>
 <p>With all other factors held constant, this fitted model predicts that the odds of discovering a male penguin on Dream island are 1.38 times higher than on Biscoe island.</p>
 <p>For each one-unit increase in bill depth, the odds of detecting a male increased 5.18 times (95 percent CI 2.68–10.02).</p>
 <blockquote>
 <p>Model Evaluation: Next Post! Model evaluation should be done before interpreting the model.</p>
 </blockquote>
-</div>
 
     </div>
 

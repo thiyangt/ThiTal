@@ -668,71 +668,52 @@
   <div class="article-container">
 
     <div class="article-style">
-      
-
-
-<div id="how-often-do-you-fix-the-aspect-ratio" class="section level3">
-<h3>How often do you fix the aspect ratio?</h3>
-<blockquote class="twitter-tweet">
-<p lang="en" dir="ltr">
-When creating scatterplots, how often do you fix the aspect ratio? <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a> <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a> <a href="https://twitter.com/hashtag/TidyTuesday?src=hash&amp;ref_src=twsrc%5Etfw">#TidyTuesday</a> <a href="https://twitter.com/hashtag/Python?src=hash&amp;ref_src=twsrc%5Etfw">#Python</a> <a href="https://twitter.com/hashtag/ggplot2?src=hash&amp;ref_src=twsrc%5Etfw">#ggplot2</a>
-</p>
-— Thiyanga Talagala (<span class="citation">@thiyangt</span>) <a href="https://twitter.com/thiyangt/status/1292444445015605248?ref_src=twsrc%5Etfw">August 9, 2020</a>
-</blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-<div id="aspect-ratio" class="section level3">
-<h3>Aspect ratio</h3>
+      <h3 id="how-often-do-you-fix-the-aspect-ratio">How often do you fix the aspect ratio?</h3>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">When creating scatterplots, how often do you fix the aspect ratio? <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a> <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a> <a href="https://twitter.com/hashtag/TidyTuesday?src=hash&amp;ref_src=twsrc%5Etfw">#TidyTuesday</a> <a href="https://twitter.com/hashtag/Python?src=hash&amp;ref_src=twsrc%5Etfw">#Python</a> <a href="https://twitter.com/hashtag/ggplot2?src=hash&amp;ref_src=twsrc%5Etfw">#ggplot2</a></p>&mdash; Thiyanga Talagala (@thiyangt) <a href="https://twitter.com/thiyangt/status/1292444445015605248?ref_src=twsrc%5Etfw">August 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<h3 id="aspect-ratio">Aspect ratio</h3>
 <p>The <strong>aspect ratio</strong> of a plot is the ratio of its height-to-width . The aspect ratio we choose for our graph plays a significant role. The graphs below plot exactly the same data points but they have different aspect ratios.</p>
-<pre class="r"><code>library(tidyverse)
-library(patchwork)
-x &lt;- 1:100
-y &lt;- x
-df &lt;- data.frame(x=x, y=y)
-p1 &lt;- ggplot(df, aes(x=x, y=y)) + geom_point() +  coord_fixed(ratio=2) + ggtitle(&quot;Aspect ratio = 2&quot;)
-p2 &lt;- ggplot(df, aes(x=x, y=y)) + geom_point() +  coord_fixed(ratio=0.5) + ggtitle(&quot;Aspect ratio = 0.5&quot;)
-p3 &lt;- ggplot(df, aes(x=x, y=y)) + geom_point() +  coord_fixed(ratio=1) + ggtitle(&quot;Aspect ratio = 1&quot;)
-p1|p2|p3</code></pre>
-<p><img src="/post/ratio_files/figure-html/unnamed-chunk-1-1.png" width="1152" /></p>
-</div>
-<div id="the-aspect-ratio-of-a-plot-can-make-an-influence-on-the-readers-mind." class="section level2">
-<h2>The aspect-ratio of a plot can make an influence on the reader’s mind.</h2>
-<p>Here is an example. I generate a set of random points inside a unit circle. The equation of the unit circle center at (0, 0) is: <span class="math inline">\(x^2+y^2=1\)</span>.</p>
-<pre class="r"><code>set.seed(2020)
-x &lt;- runif(10000, -1, 1)
-y &lt;- runif(10000, -1, 1)
-fx &lt;- x^2 + y^2
-coly &lt;-  ifelse(fx &lt;= 1, 1, 0)
-coly &lt;- as.factor(coly)
-circle.points &lt;- data.frame(x=x, y=y, coly=coly)
-head(circle.points)</code></pre>
-<pre><code>            x          y coly
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidyverse)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(patchwork)
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">&lt;-</span> x
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">data.frame</span>(x<span style="color:#f92672">=</span>x, y<span style="color:#f92672">=</span>y)
+</span></span><span style="display:flex;"><span>p1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ggplot</span>(df, <span style="color:#a6e22e">aes</span>(x<span style="color:#f92672">=</span>x, y<span style="color:#f92672">=</span>y)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>  <span style="color:#a6e22e">coord_fixed</span>(ratio<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">ggtitle</span>(<span style="color:#e6db74">&#34;Aspect ratio = 2&#34;</span>)
+</span></span><span style="display:flex;"><span>p2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ggplot</span>(df, <span style="color:#a6e22e">aes</span>(x<span style="color:#f92672">=</span>x, y<span style="color:#f92672">=</span>y)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>  <span style="color:#a6e22e">coord_fixed</span>(ratio<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">ggtitle</span>(<span style="color:#e6db74">&#34;Aspect ratio = 0.5&#34;</span>)
+</span></span><span style="display:flex;"><span>p3 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ggplot</span>(df, <span style="color:#a6e22e">aes</span>(x<span style="color:#f92672">=</span>x, y<span style="color:#f92672">=</span>y)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>  <span style="color:#a6e22e">coord_fixed</span>(ratio<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">ggtitle</span>(<span style="color:#e6db74">&#34;Aspect ratio = 1&#34;</span>)
+</span></span><span style="display:flex;"><span>p1<span style="color:#f92672">|</span>p2<span style="color:#f92672">|</span>p3
+</span></span></code></pre></div><img src="/post/ratio_files/figure-html/unnamed-chunk-1-1.png" alt="" width="1152" />
+<h2 id="the-aspect-ratio-of-a-plot-can-make-an-influence-on-the-readers-mind">The aspect-ratio of a plot can make an influence on the reader&rsquo;s mind.</h2>
+<p>Here is an example. I generate a set of random points inside a unit circle. The equation of the unit circle center at (0, 0) is: <code>\(x^2+y^2=1\)</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">set.seed</span>(<span style="color:#ae81ff">2020</span>)
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">runif</span>(<span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">-1</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">runif</span>(<span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">-1</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>fx <span style="color:#f92672">&lt;-</span> x^2 <span style="color:#f92672">+</span> y^2
+</span></span><span style="display:flex;"><span>coly <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">ifelse</span>(fx <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>coly <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.factor</span>(coly)
+</span></span><span style="display:flex;"><span>circle.points <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">data.frame</span>(x<span style="color:#f92672">=</span>x, y<span style="color:#f92672">=</span>y, coly<span style="color:#f92672">=</span>coly)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">head</span>(circle.points)
+</span></span></code></pre></div><pre tabindex="0"><code>            x          y coly
 1  0.29380568 -0.7572887    1
 2 -0.21154848  0.2479973    1
 3  0.23700363  0.4911537    1
 4 -0.04621773  0.3838934    1
 5 -0.72780563  0.8263328    0
-6 -0.86523123 -0.3060675    1</code></pre>
-<div id="without-fixing-aspect-ratio" class="section level3">
-<h3>Without fixing aspect ratio</h3>
-<pre class="r"><code>ggplot(circle.points, aes(x=x, y=y, col=coly)) + 
-   geom_point() +
-   scale_colour_manual(values = c(&quot;#e7298a&quot;, &quot;#1b9e77&quot;)) +
-   theme(legend.position = &quot;none&quot;) </code></pre>
-<p><img src="/post/ratio_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+6 -0.86523123 -0.3060675    1
+</code></pre><h3 id="without-fixing-aspect-ratio">Without fixing aspect ratio</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(circle.points, <span style="color:#a6e22e">aes</span>(x<span style="color:#f92672">=</span>x, y<span style="color:#f92672">=</span>y, col<span style="color:#f92672">=</span>coly)) <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">scale_colour_manual</span>(values <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;#e7298a&#34;</span>, <span style="color:#e6db74">&#34;#1b9e77&#34;</span>)) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">theme</span>(legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;none&#34;</span>) 
+</span></span></code></pre></div><img src="/post/ratio_files/figure-html/unnamed-chunk-3-1.png" alt="" width="672" />
 <p>According to the plot above it seems that the region is bounded by a ellipse. However, our points are not generated from an elliptical region.</p>
-</div>
-<div id="aspect-ratio-is-fixed" class="section level3">
-<h3>Aspect ratio is fixed</h3>
-<pre class="r"><code>ggplot(circle.points, aes(x=x, y=y, col=coly)) + geom_point() +
-   scale_colour_manual(values = c(&quot;#e7298a&quot;, &quot;#1b9e77&quot;)) + 
-  coord_equal() +
-  ggtitle(&quot;Figure 2: Aspect ratio is fixed.&quot;) +  
-  theme(legend.position = &quot;none&quot;) </code></pre>
-<p><img src="/post/ratio_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<h3 id="aspect-ratio-is-fixed">Aspect ratio is fixed</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(circle.points, <span style="color:#a6e22e">aes</span>(x<span style="color:#f92672">=</span>x, y<span style="color:#f92672">=</span>y, col<span style="color:#f92672">=</span>coly)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">scale_colour_manual</span>(values <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;#e7298a&#34;</span>, <span style="color:#e6db74">&#34;#1b9e77&#34;</span>)) <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">coord_equal</span>() <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ggtitle</span>(<span style="color:#e6db74">&#34;Figure 2: Aspect ratio is fixed.&#34;</span>) <span style="color:#f92672">+</span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme</span>(legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;none&#34;</span>) 
+</span></span></code></pre></div><img src="/post/ratio_files/figure-html/unnamed-chunk-4-1.png" alt="" width="672" />
 <p>When you create the plot by preserving the aspect ratio the region is bounded by a circle.</p>
-</div>
-</div>
 
     </div>
 

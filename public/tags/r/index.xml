@@ -5,78 +5,12 @@
     <link>https://thiyanga.netlify.app/tags/r/</link>
       <atom:link href="https://thiyanga.netlify.app/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <description>R</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 11 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 18 Oct 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://thiyanga.netlify.app/img/icon-192.png</url>
       <title>R</title>
       <link>https://thiyanga.netlify.app/tags/r/</link>
     </image>
-    
-    <item>
-      <title>Recreating Nightingale&#39;s most famous diagram, known as the Coxcomb</title>
-      <link>https://thiyanga.netlify.app/post/blog/</link>
-      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://thiyanga.netlify.app/post/blog/</guid>
-      <description>&lt;p&gt;Florence Nightingale showed the world that data can save lives.&lt;/p&gt;
-&lt;p&gt;Today, February 11, is recognized globally as the International Day of Women and Girls in Science. To mark this day, I recreated Florence Nightingale’s famous Coxcomb chart using R programming with hashtag#tidyverse mainly using hashtag#tidyr hashtag#dplyr and hashtag#ggplot2. It was one of the earliest and most powerful examples of data visualization influencing public policy.&lt;/p&gt;
-&lt;p&gt;Nightingale was not only a nurse but also a statistician. At a time when women had limited access to science, she used data to demonstrate that more soldiers were dying from preventable diseases than from battle wounds during the Crimean War. Her visualization changed healthcare policy. This plot is a reminder that:&lt;/p&gt;
-&lt;p&gt;• Data is powerful when communicated clearly.&lt;/p&gt;
-&lt;p&gt;• Visualization is not just decoration. It is evidence.&lt;/p&gt;
-&lt;p&gt;• Science needs more women and more visible role models.&lt;/p&gt;
-&lt;p&gt;#rprogramming #InternationalDayOfWomenAndGirlsInScience
-#WomenInScience #FlorenceNightingale #DataVisualization #WomenInSTEM #GirlsInScience #OWSD&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Packages&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(tidyverse)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(HistData)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Data&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Nightingale&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;glimpse&lt;/span&gt;(Nightingale)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Rows: 24
-## Columns: 10
-## $ Date         &amp;lt;date&amp;gt; 1854-04-01, 1854-05-01, 1854-06-01, 1854-07-01, 1854-08-…
-## $ Month        &amp;lt;ord&amp;gt; Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec, Jan, Feb, Ma…
-## $ Year         &amp;lt;int&amp;gt; 1854, 1854, 1854, 1854, 1854, 1854, 1854, 1854, 1854, 185…
-## $ Army         &amp;lt;int&amp;gt; 8571, 23333, 28333, 28722, 30246, 30290, 30643, 29736, 32…
-## $ Disease      &amp;lt;int&amp;gt; 1, 12, 11, 359, 828, 788, 503, 844, 1725, 2761, 2120, 120…
-## $ Wounds       &amp;lt;int&amp;gt; 0, 0, 0, 0, 1, 81, 132, 287, 114, 83, 42, 32, 48, 49, 209…
-## $ Other        &amp;lt;int&amp;gt; 5, 9, 6, 23, 30, 70, 128, 106, 131, 324, 361, 172, 57, 37…
-## $ Disease.rate &amp;lt;dbl&amp;gt; 1.4, 6.2, 4.7, 150.0, 328.5, 312.2, 197.0, 340.6, 631.5, …
-## $ Wounds.rate  &amp;lt;dbl&amp;gt; 0.0, 0.0, 0.0, 0.0, 0.4, 32.1, 51.7, 115.8, 41.7, 30.7, 1…
-## $ Other.rate   &amp;lt;dbl&amp;gt; 7.0, 4.6, 2.5, 9.6, 11.9, 27.7, 50.1, 42.8, 48.0, 120.0, …
-&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Data Pre-processing and Plotting&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Nightingale &lt;span style=&#34;color:#f92672&#34;&gt;|&amp;gt;&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;(Date, Month, Year, 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#a6e22e&#34;&gt;contains&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rate&amp;#34;&lt;/span&gt;))  &lt;span style=&#34;color:#f92672&#34;&gt;|&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;pivot_longer&lt;/span&gt;(cols &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;, 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               names_to &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Cause&amp;#34;&lt;/span&gt;, 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               values_to &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Rate&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;|&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;mutate&lt;/span&gt;(Cause &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;gsub&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.rate&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, Cause),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         period &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ifelse&lt;/span&gt;(Date &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;as.Date&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1855-03-01&amp;#34;&lt;/span&gt;), 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;APRIL 1854 TO MARCH 1855&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;APRIL 1855 TO MARCH 1856&amp;#34;&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         Month &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fct_relevel&lt;/span&gt;(Month, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Jul&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Aug&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sep&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Oct&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Nov&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Dec&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Jan&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Feb&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Mar&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Apr&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;May&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Jun&amp;#34;&lt;/span&gt;))&lt;span style=&#34;color:#f92672&#34;&gt;|&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;Month, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;Rate, fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;Cause)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_col&lt;/span&gt;(width&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, alpha&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_equal&lt;/span&gt;(ratio &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_polar&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;facet_wrap&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;~&lt;/span&gt;period) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;skyblue3&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                               &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;grey30&amp;#34;&lt;/span&gt;, 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                               &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#fb9a99&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_y_sqrt&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme_bw&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(axis.title.x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;element_blank&lt;/span&gt;(),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        axis.title.y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;element_blank&lt;/span&gt;(),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        axis.text.y  &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;element_blank&lt;/span&gt;(),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        axis.ticks.y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;element_blank&lt;/span&gt;(),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        strip.text &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;element_text&lt;/span&gt;(size &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bottom&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        plot.margin &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;unit&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;pt&amp;#34;&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        plot.title &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;element_text&lt;/span&gt;(vjust &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/feb112026_files/figure-html/unnamed-chunk-1-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
-</description>
-    </item>
     
     <item>
       <title>My Posit::conf 2023 Experience - A Conference of Insights, Knowledge, Connections, and Explorations</title>
@@ -261,54 +195,35 @@ y2023&lt;/code&gt;&lt;/pre&gt;
       <link>https://thiyanga.netlify.app/post/blog/</link>
       <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/blog/</guid>
-      <description>
-
-
-&lt;p&gt;I created &lt;a href=&#34;https://thiyanga-spatiotemporal.netlify.app/&#34;&gt;this blog&lt;/a&gt; using Quarto. Here are the steps that I used to create the blog.&lt;/p&gt;
-&lt;div id=&#34;step-1&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Step 1&lt;/h2&gt;
+      <description>&lt;p&gt;I created &lt;a href=&#34;https://thiyanga-spatiotemporal.netlify.app/&#34;&gt;this blog&lt;/a&gt; using Quarto. Here are the steps that I used to create the blog.&lt;/p&gt;
+&lt;h2 id=&#34;step-1&#34;&gt;Step 1&lt;/h2&gt;
 &lt;p&gt;Install Quarto. Follow the instructions in &lt;a href=&#34;https://quarto.org/docs/get-started/&#34;&gt;this&lt;/a&gt; tutorial.&lt;/p&gt;
 &lt;p&gt;On R Console install Quarto using the command&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(quarto)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;step-2&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Step 2&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;install.packages&lt;/span&gt;(quarto)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;step-2&#34;&gt;Step 2&lt;/h2&gt;
 &lt;p&gt;Create a git hub repository and create a RStudio project.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;step-3&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Step 3&lt;/h2&gt;
+&lt;h2 id=&#34;step-3&#34;&gt;Step 3&lt;/h2&gt;
 &lt;p&gt;The type the following command in the RStudio terminal&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;quarto create-project myblog --type website:blog&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This will create a folder called &lt;code&gt;myblog&lt;/code&gt; with the following documents inside.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/quarto.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;quarto create&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;project myblog &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;type website&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;blog
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will create a folder called &lt;code&gt;myblog&lt;/code&gt; with the following documents inside.&lt;/p&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/quarto.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;
 &lt;p&gt;Copy all the documents inside the folder into your project folder, and delete the &lt;code&gt;myblog&lt;/code&gt; folder.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;step-4&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Step 4&lt;/h2&gt;
+&lt;h2 id=&#34;step-4&#34;&gt;Step 4&lt;/h2&gt;
 &lt;p&gt;Rename &lt;code&gt;index.qmd&lt;/code&gt; to &lt;code&gt;blog.qmd&lt;/code&gt; and rename &lt;code&gt;about.qmd&lt;/code&gt; to &lt;code&gt;index.qmd&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;step-5&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Step 5&lt;/h2&gt;
+&lt;h2 id=&#34;step-5&#34;&gt;Step 5&lt;/h2&gt;
 &lt;p&gt;Include your details to &lt;code&gt;_quarto.yml&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;step-6&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Step 6&lt;/h2&gt;
+&lt;h2 id=&#34;step-6&#34;&gt;Step 6&lt;/h2&gt;
 &lt;p&gt;Click &lt;code&gt;Render&lt;/code&gt; button to preview the blog.&lt;/p&gt;
 &lt;p&gt;To preview the website in the current directory type the following command in the terminal&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;quarto preview&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;step-7&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Step 7&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;quarto preview
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;step-7&#34;&gt;Step 7&lt;/h2&gt;
 &lt;p&gt;To publish the blog with Netlify, type the following command.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;quarto publish netlify&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;other-useful-links&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Other useful links&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;quarto publish netlify
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;other-useful-links&#34;&gt;Other useful links&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html&#34;&gt;https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://quarto.org/docs/publishing/netlify.htm&#34;&gt;https://quarto.org/docs/publishing/netlify.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/&#34;&gt;https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://bootswatch.com/&#34;&gt;Themes&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
 </description>
     </item>
     
@@ -317,18 +232,13 @@ y2023&lt;/code&gt;&lt;/pre&gt;
       <link>https://thiyanga.netlify.app/post/error1/</link>
       <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/error1/</guid>
-      <description>
-
-
-&lt;div id=&#34;error-c-stack-usage-is-too-close-to-the-limit&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Error: C stack usage is too close to the limit&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;error-c-stack-usage-is-too-close-to-the-limit&#34;&gt;Error: C stack usage is too close to the limit&lt;/h2&gt;
 &lt;p&gt;While using Rstudio on macOS Mojave (version 10.14.6) to work with R, I recently ran across the following problem.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/error.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
-&lt;p&gt;In order to fix the error, I deleted the &lt;code&gt;.Rprofile&lt;/code&gt;. You can erase everything in the “.Rprofile” by using the commands listed below.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;file.edit(file.path(&amp;quot;~&amp;quot;, &amp;quot;.Rprofile&amp;quot;)) 
-file.edit(&amp;quot;.Rprofile&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-</description>
+&lt;img src=&#34;https://thiyanga.netlify.app/post/error.PNG&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;
+&lt;p&gt;In order to fix the error, I deleted the &lt;code&gt;.Rprofile&lt;/code&gt;. You can erase everything in the &amp;ldquo;.Rprofile&amp;rdquo; by using the commands listed below.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;file.edit&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;file.path&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;~&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.Rprofile&amp;#34;&lt;/span&gt;)) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;file.edit&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.Rprofile&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -336,189 +246,190 @@ file.edit(&amp;quot;.Rprofile&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
       <link>https://thiyanga.netlify.app/post/logisticregression/</link>
       <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/logisticregression/</guid>
-      <description>
-&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div id=&#34;data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;
 &lt;p&gt;In this post I am going to use &lt;code&gt;penguins&lt;/code&gt; dataset in &lt;code&gt;palmerpenguins&lt;/code&gt; package in R. First we load the dataset.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(palmerpenguins)
-library(skimr)
-library(tidyverse)
-library(plotly)
-library(visdat)
-library(patchwork)
-data(&amp;quot;penguins&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Here is an overview of the dataset.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;skim(penguins)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(palmerpenguins)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(skimr)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(tidyverse)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(plotly)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(visdat)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(patchwork)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;penguins&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here is an overview of the dataset.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;skim&lt;/span&gt;(penguins)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Table: &lt;span id=&#34;tab:unnamed-chunk-2&#34;&gt;&lt;/span&gt;Table 1: Data summary&lt;/p&gt;
 &lt;table&gt;
-&lt;caption&gt;&lt;span id=&#34;tab:unnamed-chunk-2&#34;&gt;Table 1: &lt;/span&gt;Data summary&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Name&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;penguins&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Name&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;penguins&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Number of rows&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;344&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Number of rows&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;344&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Number of columns&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;8&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Number of columns&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;8&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;_______________________&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;_______________________&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Column type frequency:&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Column type frequency:&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;factor&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;factor&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;3&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;numeric&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;5&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;________________________&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;________________________&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Group variables&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;None&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Group variables&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;None&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;Variable type: factor&lt;/strong&gt;&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;skim_variable&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;n_missing&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;complete_rate&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;ordered&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;n_unique&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;top_counts&lt;/th&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;skim_variable&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;n_missing&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;complete_rate&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;ordered&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;n_unique&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;top_counts&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;species&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.00&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Ade: 152, Gen: 124, Chi: 68&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;species&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1.00&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Ade: 152, Gen: 124, Chi: 68&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;island&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.00&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Bis: 168, Dre: 124, Tor: 52&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;island&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1.00&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Bis: 168, Dre: 124, Tor: 52&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;sex&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;11&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.97&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;mal: 168, fem: 165&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;sex&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;11&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.97&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;mal: 168, fem: 165&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;Variable type: numeric&lt;/strong&gt;&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;skim_variable&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;n_missing&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;complete_rate&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;mean&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;sd&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;p0&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;p25&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;p50&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;p75&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;p100&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;hist&lt;/th&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;skim_variable&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;n_missing&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;complete_rate&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;mean&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;sd&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;p0&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;p25&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;p50&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;p75&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;p100&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;hist&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;bill_length_mm&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.99&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;43.92&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;5.46&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;32.1&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;39.23&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;44.45&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;48.5&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;59.6&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;▃▇▇▆▁&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;bill_length_mm&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.99&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;43.92&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5.46&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;32.1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;39.23&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;44.45&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;48.5&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;59.6&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;▃▇▇▆▁&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;bill_depth_mm&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.99&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;17.15&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.97&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;13.1&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;15.60&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;17.30&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;18.7&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;21.5&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;▅▅▇▇▂&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;bill_depth_mm&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.99&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;17.15&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1.97&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;13.1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;15.60&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;17.30&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;18.7&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;21.5&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;▅▅▇▇▂&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;flipper_length_mm&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.99&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;200.92&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;14.06&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;172.0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;190.00&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;197.00&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;213.0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;231.0&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;▂▇▃▅▂&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;flipper_length_mm&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.99&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;200.92&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;14.06&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;172.0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;190.00&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;197.00&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;213.0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;231.0&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;▂▇▃▅▂&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;body_mass_g&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.99&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;4201.75&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;801.95&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2700.0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;3550.00&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;4050.00&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;4750.0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;6300.0&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;▃▇▆▃▂&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;body_mass_g&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.99&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;4201.75&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;801.95&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2700.0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;3550.00&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;4050.00&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;4750.0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;6300.0&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;▃▇▆▃▂&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;year&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.00&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2008.03&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.82&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2007.0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2007.00&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2008.00&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2009.0&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2009.0&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;▇▁▇▁▇&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;year&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1.00&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2008.03&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.82&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2007.0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2007.00&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2008.00&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2009.0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2009.0&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;▇▁▇▁▇&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(penguins)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;      species          island    bill_length_mm  bill_depth_mm  
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;summary&lt;/span&gt;(penguins)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;      species          island    bill_length_mm  bill_depth_mm  
  Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  
  Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  
  Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  
@@ -533,90 +444,76 @@ data(&amp;quot;penguins&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
  Mean   :200.9     Mean   :4202                Mean   :2008  
  3rd Qu.:213.0     3rd Qu.:4750                3rd Qu.:2009  
  Max.   :231.0     Max.   :6300                Max.   :2009  
- NA&amp;#39;s   :2         NA&amp;#39;s   :2                                 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Before moving on to the full logistic regression model, it’s a good idea to look at the associations between each predictor and gender. Before moving on to the whole model, It’s critical to first grasp these linkages. We can use logistic regression to look at all of the predictors simultaneously.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p1_species &amp;lt;- penguins %&amp;gt;% 
-  na.omit() %&amp;gt;%
-  count(species,sex) %&amp;gt;% 
-  group_by(species) %&amp;gt;% 
-  mutate(Percentage = 100*n/sum(n)) %&amp;gt;% 
-  ggplot(aes(x = species,y = Percentage,fill=sex))+
-  geom_bar(stat=&amp;quot;identity&amp;quot;) + 
-  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) +
-  coord_flip() +
-  theme(legend.position = &amp;quot;bottom&amp;quot;) +
-  ggtitle(&amp;quot;a&amp;quot;) 
-
-p2_island &amp;lt;- penguins %&amp;gt;% 
-  count(island,sex) %&amp;gt;% 
-  group_by(island) %&amp;gt;% 
-  mutate(Percentage = 100*n/sum(n)) %&amp;gt;% 
-  ggplot(aes(x = island,y = Percentage,fill=sex))+
-  geom_bar(stat=&amp;quot;identity&amp;quot;) + 
-  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
-  coord_flip() +
-  theme(legend.position = &amp;quot;bottom&amp;quot;) +
-  ggtitle(&amp;quot;b&amp;quot;)
-(p1_species|p2_island)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:unnamed-chunk-3&#34;&gt;&lt;/span&gt;
+ NA&amp;#39;s   :2         NA&amp;#39;s   :2                                 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Before moving on to the full logistic regression model, it&amp;rsquo;s a good idea to look at the associations between each predictor and gender. Before moving on to the whole model, It&amp;rsquo;s critical to first grasp these linkages. We can use logistic regression to look at all of the predictors simultaneously.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;p1_species &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; penguins &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;na.omit&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;count&lt;/span&gt;(species,sex) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;group_by&lt;/span&gt;(species) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;mutate&lt;/span&gt;(Percentage &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;n&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;sum&lt;/span&gt;(n)) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; species,y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Percentage,fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex))&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_bar&lt;/span&gt;(stat&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;identity&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cyan4&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_flip&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bottom&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggtitle&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt;) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;p2_island &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; penguins &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;count&lt;/span&gt;(island,sex) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;group_by&lt;/span&gt;(island) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;mutate&lt;/span&gt;(Percentage &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;n&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;sum&lt;/span&gt;(n)) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; island,y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Percentage,fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex))&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_bar&lt;/span&gt;(stat&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;identity&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cyan4&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_flip&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bottom&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggtitle&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;b&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(p1_species&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;p2_island)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-3-1.png&#34; alt=&#34;Distribution of (a) species and (d) island by gender.&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 1: Distribution of (a) species and (d) island by gender.
-&lt;/p&gt;
+&lt;p class=&#34;caption&#34;&gt;&lt;span id=&#34;fig:unnamed-chunk-3&#34;&gt;&lt;/span&gt;Figure 1: Distribution of (a) species and (d) island by gender.&lt;/p&gt;
 &lt;/div&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p3_length &amp;lt;-  ggplot(penguins, aes(x=sex, y=bill_length_mm, fill=sex)) +
-  geom_boxplot() + 
-  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
-  theme(legend.position = &amp;quot;bottom&amp;quot;) + ggtitle(&amp;quot;a&amp;quot;)
-
-p4_depth &amp;lt;-  ggplot(penguins, aes(x=sex, y=bill_depth_mm, fill=sex)) +
-  geom_boxplot() + 
-  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
-  theme(legend.position = &amp;quot;bottom&amp;quot;) + ggtitle(&amp;quot;b&amp;quot;)
-
-p5_flipper &amp;lt;-  ggplot(penguins, aes(x=sex, y=flipper_length_mm, fill=sex)) +
-  geom_boxplot() + 
-  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
-  theme(legend.position = &amp;quot;bottom&amp;quot;) + ggtitle(&amp;quot;c&amp;quot;)
-
-p6_bmi &amp;lt;-  ggplot(penguins, aes(x=sex, y=body_mass_g, fill=sex)) +
-  geom_boxplot() + 
-  scale_fill_manual(values = c(&amp;quot;purple&amp;quot;,&amp;quot;cyan4&amp;quot;)) + 
-  theme(legend.position = &amp;quot;bottom&amp;quot;) + ggtitle(&amp;quot;d&amp;quot;)
-
-(p3_length|p4_depth)/(p5_flipper|p6_bmi)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:unnamed-chunk-4&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;p3_length &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(penguins, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;bill_length_mm, fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_boxplot&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cyan4&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bottom&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ggtitle&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;p4_depth &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(penguins, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;bill_depth_mm, fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_boxplot&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cyan4&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bottom&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ggtitle&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;b&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;p5_flipper &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(penguins, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;flipper_length_mm, fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_boxplot&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cyan4&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bottom&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ggtitle&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;c&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;p6_bmi &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(penguins, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;body_mass_g, fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sex)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_boxplot&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cyan4&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(legend.position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bottom&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ggtitle&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;d&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(p3_length&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;p4_depth)&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;(p5_flipper&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;p6_bmi)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-4-1.png&#34; alt=&#34;Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 2: Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.
-&lt;/p&gt;
+&lt;p class=&#34;caption&#34;&gt;&lt;span id=&#34;fig:unnamed-chunk-4&#34;&gt;&lt;/span&gt;Figure 2: Distribution of (a) bill length, (b) bill depth, (c) flipper length and (d) body mass index by gender.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;missing-values-exploration&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Missing values exploration&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vis_miss(penguins)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;remove-missing-values&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Remove missing values&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins_omit &amp;lt;- penguins %&amp;gt;%
-  na.omit()
-vis_miss(penguins_omit)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;building-logistic-regression&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Building logistic regression&lt;/h2&gt;
-&lt;p&gt;Then, using the other variables in the dataset, I’ll create a logistic regression model to predict the gender of the palmer penguins. One goal of this work is to identify which variables significantly contribute to determining the gender of penguins. Before beginning to build the model, double-check that all qualitative variables have been saved as factors.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit &amp;lt;- glm(sex ~ species + island + bill_length_mm + bill_depth_mm + flipper_length_mm + body_mass_g, data=penguins_omit, family=&amp;quot;binomial&amp;quot;)
-summary(fit)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h2 id=&#34;missing-values-exploration&#34;&gt;Missing values exploration&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;vis_miss&lt;/span&gt;(penguins)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-5-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
+&lt;h2 id=&#34;remove-missing-values&#34;&gt;Remove missing values&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;penguins_omit &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; penguins &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;na.omit&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;vis_miss&lt;/span&gt;(penguins_omit)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/logisticregression_files/figure-html/unnamed-chunk-6-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
+&lt;h2 id=&#34;building-logistic-regression&#34;&gt;Building logistic regression&lt;/h2&gt;
+&lt;p&gt;Then, using the other variables in the dataset, I&amp;rsquo;ll create a logistic regression model to predict the gender of the palmer penguins. One goal of this work is to identify which variables significantly contribute to determining the gender of penguins. Before beginning to build the model, double-check that all qualitative variables have been saved as factors.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fit &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;glm&lt;/span&gt;(sex &lt;span style=&#34;color:#f92672&#34;&gt;~&lt;/span&gt; species &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; island &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; bill_length_mm &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; bill_depth_mm &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; flipper_length_mm &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; body_mass_g, data&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;penguins_omit, family&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;binomial&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;summary&lt;/span&gt;(fit)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
 Call:
 glm(formula = sex ~ species + island + bill_length_mm + bill_depth_mm + 
-    flipper_length_mm + body_mass_g, family = &amp;quot;binomial&amp;quot;, data = penguins_omit)
-
-Deviance Residuals: 
-    Min       1Q   Median       3Q      Max  
--3.4128  -0.2000   0.0022   0.1441   2.8235  
+    flipper_length_mm + body_mass_g, family = &amp;#34;binomial&amp;#34;, data = penguins_omit)
 
 Coefficients:
                     Estimate Std. Error z value Pr(&amp;gt;|z|)    
@@ -638,27 +535,22 @@ Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39
 Residual deviance: 126.05  on 324  degrees of freedom
 AIC: 144.05
 
-Number of Fisher Scoring iterations: 7&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;To represent qualitative variables, R will build an indicator (dummy) variable using the lowest coded category as the reference group. For example,&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y=\begin{cases}
-0, &amp;amp; \text{if female}\\
-1, &amp;amp; \text{if male}
-\end{cases}\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;interpretation-of-parameter-estimates-of-logistic-regression&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Interpretation of parameter estimates of logistic regression&lt;/h2&gt;
-&lt;p&gt;The “Estimates” in the above output corresponds to the &lt;strong&gt;log-odds&lt;/strong&gt;. The &lt;strong&gt;odd ratios&lt;/strong&gt; can be obtained as follows:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;exp(coefficients(fit))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;      (Intercept)  speciesChinstrap     speciesGentoo       islandDream 
+Number of Fisher Scoring iterations: 7
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To represent qualitative variables, R will build an indicator (dummy) variable using the lowest coded category as the reference group. For example,&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$Y=\begin{cases} 0, &amp;amp; \text{if female}\\ 1, &amp;amp; \text{if male} \end{cases}$$&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;interpretation-of-parameter-estimates-of-logistic-regression&#34;&gt;Interpretation of parameter estimates of logistic regression&lt;/h2&gt;
+&lt;p&gt;The &amp;ldquo;Estimates&amp;rdquo; in the above output  corresponds to the &lt;strong&gt;log-odds&lt;/strong&gt;. The &lt;strong&gt;odd ratios&lt;/strong&gt; can be obtained as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;exp&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;coefficients&lt;/span&gt;(fit))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;      (Intercept)  speciesChinstrap     speciesGentoo       islandDream 
      1.238383e-35      6.096066e-04      2.187435e-04      1.382866e+00 
   islandTorgersen    bill_length_mm     bill_depth_mm flipper_length_mm 
      6.017832e-01      1.848613e+00      5.188507e+00      1.027012e+00 
       body_mass_g 
-     1.005836e+00 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[odd = \frac{P(event)}{1-P(event)}\]&lt;/span&gt;&lt;/p&gt;
+     1.005836e+00 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;$$odd = \frac{P(event)}{1-P(event)}$$&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;The 95% confidence intervals for log-odds can be obtained as follows&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;confint.default(fit)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;                          2.5 %        97.5 %
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;confint.default&lt;/span&gt;(fit)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;                          2.5 %        97.5 %
 (Intercept)       -1.045425e+02 -56.210836165
 speciesChinstrap  -1.066120e+01  -4.144190616
 speciesGentoo     -1.351769e+01  -3.337530854
@@ -667,10 +559,10 @@ islandTorgersen   -2.185089e+00   1.169372704
 bill_length_mm     3.557834e-01   0.873088085
 bill_depth_mm      9.882945e-01   2.304597483
 flipper_length_mm -6.802606e-02   0.121333507
-body_mass_g        3.687778e-03   0.007949886&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The 95% confidence intervals for odds are as follows&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;exp(confint.default(fit))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;                         2.5 %       97.5 %
+body_mass_g        3.687778e-03   0.007949886
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The 95% confidence intervals for odds are as follows&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;exp&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;confint.default&lt;/span&gt;(fit))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;                         2.5 %       97.5 %
 (Intercept)       3.960644e-46 3.872077e-25
 speciesChinstrap  2.343681e-05 1.585626e-02
 speciesGentoo     1.346919e-06 3.552456e-02
@@ -679,40 +571,25 @@ islandTorgersen   1.124677e-01 3.219972e+00
 bill_length_mm    1.427298e+00 2.394293e+00
 bill_depth_mm     2.686648e+00 1.002014e+01
 flipper_length_mm 9.342361e-01 1.129001e+00
-body_mass_g       1.003695e+00 1.007982e+00&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We can write the fitted logistic regression model as follows&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\hat{Y} = \frac{1}{1+e^{-z}} = \frac{1}{e^{-80.83 -7.40Chinstrap -8.42Gentoo +0.32Dream -0.50Torgersen + 0.61 bill\_length\_mm + 1.64 bill\_depth\_mm + 0.02 flipper\_length\_mm + 0.005 body\_mass\_g}}\]&lt;/span&gt;&lt;/p&gt;
+body_mass_g       1.003695e+00 1.007982e+00
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We can write the fitted logistic regression model as follows&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$\hat{Y} = \frac{1}{1+e^{-z}} = \frac{1}{e^{-80.83 -7.40Chinstrap -8.42Gentoo +0.32Dream -0.50Torgersen + 0.61 bill\_length\_mm + 1.64 bill\_depth\_mm + 0.02 flipper\_length\_mm + 0.005 body\_mass\_g}}$$&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Where,&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Chinstrap=\begin{cases}
-1, &amp;amp; \text{if Chinstrap}\\
-0, &amp;amp; \text{otherwise}
-\end{cases}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Gentoo=\begin{cases}
-1, &amp;amp; \text{if Gentoo}\\
-0, &amp;amp; \text{otherwise}
-\end{cases}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Dream=\begin{cases}
-1, &amp;amp; \text{if Dream}\\
-0, &amp;amp; \text{otherwise}
-\end{cases}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Torgersen=\begin{cases}
-1, &amp;amp; \text{if Torgersen}\\
-0, &amp;amp; \text{otherwise}
-\end{cases}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[bill\_length\_mm = \text{bill length (millimeters)},\]&lt;/span&gt;
-&lt;span class=&#34;math display&#34;&gt;\[bill\_depth\_mm = \text{bill depth (millimeters)},\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[flipper\_length\_mm = \text{flipper length (millimeters)},\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[body\_mass\_g = \text{body mass (grams)}.\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;interpretation-of-parameter-estimates&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Interpretation of parameter estimates&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;$$Chinstrap=\begin{cases} 1, &amp;amp; \text{if Chinstrap}\\ 0, &amp;amp; \text{otherwise} \end{cases}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$Gentoo=\begin{cases} 1, &amp;amp; \text{if Gentoo}\\ 0, &amp;amp; \text{otherwise} \end{cases}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$Dream=\begin{cases} 1, &amp;amp; \text{if Dream}\\ 0, &amp;amp; \text{otherwise} \end{cases}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$Torgersen=\begin{cases} 1, &amp;amp; \text{if Torgersen}\\ 0, &amp;amp; \text{otherwise} \end{cases}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$bill\_length\_mm = \text{bill length (millimeters)},$$&lt;/code&gt;
+&lt;code&gt;$$bill\_depth\_mm = \text{bill depth (millimeters)},$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$flipper\_length\_mm = \text{flipper length (millimeters)},$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$body\_mass\_g = \text{body mass (grams)}.$$&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;interpretation-of-parameter-estimates&#34;&gt;Interpretation of parameter estimates&lt;/h2&gt;
 &lt;p&gt;The variables species, bill length (mm), bill depth (mm) and body mass (g) significantly contribute to the model.&lt;/p&gt;
 &lt;p&gt;With all other factors held constant, this fitted model predicts that the odds of discovering a male penguin on Dream island are 1.38 times higher than on Biscoe island.&lt;/p&gt;
 &lt;p&gt;For each one-unit increase in bill depth, the odds of detecting a male increased 5.18 times (95 percent CI 2.68–10.02).&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Model Evaluation: Next Post! Model evaluation should be done before interpreting the model.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;/div&gt;
 </description>
     </item>
     
@@ -721,63 +598,51 @@ body_mass_g       1.003695e+00 1.007982e+00&lt;/code&gt;&lt;/pre&gt;
       <link>https://thiyanga.netlify.app/post/ggforce/</link>
       <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/ggforce/</guid>
-      <description>
-&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;To enlarge a section of data in your &lt;code&gt;ggplots&lt;/code&gt;, use the &lt;code&gt;facet_zoom&lt;/code&gt; function in the &lt;a href=&#34;https://rdrr.io/cran/ggforce/man/facet_zoom.html&#34;&gt;ggforce&lt;/a&gt; package. To illustrate I am using the &lt;a href=&#34;https://cran.r-project.org/web/packages/gapminder/README.html&#34;&gt;gapminder&lt;/a&gt; dataset in &lt;a href=&#34;https://cran.r-project.org/web/packages/gapminder/README.html&#34;&gt;gapminder&lt;/a&gt; package.&lt;/p&gt;
-&lt;div id=&#34;load-necessary&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Load necessary&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
-library(RColorBrewer)
-library(ggforce)
-library(gapminder)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;set-the-theme-for-plots&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Set the theme for plots&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;theme_set(theme_bw())&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;zoom-according-to-a-continuous-scale-variable&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Zoom according to a continuous scale variable&lt;/h2&gt;
+      <description>&lt;p&gt;To enlarge a section of data in your &lt;code&gt;ggplots&lt;/code&gt;, use the &lt;code&gt;facet_zoom&lt;/code&gt; function in the &lt;a href=&#34;https://rdrr.io/cran/ggforce/man/facet_zoom.html&#34;&gt;ggforce&lt;/a&gt; package. To illustrate I am using the &lt;a href=&#34;https://cran.r-project.org/web/packages/gapminder/README.html&#34;&gt;gapminder&lt;/a&gt; dataset in &lt;a href=&#34;https://cran.r-project.org/web/packages/gapminder/README.html&#34;&gt;gapminder&lt;/a&gt; package.&lt;/p&gt;
+&lt;h2 id=&#34;load-necessary&#34;&gt;Load necessary&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(tidyverse)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(RColorBrewer)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(ggforce)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(gapminder)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;set-the-theme-for-plots&#34;&gt;Set the theme for plots&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;theme_set&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;theme_bw&lt;/span&gt;())
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;zoom-according-to-a--continuous-scale-variable&#34;&gt;Zoom according to a  continuous scale variable&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;zoom the Y axis&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +  
-  facet_zoom(ylim = c(60, 80)) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(gapminder, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;lifeExp, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;gdpPercap)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_point&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_fixed&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;facet_zoom&lt;/span&gt;(ylim &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;)) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-3-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +   
-  facet_zoom(xlim = c(0, 10000)) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(gapminder, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;lifeExp, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;gdpPercap)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_point&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_fixed&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;facet_zoom&lt;/span&gt;(xlim &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt;)) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-4-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis and the Y axis&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +  
-  facet_zoom(xlim = c(0, 10000), ylim=c(60, 80)) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;zoom-according-to-a-qualitative-variable&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Zoom according to a qualitative variable&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(gapminder, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;lifeExp, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;gdpPercap)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_point&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_fixed&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;facet_zoom&lt;/span&gt;(xlim &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt;), ylim&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;)) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-5-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
+&lt;h2 id=&#34;zoom-according-to-a-qualitative-variable&#34;&gt;Zoom according to a qualitative variable&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;zoom the Y axis&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
-  coord_fixed() + 
-  scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
-  facet_zoom(y = continent == &amp;#39;Oceania&amp;#39;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(gapminder, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;lifeExp, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;gdpPercap, col&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;continent)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_point&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_fixed&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_color_brewer&lt;/span&gt;(palette &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Dark2&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;facet_zoom&lt;/span&gt;(y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; continent &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Oceania&amp;#39;&lt;/span&gt;) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-6-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
-  coord_fixed() + 
-  scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
-  facet_zoom(x = continent == &amp;#39;Oceania&amp;#39;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(gapminder, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;lifeExp, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;gdpPercap, col&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;continent)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_point&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_fixed&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_color_brewer&lt;/span&gt;(palette &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Dark2&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;facet_zoom&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; continent &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Oceania&amp;#39;&lt;/span&gt;) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-7-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
 &lt;p&gt;&lt;strong&gt;zoom the X axis and the Y axis&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
-  coord_fixed() + 
-  scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
-  facet_zoom(xy = continent == &amp;#39;Oceania&amp;#39;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
-  coord_fixed() + 
-  scale_color_brewer(palette = &amp;quot;Dark2&amp;quot;) +
-  facet_zoom(xy = continent == &amp;#39;Oceania&amp;#39;, split = TRUE) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(gapminder, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;lifeExp, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;gdpPercap, col&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;continent)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_point&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_fixed&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_color_brewer&lt;/span&gt;(palette &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Dark2&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;facet_zoom&lt;/span&gt;(xy &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; continent &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Oceania&amp;#39;&lt;/span&gt;) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-8-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(gapminder, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;lifeExp, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;gdpPercap, col&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;continent)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_point&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;coord_fixed&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_color_brewer&lt;/span&gt;(palette &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Dark2&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;facet_zoom&lt;/span&gt;(xy &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; continent &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Oceania&amp;#39;&lt;/span&gt;, split &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TRUE&lt;/span&gt;) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/ggforce_files/figure-html/unnamed-chunk-9-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
 </description>
     </item>
     
@@ -786,41 +651,38 @@ library(gapminder)&lt;/code&gt;&lt;/pre&gt;
       <link>https://thiyanga.netlify.app/post/plotaxis/</link>
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/plotaxis/</guid>
-      <description>
-&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;With the ggplot2 package, you’ve got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing.&lt;/p&gt;
-&lt;div id=&#34;comma-separated-labels&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Comma-separated labels&lt;/h2&gt;
+      <description>&lt;p&gt;With the ggplot2 package, you&amp;rsquo;ve got full control over the axes labels in charts. Here we are going to look at some of the most commonly needed formatting options in order to make your graph aesthetically pleasing.&lt;/p&gt;
+&lt;h2 id=&#34;comma-separated-labels&#34;&gt;Comma-separated labels&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;comma_format&lt;/code&gt; function in &lt;code&gt;scales&lt;/code&gt; can be used to add comma separated labels. To illustrate this I use African names data set in TidyTuesday.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
-library(scales) 
-## read data
-african_names &amp;lt;- readr::read_csv(&amp;quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-06-16/african_names.csv&amp;quot;)
-## plot
-african_names %&amp;gt;%
-  ggplot(aes(year_arrival)) +
-  geom_histogram(bins = 20, fill = &amp;quot;darkslateblue&amp;quot;, alpha = 0.7, col=&amp;quot;white&amp;quot;) +
-  scale_y_continuous(labels = scales::comma_format()) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;change-label-angles-horizontal-justification-and-vertical-justification&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Change label angles, horizontal justification and vertical justification&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(tidyverse)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(scales) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## read data&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;african_names &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; readr&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;read_csv&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-06-16/african_names.csv&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## plot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;african_names &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(year_arrival)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_histogram&lt;/span&gt;(bins &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;, fill &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;darkslateblue&amp;#34;&lt;/span&gt;, alpha &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.7&lt;/span&gt;, col&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;white&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_y_continuous&lt;/span&gt;(labels &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scales&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;comma_format&lt;/span&gt;()) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-1-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
+&lt;h2 id=&#34;change-label-angles-horizontal-justification-and-vertical-justification&#34;&gt;Change label angles, horizontal justification and vertical justification&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Angles only&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The ggplot2 package &lt;code&gt;element text&lt;/code&gt; can be used to alter the label angles as well as the horizontal and vertical justifications.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(palmerpenguins)
-penguins %&amp;gt;%
-  ggplot(aes(x=species, fill=species)) + geom_bar() +
-  scale_fill_manual(values=c(&amp;quot;#1b9e77&amp;quot;, &amp;quot;#d95f02&amp;quot;, &amp;quot;#7570b3&amp;quot;)) + 
-  theme(axis.text.x=element_text(angle=30))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(palmerpenguins)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## 
+## Attaching package: &amp;#39;palmerpenguins&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## The following objects are masked from &amp;#39;package:datasets&amp;#39;:
+## 
+##     penguins, penguins_raw
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;penguins &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;species, fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;species)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_bar&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#1b9e77&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#d95f02&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#7570b3&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(axis.text.x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;element_text&lt;/span&gt;(angle&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-2-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
 &lt;p&gt;&lt;strong&gt;Angles, horizontal justification and vertical justification&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins %&amp;gt;%
-  ggplot(aes(x=species, fill=species)) + geom_bar() +  scale_fill_manual(values=c(&amp;quot;#1b9e77&amp;quot;, &amp;quot;#d95f02&amp;quot;, &amp;quot;#7570b3&amp;quot;)) + 
-  theme(axis.text.x=element_text(angle=30, vjust=.8, hjust=0.8))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;penguins &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;species, fill&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;species)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_bar&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;scale_fill_manual&lt;/span&gt;(values&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#1b9e77&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#d95f02&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#7570b3&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;(axis.text.x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;element_text&lt;/span&gt;(angle&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;, vjust&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;.8&lt;/span&gt;, hjust&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.8&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/plotaxis_files/figure-html/unnamed-chunk-3-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
 </description>
     </item>
     
@@ -829,34 +691,28 @@ penguins %&amp;gt;%
       <link>https://thiyanga.netlify.app/post/blog/</link>
       <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/blog/</guid>
-      <description>
-&lt;script src=&#34;https://thiyanga.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div id=&#34;local-regression-loess-or-locally-weighted-scatter-plot-smoother-lowess&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;&lt;code&gt;LO&lt;/code&gt;cal regr&lt;code&gt;ESS&lt;/code&gt;ion (LOESS) or &lt;code&gt;LO&lt;/code&gt;cally &lt;code&gt;WE&lt;/code&gt;ighted &lt;code&gt;S&lt;/code&gt;catter-plot &lt;code&gt;S&lt;/code&gt;moother (LOWESS)&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;local-regression-loess-or-locally-weighted-scatter-plot-smoother-lowess&#34;&gt;&lt;code&gt;LO&lt;/code&gt;cal regr&lt;code&gt;ESS&lt;/code&gt;ion (LOESS) or &lt;code&gt;LO&lt;/code&gt;cally &lt;code&gt;WE&lt;/code&gt;ighted &lt;code&gt;S&lt;/code&gt;catter-plot &lt;code&gt;S&lt;/code&gt;moother (LOWESS)&lt;/h1&gt;
 &lt;p&gt;LOESS or LOWESS is a nonparametric technique to fit a smooth curve through points in a scatter plot. This approach uses locally estimated linear regression at its core.&lt;/p&gt;
 &lt;p&gt;The following code illustrates how to include a loess line using the ggplot2 package.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
-
-set.seed(1)
-x &amp;lt;- rnorm(60)
-y &amp;lt;- c(rnorm(40), 10, rnorm(19))
-df &amp;lt;- data.frame(x=x, y=y)
-
-## Without weights
-ggplot(data=df, aes(x=x, y=y)) + geom_point() + 
- geom_smooth(method=loess, legend=FALSE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/loess_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Furthermore your can plot loess smoothing weighting the observations as follows:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;weights &amp;lt;- c(rep(1, 40), 20, rep(1, 19))
-df$weights &amp;lt;- weights
-
-
-ggplot(data=df, aes(x=x, y=y, size=weights, weight=weights)) + geom_point() + 
- geom_smooth(method=loess, legend=TRUE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/loess_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(ggplot2)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;set.seed&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;rnorm&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;y &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;rnorm&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;40&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;rnorm&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;19&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;df &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;data.frame&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;x, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;y)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Without weights&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(data&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;df, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;x, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;y)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_point&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_smooth&lt;/span&gt;(method&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;loess, legend&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FALSE&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;img src=&#34;https://thiyanga.netlify.app/post/loess_files/figure-html/unnamed-chunk-1-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;Furthermore, you can plot loess smoothing weighting the observations as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;weights &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;rep&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;40&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;rep&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;19&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;df&lt;span style=&#34;color:#f92672&#34;&gt;$&lt;/span&gt;weights &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; weights
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ggplot&lt;/span&gt;(data&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;df, &lt;span style=&#34;color:#a6e22e&#34;&gt;aes&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;x, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;y, size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;weights, weight&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;weights)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_point&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;geom_smooth&lt;/span&gt;(method&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;loess, legend&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;TRUE&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;img src=&#34;https://thiyanga.netlify.app/post/loess_files/figure-html/unnamed-chunk-2-1.png&#34; alt=&#34;&#34; width=&#34;672&#34; /&gt;
 </description>
     </item>
     
@@ -2225,41 +2081,33 @@ df2&lt;/code&gt;&lt;/pre&gt;
       <link>https://thiyanga.netlify.app/post/loaddatasets/</link>
       <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/loaddatasets/</guid>
-      <description>
-
-
-&lt;div id=&#34;spotting-the-problem&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Spotting the problem&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;spotting-the-problem&#34;&gt;Spotting the problem&lt;/h2&gt;
 &lt;p&gt;First, I create a small dataset for the demonstration. The following dataset represents the Happiness index for five countries.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;happy &amp;lt;- data.frame(
-  country = c(&amp;quot;Finland&amp;quot;, &amp;quot;Norway&amp;quot;, &amp;quot;Denmark&amp;quot;, &amp;quot;Iceland&amp;quot;, &amp;quot;Netherlands&amp;quot;),
-  score = c(7.76, 7.60, 7.55, 7.49, 7.48))
-
-happy&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;      country score
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;happy &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;data.frame&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  country &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Finland&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Norway&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Denmark&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Iceland&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Netherlands&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  score &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;7.76&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;7.60&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;7.55&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;7.49&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;7.48&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;happy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;      country score
 1     Finland  7.76
 2      Norway  7.60
 3     Denmark  7.55
 4     Iceland  7.49
-5 Netherlands  7.48&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Save the dataset as shown below.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;save(happy, file=&amp;quot;happyindex.rda&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Let’s load the dataset with,&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;load(&amp;quot;happyindex.rda&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;happyindex&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The following error message pops up,&lt;/p&gt;
+5 Netherlands  7.48
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Save the dataset as shown below.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;save&lt;/span&gt;(happy, file&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;happyindex.rda&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Let&amp;rsquo;s load the dataset with,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;load&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;happyindex.rda&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;happyindex
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The following error message pops up,&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Error: object ‘happyindex’ not found&lt;/p&gt;
+&lt;p&gt;Error: object &amp;lsquo;happyindex&amp;rsquo; not found&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tackling-the-problem&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Tackling the problem&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;loadHappy &amp;lt;- load(&amp;quot;happyindex.rda&amp;quot;)
-happyDataloaded &amp;lt;- get(loadHappy)
-happyDataloaded&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-</description>
+&lt;h2 id=&#34;tackling-the-problem&#34;&gt;Tackling the problem&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;loadHappy &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;load&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;happyindex.rda&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;happyDataloaded &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt;(loadHappy)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;happyDataloaded
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -2267,15 +2115,11 @@ happyDataloaded&lt;/code&gt;&lt;/pre&gt;
       <link>https://thiyanga.netlify.app/post/datasets/</link>
       <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/datasets/</guid>
-      <description>
-
-
-&lt;div id=&#34;to-view-list-of-data-sets-available-in-a-particular-package-or-a-group-of-packages.&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;To view list of data sets available in a particular package or a group of packages.&lt;/h3&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vcdExtra::datasets(c(&amp;quot;ggplot2&amp;quot;, &amp;quot;forecast&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Loading package: ggplot2 
-Loading package: forecast &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;    Package           Item      class      dim
+      <description>&lt;h3 id=&#34;to-view-list-of-data-sets-available-in-a-particular-package-or-a-group-of-packages&#34;&gt;To view list of data sets available in a particular package or a group of packages.&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;vcdExtra&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;datasets&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ggplot2&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;forecast&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Loading package: ggplot2 
+Loading package: forecast 
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    Package           Item      class      dim
 1   ggplot2       diamonds data.frame 53940x10
 2   ggplot2      economics data.frame    574x6
 3   ggplot2 economics_long data.frame   2870x4
@@ -2284,7 +2128,7 @@ Loading package: forecast &lt;/code&gt;&lt;/pre&gt;
 6   ggplot2        midwest data.frame   437x28
 7   ggplot2            mpg data.frame   234x11
 8   ggplot2         msleep data.frame    83x11
-9   ggplot2   presidential data.frame     11x4
+9   ggplot2   presidential data.frame     12x4
 10  ggplot2          seals data.frame   1155x4
 11  ggplot2      txhousing data.frame   8602x9
 12 forecast            gas         ts      476
@@ -2301,42 +2145,36 @@ Loading package: forecast &lt;/code&gt;&lt;/pre&gt;
 6                                               Midwest demographics
 7  Fuel economy data from 1999 to 2008 for 38 popular models of cars
 8       An updated and expanded version of the mammals sleep dataset
-9                    Terms of 11 presidents from Eisenhower to Obama
+9                    Terms of 12 presidents from Eisenhower to Trump
 10                                    Vector field of seal movements
 11                                               Housing sales in TX
 12                                 Australian monthly gas production
 13                                         Daily morning gold prices
 14                                    Half-hourly electricity demand
 15                                       Australian total wine sales
-16                 Quarterly production of woollen yarn in Australia&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;to-view-data-sets-in-package-datasets.&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;To view data sets in package &lt;code&gt;datasets&lt;/code&gt;.&lt;/h3&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data() &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This opens a file called “R data sets” in the Code-Editor window as below.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://thiyanga.netlify.app/post/datafiles.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;to-list-the-data-sets-in-all-available-packages&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;To list the data sets in all &lt;em&gt;available&lt;/em&gt; packages&lt;/h3&gt;
+16                 Quarterly production of woollen yarn in Australia
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;to-view-data-sets-in-package-datasets&#34;&gt;To view data sets in package &lt;code&gt;datasets&lt;/code&gt;.&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;() 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This opens a file called &amp;ldquo;R data sets&amp;rdquo; in the Code-Editor window as below.&lt;/p&gt;
+&lt;img src=&#34;https://thiyanga.netlify.app/post/datafiles.PNG&#34; alt=&#34;final image&#34; width=&#34;800&#34;/&gt;
+&lt;h3 id=&#34;to-list-the-data-sets-in-all-available-packages&#34;&gt;To list the data sets in all &lt;em&gt;available&lt;/em&gt; packages&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;data(package = .packages(all.available = TRUE))&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;This opens a file called “R data sets” in the Code- Editor widow, listing datasets as&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Data sets in package ‘alr4’:
-
-...
-
-
-Data sets in package ‘asbio’:
-
-...
-
-.
-
-.
-
-.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-</description>
+&lt;p&gt;This opens a file called &amp;ldquo;R data sets&amp;rdquo; in the Code- Editor widow, listing datasets as&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Data sets in package ‘alr4’&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Data sets in package ‘asbio’&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -2364,92 +2202,87 @@ Data sets in package ‘asbio’:
       <link>https://thiyanga.netlify.app/post/dplyr/</link>
       <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/dplyr/</guid>
-      <description>
-
-
-&lt;p&gt;Packages&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Load &lt;code&gt;iris&lt;/code&gt; data set&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data(&amp;quot;iris&amp;quot;)
-head(iris)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+      <description>&lt;p&gt;Packages&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(tidyverse)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Load &lt;code&gt;iris&lt;/code&gt; data set&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;iris&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;head&lt;/span&gt;(iris)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 ## 1          5.1         3.5          1.4         0.2  setosa
 ## 2          4.9         3.0          1.4         0.2  setosa
 ## 3          4.7         3.2          1.3         0.2  setosa
 ## 4          4.6         3.1          1.5         0.2  setosa
 ## 5          5.0         3.6          1.4         0.2  setosa
-## 6          5.4         3.9          1.7         0.4  setosa&lt;/code&gt;&lt;/pre&gt;
-&lt;div id=&#34;summarise-to-summarize-only-a-single-column&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;code&gt;summarise&lt;/code&gt;: to summarize only a single column&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% summarise(mean(Sepal.Length))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## `summarise()` ungrouping output (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 2
+## 6          5.4         3.9          1.7         0.4  setosa
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;summarise-to-summarize-only-a-single-column&#34;&gt;&lt;code&gt;summarise&lt;/code&gt;: to summarize only a single column&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;iris &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;group_by&lt;/span&gt;(Species) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;summarise&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;mean&lt;/span&gt;(Sepal.Length))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## # A tibble: 3 × 2
 ##   Species    `mean(Sepal.Length)`
 ##   &amp;lt;fct&amp;gt;                     &amp;lt;dbl&amp;gt;
 ## 1 setosa                     5.01
 ## 2 versicolor                 5.94
-## 3 virginica                  6.59&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;summarise_all-to-summarize-all-columns&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;code&gt;summarise_all&lt;/code&gt;: to summarize all columns&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% summarise_all(.funs = c(mean=&amp;quot;mean&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
-##   Species   Sepal.Length_mean Sepal.Width_mean Petal.Length_me… Petal.Width_mean
-##   &amp;lt;fct&amp;gt;                 &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
-## 1 setosa                 5.01             3.43             1.46            0.246
-## 2 versicol…              5.94             2.77             4.26            1.33 
-## 3 virginica              6.59             2.97             5.55            2.03&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;summarise_at-to-summarize-only-certain-columns&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;code&gt;summarise_at&lt;/code&gt;: to summarize only certain columns&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% summarise_at(
-  .vars = vars(Sepal.Length, Sepal.Width),
-  .funs = c(mean=&amp;quot;mean&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 3
+## 3 virginica                  6.59
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;summarise_all-to-summarize-all-columns&#34;&gt;&lt;code&gt;summarise_all&lt;/code&gt;: to summarize all columns&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;iris &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;group_by&lt;/span&gt;(Species) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;summarise_all&lt;/span&gt;(.funs &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(mean&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;mean&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## # A tibble: 3 × 5
+##   Species  Sepal.Length_mean Sepal.Width_mean Petal.Length_mean Petal.Width_mean
+##   &amp;lt;fct&amp;gt;                &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+## 1 setosa                5.01             3.43              1.46            0.246
+## 2 versico…              5.94             2.77              4.26            1.33 
+## 3 virgini…              6.59             2.97              5.55            2.03
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;summarise_at-to-summarize-only-certain-columns&#34;&gt;&lt;code&gt;summarise_at&lt;/code&gt;: to summarize only certain columns&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;iris &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;group_by&lt;/span&gt;(Species) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;summarise_at&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  .vars &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;vars&lt;/span&gt;(Sepal.Length, Sepal.Width),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  .funs &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(mean&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;mean&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## # A tibble: 3 × 3
 ##   Species    Sepal.Length_mean Sepal.Width_mean
 ##   &amp;lt;fct&amp;gt;                  &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
 ## 1 setosa                  5.01             3.43
 ## 2 versicolor              5.94             2.77
-## 3 virginica               6.59             2.97&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;summarise_if&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;code&gt;summarise_if&lt;/code&gt;&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% 
-  summarise_if(.predicate = function(x) is.numeric(x),
-               .funs = funs(mean=&amp;quot;mean&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: `funs()` is deprecated as of dplyr 0.8.0.
-## Please use a list of either functions or lambdas: 
+## 3 virginica               6.59             2.97
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;summarise_if&#34;&gt;&lt;code&gt;summarise_if&lt;/code&gt;&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;iris &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;group_by&lt;/span&gt;(Species) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;summarise_if&lt;/span&gt;(.predicate &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(x) &lt;span style=&#34;color:#a6e22e&#34;&gt;is.numeric&lt;/span&gt;(x),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               .funs &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;funs&lt;/span&gt;(mean&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;mean&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Warning: `funs()` was deprecated in dplyr 0.8.0.
+## ℹ Please use a list of either functions or lambdas:
 ## 
-##   # Simple named list: 
-##   list(mean = mean, median = median)
+## # Simple named list: list(mean = mean, median = median)
 ## 
-##   # Auto named with `tibble::lst()`: 
-##   tibble::lst(mean, median)
+## # Auto named with `tibble::lst()`: tibble::lst(mean, median)
 ## 
-##   # Using lambdas
-##   list(~ mean(., trim = .2), ~ median(., na.rm = TRUE))
-## This warning is displayed once every 8 hours.
-## Call `lifecycle::last_warnings()` to see where this warning was generated.&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
-##   Species   Sepal.Length_mean Sepal.Width_mean Petal.Length_me… Petal.Width_mean
-##   &amp;lt;fct&amp;gt;                 &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
-## 1 setosa                 5.01             3.43             1.46            0.246
-## 2 versicol…              5.94             2.77             4.26            1.33 
-## 3 virginica              6.59             2.97             5.55            2.03&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;pass multiple functions&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;iris %&amp;gt;% group_by(Species) %&amp;gt;% 
-  summarise_if(.predicate = function(x) is.numeric(x),
-               .funs = funs(mean=&amp;quot;mean&amp;quot;, Sd=&amp;quot;sd&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 9
-##   Species Sepal.Length_me… Sepal.Width_mean Petal.Length_me… Petal.Width_mean
-##   &amp;lt;fct&amp;gt;              &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
-## 1 setosa              5.01             3.43             1.46            0.246
-## 2 versic…             5.94             2.77             4.26            1.33 
-## 3 virgin…             6.59             2.97             5.55            2.03 
-## # … with 4 more variables: Sepal.Length_Sd &amp;lt;dbl&amp;gt;, Sepal.Width_Sd &amp;lt;dbl&amp;gt;,
-## #   Petal.Length_Sd &amp;lt;dbl&amp;gt;, Petal.Width_Sd &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-</description>
+## # Using lambdas list(~ mean(., trim = .2), ~ median(., na.rm = TRUE))
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## # A tibble: 3 × 5
+##   Species  Sepal.Length_mean Sepal.Width_mean Petal.Length_mean Petal.Width_mean
+##   &amp;lt;fct&amp;gt;                &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+## 1 setosa                5.01             3.43              1.46            0.246
+## 2 versico…              5.94             2.77              4.26            1.33 
+## 3 virgini…              6.59             2.97              5.55            2.03
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;pass multiple functions&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;iris &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;group_by&lt;/span&gt;(Species) &lt;span style=&#34;color:#f92672&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;summarise_if&lt;/span&gt;(.predicate &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(x) &lt;span style=&#34;color:#a6e22e&#34;&gt;is.numeric&lt;/span&gt;(x),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               .funs &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;funs&lt;/span&gt;(mean&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;mean&amp;#34;&lt;/span&gt;, Sd&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sd&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Warning: `funs()` was deprecated in dplyr 0.8.0.
+## ℹ Please use a list of either functions or lambdas:
+## 
+## # Simple named list: list(mean = mean, median = median)
+## 
+## # Auto named with `tibble::lst()`: tibble::lst(mean, median)
+## 
+## # Using lambdas list(~ mean(., trim = .2), ~ median(., na.rm = TRUE))
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## # A tibble: 3 × 9
+##   Species  Sepal.Length_mean Sepal.Width_mean Petal.Length_mean Petal.Width_mean
+##   &amp;lt;fct&amp;gt;                &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+## 1 setosa                5.01             3.43              1.46            0.246
+## 2 versico…              5.94             2.77              4.26            1.33 
+## 3 virgini…              6.59             2.97              5.55            2.03 
+## # ℹ 4 more variables: Sepal.Length_Sd &amp;lt;dbl&amp;gt;, Sepal.Width_Sd &amp;lt;dbl&amp;gt;,
+## #   Petal.Length_Sd &amp;lt;dbl&amp;gt;, Petal.Width_Sd &amp;lt;dbl&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -2457,65 +2290,54 @@ head(iris)&lt;/code&gt;&lt;/pre&gt;
       <link>https://thiyanga.netlify.app/post/multiplepkg/</link>
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/multiplepkg/</guid>
-      <description>
-
-
-&lt;style type=&#34;text/css&#34;&gt;
+      <description>&lt;style type=&#34;text/css&#34;&gt;
 h2 { /* Header 2 */
     font-size: 22px;
   color: DarkBlue;
 }
 &lt;/style&gt;
-&lt;div id=&#34;install-packages&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;install packages&lt;/h2&gt;
+&lt;h2 id=&#34;install-packages&#34;&gt;install packages&lt;/h2&gt;
 &lt;p&gt;To install multiple packages with a single call to &lt;code&gt;install.packages&lt;/code&gt;, pass the names of the packages as a character vector to the install.packages() function.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;load-packages&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;load packages&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;install.packages&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gganimate&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tidyverse&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gapminder&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;load-packages&#34;&gt;load packages&lt;/h2&gt;
 &lt;p&gt;Once you have the packages installed, you can make their contents available to use in your current R session by running,&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;lapply(c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;), require, character.only = TRUE)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [[1]]
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;lapply&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gganimate&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tidyverse&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gapminder&amp;#34;&lt;/span&gt;), require, character.only &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TRUE&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## [[1]]
 ## [1] TRUE
 ## 
 ## [[2]]
 ## [1] TRUE
 ## 
 ## [[3]]
-## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;check-and-install-missing-packages&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;check and install missing packages&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;list.of.packages &amp;lt;- c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;)
-new.packages &amp;lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&amp;quot;Package&amp;quot;])]
-if(length(new.packages)) install.packages(new.packages)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;for-other-alternatives-see&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;For other alternatives see&lt;/h2&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+## [1] TRUE
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;check-and-install-missing-packages&#34;&gt;check and install missing packages&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;list.of.packages &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gganimate&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tidyverse&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gapminder&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;new.packages &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; list.of.packages[&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(list.of.packages &lt;span style=&#34;color:#f92672&#34;&gt;%in%&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;installed.packages&lt;/span&gt;()[,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Package&amp;#34;&lt;/span&gt;])]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;if&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;length&lt;/span&gt;(new.packages)) &lt;span style=&#34;color:#a6e22e&#34;&gt;install.packages&lt;/span&gt;(new.packages)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;for-other-alternatives-see&#34;&gt;For other alternatives see&lt;/h2&gt;
+&lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;http://dirk.eddelbuettel.com/code/littler.html&#34;&gt;littler&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(littler)
-install.r EIAdata gdata ggmap ggplot2 &lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(littler)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;install.r EIAdata gdata ggmap ggplot2 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;&lt;a href=&#34;https://gist.github.com/stevenworthington/3178163&#34;&gt;ipak&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ipak &amp;lt;- function(pkg){
-    new.pkg &amp;lt;- pkg[!(pkg %in% installed.packages()[, &amp;quot;Package&amp;quot;])]
-    if (length(new.pkg)) 
-        install.packages(new.pkg, dependencies = TRUE)
-    sapply(pkg, require, character.only = TRUE)
-}
-
-# usage
-packages &amp;lt;- c(&amp;quot;gganimate&amp;quot;, &amp;quot;tidyverse&amp;quot;, &amp;quot;gapminder&amp;quot;)
-ipak(packages)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## gganimate tidyverse gapminder 
-##      TRUE      TRUE      TRUE&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ipak &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(pkg){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    new.pkg &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; pkg[&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(pkg &lt;span style=&#34;color:#f92672&#34;&gt;%in%&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;installed.packages&lt;/span&gt;()[, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Package&amp;#34;&lt;/span&gt;])]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;if &lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;length&lt;/span&gt;(new.pkg)) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;install.packages&lt;/span&gt;(new.pkg, dependencies &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TRUE&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;sapply&lt;/span&gt;(pkg, require, character.only &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TRUE&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# usage&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;packages &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gganimate&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tidyverse&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gapminder&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ipak&lt;/span&gt;(packages)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## gganimate tidyverse gapminder 
+##      TRUE      TRUE      TRUE
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;&lt;a href=&#34;https://cran.r-project.org/web/packages/easypackages/README.html&#34;&gt;easypackages&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
 </description>
     </item>
     
@@ -2524,128 +2346,134 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
       <link>https://thiyanga.netlify.app/post/greekletters/</link>
       <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/greekletters/</guid>
-      <description>
-
-
-&lt;table&gt;
+      <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
+&lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;alpha&lt;/strong&gt;:&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;beta&lt;/strong&gt;:&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;gamma&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;delta&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td&gt;&lt;code&gt;\alpha&lt;/code&gt; : &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\beta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\gamma&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\gamma\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\delta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\delta\)&lt;/span&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\alpha&lt;/code&gt; : &lt;code&gt;\(\alpha\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\beta&lt;/code&gt;: &lt;code&gt;\(\beta\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\gamma&lt;/code&gt;: &lt;code&gt;\(\gamma\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\delta&lt;/code&gt;: &lt;code&gt;\(\delta\)&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
+&lt;tr&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\Gamma&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\Gamma\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\Delta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\Delta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Gamma&lt;/code&gt;: &lt;code&gt;\(\Gamma\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Delta&lt;/code&gt;: &lt;code&gt;\(\Delta\)&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
+&lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;epsilon&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;Zeta&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;eta&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;theta&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td&gt;&lt;code&gt;\epsilon&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\zeta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\zeta\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\eta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\eta\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\theta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\epsilon&lt;/code&gt;: &lt;code&gt;\(\epsilon\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\zeta&lt;/code&gt;: &lt;code&gt;\(\zeta\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\eta&lt;/code&gt;: &lt;code&gt;\(\eta\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\theta&lt;/code&gt;: &lt;code&gt;\(\theta\)&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td&gt;&lt;code&gt;\varepsilon&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\varepsilon\)&lt;/span&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\varepsilon&lt;/code&gt;: &lt;code&gt;\(\varepsilon\)&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\Theta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\Theta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Theta&lt;/code&gt;: &lt;code&gt;\(\Theta\)&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
+&lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;iota&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;kappa&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;lambda&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;mu&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td&gt;&lt;code&gt;\iota&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\iota\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\kappa:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\kappa\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\lambda:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\mu:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\iota&lt;/code&gt;: &lt;code&gt;\(\iota\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\kappa:&lt;/code&gt; &lt;code&gt;\(\kappa\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\lambda:&lt;/code&gt; &lt;code&gt;\(\lambda\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\mu:&lt;/code&gt; &lt;code&gt;\(\mu\)&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
+&lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;nu&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;xi&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;pi&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;rho&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td&gt;&lt;code&gt;\nu:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\nu\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\xi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\xi\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\pi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\rho:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\rho\)&lt;/span&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\nu:&lt;/code&gt; &lt;code&gt;\(\nu\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\xi:&lt;/code&gt; &lt;code&gt;\(\xi\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\pi:&lt;/code&gt; &lt;code&gt;\(\pi\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\rho:&lt;/code&gt; &lt;code&gt;\(\rho\)&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
+&lt;tr&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\Xi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Xi\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\Pi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Pi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Xi:&lt;/code&gt; &lt;code&gt;\(\Xi\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Pi:&lt;/code&gt; &lt;code&gt;\(\Pi\)&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
+&lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;sigma&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;upsilon&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;phi&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;omicron&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td&gt;&lt;code&gt;\sigma:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\upsilon:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\upsilon\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\phi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\omicron:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\omicron\)&lt;/span&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\sigma:&lt;/code&gt; &lt;code&gt;\(\sigma\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\upsilon:&lt;/code&gt; &lt;code&gt;\(\upsilon\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\phi:&lt;/code&gt; &lt;code&gt;\(\phi\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\omicron:&lt;/code&gt; &lt;code&gt;\(\omicron\)&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td&gt;&lt;code&gt;\Sigma:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Sigma\)&lt;/span&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\Sigma:&lt;/code&gt; &lt;code&gt;\(\Sigma\)&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\Phi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Phi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Phi:&lt;/code&gt; &lt;code&gt;\(\Phi\)&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
+&lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;tau&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;chi&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;psi&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;Omega&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td&gt;&lt;code&gt;\tau:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\tau\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\chi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\chi\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\psi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\psi\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\omega:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\tau:&lt;/code&gt; &lt;code&gt;\(\tau\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\chi:&lt;/code&gt; &lt;code&gt;\(\chi\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\psi:&lt;/code&gt; &lt;code&gt;\(\psi\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\omega:&lt;/code&gt; &lt;code&gt;\(\omega\)&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
+&lt;tr&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\Psi:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Psi\)&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;\Omega:&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Psi:&lt;/code&gt; &lt;code&gt;\(\Psi\)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Omega:&lt;/code&gt; &lt;code&gt;\(\Omega\)&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -2658,111 +2486,108 @@ ipak(packages)&lt;/code&gt;&lt;/pre&gt;
       <link>https://thiyanga.netlify.app/post/packageinfo/</link>
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
       <guid>https://thiyanga.netlify.app/post/packageinfo/</guid>
-      <description>
-
-
-&lt;p&gt;Sometimes we need to view all the functions that are built into an R package.
+      <description>&lt;p&gt;Sometimes we need to view all the functions that are built into an R package.
 This is done in the same way you would list variables in your workspace, using the &lt;code&gt;ls&lt;/code&gt; function. Note that the package must be loaded before you run the &lt;code&gt;ls&lt;/code&gt; command.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt; Getting a list of functions inside the &lt;code&gt;dplyr&lt;/code&gt; package&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
-ls(&amp;quot;package:dplyr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   [1] &amp;quot;%&amp;gt;%&amp;quot;                   &amp;quot;across&amp;quot;                &amp;quot;add_count&amp;quot;            
-##   [4] &amp;quot;add_count_&amp;quot;            &amp;quot;add_row&amp;quot;               &amp;quot;add_rownames&amp;quot;         
-##   [7] &amp;quot;add_tally&amp;quot;             &amp;quot;add_tally_&amp;quot;            &amp;quot;all_equal&amp;quot;            
-##  [10] &amp;quot;all_of&amp;quot;                &amp;quot;all_vars&amp;quot;              &amp;quot;anti_join&amp;quot;            
-##  [13] &amp;quot;any_of&amp;quot;                &amp;quot;any_vars&amp;quot;              &amp;quot;arrange&amp;quot;              
-##  [16] &amp;quot;arrange_&amp;quot;              &amp;quot;arrange_all&amp;quot;           &amp;quot;arrange_at&amp;quot;           
-##  [19] &amp;quot;arrange_if&amp;quot;            &amp;quot;as_data_frame&amp;quot;         &amp;quot;as_label&amp;quot;             
-##  [22] &amp;quot;as_tibble&amp;quot;             &amp;quot;as.tbl&amp;quot;                &amp;quot;auto_copy&amp;quot;            
-##  [25] &amp;quot;band_instruments&amp;quot;      &amp;quot;band_instruments2&amp;quot;     &amp;quot;band_members&amp;quot;         
-##  [28] &amp;quot;bench_tbls&amp;quot;            &amp;quot;between&amp;quot;               &amp;quot;bind_cols&amp;quot;            
-##  [31] &amp;quot;bind_rows&amp;quot;             &amp;quot;c_across&amp;quot;              &amp;quot;case_when&amp;quot;            
-##  [34] &amp;quot;changes&amp;quot;               &amp;quot;check_dbplyr&amp;quot;          &amp;quot;coalesce&amp;quot;             
-##  [37] &amp;quot;collapse&amp;quot;              &amp;quot;collect&amp;quot;               &amp;quot;combine&amp;quot;              
-##  [40] &amp;quot;common_by&amp;quot;             &amp;quot;compare_tbls&amp;quot;          &amp;quot;compare_tbls2&amp;quot;        
-##  [43] &amp;quot;compute&amp;quot;               &amp;quot;contains&amp;quot;              &amp;quot;copy_to&amp;quot;              
-##  [46] &amp;quot;count&amp;quot;                 &amp;quot;count_&amp;quot;                &amp;quot;cumall&amp;quot;               
-##  [49] &amp;quot;cumany&amp;quot;                &amp;quot;cume_dist&amp;quot;             &amp;quot;cummean&amp;quot;              
-##  [52] &amp;quot;cur_column&amp;quot;            &amp;quot;cur_data&amp;quot;              &amp;quot;cur_data_all&amp;quot;         
-##  [55] &amp;quot;cur_group&amp;quot;             &amp;quot;cur_group_id&amp;quot;          &amp;quot;cur_group_rows&amp;quot;       
-##  [58] &amp;quot;current_vars&amp;quot;          &amp;quot;data_frame&amp;quot;            &amp;quot;data_frame_&amp;quot;          
-##  [61] &amp;quot;db_analyze&amp;quot;            &amp;quot;db_begin&amp;quot;              &amp;quot;db_commit&amp;quot;            
-##  [64] &amp;quot;db_create_index&amp;quot;       &amp;quot;db_create_indexes&amp;quot;     &amp;quot;db_create_table&amp;quot;      
-##  [67] &amp;quot;db_data_type&amp;quot;          &amp;quot;db_desc&amp;quot;               &amp;quot;db_drop_table&amp;quot;        
-##  [70] &amp;quot;db_explain&amp;quot;            &amp;quot;db_has_table&amp;quot;          &amp;quot;db_insert_into&amp;quot;       
-##  [73] &amp;quot;db_list_tables&amp;quot;        &amp;quot;db_query_fields&amp;quot;       &amp;quot;db_query_rows&amp;quot;        
-##  [76] &amp;quot;db_rollback&amp;quot;           &amp;quot;db_save_query&amp;quot;         &amp;quot;db_write_table&amp;quot;       
-##  [79] &amp;quot;dense_rank&amp;quot;            &amp;quot;desc&amp;quot;                  &amp;quot;dim_desc&amp;quot;             
-##  [82] &amp;quot;distinct&amp;quot;              &amp;quot;distinct_&amp;quot;             &amp;quot;distinct_all&amp;quot;         
-##  [85] &amp;quot;distinct_at&amp;quot;           &amp;quot;distinct_if&amp;quot;           &amp;quot;distinct_prepare&amp;quot;     
-##  [88] &amp;quot;do&amp;quot;                    &amp;quot;do_&amp;quot;                   &amp;quot;dplyr_col_modify&amp;quot;     
-##  [91] &amp;quot;dplyr_reconstruct&amp;quot;     &amp;quot;dplyr_row_slice&amp;quot;       &amp;quot;ends_with&amp;quot;            
-##  [94] &amp;quot;enexpr&amp;quot;                &amp;quot;enexprs&amp;quot;               &amp;quot;enquo&amp;quot;                
-##  [97] &amp;quot;enquos&amp;quot;                &amp;quot;ensym&amp;quot;                 &amp;quot;ensyms&amp;quot;               
-## [100] &amp;quot;eval_tbls&amp;quot;             &amp;quot;eval_tbls2&amp;quot;            &amp;quot;everything&amp;quot;           
-## [103] &amp;quot;explain&amp;quot;               &amp;quot;expr&amp;quot;                  &amp;quot;failwith&amp;quot;             
-## [106] &amp;quot;filter&amp;quot;                &amp;quot;filter_&amp;quot;               &amp;quot;filter_all&amp;quot;           
-## [109] &amp;quot;filter_at&amp;quot;             &amp;quot;filter_if&amp;quot;             &amp;quot;first&amp;quot;                
-## [112] &amp;quot;frame_data&amp;quot;            &amp;quot;full_join&amp;quot;             &amp;quot;funs&amp;quot;                 
-## [115] &amp;quot;funs_&amp;quot;                 &amp;quot;glimpse&amp;quot;               &amp;quot;group_by&amp;quot;             
-## [118] &amp;quot;group_by_&amp;quot;             &amp;quot;group_by_all&amp;quot;          &amp;quot;group_by_at&amp;quot;          
-## [121] &amp;quot;group_by_drop_default&amp;quot; &amp;quot;group_by_if&amp;quot;           &amp;quot;group_by_prepare&amp;quot;     
-## [124] &amp;quot;group_cols&amp;quot;            &amp;quot;group_data&amp;quot;            &amp;quot;group_indices&amp;quot;        
-## [127] &amp;quot;group_indices_&amp;quot;        &amp;quot;group_keys&amp;quot;            &amp;quot;group_map&amp;quot;            
-## [130] &amp;quot;group_modify&amp;quot;          &amp;quot;group_nest&amp;quot;            &amp;quot;group_rows&amp;quot;           
-## [133] &amp;quot;group_size&amp;quot;            &amp;quot;group_split&amp;quot;           &amp;quot;group_trim&amp;quot;           
-## [136] &amp;quot;group_vars&amp;quot;            &amp;quot;group_walk&amp;quot;            &amp;quot;grouped_df&amp;quot;           
-## [139] &amp;quot;groups&amp;quot;                &amp;quot;id&amp;quot;                    &amp;quot;ident&amp;quot;                
-## [142] &amp;quot;if_else&amp;quot;               &amp;quot;inner_join&amp;quot;            &amp;quot;intersect&amp;quot;            
-## [145] &amp;quot;is_grouped_df&amp;quot;         &amp;quot;is.grouped_df&amp;quot;         &amp;quot;is.src&amp;quot;               
-## [148] &amp;quot;is.tbl&amp;quot;                &amp;quot;lag&amp;quot;                   &amp;quot;last&amp;quot;                 
-## [151] &amp;quot;last_col&amp;quot;              &amp;quot;lead&amp;quot;                  &amp;quot;left_join&amp;quot;            
-## [154] &amp;quot;location&amp;quot;              &amp;quot;lst&amp;quot;                   &amp;quot;lst_&amp;quot;                 
-## [157] &amp;quot;make_tbl&amp;quot;              &amp;quot;matches&amp;quot;               &amp;quot;min_rank&amp;quot;             
-## [160] &amp;quot;mutate&amp;quot;                &amp;quot;mutate_&amp;quot;               &amp;quot;mutate_all&amp;quot;           
-## [163] &amp;quot;mutate_at&amp;quot;             &amp;quot;mutate_each&amp;quot;           &amp;quot;mutate_each_&amp;quot;         
-## [166] &amp;quot;mutate_if&amp;quot;             &amp;quot;n&amp;quot;                     &amp;quot;n_distinct&amp;quot;           
-## [169] &amp;quot;n_groups&amp;quot;              &amp;quot;na_if&amp;quot;                 &amp;quot;near&amp;quot;                 
-## [172] &amp;quot;nest_by&amp;quot;               &amp;quot;nest_join&amp;quot;             &amp;quot;new_grouped_df&amp;quot;       
-## [175] &amp;quot;nth&amp;quot;                   &amp;quot;ntile&amp;quot;                 &amp;quot;num_range&amp;quot;            
-## [178] &amp;quot;one_of&amp;quot;                &amp;quot;order_by&amp;quot;              &amp;quot;percent_rank&amp;quot;         
-## [181] &amp;quot;progress_estimated&amp;quot;    &amp;quot;pull&amp;quot;                  &amp;quot;quo&amp;quot;                  
-## [184] &amp;quot;quo_name&amp;quot;              &amp;quot;quos&amp;quot;                  &amp;quot;recode&amp;quot;               
-## [187] &amp;quot;recode_factor&amp;quot;         &amp;quot;relocate&amp;quot;              &amp;quot;rename&amp;quot;               
-## [190] &amp;quot;rename_&amp;quot;               &amp;quot;rename_all&amp;quot;            &amp;quot;rename_at&amp;quot;            
-## [193] &amp;quot;rename_if&amp;quot;             &amp;quot;rename_vars&amp;quot;           &amp;quot;rename_vars_&amp;quot;         
-## [196] &amp;quot;rename_with&amp;quot;           &amp;quot;right_join&amp;quot;            &amp;quot;row_number&amp;quot;           
-## [199] &amp;quot;rows_delete&amp;quot;           &amp;quot;rows_insert&amp;quot;           &amp;quot;rows_patch&amp;quot;           
-## [202] &amp;quot;rows_update&amp;quot;           &amp;quot;rows_upsert&amp;quot;           &amp;quot;rowwise&amp;quot;              
-## [205] &amp;quot;same_src&amp;quot;              &amp;quot;sample_frac&amp;quot;           &amp;quot;sample_n&amp;quot;             
-## [208] &amp;quot;select&amp;quot;                &amp;quot;select_&amp;quot;               &amp;quot;select_all&amp;quot;           
-## [211] &amp;quot;select_at&amp;quot;             &amp;quot;select_if&amp;quot;             &amp;quot;select_var&amp;quot;           
-## [214] &amp;quot;select_vars&amp;quot;           &amp;quot;select_vars_&amp;quot;          &amp;quot;semi_join&amp;quot;            
-## [217] &amp;quot;setdiff&amp;quot;               &amp;quot;setequal&amp;quot;              &amp;quot;show_query&amp;quot;           
-## [220] &amp;quot;slice&amp;quot;                 &amp;quot;slice_&amp;quot;                &amp;quot;slice_head&amp;quot;           
-## [223] &amp;quot;slice_max&amp;quot;             &amp;quot;slice_min&amp;quot;             &amp;quot;slice_sample&amp;quot;         
-## [226] &amp;quot;slice_tail&amp;quot;            &amp;quot;sql&amp;quot;                   &amp;quot;sql_escape_ident&amp;quot;     
-## [229] &amp;quot;sql_escape_string&amp;quot;     &amp;quot;sql_join&amp;quot;              &amp;quot;sql_select&amp;quot;           
-## [232] &amp;quot;sql_semi_join&amp;quot;         &amp;quot;sql_set_op&amp;quot;            &amp;quot;sql_subquery&amp;quot;         
-## [235] &amp;quot;sql_translate_env&amp;quot;     &amp;quot;src&amp;quot;                   &amp;quot;src_df&amp;quot;               
-## [238] &amp;quot;src_local&amp;quot;             &amp;quot;src_mysql&amp;quot;             &amp;quot;src_postgres&amp;quot;         
-## [241] &amp;quot;src_sqlite&amp;quot;            &amp;quot;src_tbls&amp;quot;              &amp;quot;starts_with&amp;quot;          
-## [244] &amp;quot;starwars&amp;quot;              &amp;quot;storms&amp;quot;                &amp;quot;summarise&amp;quot;            
-## [247] &amp;quot;summarise_&amp;quot;            &amp;quot;summarise_all&amp;quot;         &amp;quot;summarise_at&amp;quot;         
-## [250] &amp;quot;summarise_each&amp;quot;        &amp;quot;summarise_each_&amp;quot;       &amp;quot;summarise_if&amp;quot;         
-## [253] &amp;quot;summarize&amp;quot;             &amp;quot;summarize_&amp;quot;            &amp;quot;summarize_all&amp;quot;        
-## [256] &amp;quot;summarize_at&amp;quot;          &amp;quot;summarize_each&amp;quot;        &amp;quot;summarize_each_&amp;quot;      
-## [259] &amp;quot;summarize_if&amp;quot;          &amp;quot;sym&amp;quot;                   &amp;quot;syms&amp;quot;                 
-## [262] &amp;quot;tally&amp;quot;                 &amp;quot;tally_&amp;quot;                &amp;quot;tbl&amp;quot;                  
-## [265] &amp;quot;tbl_df&amp;quot;                &amp;quot;tbl_nongroup_vars&amp;quot;     &amp;quot;tbl_ptype&amp;quot;            
-## [268] &amp;quot;tbl_sum&amp;quot;               &amp;quot;tbl_vars&amp;quot;              &amp;quot;tibble&amp;quot;               
-## [271] &amp;quot;top_frac&amp;quot;              &amp;quot;top_n&amp;quot;                 &amp;quot;transmute&amp;quot;            
-## [274] &amp;quot;transmute_&amp;quot;            &amp;quot;transmute_all&amp;quot;         &amp;quot;transmute_at&amp;quot;         
-## [277] &amp;quot;transmute_if&amp;quot;          &amp;quot;tribble&amp;quot;               &amp;quot;trunc_mat&amp;quot;            
-## [280] &amp;quot;type_sum&amp;quot;              &amp;quot;ungroup&amp;quot;               &amp;quot;union&amp;quot;                
-## [283] &amp;quot;union_all&amp;quot;             &amp;quot;validate_grouped_df&amp;quot;   &amp;quot;vars&amp;quot;                 
-## [286] &amp;quot;with_groups&amp;quot;           &amp;quot;with_order&amp;quot;            &amp;quot;wrap_dbplyr_obj&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(dplyr)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ls&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;package:dplyr&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;##   [1] &amp;#34;%&amp;gt;%&amp;#34;                   &amp;#34;across&amp;#34;                &amp;#34;add_count&amp;#34;            
+##   [4] &amp;#34;add_count_&amp;#34;            &amp;#34;add_row&amp;#34;               &amp;#34;add_rownames&amp;#34;         
+##   [7] &amp;#34;add_tally&amp;#34;             &amp;#34;add_tally_&amp;#34;            &amp;#34;all_equal&amp;#34;            
+##  [10] &amp;#34;all_of&amp;#34;                &amp;#34;all_vars&amp;#34;              &amp;#34;anti_join&amp;#34;            
+##  [13] &amp;#34;any_of&amp;#34;                &amp;#34;any_vars&amp;#34;              &amp;#34;arrange&amp;#34;              
+##  [16] &amp;#34;arrange_&amp;#34;              &amp;#34;arrange_all&amp;#34;           &amp;#34;arrange_at&amp;#34;           
+##  [19] &amp;#34;arrange_if&amp;#34;            &amp;#34;as.tbl&amp;#34;                &amp;#34;as_data_frame&amp;#34;        
+##  [22] &amp;#34;as_label&amp;#34;              &amp;#34;as_tibble&amp;#34;             &amp;#34;auto_copy&amp;#34;            
+##  [25] &amp;#34;band_instruments&amp;#34;      &amp;#34;band_instruments2&amp;#34;     &amp;#34;band_members&amp;#34;         
+##  [28] &amp;#34;between&amp;#34;               &amp;#34;bind_cols&amp;#34;             &amp;#34;bind_rows&amp;#34;            
+##  [31] &amp;#34;c_across&amp;#34;              &amp;#34;case_match&amp;#34;            &amp;#34;case_when&amp;#34;            
+##  [34] &amp;#34;check_dbplyr&amp;#34;          &amp;#34;coalesce&amp;#34;              &amp;#34;collapse&amp;#34;             
+##  [37] &amp;#34;collect&amp;#34;               &amp;#34;combine&amp;#34;               &amp;#34;common_by&amp;#34;            
+##  [40] &amp;#34;compute&amp;#34;               &amp;#34;consecutive_id&amp;#34;        &amp;#34;contains&amp;#34;             
+##  [43] &amp;#34;copy_to&amp;#34;               &amp;#34;count&amp;#34;                 &amp;#34;count_&amp;#34;               
+##  [46] &amp;#34;cross_join&amp;#34;            &amp;#34;cumall&amp;#34;                &amp;#34;cumany&amp;#34;               
+##  [49] &amp;#34;cume_dist&amp;#34;             &amp;#34;cummean&amp;#34;               &amp;#34;cur_column&amp;#34;           
+##  [52] &amp;#34;cur_data&amp;#34;              &amp;#34;cur_data_all&amp;#34;          &amp;#34;cur_group&amp;#34;            
+##  [55] &amp;#34;cur_group_id&amp;#34;          &amp;#34;cur_group_rows&amp;#34;        &amp;#34;data_frame&amp;#34;           
+##  [58] &amp;#34;db_analyze&amp;#34;            &amp;#34;db_begin&amp;#34;              &amp;#34;db_commit&amp;#34;            
+##  [61] &amp;#34;db_create_index&amp;#34;       &amp;#34;db_create_indexes&amp;#34;     &amp;#34;db_create_table&amp;#34;      
+##  [64] &amp;#34;db_data_type&amp;#34;          &amp;#34;db_desc&amp;#34;               &amp;#34;db_drop_table&amp;#34;        
+##  [67] &amp;#34;db_explain&amp;#34;            &amp;#34;db_has_table&amp;#34;          &amp;#34;db_insert_into&amp;#34;       
+##  [70] &amp;#34;db_list_tables&amp;#34;        &amp;#34;db_query_fields&amp;#34;       &amp;#34;db_query_rows&amp;#34;        
+##  [73] &amp;#34;db_rollback&amp;#34;           &amp;#34;db_save_query&amp;#34;         &amp;#34;db_write_table&amp;#34;       
+##  [76] &amp;#34;dense_rank&amp;#34;            &amp;#34;desc&amp;#34;                  &amp;#34;dim_desc&amp;#34;             
+##  [79] &amp;#34;distinct&amp;#34;              &amp;#34;distinct_&amp;#34;             &amp;#34;distinct_all&amp;#34;         
+##  [82] &amp;#34;distinct_at&amp;#34;           &amp;#34;distinct_if&amp;#34;           &amp;#34;distinct_prepare&amp;#34;     
+##  [85] &amp;#34;do&amp;#34;                    &amp;#34;do_&amp;#34;                   &amp;#34;dplyr_col_modify&amp;#34;     
+##  [88] &amp;#34;dplyr_reconstruct&amp;#34;     &amp;#34;dplyr_row_slice&amp;#34;       &amp;#34;ends_with&amp;#34;            
+##  [91] &amp;#34;enexpr&amp;#34;                &amp;#34;enexprs&amp;#34;               &amp;#34;enquo&amp;#34;                
+##  [94] &amp;#34;enquos&amp;#34;                &amp;#34;ensym&amp;#34;                 &amp;#34;ensyms&amp;#34;               
+##  [97] &amp;#34;everything&amp;#34;            &amp;#34;explain&amp;#34;               &amp;#34;expr&amp;#34;                 
+## [100] &amp;#34;filter&amp;#34;                &amp;#34;filter_&amp;#34;               &amp;#34;filter_all&amp;#34;           
+## [103] &amp;#34;filter_at&amp;#34;             &amp;#34;filter_if&amp;#34;             &amp;#34;filter_out&amp;#34;           
+## [106] &amp;#34;first&amp;#34;                 &amp;#34;full_join&amp;#34;             &amp;#34;funs&amp;#34;                 
+## [109] &amp;#34;funs_&amp;#34;                 &amp;#34;glimpse&amp;#34;               &amp;#34;group_by&amp;#34;             
+## [112] &amp;#34;group_by_&amp;#34;             &amp;#34;group_by_all&amp;#34;          &amp;#34;group_by_at&amp;#34;          
+## [115] &amp;#34;group_by_drop_default&amp;#34; &amp;#34;group_by_if&amp;#34;           &amp;#34;group_by_prepare&amp;#34;     
+## [118] &amp;#34;group_cols&amp;#34;            &amp;#34;group_data&amp;#34;            &amp;#34;group_indices&amp;#34;        
+## [121] &amp;#34;group_indices_&amp;#34;        &amp;#34;group_keys&amp;#34;            &amp;#34;group_map&amp;#34;            
+## [124] &amp;#34;group_modify&amp;#34;          &amp;#34;group_nest&amp;#34;            &amp;#34;group_rows&amp;#34;           
+## [127] &amp;#34;group_size&amp;#34;            &amp;#34;group_split&amp;#34;           &amp;#34;group_trim&amp;#34;           
+## [130] &amp;#34;group_vars&amp;#34;            &amp;#34;group_walk&amp;#34;            &amp;#34;grouped_df&amp;#34;           
+## [133] &amp;#34;groups&amp;#34;                &amp;#34;ident&amp;#34;                 &amp;#34;if_all&amp;#34;               
+## [136] &amp;#34;if_any&amp;#34;                &amp;#34;if_else&amp;#34;               &amp;#34;inner_join&amp;#34;           
+## [139] &amp;#34;intersect&amp;#34;             &amp;#34;is.grouped_df&amp;#34;         &amp;#34;is.src&amp;#34;               
+## [142] &amp;#34;is.tbl&amp;#34;                &amp;#34;is_grouped_df&amp;#34;         &amp;#34;join_by&amp;#34;              
+## [145] &amp;#34;lag&amp;#34;                   &amp;#34;last&amp;#34;                  &amp;#34;last_col&amp;#34;             
+## [148] &amp;#34;last_dplyr_warnings&amp;#34;   &amp;#34;lead&amp;#34;                  &amp;#34;left_join&amp;#34;            
+## [151] &amp;#34;lst&amp;#34;                   &amp;#34;make_tbl&amp;#34;              &amp;#34;matches&amp;#34;              
+## [154] &amp;#34;min_rank&amp;#34;              &amp;#34;mutate&amp;#34;                &amp;#34;mutate_&amp;#34;              
+## [157] &amp;#34;mutate_all&amp;#34;            &amp;#34;mutate_at&amp;#34;             &amp;#34;mutate_each&amp;#34;          
+## [160] &amp;#34;mutate_each_&amp;#34;          &amp;#34;mutate_if&amp;#34;             &amp;#34;n&amp;#34;                    
+## [163] &amp;#34;n_distinct&amp;#34;            &amp;#34;n_groups&amp;#34;              &amp;#34;na_if&amp;#34;                
+## [166] &amp;#34;near&amp;#34;                  &amp;#34;nest_by&amp;#34;               &amp;#34;nest_join&amp;#34;            
+## [169] &amp;#34;new_grouped_df&amp;#34;        &amp;#34;new_rowwise_df&amp;#34;        &amp;#34;nth&amp;#34;                  
+## [172] &amp;#34;ntile&amp;#34;                 &amp;#34;num_range&amp;#34;             &amp;#34;one_of&amp;#34;               
+## [175] &amp;#34;order_by&amp;#34;              &amp;#34;percent_rank&amp;#34;          &amp;#34;pick&amp;#34;                 
+## [178] &amp;#34;progress_estimated&amp;#34;    &amp;#34;pull&amp;#34;                  &amp;#34;quo&amp;#34;                  
+## [181] &amp;#34;quo_name&amp;#34;              &amp;#34;quos&amp;#34;                  &amp;#34;recode&amp;#34;               
+## [184] &amp;#34;recode_factor&amp;#34;         &amp;#34;recode_values&amp;#34;         &amp;#34;reframe&amp;#34;              
+## [187] &amp;#34;relocate&amp;#34;              &amp;#34;rename&amp;#34;                &amp;#34;rename_&amp;#34;              
+## [190] &amp;#34;rename_all&amp;#34;            &amp;#34;rename_at&amp;#34;             &amp;#34;rename_if&amp;#34;            
+## [193] &amp;#34;rename_with&amp;#34;           &amp;#34;replace_values&amp;#34;        &amp;#34;replace_when&amp;#34;         
+## [196] &amp;#34;right_join&amp;#34;            &amp;#34;row_number&amp;#34;            &amp;#34;rows_append&amp;#34;          
+## [199] &amp;#34;rows_delete&amp;#34;           &amp;#34;rows_insert&amp;#34;           &amp;#34;rows_patch&amp;#34;           
+## [202] &amp;#34;rows_update&amp;#34;           &amp;#34;rows_upsert&amp;#34;           &amp;#34;rowwise&amp;#34;              
+## [205] &amp;#34;same_src&amp;#34;              &amp;#34;sample_frac&amp;#34;           &amp;#34;sample_n&amp;#34;             
+## [208] &amp;#34;select&amp;#34;                &amp;#34;select_&amp;#34;               &amp;#34;select_all&amp;#34;           
+## [211] &amp;#34;select_at&amp;#34;             &amp;#34;select_if&amp;#34;             &amp;#34;semi_join&amp;#34;            
+## [214] &amp;#34;setdiff&amp;#34;               &amp;#34;setequal&amp;#34;              &amp;#34;show_query&amp;#34;           
+## [217] &amp;#34;slice&amp;#34;                 &amp;#34;slice_&amp;#34;                &amp;#34;slice_head&amp;#34;           
+## [220] &amp;#34;slice_max&amp;#34;             &amp;#34;slice_min&amp;#34;             &amp;#34;slice_sample&amp;#34;         
+## [223] &amp;#34;slice_tail&amp;#34;            &amp;#34;sql&amp;#34;                   &amp;#34;sql_escape_ident&amp;#34;     
+## [226] &amp;#34;sql_escape_string&amp;#34;     &amp;#34;sql_join&amp;#34;              &amp;#34;sql_select&amp;#34;           
+## [229] &amp;#34;sql_semi_join&amp;#34;         &amp;#34;sql_set_op&amp;#34;            &amp;#34;sql_subquery&amp;#34;         
+## [232] &amp;#34;sql_translate_env&amp;#34;     &amp;#34;src&amp;#34;                   &amp;#34;src_df&amp;#34;               
+## [235] &amp;#34;src_local&amp;#34;             &amp;#34;src_mysql&amp;#34;             &amp;#34;src_postgres&amp;#34;         
+## [238] &amp;#34;src_sqlite&amp;#34;            &amp;#34;src_tbls&amp;#34;              &amp;#34;starts_with&amp;#34;          
+## [241] &amp;#34;starwars&amp;#34;              &amp;#34;storms&amp;#34;                &amp;#34;summarise&amp;#34;            
+## [244] &amp;#34;summarise_&amp;#34;            &amp;#34;summarise_all&amp;#34;         &amp;#34;summarise_at&amp;#34;         
+## [247] &amp;#34;summarise_each&amp;#34;        &amp;#34;summarise_each_&amp;#34;       &amp;#34;summarise_if&amp;#34;         
+## [250] &amp;#34;summarize&amp;#34;             &amp;#34;summarize_&amp;#34;            &amp;#34;summarize_all&amp;#34;        
+## [253] &amp;#34;summarize_at&amp;#34;          &amp;#34;summarize_each&amp;#34;        &amp;#34;summarize_each_&amp;#34;      
+## [256] &amp;#34;summarize_if&amp;#34;          &amp;#34;sym&amp;#34;                   &amp;#34;symdiff&amp;#34;              
+## [259] &amp;#34;syms&amp;#34;                  &amp;#34;tally&amp;#34;                 &amp;#34;tally_&amp;#34;               
+## [262] &amp;#34;tbl&amp;#34;                   &amp;#34;tbl_df&amp;#34;                &amp;#34;tbl_nongroup_vars&amp;#34;    
+## [265] &amp;#34;tbl_ptype&amp;#34;             &amp;#34;tbl_vars&amp;#34;              &amp;#34;tibble&amp;#34;               
+## [268] &amp;#34;top_frac&amp;#34;              &amp;#34;top_n&amp;#34;                 &amp;#34;transmute&amp;#34;            
+## [271] &amp;#34;transmute_&amp;#34;            &amp;#34;transmute_all&amp;#34;         &amp;#34;transmute_at&amp;#34;         
+## [274] &amp;#34;transmute_if&amp;#34;          &amp;#34;tribble&amp;#34;               &amp;#34;type_sum&amp;#34;             
+## [277] &amp;#34;ungroup&amp;#34;               &amp;#34;union&amp;#34;                 &amp;#34;union_all&amp;#34;            
+## [280] &amp;#34;validate_grouped_df&amp;#34;   &amp;#34;validate_rowwise_df&amp;#34;   &amp;#34;vars&amp;#34;                 
+## [283] &amp;#34;when_all&amp;#34;              &amp;#34;when_any&amp;#34;              &amp;#34;where&amp;#34;                
+## [286] &amp;#34;with_groups&amp;#34;           &amp;#34;with_order&amp;#34;            &amp;#34;wrap_dbplyr_obj&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>

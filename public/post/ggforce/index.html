@@ -672,63 +672,51 @@
   <div class="article-container">
 
     <div class="article-style">
-      
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
-
-
-<p>To enlarge a section of data in your <code>ggplots</code>, use the <code>facet_zoom</code> function in the <a href="https://rdrr.io/cran/ggforce/man/facet_zoom.html">ggforce</a> package. To illustrate I am using the <a href="https://cran.r-project.org/web/packages/gapminder/README.html">gapminder</a> dataset in <a href="https://cran.r-project.org/web/packages/gapminder/README.html">gapminder</a> package.</p>
-<div id="load-necessary" class="section level2">
-<h2>Load necessary</h2>
-<pre class="r"><code>library(tidyverse)
-library(RColorBrewer)
-library(ggforce)
-library(gapminder)</code></pre>
-</div>
-<div id="set-the-theme-for-plots" class="section level2">
-<h2>Set the theme for plots</h2>
-<pre class="r"><code>theme_set(theme_bw())</code></pre>
-</div>
-<div id="zoom-according-to-a-continuous-scale-variable" class="section level2">
-<h2>Zoom according to a continuous scale variable</h2>
+      <p>To enlarge a section of data in your <code>ggplots</code>, use the <code>facet_zoom</code> function in the <a href="https://rdrr.io/cran/ggforce/man/facet_zoom.html">ggforce</a> package. To illustrate I am using the <a href="https://cran.r-project.org/web/packages/gapminder/README.html">gapminder</a> dataset in <a href="https://cran.r-project.org/web/packages/gapminder/README.html">gapminder</a> package.</p>
+<h2 id="load-necessary">Load necessary</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidyverse)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(RColorBrewer)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(ggforce)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(gapminder)
+</span></span></code></pre></div><h2 id="set-the-theme-for-plots">Set the theme for plots</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">theme_set</span>(<span style="color:#a6e22e">theme_bw</span>())
+</span></span></code></pre></div><h2 id="zoom-according-to-a--continuous-scale-variable">Zoom according to a  continuous scale variable</h2>
 <p><strong>zoom the Y axis</strong></p>
-<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +  
-  facet_zoom(ylim = c(60, 80)) </code></pre>
-<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(gapminder, <span style="color:#a6e22e">aes</span>(y<span style="color:#f92672">=</span>lifeExp, x<span style="color:#f92672">=</span>gdpPercap)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">coord_fixed</span>() <span style="color:#f92672">+</span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">facet_zoom</span>(ylim <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">80</span>)) 
+</span></span></code></pre></div><img src="/post/ggforce_files/figure-html/unnamed-chunk-3-1.png" alt="" width="672" />
 <p><strong>zoom the X axis</strong></p>
-<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +   
-  facet_zoom(xlim = c(0, 10000)) </code></pre>
-<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(gapminder, <span style="color:#a6e22e">aes</span>(y<span style="color:#f92672">=</span>lifeExp, x<span style="color:#f92672">=</span>gdpPercap)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">coord_fixed</span>() <span style="color:#f92672">+</span>   
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">facet_zoom</span>(xlim <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">10000</span>)) 
+</span></span></code></pre></div><img src="/post/ggforce_files/figure-html/unnamed-chunk-4-1.png" alt="" width="672" />
 <p><strong>zoom the X axis and the Y axis</strong></p>
-<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap)) + geom_point() + coord_fixed() +  
-  facet_zoom(xlim = c(0, 10000), ylim=c(60, 80)) </code></pre>
-<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-</div>
-<div id="zoom-according-to-a-qualitative-variable" class="section level2">
-<h2>Zoom according to a qualitative variable</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(gapminder, <span style="color:#a6e22e">aes</span>(y<span style="color:#f92672">=</span>lifeExp, x<span style="color:#f92672">=</span>gdpPercap)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">coord_fixed</span>() <span style="color:#f92672">+</span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">facet_zoom</span>(xlim <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">10000</span>), ylim<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">80</span>)) 
+</span></span></code></pre></div><img src="/post/ggforce_files/figure-html/unnamed-chunk-5-1.png" alt="" width="672" />
+<h2 id="zoom-according-to-a-qualitative-variable">Zoom according to a qualitative variable</h2>
 <p><strong>zoom the Y axis</strong></p>
-<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
-  coord_fixed() + 
-  scale_color_brewer(palette = &quot;Dark2&quot;) +
-  facet_zoom(y = continent == &#39;Oceania&#39;) </code></pre>
-<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(gapminder, <span style="color:#a6e22e">aes</span>(y<span style="color:#f92672">=</span>lifeExp, x<span style="color:#f92672">=</span>gdpPercap, col<span style="color:#f92672">=</span>continent)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">coord_fixed</span>() <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_color_brewer</span>(palette <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Dark2&#34;</span>) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">facet_zoom</span>(y <span style="color:#f92672">=</span> continent <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Oceania&#39;</span>) 
+</span></span></code></pre></div><img src="/post/ggforce_files/figure-html/unnamed-chunk-6-1.png" alt="" width="672" />
 <p><strong>zoom the X axis</strong></p>
-<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
-  coord_fixed() + 
-  scale_color_brewer(palette = &quot;Dark2&quot;) +
-  facet_zoom(x = continent == &#39;Oceania&#39;) </code></pre>
-<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(gapminder, <span style="color:#a6e22e">aes</span>(y<span style="color:#f92672">=</span>lifeExp, x<span style="color:#f92672">=</span>gdpPercap, col<span style="color:#f92672">=</span>continent)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">coord_fixed</span>() <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_color_brewer</span>(palette <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Dark2&#34;</span>) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">facet_zoom</span>(x <span style="color:#f92672">=</span> continent <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Oceania&#39;</span>) 
+</span></span></code></pre></div><img src="/post/ggforce_files/figure-html/unnamed-chunk-7-1.png" alt="" width="672" />
 <p><strong>zoom the X axis and the Y axis</strong></p>
-<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
-  coord_fixed() + 
-  scale_color_brewer(palette = &quot;Dark2&quot;) +
-  facet_zoom(xy = continent == &#39;Oceania&#39;) </code></pre>
-<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
-<pre class="r"><code>ggplot(gapminder, aes(y=lifeExp, x=gdpPercap, col=continent)) + geom_point() + 
-  coord_fixed() + 
-  scale_color_brewer(palette = &quot;Dark2&quot;) +
-  facet_zoom(xy = continent == &#39;Oceania&#39;, split = TRUE) </code></pre>
-<p><img src="/post/ggforce_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
-</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(gapminder, <span style="color:#a6e22e">aes</span>(y<span style="color:#f92672">=</span>lifeExp, x<span style="color:#f92672">=</span>gdpPercap, col<span style="color:#f92672">=</span>continent)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">coord_fixed</span>() <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_color_brewer</span>(palette <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Dark2&#34;</span>) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">facet_zoom</span>(xy <span style="color:#f92672">=</span> continent <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Oceania&#39;</span>) 
+</span></span></code></pre></div><img src="/post/ggforce_files/figure-html/unnamed-chunk-8-1.png" alt="" width="672" />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(gapminder, <span style="color:#a6e22e">aes</span>(y<span style="color:#f92672">=</span>lifeExp, x<span style="color:#f92672">=</span>gdpPercap, col<span style="color:#f92672">=</span>continent)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">coord_fixed</span>() <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_color_brewer</span>(palette <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Dark2&#34;</span>) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">facet_zoom</span>(xy <span style="color:#f92672">=</span> continent <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Oceania&#39;</span>, split <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>) 
+</span></span></code></pre></div><img src="/post/ggforce_files/figure-html/unnamed-chunk-9-1.png" alt="" width="672" />
 
     </div>
 

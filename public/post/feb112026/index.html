@@ -632,7 +632,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    3 min read
   </span>
   
 
@@ -641,10 +641,6 @@
   
 
   
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/ggplot2/">ggplot2</a>, <a href="/categories/tidyverse/">tidyverse</a>, <a href="/categories/data-visualisation/">data visualisation</a></span>
   
 
 </div>
@@ -680,6 +676,7 @@
 <p>• Science needs more women and more visible role models.</p>
 <p>#rprogramming #InternationalDayOfWomenAndGirlsInScience
 #WomenInScience #FlorenceNightingale #DataVisualization #WomenInSTEM #GirlsInScience #OWSD</p>
+<img src="/post/fn.png" alt="posit" width="900"/>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e">## Packages</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidyverse)
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(HistData)
@@ -710,7 +707,8 @@
 </span></span><span style="display:flex;"><span>         period <span style="color:#f92672">=</span> <span style="color:#a6e22e">ifelse</span>(Date <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">as.Date</span>(<span style="color:#e6db74">&#34;1855-03-01&#34;</span>), 
 </span></span><span style="display:flex;"><span>                         <span style="color:#e6db74">&#34;APRIL 1854 TO MARCH 1855&#34;</span>,
 </span></span><span style="display:flex;"><span>                         <span style="color:#e6db74">&#34;APRIL 1855 TO MARCH 1856&#34;</span>),
-</span></span><span style="display:flex;"><span>         Month <span style="color:#f92672">=</span> <span style="color:#a6e22e">fct_relevel</span>(Month, <span style="color:#e6db74">&#34;Jul&#34;</span>, <span style="color:#e6db74">&#34;Aug&#34;</span>, <span style="color:#e6db74">&#34;Sep&#34;</span>, <span style="color:#e6db74">&#34;Oct&#34;</span>, <span style="color:#e6db74">&#34;Nov&#34;</span>, <span style="color:#e6db74">&#34;Dec&#34;</span>, <span style="color:#e6db74">&#34;Jan&#34;</span>, <span style="color:#e6db74">&#34;Feb&#34;</span>, <span style="color:#e6db74">&#34;Mar&#34;</span>, <span style="color:#e6db74">&#34;Apr&#34;</span>, <span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;Jun&#34;</span>))<span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>         Month <span style="color:#f92672">=</span> <span style="color:#a6e22e">fct_relevel</span>(Month, <span style="color:#e6db74">&#34;Jul&#34;</span>, <span style="color:#e6db74">&#34;Aug&#34;</span>, <span style="color:#e6db74">&#34;Sep&#34;</span>, <span style="color:#e6db74">&#34;Oct&#34;</span>, <span style="color:#e6db74">&#34;Nov&#34;</span>, <span style="color:#e6db74">&#34;Dec&#34;</span>, <span style="color:#e6db74">&#34;Jan&#34;</span>, <span style="color:#e6db74">&#34;Feb&#34;</span>, <span style="color:#e6db74">&#34;Mar&#34;</span>, <span style="color:#e6db74">&#34;Apr&#34;</span>, <span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;Jun&#34;</span>),
+</span></span><span style="display:flex;"><span>         Cause <span style="color:#f92672">=</span> <span style="color:#a6e22e">fct_relevel</span>(Cause, <span style="color:#e6db74">&#34;Disease&#34;</span>, <span style="color:#e6db74">&#34;Wounds&#34;</span>, <span style="color:#e6db74">&#34;Other&#34;</span>))<span style="color:#f92672">|&gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ggplot</span>(<span style="color:#a6e22e">aes</span>(x<span style="color:#f92672">=</span>Month, y<span style="color:#f92672">=</span>Rate, fill<span style="color:#f92672">=</span>Cause)) <span style="color:#f92672">+</span> 
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_col</span>(width<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>) <span style="color:#f92672">+</span> 
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">coord_equal</span>(ratio <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span>  
@@ -738,16 +736,6 @@
 
 
 
-
-<div class="article-tags">
-  
-  <a class="badge badge-light" href="/tags/r/">R</a>
-  
-  <a class="badge badge-light" href="/tags/ggplot2/">ggplot2</a>
-  
-  <a class="badge badge-light" href="">International Day of Women and Girls in Science.</a>
-  
-</div>
 
 
 
@@ -1002,23 +990,6 @@
 
 
   
-  
-  <div class="article-widget content-widget-hr">
-    <h3>Related</h3>
-    <ul>
-      
-      <li><a href="/post/logisticregression/">Logistic Regression: Model Building and Interpretation</a></li>
-      
-      <li><a href="/post/ggforce/">Zoom Your Plots with ggforce</a></li>
-      
-      <li><a href="/post/plotaxis/">Formatting axis labels in ggplot</a></li>
-      
-      <li><a href="/post/blog/">Weighted LOESS (LOcal regrESSion) </a></li>
-      
-      <li><a href="/post/scatterplot/">Highlight data points in a scatterplot</a></li>
-      
-    </ul>
-  </div>
   
 
 

@@ -26,25 +26,10 @@
     <loc>https://thiyanga.netlify.app/courses/rmsc2020/contentr/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://thiyanga.netlify.app/categories/</loc>
-    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thiyanga.netlify.app/tags/ggplot2/</loc>
-    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thiyanga.netlify.app/categories/ggplot2/</loc>
-    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://thiyanga.netlify.app/post/</loc>
     <lastmod>2026-02-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://thiyanga.netlify.app/tags/r/</loc>
-    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thiyanga.netlify.app/post/blog/</loc>
-    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thiyanga.netlify.app/tags/</loc>
+    <loc>https://thiyanga.netlify.app/post/feb112026/</loc>
     <lastmod>2026-02-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thiyanga.netlify.app/</loc>
@@ -65,14 +50,29 @@
     <loc>https://thiyanga.netlify.app/tags/short-talk/</loc>
     <lastmod>2025-10-29T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://thiyanga.netlify.app/tags/</loc>
+    <lastmod>2025-10-29T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://thiyanga.netlify.app/tags/unesco/</loc>
     <lastmod>2025-10-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thiyanga.netlify.app/talk/rmedicine25-talk/</loc>
+    <lastmod>2025-06-13T16:35:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thiyanga.netlify.app/talk/</loc>
+    <lastmod>2025-06-13T16:35:00+00:00</lastmod>
   </url><url>
     <loc>https://thiyanga.netlify.app/post/posit/</loc>
     <lastmod>2023-10-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thiyanga.netlify.app/tags/python/</loc>
     <lastmod>2023-10-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thiyanga.netlify.app/tags/r/</loc>
+    <lastmod>2023-10-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thiyanga.netlify.app/talk/rmedicine23-talk/</loc>
+    <lastmod>2023-06-09T16:35:00+00:00</lastmod>
   </url><url>
     <loc>https://thiyanga.netlify.app/tags/demo/</loc>
     <lastmod>2023-04-12T00:00:00+00:00</lastmod>
@@ -82,6 +82,9 @@
   </url><url>
     <loc>https://thiyanga.netlify.app/project/dengue/</loc>
     <lastmod>2023-04-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thiyanga.netlify.app/categories/</loc>
+    <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thiyanga.netlify.app/categories/r/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
@@ -137,6 +140,12 @@
     <loc>https://thiyanga.netlify.app/post/error1/</loc>
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://thiyanga.netlify.app/tags/ggplot2/</loc>
+    <lastmod>2022-04-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thiyanga.netlify.app/categories/ggplot2/</loc>
+    <lastmod>2022-04-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://thiyanga.netlify.app/post/logisticregression/</loc>
     <lastmod>2022-04-11T00:00:00+00:00</lastmod>
   </url><url>
@@ -163,9 +172,6 @@
   </url><url>
     <loc>https://thiyanga.netlify.app/post/plotaxis/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thiyanga.netlify.app/talk/</loc>
-    <lastmod>2022-02-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thiyanga.netlify.app/talk/nigeria/</loc>
     <lastmod>2022-02-16T00:00:00+00:00</lastmod>
